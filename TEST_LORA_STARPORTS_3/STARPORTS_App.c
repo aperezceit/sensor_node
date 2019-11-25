@@ -158,7 +158,7 @@ void *mainThread(void *arg0)
     /* Get Param Values from internal filesystem */
     MyLoraNode.PortNoTx = 1;
     // Get MyNodeId
-    MyNode.NodeId = st_readFileNodeId();
+    // MyNode.NodeId = st_readFileNodeId();
     // Get MyNode.WakeUpInterval --> Read WakeUp_Time File
     MyNode.WakeUpInterval = st_readFileWakeUp();
     // Get MyNode.Mode --> Read File Mode
@@ -311,6 +311,8 @@ void *mainThread(void *arg0)
         // }
     }
     /************** End of Configuration and Setup Wireless Connectivity ***************/
+    // sl_Stop(0);
+
 
     if (NextStep==SHUTDOWN) {
         I2C_close(i2c);
@@ -348,6 +350,7 @@ void *mainThread(void *arg0)
 
     if (MyNode.Mode==MODE_NORMAL_LORA) {
         ret = Tx_Uncnf_Lora(uart1, &MyLoraNode, &mask, &nodeId);    // Transmit Data, several tries?
+        // sl_Start(0, 0, 0);
         if (ret==SUCCESS_TX_MAC_TX) {
             // Get upctr from RN2483 & Write to file
             MyLoraNode.Upctr = Mac_Get_Upctr(uart1);
@@ -404,6 +407,7 @@ void *mainThread(void *arg0)
         //    writeNFails(MyNode.NFails); // Write NFails File
         // }
     }
+
     writeNBoot(1-MyNode.NBoot);
 
 #ifdef DEBUG

@@ -141,6 +141,9 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
 
     // Init Data Packet to Send
     DataPacketLen = IniPacket(DataPacket, MyNode.NodeId);
+    // If Remove NodeId from the packet header, comment the line above
+    // and uncomment the next one
+    // DataPacketLen = 0;
 
     // TMP006 is not present in the PCB for FCC
     //    if (i2c != NULL) {
@@ -186,6 +189,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
 
 
     if (spi != NULL) {
+
         ADXL355_Enable();
         ADXL355_SPI_Enable();
         usleep(100);
@@ -196,13 +200,12 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
             ADXL355_Filter_Conf(spi, HPFOFF | ODR250HZ);
             ADXL355_Power_Conf(spi, DRDY_OFF | TEMP_OFF | MEASUREMENT);
             usleep(20000);
-            // Get Accelerometer Data
-            ADXL355_Get_Accel_Frame(spi, MyADXL.NSamples, s32DataSensor);
-            // Add ADXL355 Data to Packet
             if (MyNode.NBoot==0) {
+                // Get Accelerometer Data
+                ADXL355_Get_Accel_Frame(spi, MyADXL.NSamples, s32DataSensor);
+                // Add ADXL355 Data to Packet
                 DataPacketLen = Add_s32Data2Packet(DataPacket, DataPacketLen, MyADXL.SensorId, s32DataSensor, 6);
             }
-
 #ifdef DEBUG
             UART_write(uart0, "4 ",2); // Debug Message
 #endif
@@ -219,23 +222,24 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
         if (DevId==BME280_ID) {
             BME280_Reset(spi);
             usleep(2000);
-            BME280_Read_Calib(spi, MyCalib);
-            BME280_Write_Ctrl_Hum(spi, OSRS_HX1);
-            BME280_Write_Ctrl_Meas(spi, OSRS_TX1 | OSRS_PX1 | FORCED);
-            usleep(10000);
-            while (BME280_Read_Status(spi)==MEASURING) {}
-            PressureUn = BME280_Read_Pressure(spi);
-            HumidityUn = BME280_Read_Humidity(spi);
-            TemperatureUn = BME280_Read_Temperature(spi);
-            s32DataSensor[2] = (int32_t)compensate_temperature(TemperatureUn, MyCalib);
-            s32DataSensor[1] = compensate_humidity(HumidityUn, MyCalib);
-            s32DataSensor[0] = compensate_pressure(PressureUn, MyCalib);
 
-            // Add BME280 Data to Packet
             if (MyNode.NBoot==1) {
+                BME280_Read_Calib(spi, MyCalib);
+                BME280_Write_Ctrl_Hum(spi, OSRS_HX1);
+                BME280_Write_Ctrl_Meas(spi, OSRS_TX1 | OSRS_PX1 | FORCED);
+                usleep(10000);
+                while (BME280_Read_Status(spi)==MEASURING) {}
+                PressureUn = BME280_Read_Pressure(spi);
+                HumidityUn = BME280_Read_Humidity(spi);
+                TemperatureUn = BME280_Read_Temperature(spi);
+                s32DataSensor[2] = (int32_t)compensate_temperature(TemperatureUn, MyCalib);
+                s32DataSensor[1] = compensate_humidity(HumidityUn, MyCalib);
+                s32DataSensor[0] = compensate_pressure(PressureUn, MyCalib);
+
+
+                // Add BME280 Data to Packet
                 DataPacketLen = Add_s32Data2Packet(DataPacket, DataPacketLen, MyBME.SensorId, s32DataSensor, 3);
             }
-
 #ifdef DEBUG
             UART_write(uart0, "5\r\n ",3); // Debug Message
 #endif
@@ -244,7 +248,6 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
         // Watchdog_clear(wd);
         BME280_SPI_Disable();
         BME280_Disable();
-
 
 #ifdef LDC1000
         LDC1000_Enable();
