@@ -257,9 +257,6 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
         usleep(1000);
         DevId = (uint16_t)LDC1000_DevId(spi);
         if (DevId==LDC1000_ID) {
-#ifdef DEBUG
-            UART_write(uart0, "6 ",2); // Debug Message
-#endif
             LDC1000_Write_Pow_Conf(spi, STBY_MODE);
             LDC1000_Write_Rp_Max(spi, RPMAX0981);
             LDC1000_Write_Rp_Min(spi, RPMIN0436);
@@ -273,6 +270,10 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
 
             // Add LDC1000 Data to Packet
             DataPacketLen = Add_s16Data2Packet(DataPacket, DataPacketLen, MyLDC.SensorId, s16DataSensor, 2);
+
+#ifdef DEBUG
+            UART_write(uart0, "6 ",2); // Debug Message
+#endif
         }
         // PWM_stop(pwm);
         // PWM_close(pwm);
