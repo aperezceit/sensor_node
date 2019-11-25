@@ -76,7 +76,7 @@
 
 #include "STARPORTS_App.h"
 
-#define TIMEOUT_MS 10000 // 10 seconds Timeout
+#define TIMEOUT_MS 6000 // 6 seconds Timeout
 
 uint8_t Timer0Event = 0;
 uint8_t Timer1Event = 0;
@@ -136,11 +136,13 @@ void *mainThread(void *arg0)
     GPIO_setConfig(Board_EN_NODE, GPIO_CFG_OUT_STD | GPIO_CFG_OUT_HIGH);
     Node_Enable();
 
+    Watchdog_init();
+
     // Configure the rest of GPIO pins
     ret = GPIO_Config();
 
     /* Open a Watchdog driver instance */
-    // wd = Startup_Watchdog(Board_WATCHDOG0, TIMEOUT_MS);
+    wd = Startup_Watchdog(Board_WATCHDOG0, TIMEOUT_MS);
 
     /************ Begin Read Configuration Files **************************/
     // Muestra estado memoria y lista de archivos
