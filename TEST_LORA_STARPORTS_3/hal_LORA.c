@@ -456,6 +456,23 @@ uint8_t Mac_Clear_Upctr(UART_Handle uart) {
     }
 }
 
+uint8_t Mac_Set_Pwridx(UART_Handle uart, uint8_t pwridx) {
+    unsigned char Command[256];
+    unsigned char buf[32];
+    uint8_t sz;
+
+    memset(&buf,0, sizeof(buf));
+    sprintf(Command,"mac set pwridx %d\r\n", pwridx);
+    UART_write(uart, (const char *)Command, strlen(Command));
+    sz = GetLine_UART(uart, buf);
+    if (strncmp(buf,"ok",2)!=0) {
+        return ERROR_SET_PWRIDX;
+    } else {
+        return SUCCESS_SET_PWRIDX;
+    }
+
+}
+
 uint8_t Try_Join_Lora_Gateway(UART_Handle uart_dbg, UART_Handle uart_lora) {
 
     uint8_t nf;

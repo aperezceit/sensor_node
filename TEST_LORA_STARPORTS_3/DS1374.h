@@ -28,6 +28,7 @@ void DS1374_Write_Tod(I2C_Handle i2c, uint32_t Val);
 uint32_t DS1374_Read_WdAlmb(I2C_Handle i2c);
 void DS1374_Write_WdAlmb(I2C_Handle i2c, uint32_t Val);
 void DS1374_Write_Ctrl(I2C_Handle i2c);
+uint8_t DS1374_Read_Ctrl(I2C_Handle i2c);
 uint8_t DS1374_Read_Status(I2C_Handle i2c);
 void DS1374_Clear_AF(I2C_Handle i2c);
 

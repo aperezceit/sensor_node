@@ -53,6 +53,15 @@ void DS1374_Write_Ctrl(I2C_Handle i2c) {
     I2C_write_8bits(i2c, 0x68, DS1374_CTRL, Val);
 
 }
+
+uint8_t DS1374_Read_Ctrl(I2C_Handle i2c) {
+    uint8_t RxBuffer;
+
+    I2C_read_8bits(i2c, 0x68, DS1374_CTRL, &RxBuffer, 1);
+
+   return RxBuffer;
+}
+
 uint8_t DS1374_Read_Status(I2C_Handle i2c) {
 
     uint8_t RxBuffer;

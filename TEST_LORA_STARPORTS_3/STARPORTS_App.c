@@ -76,7 +76,7 @@
 
 #include "STARPORTS_App.h"
 
-#define TIMEOUT_MS 6000 // 6 seconds Timeout
+#define TIMEOUT_MS 40000 // 40 seconds Timeout
 
 uint8_t Timer0Event = 0;
 uint8_t Timer1Event = 0;
@@ -86,7 +86,7 @@ struct Node MyNode = {NODEID,1200,MODE_NORMAL_LORA,16,"Movistar_361D"};
 struct TMP006_Data MyTMP006 = {TMP006_ID};
 struct ADXL355_Data MyADXL = {ADXL355_ID,500,256};
 struct BME280_Data MyBME = {BME280_ID};
-struct LDC1000_Data MyLDC = {LDC1000_ID,1};
+struct LDC1000_Data MyLDC = {LDC1000_ID,16};
 struct Vbat_Data MyVbat = {VBAT_ID,16};
 /*
  *  ======== mainThread ========
@@ -197,19 +197,23 @@ void *mainThread(void *arg0)
 
     // I2C interface started
     i2c = Startup_I2C(Board_I2C0);
-    // Configures the RTC
-    DS1374_Write_Ctrl(i2c);
-    // UART1 connects to RN2483 */
-    uart1 = Startup_UART(Board_UART1, 57600);
+
     /************* End Configure Peripherals ***********************/
 
 
     /*************** Begin Setting Node Configuration Parameters */
     // Set the WakeUp_Time in RTC
-    DS1374_Clear_AF(i2c);
-    DS1374_Write_WdAlmb(i2c, MyNode.WakeUpInterval);
+    if (DS1374_Read_Ctrl(i2c)==0x06) { // DS1374 is powerup
+        // Configures the RTC
+        DS1374_Write_WdAlmb(i2c, MyNode.WakeUpInterval);
+        DS1374_Write_Ctrl(i2c);
+    } else {  // DS1374 was not powerup
+        DS1374_Clear_AF(i2c);
+    }
 
     /************** Begin Configuration and Setup Wireless Connectivity ***************/
+    // UART1 connects to RN2483 */
+    uart1 = Startup_UART(Board_UART1, 57600);
 
     if (MyNode.Mode==MODE_NORMAL_LORA) {
         RN2483_Set();                   // Set /MCLR Pin to 1 releases RN2483
@@ -251,10 +255,13 @@ void *mainThread(void *arg0)
         Mac_Set_Upctr(uart1,&MyLoraNode);
         MyLoraNode.Dnctr = st_readFileDnCntr();
         Mac_Set_Dnctr(uart1,&MyLoraNode);
-        // Set adaptive datarate ON
-        Mac_Adr_On(uart1);
+        // Set Tx Power (by default is 1, the maximum 14dBm)
+        // Mac_Set_Pwridx(uart1, 1);
+        // Set adaptive datarate ON (useful when using OTAA)
+        // Mac_Adr_On(uart1);
         // Set Automatic Retransmit ON
         Mac_Ar_On(uart1);
+
 
         // Join ABP
         ret = Join_Abp_Lora(uart1);

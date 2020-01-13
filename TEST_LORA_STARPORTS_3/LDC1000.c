@@ -8,8 +8,10 @@
 #include "STARPORTS_App.h"
 #include "LDC1000.h"
 #include <ti/drivers/SPI.h>
+#include <unistd.h>
 #include <math.h>
 #include "hal_SPI.h"
+#include "hal_UART.h"
 
 
 uint8_t LDC1000_DevId(SPI_Handle spi) {
@@ -29,9 +31,29 @@ void LDC1000_Write_Rp_Max(SPI_Handle spi, uint8_t Val) {
 
 }
 
+uint8_t LDC1000_Read_Rp_Max(SPI_Handle spi) {
+
+    uint8_t RxBuffer[2];
+
+    SPI_read_8bits(spi,RP_MAX,RxBuffer,1,RNW_MSB);
+
+    return RxBuffer[1];
+
+}
+
 void LDC1000_Write_Rp_Min(SPI_Handle spi, uint8_t Val) {
 
     SPI_write_8bits(spi,RP_MIN,Val,RNW_MSB);
+
+}
+
+uint8_t LDC1000_Read_Rp_Min(SPI_Handle spi) {
+
+    uint8_t RxBuffer[2];
+
+    SPI_read_8bits(spi,RP_MIN,RxBuffer,1,RNW_MSB);
+
+    return RxBuffer[1];
 
 }
 
@@ -83,23 +105,34 @@ uint16_t LDC1000_Read_Proximity(SPI_Handle spi) {
 
     SPI_read_8bits(spi,PROX_LSB,RxBuffer,2,RNW_MSB);
 
-    return ( RxBuffer[1] + (RxBuffer[2]<<8) );
+    return ( RxBuffer[1] + (uint16_t)(RxBuffer[2]<<8) );
 
 }
 
 void LDC1000_Get_Proximity_Frame(SPI_Handle spi, uint16_t Samples, int16_t *DataSensor) {
 
     int i=0;
-    uint32_t Proximity[512];
+    uint32_t newProx, Proximity[512];
     float ProxMean;
     float ProxRms;
+    uint8_t status;
 
     ProxMean = 0;
+    usleep(50000);
     while(i<Samples) {
-        while ( LDC1000_Read_Status(spi) & DRDYB_MASK ) {;}
-        Proximity[i] = (uint32_t)LDC1000_Read_Proximity(spi);
-        ProxMean += Proximity[i];
+        // do {
+        //    status = LDC1000_Read_Status(spi) & (DRDYB_MASK | OSC_STATUS_MASK);
+        // } while (status!=0);
+
+        // while (LDC1000_Read_Status(spi) & (DRDYB_MASK | OSC_STATUS_MASK)) {}
+        // notdatardy = LDC1000_Read_Status(spi) & (DRDYB_MASK | OSC_STATUS_MASK);
+        // newProx = (uint32_t)LDC1000_Read_Proximity(spi);
+        newProx = (uint32_t)LDC1000_Read_Proximity(spi);
+        ProxMean += newProx;
+        Proximity[i] = newProx;
+        // UART_PRINT("Proximity[%d] = %d\r\n", i, Proximity[i]);
         i++;
+        usleep(250);
     }
     ProxMean = ProxMean/Samples;
 
@@ -131,7 +164,7 @@ uint32_t LDC1000_Read_Fcount(SPI_Handle spi) {
 
 float RpCalc(uint32_t Proximity, float RpMax, float RpMin) {
 
-    float Y = (1<<15)/Proximity;
+    float Y = 1.0*Proximity/32768;
     float Rp;
 
 

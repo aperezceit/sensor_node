@@ -166,7 +166,9 @@ typedef enum {
 
 uint8_t LDC1000_DevId(SPI_Handle spi);
 void LDC1000_Write_Rp_Max(SPI_Handle spi, uint8_t Val);
+uint8_t LDC1000_Read_Rp_Max(SPI_Handle spi);
 void LDC1000_Write_Rp_Min(SPI_Handle spi, uint8_t Val);
+uint8_t LDC1000_Read_Rp_Min(SPI_Handle spi);
 void LDC1000_Write_Min_Freq(SPI_Handle spi, uint8_t Val);
 void LDC1000_Write_Conf(SPI_Handle spi, uint8_t Val);
 void LDC1000_Write_Intb_Conf(SPI_Handle spi, uint8_t Val);

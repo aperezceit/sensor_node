@@ -123,6 +123,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
     uint8_t DataPacketLen;
     uint32_t interval = 10000;
 
+    uint8_t rd;
     uint16_t DevId;
 
     // Variables for Vbat Sensor (ADC)
@@ -204,6 +205,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
                 // Get Accelerometer Data
                 ADXL355_Get_Accel_Frame(spi, MyADXL.NSamples, s32DataSensor);
                 // Add ADXL355 Data to Packet
+
                 DataPacketLen = Add_s32Data2Packet(DataPacket, DataPacketLen, MyADXL.SensorId, s32DataSensor, 6);
             }
 #ifdef DEBUG
@@ -222,7 +224,6 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
         if (DevId==BME280_ID) {
             BME280_Reset(spi);
             usleep(2000);
-
             if (MyNode.NBoot==1) {
                 BME280_Read_Calib(spi, MyCalib);
                 BME280_Write_Ctrl_Hum(spi, OSRS_HX1);
@@ -238,6 +239,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
 
 
                 // Add BME280 Data to Packet
+
                 DataPacketLen = Add_s32Data2Packet(DataPacket, DataPacketLen, MyBME.SensorId, s32DataSensor, 3);
             }
 #ifdef DEBUG
@@ -258,14 +260,13 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
         DevId = (uint16_t)LDC1000_DevId(spi);
         if (DevId==LDC1000_ID) {
             LDC1000_Write_Pow_Conf(spi, STBY_MODE);
-            LDC1000_Write_Rp_Max(spi, RPMAX0981);
-            LDC1000_Write_Rp_Min(spi, RPMIN0436);
-            LDC1000_Write_Min_Freq(spi, 70); // Val = round ( 68.94 x log10(fsensor/2500) )
-            LDC1000_Write_Conf(spi, AMP_1V | RESP_TIME_0384);
+            LDC1000_Write_Rp_Max(spi, RPMAX0007);
+            LDC1000_Write_Rp_Min(spi, RPMIN0001p3);
+            LDC1000_Write_Min_Freq(spi, 127); // Val = round ( 68.94 x log10(172e3/2500) )
+            LDC1000_Write_Conf(spi, AMP_4V | RESP_TIME_6144);
             LDC1000_Write_Intb_Conf(spi, INTB_DIS);
-            LDC1000_Write_Clk_Conf(spi, XIN | CLK_ON);
+            LDC1000_Write_Clk_Conf(spi, XIN | CLK_OFF);
             LDC1000_Write_Pow_Conf(spi, ACTIVE_MODE);
-            usleep(50000);
             LDC1000_Get_Proximity_Frame(spi, MyLDC.NSamples, s16DataSensor);
 
             // Add LDC1000 Data to Packet
@@ -274,6 +275,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
 #ifdef DEBUG
             UART_write(uart0, "6 ",2); // Debug Message
 #endif
+
         }
         // PWM_stop(pwm);
         // PWM_close(pwm);

@@ -28,6 +28,9 @@
 #define SUCCESS_SET_DNCTR         0
 #define ERROR_SET_DNCTR           1
 
+#define SUCCESS_SET_PWRIDX         0
+#define ERROR_SET_PWRIDX           1
+
 #define SUCCESS_SET_NWSKEY         0
 #define ERROR_SET_NWSKEY           1
 
@@ -113,6 +116,8 @@ uint8_t Mac_Set_Upctr(UART_Handle uart, struct LoraNode *MyLoraNode);
 int Mac_Get_Dnctr(UART_Handle uart);
 
 uint8_t Mac_Set_Dnctr(UART_Handle uart, struct LoraNode *MyLoraNode);
+
+uint8_t Mac_Set_Pwridx(UART_Handle uart, uint8_t pwridx);
 
 uint8_t Mac_Get_Devaddr(UART_Handle uart, struct LoraNode *MyLoraNode);
 
