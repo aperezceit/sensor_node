@@ -201,7 +201,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
             ADXL355_Filter_Conf(spi, HPFOFF | ODR250HZ);
             ADXL355_Power_Conf(spi, DRDY_OFF | TEMP_OFF | MEASUREMENT);
             usleep(20000);
-            if (MyNode.NBoot==0) {
+            if (MyNode.NBoot==0 || MyNode.Mode== MODE_NORMAL_WIFI) {
                 // Get Accelerometer Data
                 ADXL355_Get_Accel_Frame(spi, MyADXL.NSamples, s32DataSensor);
                 // Add ADXL355 Data to Packet
@@ -224,7 +224,7 @@ uint8_t GetSensorData(uint8_t *DataPacket) {
         if (DevId==BME280_ID) {
             BME280_Reset(spi);
             usleep(2000);
-            if (MyNode.NBoot==1) {
+            if (MyNode.NBoot==1 || MyNode.Mode== MODE_NORMAL_WIFI) {
                 BME280_Read_Calib(spi, MyCalib);
                 BME280_Write_Ctrl_Hum(spi, OSRS_HX1);
                 BME280_Write_Ctrl_Meas(spi, OSRS_TX1 | OSRS_PX1 | FORCED);

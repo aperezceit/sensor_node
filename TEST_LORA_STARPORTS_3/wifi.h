@@ -10,7 +10,7 @@
 /////////////////////////////////////
 
 #define PORT                        (9000)
-#define DEST_IP_ADDR                SL_IPV4_VAL(192,168,4,100)
+#define DEST_IP_ADDR                SL_IPV4_VAL(192,168,4,160)
 #define NUM_OF_PKT                  (10)
 #define FRAME_LENGTH                (1000)
 

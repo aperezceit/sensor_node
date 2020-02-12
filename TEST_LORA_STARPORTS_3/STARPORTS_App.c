@@ -299,9 +299,11 @@ void *mainThread(void *arg0)
                 // writeFirstBoot(MyNode.FirstBoot);
                 MyNode.NFails=0; // and write to file NFails
                 writeNFails(MyNode.NFails);
+                UART_PRINT("SUCCESS WIFI CONNECTION\n\r");
             } else {
                 MyNode.NFails++;
                 writeNFails(MyNode.NFails);
+                UART_PRINT("ERROR CONNECTING WIFI\n\r");
                 NextStep=SHUTDOWN;
             }
         // } else {
@@ -404,6 +406,46 @@ void *mainThread(void *arg0)
     }
 
     else if (MyNode.Mode==MODE_NORMAL_WIFI) {
+        UART_PRINT("SENDING SENSOR DATA OVER MODE_NORMAL_WIFI\r\n");
+        prepareDataFrame(PORT, DEST_IP_ADDR);
+        sockId = sl_Socket(SL_AF_INET,SL_SOCK_STREAM, 0);
+        ASSERT_ON_ERROR(sockId);
+
+        status = sl_Connect(sockId, ( SlSockAddr_t *)&PowerMeasure_CB.ipV4Addr, sizeof(SlSockAddrIn_t));
+        if(status < 0)
+        {
+            sl_Close(sockId);
+            ASSERT_ON_ERROR(sockId);
+            UART_PRINT("\n\rCLIENT REFUSED %s\n\r");
+            Node_Disable();
+        }
+        else{
+            UART_PRINT("\n\rCLIENT CONNECTED \n\r",( SlSockAddr_t *)&PowerMeasure_CB.ipV4Addr);
+            usleep(1000000);
+        }
+
+        status = sl_Send(sockId, MyLoraNode.DataTx, MyLoraNode.DataLenTx, 0 );
+        usleep(500000);
+        if(status < 0 )
+        {
+            status = sl_Close(sockId);
+            ASSERT_ON_ERROR(status);
+            UART_PRINT("\n\rERROR SENDING PACKET: %s\n\r", status);
+            Node_Disable();
+        }
+        else if(status == 0 )
+        {
+            ASSERT_ON_ERROR(status);
+            UART_PRINT("\n\rPACKET SENT SUCCESSFULLY: %s\n\r", MyLoraNode.DataTx);
+            status = sl_Close(sockId);
+            UART_PRINT("\n\rCLIENT DISCONNECTED %s\n\r");
+            writeNBoot(1-MyNode.NBoot);
+            Node_Disable();
+        }else{
+            UART_PRINT("\n\rPACKET SENT SUCCESSFULLY: %s\n\r", MyLoraNode.DataTx);
+            status = sl_Close(sockId);
+            writeNBoot(1-MyNode.NBoot);
+        }
         // UART_PRINT("SENDING SENSOR DATA OVER MODE_NORMAL_WIFI\r\n");
         // Transmit Data through WiFi, several tries?
         //sendUdpClient(PORT_UDP);                      ******AÑADIR STRUCTURAS DE CONTROL EN WIFI.h

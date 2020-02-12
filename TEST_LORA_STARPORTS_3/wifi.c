@@ -227,12 +227,23 @@ int32_t wlanConnectFromFile(unsigned char *ssid)
 
     sl_Task(NULL);
 
+    int tries=0;
     while((!IS_CONNECTED(PowerMeasure_CB.slStatus)) || (!IS_IP_ACQUIRED(PowerMeasure_CB.slStatus)))
     {
         sl_Task(NULL);
+
+        if((!IS_CONNECTED(PowerMeasure_CB.slStatus)) || (!IS_IP_ACQUIRED(PowerMeasure_CB.slStatus))){
+            tries ++;
+            UART_PRINT(".");
+        }
+        if(tries==20000){
+            Node_Disable();
+            return ERROR_CONNECT_WIFI;
+        }
     }
 
     if (ret!=0){
+        Node_Disable();
         return ERROR_CONNECT_WIFI;
     }else{
         return SUCCESS_CONNECT_WIFI;
