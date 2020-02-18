@@ -6,22 +6,31 @@
  */
 
 #include <ti/drivers/Timer.h>
+#include <ti/drivers/Power.h>
 #include <stdint.h>
+#include "STARPORTS_App.h"
 
-void timerCallback(Timer_Handle myHandle);
+extern uint8_t Timer0Event;
+void timer0Callback(Timer_Handle myHandle) {
+    Timer0Event = 1;
+}
 
-Timer_Handle Startup_Timer(uint8_t index, uint32_t period) {
+extern uint8_t Timer1Event;
+void timer1Callback(Timer_Handle myHandle) {
+    Timer1Event = 1;
+}
+
+Timer_Handle Startup_Continuous_Timer(uint8_t index, uint32_t period) {
 
     Timer_Handle timer;
     Timer_Params params;
 
     /* Timer */
-    Timer_init();
     Timer_Params_init(&params);
     params.period = period;
     params.periodUnits = Timer_PERIOD_US;
     params.timerMode = Timer_CONTINUOUS_CALLBACK;
-    params.timerCallback = timerCallback;
+    params.timerCallback = timer0Callback;
 
     timer = Timer_open(index, &params);
 
@@ -30,6 +39,22 @@ Timer_Handle Startup_Timer(uint8_t index, uint32_t period) {
 }
 
 
-void timerCallback(Timer_Handle myHandle) {
+Timer_Handle Startup_Oneshot_Timer(uint8_t index, uint32_t interval) {
+
+    Timer_Handle timer;
+    Timer_Params params;
+
+    /* Timer */
+    Timer_Params_init(&params);
+    params.period = interval;
+    params.periodUnits = Timer_PERIOD_US;
+    params.timerMode = Timer_ONESHOT_CALLBACK;
+    params.timerCallback = timer1Callback;
+
+    timer = Timer_open(index, &params);
+
+    return timer;
 
 }
+
+

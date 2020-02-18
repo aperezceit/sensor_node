@@ -212,14 +212,20 @@ GPIO_PinConfig gpioPinConfigs[] = {
     GPIOCC32XX_GPIO_30 | GPIO_DO_NOT_CONFIG, /* RN2483 /MCLR  */
 
     /* STARPORTS GPIO Pins */
-    GPIOCC32XX_GPIO_12 | GPIO_DO_NOT_CONFIG, /* GPIO1 */
-    GPIOCC32XX_GPIO_13 | GPIO_DO_NOT_CONFIG, /* GPIO2 */
-    GPIOCC32XX_GPIO_22 | GPIO_DO_NOT_CONFIG, /* GPIO3 */
-    GPIOCC32XX_GPIO_28 | GPIO_DO_NOT_CONFIG, /* GPIO4 */
-    GPIOCC32XX_GPIO_00 | GPIO_DO_NOT_CONFIG, /* GPIO5 */
-    GPIOCC32XX_GPIO_06 | GPIO_DO_NOT_CONFIG, /* GPIO6 */
-    GPIOCC32XX_GPIO_07 | GPIO_DO_NOT_CONFIG, /* GPIO7 */
-    GPIOCC32XX_GPIO_08 | GPIO_DO_NOT_CONFIG, /* GPIO8 */
+    GPIOCC32XX_GPIO_12 | GPIO_DO_NOT_CONFIG, /* ADXL355_CS */
+    GPIOCC32XX_GPIO_13 | GPIO_DO_NOT_CONFIG, /* BME280_CS */
+    GPIOCC32XX_GPIO_22 | GPIO_DO_NOT_CONFIG, /* LDC1000_CS */
+    GPIOCC32XX_GPIO_08 | GPIO_DO_NOT_CONFIG, /* EN_NODE */
+    GPIOCC32XX_GPIO_06 | GPIO_DO_NOT_CONFIG, /* EN_ADXL355 */
+    GPIOCC32XX_GPIO_00 | GPIO_DO_NOT_CONFIG, /* EN_BME280 */
+    GPIOCC32XX_GPIO_28 | GPIO_DO_NOT_CONFIG, /* EN_LDC1000 */
+    GPIOCC32XX_GPIO_07 | GPIO_DO_NOT_CONFIG, /* DS1374_INTB */
+    GPIOCC32XX_GPIO_10 | GPIO_DO_NOT_CONFIG, /* SCL */
+    GPIOCC32XX_GPIO_11 | GPIO_DO_NOT_CONFIG, /* SDA */
+    GPIOCC32XX_GPIO_14 | GPIO_DO_NOT_CONFIG, /* SCLK */
+    GPIOCC32XX_GPIO_16 | GPIO_DO_NOT_CONFIG, /* MOSI */
+    GPIOCC32XX_GPIO_17 | GPIO_DO_NOT_CONFIG, /* CS */
+
 };
 
 /*
@@ -288,37 +294,37 @@ const uint_least8_t I2C_count = CC3220SF_STARPORTS_I2CCOUNT;
 PowerCC32XX_ParkInfo parkInfo[] = {
 /*          PIN                    PARK STATE              PIN ALIAS (FUNCTION)
      -----------------  ------------------------------     -------------------- */
-    {PowerCC32XX_PIN01, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO10              */
-    {PowerCC32XX_PIN02, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO11              */
-    {PowerCC32XX_PIN03, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO12              */
-    {PowerCC32XX_PIN04, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO13              */
-    {PowerCC32XX_PIN05, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO14              */
-    {PowerCC32XX_PIN06, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO15              */
-    {PowerCC32XX_PIN07, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO16              */
-    {PowerCC32XX_PIN08, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO17              */
+    {PowerCC32XX_PIN01, PowerCC32XX_DRIVE_LOW},   /* I2C_SCL             */
+    {PowerCC32XX_PIN02, PowerCC32XX_DRIVE_LOW},   /* I2C_SDA             */
+    {PowerCC32XX_PIN03, PowerCC32XX_DRIVE_LOW},   /* SPI_CS_ADXL355      */
+    {PowerCC32XX_PIN04, PowerCC32XX_DRIVE_LOW},   /* SPI_CS_BME280       */
+    {PowerCC32XX_PIN05, PowerCC32XX_DRIVE_LOW},   /* SPI_SCLK            */
+    {PowerCC32XX_PIN06, PowerCC32XX_DRIVE_LOW},   /* SPI_MISO            */
+    {PowerCC32XX_PIN07, PowerCC32XX_DRIVE_LOW},   /* SPI_MOSI            */
+    {PowerCC32XX_PIN08, PowerCC32XX_DRIVE_LOW},   /* SPI_CS              */
     {PowerCC32XX_PIN13, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* FLASH_SPI_DIN       */
-    {PowerCC32XX_PIN15, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO22              */
+    {PowerCC32XX_PIN15, PowerCC32XX_DRIVE_LOW}, /* SPI_CS_LDC1000      */
     {PowerCC32XX_PIN16, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* TDI (JTAG DEBUG)    */
     {PowerCC32XX_PIN17, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* TDO (JTAG DEBUG)    */
     {PowerCC32XX_PIN19, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* TCK (JTAG DEBUG)    */
     {PowerCC32XX_PIN20, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* TMS (JTAG DEBUG)    */
-    {PowerCC32XX_PIN18, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO28              */
+    {PowerCC32XX_PIN18, PowerCC32XX_DRIVE_LOW}, /* EN_LDC1000          */
     {PowerCC32XX_PIN21, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* SOP2                */
     {PowerCC32XX_PIN29, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* ANTSEL1             */
     {PowerCC32XX_PIN30, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* ANTSEL2             */
     {PowerCC32XX_PIN45, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* DCDC_ANA2_SW_P      */
-    {PowerCC32XX_PIN50, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO0               */
+    {PowerCC32XX_PIN50, PowerCC32XX_DRIVE_LOW}, /* EN_BME280           */
     {PowerCC32XX_PIN52, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* RTC_XTAL_N          */
-    {PowerCC32XX_PIN53, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO30              */
-    {PowerCC32XX_PIN55, PowerCC32XX_WEAK_PULL_UP_STD},   /* GPIO1 (XDS_UART_RX) */
-    {PowerCC32XX_PIN57, PowerCC32XX_WEAK_PULL_UP_STD},   /* GPIO2 (XDS_UART_TX) */
-    {PowerCC32XX_PIN58, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO3               */
-    {PowerCC32XX_PIN59, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO4               */
-    {PowerCC32XX_PIN60, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO5               */
-    {PowerCC32XX_PIN61, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO6               */
-    {PowerCC32XX_PIN62, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO7               */
-    {PowerCC32XX_PIN63, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO8               */
-    {PowerCC32XX_PIN64, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* GPIO9               */
+    {PowerCC32XX_PIN53, PowerCC32XX_DRIVE_LOW}, /* RN2483_MCLR         */
+    {PowerCC32XX_PIN55, PowerCC32XX_DRIVE_LOW},   /* XDS_UART_RX         */
+    {PowerCC32XX_PIN57, PowerCC32XX_DRIVE_LOW},   /* XDS_UART_TX         */
+    {PowerCC32XX_PIN58, PowerCC32XX_DRIVE_LOW},   /* UART_TX             */
+    {PowerCC32XX_PIN59, PowerCC32XX_DRIVE_LOW},   /* UART_RX             */
+    {PowerCC32XX_PIN60, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* ADCIN               */
+    {PowerCC32XX_PIN61, PowerCC32XX_DRIVE_LOW}, /* EN_ADXL355          */
+    {PowerCC32XX_PIN62, PowerCC32XX_WEAK_PULL_DOWN_STD}, /* INTB_RTC            */
+    {PowerCC32XX_PIN63, PowerCC32XX_DRIVE_LOW},   /* EN_NODE             */
+    {PowerCC32XX_PIN64, PowerCC32XX_DRIVE_LOW}, /* LDC1000_CLK         */
 };
 
 /*
@@ -329,24 +335,27 @@ PowerCC32XX_ParkInfo parkInfo[] = {
  *  at runtime by calling Power_enablePolicy(), or at build time, by changing
  *  enablePolicy to true in this structure.
  */
+
+void WakeupFromLPDS(uint_least8_t);
+
 const PowerCC32XX_ConfigV1 PowerCC32XX_config = {
     .policyInitFxn = &PowerCC32XX_initPolicy,
     .policyFxn = &PowerCC32XX_sleepPolicy,
     .enterLPDSHookFxn = NULL,
     .resumeLPDSHookFxn = NULL,
-    .enablePolicy = false,
+    .enablePolicy = true,
     .enableGPIOWakeupLPDS = true,
     .enableGPIOWakeupShutdown = true,
     .enableNetworkWakeupLPDS = true,
-    .wakeupGPIOSourceLPDS = PRCM_LPDS_GPIO13,
+    .wakeupGPIOSourceLPDS = PRCM_LPDS_GPIO2,
     .wakeupGPIOTypeLPDS = PRCM_LPDS_FALL_EDGE,
-    .wakeupGPIOFxnLPDS = NULL,
+    .wakeupGPIOFxnLPDS = &WakeupFromLPDS,
     .wakeupGPIOFxnLPDSArg = 0,
-    .wakeupGPIOSourceShutdown = PRCM_HIB_GPIO13,
-    .wakeupGPIOTypeShutdown = PRCM_HIB_RISE_EDGE,
+    .wakeupGPIOSourceShutdown = PRCM_HIB_GPIO2,
+    .wakeupGPIOTypeShutdown = PRCM_HIB_FALL_EDGE,
     .ramRetentionMaskLPDS = PRCM_SRAM_COL_1 | PRCM_SRAM_COL_2 |
         PRCM_SRAM_COL_3 | PRCM_SRAM_COL_4,
-    .keepDebugActiveDuringLPDS = false,
+    .keepDebugActiveDuringLPDS = true,
     .ioRetentionShutdown = PRCM_IO_RET_GRP_1,
     .pinParkDefs = parkInfo,
     .numPins = sizeof(parkInfo) / sizeof(PowerCC32XX_ParkInfo)
@@ -362,7 +371,7 @@ PWMTimerCC32XX_Object pwmTimerCC3220SObjects[CC3220SF_STARPORTS_PWMCOUNT];
 
 const PWMTimerCC32XX_HWAttrsV2 pwmTimerCC3220SHWAttrs[CC3220SF_STARPORTS_PWMCOUNT] = {
     {    /* CC3220SF_STARPORTS_PWM5 */
-        .pwmPin = PWMTimerCC32XX_PIN_64
+       .pwmPin = PWMTimerCC32XX_PIN_64
     }
 };
 
@@ -379,9 +388,10 @@ const uint_least8_t PWM_count = CC3220SF_STARPORTS_PWMCOUNT;
 /*
  *  =============================== SDFatFS ===============================
  */
+/*
 #include <ti/drivers/SD.h>
 #include <ti/drivers/SDFatFS.h>
-
+*/
 /*
  * Note: The SDFatFS driver provides interface functions to enable FatFs
  * but relies on the SD driver to communicate with SD cards.  Opening a
@@ -392,7 +402,7 @@ const uint_least8_t PWM_count = CC3220SF_STARPORTS_PWMCOUNT;
  * acceptable to have more SD driver instances than SDFatFs driver instances
  * but the opposite is not supported & the SDFatFs will fail to open.
  */
-SDFatFS_Object sdfatfsObjects[CC3220SF_STARPORTS_SDFatFSCOUNT];
+/*SDFatFS_Object sdfatfsObjects[CC3220SF_STARPORTS_SDFatFSCOUNT];
 
 const SDFatFS_Config SDFatFS_config[CC3220SF_STARPORTS_SDFatFSCOUNT] = {
     {
@@ -400,17 +410,18 @@ const SDFatFS_Config SDFatFS_config[CC3220SF_STARPORTS_SDFatFSCOUNT] = {
     }
 };
 
-const uint_least8_t SDFatFS_count = CC3220SF_STARPORTS_SDFatFSCOUNT;
+const uint_least8_t SDFatFS_count = CC3220SF_STARPORTS_SDFatFSCOUNT;*/
 
 /*
  *  =============================== SD ===============================
  */
+/*
 #include <ti/drivers/SD.h>
 #include <ti/drivers/sd/SDHostCC32XX.h>
 
 SDHostCC32XX_Object sdhostCC3220SObjects[CC3220SF_STARPORTS_SDCOUNT];
 
-/* SDHost configuration structure, describing which pins are to be used */
+ SDHost configuration structure, describing which pins are to be used
 const SDHostCC32XX_HWAttrsV1 sdhostCC3220SHWattrs[CC3220SF_STARPORTS_SDCOUNT] = {
     {
         .clkRate = 8000000,
@@ -433,6 +444,7 @@ const SD_Config SD_config[CC3220SF_STARPORTS_SDCOUNT] = {
 };
 
 const uint_least8_t SD_count = CC3220SF_STARPORTS_SDCOUNT;
+*/
 
 /*
  *  =============================== SPI ===============================
@@ -470,7 +482,7 @@ const SPICC32XXDMA_HWAttrsV1 spiCC3220SDMAHWAttrs[CC3220SF_STARPORTS_SPICOUNT] =
         .intNum = INT_GSPI,
         .intPriority = (~0),
         .spiPRCM = PRCM_GSPI,
-        .csControl = SPI_HW_CTRL_CS,
+        .csControl = SPI_SW_CTRL_CS,
         .csPolarity = SPI_CS_ACTIVELOW,
         .pinMode = SPI_4PIN_MODE,
         .turboMode = SPI_TURBO_OFF,

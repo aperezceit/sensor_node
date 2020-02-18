@@ -60,14 +60,20 @@ extern "C" {
  *  taken out of gpioPinCOnfig[]
  */
 
-#define Board_GPIO1                  CC3220SF_STARPORTS_GPIO1
-#define Board_GPIO2                  CC3220SF_STARPORTS_GPIO2
-#define Board_GPIO3                  CC3220SF_STARPORTS_GPIO3
-#define Board_GPIO4                  CC3220SF_STARPORTS_GPIO4
-#define Board_GPIO5                  CC3220SF_STARPORTS_GPIO5
-#define Board_GPIO6                  CC3220SF_STARPORTS_GPIO6
-#define Board_GPIO7                  CC3220SF_STARPORTS_GPIO7
-#define Board_GPIO8                  CC3220SF_STARPORTS_GPIO8
+#define Board_ADXL355_CS             CC3220SF_STARPORTS_ADXL355_CS
+#define Board_BME280_CS              CC3220SF_STARPORTS_BME280_CS
+#define Board_LDC1000_CS             CC3220SF_STARPORTS_LDC1000_CS
+#define Board_EN_NODE                CC3220SF_STARPORTS_EN_NODE
+#define Board_EN_ADXL355             CC3220SF_STARPORTS_EN_ADXL355
+#define Board_EN_BME280              CC3220SF_STARPORTS_EN_BME280
+#define Board_EN_LDC1000             CC3220SF_STARPORTS_EN_LDC1000
+#define Board_DS1374_INTB            CC3220SF_STARPORTS_DS1374_INTB
+#define Board_SCL_ASGPIO             CC3220SF_STARPORTS_SCL
+#define Board_SDA_ASGPIO             CC3220SF_STARPORTS_SDA
+#define Board_SCLK_ASGPIO            CC3220SF_STARPORTS_SCLK
+#define Board_MOSI_ASGPIO            CC3220SF_STARPORTS_MOSI
+#define Board_CS_ASGPIO              CC3220SF_STARPORTS_CS
+
 
 
 #define Board_RN2483_MCLR            CC3220SF_STARPORTS_RN2483_MCLR

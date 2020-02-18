@@ -1,0 +1,175 @@
+/*
+ * LDC1000.c
+ *
+ *  Created on: 2 jun. 2019
+ *      Author: airizar
+ */
+
+#include "STARPORTS_App.h"
+#include "LDC1000.h"
+#include <ti/drivers/SPI.h>
+#include <unistd.h>
+#include <math.h>
+#include "hal_SPI.h"
+#include "hal_UART.h"
+
+
+uint8_t LDC1000_DevId(SPI_Handle spi) {
+
+    uint8_t RxBuffer[2];
+
+    SPI_read_8bits(spi,DEV_ID,RxBuffer,1,RNW_MSB);
+
+    return RxBuffer[1];
+
+}
+
+
+void LDC1000_Write_Rp_Max(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,RP_MAX,Val,RNW_MSB);
+
+}
+
+uint8_t LDC1000_Read_Rp_Max(SPI_Handle spi) {
+
+    uint8_t RxBuffer[2];
+
+    SPI_read_8bits(spi,RP_MAX,RxBuffer,1,RNW_MSB);
+
+    return RxBuffer[1];
+
+}
+
+void LDC1000_Write_Rp_Min(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,RP_MIN,Val,RNW_MSB);
+
+}
+
+uint8_t LDC1000_Read_Rp_Min(SPI_Handle spi) {
+
+    uint8_t RxBuffer[2];
+
+    SPI_read_8bits(spi,RP_MIN,RxBuffer,1,RNW_MSB);
+
+    return RxBuffer[1];
+
+}
+
+
+void LDC1000_Write_Min_Freq(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,MIN_FREQ,Val,RNW_MSB);
+
+}
+
+void LDC1000_Write_Conf(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,LDC_CONFIG,Val,RNW_MSB);
+
+}
+
+void LDC1000_Write_Intb_Conf(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,INTB_CONFIG,Val,RNW_MSB);
+
+}
+
+void LDC1000_Write_Pow_Conf(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,POW_CONFIG,Val,RNW_MSB);
+
+}
+
+void LDC1000_Write_Clk_Conf(SPI_Handle spi, uint8_t Val) {
+
+    SPI_write_8bits(spi,CLK_CONFIG,Val,RNW_MSB);
+
+}
+
+uint8_t LDC1000_Read_Status(SPI_Handle spi) {
+
+    uint8_t RxBuffer[2];
+
+    SPI_read_8bits(spi,LDC_STATUS,RxBuffer,1,RNW_MSB);
+
+    return RxBuffer[1];
+
+}
+
+
+uint16_t LDC1000_Read_Proximity(SPI_Handle spi) {
+
+    uint8_t RxBuffer[3];
+
+    SPI_read_8bits(spi,PROX_LSB,RxBuffer,2,RNW_MSB);
+
+    return ( RxBuffer[1] + (uint16_t)(RxBuffer[2]<<8) );
+
+}
+
+void LDC1000_Get_Proximity_Frame(SPI_Handle spi, uint16_t Samples, int16_t *DataSensor) {
+
+    int i=0;
+    uint32_t newProx, Proximity[512];
+    float ProxMean;
+    float ProxRms;
+    uint8_t status;
+
+    ProxMean = 0;
+    usleep(50000);
+    while(i<Samples) {
+        // do {
+        //    status = LDC1000_Read_Status(spi) & (DRDYB_MASK | OSC_STATUS_MASK);
+        // } while (status!=0);
+
+        // while (LDC1000_Read_Status(spi) & (DRDYB_MASK | OSC_STATUS_MASK)) {}
+        // notdatardy = LDC1000_Read_Status(spi) & (DRDYB_MASK | OSC_STATUS_MASK);
+        // newProx = (uint32_t)LDC1000_Read_Proximity(spi);
+        newProx = (uint32_t)LDC1000_Read_Proximity(spi);
+        ProxMean += newProx;
+        Proximity[i] = newProx;
+        // UART_PRINT("Proximity[%d] = %d\r\n", i, Proximity[i]);
+        i++;
+        usleep(250);
+    }
+    ProxMean = ProxMean/Samples;
+
+    ProxRms = 0.0;
+    for (i=0;i<Samples;i++) {
+        ProxRms += ( (Proximity[i]-ProxMean)*(Proximity[i]-ProxMean) );
+    }
+
+    // RpMean = (uint32_t)(RpCalc(ProxMean, 981.748, 436.332) * 10000 );
+    // RpRms = (uint32_t)(RpCalc((uint32_t)sqrt(ProxRms/Samples), 981.748, 436.332) * 10000 );
+
+    DataSensor[0] = (int16_t)ProxMean;
+    DataSensor[1] = (int16_t)sqrt(ProxRms/Samples);
+
+    // DataSensor[0] = (int32_t)RpMean;
+    // DataSensor[1] = (int32_t)RpRms;
+
+}
+
+uint32_t LDC1000_Read_Fcount(SPI_Handle spi) {
+
+    uint8_t RxBuffer[4];
+
+    SPI_read_8bits(spi,FCOUNT_LSB,RxBuffer,3,RNW_MSB);
+
+    return ( RxBuffer[1] + (RxBuffer[2]<<8) + (RxBuffer[3]<<16) );
+
+}
+
+float RpCalc(uint32_t Proximity, float RpMax, float RpMin) {
+
+    float Y = 1.0*Proximity/32768;
+    float Rp;
+
+
+    Rp = RpMax * RpMin / (RpMin*(1-Y) + RpMax*Y);
+
+    return Rp;
+
+}

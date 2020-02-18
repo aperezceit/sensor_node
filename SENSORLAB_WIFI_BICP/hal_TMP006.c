@@ -80,8 +80,31 @@ int16_t GetTA_TMP006(I2C_Handle i2c, uint_least8_t Slave) {
     i2cTransaction.readCount = 2;
     status = I2C_transfer(i2c, &i2cTransaction);
 
-    Temp = (int16_t)( ((readBuffer[0]<<8) + readBuffer[1]) >> 2 );
+    Temp = (int16_t)(((readBuffer[0]<<8) + readBuffer[1])) / 4;
 
     return Temp;
+}
+
+
+uint16_t GetID_TMP006(I2C_Handle i2c, uint_least8_t Slave) {
+
+    bool status;
+    uint8_t writeBuffer;
+    uint8_t readBuffer[2];
+    I2C_Transaction i2cTransaction;
+    uint16_t DevId;
+
+    writeBuffer = 0xFE;
+
+    i2cTransaction.slaveAddress = Slave;
+    i2cTransaction.writeBuf = &writeBuffer;
+    i2cTransaction.writeCount = 1;
+    i2cTransaction.readBuf = readBuffer;
+    i2cTransaction.readCount = 2;
+    status = I2C_transfer(i2c, &i2cTransaction);
+
+    DevId = (readBuffer[0]<<8) + readBuffer[1];
+
+    return DevId;
 }
 

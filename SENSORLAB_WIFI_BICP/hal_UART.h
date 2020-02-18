@@ -10,8 +10,6 @@
 
 #include <ti/drivers/UART.h>
 #include <stdbool.h>
-#include "Board.h"
-
 
 #define UART_PRINT Report
 #define ERR_PRINT(x) Report("Error [%d] at line [%d] in function [%s]  \n\r",\

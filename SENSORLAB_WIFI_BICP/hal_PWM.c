@@ -8,7 +8,7 @@
 #include <ti/drivers/PWM.h>
 #include <stddef.h>
 
-PWM_Handle Startup_PWM(uint_least8_t index) {
+PWM_Handle Config_PWM(uint_least8_t index) {
 
     PWM_Handle pwm;
     PWM_Params params;

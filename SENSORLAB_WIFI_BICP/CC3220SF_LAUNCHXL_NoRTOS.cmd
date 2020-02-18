@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, Texas Instruments Incorporated
+ * Copyright (c) 2016, Texas Instruments Incorporated
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,40 +25,49 @@
  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
 /*
- *  ======== main_nortos.c ========
+ *  ======== CC3220SF_LAUNCHXL.cmd ========
  */
-#include <stdint.h>
-#include <stddef.h>
 
-#include <NoRTOS.h>
-
-/* Example/Board Header files */
-#include "Board.h"
-
-extern void *mainThread(void *arg0);
+--stack_size=0x1000
+--heap_size=0x8000
 
 /*
- *  ======== main ========
-*/
+ * The starting address of the application.  Normally the interrupt vectors
+ * must be located at the beginning of the application.
+ */
+#define SRAM_BASE   0x20000000
+#define FLASH_BASE  0x01000800
 
-int main(void)
+MEMORY
 {
-    /* Call driver init functions */
-    Board_init();
+    /* Bootloader uses FLASH_HDR during initialization */
+    FLASH_HDR (RX)  : origin = 0x01000000, length = 0x7FF      /* 2 KB */
+    FLASH     (RX)  : origin = 0x01000800, length = 0x0FF800   /* 1022KB */
+    SRAM      (RWX) : origin = 0x20000000, length = 0x00040000 /* 256KB */
+}
 
-    /* Start NoRTOS */
-    NoRTOS_start();
+/* Section allocation in memory */
 
-    /* Call mainThread function */
-    mainThread(NULL);
+SECTIONS
+{
+    .dbghdr     : > FLASH_HDR
+    .text       : > FLASH
+    .TI.ramfunc : {} load=FLASH, run=SRAM, table(BINIT)
+    .const      : > FLASH
+    .cinit      : > FLASH
+    .pinit      : > FLASH
+    .init_array : > FLASH
 
-    while (1) {;}
+    .data       : > SRAM
+    .bss        : > SRAM
+    .sysmem     : > SRAM
+    .stack      : > SRAM(HIGH)
 
+    .resetVecs  : > FLASH_BASE
+    .ramVecs    : > SRAM_BASE, type=NOLOAD
 }

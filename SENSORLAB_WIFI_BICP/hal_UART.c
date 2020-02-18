@@ -4,20 +4,22 @@
  *  Created on: 25 mar. 2019
  *      Author: airizar
  */
+
 #include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
 #include <stdbool.h>
 #include <ti/drivers/UART.h>
-// #include "Board.h"
-#include "hal_UART.h"
+
+
+
 
 extern int vsnprintf(char * s,
                      size_t n,
                      const char * format,
                      va_list arg);
 
-static UART_Handle uartHandle;
+extern UART_Handle uart0;
+// #include "Board.h"
+
 
 /*!
  *  @brief  Function to start a UART peripheral
@@ -39,12 +41,12 @@ static UART_Handle uartHandle;
  */
 UART_Handle Startup_UART(uint_least8_t index, uint32_t baudRate) {
 
-//   UART_Handle uart;
+    UART_Handle uart;
     UART_Params uartParams;
 
     UART_init();
-    UART_Params_init(&uartParams);
 
+    UART_Params_init(&uartParams);
     uartParams.writeDataMode = UART_DATA_BINARY;
     uartParams.readDataMode = UART_DATA_BINARY;
     uartParams.readReturnMode = UART_RETURN_FULL;
@@ -52,13 +54,13 @@ UART_Handle Startup_UART(uint_least8_t index, uint32_t baudRate) {
     uartParams.readEcho = UART_ECHO_OFF;
     uartParams.baudRate = baudRate;
 
-    uartHandle = UART_open(index, &uartParams);
-    if (uartHandle == NULL) {
+    uart = UART_open(index, &uartParams);
+    if (uart == NULL) {
        /* UART_open() failed */
        while (1);
     }
 
-    return (uartHandle);
+    return uart;
 
 }
 
@@ -98,12 +100,13 @@ bool UART_resetInputBuffer(UART_Handle hUart) {
  *
  *  @param  buf           pointer to unsigned char where the line will be stored
  *
- *  @return               The size of the Line (include the newline character
- *                        Size 0 means that the number of the string of chars has reached 255
+ *  @return               The size of the Line does not include characters "\r\n"
+ *                        Size 0 means that the number of the string of chars has reached 255 or size is zero
  *
  */
 uint8_t GetLine_UART(UART_Handle uart, unsigned char *buf) {
-    uint8_t i = 0;
+    int16_t i = 0;
+    uint8_t sz;
     unsigned char c;
 
     do {
@@ -113,9 +116,12 @@ uint8_t GetLine_UART(UART_Handle uart, unsigned char *buf) {
             i = 0;
             break;
         }
-    } while (c !='\n');
+    } while (c !='\r');
+    UART_read(uart,&c,1); // Read final '\n' character
 
-    return i;
+    sz = (i>1)? (i-1) : 0;
+    return sz;
+
 }
 
 //*****************************************************************************
@@ -192,9 +198,9 @@ int Report(const char *pcFormat,...)
 void Message(const char *str)
 {
 #ifdef UART_NONPOLLING
-    UART_write(uartHandle, str, strlen(str));
+    UART_write(uart, str, strlen(str));
 #else
-    UART_writePolling(uartHandle, str, strlen(str));
+    UART_writePolling(uart0, str, strlen(str));
 #endif
 }
 
@@ -209,5 +215,7 @@ void Message(const char *str)
 //*****************************************************************************
 void putch(char ch)
 {
-    UART_writePolling(uartHandle, &ch, 1);
+    UART_writePolling(uart0, &ch, 1);
 }
+
+

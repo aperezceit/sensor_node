@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2017-2018, Texas Instruments Incorporated
+ * Copyright (c) 2016, Texas Instruments Incorporated
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,40 +25,28 @@
  * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
  * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
  * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*
- *  ======== main_nortos.c ========
- */
+#ifndef PLATFORM_H_
+#define PLATFORM_H_
+
 #include <stdint.h>
-#include <stddef.h>
+#include <stdbool.h>
 
-#include <NoRTOS.h>
+//*****************************************************************************
+// Defines
+//*****************************************************************************
+#define MAX_INT                     (0x7FFFFFFF)
 
-/* Example/Board Header files */
-#include "Board.h"
+//*****************************************************************************
+// Function prototypes
+//*****************************************************************************
+void powerShutdown(uint32_t shutdownTime);
+bool isWokenFromHib(void);
+uint32_t getHibRetentionReg(void);
+void setHibRetentionReg(uint32_t val);
 
-extern void *mainThread(void *arg0);
-
-/*
- *  ======== main ========
-*/
-
-int main(void)
-{
-    /* Call driver init functions */
-    Board_init();
-
-    /* Start NoRTOS */
-    NoRTOS_start();
-
-    /* Call mainThread function */
-    mainThread(NULL);
-
-    while (1) {;}
-
-}
+#endif /* PLATFORM_H_ */

@@ -168,6 +168,15 @@ int32_t wlanConf(void){
     return(0);
 }
 
+//*****************************************************************************
+//
+//! \brief    This function connects to a WIFI AP.
+//!
+//!
+//!
+//!
+//
+//*****************************************************************************
 int32_t wlanConnect(void)
 {
     SlWlanSecParams_t secParams = {0};
@@ -189,6 +198,59 @@ int32_t wlanConnect(void)
     return(0);
 }
 
+//*****************************************************************************
+//
+//! \brief    This function connects to a WIFI AP.
+//!
+//!
+//!
+//!
+//
+//*****************************************************************************
+int32_t wlanConnectFromFile(unsigned char *ssid)
+{
+    uint8_t ret;
+
+    SlWlanSecParams_t secParams = {0};
+
+    secParams.Key = (signed char*)SECURITY_KEY_FILE_CONNECT;
+    secParams.KeyLen = strlen(SECURITY_KEY_FILE_CONNECT);
+    secParams.Type = SECURITY_TYPE;
+
+    unsigned char FileSSID[13];
+
+    sprintf(&FileSSID,"%s",ssid );
+
+    /* WLAN CONNECT TO AP*/
+    ret = sl_WlanConnect((signed char*)FileSSID, strlen(FileSSID), 0, &secParams, 0);
+    UART_PRINT("Trying to connect to AP : %s\n\r", FileSSID);
+
+    sl_Task(NULL);
+
+    int tries=0;
+    while((!IS_CONNECTED(PowerMeasure_CB.slStatus)) || (!IS_IP_ACQUIRED(PowerMeasure_CB.slStatus)))
+    {
+        sl_Task(NULL);
+
+        if((!IS_CONNECTED(PowerMeasure_CB.slStatus)) || (!IS_IP_ACQUIRED(PowerMeasure_CB.slStatus))){
+            tries ++;
+            UART_PRINT(".");
+        }
+        if(tries==20000){
+            Node_Disable();
+            return ERROR_CONNECT_WIFI;
+        }
+    }
+
+    if (ret!=0){
+        Node_Disable();
+        return ERROR_CONNECT_WIFI;
+    }else{
+        return SUCCESS_CONNECT_WIFI;
+    }
+    return(0);
+}
+
 void prepareDataFrame(uint16_t port,uint32_t ipAddr)
 {
     uint16_t idx;
@@ -201,7 +263,7 @@ void prepareDataFrame(uint16_t port,uint32_t ipAddr)
     PowerMeasure_CB.ipV4Addr.sin_port = sl_Htons(port);
     PowerMeasure_CB.ipV4Addr.sin_addr.s_addr = sl_Htonl(ipAddr);
 }
-
+/*
 int16_t sendTcpClient(uint16_t port)
 {
     int16_t         sockId;
@@ -244,7 +306,7 @@ int16_t sendTcpClient(uint16_t port)
 
     return(0);
 }
-
+*/
 int16_t sendUdpClient(uint16_t port)
 {
     int16_t         sockId;
@@ -252,7 +314,12 @@ int16_t sendUdpClient(uint16_t port)
     int32_t         status = -1;
 
     sockId = sl_Socket(SL_AF_INET,SL_SOCK_DGRAM, 0);
-    ASSERT_ON_ERROR(sockId);
+
+    if(sockId > 0){
+        UART_PRINT("SOCKET UDP");
+    }else{
+        UART_PRINT("error UDP");
+    }
 
     while (idx < NUM_OF_PKT)
     {

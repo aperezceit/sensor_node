@@ -10,6 +10,6 @@
 
 #include <ti/drivers/PWM.h>
 
-PWM_Handle Startup_PWM(uint_least8_t index);
+PWM_Handle Config_PWM(uint_least8_t index);
 
 #endif /* HAL_PWM_H_ */

@@ -20,10 +20,6 @@ ADC_Handle Startup_ADC(uint8_t index) {
     ADC_init();
     adc = ADC_open(index, &params);
 
-    if (adc==NULL) {
-        while(1);
-    }
-
     return adc;
 
 }
