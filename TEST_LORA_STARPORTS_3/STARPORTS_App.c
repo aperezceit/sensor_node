@@ -372,7 +372,7 @@ void *mainThread(void *arg0)
         } else if (ret == SUCCESS_TX_MAC_RX) {
             // Get upctr from RN2483 & Write to file
             MyLoraNode.Upctr = Mac_Get_Upctr(uart1);
-            writeUpCntr(MyLoraNode.Upctr);
+            writeUpCntr(MyLoraNode.Upctr);              //*********SI HAGO ESTE WRITE MACHACO EL VALOR DE DOWNLINK PARA ESTE PARAM.
             MyLoraNode.Dnctr = Mac_Get_Dnctr(uart1);
             writeDnCntr(MyLoraNode.Dnctr);
             if (nodeId==MyNode.NodeId) {
@@ -408,6 +408,31 @@ void *mainThread(void *arg0)
     else if (MyNode.Mode==MODE_NORMAL_WIFI) {
         UART_PRINT("SENDING SENSOR DATA OVER MODE_NORMAL_WIFI\r\n");
         prepareDataFrame(PORT, DEST_IP_ADDR);
+
+        sockId = sl_Socket(SL_AF_INET,SL_SOCK_DGRAM, 0);
+        if(sockId < 0){
+            UART_PRINT("error UDP %d\n\r",sockId);
+        }else{
+            //UART_PRINT("SOCKET UDP %d\n\r",sockId);
+        }
+
+        status = sl_SendTo(sockId, MyLoraNode.DataTx, MyLoraNode.DataLenTx, 0,(SlSockAddr_t *)&PowerMeasure_CB.ipV4Addr,sizeof(SlSockAddrIn_t));
+
+        if(status < 0 )
+        {
+            status = sl_Close(sockId);
+            ASSERT_ON_ERROR(sockId);
+            UART_PRINT("\n\rERROR SENDING PACKET: %s\n\r", status);
+            Node_Disable();
+        }else{
+            UART_PRINT("\n\rPACKET SENT\n\r");
+            status = sl_Close(sockId);
+            writeNBoot(1-MyNode.NBoot);
+        }
+
+        /*
+         ///////////////////TCP CLIENT////////////////////////
+
         sockId = sl_Socket(SL_AF_INET,SL_SOCK_STREAM, 0);
         ASSERT_ON_ERROR(sockId);
 
@@ -446,6 +471,8 @@ void *mainThread(void *arg0)
             status = sl_Close(sockId);
             writeNBoot(1-MyNode.NBoot);
         }
+
+        */
         // UART_PRINT("SENDING SENSOR DATA OVER MODE_NORMAL_WIFI\r\n");
         // Transmit Data through WiFi, several tries?
         //sendUdpClient(PORT_UDP);                      ******AÑADIR STRUCTURAS DE CONTROL EN WIFI.h

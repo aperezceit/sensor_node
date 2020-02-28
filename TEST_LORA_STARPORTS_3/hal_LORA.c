@@ -549,6 +549,7 @@ uint8_t Tx_Uncnf_Lora(UART_Handle uart, struct LoraNode *MyLoraNode, uint8_t *ma
     sprintf(Command,"mac tx uncnf %d ", MyLoraNode->PortNoTx);
     strncat(Command,MyLoraNode->DataTx, MyLoraNode->DataLenTx);
     strcat(Command,"\r\n");
+    UART_PRINT("%s\n",Command);
 
     UART_write(uart, Command, strlen(Command));
 
@@ -556,16 +557,22 @@ uint8_t Tx_Uncnf_Lora(UART_Handle uart, struct LoraNode *MyLoraNode, uint8_t *ma
     while (LastAnswer==FALSE) {
         sz = GetLine_UART(uart, buf);
         if (strncmp(buf,"ok",2)==0) {
+            UART_PRINT("%s\n",buf);
             ;
         } else if (strncmp(buf,"mac_tx_ok",9)==0) {
+            UART_PRINT("%s\n",buf);
             LastAnswer=TRUE;
             ret = SUCCESS_TX_MAC_TX;
         } else if (strncmp(buf,"mac_rx ",7)==0) {
+            UART_PRINT("%s\n",buf);
             sscanf(buf,"mac_rx %d %s\r\n",&PortNo,payload);
+            UART_PRINT("%s\n",buf);
             sz = hex2int(payload, strlen(payload), bytes);
+            UART_PRINT("%s\n",sz);
             GetLoraServerParams(bytes, sz, MyLoraNode);
             *mask = bytes[0];
             *nodeId = (bytes[1]<<8) | bytes[2];
+            LastAnswer=TRUE;
             ret = SUCCESS_TX_MAC_RX;
         } else if (strncmp(buf,"mac_err",7)==0) {
             LastAnswer=TRUE;
@@ -817,7 +824,7 @@ uint8_t hex2int(unsigned char *hex, uint8_t hlen, uint8_t *bytes) {
         // shift 4 to make space for new digit, and add the 4 bits of the new digit
 
         val = (val << 4) | (mybyte & 0xF);
-        if (i>0 && (i&0x01)==0) {
+        if ((i&0x01)==1) {
             bytes[k++]=val;
             val = 0;
         }
@@ -858,11 +865,6 @@ uint8_t GetLoraServerParams(uint8_t *bytes, uint8_t blen, struct LoraNode *MyLor
 
     if ((mask&0x10)!=0) {
         MyLoraNode->Upctr = (bytes[inext]<<16) | (bytes[inext+1]<<8) | (bytes[inext+2]);
-        inext = inext + 3;
-    }
-
-    if ((mask&0x20)!=0) {
-        MyLoraNode->Dnctr = (bytes[inext]<<16) | (bytes[inext+1]<<8) | (bytes[inext+2]);
         inext = inext + 3;
     }
 
