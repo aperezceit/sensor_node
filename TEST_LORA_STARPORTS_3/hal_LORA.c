@@ -557,18 +557,13 @@ uint8_t Tx_Uncnf_Lora(UART_Handle uart, struct LoraNode *MyLoraNode, uint8_t *ma
     while (LastAnswer==FALSE) {
         sz = GetLine_UART(uart, buf);
         if (strncmp(buf,"ok",2)==0) {
-            UART_PRINT("%s\n",buf);
             ;
         } else if (strncmp(buf,"mac_tx_ok",9)==0) {
-            UART_PRINT("%s\n",buf);
             LastAnswer=TRUE;
             ret = SUCCESS_TX_MAC_TX;
         } else if (strncmp(buf,"mac_rx ",7)==0) {
-            UART_PRINT("%s\n",buf);
             sscanf(buf,"mac_rx %d %s\r\n",&PortNo,payload);
-            UART_PRINT("%s\n",buf);
             sz = hex2int(payload, strlen(payload), bytes);
-            UART_PRINT("%s\n",sz);
             GetLoraServerParams(bytes, sz, MyLoraNode);
             *mask = bytes[0];
             *nodeId = (bytes[1]<<8) | bytes[2];
