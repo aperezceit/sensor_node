@@ -549,7 +549,7 @@ uint8_t Tx_Uncnf_Lora(UART_Handle uart, struct LoraNode *MyLoraNode, uint8_t *ma
     sprintf(Command,"mac tx uncnf %d ", MyLoraNode->PortNoTx);
     strncat(Command,MyLoraNode->DataTx, MyLoraNode->DataLenTx);
     strcat(Command,"\r\n");
-    UART_PRINT("%s\n",Command);
+    //UART_PRINT("%s\n",Command);
 
     UART_write(uart, Command, strlen(Command));
 
@@ -559,10 +559,12 @@ uint8_t Tx_Uncnf_Lora(UART_Handle uart, struct LoraNode *MyLoraNode, uint8_t *ma
         if (strncmp(buf,"ok",2)==0) {
             ;
         } else if (strncmp(buf,"mac_tx_ok",9)==0) {
+            //UART_PRINT("%s\n",buf);
             LastAnswer=TRUE;
             ret = SUCCESS_TX_MAC_TX;
         } else if (strncmp(buf,"mac_rx ",7)==0) {
             sscanf(buf,"mac_rx %d %s\r\n",&PortNo,payload);
+            //UART_PRINT("%s\n",buf);
             sz = hex2int(payload, strlen(payload), bytes);
             GetLoraServerParams(bytes, sz, MyLoraNode);
             *mask = bytes[0];
@@ -836,11 +838,15 @@ uint8_t GetLoraServerParams(uint8_t *bytes, uint8_t blen, struct LoraNode *MyLor
     if ((mask&0x01)!=0) {   // WakeUpInterval
         MyNode.WakeUpInterval = (bytes[inext]<<8) | bytes[inext+1];
         inext = inext+2;
+        writeWakeUp(MyNode.WakeUpInterval);
+        st_readFileWakeUp();
     }
 
     if ((mask&0x02)!=0) {
         MyNode.Mode = (bytes[inext] & 0x07);
         inext = inext+1;
+        writeMode(MyNode.Mode);
+        st_readFileMode();
     }
 
     if ((mask&0x04)!=0) {
@@ -851,16 +857,22 @@ uint8_t GetLoraServerParams(uint8_t *bytes, uint8_t blen, struct LoraNode *MyLor
         MyNode.SSID[1] = (char)(bytes[inext+4]);
         MyNode.SSID[0] = (char)(bytes[inext+5]);
         inext = inext + 6;
+        writeSSID(MyNode.SSID);
+        st_readFileSSID(&(MyNode.SSID));
     }
 
     if ((mask&0x08)!=0) {
         MyNode.NCycles = bytes[inext];
         inext = inext + 1;
+        writeNCycles(MyNode.NCycles);
+        st_readFileNCycles();
     }
 
     if ((mask&0x10)!=0) {
         MyLoraNode->Upctr = (bytes[inext]<<16) | (bytes[inext+1]<<8) | (bytes[inext+2]);
         inext = inext + 3;
+        writeUpCntr(MyLoraNode->Upctr);
+        st_readFileUpCntr();
     }
 
     if ((mask&0x20)!=0) { // ADXL355

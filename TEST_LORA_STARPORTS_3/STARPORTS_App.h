@@ -71,6 +71,7 @@ struct Node {
     uint16_t *SensorIdPtr;
     uint8_t *SensorDataLen;
     int16_t **SensorDataPtr;
+    uint8_t ChangeWakeUp;
 };
 
 

@@ -122,7 +122,7 @@ void SimpleLinkNetAppEventHandler(SlNetAppEvent_t *pNetAppEvent)
         case SL_NETAPP_EVENT_IPV4_ACQUIRED:
         {
             SET_STATUS_BIT(PowerMeasure_CB.slStatus, STATUS_BIT_IP_ACQUIRED);
-            UART_PRINT("[NETAPP EVENT] IP Acquired: IP=%d.%d.%d.%d , "
+/*            UART_PRINT("[NETAPP EVENT] IP Acquired: IP=%d.%d.%d.%d , "
             "Gateway=%d.%d.%d.%d\n\r",
             SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Ip,3),
             SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Ip,2),
@@ -131,7 +131,7 @@ void SimpleLinkNetAppEventHandler(SlNetAppEvent_t *pNetAppEvent)
             SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Gateway,3),
             SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Gateway,2),
             SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Gateway,1),
-            SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Gateway,0));
+            SL_IPV4_BYTE(pNetAppEvent->Data.IpAcquiredV4.Gateway,0));*/
         }
         break;
 

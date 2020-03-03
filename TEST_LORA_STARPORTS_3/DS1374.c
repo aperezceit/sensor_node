@@ -8,6 +8,7 @@
 
 #include <ti/drivers/I2C.h>
 #include "hal_I2C.h"
+#include "hal_UART.h"
 #include "DS1374.h"
 
 uint32_t DS1374_Read_Tod(I2C_Handle i2c) {

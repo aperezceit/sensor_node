@@ -82,7 +82,7 @@ uint8_t Timer0Event = 0;
 uint8_t Timer1Event = 0;
 uint8_t LPDSOut = 0;
 
-struct Node MyNode = {NODEID,1200,MODE_NORMAL_LORA,16,"Movistar_361D"};
+struct Node MyNode = {NODEID,1200,MODE_NORMAL_LORA,16,"PORTS2"};
 struct TMP006_Data MyTMP006 = {TMP006_ID};
 struct ADXL355_Data MyADXL = {ADXL355_ID,500,256};
 struct BME280_Data MyBME = {BME280_ID};
@@ -174,6 +174,8 @@ void *mainThread(void *arg0)
     MyNode.NBoot = st_readFileNBoot();
     // Get MyNode.NFails --> Number of failed attempts to Wireless Connection
     MyNode.NFails = 0; // st_readFileNFails();
+    // change wake up interval or not
+    MyNode.ChangeWakeUp = st_readFileChangeWakeUp();
     /************ Ends Reading Configuration Files **************************/
 
     if (MyNode.NFails>=4) {
@@ -203,8 +205,9 @@ void *mainThread(void *arg0)
 
     /*************** Begin Setting Node Configuration Parameters */
     // Set the WakeUp_Time in RTC
-    if (DS1374_Read_Ctrl(i2c)==0x06) { // DS1374 is powerup
+    if (DS1374_Read_Ctrl(i2c)==0x06 || MyNode.ChangeWakeUp == 1) { // DS1374 is powerup
         // Configures the RTC
+        DS1374_Clear_AF(i2c);
         DS1374_Write_WdAlmb(i2c, MyNode.WakeUpInterval);
         DS1374_Write_Ctrl(i2c);
     } else {  // DS1374 was not powerup
@@ -375,7 +378,7 @@ void *mainThread(void *arg0)
             writeUpCntr(MyLoraNode.Upctr);              //*********SI HAGO ESTE WRITE MACHACO EL VALOR DE DOWNLINK PARA ESTE PARAM.
             MyLoraNode.Dnctr = Mac_Get_Dnctr(uart1);
             writeDnCntr(MyLoraNode.Dnctr);
-            if (nodeId==MyNode.NodeId) {
+          /*  if (nodeId==MyNode.NodeId) {
                 // Write New Configuration Data to Files
                 if (mask&0x01!=0) {
                     writeWakeUp(MyNode.WakeUpInterval);
@@ -393,7 +396,7 @@ void *mainThread(void *arg0)
                 if (mask&0x10!=0) {
                     writeUpCntr(MyLoraNode.Upctr);
                 }
-            }
+            }*/
             // writeNFails(0);
         } else {
 #ifdef DEBUG
@@ -429,61 +432,6 @@ void *mainThread(void *arg0)
             status = sl_Close(sockId);
             writeNBoot(1-MyNode.NBoot);
         }
-
-        /*
-         ///////////////////TCP CLIENT////////////////////////
-
-        sockId = sl_Socket(SL_AF_INET,SL_SOCK_STREAM, 0);
-        ASSERT_ON_ERROR(sockId);
-
-        status = sl_Connect(sockId, ( SlSockAddr_t *)&PowerMeasure_CB.ipV4Addr, sizeof(SlSockAddrIn_t));
-        if(status < 0)
-        {
-            sl_Close(sockId);
-            ASSERT_ON_ERROR(sockId);
-            UART_PRINT("\n\rCLIENT REFUSED %s\n\r");
-            Node_Disable();
-        }
-        else{
-            UART_PRINT("\n\rCLIENT CONNECTED \n\r",( SlSockAddr_t *)&PowerMeasure_CB.ipV4Addr);
-            usleep(1000000);
-        }
-
-        status = sl_Send(sockId, MyLoraNode.DataTx, MyLoraNode.DataLenTx, 0 );
-        usleep(500000);
-        if(status < 0 )
-        {
-            status = sl_Close(sockId);
-            ASSERT_ON_ERROR(status);
-            UART_PRINT("\n\rERROR SENDING PACKET: %s\n\r", status);
-            Node_Disable();
-        }
-        else if(status == 0 )
-        {
-            ASSERT_ON_ERROR(status);
-            UART_PRINT("\n\rPACKET SENT SUCCESSFULLY: %s\n\r", MyLoraNode.DataTx);
-            status = sl_Close(sockId);
-            UART_PRINT("\n\rCLIENT DISCONNECTED %s\n\r");
-            writeNBoot(1-MyNode.NBoot);
-            Node_Disable();
-        }else{
-            UART_PRINT("\n\rPACKET SENT SUCCESSFULLY: %s\n\r", MyLoraNode.DataTx);
-            status = sl_Close(sockId);
-            writeNBoot(1-MyNode.NBoot);
-        }
-
-        */
-        // UART_PRINT("SENDING SENSOR DATA OVER MODE_NORMAL_WIFI\r\n");
-        // Transmit Data through WiFi, several tries?
-        //sendUdpClient(PORT_UDP);                      ******AÑADIR STRUCTURAS DE CONTROL EN WIFI.h
-        // if (ret==SUCCESS_WIFI_TX) {
-            // Getting Configuration Data back from AppServer
-            // Write New Configuration Data to Files
-        //    MyNode.NFails=0; // and write to file NFails
-        // } else {
-        //    MyNode.NFails++;
-        //    writeNFails(MyNode.NFails); // Write NFails File
-        // }
     }
 
     writeNBoot(1-MyNode.NBoot);

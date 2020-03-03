@@ -13,15 +13,16 @@
 
 /////////file system//////////////
 #define MAX_FILE_SIZE 256
-#define FS_WAKEUP       "wake_up_time"
-#define FS_MODE         "mode"
-#define FS_NCYCLES      "ncycles"
-#define FS_SSID         "ssid"
-#define FS_NBOOT        "nboot"
-#define FS_NFAILS       "nfails"
-#define FS_UPCNTR       "upcntr"
-#define FS_DNCNTR       "dncntr"
-#define FS_NODEID       "nodeid"
+#define FS_WAKEUP           "wake_up_time"
+#define FS_MODE             "mode"
+#define FS_NCYCLES          "ncycles"
+#define FS_SSID             "ssid"
+#define FS_NBOOT            "nboot"
+#define FS_NFAILS           "nfails"
+#define FS_UPCNTR           "upcntr"
+#define FS_DNCNTR           "dncntr"
+#define FS_NODEID           "nodeid"
+#define FS_CHANGEWAKEUP     "changewakeup"
 ////////////////////////
 
 #define CERTIFICATE "dummy-trusted-cert"
@@ -50,6 +51,8 @@ int writeDnCntr(uint32_t Dnctr);
 int st_readFileDnCntr();
 int writeMode(uint8_t Mode);
 int st_readFileMode();
+int writeChangeWakeUp(uint8_t Mode);
+int st_readFileChangeWakeUp();
 int writeWakeUp(uint16_t WakeUpInterval);
 int st_readFileWakeUp();
 writeNodeId(uint16_t NodeId);
