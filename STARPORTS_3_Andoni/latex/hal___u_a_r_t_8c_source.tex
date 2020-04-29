@@ -1,0 +1,158 @@
+\hypertarget{hal___u_a_r_t_8c_source}{}\doxysubsection{hal\+\_\+\+U\+A\+R\+T.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <stdarg.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <ti/drivers/UART.h>}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00018 \textcolor{comment}{//                      GLOBALS}}
+\DoxyCodeLine{00019 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00020 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \mbox{\hyperlink{hal___u_a_r_t_8c_af702c8f77be545061dc1459a01705003_af702c8f77be545061dc1459a01705003}{vsnprintf}}(\textcolor{keywordtype}{char} * s,}
+\DoxyCodeLine{00021                      \textcolor{keywordtype}{size\_t} n,}
+\DoxyCodeLine{00022                      \textcolor{keyword}{const} \textcolor{keywordtype}{char} * format,}
+\DoxyCodeLine{00023                      va\_list arg);}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{keyword}{extern} UART\_Handle \mbox{\hyperlink{hal___u_a_r_t_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}};}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00028 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00029 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00030 }
+\DoxyCodeLine{00031 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00032 \textcolor{comment}{//}}
+\DoxyCodeLine{00042 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00043 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8c_source_l00044}\mbox{\hyperlink{hal___u_a_r_t_8h_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}{00044}} UART\_Handle \mbox{\hyperlink{hal___u_a_r_t_8c_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}{Startup\_UART}}(uint\_least8\_t index, uint32\_t baudRate) \{}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     UART\_Handle uart;}
+\DoxyCodeLine{00047     UART\_Params uartParams;}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049     UART\_init();}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     UART\_Params\_init(\&uartParams);}
+\DoxyCodeLine{00052     uartParams.writeDataMode = UART\_DATA\_BINARY;}
+\DoxyCodeLine{00053     uartParams.readDataMode = UART\_DATA\_BINARY;}
+\DoxyCodeLine{00054     uartParams.readReturnMode = UART\_RETURN\_FULL;}
+\DoxyCodeLine{00055     uartParams.readMode      = UART\_MODE\_BLOCKING;}
+\DoxyCodeLine{00056     uartParams.readEcho = UART\_ECHO\_OFF;}
+\DoxyCodeLine{00057     uartParams.baudRate = baudRate;}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059     uart = UART\_open(index, \&uartParams);}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{if} (uart == NULL) \{                                                                 \textcolor{comment}{// UART\_open() failed}}
+\DoxyCodeLine{00061        \textcolor{keywordflow}{while} (1);}
+\DoxyCodeLine{00062     \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064     \textcolor{keywordflow}{return} uart;}
+\DoxyCodeLine{00065 \}}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00068 \textcolor{comment}{//}}
+\DoxyCodeLine{00077 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00078 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8c_source_l00079}\mbox{\hyperlink{hal___u_a_r_t_8h_abe10d1e7099ff1c4326f31a022024470_abe10d1e7099ff1c4326f31a022024470}{00079}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{hal___u_a_r_t_8c_abe10d1e7099ff1c4326f31a022024470_abe10d1e7099ff1c4326f31a022024470}{UART\_resetInputBuffer}}(UART\_Handle hUart) \{}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \textcolor{keywordtype}{bool} bUartBufferIsAvailable = \textcolor{keyword}{false};}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     \textcolor{keywordflow}{do}\{                                                                                 \textcolor{comment}{//while data are presented in UART buffer we read each available byte to NULL pointer}}
+\DoxyCodeLine{00084         \textcolor{keywordflow}{if} (UART\_control(hUart, UART\_CMD\_ISAVAILABLE, \&bUartBufferIsAvailable) < 0)\{}
+\DoxyCodeLine{00085             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00086         \}}
+\DoxyCodeLine{00087         \textcolor{keywordflow}{if} (bUartBufferIsAvailable)\{}
+\DoxyCodeLine{00088             UART\_read(hUart, NULL, 1);}
+\DoxyCodeLine{00089         \}}
+\DoxyCodeLine{00090     \} \textcolor{keywordflow}{while} (bUartBufferIsAvailable);}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00093 \}}
+\DoxyCodeLine{00094 }
+\DoxyCodeLine{00095 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00096 \textcolor{comment}{//}}
+\DoxyCodeLine{00106 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00107 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8c_source_l00108}\mbox{\hyperlink{hal___u_a_r_t_8h_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{00108}} uint8\_t \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(UART\_Handle uart, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buf) \{}
+\DoxyCodeLine{00109     int16\_t i = 0;}
+\DoxyCodeLine{00110     uint8\_t sz;}
+\DoxyCodeLine{00111     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00114         UART\_read(uart,\&c,1);}
+\DoxyCodeLine{00115         buf[i++]=c;}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{if} (i==255) \{}
+\DoxyCodeLine{00117             i = 0;}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00119         \}}
+\DoxyCodeLine{00120     \} \textcolor{keywordflow}{while} (c !=\textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{00121     UART\_read(uart,\&c,1);                                                               \textcolor{comment}{// Read final '\(\backslash\)n' character}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     sz = (i>1)? (i-\/1) : 0;}
+\DoxyCodeLine{00124     \textcolor{keywordflow}{return} sz;}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126 \}}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{00128 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00129 \textcolor{comment}{//}}
+\DoxyCodeLine{00138 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00139 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8c_source_l00140}\mbox{\hyperlink{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{00140}} \textcolor{keywordtype}{int} \mbox{\hyperlink{hal___u_a_r_t_8c_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{Report}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *pcFormat,...)}
+\DoxyCodeLine{00141 \{}
+\DoxyCodeLine{00142     \textcolor{keywordtype}{int} iRet = 0;}
+\DoxyCodeLine{00143     \textcolor{keywordtype}{char}        *pcBuff;}
+\DoxyCodeLine{00144     \textcolor{keywordtype}{char}        *pcTemp;}
+\DoxyCodeLine{00145     \textcolor{keywordtype}{int} iSize = 256;}
+\DoxyCodeLine{00146     va\_list list;}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148     pcBuff = (\textcolor{keywordtype}{char}*)malloc(iSize);}
+\DoxyCodeLine{00149     \textcolor{keywordflow}{if}(pcBuff == NULL)\{}
+\DoxyCodeLine{00150         \textcolor{keywordflow}{return}(-\/1);}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{00153         va\_start(list,pcFormat);}
+\DoxyCodeLine{00154         iRet = \mbox{\hyperlink{hal___u_a_r_t_8c_af702c8f77be545061dc1459a01705003_af702c8f77be545061dc1459a01705003}{vsnprintf}}(pcBuff, iSize, pcFormat, list);}
+\DoxyCodeLine{00155         va\_end(list);}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{if}((iRet > -\/1) \&\& (iRet < iSize))\{}
+\DoxyCodeLine{00157             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00158         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00159             iSize *= 2;}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{if}((pcTemp = realloc(pcBuff, iSize)) == NULL)\{}
+\DoxyCodeLine{00161                 \mbox{\hyperlink{hal___u_a_r_t_8c_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}}(\textcolor{stringliteral}{"Could not reallocate memory\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{00162                 iRet = -\/1;}
+\DoxyCodeLine{00163                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00164             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00165                 pcBuff = pcTemp;}
+\DoxyCodeLine{00166             \}}
+\DoxyCodeLine{00167         \}}
+\DoxyCodeLine{00168     \}}
+\DoxyCodeLine{00169     \mbox{\hyperlink{hal___u_a_r_t_8c_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}}(pcBuff);}
+\DoxyCodeLine{00170     free(pcBuff);}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{00172     \textcolor{keywordflow}{return}(iRet);}
+\DoxyCodeLine{00173 \}}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00176 \textcolor{comment}{//}}
+\DoxyCodeLine{00185 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00186 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8c_source_l00187}\mbox{\hyperlink{hal___u_a_r_t_8h_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{00187}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___u_a_r_t_8c_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *str)}
+\DoxyCodeLine{00188 \{}
+\DoxyCodeLine{00189 \textcolor{preprocessor}{\#ifdef UART\_NONPOLLING}}
+\DoxyCodeLine{00190     UART\_write(uart, str, strlen(str));}
+\DoxyCodeLine{00191 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00192     UART\_writePolling(\mbox{\hyperlink{hal___u_a_r_t_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, str, strlen(str));}
+\DoxyCodeLine{00193 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00194 \}}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00197 \textcolor{comment}{//}}
+\DoxyCodeLine{00206 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00207 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8c_source_l00208}\mbox{\hyperlink{hal___u_a_r_t_8h_a6351d8706733262e7e325926b1a9aab7_a6351d8706733262e7e325926b1a9aab7}{00208}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___u_a_r_t_8c_a6351d8706733262e7e325926b1a9aab7_a6351d8706733262e7e325926b1a9aab7}{putch}}(\textcolor{keywordtype}{char} ch)}
+\DoxyCodeLine{00209 \{}
+\DoxyCodeLine{00210     UART\_writePolling(\mbox{\hyperlink{hal___u_a_r_t_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \&ch, 1);}
+\DoxyCodeLine{00211 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,214 @@
+\hypertarget{hal___t_m_p006_8c}{}\doxysubsection{hal\+\_\+\+T\+M\+P006.\+c File Reference}
+\label{hal___t_m_p006_8c}\index{hal\_TMP006.c@{hal\_TMP006.c}}
+
+
+Functions to read data and configure T\+M\+P006 Temperature sensor.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+I2\+C.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+T\+M\+P006.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{hal___t_m_p006_8c_a81965969b727da5491a94422f9866ee5_a81965969b727da5491a94422f9866ee5}{Get\+I\+D\+\_\+\+T\+M\+P006}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint\+\_\+least8\+\_\+t Slave)
+\begin{DoxyCompactList}\small\item\em T\+M\+P006 Get Dev\+ID Function. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{hal___t_m_p006_8c_a15d953370d7ae98db0f9630e83d51f98_a15d953370d7ae98db0f9630e83d51f98}{Get\+T\+A\+\_\+\+T\+M\+P006}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint\+\_\+least8\+\_\+t Slave)
+\begin{DoxyCompactList}\small\item\em T\+M\+P006 Get Temperature Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___t_m_p006_8c_a6d4cd39790bef14925e2442ffa922444_a6d4cd39790bef14925e2442ffa922444}{Set\+M\+O\+D\+\_\+\+T\+M\+P006}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint\+\_\+least8\+\_\+t Slave, uint8\+\_\+t cr)
+\begin{DoxyCompactList}\small\item\em T\+M\+P006 Set Mode Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to read data and configure T\+M\+P006 Temperature sensor. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle T\+M\+P006 Temperature sensor functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___t_m_p006_8c_source}{hal\+\_\+\+T\+M\+P006.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___t_m_p006_8c_a81965969b727da5491a94422f9866ee5_a81965969b727da5491a94422f9866ee5}\label{hal___t_m_p006_8c_a81965969b727da5491a94422f9866ee5_a81965969b727da5491a94422f9866ee5}} 
+\index{hal\_TMP006.c@{hal\_TMP006.c}!GetID\_TMP006@{GetID\_TMP006}}
+\index{GetID\_TMP006@{GetID\_TMP006}!hal\_TMP006.c@{hal\_TMP006.c}}
+\doxyparagraph{\texorpdfstring{GetID\_TMP006()}{GetID\_TMP006()}}
+{\footnotesize\ttfamily uint16\+\_\+t Get\+I\+D\+\_\+\+T\+M\+P006 (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint\+\_\+least8\+\_\+t}]{Slave }\end{DoxyParamCaption})}
+
+
+
+T\+M\+P006 Get Dev\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Dev\+ID value from T\+M\+P006
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & Slave slave address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Dev\+Id 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___t_m_p006_8c_source_l00117}{117}} of file \mbox{\hyperlink{hal___t_m_p006_8c_source}{hal\+\_\+\+T\+M\+P006.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117                                                            \{}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \textcolor{keywordtype}{bool} status;}
+\DoxyCodeLine{00120     uint8\_t writeBuffer;}
+\DoxyCodeLine{00121     uint8\_t readBuffer[2];}
+\DoxyCodeLine{00122     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00123     uint16\_t DevId;}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125     writeBuffer = 0xFE;}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00128     i2cTransaction.writeBuf = \&writeBuffer;}
+\DoxyCodeLine{00129     i2cTransaction.writeCount = 1;}
+\DoxyCodeLine{00130     i2cTransaction.readBuf = readBuffer;}
+\DoxyCodeLine{00131     i2cTransaction.readCount = 2;}
+\DoxyCodeLine{00132     status = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134     DevId = (readBuffer[0]<<8) + readBuffer[1];}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \textcolor{keywordflow}{return} DevId;}
+\DoxyCodeLine{00137 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___t_m_p006_8c_a15d953370d7ae98db0f9630e83d51f98_a15d953370d7ae98db0f9630e83d51f98}\label{hal___t_m_p006_8c_a15d953370d7ae98db0f9630e83d51f98_a15d953370d7ae98db0f9630e83d51f98}} 
+\index{hal\_TMP006.c@{hal\_TMP006.c}!GetTA\_TMP006@{GetTA\_TMP006}}
+\index{GetTA\_TMP006@{GetTA\_TMP006}!hal\_TMP006.c@{hal\_TMP006.c}}
+\doxyparagraph{\texorpdfstring{GetTA\_TMP006()}{GetTA\_TMP006()}}
+{\footnotesize\ttfamily int16\+\_\+t Get\+T\+A\+\_\+\+T\+M\+P006 (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint\+\_\+least8\+\_\+t}]{Slave }\end{DoxyParamCaption})}
+
+
+
+T\+M\+P006 Get Temperature Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets temperature value from T\+M\+P006
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & Slave slave address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int16\+\_\+t Temp Temperature value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___t_m_p006_8c_source_l00082}{82}} of file \mbox{\hyperlink{hal___t_m_p006_8c_source}{hal\+\_\+\+T\+M\+P006.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082                                                           \{}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     \textcolor{keywordtype}{bool} status;}
+\DoxyCodeLine{00085     uint8\_t writeBuffer;}
+\DoxyCodeLine{00086     uint8\_t readBuffer[2];}
+\DoxyCodeLine{00087     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00088     int16\_t Temp;}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090     writeBuffer = 0x01;}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00093     i2cTransaction.writeBuf = \&writeBuffer;}
+\DoxyCodeLine{00094     i2cTransaction.writeCount = 1;}
+\DoxyCodeLine{00095     i2cTransaction.readBuf = readBuffer;}
+\DoxyCodeLine{00096     i2cTransaction.readCount = 2;}
+\DoxyCodeLine{00097     status = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00099     Temp = (int16\_t)(((readBuffer[0]<<8) + readBuffer[1])) / 4;}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     \textcolor{keywordflow}{return} Temp;}
+\DoxyCodeLine{00102 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___t_m_p006_8c_a6d4cd39790bef14925e2442ffa922444_a6d4cd39790bef14925e2442ffa922444}\label{hal___t_m_p006_8c_a6d4cd39790bef14925e2442ffa922444_a6d4cd39790bef14925e2442ffa922444}} 
+\index{hal\_TMP006.c@{hal\_TMP006.c}!SetMOD\_TMP006@{SetMOD\_TMP006}}
+\index{SetMOD\_TMP006@{SetMOD\_TMP006}!hal\_TMP006.c@{hal\_TMP006.c}}
+\doxyparagraph{\texorpdfstring{SetMOD\_TMP006()}{SetMOD\_TMP006()}}
+{\footnotesize\ttfamily uint8\+\_\+t Set\+M\+O\+D\+\_\+\+T\+M\+P006 (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint\+\_\+least8\+\_\+t}]{Slave,  }\item[{uint8\+\_\+t}]{cr }\end{DoxyParamCaption})}
+
+
+
+T\+M\+P006 Set Mode Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets T\+M\+P006 configuration as slave
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & Slave slave address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & cr conversion rate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+C\+O\+N\+F\+\_\+\+T\+M\+P006 / E\+R\+R\+O\+R\+\_\+\+W\+R\+O\+N\+G\+\_\+\+CR as described in \mbox{\hyperlink{hal___t_m_p006_8h}{hal\+\_\+\+T\+M\+P006.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___t_m_p006_8c_source_l00036}{36}} of file \mbox{\hyperlink{hal___t_m_p006_8c_source}{hal\+\_\+\+T\+M\+P006.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036                                                                        \{}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     uint8\_t writeBuffer[3];}
+\DoxyCodeLine{00039     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00040     \textcolor{keywordtype}{bool} status;}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042     writeBuffer[0] = 0x02;}
+\DoxyCodeLine{00043     \textcolor{keywordflow}{if} (cr==240)}
+\DoxyCodeLine{00044         writeBuffer[1] = 0x70;}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cr==120)}
+\DoxyCodeLine{00046         writeBuffer[1] = 0x72;}
+\DoxyCodeLine{00047     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cr==60)}
+\DoxyCodeLine{00048         writeBuffer[1] = 0x74;}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cr==30)}
+\DoxyCodeLine{00050         writeBuffer[1] = 0x76;}
+\DoxyCodeLine{00051     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cr==15)}
+\DoxyCodeLine{00052         writeBuffer[1] = 0x78;}
+\DoxyCodeLine{00053     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___t_m_p006_8h_a5f2433889c74c4221a6df00ae320240d_a5f2433889c74c4221a6df00ae320240d}{ERROR\_WRONG\_CR}};}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00056     writeBuffer[2] = 0x00;}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00059     i2cTransaction.writeBuf = writeBuffer;}
+\DoxyCodeLine{00060     i2cTransaction.writeCount = 3;}
+\DoxyCodeLine{00061     i2cTransaction.readBuf = NULL;}
+\DoxyCodeLine{00062     i2cTransaction.readCount = 0;}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064     status = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___t_m_p006_8h_a512f258f8b777aee0507cf209c931925_a512f258f8b777aee0507cf209c931925}{SUCCESS\_CONF\_TMP006}};}
+\DoxyCodeLine{00067 \}}
+
+\end{DoxyCode}

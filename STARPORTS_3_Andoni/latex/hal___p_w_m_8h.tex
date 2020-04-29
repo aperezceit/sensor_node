@@ -1,0 +1,81 @@
+\hypertarget{hal___p_w_m_8h}{}\doxysubsection{hal\+\_\+\+P\+W\+M.\+h File Reference}
+\label{hal___p_w_m_8h}\index{hal\_PWM.h@{hal\_PWM.h}}
+
+
+Functions to manage P\+WM (Pulse Width Modulated signals) on C\+C3220\+SF.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+P\+W\+M.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+P\+W\+M\+\_\+\+Handle \mbox{\hyperlink{hal___p_w_m_8h_a2c276c48244d78ee02a694ed129b092d_a2c276c48244d78ee02a694ed129b092d}{Config\+\_\+\+P\+WM}} (uint\+\_\+least8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em P\+WM Configuration Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to manage P\+WM (Pulse Width Modulated signals) on C\+C3220\+SF. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle P\+WM (Pulse Width Modulated signals) functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___p_w_m_8h_source}{hal\+\_\+\+P\+W\+M.\+h}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___p_w_m_8h_a2c276c48244d78ee02a694ed129b092d_a2c276c48244d78ee02a694ed129b092d}\label{hal___p_w_m_8h_a2c276c48244d78ee02a694ed129b092d_a2c276c48244d78ee02a694ed129b092d}} 
+\index{hal\_PWM.h@{hal\_PWM.h}!Config\_PWM@{Config\_PWM}}
+\index{Config\_PWM@{Config\_PWM}!hal\_PWM.h@{hal\_PWM.h}}
+\doxyparagraph{\texorpdfstring{Config\_PWM()}{Config\_PWM()}}
+{\footnotesize\ttfamily P\+W\+M\+\_\+\+Handle Config\+\_\+\+P\+WM (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+P\+WM Configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Configures P\+WM on C\+C3220\+SF
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+P\+W\+M\+\_\+\+Handle pwm 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___p_w_m_8c_source_l00032}{32}} of file \mbox{\hyperlink{hal___p_w_m_8c_source}{hal\+\_\+\+P\+W\+M.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032                                            \{}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     PWM\_Handle pwm;}
+\DoxyCodeLine{00035     PWM\_Params params;}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     PWM\_init();                                                     \textcolor{comment}{// Call driver init functions}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     PWM\_Params\_init(\&params);}
+\DoxyCodeLine{00040     params.dutyUnits = PWM\_DUTY\_FRACTION;}
+\DoxyCodeLine{00041     params.dutyValue = (PWM\_DUTY\_FRACTION\_MAX>>1);}
+\DoxyCodeLine{00042     params.periodUnits = PWM\_PERIOD\_HZ;}
+\DoxyCodeLine{00043     params.periodValue = 8000000;}
+\DoxyCodeLine{00044     pwm = PWM\_open(index, \&params);}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \textcolor{keywordflow}{return} pwm;}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}

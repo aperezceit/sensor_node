@@ -1,0 +1,117 @@
+\hypertarget{_d_s1374_8c_source}{}\doxysubsection{D\+S1374.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <ti/drivers/I2C.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___i2_c_8h}{hal\_I2C.h}}"}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___u_a_r_t_8h}{hal\_UART.h}}"}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_d_s1374_8h}{DS1374.h}}"}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00019 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00020 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00023 \textcolor{comment}{//}}
+\DoxyCodeLine{00032 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00033 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00034}\mbox{\hyperlink{_d_s1374_8h_a1f78378b1f41468af46c5f2578b2dcf0_a1f78378b1f41468af46c5f2578b2dcf0}{00034}} uint32\_t \mbox{\hyperlink{_d_s1374_8c_a1f78378b1f41468af46c5f2578b2dcf0_a1f78378b1f41468af46c5f2578b2dcf0}{DS1374\_Read\_Tod}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}) \{}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     uint8\_t RxBuffer[4];}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}{TOD0}}, RxBuffer, 4);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} RxBuffer[0] + (RxBuffer[1]<<8) + (RxBuffer[2]<<16) + (RxBuffer[3]<<24);}
+\DoxyCodeLine{00041 \}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00044 \textcolor{comment}{//}}
+\DoxyCodeLine{00054 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00055 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00056}\mbox{\hyperlink{_d_s1374_8h_aac73312855211e9604d3498ad5860e82_aac73312855211e9604d3498ad5860e82}{00056}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_d_s1374_8c_aac73312855211e9604d3498ad5860e82_aac73312855211e9604d3498ad5860e82}{DS1374\_Write\_Tod}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint32\_t Val) \{}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af5a17a691b0d219db109353e3a50814c}{TOD3}}, (uint8\_t)( (Val>>24) \& 0xFF));}
+\DoxyCodeLine{00059     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a67da198b12375b7fb7eb9ccf5ca93c9e}{TOD2}}, (uint8\_t)( (Val>>16) \& 0xFF));}
+\DoxyCodeLine{00060     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8ac5d0bca6e4e159b52b8a28337b14e6}{TOD1}}, (uint8\_t)( (Val>>8) \& 0xFF));}
+\DoxyCodeLine{00061     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}{TOD0}}, (uint8\_t)( Val \& 0xFF));}
+\DoxyCodeLine{00062 \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00065 \textcolor{comment}{//}}
+\DoxyCodeLine{00074 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00075 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00076}\mbox{\hyperlink{_d_s1374_8h_a607777982985332c554c2fd415e30186_a607777982985332c554c2fd415e30186}{00076}} uint32\_t \mbox{\hyperlink{_d_s1374_8c_a607777982985332c554c2fd415e30186_a607777982985332c554c2fd415e30186}{DS1374\_Read\_WdAlmb}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}) \{}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}{WDALMB0}}, RxBuffer, 3);}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     \textcolor{keywordflow}{return} RxBuffer[0] + (RxBuffer[1]<<8) + (RxBuffer[2]<<16);}
+\DoxyCodeLine{00083 \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00086 \textcolor{comment}{//}}
+\DoxyCodeLine{00096 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00097 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00098}\mbox{\hyperlink{_d_s1374_8h_a471c71fc7f630c597cb0ce730c4f8a13_a471c71fc7f630c597cb0ce730c4f8a13}{00098}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_d_s1374_8c_a471c71fc7f630c597cb0ce730c4f8a13_a471c71fc7f630c597cb0ce730c4f8a13}{DS1374\_Write\_WdAlmb}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint32\_t Val) \{}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8c4d58a49e719c1a33e4796b0a8633d0}{WDALMB2}}, (uint8\_t)( (Val>>16) \& 0xFF));}
+\DoxyCodeLine{00101     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af660c2279dfe7e3090f033b78d539a46}{WDALMB1}}, (uint8\_t)( (Val>>8) \& 0xFF));}
+\DoxyCodeLine{00102     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}{WDALMB0}}, (uint8\_t)( Val \& 0xFF));}
+\DoxyCodeLine{00103 \}}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{00105 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00106 \textcolor{comment}{//}}
+\DoxyCodeLine{00115 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00116 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00117}\mbox{\hyperlink{_d_s1374_8h_aa0793fdcea2817ea1d51c85add50d43b_aa0793fdcea2817ea1d51c85add50d43b}{00117}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_d_s1374_8c_aa0793fdcea2817ea1d51c85add50d43b_aa0793fdcea2817ea1d51c85add50d43b}{DS1374\_Write\_Ctrl}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}) \{}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     uint8\_t Val;}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121     Val = (1<<6) | (1<<3) | 1;}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}{DS1374\_CTRL}}, Val);}
+\DoxyCodeLine{00124 \}}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00127 \textcolor{comment}{//}}
+\DoxyCodeLine{00136 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00137 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00138}\mbox{\hyperlink{_d_s1374_8h_a42fccf78c9eebedeb503a8dc320a59b1_a42fccf78c9eebedeb503a8dc320a59b1}{00138}} uint8\_t \mbox{\hyperlink{_d_s1374_8c_a42fccf78c9eebedeb503a8dc320a59b1_a42fccf78c9eebedeb503a8dc320a59b1}{DS1374\_Read\_Ctrl}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}) \{}
+\DoxyCodeLine{00139     uint8\_t RxBuffer;}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}{DS1374\_CTRL}}, \&RxBuffer, 1);}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143    \textcolor{keywordflow}{return} RxBuffer;}
+\DoxyCodeLine{00144 \}}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00147 \textcolor{comment}{//}}
+\DoxyCodeLine{00156 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00157 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00158}\mbox{\hyperlink{_d_s1374_8h_a162497c0f068b5141132b8c86e0a87a7_a162497c0f068b5141132b8c86e0a87a7}{00158}} uint8\_t \mbox{\hyperlink{_d_s1374_8c_a162497c0f068b5141132b8c86e0a87a7_a162497c0f068b5141132b8c86e0a87a7}{DS1374\_Read\_Status}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}) \{}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     uint8\_t RxBuffer;}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}}, \&RxBuffer, 1);}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164     \textcolor{keywordflow}{return} RxBuffer;}
+\DoxyCodeLine{00165 \}}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00168 \textcolor{comment}{//}}
+\DoxyCodeLine{00177 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00178 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_d_s1374_8c_source_l00179}\mbox{\hyperlink{_d_s1374_8h_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}{00179}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_d_s1374_8c_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}{DS1374\_Clear\_AF}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}) \{}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181     uint8\_t RxBuffer;}
+\DoxyCodeLine{00182     uint8\_t Val;}
+\DoxyCodeLine{00183     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}}, \&RxBuffer, 1);}
+\DoxyCodeLine{00184     Val = RxBuffer \& 0xFE;}
+\DoxyCodeLine{00185     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}}, Val);}
+\DoxyCodeLine{00186 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,453 @@
+\hypertarget{_d_s1374_8h}{}\doxysubsection{D\+S1374.\+h File Reference}
+\label{_d_s1374_8h}\index{DS1374.h@{DS1374.h}}
+
+
+Functions to interact with Watchdog R\+TC.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+I2\+C.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5}{D\+S1374\+\_\+register\+\_\+t}} \{ \newline
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}{T\+O\+D0}} = 0x00, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8ac5d0bca6e4e159b52b8a28337b14e6}{T\+O\+D1}} = 0x01, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a67da198b12375b7fb7eb9ccf5ca93c9e}{T\+O\+D2}} = 0x02, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af5a17a691b0d219db109353e3a50814c}{T\+O\+D3}} = 0x03, 
+\newline
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}{W\+D\+A\+L\+M\+B0}} = 0x04, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af660c2279dfe7e3090f033b78d539a46}{W\+D\+A\+L\+M\+B1}} = 0x05, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8c4d58a49e719c1a33e4796b0a8633d0}{W\+D\+A\+L\+M\+B2}} = 0x06, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}{D\+S1374\+\_\+\+C\+T\+RL}} = 0x07, 
+\newline
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{D\+S1374\+\_\+\+S\+T\+A\+T\+US}} = 0x08, 
+\mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a3fe69a17f703cd4c29052911ae52061b}{D\+S1374\+\_\+\+TC}} = 0x09
+ \}
+\begin{DoxyCompactList}\small\item\em D\+S1374 Address map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_d_s1374_8h_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}{D\+S1374\+\_\+\+Clear\+\_\+\+AF}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})
+\begin{DoxyCompactList}\small\item\em D\+S1374 Clear AF Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_d_s1374_8h_a42fccf78c9eebedeb503a8dc320a59b1_a42fccf78c9eebedeb503a8dc320a59b1}{D\+S1374\+\_\+\+Read\+\_\+\+Ctrl}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})
+\begin{DoxyCompactList}\small\item\em D\+S1374 Read Control Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_d_s1374_8h_a162497c0f068b5141132b8c86e0a87a7_a162497c0f068b5141132b8c86e0a87a7}{D\+S1374\+\_\+\+Read\+\_\+\+Status}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})
+\begin{DoxyCompactList}\small\item\em D\+S1374 Read Status Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_d_s1374_8h_a1f78378b1f41468af46c5f2578b2dcf0_a1f78378b1f41468af46c5f2578b2dcf0}{D\+S1374\+\_\+\+Read\+\_\+\+Tod}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})
+\begin{DoxyCompactList}\small\item\em D\+S1374 Read Tod Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_d_s1374_8h_a607777982985332c554c2fd415e30186_a607777982985332c554c2fd415e30186}{D\+S1374\+\_\+\+Read\+\_\+\+Wd\+Almb}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})
+\begin{DoxyCompactList}\small\item\em D\+S1374 Read Wd\+Almb Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_d_s1374_8h_aa0793fdcea2817ea1d51c85add50d43b_aa0793fdcea2817ea1d51c85add50d43b}{D\+S1374\+\_\+\+Write\+\_\+\+Ctrl}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})
+\begin{DoxyCompactList}\small\item\em D\+S1374 Write Control Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_d_s1374_8h_aac73312855211e9604d3498ad5860e82_aac73312855211e9604d3498ad5860e82}{D\+S1374\+\_\+\+Write\+\_\+\+Tod}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint32\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em D\+S1374 Write Tod Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_d_s1374_8h_a471c71fc7f630c597cb0ce730c4f8a13_a471c71fc7f630c597cb0ce730c4f8a13}{D\+S1374\+\_\+\+Write\+\_\+\+Wd\+Almb}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint32\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em D\+S1374 Write Wd\+Almb Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to interact with Watchdog R\+TC. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle A\+D\+X\+L355 accelerometer functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_d_s1374_8h_source}{D\+S1374.\+h}}.
+
+
+
+\doxysubsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_register\_t@{DS1374\_register\_t}}
+\index{DS1374\_register\_t@{DS1374\_register\_t}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_register\_t}{DS1374\_register\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5}{D\+S1374\+\_\+register\+\_\+t}}}
+
+
+
+D\+S1374 Address map. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOD0@{TOD0}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!TOD0@{TOD0}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}} 
+T\+O\+D0&Time-\/of-\/\+Day Counter byte 0 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOD1@{TOD1}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!TOD1@{TOD1}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8ac5d0bca6e4e159b52b8a28337b14e6}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8ac5d0bca6e4e159b52b8a28337b14e6}} 
+T\+O\+D1&Time-\/of-\/\+Day Counter byte 1 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOD2@{TOD2}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!TOD2@{TOD2}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a67da198b12375b7fb7eb9ccf5ca93c9e}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a67da198b12375b7fb7eb9ccf5ca93c9e}} 
+T\+O\+D2&Time-\/of-\/\+Day Counter byte 2 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOD3@{TOD3}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!TOD3@{TOD3}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af5a17a691b0d219db109353e3a50814c}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af5a17a691b0d219db109353e3a50814c}} 
+T\+O\+D3&Time-\/of-\/\+Day Counter byte 3 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WDALMB0@{WDALMB0}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!WDALMB0@{WDALMB0}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}} 
+W\+D\+A\+L\+M\+B0&Watchdog/\+Alarm Counter byte 0 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WDALMB1@{WDALMB1}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!WDALMB1@{WDALMB1}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af660c2279dfe7e3090f033b78d539a46}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af660c2279dfe7e3090f033b78d539a46}} 
+W\+D\+A\+L\+M\+B1&Watchdog/\+Alarm Counter byte 1 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WDALMB2@{WDALMB2}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!WDALMB2@{WDALMB2}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8c4d58a49e719c1a33e4796b0a8633d0}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8c4d58a49e719c1a33e4796b0a8633d0}} 
+W\+D\+A\+L\+M\+B2&Watchdog/\+Alarm Counter byte 2 reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DS1374\_CTRL@{DS1374\_CTRL}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!DS1374\_CTRL@{DS1374\_CTRL}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}} 
+D\+S1374\+\_\+\+C\+T\+RL&Control reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DS1374\_STATUS@{DS1374\_STATUS}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!DS1374\_STATUS@{DS1374\_STATUS}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}} 
+D\+S1374\+\_\+\+S\+T\+A\+T\+US&Status reg \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DS1374\_TC@{DS1374\_TC}!DS1374.h@{DS1374.h}}\index{DS1374.h@{DS1374.h}!DS1374\_TC@{DS1374\_TC}}}\mbox{\Hypertarget{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a3fe69a17f703cd4c29052911ae52061b}\label{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a3fe69a17f703cd4c29052911ae52061b}} 
+D\+S1374\+\_\+\+TC&Trickle Charger reg \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8h_source_l00025}{25}} of file \mbox{\hyperlink{_d_s1374_8h_source}{D\+S1374.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025              \{}
+\DoxyCodeLine{00026     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}{TOD0}} = 0x00,                                }
+\DoxyCodeLine{00027     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8ac5d0bca6e4e159b52b8a28337b14e6}{TOD1}} = 0x01,                                }
+\DoxyCodeLine{00028     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a67da198b12375b7fb7eb9ccf5ca93c9e}{TOD2}} = 0x02,                                }
+\DoxyCodeLine{00029     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af5a17a691b0d219db109353e3a50814c}{TOD3}} = 0x03,                                }
+\DoxyCodeLine{00030     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}{WDALMB0}} = 0x04,                             }
+\DoxyCodeLine{00031     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af660c2279dfe7e3090f033b78d539a46}{WDALMB1}} = 0x05,                             }
+\DoxyCodeLine{00032     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8c4d58a49e719c1a33e4796b0a8633d0}{WDALMB2}} = 0x06,                             }
+\DoxyCodeLine{00033     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}{DS1374\_CTRL}} = 0x07,                         }
+\DoxyCodeLine{00034     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}} = 0x08,                       }
+\DoxyCodeLine{00035     \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a3fe69a17f703cd4c29052911ae52061b}{DS1374\_TC}} = 0x09                            }
+\DoxyCodeLine{00036 \} \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5}{DS1374\_register\_t}};}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{_d_s1374_8h_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}\label{_d_s1374_8h_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Clear\_AF@{DS1374\_Clear\_AF}}
+\index{DS1374\_Clear\_AF@{DS1374\_Clear\_AF}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Clear\_AF()}{DS1374\_Clear\_AF()}}
+{\footnotesize\ttfamily void D\+S1374\+\_\+\+Clear\+\_\+\+AF (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Clear AF Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Clears AF register of D\+S1374
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00179}{179}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179                                      \{}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181     uint8\_t RxBuffer;}
+\DoxyCodeLine{00182     uint8\_t Val;}
+\DoxyCodeLine{00183     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}}, \&RxBuffer, 1);}
+\DoxyCodeLine{00184     Val = RxBuffer \& 0xFE;}
+\DoxyCodeLine{00185     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}}, Val);}
+\DoxyCodeLine{00186 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_a42fccf78c9eebedeb503a8dc320a59b1_a42fccf78c9eebedeb503a8dc320a59b1}\label{_d_s1374_8h_a42fccf78c9eebedeb503a8dc320a59b1_a42fccf78c9eebedeb503a8dc320a59b1}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Read\_Ctrl@{DS1374\_Read\_Ctrl}}
+\index{DS1374\_Read\_Ctrl@{DS1374\_Read\_Ctrl}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Read\_Ctrl()}{DS1374\_Read\_Ctrl()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+S1374\+\_\+\+Read\+\_\+\+Ctrl (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Read Control Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Control register of D\+S1374 and returns its value
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00138}{138}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138                                          \{}
+\DoxyCodeLine{00139     uint8\_t RxBuffer;}
+\DoxyCodeLine{00140 }
+\DoxyCodeLine{00141     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}{DS1374\_CTRL}}, \&RxBuffer, 1);}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143    \textcolor{keywordflow}{return} RxBuffer;}
+\DoxyCodeLine{00144 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_a162497c0f068b5141132b8c86e0a87a7_a162497c0f068b5141132b8c86e0a87a7}\label{_d_s1374_8h_a162497c0f068b5141132b8c86e0a87a7_a162497c0f068b5141132b8c86e0a87a7}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Read\_Status@{DS1374\_Read\_Status}}
+\index{DS1374\_Read\_Status@{DS1374\_Read\_Status}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Read\_Status()}{DS1374\_Read\_Status()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+S1374\+\_\+\+Read\+\_\+\+Status (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Read Status Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Status register of D\+S1374 and returns its value
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00158}{158}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158                                            \{}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     uint8\_t RxBuffer;}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a438aae05245d19694315a6a2b0e86a00}{DS1374\_STATUS}}, \&RxBuffer, 1);}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164     \textcolor{keywordflow}{return} RxBuffer;}
+\DoxyCodeLine{00165 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_a1f78378b1f41468af46c5f2578b2dcf0_a1f78378b1f41468af46c5f2578b2dcf0}\label{_d_s1374_8h_a1f78378b1f41468af46c5f2578b2dcf0_a1f78378b1f41468af46c5f2578b2dcf0}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Read\_Tod@{DS1374\_Read\_Tod}}
+\index{DS1374\_Read\_Tod@{DS1374\_Read\_Tod}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Read\_Tod()}{DS1374\_Read\_Tod()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+S1374\+\_\+\+Read\+\_\+\+Tod (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Read Tod Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Tod register of D\+S1374 and returns its value
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00034}{34}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034                                          \{}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     uint8\_t RxBuffer[4];}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}{TOD0}}, RxBuffer, 4);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     \textcolor{keywordflow}{return} RxBuffer[0] + (RxBuffer[1]<<8) + (RxBuffer[2]<<16) + (RxBuffer[3]<<24);}
+\DoxyCodeLine{00041 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_a607777982985332c554c2fd415e30186_a607777982985332c554c2fd415e30186}\label{_d_s1374_8h_a607777982985332c554c2fd415e30186_a607777982985332c554c2fd415e30186}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Read\_WdAlmb@{DS1374\_Read\_WdAlmb}}
+\index{DS1374\_Read\_WdAlmb@{DS1374\_Read\_WdAlmb}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Read\_WdAlmb()}{DS1374\_Read\_WdAlmb()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+S1374\+\_\+\+Read\+\_\+\+Wd\+Almb (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Read Wd\+Almb Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Wd\+Almb register of D\+S1374 and returns its value
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00076}{76}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076                                             \{}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}{WDALMB0}}, RxBuffer, 3);}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     \textcolor{keywordflow}{return} RxBuffer[0] + (RxBuffer[1]<<8) + (RxBuffer[2]<<16);}
+\DoxyCodeLine{00083 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_aa0793fdcea2817ea1d51c85add50d43b_aa0793fdcea2817ea1d51c85add50d43b}\label{_d_s1374_8h_aa0793fdcea2817ea1d51c85add50d43b_aa0793fdcea2817ea1d51c85add50d43b}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Write\_Ctrl@{DS1374\_Write\_Ctrl}}
+\index{DS1374\_Write\_Ctrl@{DS1374\_Write\_Ctrl}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Write\_Ctrl()}{DS1374\_Write\_Ctrl()}}
+{\footnotesize\ttfamily void D\+S1374\+\_\+\+Write\+\_\+\+Ctrl (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Write Control Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes Control register of D\+S1374
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00117}{117}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117                                        \{}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     uint8\_t Val;}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121     Val = (1<<6) | (1<<3) | 1;}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5adc1d8a086a390e73ebf786f9dc72a1e8}{DS1374\_CTRL}}, Val);}
+\DoxyCodeLine{00124 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_aac73312855211e9604d3498ad5860e82_aac73312855211e9604d3498ad5860e82}\label{_d_s1374_8h_aac73312855211e9604d3498ad5860e82_aac73312855211e9604d3498ad5860e82}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Write\_Tod@{DS1374\_Write\_Tod}}
+\index{DS1374\_Write\_Tod@{DS1374\_Write\_Tod}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Write\_Tod()}{DS1374\_Write\_Tod()}}
+{\footnotesize\ttfamily void D\+S1374\+\_\+\+Write\+\_\+\+Tod (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint32\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Write Tod Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes Tod register of D\+S1374
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00056}{56}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056                                                     \{}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af5a17a691b0d219db109353e3a50814c}{TOD3}}, (uint8\_t)( (Val>>24) \& 0xFF));}
+\DoxyCodeLine{00059     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a67da198b12375b7fb7eb9ccf5ca93c9e}{TOD2}}, (uint8\_t)( (Val>>16) \& 0xFF));}
+\DoxyCodeLine{00060     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8ac5d0bca6e4e159b52b8a28337b14e6}{TOD1}}, (uint8\_t)( (Val>>8) \& 0xFF));}
+\DoxyCodeLine{00061     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af7c31e85fe789c9f23f9d4198394c96b}{TOD0}}, (uint8\_t)( Val \& 0xFF));}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_d_s1374_8h_a471c71fc7f630c597cb0ce730c4f8a13_a471c71fc7f630c597cb0ce730c4f8a13}\label{_d_s1374_8h_a471c71fc7f630c597cb0ce730c4f8a13_a471c71fc7f630c597cb0ce730c4f8a13}} 
+\index{DS1374.h@{DS1374.h}!DS1374\_Write\_WdAlmb@{DS1374\_Write\_WdAlmb}}
+\index{DS1374\_Write\_WdAlmb@{DS1374\_Write\_WdAlmb}!DS1374.h@{DS1374.h}}
+\doxyparagraph{\texorpdfstring{DS1374\_Write\_WdAlmb()}{DS1374\_Write\_WdAlmb()}}
+{\footnotesize\ttfamily void D\+S1374\+\_\+\+Write\+\_\+\+Wd\+Almb (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint32\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+D\+S1374 Write Wd\+Almb Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes Wd\+Almb register of D\+S1374
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_d_s1374_8c_source_l00098}{98}} of file \mbox{\hyperlink{_d_s1374_8c_source}{D\+S1374.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098                                                        \{}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a8c4d58a49e719c1a33e4796b0a8633d0}{WDALMB2}}, (uint8\_t)( (Val>>16) \& 0xFF));}
+\DoxyCodeLine{00101     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5af660c2279dfe7e3090f033b78d539a46}{WDALMB1}}, (uint8\_t)( (Val>>8) \& 0xFF));}
+\DoxyCodeLine{00102     \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, 0x68, \mbox{\hyperlink{_d_s1374_8h_a3bfc52fe23c77f47078ece0042e3adf5_a3bfc52fe23c77f47078ece0042e3adf5a920b56c5e49ff90e2a957afd50f20f7a}{WDALMB0}}, (uint8\_t)( Val \& 0xFF));}
+\DoxyCodeLine{00103 \}}
+
+\end{DoxyCode}

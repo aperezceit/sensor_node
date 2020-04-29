@@ -1,0 +1,804 @@
+\hypertarget{_a_d_x_l355_8c}{}\doxysubsection{A\+D\+X\+L355.\+c File Reference}
+\label{_a_d_x_l355_8c}\index{ADXL355.c@{ADXL355.c}}
+
+
+Functions to configure and read data from A\+D\+X\+L355 accelerometer.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+D\+X\+L355.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+S\+P\+I.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_a_d_x_l355_8c_ae86f64356a3c84e79232a8b243ad66f3_ae86f64356a3c84e79232a8b243ad66f3}{A\+D\+X\+L355\+\_\+\+Data\+\_\+\+Rdy}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Data ready Function. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_a05d134072910a94bf7d1f2c737033be0_a05d134072910a94bf7d1f2c737033be0}{A\+D\+X\+L355\+\_\+\+Dev\+Id}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Get Dev\+ID Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_acd3720b1f72f4bd7c83fe371060a95a4_acd3720b1f72f4bd7c83fe371060a95a4}{A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Data}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, int32\+\_\+t $\ast$Ax, int32\+\_\+t $\ast$Ay, int32\+\_\+t $\ast$Az, uint8\+\_\+t Samples)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 F\+I\+FO data Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_a8878b14858c75e7a243d7d394faade78_a8878b14858c75e7a243d7d394faade78}{A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Entries}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 F\+I\+FO entries Function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_a_d_x_l355_8c_a40f415ddd119c6f85248864f30c38961_a40f415ddd119c6f85248864f30c38961}{A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Full}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 F\+I\+FO Full Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_ac7bbcba58b5bc3cb1cd9a0802cd118e0_ac7bbcba58b5bc3cb1cd9a0802cd118e0}{A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Samples}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Samples)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 F\+I\+FO samples Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_ae4de4565751bba9b2714786810903e54_ae4de4565751bba9b2714786810903e54}{A\+D\+X\+L355\+\_\+\+Filter\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Filter configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_abf390740dfe0d5d32cc0f8eb58ebcb95_abf390740dfe0d5d32cc0f8eb58ebcb95}{A\+D\+X\+L355\+\_\+\+Get\+\_\+\+Accel\+\_\+\+Frame}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint16\+\_\+t Samples, int32\+\_\+t $\ast$Data\+Sensor)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Get acceleration data Function. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_aab0cc3470cb3f9efa4b341a17d4a7e05_aab0cc3470cb3f9efa4b341a17d4a7e05}{A\+D\+X\+L355\+\_\+\+Part\+Id}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Get Part\+ID Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_a2e2078bb202b90e368cbc195b5fde6bc_a2e2078bb202b90e368cbc195b5fde6bc}{A\+D\+X\+L355\+\_\+\+Power\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Power Configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_a331c003214c1064d26e9ba7d3fee67a9_a331c003214c1064d26e9ba7d3fee67a9}{A\+D\+X\+L355\+\_\+\+Range\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Range Configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_a_d_x_l355_8c_a3f9db2b75fc97f9292986db6b3ac5560_a3f9db2b75fc97f9292986db6b3ac5560}{A\+D\+X\+L355\+\_\+\+Reset}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Reset Function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_a_d_x_l355_8c_adf42e2adf4b9a30c7f85a8b8e7df0009_adf42e2adf4b9a30c7f85a8b8e7df0009}{A\+D\+X\+L355\+\_\+\+Temp}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Read Temperature register Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_aa30cb263749f017bb841f6c129f31ba9_aa30cb263749f017bb841f6c129f31ba9}{A\+D\+X\+L355\+\_\+\+X\+Data}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Read data X Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_acb336690e07ccb334e009fcf7578f42e_acb336690e07ccb334e009fcf7578f42e}{A\+D\+X\+L355\+\_\+\+Y\+Data}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Read data Y Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_abfa6524be3a34b81168db14be5bee19f_abfa6524be3a34b81168db14be5bee19f}{A\+D\+X\+L355\+\_\+\+Z\+Data}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 Read data Z Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\+\_\+to\+\_\+s32}} (uint32\+\_\+t u\+Data)
+\begin{DoxyCompactList}\small\item\em A\+D\+X\+L355 u20\+\_\+to\+\_\+s32 Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to configure and read data from A\+D\+X\+L355 accelerometer. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{_a_d_x_l355_8c_ae86f64356a3c84e79232a8b243ad66f3_ae86f64356a3c84e79232a8b243ad66f3}\label{_a_d_x_l355_8c_ae86f64356a3c84e79232a8b243ad66f3_ae86f64356a3c84e79232a8b243ad66f3}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Data\_Rdy@{ADXL355\_Data\_Rdy}}
+\index{ADXL355\_Data\_Rdy@{ADXL355\_Data\_Rdy}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Data\_Rdy()}{ADXL355\_Data\_Rdy()}}
+{\footnotesize\ttfamily bool A\+D\+X\+L355\+\_\+\+Data\+\_\+\+Rdy (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Data ready Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads data ready register and returns a boolean
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Data\+\_\+\+Rdy 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00310}{310}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00310                                       \{}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312     uint8\_t RxData[2];}
+\DoxyCodeLine{00313     \textcolor{keywordtype}{bool} Data\_Rdy;}
+\DoxyCodeLine{00314 }
+\DoxyCodeLine{00315     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279caaf6aa430c3aee706c3b1e73d5eedfd98}{ADXL355\_STATUS}}, RxData, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00316 }
+\DoxyCodeLine{00317     Data\_Rdy = (RxData[1] \& \mbox{\hyperlink{_a_d_x_l355_8h_a86c371be1d591c159d19ca4a34767c3a_a86c371be1d591c159d19ca4a34767c3aa9e8edcab65c84a91b0c6fe5b16a7a257}{DATA\_RDY}});}
+\DoxyCodeLine{00318 }
+\DoxyCodeLine{00319     \textcolor{keywordflow}{return} Data\_Rdy;}
+\DoxyCodeLine{00320 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a05d134072910a94bf7d1f2c737033be0_a05d134072910a94bf7d1f2c737033be0}\label{_a_d_x_l355_8c_a05d134072910a94bf7d1f2c737033be0_a05d134072910a94bf7d1f2c737033be0}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_DevId@{ADXL355\_DevId}}
+\index{ADXL355\_DevId@{ADXL355\_DevId}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_DevId()}{ADXL355\_DevId()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+D\+X\+L355\+\_\+\+Dev\+Id (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Get Dev\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Dev\+ID from A\+D\+X\+L355
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Dev\+Id 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00036}{36}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036                                        \{}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00039     uint16\_t DevId;}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279caa1eed48afd84e82a42e489374c8e4d59}{DEVID\_AD}}, RxBuffer, 2, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     DevId = (RxBuffer[1]<<8) + RxBuffer[2];}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} DevId;}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_acd3720b1f72f4bd7c83fe371060a95a4_acd3720b1f72f4bd7c83fe371060a95a4}\label{_a_d_x_l355_8c_acd3720b1f72f4bd7c83fe371060a95a4_acd3720b1f72f4bd7c83fe371060a95a4}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Fifo\_Data@{ADXL355\_Fifo\_Data}}
+\index{ADXL355\_Fifo\_Data@{ADXL355\_Fifo\_Data}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Fifo\_Data()}{ADXL355\_Fifo\_Data()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Data (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{int32\+\_\+t $\ast$}]{Ax,  }\item[{int32\+\_\+t $\ast$}]{Ay,  }\item[{int32\+\_\+t $\ast$}]{Az,  }\item[{uint8\+\_\+t}]{Samples }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 F\+I\+FO data Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads N samples of F\+I\+FO data and saves it on Ax,Ay,Az
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em int32\+\_\+t} & $\ast$\+Ax pointer to Ax \\
+\hline
+\mbox{\texttt{ in}}  & {\em int32\+\_\+t} & $\ast$\+Ay pointer to Ay \\
+\hline
+\mbox{\texttt{ in}}  & {\em int32\+\_\+t} & $\ast$\+Az pointer to Az \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Samples N samples to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00394}{394}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00394                                                                                                \{}
+\DoxyCodeLine{00395 }
+\DoxyCodeLine{00396     uint8\_t RxData[10];}
+\DoxyCodeLine{00397     int8\_t i;}
+\DoxyCodeLine{00398     uint32\_t uAx, uAy, uAz;}
+\DoxyCodeLine{00399 }
+\DoxyCodeLine{00400     \textcolor{keywordflow}{while} (!\mbox{\hyperlink{_a_d_x_l355_8c_a40f415ddd119c6f85248864f30c38961_a40f415ddd119c6f85248864f30c38961}{ADXL355\_Fifo\_Full}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})) \{\}                                      \textcolor{comment}{// Polling the FIFO\_FULL Register of STATUS reg}}
+\DoxyCodeLine{00401 }
+\DoxyCodeLine{00402     i=0;}
+\DoxyCodeLine{00403     \textcolor{keywordflow}{while} (i<Samples) \{}
+\DoxyCodeLine{00404         \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca03b6060bdd1ad26bcc3ad98920430663}{FIFO\_DATA}}, RxData, 9, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00405         uAx = (RxData[1] << 12) + (RxData[2] << 4) + (RxData[3] >> 4);}
+\DoxyCodeLine{00406         uAy = (RxData[4] << 12) + (RxData[5] << 4) + (RxData[6] >> 4);}
+\DoxyCodeLine{00407         uAz = (RxData[7] << 12) + (RxData[8] << 4) + (RxData[9] >> 4);}
+\DoxyCodeLine{00408         Ax[i] = \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\_to\_s32}}(uAx);}
+\DoxyCodeLine{00409         Ay[i] = \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\_to\_s32}}(uAy);}
+\DoxyCodeLine{00410         Az[i] = \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\_to\_s32}}(uAz);}
+\DoxyCodeLine{00411         i++;}
+\DoxyCodeLine{00412     \}}
+\DoxyCodeLine{00413 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a8878b14858c75e7a243d7d394faade78_a8878b14858c75e7a243d7d394faade78}\label{_a_d_x_l355_8c_a8878b14858c75e7a243d7d394faade78_a8878b14858c75e7a243d7d394faade78}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Fifo\_Entries@{ADXL355\_Fifo\_Entries}}
+\index{ADXL355\_Fifo\_Entries@{ADXL355\_Fifo\_Entries}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Fifo\_Entries()}{ADXL355\_Fifo\_Entries()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Entries (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 F\+I\+FO entries Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Read F\+I\+FO entries register and returns a buffer
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00155}{155}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155                                              \{}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00159     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279cadc3b16affb6b18043aa71237360c9808}{FIFO\_ENTRIES}}, RxBuffer, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161     \textcolor{keywordflow}{return} (RxBuffer[1] \& 0x7F);}
+\DoxyCodeLine{00162 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a40f415ddd119c6f85248864f30c38961_a40f415ddd119c6f85248864f30c38961}\label{_a_d_x_l355_8c_a40f415ddd119c6f85248864f30c38961_a40f415ddd119c6f85248864f30c38961}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Fifo\_Full@{ADXL355\_Fifo\_Full}}
+\index{ADXL355\_Fifo\_Full@{ADXL355\_Fifo\_Full}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Fifo\_Full()}{ADXL355\_Fifo\_Full()}}
+{\footnotesize\ttfamily bool A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Full (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 F\+I\+FO Full Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads F\+I\+FO buffer register and returns a boolean
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Fifo\+\_\+\+Full 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00286}{286}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00286                                        \{}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288     uint8\_t RxData[2];}
+\DoxyCodeLine{00289     \textcolor{keywordtype}{bool} Fifo\_Full;}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279caaf6aa430c3aee706c3b1e73d5eedfd98}{ADXL355\_STATUS}}, RxData, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293     Fifo\_Full = (RxData[1] \& 0x02) >> 1;}
+\DoxyCodeLine{00294 }
+\DoxyCodeLine{00295     \textcolor{keywordflow}{return} Fifo\_Full;}
+\DoxyCodeLine{00296 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_ac7bbcba58b5bc3cb1cd9a0802cd118e0_ac7bbcba58b5bc3cb1cd9a0802cd118e0}\label{_a_d_x_l355_8c_ac7bbcba58b5bc3cb1cd9a0802cd118e0_ac7bbcba58b5bc3cb1cd9a0802cd118e0}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Fifo\_Samples@{ADXL355\_Fifo\_Samples}}
+\index{ADXL355\_Fifo\_Samples@{ADXL355\_Fifo\_Samples}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Fifo\_Samples()}{ADXL355\_Fifo\_Samples()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Fifo\+\_\+\+Samples (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Samples }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 F\+I\+FO samples Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writtes N samples to F\+I\+FO register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Samples\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00138}{138}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138                                                            \{}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279caf38685f366596a7426c63322c6e8bfe3}{FIFO\_SAMPLES}}, Samples, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00141 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_ae4de4565751bba9b2714786810903e54_ae4de4565751bba9b2714786810903e54}\label{_a_d_x_l355_8c_ae4de4565751bba9b2714786810903e54_ae4de4565751bba9b2714786810903e54}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Filter\_Conf@{ADXL355\_Filter\_Conf}}
+\index{ADXL355\_Filter\_Conf@{ADXL355\_Filter\_Conf}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Filter\_Conf()}{ADXL355\_Filter\_Conf()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Filter\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Filter configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets value on Filter\textquotesingle{}s configuration register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00177}{177}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177                                                       \{}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca79b28719aca4e2f69cd372a3b7539c45}{FILTER}}, Val, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00180 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_abf390740dfe0d5d32cc0f8eb58ebcb95_abf390740dfe0d5d32cc0f8eb58ebcb95}\label{_a_d_x_l355_8c_abf390740dfe0d5d32cc0f8eb58ebcb95_abf390740dfe0d5d32cc0f8eb58ebcb95}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Get\_Accel\_Frame@{ADXL355\_Get\_Accel\_Frame}}
+\index{ADXL355\_Get\_Accel\_Frame@{ADXL355\_Get\_Accel\_Frame}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Get\_Accel\_Frame()}{ADXL355\_Get\_Accel\_Frame()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Get\+\_\+\+Accel\+\_\+\+Frame (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint16\+\_\+t}]{Samples,  }\item[{int32\+\_\+t $\ast$}]{Data\+Sensor }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Get acceleration data Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads N samples of acceleration data and saves it on Data\+Sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & Samples N samples to read \\
+\hline
+\mbox{\texttt{ in}}  & {\em int32\+\_\+t} & $\ast$\+Data\+Sensor pointer to datasensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00336}{336}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00336                                                                                      \{}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00339     int32\_t Ax[512], Ay[512], Az[512];}
+\DoxyCodeLine{00340     int32\_t xMean, yMean, zMean;}
+\DoxyCodeLine{00341     \textcolor{keywordtype}{double} xRms, yRms, zRms;}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343     xMean=0;}
+\DoxyCodeLine{00344     yMean=0;}
+\DoxyCodeLine{00345     zMean=0;}
+\DoxyCodeLine{00346     \textcolor{keywordflow}{while} (i<Samples) \{}
+\DoxyCodeLine{00347         \textcolor{keywordflow}{while}(!\mbox{\hyperlink{_a_d_x_l355_8c_ae86f64356a3c84e79232a8b243ad66f3_ae86f64356a3c84e79232a8b243ad66f3}{ADXL355\_Data\_Rdy}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})) \{\}}
+\DoxyCodeLine{00348         Ax[i] = \mbox{\hyperlink{_a_d_x_l355_8c_aa30cb263749f017bb841f6c129f31ba9_aa30cb263749f017bb841f6c129f31ba9}{ADXL355\_XData}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00349         Ay[i] = \mbox{\hyperlink{_a_d_x_l355_8c_acb336690e07ccb334e009fcf7578f42e_acb336690e07ccb334e009fcf7578f42e}{ADXL355\_YData}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00350         Az[i] = \mbox{\hyperlink{_a_d_x_l355_8c_abfa6524be3a34b81168db14be5bee19f_abfa6524be3a34b81168db14be5bee19f}{ADXL355\_ZData}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00351         xMean += Ax[i];}
+\DoxyCodeLine{00352         yMean += Ay[i];}
+\DoxyCodeLine{00353         zMean += Az[i];}
+\DoxyCodeLine{00354         i++;}
+\DoxyCodeLine{00355     \}}
+\DoxyCodeLine{00356 }
+\DoxyCodeLine{00357     xMean = xMean / Samples;}
+\DoxyCodeLine{00358     yMean = yMean / Samples;}
+\DoxyCodeLine{00359     zMean = zMean / Samples;}
+\DoxyCodeLine{00360 }
+\DoxyCodeLine{00361     xRms = 0.0;}
+\DoxyCodeLine{00362     yRms = 0.0;}
+\DoxyCodeLine{00363     zRms = 0.0;}
+\DoxyCodeLine{00364     \textcolor{keywordflow}{for} (i=0;i<Samples;i++) \{}
+\DoxyCodeLine{00365         xRms += ( (Ax[i]-\/xMean)*(Ax[i]-\/xMean) );}
+\DoxyCodeLine{00366         yRms += ( (Ay[i]-\/yMean)*(Ay[i]-\/yMean) );}
+\DoxyCodeLine{00367         zRms += ( (Az[i]-\/zMean)*(Az[i]-\/zMean) );}
+\DoxyCodeLine{00368     \}}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{00370     DataSensor[0] = xMean;}
+\DoxyCodeLine{00371     DataSensor[1] = yMean;}
+\DoxyCodeLine{00372     DataSensor[2] = zMean;}
+\DoxyCodeLine{00373     DataSensor[3] = (int32\_t)sqrt(xRms/Samples);}
+\DoxyCodeLine{00374     DataSensor[4] = (int32\_t)sqrt(yRms/Samples);}
+\DoxyCodeLine{00375     DataSensor[5] = (int32\_t)sqrt(zRms/Samples);}
+\DoxyCodeLine{00376 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_aab0cc3470cb3f9efa4b341a17d4a7e05_aab0cc3470cb3f9efa4b341a17d4a7e05}\label{_a_d_x_l355_8c_aab0cc3470cb3f9efa4b341a17d4a7e05_aab0cc3470cb3f9efa4b341a17d4a7e05}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_PartId@{ADXL355\_PartId}}
+\index{ADXL355\_PartId@{ADXL355\_PartId}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_PartId()}{ADXL355\_PartId()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+D\+X\+L355\+\_\+\+Part\+Id (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Get Part\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Part\+ID from A\+D\+X\+L355
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Part\+ID 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00060}{60}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                                         \{}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00063     uint16\_t PartId;}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca6b311810f273e8199105f77d89005db9}{PARTID}}, RxBuffer, 2, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067     PartId = (RxBuffer[1]<<8) + RxBuffer[2];}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069     \textcolor{keywordflow}{return} PartId;}
+\DoxyCodeLine{00070 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a2e2078bb202b90e368cbc195b5fde6bc_a2e2078bb202b90e368cbc195b5fde6bc}\label{_a_d_x_l355_8c_a2e2078bb202b90e368cbc195b5fde6bc_a2e2078bb202b90e368cbc195b5fde6bc}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Power\_Conf@{ADXL355\_Power\_Conf}}
+\index{ADXL355\_Power\_Conf@{ADXL355\_Power\_Conf}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Power\_Conf()}{ADXL355\_Power\_Conf()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Power\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Power Configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets Power configuration value on Power configuration register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00102}{102}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102                                                      \{}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279caed21c00f1ed862c4294dc2d45ff47e90}{POWER\_CTL}}, Val, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00105 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a331c003214c1064d26e9ba7d3fee67a9_a331c003214c1064d26e9ba7d3fee67a9}\label{_a_d_x_l355_8c_a331c003214c1064d26e9ba7d3fee67a9_a331c003214c1064d26e9ba7d3fee67a9}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Range\_Conf@{ADXL355\_Range\_Conf}}
+\index{ADXL355\_Range\_Conf@{ADXL355\_Range\_Conf}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Range\_Conf()}{ADXL355\_Range\_Conf()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Range\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Range Configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets Range configuration value on Range configuration register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00120}{120}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120                                                      \{}
+\DoxyCodeLine{00121 }
+\DoxyCodeLine{00122     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca36ccd76c516f51bf87c02b44305284ca}{RANGE}}, Val, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00123 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a3f9db2b75fc97f9292986db6b3ac5560_a3f9db2b75fc97f9292986db6b3ac5560}\label{_a_d_x_l355_8c_a3f9db2b75fc97f9292986db6b3ac5560_a3f9db2b75fc97f9292986db6b3ac5560}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Reset@{ADXL355\_Reset}}
+\index{ADXL355\_Reset@{ADXL355\_Reset}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Reset()}{ADXL355\_Reset()}}
+{\footnotesize\ttfamily void A\+D\+X\+L355\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Reset Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Resets A\+D\+X\+L355
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00084}{84}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084                                    \{}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279caf537bb9bf95329bed889242e8720cf6d}{ADXL355\_RESET\_REG}}, \mbox{\hyperlink{_a_d_x_l355_8h_ab4b5e9ebd459c5b5defc1c9b96a34490_ab4b5e9ebd459c5b5defc1c9b96a34490}{ADXL355\_RESET}}, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00087 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_adf42e2adf4b9a30c7f85a8b8e7df0009_adf42e2adf4b9a30c7f85a8b8e7df0009}\label{_a_d_x_l355_8c_adf42e2adf4b9a30c7f85a8b8e7df0009_adf42e2adf4b9a30c7f85a8b8e7df0009}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_Temp@{ADXL355\_Temp}}
+\index{ADXL355\_Temp@{ADXL355\_Temp}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_Temp()}{ADXL355\_Temp()}}
+{\footnotesize\ttfamily float A\+D\+X\+L355\+\_\+\+Temp (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Read Temperature register Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Temperature from Temperature registers
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(u\+Data-\/t\+\_\+bias)/t\+\_\+sens + 25.\+0; Temperature data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00263}{263}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00263                                    \{}
+\DoxyCodeLine{00264 }
+\DoxyCodeLine{00265     uint8\_t RxData[3];}
+\DoxyCodeLine{00266     uint16\_t uData;}
+\DoxyCodeLine{00267 }
+\DoxyCodeLine{00268     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca0c141bab71bff53ed1ecf5f4255369d4}{TEMP2}}, RxData, 2, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00269     uData = ((RxData[1] \& 0x0F) << 8) + RxData[2];}
+\DoxyCodeLine{00270 }
+\DoxyCodeLine{00271     \textcolor{keywordflow}{return} (uData-\/t\_bias)/t\_sens + 25.0;}
+\DoxyCodeLine{00272 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_aa30cb263749f017bb841f6c129f31ba9_aa30cb263749f017bb841f6c129f31ba9}\label{_a_d_x_l355_8c_aa30cb263749f017bb841f6c129f31ba9_aa30cb263749f017bb841f6c129f31ba9}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_XData@{ADXL355\_XData}}
+\index{ADXL355\_XData@{ADXL355\_XData}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_XData()}{ADXL355\_XData()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+D\+X\+L355\+\_\+\+X\+Data (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Read data X Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads data from X axis register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+u\+Data Axis X data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00194}{194}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194                                       \{}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196     uint8\_t RxData[4];}
+\DoxyCodeLine{00197     uint32\_t uData;}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca063a455b8a727e421b3c517724099b57}{XDATA3}}, RxData, 3, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00200     uData = (int32\_t)(RxData[1] << 12) + (int32\_t)(RxData[2] << 4) + (int32\_t)(RxData[3] >> 4);}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202     \textcolor{keywordflow}{return} \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\_to\_s32}}(uData);}
+\DoxyCodeLine{00203 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_acb336690e07ccb334e009fcf7578f42e_acb336690e07ccb334e009fcf7578f42e}\label{_a_d_x_l355_8c_acb336690e07ccb334e009fcf7578f42e_acb336690e07ccb334e009fcf7578f42e}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_YData@{ADXL355\_YData}}
+\index{ADXL355\_YData@{ADXL355\_YData}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_YData()}{ADXL355\_YData()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+D\+X\+L355\+\_\+\+Y\+Data (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Read data Y Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads data from Y axis register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+u\+Data Axis Y data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00217}{217}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00217                                       \{}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219     uint8\_t RxData[4];}
+\DoxyCodeLine{00220     uint32\_t uData;}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279ca779a5fe10e888c26e1b11d894ce756b6}{YDATA3}}, RxData, 3, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00223     uData = (int32\_t)(RxData[1] << 12) + (int32\_t)(RxData[2] << 4) + (int32\_t)(RxData[3] >> 4);}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00225     \textcolor{keywordflow}{return} \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\_to\_s32}}(uData);}
+\DoxyCodeLine{00226 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_abfa6524be3a34b81168db14be5bee19f_abfa6524be3a34b81168db14be5bee19f}\label{_a_d_x_l355_8c_abfa6524be3a34b81168db14be5bee19f_abfa6524be3a34b81168db14be5bee19f}} 
+\index{ADXL355.c@{ADXL355.c}!ADXL355\_ZData@{ADXL355\_ZData}}
+\index{ADXL355\_ZData@{ADXL355\_ZData}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{ADXL355\_ZData()}{ADXL355\_ZData()}}
+{\footnotesize\ttfamily int32\+\_\+t A\+D\+X\+L355\+\_\+\+Z\+Data (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 Read data Z Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads data from Z axis register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+u\+Data Axis Z data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00240}{240}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00240                                       \{}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242     uint8\_t RxData[4];}
+\DoxyCodeLine{00243     uint32\_t uData;}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_af09b8fa6e459c5c5aad59515ceac279c_af09b8fa6e459c5c5aad59515ceac279cad97c38760390964fdcd3144e771218ae}{ZDATA3}}, RxData, 3, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{RNW\_LSB}});}
+\DoxyCodeLine{00246     uData = (int32\_t)(RxData[1] << 12) + (int32\_t)(RxData[2] << 4) + (int32\_t)(RxData[3] >> 4);}
+\DoxyCodeLine{00247 }
+\DoxyCodeLine{00248     \textcolor{keywordflow}{return} \mbox{\hyperlink{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}{u20\_to\_s32}}(uData);}
+\DoxyCodeLine{00249 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}\label{_a_d_x_l355_8c_a1c56057fabcf393ac25c5071a266b594_a1c56057fabcf393ac25c5071a266b594}} 
+\index{ADXL355.c@{ADXL355.c}!u20\_to\_s32@{u20\_to\_s32}}
+\index{u20\_to\_s32@{u20\_to\_s32}!ADXL355.c@{ADXL355.c}}
+\doxyparagraph{\texorpdfstring{u20\_to\_s32()}{u20\_to\_s32()}}
+{\footnotesize\ttfamily int32\+\_\+t u20\+\_\+to\+\_\+s32 (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{u\+Data }\end{DoxyParamCaption})}
+
+
+
+A\+D\+X\+L355 u20\+\_\+to\+\_\+s32 Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Converts data to int
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & u\+Data Accelerometer data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t i\+Data Accelerometer data integer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_a_d_x_l355_8c_source_l00427}{427}} of file \mbox{\hyperlink{_a_d_x_l355_8c_source}{A\+D\+X\+L355.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00427                                    \{}
+\DoxyCodeLine{00428 }
+\DoxyCodeLine{00429     int32\_t iData;}
+\DoxyCodeLine{00430 }
+\DoxyCodeLine{00431     \textcolor{keywordflow}{if} (uData \& 0x80000) \{}
+\DoxyCodeLine{00432         iData = uData | 0xFFF00000;}
+\DoxyCodeLine{00433     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00434         iData = (int32\_t)uData;}
+\DoxyCodeLine{00435     \}}
+\DoxyCodeLine{00436 }
+\DoxyCodeLine{00437     \textcolor{keywordflow}{return} iData;}
+\DoxyCodeLine{00438 \}}
+
+\end{DoxyCode}

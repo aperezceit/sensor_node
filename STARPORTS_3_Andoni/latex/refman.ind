@@ -1,0 +1,2910 @@
+\begin{theindex}
+
+  \item {\_PowerMeasure\_ControlBlock\_t\_}, \hyperpage{410}
+
+  \indexspace
+
+  \item {ACT\_COUNT}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ACT\_EN}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ACT\_THRESH\_H}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ACT\_THRESH\_L}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ACT\_X}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ACT\_Y}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ACT\_Z}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ACTIVE\_MODE}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {ACTIVITY}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {ADC\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{94}
+  \item {ADC\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{94}
+  \item {adcCC3220SHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{94}
+  \item {adcCC3220SObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{95}
+  \item {Add\_s16Data2Packet}
+    \subitem {Sensors.c}, \hyperpage{362}
+    \subitem {Sensors.h}, \hyperpage{372}
+  \item {Add\_s32Data2Packet}
+    \subitem {Sensors.c}, \hyperpage{363}
+    \subitem {Sensors.h}, \hyperpage{373}
+  \item {ADXL355.c}, \hyperpage{4}
+    \subitem {ADXL355\_Data\_Rdy}, \hyperpage{5}
+    \subitem {ADXL355\_DevId}, \hyperpage{6}
+    \subitem {ADXL355\_Fifo\_Data}, \hyperpage{6}
+    \subitem {ADXL355\_Fifo\_Entries}, \hyperpage{7}
+    \subitem {ADXL355\_Fifo\_Full}, \hyperpage{8}
+    \subitem {ADXL355\_Fifo\_Samples}, \hyperpage{8}
+    \subitem {ADXL355\_Filter\_Conf}, \hyperpage{10}
+    \subitem {ADXL355\_Get\_Accel\_Frame}, \hyperpage{10}
+    \subitem {ADXL355\_PartId}, \hyperpage{11}
+    \subitem {ADXL355\_Power\_Conf}, \hyperpage{12}
+    \subitem {ADXL355\_Range\_Conf}, \hyperpage{12}
+    \subitem {ADXL355\_Reset}, \hyperpage{13}
+    \subitem {ADXL355\_Temp}, \hyperpage{13}
+    \subitem {ADXL355\_XData}, \hyperpage{14}
+    \subitem {ADXL355\_YData}, \hyperpage{14}
+    \subitem {ADXL355\_ZData}, \hyperpage{16}
+    \subitem {u20\_to\_s32}, \hyperpage{16}
+  \item {ADXL355.h}, \hyperpage{20}
+    \subitem {ACT\_COUNT}, \hyperpage{27}
+    \subitem {ACT\_EN}, \hyperpage{27}
+    \subitem {ACT\_THRESH\_H}, \hyperpage{27}
+    \subitem {ACT\_THRESH\_L}, \hyperpage{27}
+    \subitem {ACT\_X}, \hyperpage{24}
+    \subitem {ACT\_Y}, \hyperpage{24}
+    \subitem {ACT\_Z}, \hyperpage{24}
+    \subitem {ACTIVITY}, \hyperpage{28}
+    \subitem {ADXL355\_\_DEVICE\_AD}, \hyperpage{23}
+    \subitem {ADXL355\_act\_ctl\_t}, \hyperpage{23}
+    \subitem {ADXL355\_Data\_Rdy}, \hyperpage{29}
+    \subitem {ADXL355\_DevId}, \hyperpage{30}
+    \subitem {ADXL355\_Fifo\_Data}, \hyperpage{30}
+    \subitem {ADXL355\_Fifo\_Entries}, \hyperpage{31}
+    \subitem {ADXL355\_Fifo\_Full}, \hyperpage{32}
+    \subitem {ADXL355\_Fifo\_Samples}, \hyperpage{32}
+    \subitem {ADXL355\_Filter\_Conf}, \hyperpage{33}
+    \subitem {ADXL355\_filter\_ctl\_t}, \hyperpage{24}
+    \subitem {ADXL355\_Get\_Accel\_Frame}, \hyperpage{33}
+    \subitem {ADXL355\_i2c\_speed\_t}, \hyperpage{25}
+    \subitem {ADXL355\_int\_ctl\_t}, \hyperpage{25}
+    \subitem {ADXL355\_int\_pol\_t}, \hyperpage{25}
+    \subitem {ADXL355\_intmap\_ctl\_t}, \hyperpage{26}
+    \subitem {ADXL355\_modes\_t}, \hyperpage{26}
+    \subitem {ADXL355\_PartId}, \hyperpage{34}
+    \subitem {ADXL355\_Power\_Conf}, \hyperpage{35}
+    \subitem {ADXL355\_Range\_Conf}, \hyperpage{35}
+    \subitem {ADXL355\_range\_ctl\_t}, \hyperpage{26}
+    \subitem {ADXL355\_register\_t}, \hyperpage{27}
+    \subitem {ADXL355\_RESET}, \hyperpage{23}
+    \subitem {ADXL355\_Reset}, \hyperpage{36}
+    \subitem {ADXL355\_RESET\_REG}, \hyperpage{28}
+    \subitem {ADXL355\_STATUS}, \hyperpage{27}
+    \subitem {ADXL355\_status\_t}, \hyperpage{28}
+    \subitem {ADXL355\_sync\_ctl\_t}, \hyperpage{29}
+    \subitem {ADXL355\_Temp}, \hyperpage{36}
+    \subitem {ADXL355\_XData}, \hyperpage{37}
+    \subitem {ADXL355\_YData}, \hyperpage{37}
+    \subitem {ADXL355\_ZData}, \hyperpage{38}
+    \subitem {axis355\_sens}, \hyperpage{39}
+    \subitem {calib\_data}, \hyperpage{39}
+    \subitem {DATA\_RDY}, \hyperpage{28}
+    \subitem {DEVID\_AD}, \hyperpage{27}
+    \subitem {DEVID\_MST}, \hyperpage{27}
+    \subitem {DRDY\_OFF}, \hyperpage{26}
+    \subitem {EXT\_CLK}, \hyperpage{29}
+    \subitem {EXT\_SYNC\_INT}, \hyperpage{29}
+    \subitem {EXT\_SYNC\_NO\_INT}, \hyperpage{29}
+    \subitem {FIFO\_DATA}, \hyperpage{27}
+    \subitem {FIFO\_ENTRIES}, \hyperpage{27}
+    \subitem {FIFO\_FULL}, \hyperpage{28}
+    \subitem {FIFO\_OVR}, \hyperpage{28}
+    \subitem {FIFO\_SAMPLES}, \hyperpage{27}
+    \subitem {FILTER}, \hyperpage{27}
+    \subitem {FULL\_EN}, \hyperpage{26}
+    \subitem {HPF02}, \hyperpage{24}
+    \subitem {HPF09}, \hyperpage{24}
+    \subitem {HPF15}, \hyperpage{24}
+    \subitem {HPF247}, \hyperpage{24}
+    \subitem {HPF3}, \hyperpage{24}
+    \subitem {HPF62}, \hyperpage{24}
+    \subitem {HPFOFF}, \hyperpage{24}
+    \subitem {I2C\_FAST\_MODE}, \hyperpage{25}
+    \subitem {I2C\_HIGH\_SPEED}, \hyperpage{25}
+    \subitem {INT\_MAP}, \hyperpage{28}
+    \subitem {INT\_POL\_HIGH}, \hyperpage{25}
+    \subitem {INT\_POL\_LOW}, \hyperpage{25}
+    \subitem {INT\_SYNC}, \hyperpage{29}
+    \subitem {MEASUREMENT}, \hyperpage{26}
+    \subitem {NVM\_BUSY}, \hyperpage{28}
+    \subitem {ODR1000HZ}, \hyperpage{24}
+    \subitem {ODR125Hz}, \hyperpage{24}
+    \subitem {ODR15Hz}, \hyperpage{24}
+    \subitem {ODR2000HZ}, \hyperpage{24}
+    \subitem {ODR250HZ}, \hyperpage{24}
+    \subitem {ODR31Hz}, \hyperpage{24}
+    \subitem {ODR3HZ}, \hyperpage{24}
+    \subitem {ODR4000HZ}, \hyperpage{24}
+    \subitem {ODR500HZ}, \hyperpage{24}
+    \subitem {ODR62HZ}, \hyperpage{24}
+    \subitem {ODR7Hz}, \hyperpage{24}
+    \subitem {OFFSET\_X\_H}, \hyperpage{27}
+    \subitem {OFFSET\_X\_L}, \hyperpage{27}
+    \subitem {OFFSET\_Y\_H}, \hyperpage{27}
+    \subitem {OFFSET\_Y\_L}, \hyperpage{27}
+    \subitem {OFFSET\_Z\_H}, \hyperpage{27}
+    \subitem {OFFSET\_Z\_L}, \hyperpage{27}
+    \subitem {OVR\_EN}, \hyperpage{26}
+    \subitem {PARTID}, \hyperpage{27}
+    \subitem {POWER\_CTL}, \hyperpage{28}
+    \subitem {RANGE}, \hyperpage{28}
+    \subitem {RANGE2G}, \hyperpage{27}
+    \subitem {RANGE4G}, \hyperpage{27}
+    \subitem {RANGE8G}, \hyperpage{27}
+    \subitem {RDY\_EN}, \hyperpage{26}
+    \subitem {REVID}, \hyperpage{27}
+    \subitem {SELF\_TEST}, \hyperpage{28}
+    \subitem {ST1}, \hyperpage{25}
+    \subitem {ST2}, \hyperpage{25}
+    \subitem {STANDBY}, \hyperpage{26}
+    \subitem {SYNC}, \hyperpage{28}
+    \subitem {TEMP1}, \hyperpage{27}
+    \subitem {TEMP2}, \hyperpage{27}
+    \subitem {TEMP\_OFF}, \hyperpage{26}
+    \subitem {u20\_to\_s32}, \hyperpage{38}
+    \subitem {XDATA1}, \hyperpage{27}
+    \subitem {XDATA2}, \hyperpage{27}
+    \subitem {XDATA3}, \hyperpage{27}
+    \subitem {YDATA1}, \hyperpage{27}
+    \subitem {YDATA2}, \hyperpage{27}
+    \subitem {YDATA3}, \hyperpage{27}
+    \subitem {ZDATA1}, \hyperpage{27}
+    \subitem {ZDATA2}, \hyperpage{27}
+    \subitem {ZDATA3}, \hyperpage{27}
+  \item {ADXL355\_\_DEVICE\_AD}
+    \subitem {ADXL355.h}, \hyperpage{23}
+  \item {ADXL355\_act\_ctl\_t}
+    \subitem {ADXL355.h}, \hyperpage{23}
+  \item {ADXL355\_calibdata\_t}, \hyperpage{23}
+  \item {ADXL355\_Data}, \hyperpage{389}
+  \item {ADXL355\_Data\_Rdy}
+    \subitem {ADXL355.c}, \hyperpage{5}
+    \subitem {ADXL355.h}, \hyperpage{29}
+  \item {ADXL355\_DevId}
+    \subitem {ADXL355.c}, \hyperpage{6}
+    \subitem {ADXL355.h}, \hyperpage{30}
+  \item {ADXL355\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{182}
+    \subitem {hal\_GPIO.h}, \hyperpage{194}
+  \item {ADXL355\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{183}
+    \subitem {hal\_GPIO.h}, \hyperpage{195}
+  \item {ADXL355\_Fifo\_Data}
+    \subitem {ADXL355.c}, \hyperpage{6}
+    \subitem {ADXL355.h}, \hyperpage{30}
+  \item {ADXL355\_Fifo\_Entries}
+    \subitem {ADXL355.c}, \hyperpage{7}
+    \subitem {ADXL355.h}, \hyperpage{31}
+  \item {ADXL355\_Fifo\_Full}
+    \subitem {ADXL355.c}, \hyperpage{8}
+    \subitem {ADXL355.h}, \hyperpage{32}
+  \item {ADXL355\_Fifo\_Samples}
+    \subitem {ADXL355.c}, \hyperpage{8}
+    \subitem {ADXL355.h}, \hyperpage{32}
+  \item {ADXL355\_Filter\_Conf}
+    \subitem {ADXL355.c}, \hyperpage{10}
+    \subitem {ADXL355.h}, \hyperpage{33}
+  \item {ADXL355\_filter\_ctl\_t}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ADXL355\_Get\_Accel\_Frame}
+    \subitem {ADXL355.c}, \hyperpage{10}
+    \subitem {ADXL355.h}, \hyperpage{33}
+  \item {ADXL355\_i2c\_speed\_t}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {ADXL355\_ID}
+    \subitem {STARPORTS\_App.h}, \hyperpage{391}
+  \item {ADXL355\_int\_ctl\_t}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {ADXL355\_int\_pol\_t}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {ADXL355\_intmap\_ctl\_t}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {ADXL355\_modes\_t}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {ADXL355\_PartId}
+    \subitem {ADXL355.c}, \hyperpage{11}
+    \subitem {ADXL355.h}, \hyperpage{34}
+  \item {ADXL355\_Power\_Conf}
+    \subitem {ADXL355.c}, \hyperpage{12}
+    \subitem {ADXL355.h}, \hyperpage{35}
+  \item {ADXL355\_Range\_Conf}
+    \subitem {ADXL355.c}, \hyperpage{12}
+    \subitem {ADXL355.h}, \hyperpage{35}
+  \item {ADXL355\_range\_ctl\_t}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {ADXL355\_register\_t}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ADXL355\_RESET}
+    \subitem {ADXL355.h}, \hyperpage{23}
+  \item {ADXL355\_Reset}
+    \subitem {ADXL355.c}, \hyperpage{13}
+    \subitem {ADXL355.h}, \hyperpage{36}
+  \item {ADXL355\_RESET\_REG}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {ADXL355\_SPI\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{183}
+    \subitem {hal\_GPIO.h}, \hyperpage{195}
+  \item {ADXL355\_SPI\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{183}
+    \subitem {hal\_GPIO.h}, \hyperpage{195}
+  \item {ADXL355\_STATUS}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ADXL355\_status\_t}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {ADXL355\_sync\_ctl\_t}
+    \subitem {ADXL355.h}, \hyperpage{29}
+  \item {ADXL355\_Temp}
+    \subitem {ADXL355.c}, \hyperpage{13}
+    \subitem {ADXL355.h}, \hyperpage{36}
+  \item {ADXL355\_XData}
+    \subitem {ADXL355.c}, \hyperpage{14}
+    \subitem {ADXL355.h}, \hyperpage{37}
+  \item {ADXL355\_YData}
+    \subitem {ADXL355.c}, \hyperpage{14}
+    \subitem {ADXL355.h}, \hyperpage{37}
+  \item {ADXL355\_ZData}
+    \subitem {ADXL355.c}, \hyperpage{16}
+    \subitem {ADXL355.h}, \hyperpage{38}
+  \item {AMP\_1V}
+    \subitem {LDC1000.h}, \hyperpage{340}
+  \item {AMP\_2V}
+    \subitem {LDC1000.h}, \hyperpage{340}
+  \item {AMP\_4V}
+    \subitem {LDC1000.h}, \hyperpage{340}
+  \item {APPEUI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{391}
+  \item {APPKEY}
+    \subitem {STARPORTS\_App.h}, \hyperpage{391}
+  \item {APPSKEY}
+    \subitem {STARPORTS\_App.h}, \hyperpage{391}
+  \item {ASSERT\_ON\_ERROR}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {axis355\_sens}
+    \subitem {ADXL355.h}, \hyperpage{39}
+
+  \indexspace
+
+  \item {BME280.c}, \hyperpage{41}
+    \subitem {BME280\_DevId}, \hyperpage{43}
+    \subitem {BME280\_Read\_Calib}, \hyperpage{43}
+    \subitem {BME280\_Read\_Config}, \hyperpage{44}
+    \subitem {BME280\_Read\_Ctrl\_Hum}, \hyperpage{44}
+    \subitem {BME280\_Read\_Ctrl\_Meas}, \hyperpage{45}
+    \subitem {BME280\_Read\_Humidity}, \hyperpage{45}
+    \subitem {BME280\_Read\_Pressure}, \hyperpage{46}
+    \subitem {BME280\_Read\_Status}, \hyperpage{47}
+    \subitem {BME280\_Read\_Temperature}, \hyperpage{47}
+    \subitem {BME280\_Reset}, \hyperpage{48}
+    \subitem {BME280\_Write\_Config}, \hyperpage{48}
+    \subitem {BME280\_Write\_Ctrl\_Hum}, \hyperpage{49}
+    \subitem {BME280\_Write\_Ctrl\_Meas}, \hyperpage{49}
+    \subitem {compensate\_humidity}, \hyperpage{50}
+    \subitem {compensate\_pressure}, \hyperpage{51}
+    \subitem {compensate\_temperature}, \hyperpage{52}
+  \item {BME280.h}, \hyperpage{56}
+    \subitem {BME280\_DEVICE\_AD}, \hyperpage{59}
+    \subitem {BME280\_DevId}, \hyperpage{64}
+    \subitem {BME280\_filter\_t}, \hyperpage{60}
+    \subitem {BME280\_modes\_t}, \hyperpage{61}
+    \subitem {BME280\_osrs\_h\_t}, \hyperpage{61}
+    \subitem {BME280\_osrs\_p\_t}, \hyperpage{62}
+    \subitem {BME280\_osrs\_t\_t}, \hyperpage{62}
+    \subitem {BME280\_Read\_Calib}, \hyperpage{65}
+    \subitem {BME280\_Read\_Config}, \hyperpage{66}
+    \subitem {BME280\_Read\_Ctrl\_Hum}, \hyperpage{66}
+    \subitem {BME280\_Read\_Ctrl\_Meas}, \hyperpage{67}
+    \subitem {BME280\_Read\_Humidity}, \hyperpage{67}
+    \subitem {BME280\_Read\_Pressure}, \hyperpage{68}
+    \subitem {BME280\_Read\_Status}, \hyperpage{68}
+    \subitem {BME280\_Read\_Temperature}, \hyperpage{69}
+    \subitem {BME280\_register\_t}, \hyperpage{62}
+    \subitem {BME280\_RESET}, \hyperpage{59}
+    \subitem {BME280\_Reset}, \hyperpage{69}
+    \subitem {BME280\_RESET\_REG}, \hyperpage{63}
+    \subitem {BME280\_spi3w\_t}, \hyperpage{63}
+    \subitem {BME280\_STATUS}, \hyperpage{63}
+    \subitem {BME280\_status\_t}, \hyperpage{63}
+    \subitem {BME280\_t\_sb\_t}, \hyperpage{64}
+    \subitem {BME280\_Write\_Config}, \hyperpage{70}
+    \subitem {BME280\_Write\_Ctrl\_Hum}, \hyperpage{70}
+    \subitem {BME280\_Write\_Ctrl\_Meas}, \hyperpage{71}
+    \subitem {CALIB00}, \hyperpage{63}
+    \subitem {CALIB00\_NDATA}, \hyperpage{59}
+    \subitem {CALIB26}, \hyperpage{63}
+    \subitem {CALIB26\_NDATA}, \hyperpage{59}
+    \subitem {compensate\_humidity}, \hyperpage{71}
+    \subitem {compensate\_pressure}, \hyperpage{72}
+    \subitem {compensate\_temperature}, \hyperpage{73}
+    \subitem {CONFIG}, \hyperpage{63}
+    \subitem {CTRL\_HUM}, \hyperpage{63}
+    \subitem {CTRL\_MEAS}, \hyperpage{63}
+    \subitem {DEVID}, \hyperpage{63}
+    \subitem {FILTER\_16}, \hyperpage{61}
+    \subitem {FILTER\_2}, \hyperpage{61}
+    \subitem {FILTER\_4}, \hyperpage{61}
+    \subitem {FILTER\_8}, \hyperpage{61}
+    \subitem {FILTER\_OFF}, \hyperpage{61}
+    \subitem {FORCED}, \hyperpage{61}
+    \subitem {HUM\_LSB}, \hyperpage{63}
+    \subitem {HUM\_MSB}, \hyperpage{63}
+    \subitem {MEASURING}, \hyperpage{64}
+    \subitem {NORMAL}, \hyperpage{61}
+    \subitem {OSRS\_HX1}, \hyperpage{61}
+    \subitem {OSRS\_HX16}, \hyperpage{61}
+    \subitem {OSRS\_HX2}, \hyperpage{61}
+    \subitem {OSRS\_HX4}, \hyperpage{61}
+    \subitem {OSRS\_HX8}, \hyperpage{61}
+    \subitem {OSRS\_PX1}, \hyperpage{62}
+    \subitem {OSRS\_PX16}, \hyperpage{62}
+    \subitem {OSRS\_PX2}, \hyperpage{62}
+    \subitem {OSRS\_PX4}, \hyperpage{62}
+    \subitem {OSRS\_PX8}, \hyperpage{62}
+    \subitem {OSRS\_TX1}, \hyperpage{62}
+    \subitem {OSRS\_TX16}, \hyperpage{62}
+    \subitem {OSRS\_TX2}, \hyperpage{62}
+    \subitem {OSRS\_TX4}, \hyperpage{62}
+    \subitem {OSRS\_TX8}, \hyperpage{62}
+    \subitem {PRESS\_LSB}, \hyperpage{63}
+    \subitem {PRESS\_MSB}, \hyperpage{63}
+    \subitem {PRESS\_XLSB}, \hyperpage{63}
+    \subitem {SLEEP}, \hyperpage{61}
+    \subitem {SPI3W\_OFF}, \hyperpage{63}
+    \subitem {SPI3W\_ON}, \hyperpage{63}
+    \subitem {T\_SB\_0p5}, \hyperpage{64}
+    \subitem {T\_SB\_10}, \hyperpage{64}
+    \subitem {T\_SB\_1000}, \hyperpage{64}
+    \subitem {T\_SB\_125}, \hyperpage{64}
+    \subitem {T\_SB\_20}, \hyperpage{64}
+    \subitem {T\_SB\_250}, \hyperpage{64}
+    \subitem {T\_SB\_500}, \hyperpage{64}
+    \subitem {T\_SB\_62p5}, \hyperpage{64}
+    \subitem {TEMP\_LSB}, \hyperpage{63}
+    \subitem {TEMP\_MSB}, \hyperpage{63}
+    \subitem {TEMP\_XLSB}, \hyperpage{63}
+    \subitem {UPDATE}, \hyperpage{64}
+  \item {bme280\_calib\_data}, \hyperpage{58}
+  \item {BME280\_Data}, \hyperpage{390}
+  \item {BME280\_DEVICE\_AD}
+    \subitem {BME280.h}, \hyperpage{59}
+  \item {BME280\_DevId}
+    \subitem {BME280.c}, \hyperpage{43}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {BME280\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{184}
+    \subitem {hal\_GPIO.h}, \hyperpage{196}
+  \item {BME280\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{184}
+    \subitem {hal\_GPIO.h}, \hyperpage{196}
+  \item {BME280\_filter\_t}
+    \subitem {BME280.h}, \hyperpage{60}
+  \item {BME280\_ID}
+    \subitem {STARPORTS\_App.h}, \hyperpage{391}
+  \item {BME280\_modes\_t}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {BME280\_osrs\_h\_t}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {BME280\_osrs\_p\_t}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {BME280\_osrs\_t\_t}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {BME280\_Read\_Calib}
+    \subitem {BME280.c}, \hyperpage{43}
+    \subitem {BME280.h}, \hyperpage{65}
+  \item {BME280\_Read\_Config}
+    \subitem {BME280.c}, \hyperpage{44}
+    \subitem {BME280.h}, \hyperpage{66}
+  \item {BME280\_Read\_Ctrl\_Hum}
+    \subitem {BME280.c}, \hyperpage{44}
+    \subitem {BME280.h}, \hyperpage{66}
+  \item {BME280\_Read\_Ctrl\_Meas}
+    \subitem {BME280.c}, \hyperpage{45}
+    \subitem {BME280.h}, \hyperpage{67}
+  \item {BME280\_Read\_Humidity}
+    \subitem {BME280.c}, \hyperpage{45}
+    \subitem {BME280.h}, \hyperpage{67}
+  \item {BME280\_Read\_Pressure}
+    \subitem {BME280.c}, \hyperpage{46}
+    \subitem {BME280.h}, \hyperpage{68}
+  \item {BME280\_Read\_Status}
+    \subitem {BME280.c}, \hyperpage{47}
+    \subitem {BME280.h}, \hyperpage{68}
+  \item {BME280\_Read\_Temperature}
+    \subitem {BME280.c}, \hyperpage{47}
+    \subitem {BME280.h}, \hyperpage{69}
+  \item {BME280\_register\_t}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {BME280\_RESET}
+    \subitem {BME280.h}, \hyperpage{59}
+  \item {BME280\_Reset}
+    \subitem {BME280.c}, \hyperpage{48}
+    \subitem {BME280.h}, \hyperpage{69}
+  \item {BME280\_RESET\_REG}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {BME280\_spi3w\_t}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {BME280\_SPI\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{185}
+    \subitem {hal\_GPIO.h}, \hyperpage{197}
+  \item {BME280\_SPI\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{185}
+    \subitem {hal\_GPIO.h}, \hyperpage{197}
+  \item {BME280\_STATUS}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {BME280\_status\_t}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {BME280\_t\_sb\_t}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {BME280\_Write\_Config}
+    \subitem {BME280.c}, \hyperpage{48}
+    \subitem {BME280.h}, \hyperpage{70}
+  \item {BME280\_Write\_Ctrl\_Hum}
+    \subitem {BME280.c}, \hyperpage{49}
+    \subitem {BME280.h}, \hyperpage{70}
+  \item {BME280\_Write\_Ctrl\_Meas}
+    \subitem {BME280.c}, \hyperpage{49}
+    \subitem {BME280.h}, \hyperpage{71}
+  \item {Board.h}, \hyperpage{76}
+    \subitem {Board\_ADC0}, \hyperpage{77}
+    \subitem {Board\_ADXL355\_CS}, \hyperpage{77}
+    \subitem {Board\_BME280\_CS}, \hyperpage{77}
+    \subitem {Board\_CAPTURE0}, \hyperpage{77}
+    \subitem {Board\_CAPTURE1}, \hyperpage{77}
+    \subitem {Board\_CC3220SF\_STARPORTS}, \hyperpage{77}
+    \subitem {Board\_CRYPTO0}, \hyperpage{78}
+    \subitem {Board\_CS\_ASGPIO}, \hyperpage{78}
+    \subitem {Board\_DS1374\_INTB}, \hyperpage{78}
+    \subitem {Board\_EN\_ADXL355}, \hyperpage{78}
+    \subitem {Board\_EN\_BME280}, \hyperpage{78}
+    \subitem {Board\_EN\_LDC1000}, \hyperpage{78}
+    \subitem {Board\_EN\_NODE}, \hyperpage{78}
+    \subitem {Board\_GPIO\_LED0}, \hyperpage{78}
+    \subitem {Board\_GPIO\_LED\_OFF}, \hyperpage{79}
+    \subitem {Board\_GPIO\_LED\_ON}, \hyperpage{79}
+    \subitem {Board\_I2C0}, \hyperpage{79}
+    \subitem {Board\_I2C\_TMP}, \hyperpage{79}
+    \subitem {Board\_I2C\_TMP006\_ADDR}, \hyperpage{79}
+    \subitem {Board\_I2S0}, \hyperpage{79}
+    \subitem {Board\_init}, \hyperpage{79}
+    \subitem {Board\_initGeneral}, \hyperpage{79}
+    \subitem {Board\_LDC1000\_CS}, \hyperpage{80}
+    \subitem {Board\_MOSI\_ASGPIO}, \hyperpage{80}
+    \subitem {Board\_PWM0}, \hyperpage{80}
+    \subitem {Board\_PWM1}, \hyperpage{80}
+    \subitem {Board\_RN2483\_MCLR}, \hyperpage{80}
+    \subitem {Board\_SCL\_ASGPIO}, \hyperpage{80}
+    \subitem {Board\_SCLK\_ASGPIO}, \hyperpage{80}
+    \subitem {Board\_SD0}, \hyperpage{80}
+    \subitem {Board\_SDA\_ASGPIO}, \hyperpage{81}
+    \subitem {Board\_SDFatFS0}, \hyperpage{81}
+    \subitem {Board\_SPI0}, \hyperpage{81}
+    \subitem {Board\_SPI\_MASTER}, \hyperpage{81}
+    \subitem {Board\_SPI\_MASTER\_READY}, \hyperpage{81}
+    \subitem {Board\_SPI\_SLAVE}, \hyperpage{81}
+    \subitem {Board\_SPI\_SLAVE\_READY}, \hyperpage{81}
+    \subitem {Board\_TIMER0}, \hyperpage{81}
+    \subitem {Board\_TIMER1}, \hyperpage{82}
+    \subitem {Board\_TIMER2}, \hyperpage{82}
+    \subitem {Board\_TMP006\_ADDR}, \hyperpage{82}
+    \subitem {Board\_UART0}, \hyperpage{82}
+    \subitem {Board\_UART1}, \hyperpage{82}
+    \subitem {Board\_WATCHDOG0}, \hyperpage{82}
+  \item {Board\_ADC0}
+    \subitem {Board.h}, \hyperpage{77}
+  \item {Board\_ADXL355\_CS}
+    \subitem {Board.h}, \hyperpage{77}
+  \item {Board\_BME280\_CS}
+    \subitem {Board.h}, \hyperpage{77}
+  \item {Board\_CAPTURE0}
+    \subitem {Board.h}, \hyperpage{77}
+  \item {Board\_CAPTURE1}
+    \subitem {Board.h}, \hyperpage{77}
+  \item {Board\_CC3220SF\_STARPORTS}
+    \subitem {Board.h}, \hyperpage{77}
+  \item {Board\_CRYPTO0}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_CS\_ASGPIO}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_DS1374\_INTB}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_EN\_ADXL355}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_EN\_BME280}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_EN\_LDC1000}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_EN\_NODE}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_GPIO\_LED0}
+    \subitem {Board.h}, \hyperpage{78}
+  \item {Board\_GPIO\_LED\_OFF}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_GPIO\_LED\_ON}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_I2C0}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_I2C\_TMP}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_I2C\_TMP006\_ADDR}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_I2S0}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_init}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_initGeneral}
+    \subitem {Board.h}, \hyperpage{79}
+  \item {Board\_LDC1000\_CS}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_MOSI\_ASGPIO}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_PWM0}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_PWM1}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_RN2483\_MCLR}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_SCL\_ASGPIO}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_SCLK\_ASGPIO}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_SD0}
+    \subitem {Board.h}, \hyperpage{80}
+  \item {Board\_SDA\_ASGPIO}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_SDFatFS0}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_SPI0}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_SPI\_MASTER}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_SPI\_MASTER\_READY}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_SPI\_SLAVE}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_SPI\_SLAVE\_READY}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_TIMER0}
+    \subitem {Board.h}, \hyperpage{81}
+  \item {Board\_TIMER1}
+    \subitem {Board.h}, \hyperpage{82}
+  \item {Board\_TIMER2}
+    \subitem {Board.h}, \hyperpage{82}
+  \item {Board\_TMP006\_ADDR}
+    \subitem {Board.h}, \hyperpage{82}
+  \item {Board\_UART0}
+    \subitem {Board.h}, \hyperpage{82}
+  \item {Board\_UART1}
+    \subitem {Board.h}, \hyperpage{82}
+  \item {Board\_WATCHDOG0}
+    \subitem {Board.h}, \hyperpage{82}
+
+  \indexspace
+
+  \item {CALIB00}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {CALIB00\_NDATA}
+    \subitem {BME280.h}, \hyperpage{59}
+  \item {CALIB26}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {CALIB26\_NDATA}
+    \subitem {BME280.h}, \hyperpage{59}
+  \item {calib\_data}
+    \subitem {ADXL355.h}, \hyperpage{39}
+  \item {Capture\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{95}
+  \item {Capture\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{95}
+  \item {captureCC3220SFHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{95}
+  \item {captureCC3220SFObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{95}
+  \item {CC3220SF\_LAUNCHXL.h}, \hyperpage{84}
+    \subitem {CC3220SF\_LAUNCHXL\_ADC0}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_ADC1}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_ADCCOUNT}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_ADCName}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_CAPTURE0}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_CAPTURE1}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_CAPTURECOUNT}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_CaptureName}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_CRYPTO0}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_CRYPTOCOUNT}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_CryptoName}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIO\_LED\_D10}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIO\_LED\_OFF}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIO\_LED\_ON}, \hyperpage{85}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIO\_SW2}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIO\_SW3}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIO\_TMP116\_EN}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIOCOUNT}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_GPIOName}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_I2C0}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_I2CCOUNT}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_I2CName}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_I2S0}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_I2SCOUNT}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_I2SName}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_initGeneral}, \hyperpage{90}
+    \subitem {CC3220SF\_LAUNCHXL\_LCD\_CS}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_LCD\_ENABLE}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_LCD\_POWER}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_PWM6}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_PWM7}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_PWMCOUNT}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_PWMName}, \hyperpage{87}
+    \subitem {CC3220SF\_LAUNCHXL\_SD0}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SDCOUNT}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SDFatFS0}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SDFatFSCOUNT}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SDFatFSName}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SDName}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SPI0}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SPI1}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SPI\_MASTER\_READY}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_SPI\_SLAVE\_READY}, \hyperpage{86}
+    \subitem {CC3220SF\_LAUNCHXL\_SPICOUNT}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_SPIName}, \hyperpage{88}
+    \subitem {CC3220SF\_LAUNCHXL\_TIMER0}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_TIMER1}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_TIMER2}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_TIMERCOUNT}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_TimerName}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_UART0}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_UART1}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_UARTCOUNT}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_UARTName}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_WATCHDOG0}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_WATCHDOGCOUNT}, \hyperpage{89}
+    \subitem {CC3220SF\_LAUNCHXL\_WatchdogName}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_ADC0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_ADC1}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_ADCCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_ADCName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_CAPTURE0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_CAPTURE1}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_CAPTURECOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_CaptureName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_CRYPTO0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_CRYPTOCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_CryptoName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_GPIO\_LED\_D10}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_GPIO\_LED\_OFF}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_GPIO\_LED\_ON}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{85}
+  \item {CC3220SF\_LAUNCHXL\_GPIO\_SW2}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_GPIO\_SW3}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_GPIO\_TMP116\_EN}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_GPIOCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_GPIOName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_I2C0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_I2CCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_I2CName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_I2S0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_I2SCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_I2SName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_initGeneral}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{90}
+  \item {CC3220SF\_LAUNCHXL\_LCD\_CS}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_LCD\_ENABLE}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_LCD\_POWER}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_PWM6}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_PWM7}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_PWMCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_PWMName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{87}
+  \item {CC3220SF\_LAUNCHXL\_SD0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SDCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SDFatFS0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SDFatFSCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SDFatFSName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SDName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SPI0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SPI1}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SPI\_MASTER\_READY}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_SPI\_SLAVE\_READY}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{86}
+  \item {CC3220SF\_LAUNCHXL\_SPICOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_SPIName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{88}
+  \item {CC3220SF\_LAUNCHXL\_TIMER0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_TIMER1}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_TIMER2}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_TIMERCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_TimerName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_UART0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_UART1}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_UARTCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_UARTName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_WATCHDOG0}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_WATCHDOGCOUNT}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_LAUNCHXL\_WatchdogName}
+    \subitem {CC3220SF\_LAUNCHXL.h}, \hyperpage{89}
+  \item {CC3220SF\_STARPORTS.c}, \hyperpage{92}
+    \subitem {ADC\_config}, \hyperpage{94}
+    \subitem {ADC\_count}, \hyperpage{94}
+    \subitem {adcCC3220SHWAttrs}, \hyperpage{94}
+    \subitem {adcCC3220SObjects}, \hyperpage{95}
+    \subitem {Capture\_config}, \hyperpage{95}
+    \subitem {Capture\_count}, \hyperpage{95}
+    \subitem {captureCC3220SFHWAttrs}, \hyperpage{95}
+    \subitem {captureCC3220SFObjects}, \hyperpage{95}
+    \subitem {CC3220SF\_STARPORTS\_initGeneral}, \hyperpage{94}
+    \subitem {cryptoCC3220SObjects}, \hyperpage{96}
+    \subitem {CryptoCC32XX\_config}, \hyperpage{96}
+    \subitem {CryptoCC32XX\_count}, \hyperpage{96}
+    \subitem {gpioCallbackFunctions}, \hyperpage{96}
+    \subitem {GPIOCC32XX\_config}, \hyperpage{96}
+    \subitem {gpioPinConfigs}, \hyperpage{96}
+    \subitem {I2C\_config}, \hyperpage{97}
+    \subitem {I2C\_count}, \hyperpage{97}
+    \subitem {i2cCC3220SHWAttrs}, \hyperpage{97}
+    \subitem {i2cCC3220SObjects}, \hyperpage{97}
+    \subitem {parkInfo}, \hyperpage{98}
+    \subitem {PowerCC32XX\_config}, \hyperpage{98}
+    \subitem {PWM\_config}, \hyperpage{98}
+    \subitem {PWM\_count}, \hyperpage{98}
+    \subitem {pwmTimerCC3220SHWAttrs}, \hyperpage{98}
+    \subitem {pwmTimerCC3220SObjects}, \hyperpage{99}
+    \subitem {SPI\_config}, \hyperpage{99}
+    \subitem {SPI\_count}, \hyperpage{99}
+    \subitem {spiCC3220SDMAHWAttrs}, \hyperpage{99}
+    \subitem {spiCC3220SDMAObjects}, \hyperpage{99}
+    \subitem {spiCC3220SDMAscratchBuf}, \hyperpage{99}
+    \subitem {TI\_DRIVERS\_UART\_DMA}, \hyperpage{93}
+    \subitem {Timer\_config}, \hyperpage{100}
+    \subitem {Timer\_count}, \hyperpage{100}
+    \subitem {timerCC3220SFHWAttrs}, \hyperpage{100}
+    \subitem {timerCC3220SFObjects}, \hyperpage{100}
+    \subitem {UART\_config}, \hyperpage{101}
+    \subitem {UART\_count}, \hyperpage{101}
+    \subitem {uartCC3220SHWAttrs}, \hyperpage{101}
+    \subitem {uartCC3220SObjects}, \hyperpage{101}
+    \subitem {uartCC3220SRingBuffer}, \hyperpage{102}
+    \subitem {udmaCC3220SHWAttrs}, \hyperpage{102}
+    \subitem {udmaCC3220SObject}, \hyperpage{102}
+    \subitem {UDMACC32XX\_config}, \hyperpage{102}
+    \subitem {WakeupFromLPDS}, \hyperpage{94}
+    \subitem {Watchdog\_config}, \hyperpage{102}
+    \subitem {Watchdog\_count}, \hyperpage{102}
+    \subitem {watchdogCC3220SHWAttrs}, \hyperpage{103}
+    \subitem {watchdogCC3220SObjects}, \hyperpage{103}
+  \item {CC3220SF\_STARPORTS.h}, \hyperpage{111}
+    \subitem {CC3220SF\_STARPORTS\_ADC0}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_ADCCOUNT}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_ADCName}, \hyperpage{113}
+    \subitem {CC3220SF\_STARPORTS\_ADXL355\_CS}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_BME280\_CS}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CAPTURE0}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CAPTURE1}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CAPTURECOUNT}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CaptureName}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CRYPTO0}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CRYPTOCOUNT}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CryptoName}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_CS}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_DS1374\_INTB}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_EN\_ADXL355}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_EN\_BME280}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_EN\_LDC1000}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_EN\_NODE}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_GPIO\_LED\_OFF}, \hyperpage{112}
+    \subitem {CC3220SF\_STARPORTS\_GPIO\_LED\_ON}, \hyperpage{112}
+    \subitem {CC3220SF\_STARPORTS\_GPIOCOUNT}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_GPIOName}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_I2C0}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_I2CCOUNT}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_I2CName}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_initGeneral}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_LDC1000\_CS}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_MOSI}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_PWM5}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_PWMCOUNT}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_PWMName}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_RN2483\_MCLR}, \hyperpage{114}
+    \subitem {CC3220SF\_STARPORTS\_SCL}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_SCLK}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_SD0}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SDA}, \hyperpage{115}
+    \subitem {CC3220SF\_STARPORTS\_SDCOUNT}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SDFatFS0}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SDFatFSCOUNT}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SDFatFSName}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SDName}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SPI0}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SPI1}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SPICOUNT}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_SPIName}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_TIMER0}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_TIMER1}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_TIMER2}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_TIMERCOUNT}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_TimerName}, \hyperpage{116}
+    \subitem {CC3220SF\_STARPORTS\_UART0}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_UART1}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_UARTCOUNT}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_UARTName}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_WATCHDOG0}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_WATCHDOGCOUNT}, \hyperpage{117}
+    \subitem {CC3220SF\_STARPORTS\_WatchdogName}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_ADC0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_ADCCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_ADCName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{113}
+  \item {CC3220SF\_STARPORTS\_ADXL355\_CS}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_BME280\_CS}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CAPTURE0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CAPTURE1}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CAPTURECOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CaptureName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CRYPTO0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CRYPTOCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CryptoName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_CS}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_DS1374\_INTB}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_EN\_ADXL355}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_EN\_BME280}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_EN\_LDC1000}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_EN\_NODE}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_GPIO\_LED\_OFF}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{112}
+  \item {CC3220SF\_STARPORTS\_GPIO\_LED\_ON}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{112}
+  \item {CC3220SF\_STARPORTS\_GPIOCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_GPIOName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_I2C0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_I2CCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_I2CName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_initGeneral}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{94}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_LDC1000\_CS}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_MOSI}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_PWM5}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_PWMCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_PWMName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_RN2483\_MCLR}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{114}
+  \item {CC3220SF\_STARPORTS\_SCL}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_SCLK}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_SD0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SDA}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{115}
+  \item {CC3220SF\_STARPORTS\_SDCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SDFatFS0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SDFatFSCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SDFatFSName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SDName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SPI0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SPI1}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SPICOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_SPIName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_TIMER0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_TIMER1}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_TIMER2}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_TIMERCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_TimerName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{116}
+  \item {CC3220SF\_STARPORTS\_UART0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_UART1}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_UARTCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_UARTName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_WATCHDOG0}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_WATCHDOGCOUNT}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CC3220SF\_STARPORTS\_WatchdogName}
+    \subitem {CC3220SF\_STARPORTS.h}, \hyperpage{117}
+  \item {CERTIFICATE}
+    \subitem {file\_system.h}, \hyperpage{160}
+  \item {CLK\_CONFIG}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {CLK\_OFF}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {CLK\_ON}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {CLR\_STATUS\_BIT}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {COMP\_OUT}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {COMPB\_MASK}
+    \subitem {LDC1000.h}, \hyperpage{346}
+  \item {compensate\_humidity}
+    \subitem {BME280.c}, \hyperpage{50}
+    \subitem {BME280.h}, \hyperpage{71}
+  \item {compensate\_pressure}
+    \subitem {BME280.c}, \hyperpage{51}
+    \subitem {BME280.h}, \hyperpage{72}
+  \item {compensate\_temperature}
+    \subitem {BME280.c}, \hyperpage{52}
+    \subitem {BME280.h}, \hyperpage{73}
+  \item {CONFIG}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {CONFIG\_LORA}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {Config\_PWM}
+    \subitem {hal\_PWM.c}, \hyperpage{278}
+    \subitem {hal\_PWM.h}, \hyperpage{280}
+  \item {CONFIG\_WIFI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {CONTINUE}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {cryptoCC3220SObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{96}
+  \item {CryptoCC32XX\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{96}
+  \item {CryptoCC32XX\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{96}
+  \item {CTRL\_HUM}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {CTRL\_MEAS}
+    \subitem {BME280.h}, \hyperpage{63}
+
+  \indexspace
+
+  \item {DATA\_RDY}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {deleteFile}
+    \subitem {file\_system.c}, \hyperpage{134}
+    \subitem {file\_system.h}, \hyperpage{162}
+  \item {DEST\_IP\_ADDR}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {DEV\_ID}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {DEVADDR}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {DEVEUI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {DEVID}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {DEVID\_AD}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {DEVID\_MST}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {DRDY\_EN}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {DRDY\_OFF}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {DRDYB\_MASK}
+    \subitem {LDC1000.h}, \hyperpage{346}
+  \item {DS1374.c}, \hyperpage{119}
+    \subitem {DS1374\_Clear\_AF}, \hyperpage{120}
+    \subitem {DS1374\_Read\_Ctrl}, \hyperpage{121}
+    \subitem {DS1374\_Read\_Status}, \hyperpage{121}
+    \subitem {DS1374\_Read\_Tod}, \hyperpage{122}
+    \subitem {DS1374\_Read\_WdAlmb}, \hyperpage{122}
+    \subitem {DS1374\_Write\_Ctrl}, \hyperpage{123}
+    \subitem {DS1374\_Write\_Tod}, \hyperpage{123}
+    \subitem {DS1374\_Write\_WdAlmb}, \hyperpage{124}
+  \item {DS1374.h}, \hyperpage{126}
+    \subitem {DS1374\_Clear\_AF}, \hyperpage{128}
+    \subitem {DS1374\_CTRL}, \hyperpage{127}
+    \subitem {DS1374\_Read\_Ctrl}, \hyperpage{128}
+    \subitem {DS1374\_Read\_Status}, \hyperpage{129}
+    \subitem {DS1374\_Read\_Tod}, \hyperpage{129}
+    \subitem {DS1374\_Read\_WdAlmb}, \hyperpage{130}
+    \subitem {DS1374\_register\_t}, \hyperpage{127}
+    \subitem {DS1374\_STATUS}, \hyperpage{127}
+    \subitem {DS1374\_TC}, \hyperpage{127}
+    \subitem {DS1374\_Write\_Ctrl}, \hyperpage{130}
+    \subitem {DS1374\_Write\_Tod}, \hyperpage{131}
+    \subitem {DS1374\_Write\_WdAlmb}, \hyperpage{131}
+    \subitem {TOD0}, \hyperpage{127}
+    \subitem {TOD1}, \hyperpage{127}
+    \subitem {TOD2}, \hyperpage{127}
+    \subitem {TOD3}, \hyperpage{127}
+    \subitem {WDALMB0}, \hyperpage{127}
+    \subitem {WDALMB1}, \hyperpage{127}
+    \subitem {WDALMB2}, \hyperpage{127}
+  \item {DS1374\_Clear\_AF}
+    \subitem {DS1374.c}, \hyperpage{120}
+    \subitem {DS1374.h}, \hyperpage{128}
+  \item {DS1374\_CTRL}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {DS1374\_Read\_Ctrl}
+    \subitem {DS1374.c}, \hyperpage{121}
+    \subitem {DS1374.h}, \hyperpage{128}
+  \item {DS1374\_Read\_Status}
+    \subitem {DS1374.c}, \hyperpage{121}
+    \subitem {DS1374.h}, \hyperpage{129}
+  \item {DS1374\_Read\_Tod}
+    \subitem {DS1374.c}, \hyperpage{122}
+    \subitem {DS1374.h}, \hyperpage{129}
+  \item {DS1374\_Read\_WdAlmb}
+    \subitem {DS1374.c}, \hyperpage{122}
+    \subitem {DS1374.h}, \hyperpage{130}
+  \item {DS1374\_register\_t}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {DS1374\_STATUS}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {DS1374\_TC}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {DS1374\_Write\_Ctrl}
+    \subitem {DS1374.c}, \hyperpage{123}
+    \subitem {DS1374.h}, \hyperpage{130}
+  \item {DS1374\_Write\_Tod}
+    \subitem {DS1374.c}, \hyperpage{123}
+    \subitem {DS1374.h}, \hyperpage{131}
+  \item {DS1374\_Write\_WdAlmb}
+    \subitem {DS1374.c}, \hyperpage{124}
+    \subitem {DS1374.h}, \hyperpage{131}
+
+  \indexspace
+
+  \item {e\_StatusBits}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {ERR\_PRINT}
+    \subitem {hal\_UART.h}, \hyperpage{317}
+  \item {ERROR\_ABP\_APPSKEY}
+    \subitem {hal\_LORA.h}, \hyperpage{248}
+  \item {ERROR\_ABP\_DENIED}
+    \subitem {hal\_LORA.h}, \hyperpage{248}
+  \item {ERROR\_ABP\_DEVADDR}
+    \subitem {hal\_LORA.h}, \hyperpage{248}
+  \item {ERROR\_ABP\_JOIN}
+    \subitem {hal\_LORA.h}, \hyperpage{248}
+  \item {ERROR\_ABP\_NWKSKEY}
+    \subitem {hal\_LORA.h}, \hyperpage{248}
+  \item {ERROR\_ABP\_SAVE}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_ADR\_SET}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_CONNECT\_WIFI}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {ERROR\_OTAA\_APPEUI}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_OTAA\_APPKEY}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_OTAA\_BUSY}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_OTAA\_DENIED}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_OTAA\_DEVEUI}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_OTAA\_INVALID\_PARAM}
+    \subitem {hal\_LORA.h}, \hyperpage{249}
+  \item {ERROR\_OTAA\_JOIN}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_OTAA\_KEYS\_NOT\_INIT}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_OTAA\_MAC\_PAUSED}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_OTAA\_NO\_FREE\_CH}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_OTAA\_SAVE}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_OTAA\_SILENT}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_OTAA\_UNKNOWN}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_RXDELAY1\_SET}
+    \subitem {hal\_LORA.h}, \hyperpage{250}
+  \item {ERROR\_SET\_DEVADDR}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_SET\_DNCTR}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_SET\_NWSKEY}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_SET\_PWRIDX}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_SET\_UPCTR}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_TX\_BUSY}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_TX\_INVALID\_DATA\_LEN}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_TX\_INVALID\_PARAM}
+    \subitem {hal\_LORA.h}, \hyperpage{251}
+  \item {ERROR\_TX\_MAC\_ERR}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_TX\_MAC\_PAUSED}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_TX\_NO\_FREE\_CH}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_TX\_NOT\_JOINED}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_TX\_REJOIN\_NEEDED}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_TX\_SILENT}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_TX\_UNKNOWN}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {ERROR\_WRONG\_CR}
+    \subitem {hal\_TMP006.h}, \hyperpage{306}
+  \item {EXT\_CLK}
+    \subitem {ADXL355.h}, \hyperpage{29}
+  \item {EXT\_SYNC\_INT}
+    \subitem {ADXL355.h}, \hyperpage{29}
+  \item {EXT\_SYNC\_NO\_INT}
+    \subitem {ADXL355.h}, \hyperpage{29}
+
+  \indexspace
+
+  \item {FCOUNT\_LSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {FCOUNT\_MSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {FCOUNT\_XSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {FIFO\_DATA}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {FIFO\_ENTRIES}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {FIFO\_FULL}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {FIFO\_OVR}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {FIFO\_SAMPLES}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {file\_system.c}, \hyperpage{132}
+    \subitem {deleteFile}, \hyperpage{134}
+    \subitem {st\_readFileChangeWakeUp}, \hyperpage{134}
+    \subitem {st\_readFileDnCntr}, \hyperpage{135}
+    \subitem {st\_readFileMode}, \hyperpage{136}
+    \subitem {st\_readFileNBoot}, \hyperpage{137}
+    \subitem {st\_readFileNCycles}, \hyperpage{137}
+    \subitem {st\_readFileNFails}, \hyperpage{138}
+    \subitem {st\_readFileNodeId}, \hyperpage{139}
+    \subitem {st\_readFileSSID}, \hyperpage{140}
+    \subitem {st\_readFileUpCntr}, \hyperpage{140}
+    \subitem {st\_readFileWakeUp}, \hyperpage{141}
+    \subitem {uart0}, \hyperpage{150}
+    \subitem {writeChangeWakeUp}, \hyperpage{142}
+    \subitem {writeDnCntr}, \hyperpage{143}
+    \subitem {writeMode}, \hyperpage{143}
+    \subitem {writeNBoot}, \hyperpage{144}
+    \subitem {writeNCycles}, \hyperpage{145}
+    \subitem {writeNFails}, \hyperpage{146}
+    \subitem {writeNodeId}, \hyperpage{147}
+    \subitem {writeSSID}, \hyperpage{147}
+    \subitem {writeUpCntr}, \hyperpage{148}
+    \subitem {writeWakeUp}, \hyperpage{149}
+  \item {file\_system.h}, \hyperpage{158}
+    \subitem {CERTIFICATE}, \hyperpage{160}
+    \subitem {deleteFile}, \hyperpage{162}
+    \subitem {FS\_CHANGEWAKEUP}, \hyperpage{160}
+    \subitem {FS\_DNCNTR}, \hyperpage{160}
+    \subitem {FS\_MODE}, \hyperpage{160}
+    \subitem {FS\_NBOOT}, \hyperpage{160}
+    \subitem {FS\_NCYCLES}, \hyperpage{161}
+    \subitem {FS\_NFAILS}, \hyperpage{161}
+    \subitem {FS\_NODEID}, \hyperpage{161}
+    \subitem {FS\_PAYLOAD}, \hyperpage{161}
+    \subitem {FS\_SSID}, \hyperpage{161}
+    \subitem {FS\_UPCNTR}, \hyperpage{161}
+    \subitem {FS\_WAKEUP}, \hyperpage{161}
+    \subitem {MAX\_FILE\_ENTRIES}, \hyperpage{161}
+    \subitem {MAX\_FILE\_SIZE}, \hyperpage{162}
+    \subitem {st\_readFileChangeWakeUp}, \hyperpage{162}
+    \subitem {st\_readFileDnCntr}, \hyperpage{163}
+    \subitem {st\_readFileMode}, \hyperpage{164}
+    \subitem {st\_readFileNBoot}, \hyperpage{164}
+    \subitem {st\_readFileNCycles}, \hyperpage{165}
+    \subitem {st\_readFileNFails}, \hyperpage{166}
+    \subitem {st\_readFileNodeId}, \hyperpage{167}
+    \subitem {st\_readFileSSID}, \hyperpage{167}
+    \subitem {st\_readFileUpCntr}, \hyperpage{168}
+    \subitem {st\_readFileWakeUp}, \hyperpage{169}
+    \subitem {writeChangeWakeUp}, \hyperpage{169}
+    \subitem {writeDnCntr}, \hyperpage{170}
+    \subitem {writeMode}, \hyperpage{171}
+    \subitem {writeNBoot}, \hyperpage{172}
+    \subitem {writeNCycles}, \hyperpage{172}
+    \subitem {writeNFails}, \hyperpage{173}
+    \subitem {writeNodeId}, \hyperpage{174}
+    \subitem {writeSSID}, \hyperpage{175}
+    \subitem {writeUpCntr}, \hyperpage{175}
+    \subitem {writeWakeUp}, \hyperpage{176}
+  \item {FILTER}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {FILTER\_16}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {FILTER\_2}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {FILTER\_4}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {FILTER\_8}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {FILTER\_OFF}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {FORCED}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {FRAME\_LENGTH}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {FS\_CHANGEWAKEUP}
+    \subitem {file\_system.h}, \hyperpage{160}
+  \item {FS\_DNCNTR}
+    \subitem {file\_system.h}, \hyperpage{160}
+  \item {FS\_MODE}
+    \subitem {file\_system.h}, \hyperpage{160}
+  \item {FS\_NBOOT}
+    \subitem {file\_system.h}, \hyperpage{160}
+  \item {FS\_NCYCLES}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FS\_NFAILS}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FS\_NODEID}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FS\_PAYLOAD}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FS\_SSID}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FS\_UPCNTR}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FS\_WAKEUP}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {FULL\_EN}
+    \subitem {ADXL355.h}, \hyperpage{26}
+
+  \indexspace
+
+  \item {GET\_NEW\_PARAMS}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {GET\_PARAMS}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {GET\_SENSOR\_DATA}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {GET\_STATUS\_BIT}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {GetID\_TMP006}
+    \subitem {hal\_TMP006.c}, \hyperpage{302}
+    \subitem {hal\_TMP006.h}, \hyperpage{306}
+  \item {GetLine\_UART}
+    \subitem {hal\_UART.c}, \hyperpage{310}
+    \subitem {hal\_UART.h}, \hyperpage{317}
+  \item {GetLoraRxData}
+    \subitem {hal\_LORA.c}, \hyperpage{212}
+    \subitem {hal\_LORA.h}, \hyperpage{254}
+  \item {GetLoraServerParams}
+    \subitem {hal\_LORA.c}, \hyperpage{213}
+    \subitem {hal\_LORA.h}, \hyperpage{254}
+  \item {GetSensorData}
+    \subitem {Sensors.c}, \hyperpage{364}
+    \subitem {Sensors.h}, \hyperpage{374}
+  \item {GetTA\_TMP006}
+    \subitem {hal\_TMP006.c}, \hyperpage{302}
+    \subitem {hal\_TMP006.h}, \hyperpage{307}
+  \item {GPIO\_Config}
+    \subitem {hal\_GPIO.c}, \hyperpage{185}
+    \subitem {hal\_GPIO.h}, \hyperpage{197}
+  \item {gpioCallbackFunctions}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{96}
+  \item {GPIOCC32XX\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{96}
+  \item {gpioPinConfigs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{96}
+
+  \indexspace
+
+  \item {hal\_ADC.c}, \hyperpage{178}
+    \subitem {Startup\_ADC}, \hyperpage{178}
+  \item {hal\_ADC.h}, \hyperpage{179}
+    \subitem {Startup\_ADC}, \hyperpage{180}
+  \item {hal\_GPIO.c}, \hyperpage{181}
+    \subitem {ADXL355\_Disable}, \hyperpage{182}
+    \subitem {ADXL355\_Enable}, \hyperpage{183}
+    \subitem {ADXL355\_SPI\_Disable}, \hyperpage{183}
+    \subitem {ADXL355\_SPI\_Enable}, \hyperpage{183}
+    \subitem {BME280\_Disable}, \hyperpage{184}
+    \subitem {BME280\_Enable}, \hyperpage{184}
+    \subitem {BME280\_SPI\_Disable}, \hyperpage{185}
+    \subitem {BME280\_SPI\_Enable}, \hyperpage{185}
+    \subitem {GPIO\_Config}, \hyperpage{185}
+    \subitem {I2C\_As\_GPIO\_Low}, \hyperpage{186}
+    \subitem {LDC1000\_Disable}, \hyperpage{186}
+    \subitem {LDC1000\_Enable}, \hyperpage{187}
+    \subitem {LDC1000\_SPI\_Disable}, \hyperpage{187}
+    \subitem {LDC1000\_SPI\_Enable}, \hyperpage{188}
+    \subitem {Node\_Disable}, \hyperpage{188}
+    \subitem {Node\_Enable}, \hyperpage{188}
+    \subitem {RN2483\_Clear}, \hyperpage{189}
+    \subitem {RN2483\_Set}, \hyperpage{189}
+    \subitem {SPI\_As\_GPIO\_Low}, \hyperpage{190}
+    \subitem {SPI\_CS\_Disable}, \hyperpage{190}
+  \item {hal\_GPIO.h}, \hyperpage{193}
+    \subitem {ADXL355\_Disable}, \hyperpage{194}
+    \subitem {ADXL355\_Enable}, \hyperpage{195}
+    \subitem {ADXL355\_SPI\_Disable}, \hyperpage{195}
+    \subitem {ADXL355\_SPI\_Enable}, \hyperpage{195}
+    \subitem {BME280\_Disable}, \hyperpage{196}
+    \subitem {BME280\_Enable}, \hyperpage{196}
+    \subitem {BME280\_SPI\_Disable}, \hyperpage{197}
+    \subitem {BME280\_SPI\_Enable}, \hyperpage{197}
+    \subitem {GPIO\_Config}, \hyperpage{197}
+    \subitem {I2C\_As\_GPIO\_Low}, \hyperpage{198}
+    \subitem {LDC1000\_Disable}, \hyperpage{198}
+    \subitem {LDC1000\_Enable}, \hyperpage{199}
+    \subitem {LDC1000\_SPI\_Disable}, \hyperpage{199}
+    \subitem {LDC1000\_SPI\_Enable}, \hyperpage{200}
+    \subitem {Node\_Disable}, \hyperpage{200}
+    \subitem {Node\_Enable}, \hyperpage{200}
+    \subitem {RN2483\_Clear}, \hyperpage{201}
+    \subitem {RN2483\_Set}, \hyperpage{201}
+    \subitem {SPI\_As\_GPIO\_Low}, \hyperpage{202}
+    \subitem {SPI\_CS\_Disable}, \hyperpage{202}
+  \item {hal\_I2C.c}, \hyperpage{203}
+    \subitem {I2C\_read\_8bits}, \hyperpage{204}
+    \subitem {I2C\_write\_8bits}, \hyperpage{204}
+    \subitem {Startup\_I2C}, \hyperpage{205}
+  \item {hal\_I2C.h}, \hyperpage{207}
+    \subitem {I2C\_read\_8bits}, \hyperpage{208}
+    \subitem {I2C\_write\_8bits}, \hyperpage{208}
+    \subitem {Startup\_I2C}, \hyperpage{209}
+  \item {hal\_LORA.c}, \hyperpage{210}
+    \subitem {GetLoraRxData}, \hyperpage{212}
+    \subitem {GetLoraServerParams}, \hyperpage{213}
+    \subitem {hex2int}, \hyperpage{214}
+    \subitem {Join\_Abp\_Lora}, \hyperpage{215}
+    \subitem {Join\_Otaa\_Lora}, \hyperpage{216}
+    \subitem {Mac\_Adr\_On}, \hyperpage{217}
+    \subitem {Mac\_Ar\_On}, \hyperpage{217}
+    \subitem {Mac\_Clear\_Upctr}, \hyperpage{218}
+    \subitem {Mac\_Get\_Appeui}, \hyperpage{218}
+    \subitem {Mac\_Get\_Devaddr}, \hyperpage{219}
+    \subitem {Mac\_Get\_Deveui}, \hyperpage{220}
+    \subitem {Mac\_Get\_Dnctr}, \hyperpage{220}
+    \subitem {Mac\_Get\_Upctr}, \hyperpage{221}
+    \subitem {Mac\_Save}, \hyperpage{221}
+    \subitem {Mac\_Set\_Devaddr}, \hyperpage{222}
+    \subitem {Mac\_Set\_Dnctr}, \hyperpage{223}
+    \subitem {Mac\_Set\_Pwridx}, \hyperpage{223}
+    \subitem {Mac\_Set\_Rxdelay1}, \hyperpage{224}
+    \subitem {Mac\_Set\_Upctr}, \hyperpage{225}
+    \subitem {MyADXL}, \hyperpage{234}
+    \subitem {MyBME}, \hyperpage{234}
+    \subitem {MyLDC}, \hyperpage{234}
+    \subitem {MyNode}, \hyperpage{234}
+    \subitem {Reset\_RN2483}, \hyperpage{225}
+    \subitem {Setup\_Abp\_Lora}, \hyperpage{226}
+    \subitem {Setup\_Otaa\_Lora}, \hyperpage{227}
+    \subitem {Sys\_FactoryReset}, \hyperpage{228}
+    \subitem {Sys\_Sleep}, \hyperpage{229}
+    \subitem {Try\_Join\_Lora\_Gateway}, \hyperpage{229}
+    \subitem {Tx\_Cnf\_Lora}, \hyperpage{230}
+    \subitem {Tx\_Uncnf\_Lora}, \hyperpage{232}
+    \subitem {uart0}, \hyperpage{234}
+    \subitem {Uint8Array2Char}, \hyperpage{233}
+  \item {hal\_LORA.h}, \hyperpage{245}
+    \subitem {ERROR\_ABP\_APPSKEY}, \hyperpage{248}
+    \subitem {ERROR\_ABP\_DENIED}, \hyperpage{248}
+    \subitem {ERROR\_ABP\_DEVADDR}, \hyperpage{248}
+    \subitem {ERROR\_ABP\_JOIN}, \hyperpage{248}
+    \subitem {ERROR\_ABP\_NWKSKEY}, \hyperpage{248}
+    \subitem {ERROR\_ABP\_SAVE}, \hyperpage{249}
+    \subitem {ERROR\_ADR\_SET}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_APPEUI}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_APPKEY}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_BUSY}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_DENIED}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_DEVEUI}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_INVALID\_PARAM}, \hyperpage{249}
+    \subitem {ERROR\_OTAA\_JOIN}, \hyperpage{250}
+    \subitem {ERROR\_OTAA\_KEYS\_NOT\_INIT}, \hyperpage{250}
+    \subitem {ERROR\_OTAA\_MAC\_PAUSED}, \hyperpage{250}
+    \subitem {ERROR\_OTAA\_NO\_FREE\_CH}, \hyperpage{250}
+    \subitem {ERROR\_OTAA\_SAVE}, \hyperpage{250}
+    \subitem {ERROR\_OTAA\_SILENT}, \hyperpage{250}
+    \subitem {ERROR\_OTAA\_UNKNOWN}, \hyperpage{250}
+    \subitem {ERROR\_RXDELAY1\_SET}, \hyperpage{250}
+    \subitem {ERROR\_SET\_DEVADDR}, \hyperpage{251}
+    \subitem {ERROR\_SET\_DNCTR}, \hyperpage{251}
+    \subitem {ERROR\_SET\_NWSKEY}, \hyperpage{251}
+    \subitem {ERROR\_SET\_PWRIDX}, \hyperpage{251}
+    \subitem {ERROR\_SET\_UPCTR}, \hyperpage{251}
+    \subitem {ERROR\_TX\_BUSY}, \hyperpage{251}
+    \subitem {ERROR\_TX\_INVALID\_DATA\_LEN}, \hyperpage{251}
+    \subitem {ERROR\_TX\_INVALID\_PARAM}, \hyperpage{251}
+    \subitem {ERROR\_TX\_MAC\_ERR}, \hyperpage{252}
+    \subitem {ERROR\_TX\_MAC\_PAUSED}, \hyperpage{252}
+    \subitem {ERROR\_TX\_NO\_FREE\_CH}, \hyperpage{252}
+    \subitem {ERROR\_TX\_NOT\_JOINED}, \hyperpage{252}
+    \subitem {ERROR\_TX\_REJOIN\_NEEDED}, \hyperpage{252}
+    \subitem {ERROR\_TX\_SILENT}, \hyperpage{252}
+    \subitem {ERROR\_TX\_UNKNOWN}, \hyperpage{252}
+    \subitem {GetLoraRxData}, \hyperpage{254}
+    \subitem {GetLoraServerParams}, \hyperpage{254}
+    \subitem {hex2int}, \hyperpage{256}
+    \subitem {Join\_Abp\_Lora}, \hyperpage{256}
+    \subitem {Join\_Otaa\_Lora}, \hyperpage{257}
+    \subitem {Mac\_Adr\_On}, \hyperpage{258}
+    \subitem {Mac\_Ar\_On}, \hyperpage{259}
+    \subitem {Mac\_Clear\_Upctr}, \hyperpage{259}
+    \subitem {Mac\_Get\_Appeui}, \hyperpage{260}
+    \subitem {Mac\_Get\_Devaddr}, \hyperpage{261}
+    \subitem {Mac\_Get\_Deveui}, \hyperpage{261}
+    \subitem {Mac\_Get\_Dnctr}, \hyperpage{262}
+    \subitem {Mac\_Get\_Upctr}, \hyperpage{262}
+    \subitem {Mac\_Save}, \hyperpage{263}
+    \subitem {Mac\_Set\_Devaddr}, \hyperpage{264}
+    \subitem {Mac\_Set\_Dnctr}, \hyperpage{264}
+    \subitem {Mac\_Set\_Pwridx}, \hyperpage{266}
+    \subitem {Mac\_Set\_Rxdelay1}, \hyperpage{267}
+    \subitem {Mac\_Set\_Upctr}, \hyperpage{267}
+    \subitem {Reset\_RN2483}, \hyperpage{268}
+    \subitem {Setup\_Abp\_Lora}, \hyperpage{268}
+    \subitem {Setup\_Otaa\_Lora}, \hyperpage{269}
+    \subitem {SUCCESS\_ABP\_LORA}, \hyperpage{252}
+    \subitem {SUCCESS\_OTAA\_LORA}, \hyperpage{253}
+    \subitem {SUCCESS\_RXDELAY1\_SET}, \hyperpage{253}
+    \subitem {SUCCESS\_SET\_DEVADDR}, \hyperpage{253}
+    \subitem {SUCCESS\_SET\_DNCTR}, \hyperpage{253}
+    \subitem {SUCCESS\_SET\_NWSKEY}, \hyperpage{253}
+    \subitem {SUCCESS\_SET\_PWRIDX}, \hyperpage{253}
+    \subitem {SUCCESS\_SET\_UPCTR}, \hyperpage{253}
+    \subitem {SUCCESS\_TX\_MAC\_RX}, \hyperpage{253}
+    \subitem {SUCCESS\_TX\_MAC\_TX}, \hyperpage{254}
+    \subitem {Sys\_FactoryReset}, \hyperpage{270}
+    \subitem {Sys\_Sleep}, \hyperpage{271}
+    \subitem {Try\_Join\_Lora\_Gateway}, \hyperpage{272}
+    \subitem {Tx\_Cnf\_Lora}, \hyperpage{273}
+    \subitem {Tx\_Uncnf\_Lora}, \hyperpage{274}
+    \subitem {Uint8Array2Char}, \hyperpage{275}
+  \item {hal\_PWM.c}, \hyperpage{278}
+    \subitem {Config\_PWM}, \hyperpage{278}
+  \item {hal\_PWM.h}, \hyperpage{279}
+    \subitem {Config\_PWM}, \hyperpage{280}
+  \item {hal\_SPI.c}, \hyperpage{281}
+    \subitem {SPI\_read\_16bits}, \hyperpage{282}
+    \subitem {SPI\_read\_8bits}, \hyperpage{283}
+    \subitem {SPI\_write\_16bits}, \hyperpage{283}
+    \subitem {SPI\_write\_8bits}, \hyperpage{284}
+    \subitem {Startup\_SPI}, \hyperpage{285}
+  \item {hal\_SPI.h}, \hyperpage{287}
+    \subitem {SPI\_read\_16bits}, \hyperpage{288}
+    \subitem {SPI\_read\_8bits}, \hyperpage{289}
+    \subitem {SPI\_write\_16bits}, \hyperpage{290}
+    \subitem {SPI\_write\_8bits}, \hyperpage{290}
+    \subitem {Startup\_SPI}, \hyperpage{291}
+  \item {hal\_Timer.c}, \hyperpage{292}
+    \subitem {Startup\_Continuous\_Timer}, \hyperpage{293}
+    \subitem {Startup\_Oneshot\_Timer}, \hyperpage{294}
+    \subitem {timer0Callback}, \hyperpage{294}
+    \subitem {Timer0Event}, \hyperpage{296}
+    \subitem {timer1Callback}, \hyperpage{296}
+    \subitem {Timer1Event}, \hyperpage{296}
+  \item {hal\_Timer.h}, \hyperpage{297}
+    \subitem {Startup\_Continuous\_Timer}, \hyperpage{298}
+    \subitem {Startup\_Oneshot\_Timer}, \hyperpage{299}
+    \subitem {timer0Callback}, \hyperpage{300}
+    \subitem {timer1Callback}, \hyperpage{300}
+  \item {hal\_TMP006.c}, \hyperpage{301}
+    \subitem {GetID\_TMP006}, \hyperpage{302}
+    \subitem {GetTA\_TMP006}, \hyperpage{302}
+    \subitem {SetMOD\_TMP006}, \hyperpage{303}
+  \item {hal\_TMP006.h}, \hyperpage{305}
+    \subitem {ERROR\_WRONG\_CR}, \hyperpage{306}
+    \subitem {GetID\_TMP006}, \hyperpage{306}
+    \subitem {GetTA\_TMP006}, \hyperpage{307}
+    \subitem {SetMOD\_TMP006}, \hyperpage{308}
+    \subitem {SUCCESS\_CONF\_TMP006}, \hyperpage{306}
+  \item {hal\_UART.c}, \hyperpage{309}
+    \subitem {GetLine\_UART}, \hyperpage{310}
+    \subitem {Message}, \hyperpage{311}
+    \subitem {putch}, \hyperpage{311}
+    \subitem {Report}, \hyperpage{312}
+    \subitem {Startup\_UART}, \hyperpage{313}
+    \subitem {uart0}, \hyperpage{314}
+    \subitem {UART\_resetInputBuffer}, \hyperpage{313}
+    \subitem {vsnprintf}, \hyperpage{314}
+  \item {hal\_UART.h}, \hyperpage{316}
+    \subitem {ERR\_PRINT}, \hyperpage{317}
+    \subitem {GetLine\_UART}, \hyperpage{317}
+    \subitem {Message}, \hyperpage{318}
+    \subitem {putch}, \hyperpage{318}
+    \subitem {Report}, \hyperpage{319}
+    \subitem {Startup\_UART}, \hyperpage{320}
+    \subitem {UART\_PRINT}, \hyperpage{317}
+    \subitem {UART\_resetInputBuffer}, \hyperpage{321}
+  \item {hal\_WD.c}, \hyperpage{322}
+    \subitem {i2c}, \hyperpage{324}
+    \subitem {Startup\_Watchdog}, \hyperpage{322}
+    \subitem {watchdogCallback}, \hyperpage{323}
+  \item {hal\_WD.h}, \hyperpage{325}
+    \subitem {Startup\_Watchdog}, \hyperpage{325}
+  \item {hex2int}
+    \subitem {hal\_LORA.c}, \hyperpage{214}
+    \subitem {hal\_LORA.h}, \hyperpage{256}
+  \item {HPF02}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HPF09}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HPF15}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HPF247}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HPF3}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HPF62}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HPFOFF}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {HUM\_LSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {HUM\_MSB}
+    \subitem {BME280.h}, \hyperpage{63}
+
+  \indexspace
+
+  \item {i2c}
+    \subitem {hal\_WD.c}, \hyperpage{324}
+    \subitem {Sensors.c}, \hyperpage{367}
+    \subitem {STARPORTS\_App.c}, \hyperpage{382}
+  \item {I2C\_As\_GPIO\_Low}
+    \subitem {hal\_GPIO.c}, \hyperpage{186}
+    \subitem {hal\_GPIO.h}, \hyperpage{198}
+  \item {I2C\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{97}
+  \item {I2C\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{97}
+  \item {I2C\_FAST\_MODE}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {I2C\_HIGH\_SPEED}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {I2C\_read\_8bits}
+    \subitem {hal\_I2C.c}, \hyperpage{204}
+    \subitem {hal\_I2C.h}, \hyperpage{208}
+  \item {I2C\_write\_8bits}
+    \subitem {hal\_I2C.c}, \hyperpage{204}
+    \subitem {hal\_I2C.h}, \hyperpage{208}
+  \item {i2cCC3220SHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{97}
+  \item {i2cCC3220SObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{97}
+  \item {IniPacket}
+    \subitem {Sensors.c}, \hyperpage{367}
+    \subitem {Sensors.h}, \hyperpage{376}
+  \item {INT\_MAP}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {INT\_POL\_HIGH}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {INT\_POL\_LOW}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {INT\_SYNC}
+    \subitem {ADXL355.h}, \hyperpage{29}
+  \item {INTB\_CONFIG}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {INTB\_DIS}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {IS\_CONNECTED}
+    \subitem {wifi.h}, \hyperpage{411}
+  \item {IS\_IP\_ACQUIRED}
+    \subitem {wifi.h}, \hyperpage{412}
+
+  \indexspace
+
+  \item {Join\_Abp\_Lora}
+    \subitem {hal\_LORA.c}, \hyperpage{215}
+    \subitem {hal\_LORA.h}, \hyperpage{256}
+  \item {Join\_Otaa\_Lora}
+    \subitem {hal\_LORA.c}, \hyperpage{216}
+    \subitem {hal\_LORA.h}, \hyperpage{257}
+
+  \indexspace
+
+  \item {Keller\_Data}, \hyperpage{390}
+
+  \indexspace
+
+  \item {LDC1000.c}, \hyperpage{326}
+    \subitem {LDC1000\_DevId}, \hyperpage{328}
+    \subitem {LDC1000\_Get\_Proximity\_Frame}, \hyperpage{328}
+    \subitem {LDC1000\_Read\_Fcount}, \hyperpage{329}
+    \subitem {LDC1000\_Read\_Proximity}, \hyperpage{329}
+    \subitem {LDC1000\_Read\_Rp\_Max}, \hyperpage{330}
+    \subitem {LDC1000\_Read\_Rp\_Min}, \hyperpage{330}
+    \subitem {LDC1000\_Read\_Status}, \hyperpage{331}
+    \subitem {LDC1000\_Write\_Clk\_Conf}, \hyperpage{331}
+    \subitem {LDC1000\_Write\_Conf}, \hyperpage{332}
+    \subitem {LDC1000\_Write\_Intb\_Conf}, \hyperpage{332}
+    \subitem {LDC1000\_Write\_Min\_Freq}, \hyperpage{333}
+    \subitem {LDC1000\_Write\_Pow\_Conf}, \hyperpage{333}
+    \subitem {LDC1000\_Write\_Rp\_Max}, \hyperpage{334}
+    \subitem {LDC1000\_Write\_Rp\_Min}, \hyperpage{334}
+    \subitem {RpCalc}, \hyperpage{335}
+  \item {LDC1000.h}, \hyperpage{338}
+    \subitem {ACTIVE\_MODE}, \hyperpage{342}
+    \subitem {AMP\_1V}, \hyperpage{340}
+    \subitem {AMP\_2V}, \hyperpage{340}
+    \subitem {AMP\_4V}, \hyperpage{340}
+    \subitem {CLK\_CONFIG}, \hyperpage{342}
+    \subitem {CLK\_OFF}, \hyperpage{341}
+    \subitem {CLK\_ON}, \hyperpage{341}
+    \subitem {COMP\_OUT}, \hyperpage{341}
+    \subitem {COMPB\_MASK}, \hyperpage{346}
+    \subitem {DEV\_ID}, \hyperpage{342}
+    \subitem {DRDY\_EN}, \hyperpage{341}
+    \subitem {DRDYB\_MASK}, \hyperpage{346}
+    \subitem {FCOUNT\_LSB}, \hyperpage{342}
+    \subitem {FCOUNT\_MSB}, \hyperpage{342}
+    \subitem {FCOUNT\_XSB}, \hyperpage{342}
+    \subitem {INTB\_CONFIG}, \hyperpage{342}
+    \subitem {INTB\_DIS}, \hyperpage{341}
+    \subitem {LDC1000\_amplitude\_t}, \hyperpage{340}
+    \subitem {LDC1000\_clkpd\_t}, \hyperpage{341}
+    \subitem {LDC1000\_clksel\_t}, \hyperpage{341}
+    \subitem {LDC1000\_DevId}, \hyperpage{346}
+    \subitem {LDC1000\_Get\_Proximity\_Frame}, \hyperpage{347}
+    \subitem {LDC1000\_intb\_conf\_t}, \hyperpage{341}
+    \subitem {LDC1000\_pow\_conf\_t}, \hyperpage{342}
+    \subitem {LDC1000\_Read\_Fcount}, \hyperpage{347}
+    \subitem {LDC1000\_Read\_Proximity}, \hyperpage{348}
+    \subitem {LDC1000\_Read\_Rp\_Max}, \hyperpage{348}
+    \subitem {LDC1000\_Read\_Rp\_Min}, \hyperpage{349}
+    \subitem {LDC1000\_Read\_Status}, \hyperpage{349}
+    \subitem {LDC1000\_register\_t}, \hyperpage{342}
+    \subitem {LDC1000\_resp\_time\_t}, \hyperpage{343}
+    \subitem {LDC1000\_rp\_max\_t}, \hyperpage{343}
+    \subitem {LDC1000\_rp\_min\_t}, \hyperpage{344}
+    \subitem {LDC1000\_status\_t}, \hyperpage{346}
+    \subitem {LDC1000\_Write\_Clk\_Conf}, \hyperpage{350}
+    \subitem {LDC1000\_Write\_Conf}, \hyperpage{350}
+    \subitem {LDC1000\_Write\_Intb\_Conf}, \hyperpage{351}
+    \subitem {LDC1000\_Write\_Min\_Freq}, \hyperpage{351}
+    \subitem {LDC1000\_Write\_Pow\_Conf}, \hyperpage{352}
+    \subitem {LDC1000\_Write\_Rp\_Max}, \hyperpage{352}
+    \subitem {LDC1000\_Write\_Rp\_Min}, \hyperpage{353}
+    \subitem {LDC\_CONFIG}, \hyperpage{342}
+    \subitem {LDC\_STATUS}, \hyperpage{342}
+    \subitem {MIN\_FREQ}, \hyperpage{342}
+    \subitem {OSC\_STATUS\_MASK}, \hyperpage{346}
+    \subitem {POW\_CONFIG}, \hyperpage{342}
+    \subitem {PROX\_LSB}, \hyperpage{342}
+    \subitem {PROX\_MSB}, \hyperpage{342}
+    \subitem {RESP\_TIME\_0192}, \hyperpage{343}
+    \subitem {RESP\_TIME\_0384}, \hyperpage{343}
+    \subitem {RESP\_TIME\_0768}, \hyperpage{343}
+    \subitem {RESP\_TIME\_1536}, \hyperpage{343}
+    \subitem {RESP\_TIME\_3072}, \hyperpage{343}
+    \subitem {RESP\_TIME\_6144}, \hyperpage{343}
+    \subitem {RP\_MAX}, \hyperpage{342}
+    \subitem {RP\_MIN}, \hyperpage{342}
+    \subitem {RpCalc}, \hyperpage{353}
+    \subitem {RPMAX0000}, \hyperpage{344}
+    \subitem {RPMAX0001p0}, \hyperpage{344}
+    \subitem {RPMAX0001p3}, \hyperpage{344}
+    \subitem {RPMAX0001p7}, \hyperpage{344}
+    \subitem {RPMAX0002}, \hyperpage{344}
+    \subitem {RPMAX0003}, \hyperpage{344}
+    \subitem {RPMAX0004}, \hyperpage{344}
+    \subitem {RPMAX0005}, \hyperpage{344}
+    \subitem {RPMAX0007}, \hyperpage{344}
+    \subitem {RPMAX0009}, \hyperpage{344}
+    \subitem {RPMAX0012}, \hyperpage{344}
+    \subitem {RPMAX0016}, \hyperpage{344}
+    \subitem {RPMAX0021}, \hyperpage{344}
+    \subitem {RPMAX0027}, \hyperpage{344}
+    \subitem {RPMAX0038}, \hyperpage{344}
+    \subitem {RPMAX0048}, \hyperpage{344}
+    \subitem {RPMAX0064}, \hyperpage{344}
+    \subitem {RPMAX0083}, \hyperpage{344}
+    \subitem {RPMAX0109}, \hyperpage{344}
+    \subitem {RPMAX0145}, \hyperpage{344}
+    \subitem {RPMAX0193}, \hyperpage{344}
+    \subitem {RPMAX0249}, \hyperpage{344}
+    \subitem {RPMAX0349}, \hyperpage{344}
+    \subitem {RPMAX0436}, \hyperpage{344}
+    \subitem {RPMAX0581}, \hyperpage{344}
+    \subitem {RPMAX0747}, \hyperpage{343}
+    \subitem {RPMAX0981}, \hyperpage{343}
+    \subitem {RPMAX1308}, \hyperpage{343}
+    \subitem {RPMAX1745}, \hyperpage{343}
+    \subitem {RPMAX2243}, \hyperpage{343}
+    \subitem {RPMAX3141}, \hyperpage{343}
+    \subitem {RPMAX3936}, \hyperpage{343}
+    \subitem {RPMIN0000}, \hyperpage{345}
+    \subitem {RPMIN0001p0}, \hyperpage{345}
+    \subitem {RPMIN0001p3}, \hyperpage{345}
+    \subitem {RPMIN0001p7}, \hyperpage{345}
+    \subitem {RPMIN0002}, \hyperpage{345}
+    \subitem {RPMIN0003}, \hyperpage{345}
+    \subitem {RPMIN0004}, \hyperpage{345}
+    \subitem {RPMIN0005}, \hyperpage{345}
+    \subitem {RPMIN0007}, \hyperpage{345}
+    \subitem {RPMIN0009}, \hyperpage{345}
+    \subitem {RPMIN0012}, \hyperpage{345}
+    \subitem {RPMIN0016}, \hyperpage{345}
+    \subitem {RPMIN0021}, \hyperpage{345}
+    \subitem {RPMIN0027}, \hyperpage{345}
+    \subitem {RPMIN0038}, \hyperpage{345}
+    \subitem {RPMIN0048}, \hyperpage{345}
+    \subitem {RPMIN0064}, \hyperpage{345}
+    \subitem {RPMIN0083}, \hyperpage{345}
+    \subitem {RPMIN0109}, \hyperpage{345}
+    \subitem {RPMIN0145}, \hyperpage{345}
+    \subitem {RPMIN0193}, \hyperpage{345}
+    \subitem {RPMIN0249}, \hyperpage{345}
+    \subitem {RPMIN0349}, \hyperpage{345}
+    \subitem {RPMIN0436}, \hyperpage{345}
+    \subitem {RPMIN0581}, \hyperpage{345}
+    \subitem {RPMIN0747}, \hyperpage{345}
+    \subitem {RPMIN0981}, \hyperpage{345}
+    \subitem {RPMIN1308}, \hyperpage{345}
+    \subitem {RPMIN1745}, \hyperpage{345}
+    \subitem {RPMIN2243}, \hyperpage{345}
+    \subitem {RPMIN3141}, \hyperpage{345}
+    \subitem {RPMIN3926}, \hyperpage{345}
+    \subitem {STBY\_MODE}, \hyperpage{342}
+    \subitem {THR\_HIGH\_LSB}, \hyperpage{342}
+    \subitem {THR\_HIGH\_MSB}, \hyperpage{342}
+    \subitem {THR\_LOW\_LSB}, \hyperpage{342}
+    \subitem {THR\_LOW\_MSB}, \hyperpage{342}
+    \subitem {WAKEUP\_DIS\_MASK}, \hyperpage{346}
+    \subitem {WAKEUP\_EN}, \hyperpage{341}
+    \subitem {XIN}, \hyperpage{341}
+    \subitem {XIN\_XOUT}, \hyperpage{341}
+  \item {LDC1000\_amplitude\_t}
+    \subitem {LDC1000.h}, \hyperpage{340}
+  \item {LDC1000\_clkpd\_t}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {LDC1000\_clksel\_t}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {LDC1000\_Data}, \hyperpage{390}
+  \item {LDC1000\_DevId}
+    \subitem {LDC1000.c}, \hyperpage{328}
+    \subitem {LDC1000.h}, \hyperpage{346}
+  \item {LDC1000\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{186}
+    \subitem {hal\_GPIO.h}, \hyperpage{198}
+  \item {LDC1000\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{187}
+    \subitem {hal\_GPIO.h}, \hyperpage{199}
+  \item {LDC1000\_Get\_Proximity\_Frame}
+    \subitem {LDC1000.c}, \hyperpage{328}
+    \subitem {LDC1000.h}, \hyperpage{347}
+  \item {LDC1000\_ID}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {LDC1000\_intb\_conf\_t}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {LDC1000\_pow\_conf\_t}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {LDC1000\_Read\_Fcount}
+    \subitem {LDC1000.c}, \hyperpage{329}
+    \subitem {LDC1000.h}, \hyperpage{347}
+  \item {LDC1000\_Read\_Proximity}
+    \subitem {LDC1000.c}, \hyperpage{329}
+    \subitem {LDC1000.h}, \hyperpage{348}
+  \item {LDC1000\_Read\_Rp\_Max}
+    \subitem {LDC1000.c}, \hyperpage{330}
+    \subitem {LDC1000.h}, \hyperpage{348}
+  \item {LDC1000\_Read\_Rp\_Min}
+    \subitem {LDC1000.c}, \hyperpage{330}
+    \subitem {LDC1000.h}, \hyperpage{349}
+  \item {LDC1000\_Read\_Status}
+    \subitem {LDC1000.c}, \hyperpage{331}
+    \subitem {LDC1000.h}, \hyperpage{349}
+  \item {LDC1000\_register\_t}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {LDC1000\_resp\_time\_t}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {LDC1000\_rp\_max\_t}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {LDC1000\_rp\_min\_t}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {LDC1000\_SPI\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{187}
+    \subitem {hal\_GPIO.h}, \hyperpage{199}
+  \item {LDC1000\_SPI\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{188}
+    \subitem {hal\_GPIO.h}, \hyperpage{200}
+  \item {LDC1000\_status\_t}
+    \subitem {LDC1000.h}, \hyperpage{346}
+  \item {LDC1000\_Write\_Clk\_Conf}
+    \subitem {LDC1000.c}, \hyperpage{331}
+    \subitem {LDC1000.h}, \hyperpage{350}
+  \item {LDC1000\_Write\_Conf}
+    \subitem {LDC1000.c}, \hyperpage{332}
+    \subitem {LDC1000.h}, \hyperpage{350}
+  \item {LDC1000\_Write\_Intb\_Conf}
+    \subitem {LDC1000.c}, \hyperpage{332}
+    \subitem {LDC1000.h}, \hyperpage{351}
+  \item {LDC1000\_Write\_Min\_Freq}
+    \subitem {LDC1000.c}, \hyperpage{333}
+    \subitem {LDC1000.h}, \hyperpage{351}
+  \item {LDC1000\_Write\_Pow\_Conf}
+    \subitem {LDC1000.c}, \hyperpage{333}
+    \subitem {LDC1000.h}, \hyperpage{352}
+  \item {LDC1000\_Write\_Rp\_Max}
+    \subitem {LDC1000.c}, \hyperpage{334}
+    \subitem {LDC1000.h}, \hyperpage{352}
+  \item {LDC1000\_Write\_Rp\_Min}
+    \subitem {LDC1000.c}, \hyperpage{334}
+    \subitem {LDC1000.h}, \hyperpage{353}
+  \item {LDC\_CONFIG}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {LDC\_STATUS}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {LOOP\_FOREVER}
+    \subitem {wifi.h}, \hyperpage{412}
+  \item {LoraNode}, \hyperpage{247}
+  \item {LPDSOut}
+    \subitem {STARPORTS\_App.c}, \hyperpage{382}
+
+  \indexspace
+
+  \item {Mac\_Adr\_On}
+    \subitem {hal\_LORA.c}, \hyperpage{217}
+    \subitem {hal\_LORA.h}, \hyperpage{258}
+  \item {Mac\_Ar\_On}
+    \subitem {hal\_LORA.c}, \hyperpage{217}
+    \subitem {hal\_LORA.h}, \hyperpage{259}
+  \item {Mac\_Clear\_Upctr}
+    \subitem {hal\_LORA.c}, \hyperpage{218}
+    \subitem {hal\_LORA.h}, \hyperpage{259}
+  \item {Mac\_Get\_Appeui}
+    \subitem {hal\_LORA.c}, \hyperpage{218}
+    \subitem {hal\_LORA.h}, \hyperpage{260}
+  \item {Mac\_Get\_Devaddr}
+    \subitem {hal\_LORA.c}, \hyperpage{219}
+    \subitem {hal\_LORA.h}, \hyperpage{261}
+  \item {Mac\_Get\_Deveui}
+    \subitem {hal\_LORA.c}, \hyperpage{220}
+    \subitem {hal\_LORA.h}, \hyperpage{261}
+  \item {Mac\_Get\_Dnctr}
+    \subitem {hal\_LORA.c}, \hyperpage{220}
+    \subitem {hal\_LORA.h}, \hyperpage{262}
+  \item {Mac\_Get\_Upctr}
+    \subitem {hal\_LORA.c}, \hyperpage{221}
+    \subitem {hal\_LORA.h}, \hyperpage{262}
+  \item {Mac\_Save}
+    \subitem {hal\_LORA.c}, \hyperpage{221}
+    \subitem {hal\_LORA.h}, \hyperpage{263}
+  \item {Mac\_Set\_Devaddr}
+    \subitem {hal\_LORA.c}, \hyperpage{222}
+    \subitem {hal\_LORA.h}, \hyperpage{264}
+  \item {Mac\_Set\_Dnctr}
+    \subitem {hal\_LORA.c}, \hyperpage{223}
+    \subitem {hal\_LORA.h}, \hyperpage{264}
+  \item {Mac\_Set\_Pwridx}
+    \subitem {hal\_LORA.c}, \hyperpage{223}
+    \subitem {hal\_LORA.h}, \hyperpage{266}
+  \item {Mac\_Set\_Rxdelay1}
+    \subitem {hal\_LORA.c}, \hyperpage{224}
+    \subitem {hal\_LORA.h}, \hyperpage{267}
+  \item {Mac\_Set\_Upctr}
+    \subitem {hal\_LORA.c}, \hyperpage{225}
+    \subitem {hal\_LORA.h}, \hyperpage{267}
+  \item {main}
+    \subitem {main\_nortos.c}, \hyperpage{357}
+  \item {main\_nortos.c}, \hyperpage{356}
+    \subitem {main}, \hyperpage{357}
+    \subitem {mainThread}, \hyperpage{357}
+  \item {mainThread}
+    \subitem {main\_nortos.c}, \hyperpage{357}
+    \subitem {STARPORTS\_App.c}, \hyperpage{379}
+  \item {MAX\_FILE\_ENTRIES}
+    \subitem {file\_system.h}, \hyperpage{161}
+  \item {MAX\_FILE\_SIZE}
+    \subitem {file\_system.h}, \hyperpage{162}
+  \item {MEASUREMENT}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {MEASURING}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {Message}
+    \subitem {hal\_UART.c}, \hyperpage{311}
+    \subitem {hal\_UART.h}, \hyperpage{318}
+  \item {MIN\_FREQ}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {MODE\_AP\_WIFI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {MODE\_NORMAL\_LORA}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {MODE\_NORMAL\_WIFI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {MODE\_STORAGE\_LORA}
+    \subitem {STARPORTS\_App.h}, \hyperpage{392}
+  \item {MODE\_STORAGE\_WIFI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {MyADXL}
+    \subitem {hal\_LORA.c}, \hyperpage{234}
+    \subitem {Sensors.c}, \hyperpage{367}
+    \subitem {STARPORTS\_App.c}, \hyperpage{382}
+  \item {MyBME}
+    \subitem {hal\_LORA.c}, \hyperpage{234}
+    \subitem {Sensors.c}, \hyperpage{367}
+    \subitem {STARPORTS\_App.c}, \hyperpage{382}
+  \item {MyLDC}
+    \subitem {hal\_LORA.c}, \hyperpage{234}
+    \subitem {Sensors.c}, \hyperpage{367}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {MyNode}
+    \subitem {hal\_LORA.c}, \hyperpage{234}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {MyTMP006}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {MyVbat}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+
+  \indexspace
+
+  \item {Node}, \hyperpage{390}
+  \item {Node\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{188}
+    \subitem {hal\_GPIO.h}, \hyperpage{200}
+  \item {Node\_Enable}
+    \subitem {hal\_GPIO.c}, \hyperpage{188}
+    \subitem {hal\_GPIO.h}, \hyperpage{200}
+  \item {Node\_states\_t}
+    \subitem {STARPORTS\_App.h}, \hyperpage{394}
+  \item {NODEID}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {NodeState}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {NORMAL}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {NUM\_OF\_PKT}
+    \subitem {wifi.h}, \hyperpage{412}
+  \item {NUMBER\_SENSORS}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {NVM\_BUSY}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {NWKSKEY}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+
+  \indexspace
+
+  \item {ODR1000HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR125Hz}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR15Hz}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR2000HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR250HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR31Hz}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR3HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR4000HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR500HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR62HZ}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {ODR7Hz}
+    \subitem {ADXL355.h}, \hyperpage{24}
+  \item {OFFSET\_X\_H}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {OFFSET\_X\_L}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {OFFSET\_Y\_H}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {OFFSET\_Y\_L}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {OFFSET\_Z\_H}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {OFFSET\_Z\_L}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {OSC\_STATUS\_MASK}
+    \subitem {LDC1000.h}, \hyperpage{346}
+  \item {OSRS\_HX1}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {OSRS\_HX16}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {OSRS\_HX2}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {OSRS\_HX4}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {OSRS\_HX8}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {OSRS\_PX1}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_PX16}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_PX2}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_PX4}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_PX8}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_TX1}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_TX16}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_TX2}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_TX4}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OSRS\_TX8}
+    \subitem {BME280.h}, \hyperpage{62}
+  \item {OVR\_EN}
+    \subitem {ADXL355.h}, \hyperpage{26}
+
+  \indexspace
+
+  \item {parkInfo}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{98}
+  \item {PARTID}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {PORT}
+    \subitem {wifi.h}, \hyperpage{412}
+  \item {PORT\_UDP}
+    \subitem {wifi.h}, \hyperpage{412}
+  \item {POW\_CONFIG}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {POWER\_CTL}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {PowerCC32XX\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{98}
+  \item {PowerMeasure\_CB}
+    \subitem {wifi.h}, \hyperpage{421}
+  \item {POWERUP}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {prepareDataFrame}
+    \subitem {wifi.c}, \hyperpage{398}
+    \subitem {wifi.h}, \hyperpage{414}
+  \item {PRESS\_LSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {PRESS\_MSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {PRESS\_XLSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {PROX\_LSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {PROX\_MSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {putch}
+    \subitem {hal\_UART.c}, \hyperpage{311}
+    \subitem {hal\_UART.h}, \hyperpage{318}
+  \item {PWM\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{98}
+  \item {PWM\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{98}
+  \item {pwmTimerCC3220SHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{98}
+  \item {pwmTimerCC3220SObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{99}
+
+  \indexspace
+
+  \item {RANGE}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {RANGE2G}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {RANGE4G}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {RANGE8G}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {RDY\_EN}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {Report}
+    \subitem {hal\_UART.c}, \hyperpage{312}
+    \subitem {hal\_UART.h}, \hyperpage{319}
+  \item {Reset\_RN2483}
+    \subitem {hal\_LORA.c}, \hyperpage{225}
+    \subitem {hal\_LORA.h}, \hyperpage{268}
+  \item {RESP\_TIME\_0192}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RESP\_TIME\_0384}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RESP\_TIME\_0768}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RESP\_TIME\_1536}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RESP\_TIME\_3072}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RESP\_TIME\_6144}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {REVID}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {RN2483\_Clear}
+    \subitem {hal\_GPIO.c}, \hyperpage{189}
+    \subitem {hal\_GPIO.h}, \hyperpage{201}
+  \item {RN2483\_Set}
+    \subitem {hal\_GPIO.c}, \hyperpage{189}
+    \subitem {hal\_GPIO.h}, \hyperpage{201}
+  \item {RNW\_LSB}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {RNW\_MSB}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {RP\_MAX}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {RP\_MIN}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {RpCalc}
+    \subitem {LDC1000.c}, \hyperpage{335}
+    \subitem {LDC1000.h}, \hyperpage{353}
+  \item {RPMAX0000}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0001p0}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0001p3}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0001p7}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0002}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0003}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0004}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0005}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0007}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0009}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0012}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0016}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0021}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0027}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0038}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0048}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0064}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0083}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0109}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0145}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0193}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0249}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0349}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0436}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0581}
+    \subitem {LDC1000.h}, \hyperpage{344}
+  \item {RPMAX0747}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMAX0981}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMAX1308}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMAX1745}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMAX2243}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMAX3141}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMAX3936}
+    \subitem {LDC1000.h}, \hyperpage{343}
+  \item {RPMIN0000}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0001p0}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0001p3}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0001p7}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0002}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0003}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0004}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0005}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0007}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0009}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0012}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0016}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0021}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0027}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0038}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0048}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0064}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0083}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0109}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0145}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0193}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0249}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0349}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0436}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0581}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0747}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN0981}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN1308}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN1745}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN2243}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN3141}
+    \subitem {LDC1000.h}, \hyperpage{345}
+  \item {RPMIN3926}
+    \subitem {LDC1000.h}, \hyperpage{345}
+
+  \indexspace
+
+  \item {SECURITY\_KEY}
+    \subitem {wifi.h}, \hyperpage{412}
+  \item {SECURITY\_KEY\_FILE\_CONNECT}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {SECURITY\_TYPE}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {SELF\_TEST}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {SEND\_DATA\_LORA}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {SEND\_DATA\_WIFI}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {sendUdpClient}
+    \subitem {wifi.c}, \hyperpage{398}
+  \item {Sensors.c}, \hyperpage{361}
+    \subitem {Add\_s16Data2Packet}, \hyperpage{362}
+    \subitem {Add\_s32Data2Packet}, \hyperpage{363}
+    \subitem {GetSensorData}, \hyperpage{364}
+    \subitem {i2c}, \hyperpage{367}
+    \subitem {IniPacket}, \hyperpage{367}
+    \subitem {MyADXL}, \hyperpage{367}
+    \subitem {MyBME}, \hyperpage{367}
+    \subitem {MyLDC}, \hyperpage{367}
+    \subitem {MyNode}, \hyperpage{368}
+    \subitem {MyTMP006}, \hyperpage{368}
+    \subitem {MyVbat}, \hyperpage{368}
+    \subitem {spi}, \hyperpage{368}
+    \subitem {Timer1Event}, \hyperpage{368}
+    \subitem {uart0}, \hyperpage{368}
+    \subitem {wd}, \hyperpage{368}
+  \item {Sensors.h}, \hyperpage{372}
+    \subitem {Add\_s16Data2Packet}, \hyperpage{372}
+    \subitem {Add\_s32Data2Packet}, \hyperpage{373}
+    \subitem {GetSensorData}, \hyperpage{374}
+    \subitem {IniPacket}, \hyperpage{376}
+  \item {SERIALWIFI\_PORT}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {SET\_STATUS\_BIT}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {SetMOD\_TMP006}
+    \subitem {hal\_TMP006.c}, \hyperpage{303}
+    \subitem {hal\_TMP006.h}, \hyperpage{308}
+  \item {Setup\_Abp\_Lora}
+    \subitem {hal\_LORA.c}, \hyperpage{226}
+    \subitem {hal\_LORA.h}, \hyperpage{268}
+  \item {Setup\_Otaa\_Lora}
+    \subitem {hal\_LORA.c}, \hyperpage{227}
+    \subitem {hal\_LORA.h}, \hyperpage{269}
+  \item {SHUTDOWN}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {SimpleLinkFatalErrorEventHandler}
+    \subitem {wifi.c}, \hyperpage{399}
+    \subitem {wifi.h}, \hyperpage{414}
+  \item {SimpleLinkGeneralEventHandler}
+    \subitem {wifi.c}, \hyperpage{400}
+    \subitem {wifi.h}, \hyperpage{415}
+  \item {SimpleLinkHttpServerEventHandler}
+    \subitem {wifi.c}, \hyperpage{400}
+    \subitem {wifi.h}, \hyperpage{416}
+  \item {SimpleLinkNetAppEventHandler}
+    \subitem {wifi.c}, \hyperpage{401}
+    \subitem {wifi.h}, \hyperpage{416}
+  \item {SimpleLinkNetAppRequestEventHandler}
+    \subitem {wifi.c}, \hyperpage{401}
+    \subitem {wifi.h}, \hyperpage{417}
+  \item {SimpleLinkNetAppRequestMemFreeEventHandler}
+    \subitem {wifi.c}, \hyperpage{401}
+    \subitem {wifi.h}, \hyperpage{417}
+  \item {SimpleLinkSocketTriggerEventHandler}
+    \subitem {wifi.c}, \hyperpage{402}
+    \subitem {wifi.h}, \hyperpage{417}
+  \item {SimpleLinkSockEventHandler}
+    \subitem {wifi.c}, \hyperpage{402}
+    \subitem {wifi.h}, \hyperpage{418}
+  \item {SimpleLinkWlanEventHandler}
+    \subitem {wifi.c}, \hyperpage{403}
+    \subitem {wifi.h}, \hyperpage{418}
+  \item {SL\_SOCKET\_ERROR}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {SLEEP}
+    \subitem {BME280.h}, \hyperpage{61}
+  \item {spi}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {SPI3W\_OFF}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {SPI3W\_ON}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {SPI\_As\_GPIO\_Low}
+    \subitem {hal\_GPIO.c}, \hyperpage{190}
+    \subitem {hal\_GPIO.h}, \hyperpage{202}
+  \item {SPI\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{99}
+  \item {SPI\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{99}
+  \item {SPI\_CS\_Disable}
+    \subitem {hal\_GPIO.c}, \hyperpage{190}
+    \subitem {hal\_GPIO.h}, \hyperpage{202}
+  \item {SPI\_read\_16bits}
+    \subitem {hal\_SPI.c}, \hyperpage{282}
+    \subitem {hal\_SPI.h}, \hyperpage{288}
+  \item {SPI\_read\_8bits}
+    \subitem {hal\_SPI.c}, \hyperpage{283}
+    \subitem {hal\_SPI.h}, \hyperpage{289}
+  \item {SPI\_write\_16bits}
+    \subitem {hal\_SPI.c}, \hyperpage{283}
+    \subitem {hal\_SPI.h}, \hyperpage{290}
+  \item {SPI\_write\_8bits}
+    \subitem {hal\_SPI.c}, \hyperpage{284}
+    \subitem {hal\_SPI.h}, \hyperpage{290}
+  \item {spiCC3220SDMAHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{99}
+  \item {spiCC3220SDMAObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{99}
+  \item {spiCC3220SDMAscratchBuf}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{99}
+  \item {SSID\_NAME}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {ST1}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {ST2}
+    \subitem {ADXL355.h}, \hyperpage{25}
+  \item {st\_readFileChangeWakeUp}
+    \subitem {file\_system.c}, \hyperpage{134}
+    \subitem {file\_system.h}, \hyperpage{162}
+  \item {st\_readFileDnCntr}
+    \subitem {file\_system.c}, \hyperpage{135}
+    \subitem {file\_system.h}, \hyperpage{163}
+  \item {st\_readFileMode}
+    \subitem {file\_system.c}, \hyperpage{136}
+    \subitem {file\_system.h}, \hyperpage{164}
+  \item {st\_readFileNBoot}
+    \subitem {file\_system.c}, \hyperpage{137}
+    \subitem {file\_system.h}, \hyperpage{164}
+  \item {st\_readFileNCycles}
+    \subitem {file\_system.c}, \hyperpage{137}
+    \subitem {file\_system.h}, \hyperpage{165}
+  \item {st\_readFileNFails}
+    \subitem {file\_system.c}, \hyperpage{138}
+    \subitem {file\_system.h}, \hyperpage{166}
+  \item {st\_readFileNodeId}
+    \subitem {file\_system.c}, \hyperpage{139}
+    \subitem {file\_system.h}, \hyperpage{167}
+  \item {st\_readFileSSID}
+    \subitem {file\_system.c}, \hyperpage{140}
+    \subitem {file\_system.h}, \hyperpage{167}
+  \item {st\_readFileUpCntr}
+    \subitem {file\_system.c}, \hyperpage{140}
+    \subitem {file\_system.h}, \hyperpage{168}
+  \item {st\_readFileWakeUp}
+    \subitem {file\_system.c}, \hyperpage{141}
+    \subitem {file\_system.h}, \hyperpage{169}
+  \item {STANDBY}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {STARPORTS\_App.c}, \hyperpage{377}
+    \subitem {i2c}, \hyperpage{382}
+    \subitem {LPDSOut}, \hyperpage{382}
+    \subitem {mainThread}, \hyperpage{379}
+    \subitem {MyADXL}, \hyperpage{382}
+    \subitem {MyBME}, \hyperpage{382}
+    \subitem {MyLDC}, \hyperpage{383}
+    \subitem {MyNode}, \hyperpage{383}
+    \subitem {MyTMP006}, \hyperpage{383}
+    \subitem {MyVbat}, \hyperpage{383}
+    \subitem {spi}, \hyperpage{383}
+    \subitem {TIMEOUT\_MS}, \hyperpage{378}
+    \subitem {Timer0Event}, \hyperpage{383}
+    \subitem {Timer1Event}, \hyperpage{383}
+    \subitem {uart0}, \hyperpage{383}
+    \subitem {WakeupFromLPDS}, \hyperpage{382}
+    \subitem {wd}, \hyperpage{384}
+  \item {STARPORTS\_App.h}, \hyperpage{388}
+    \subitem {ADXL355\_ID}, \hyperpage{391}
+    \subitem {APPEUI}, \hyperpage{391}
+    \subitem {APPKEY}, \hyperpage{391}
+    \subitem {APPSKEY}, \hyperpage{391}
+    \subitem {BME280\_ID}, \hyperpage{391}
+    \subitem {CONFIG\_LORA}, \hyperpage{395}
+    \subitem {CONFIG\_WIFI}, \hyperpage{395}
+    \subitem {CONTINUE}, \hyperpage{392}
+    \subitem {DEVADDR}, \hyperpage{392}
+    \subitem {DEVEUI}, \hyperpage{392}
+    \subitem {GET\_NEW\_PARAMS}, \hyperpage{395}
+    \subitem {GET\_PARAMS}, \hyperpage{395}
+    \subitem {GET\_SENSOR\_DATA}, \hyperpage{395}
+    \subitem {LDC1000\_ID}, \hyperpage{392}
+    \subitem {MODE\_AP\_WIFI}, \hyperpage{392}
+    \subitem {MODE\_NORMAL\_LORA}, \hyperpage{392}
+    \subitem {MODE\_NORMAL\_WIFI}, \hyperpage{392}
+    \subitem {MODE\_STORAGE\_LORA}, \hyperpage{392}
+    \subitem {MODE\_STORAGE\_WIFI}, \hyperpage{393}
+    \subitem {Node\_states\_t}, \hyperpage{394}
+    \subitem {NODEID}, \hyperpage{393}
+    \subitem {NodeState}, \hyperpage{395}
+    \subitem {NUMBER\_SENSORS}, \hyperpage{393}
+    \subitem {NWKSKEY}, \hyperpage{393}
+    \subitem {POWERUP}, \hyperpage{395}
+    \subitem {RNW\_LSB}, \hyperpage{393}
+    \subitem {RNW\_MSB}, \hyperpage{393}
+    \subitem {SEND\_DATA\_LORA}, \hyperpage{395}
+    \subitem {SEND\_DATA\_WIFI}, \hyperpage{395}
+    \subitem {SHUTDOWN}, \hyperpage{393}
+    \subitem {STORE\_DATA}, \hyperpage{395}
+    \subitem {STORE\_NEW\_PARAMS}, \hyperpage{395}
+    \subitem {TMP006\_ID}, \hyperpage{393}
+    \subitem {VBAT\_ID}, \hyperpage{394}
+  \item {Startup\_ADC}
+    \subitem {hal\_ADC.c}, \hyperpage{178}
+    \subitem {hal\_ADC.h}, \hyperpage{180}
+  \item {Startup\_Continuous\_Timer}
+    \subitem {hal\_Timer.c}, \hyperpage{293}
+    \subitem {hal\_Timer.h}, \hyperpage{298}
+  \item {Startup\_I2C}
+    \subitem {hal\_I2C.c}, \hyperpage{205}
+    \subitem {hal\_I2C.h}, \hyperpage{209}
+  \item {Startup\_Oneshot\_Timer}
+    \subitem {hal\_Timer.c}, \hyperpage{294}
+    \subitem {hal\_Timer.h}, \hyperpage{299}
+  \item {Startup\_SPI}
+    \subitem {hal\_SPI.c}, \hyperpage{285}
+    \subitem {hal\_SPI.h}, \hyperpage{291}
+  \item {Startup\_UART}
+    \subitem {hal\_UART.c}, \hyperpage{313}
+    \subitem {hal\_UART.h}, \hyperpage{320}
+  \item {Startup\_Watchdog}
+    \subitem {hal\_WD.c}, \hyperpage{322}
+    \subitem {hal\_WD.h}, \hyperpage{325}
+  \item {STATUS\_BIT\_CONNECTION}
+    \subitem {wifi.h}, \hyperpage{414}
+  \item {STATUS\_BIT\_IP\_ACQUIRED}
+    \subitem {wifi.h}, \hyperpage{414}
+  \item {STBY\_MODE}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {STORE\_DATA}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {STORE\_NEW\_PARAMS}
+    \subitem {STARPORTS\_App.h}, \hyperpage{395}
+  \item {SUCCESS\_ABP\_LORA}
+    \subitem {hal\_LORA.h}, \hyperpage{252}
+  \item {SUCCESS\_CONF\_TMP006}
+    \subitem {hal\_TMP006.h}, \hyperpage{306}
+  \item {SUCCESS\_CONNECT\_WIFI}
+    \subitem {wifi.h}, \hyperpage{413}
+  \item {SUCCESS\_OTAA\_LORA}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_RXDELAY1\_SET}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_SET\_DEVADDR}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_SET\_DNCTR}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_SET\_NWSKEY}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_SET\_PWRIDX}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_SET\_UPCTR}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_TX\_MAC\_RX}
+    \subitem {hal\_LORA.h}, \hyperpage{253}
+  \item {SUCCESS\_TX\_MAC\_TX}
+    \subitem {hal\_LORA.h}, \hyperpage{254}
+  \item {SYNC}
+    \subitem {ADXL355.h}, \hyperpage{28}
+  \item {Sys\_FactoryReset}
+    \subitem {hal\_LORA.c}, \hyperpage{228}
+    \subitem {hal\_LORA.h}, \hyperpage{270}
+  \item {Sys\_Sleep}
+    \subitem {hal\_LORA.c}, \hyperpage{229}
+    \subitem {hal\_LORA.h}, \hyperpage{271}
+
+  \indexspace
+
+  \item {T\_SB\_0p5}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_10}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_1000}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_125}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_20}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_250}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_500}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {T\_SB\_62p5}
+    \subitem {BME280.h}, \hyperpage{64}
+  \item {TEMP1}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {TEMP2}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {TEMP\_LSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {TEMP\_MSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {TEMP\_OFF}
+    \subitem {ADXL355.h}, \hyperpage{26}
+  \item {TEMP\_XLSB}
+    \subitem {BME280.h}, \hyperpage{63}
+  \item {THR\_HIGH\_LSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {THR\_HIGH\_MSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {THR\_LOW\_LSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {THR\_LOW\_MSB}
+    \subitem {LDC1000.h}, \hyperpage{342}
+  \item {TI\_DRIVERS\_UART\_DMA}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{93}
+  \item {TIMEOUT\_MS}
+    \subitem {STARPORTS\_App.c}, \hyperpage{378}
+  \item {timer0Callback}
+    \subitem {hal\_Timer.c}, \hyperpage{294}
+    \subitem {hal\_Timer.h}, \hyperpage{300}
+  \item {Timer0Event}
+    \subitem {hal\_Timer.c}, \hyperpage{296}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {timer1Callback}
+    \subitem {hal\_Timer.c}, \hyperpage{296}
+    \subitem {hal\_Timer.h}, \hyperpage{300}
+  \item {Timer1Event}
+    \subitem {hal\_Timer.c}, \hyperpage{296}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {Timer\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{100}
+  \item {Timer\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{100}
+  \item {timerCC3220SFHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{100}
+  \item {timerCC3220SFObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{100}
+  \item {TMP006\_Data}, \hyperpage{391}
+  \item {TMP006\_ID}
+    \subitem {STARPORTS\_App.h}, \hyperpage{393}
+  \item {TOD0}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {TOD1}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {TOD2}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {TOD3}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {Try\_Join\_Lora\_Gateway}
+    \subitem {hal\_LORA.c}, \hyperpage{229}
+    \subitem {hal\_LORA.h}, \hyperpage{272}
+  \item {Tx\_Cnf\_Lora}
+    \subitem {hal\_LORA.c}, \hyperpage{230}
+    \subitem {hal\_LORA.h}, \hyperpage{273}
+  \item {Tx\_Uncnf\_Lora}
+    \subitem {hal\_LORA.c}, \hyperpage{232}
+    \subitem {hal\_LORA.h}, \hyperpage{274}
+
+  \indexspace
+
+  \item {u20\_to\_s32}
+    \subitem {ADXL355.c}, \hyperpage{16}
+    \subitem {ADXL355.h}, \hyperpage{38}
+  \item {uart0}
+    \subitem {file\_system.c}, \hyperpage{150}
+    \subitem {hal\_LORA.c}, \hyperpage{234}
+    \subitem {hal\_UART.c}, \hyperpage{314}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{383}
+  \item {UART\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{101}
+  \item {UART\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{101}
+  \item {UART\_PRINT}
+    \subitem {hal\_UART.h}, \hyperpage{317}
+  \item {UART\_resetInputBuffer}
+    \subitem {hal\_UART.c}, \hyperpage{313}
+    \subitem {hal\_UART.h}, \hyperpage{321}
+  \item {uartCC3220SHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{101}
+  \item {uartCC3220SObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{101}
+  \item {uartCC3220SRingBuffer}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{102}
+  \item {udmaCC3220SHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{102}
+  \item {udmaCC3220SObject}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{102}
+  \item {UDMACC32XX\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{102}
+  \item {Uint8Array2Char}
+    \subitem {hal\_LORA.c}, \hyperpage{233}
+    \subitem {hal\_LORA.h}, \hyperpage{275}
+  \item {UPDATE}
+    \subitem {BME280.h}, \hyperpage{64}
+
+  \indexspace
+
+  \item {Vbat\_Data}, \hyperpage{391}
+  \item {VBAT\_ID}
+    \subitem {STARPORTS\_App.h}, \hyperpage{394}
+  \item {vsnprintf}
+    \subitem {hal\_UART.c}, \hyperpage{314}
+
+  \indexspace
+
+  \item {WAKEUP\_DIS\_MASK}
+    \subitem {LDC1000.h}, \hyperpage{346}
+  \item {WAKEUP\_EN}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {WakeupFromLPDS}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{94}
+    \subitem {STARPORTS\_App.c}, \hyperpage{382}
+  \item {Watchdog\_config}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{102}
+  \item {Watchdog\_count}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{102}
+  \item {watchdogCallback}
+    \subitem {hal\_WD.c}, \hyperpage{323}
+  \item {watchdogCC3220SHWAttrs}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{103}
+  \item {watchdogCC3220SObjects}
+    \subitem {CC3220SF\_STARPORTS.c}, \hyperpage{103}
+  \item {wd}
+    \subitem {Sensors.c}, \hyperpage{368}
+    \subitem {STARPORTS\_App.c}, \hyperpage{384}
+  \item {WDALMB0}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {WDALMB1}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {WDALMB2}
+    \subitem {DS1374.h}, \hyperpage{127}
+  \item {wifi.c}, \hyperpage{396}
+    \subitem {prepareDataFrame}, \hyperpage{398}
+    \subitem {sendUdpClient}, \hyperpage{398}
+    \subitem {SimpleLinkFatalErrorEventHandler}, \hyperpage{399}
+    \subitem {SimpleLinkGeneralEventHandler}, \hyperpage{400}
+    \subitem {SimpleLinkHttpServerEventHandler}, \hyperpage{400}
+    \subitem {SimpleLinkNetAppEventHandler}, \hyperpage{401}
+    \subitem {SimpleLinkNetAppRequestEventHandler}, \hyperpage{401}
+    \subitem {SimpleLinkNetAppRequestMemFreeEventHandler}, 
+		\hyperpage{401}
+    \subitem {SimpleLinkSocketTriggerEventHandler}, \hyperpage{402}
+    \subitem {SimpleLinkSockEventHandler}, \hyperpage{402}
+    \subitem {SimpleLinkWlanEventHandler}, \hyperpage{403}
+    \subitem {wlanConf}, \hyperpage{403}
+    \subitem {wlanConnect}, \hyperpage{404}
+    \subitem {wlanConnectFromFile}, \hyperpage{404}
+  \item {wifi.h}, \hyperpage{408}
+    \subitem {ASSERT\_ON\_ERROR}, \hyperpage{411}
+    \subitem {CLR\_STATUS\_BIT}, \hyperpage{411}
+    \subitem {DEST\_IP\_ADDR}, \hyperpage{411}
+    \subitem {e\_StatusBits}, \hyperpage{413}
+    \subitem {ERROR\_CONNECT\_WIFI}, \hyperpage{411}
+    \subitem {FRAME\_LENGTH}, \hyperpage{411}
+    \subitem {GET\_STATUS\_BIT}, \hyperpage{411}
+    \subitem {IS\_CONNECTED}, \hyperpage{411}
+    \subitem {IS\_IP\_ACQUIRED}, \hyperpage{412}
+    \subitem {LOOP\_FOREVER}, \hyperpage{412}
+    \subitem {NUM\_OF\_PKT}, \hyperpage{412}
+    \subitem {PORT}, \hyperpage{412}
+    \subitem {PORT\_UDP}, \hyperpage{412}
+    \subitem {PowerMeasure\_CB}, \hyperpage{421}
+    \subitem {prepareDataFrame}, \hyperpage{414}
+    \subitem {SECURITY\_KEY}, \hyperpage{412}
+    \subitem {SECURITY\_KEY\_FILE\_CONNECT}, \hyperpage{413}
+    \subitem {SECURITY\_TYPE}, \hyperpage{413}
+    \subitem {SERIALWIFI\_PORT}, \hyperpage{413}
+    \subitem {SET\_STATUS\_BIT}, \hyperpage{413}
+    \subitem {SimpleLinkFatalErrorEventHandler}, \hyperpage{414}
+    \subitem {SimpleLinkGeneralEventHandler}, \hyperpage{415}
+    \subitem {SimpleLinkHttpServerEventHandler}, \hyperpage{416}
+    \subitem {SimpleLinkNetAppEventHandler}, \hyperpage{416}
+    \subitem {SimpleLinkNetAppRequestEventHandler}, \hyperpage{417}
+    \subitem {SimpleLinkNetAppRequestMemFreeEventHandler}, 
+		\hyperpage{417}
+    \subitem {SimpleLinkSocketTriggerEventHandler}, \hyperpage{417}
+    \subitem {SimpleLinkSockEventHandler}, \hyperpage{418}
+    \subitem {SimpleLinkWlanEventHandler}, \hyperpage{418}
+    \subitem {SL\_SOCKET\_ERROR}, \hyperpage{413}
+    \subitem {SSID\_NAME}, \hyperpage{413}
+    \subitem {STATUS\_BIT\_CONNECTION}, \hyperpage{414}
+    \subitem {STATUS\_BIT\_IP\_ACQUIRED}, \hyperpage{414}
+    \subitem {SUCCESS\_CONNECT\_WIFI}, \hyperpage{413}
+    \subitem {wlanConf}, \hyperpage{419}
+    \subitem {wlanConnect}, \hyperpage{419}
+    \subitem {wlanConnectFromFile}, \hyperpage{420}
+  \item {wlanConf}
+    \subitem {wifi.c}, \hyperpage{403}
+    \subitem {wifi.h}, \hyperpage{419}
+  \item {wlanConnect}
+    \subitem {wifi.c}, \hyperpage{404}
+    \subitem {wifi.h}, \hyperpage{419}
+  \item {wlanConnectFromFile}
+    \subitem {wifi.c}, \hyperpage{404}
+    \subitem {wifi.h}, \hyperpage{420}
+  \item {writeChangeWakeUp}
+    \subitem {file\_system.c}, \hyperpage{142}
+    \subitem {file\_system.h}, \hyperpage{169}
+  \item {writeDnCntr}
+    \subitem {file\_system.c}, \hyperpage{143}
+    \subitem {file\_system.h}, \hyperpage{170}
+  \item {writeMode}
+    \subitem {file\_system.c}, \hyperpage{143}
+    \subitem {file\_system.h}, \hyperpage{171}
+  \item {writeNBoot}
+    \subitem {file\_system.c}, \hyperpage{144}
+    \subitem {file\_system.h}, \hyperpage{172}
+  \item {writeNCycles}
+    \subitem {file\_system.c}, \hyperpage{145}
+    \subitem {file\_system.h}, \hyperpage{172}
+  \item {writeNFails}
+    \subitem {file\_system.c}, \hyperpage{146}
+    \subitem {file\_system.h}, \hyperpage{173}
+  \item {writeNodeId}
+    \subitem {file\_system.c}, \hyperpage{147}
+    \subitem {file\_system.h}, \hyperpage{174}
+  \item {writeSSID}
+    \subitem {file\_system.c}, \hyperpage{147}
+    \subitem {file\_system.h}, \hyperpage{175}
+  \item {writeUpCntr}
+    \subitem {file\_system.c}, \hyperpage{148}
+    \subitem {file\_system.h}, \hyperpage{175}
+  \item {writeWakeUp}
+    \subitem {file\_system.c}, \hyperpage{149}
+    \subitem {file\_system.h}, \hyperpage{176}
+
+  \indexspace
+
+  \item {XDATA1}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {XDATA2}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {XDATA3}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {XIN}
+    \subitem {LDC1000.h}, \hyperpage{341}
+  \item {XIN\_XOUT}
+    \subitem {LDC1000.h}, \hyperpage{341}
+
+  \indexspace
+
+  \item {YDATA1}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {YDATA2}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {YDATA3}
+    \subitem {ADXL355.h}, \hyperpage{27}
+
+  \indexspace
+
+  \item {ZDATA1}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ZDATA2}
+    \subitem {ADXL355.h}, \hyperpage{27}
+  \item {ZDATA3}
+    \subitem {ADXL355.h}, \hyperpage{27}
+
+\end{theindex}

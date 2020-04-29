@@ -1,0 +1,808 @@
+\hypertarget{_b_m_e280_8c}{}\doxysubsection{B\+M\+E280.\+c File Reference}
+\label{_b_m_e280_8c}\index{BME280.c@{BME280.c}}
+
+
+Functions to configure and read data from B\+M\+E280 Pressure, Temperature and Humidity sensor.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+I2\+C.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}B\+M\+E280.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+S\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+I2\+C.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_add85dfdf89836b3dafae8dd5d2cd6daf_add85dfdf89836b3dafae8dd5d2cd6daf}{B\+M\+E280\+\_\+\+Dev\+Id}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Get Dev\+ID Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_b_m_e280_8c_af48821efcc92d4867071a19d81c20b8c_af48821efcc92d4867071a19d81c20b8c}{B\+M\+E280\+\_\+\+Read\+\_\+\+Calib}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$My\+Calib)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Calibration Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_a46a5f17ceb36ee7cf0776e0ab608cce7_a46a5f17ceb36ee7cf0776e0ab608cce7}{B\+M\+E280\+\_\+\+Read\+\_\+\+Config}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Configuration Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_ad6dcda421bc1e28829a9fa58319a7a50_ad6dcda421bc1e28829a9fa58319a7a50}{B\+M\+E280\+\_\+\+Read\+\_\+\+Ctrl\+\_\+\+Hum}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Control Humidity Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_af4e0f0c03df16b7a63bc1e16ef874cec_af4e0f0c03df16b7a63bc1e16ef874cec}{B\+M\+E280\+\_\+\+Read\+\_\+\+Ctrl\+\_\+\+Meas}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Control Measurement Function. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_aee71dade50eba9326ba15bde6eed0ecb_aee71dade50eba9326ba15bde6eed0ecb}{B\+M\+E280\+\_\+\+Read\+\_\+\+Humidity}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Humidity Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_ad5655bf8b974b22ac055aa263c72cabf_ad5655bf8b974b22ac055aa263c72cabf}{B\+M\+E280\+\_\+\+Read\+\_\+\+Pressure}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Pressure Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_adb58fb5343f76b29bf1350ab7a3d695e_adb58fb5343f76b29bf1350ab7a3d695e}{B\+M\+E280\+\_\+\+Read\+\_\+\+Status}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Status Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_a0a862a54d01a542fa1b32bc1225196d8_a0a862a54d01a542fa1b32bc1225196d8}{B\+M\+E280\+\_\+\+Read\+\_\+\+Temperature}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Read Temperature Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_b_m_e280_8c_ae8e4019c0de2cfd45375096814e36267_ae8e4019c0de2cfd45375096814e36267}{B\+M\+E280\+\_\+\+Reset}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Reset Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_b_m_e280_8c_aa1b7fd51e4532443d2e3fc8beb2b91a0_aa1b7fd51e4532443d2e3fc8beb2b91a0}{B\+M\+E280\+\_\+\+Write\+\_\+\+Config}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Write Configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_b_m_e280_8c_ab3c9940f8bc22407fae8e536ddd951b4_ab3c9940f8bc22407fae8e536ddd951b4}{B\+M\+E280\+\_\+\+Write\+\_\+\+Ctrl\+\_\+\+Hum}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Write Control Humidity Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_b_m_e280_8c_a375940da0de04f3f41e1d2fcdc758ab9_a375940da0de04f3f41e1d2fcdc758ab9}{B\+M\+E280\+\_\+\+Write\+\_\+\+Ctrl\+\_\+\+Meas}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Write Control Measurement Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_a29814b13a9b7922bb0e1a38b02e1a472_a29814b13a9b7922bb0e1a38b02e1a472}{compensate\+\_\+humidity}} (uint16\+\_\+t Humidity\+Uncomp, struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$My\+Calib)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Compensate Humidity Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_ae2b119e0664e05c67a512d438f4dab6f_ae2b119e0664e05c67a512d438f4dab6f}{compensate\+\_\+pressure}} (uint32\+\_\+t Pressure\+Uncomp, struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$My\+Calib)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Compensate pressure Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{_b_m_e280_8c_a40ba042f01150017affc3724a9fde4d1_a40ba042f01150017affc3724a9fde4d1}{compensate\+\_\+temperature}} (uint32\+\_\+t Temperature\+Uncomp, struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$My\+Calib)
+\begin{DoxyCompactList}\small\item\em B\+M\+E280 Compensate temperature Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to configure and read data from B\+M\+E280 Pressure, Temperature and Humidity sensor. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @title B\+M\+E280 Pressure, Temperature and Humidity sensor functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{_b_m_e280_8c_add85dfdf89836b3dafae8dd5d2cd6daf_add85dfdf89836b3dafae8dd5d2cd6daf}\label{_b_m_e280_8c_add85dfdf89836b3dafae8dd5d2cd6daf_add85dfdf89836b3dafae8dd5d2cd6daf}} 
+\index{BME280.c@{BME280.c}!BME280\_DevId@{BME280\_DevId}}
+\index{BME280\_DevId@{BME280\_DevId}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_DevId()}{BME280\_DevId()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+M\+E280\+\_\+\+Dev\+Id (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Get Dev\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Dev\+ID from B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer D\+E\+V\+ID 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00056}{56}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056                                      \{}
+\DoxyCodeLine{00057 }
+\DoxyCodeLine{00058     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a18a3f99c8f0936384fbb035e09fd1b72}{DEVID}}, RxBuffer, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00061     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_af48821efcc92d4867071a19d81c20b8c_af48821efcc92d4867071a19d81c20b8c}\label{_b_m_e280_8c_af48821efcc92d4867071a19d81c20b8c_af48821efcc92d4867071a19d81c20b8c}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Calib@{BME280\_Read\_Calib}}
+\index{BME280\_Read\_Calib@{BME280\_Read\_Calib}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Calib()}{BME280\_Read\_Calib()}}
+{\footnotesize\ttfamily void B\+M\+E280\+\_\+\+Read\+\_\+\+Calib (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$}]{My\+Calib }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Calibration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads calibration register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$\+My\+Calib pointer to B\+M\+E280 calibration data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00214}{214}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00214                                                                           \{}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{00216     uint8\_t RxBuffer00[\mbox{\hyperlink{_b_m_e280_8h_a68d9ffede164fc1fd26be97dc11cdc80_a68d9ffede164fc1fd26be97dc11cdc80}{CALIB00\_NDATA}}+1];}
+\DoxyCodeLine{00217     uint8\_t RxBuffer26[\mbox{\hyperlink{_b_m_e280_8h_a7d141e51976b1437a6d130c714494d07_a7d141e51976b1437a6d130c714494d07}{CALIB26\_NDATA}}+1];}
+\DoxyCodeLine{00218 }
+\DoxyCodeLine{00219     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a22f436c3d90edca906d7a4f4308796f5}{CALIB00}}, RxBuffer00, \mbox{\hyperlink{_b_m_e280_8h_a68d9ffede164fc1fd26be97dc11cdc80_a68d9ffede164fc1fd26be97dc11cdc80}{CALIB00\_NDATA}}, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00220     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a3bc326ef7d70d007b7c5cf9da2e5d215}{CALIB26}}, RxBuffer26, \mbox{\hyperlink{_b_m_e280_8h_a7d141e51976b1437a6d130c714494d07_a7d141e51976b1437a6d130c714494d07}{CALIB26\_NDATA}}, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a730ed166c629bded674b13faffe9cef7}{dig\_T1}} = (RxBuffer00[1] + (RxBuffer00[2]<<8));}
+\DoxyCodeLine{00223     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ab5c023a004c0497ba616d916155c85bb}{dig\_T2}} = (RxBuffer00[3] + (RxBuffer00[4]<<8));}
+\DoxyCodeLine{00224     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a9536e89c30bbd791153ac9e407b0752b}{dig\_T3}} = (RxBuffer00[5] + (RxBuffer00[6]<<8));}
+\DoxyCodeLine{00225 }
+\DoxyCodeLine{00226 }
+\DoxyCodeLine{00227     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a14cb8cb6405f1dbd7b96eacb1564f3ac}{dig\_P1}} = (RxBuffer00[7] + (RxBuffer00[8]<<8));}
+\DoxyCodeLine{00228     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_abf2720ad17acc224ed28e66ec3de32ed}{dig\_P2}} = (RxBuffer00[9] + (RxBuffer00[10]<<8));}
+\DoxyCodeLine{00229     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a16db1b4967cfd3dc34219d8fb8c92aeb}{dig\_P3}} = (RxBuffer00[11] + (RxBuffer00[12]<<8));}
+\DoxyCodeLine{00230     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a9c7db64a28b0e240d0478921741dd67d}{dig\_P4}} = (RxBuffer00[13] + (RxBuffer00[14]<<8));}
+\DoxyCodeLine{00231     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a7e509836d7ae0753ceaaed354b5e1479}{dig\_P5}} = (RxBuffer00[15] + (RxBuffer00[16]<<8));}
+\DoxyCodeLine{00232     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a2ae5570c6daeda1d3666ed3dad96c4b7}{dig\_P6}} = (RxBuffer00[17] + (RxBuffer00[18]<<8));}
+\DoxyCodeLine{00233     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a7f3c3b4bc3acd51c35229dd2cc50a3d6}{dig\_P7}} = (RxBuffer00[19] + (RxBuffer00[20]<<8));}
+\DoxyCodeLine{00234     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a40493b036281e2b5fdfdf1776fe4708a}{dig\_P8}} = (RxBuffer00[21] + (RxBuffer00[22]<<8));}
+\DoxyCodeLine{00235     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a361620dc95ad1d56b5d416d9d290c5f4}{dig\_P9}} = (RxBuffer00[23] + (RxBuffer00[24]<<8));}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ab6831026acb31363bd718b8b1a2f218c}{dig\_H1}} = RxBuffer00[26];}
+\DoxyCodeLine{00238     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_abff9dfb62aedc1dd0e09964fcb094a64}{dig\_H2}} = RxBuffer26[1] + (RxBuffer26[2]<<8);}
+\DoxyCodeLine{00239     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ac1a635c5bcd297a77c2a4f37ad40ffe2}{dig\_H3}} = RxBuffer26[3];}
+\DoxyCodeLine{00240     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ae8e11154607c765a32d50b0f6eb79173}{dig\_H4}} = (RxBuffer26[4]<<4) + (RxBuffer26[5] \& 0x0F);}
+\DoxyCodeLine{00241     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a2204ac6048b2f973569a4093e22602cd}{dig\_H5}} = ((RxBuffer26[5]>>4) \& 0x0F) + (RxBuffer26[6]<<4);}
+\DoxyCodeLine{00242     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_af3578a0c868e8df7ec7ef9b8b7d295a6}{dig\_H6}} = RxBuffer26[7];}
+\DoxyCodeLine{00243 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_a46a5f17ceb36ee7cf0776e0ab608cce7_a46a5f17ceb36ee7cf0776e0ab608cce7}\label{_b_m_e280_8c_a46a5f17ceb36ee7cf0776e0ab608cce7_a46a5f17ceb36ee7cf0776e0ab608cce7}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Config@{BME280\_Read\_Config}}
+\index{BME280\_Read\_Config@{BME280\_Read\_Config}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Config()}{BME280\_Read\_Config()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Config (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Configuration register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00171}{171}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171                                            \{}
+\DoxyCodeLine{00172 }
+\DoxyCodeLine{00173     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a702582f7f825ca83bdb076b15b4c0fc2}{CONFIG}}, RxBuffer, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00178 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_ad6dcda421bc1e28829a9fa58319a7a50_ad6dcda421bc1e28829a9fa58319a7a50}\label{_b_m_e280_8c_ad6dcda421bc1e28829a9fa58319a7a50_ad6dcda421bc1e28829a9fa58319a7a50}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Ctrl\_Hum@{BME280\_Read\_Ctrl\_Hum}}
+\index{BME280\_Read\_Ctrl\_Hum@{BME280\_Read\_Ctrl\_Hum}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Ctrl\_Hum()}{BME280\_Read\_Ctrl\_Hum()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Ctrl\+\_\+\+Hum (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Control Humidity Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads control humidity register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer Humidity value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00094}{94}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094                                              \{}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a27d3166b049f4c615e0ab5b246b150e5}{CTRL\_HUM}}, RxBuffer, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00099     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00100 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_af4e0f0c03df16b7a63bc1e16ef874cec_af4e0f0c03df16b7a63bc1e16ef874cec}\label{_b_m_e280_8c_af4e0f0c03df16b7a63bc1e16ef874cec_af4e0f0c03df16b7a63bc1e16ef874cec}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Ctrl\_Meas@{BME280\_Read\_Ctrl\_Meas}}
+\index{BME280\_Read\_Ctrl\_Meas@{BME280\_Read\_Ctrl\_Meas}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Ctrl\_Meas()}{BME280\_Read\_Ctrl\_Meas()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Ctrl\+\_\+\+Meas (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Control Measurement Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads control measurement register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00132}{132}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132                                               \{}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a8556ae8c6cbb14d128cbd3fad7b70b81}{CTRL\_MEAS}}, RxBuffer, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00139 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_aee71dade50eba9326ba15bde6eed0ecb_aee71dade50eba9326ba15bde6eed0ecb}\label{_b_m_e280_8c_aee71dade50eba9326ba15bde6eed0ecb_aee71dade50eba9326ba15bde6eed0ecb}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Humidity@{BME280\_Read\_Humidity}}
+\index{BME280\_Read\_Humidity@{BME280\_Read\_Humidity}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Humidity()}{BME280\_Read\_Humidity()}}
+{\footnotesize\ttfamily uint16\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Humidity (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Humidity Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Humidity register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t Humidity 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00280}{280}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280                                               \{}
+\DoxyCodeLine{00281 }
+\DoxyCodeLine{00282     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00283     uint16\_t Humidity;}
+\DoxyCodeLine{00284     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25af83d0a3cca23fe58debc2cc00504a1a6}{HUM\_MSB}}, RxBuffer, 2, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00285 }
+\DoxyCodeLine{00286     Humidity = (RxBuffer[1]<<8) + RxBuffer[2];}
+\DoxyCodeLine{00287 }
+\DoxyCodeLine{00288     \textcolor{keywordflow}{return} Humidity;}
+\DoxyCodeLine{00289 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_ad5655bf8b974b22ac055aa263c72cabf_ad5655bf8b974b22ac055aa263c72cabf}\label{_b_m_e280_8c_ad5655bf8b974b22ac055aa263c72cabf_ad5655bf8b974b22ac055aa263c72cabf}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Pressure@{BME280\_Read\_Pressure}}
+\index{BME280\_Read\_Pressure@{BME280\_Read\_Pressure}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Pressure()}{BME280\_Read\_Pressure()}}
+{\footnotesize\ttfamily uint32\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Pressure (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Pressure Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads pressure register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Pressure 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00257}{257}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00257                                               \{}
+\DoxyCodeLine{00258 }
+\DoxyCodeLine{00259     uint8\_t RxBuffer[4];}
+\DoxyCodeLine{00260     uint32\_t Pressure;}
+\DoxyCodeLine{00261     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a131bf74049750e57d5c020f8739d9df7}{PRESS\_MSB}}, RxBuffer, 3, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00262 }
+\DoxyCodeLine{00263     Pressure = ((RxBuffer[1]<<12) + (RxBuffer[2]<<4) + (RxBuffer[3]>>4));}
+\DoxyCodeLine{00264 }
+\DoxyCodeLine{00265     \textcolor{keywordflow}{return} Pressure;}
+\DoxyCodeLine{00266 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_adb58fb5343f76b29bf1350ab7a3d695e_adb58fb5343f76b29bf1350ab7a3d695e}\label{_b_m_e280_8c_adb58fb5343f76b29bf1350ab7a3d695e_adb58fb5343f76b29bf1350ab7a3d695e}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Status@{BME280\_Read\_Status}}
+\index{BME280\_Read\_Status@{BME280\_Read\_Status}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Status()}{BME280\_Read\_Status()}}
+{\footnotesize\ttfamily uint8\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Status (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Status Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Status register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00192}{192}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00192                                            \{}
+\DoxyCodeLine{00193 }
+\DoxyCodeLine{00194     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a0302745e0c67905a8e247f21145390b9}{BME280\_STATUS}}, RxBuffer, 1, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00197 }
+\DoxyCodeLine{00198     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00199 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_a0a862a54d01a542fa1b32bc1225196d8_a0a862a54d01a542fa1b32bc1225196d8}\label{_b_m_e280_8c_a0a862a54d01a542fa1b32bc1225196d8_a0a862a54d01a542fa1b32bc1225196d8}} 
+\index{BME280.c@{BME280.c}!BME280\_Read\_Temperature@{BME280\_Read\_Temperature}}
+\index{BME280\_Read\_Temperature@{BME280\_Read\_Temperature}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Read\_Temperature()}{BME280\_Read\_Temperature()}}
+{\footnotesize\ttfamily uint32\+\_\+t B\+M\+E280\+\_\+\+Read\+\_\+\+Temperature (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Read Temperature Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads Temperature register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t Temperature 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00303}{303}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00303                                                  \{}
+\DoxyCodeLine{00304 }
+\DoxyCodeLine{00305     uint8\_t RxBuffer[4];}
+\DoxyCodeLine{00306     uint32\_t Temperature;}
+\DoxyCodeLine{00307     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a9ae17b2f45accac1efaef39ba60aa7b2}{TEMP\_MSB}}, RxBuffer, 3, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309     Temperature = ((RxBuffer[1]<<12) + (RxBuffer[2]<<4) + (RxBuffer[3]>>4));}
+\DoxyCodeLine{00310 }
+\DoxyCodeLine{00311     \textcolor{keywordflow}{return} Temperature;}
+\DoxyCodeLine{00312 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_ae8e4019c0de2cfd45375096814e36267_ae8e4019c0de2cfd45375096814e36267}\label{_b_m_e280_8c_ae8e4019c0de2cfd45375096814e36267_ae8e4019c0de2cfd45375096814e36267}} 
+\index{BME280.c@{BME280.c}!BME280\_Reset@{BME280\_Reset}}
+\index{BME280\_Reset@{BME280\_Reset}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Reset()}{BME280\_Reset()}}
+{\footnotesize\ttfamily void B\+M\+E280\+\_\+\+Reset (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Reset Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Resets B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00039}{39}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039                                   \{}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a88dd60ce3600b4b2cfa59c975dfa5593}{BME280\_RESET\_REG}}, \mbox{\hyperlink{_b_m_e280_8h_a50142b9d1cc5093e80488ff8419febb5_a50142b9d1cc5093e80488ff8419febb5}{BME280\_RESET}}, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_aa1b7fd51e4532443d2e3fc8beb2b91a0_aa1b7fd51e4532443d2e3fc8beb2b91a0}\label{_b_m_e280_8c_aa1b7fd51e4532443d2e3fc8beb2b91a0_aa1b7fd51e4532443d2e3fc8beb2b91a0}} 
+\index{BME280.c@{BME280.c}!BME280\_Write\_Config@{BME280\_Write\_Config}}
+\index{BME280\_Write\_Config@{BME280\_Write\_Config}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Write\_Config()}{BME280\_Write\_Config()}}
+{\footnotesize\ttfamily void B\+M\+E280\+\_\+\+Write\+\_\+\+Config (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Write Configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes Configuration register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00154}{154}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00154                                                       \{}
+\DoxyCodeLine{00155 }
+\DoxyCodeLine{00156     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a702582f7f825ca83bdb076b15b4c0fc2}{CONFIG}}, Val, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00157 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_ab3c9940f8bc22407fae8e536ddd951b4_ab3c9940f8bc22407fae8e536ddd951b4}\label{_b_m_e280_8c_ab3c9940f8bc22407fae8e536ddd951b4_ab3c9940f8bc22407fae8e536ddd951b4}} 
+\index{BME280.c@{BME280.c}!BME280\_Write\_Ctrl\_Hum@{BME280\_Write\_Ctrl\_Hum}}
+\index{BME280\_Write\_Ctrl\_Hum@{BME280\_Write\_Ctrl\_Hum}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Write\_Ctrl\_Hum()}{BME280\_Write\_Ctrl\_Hum()}}
+{\footnotesize\ttfamily void B\+M\+E280\+\_\+\+Write\+\_\+\+Ctrl\+\_\+\+Hum (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Write Control Humidity Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes control humidity register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00076}{76}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076                                                         \{}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a27d3166b049f4c615e0ab5b246b150e5}{CTRL\_HUM}}, Val, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00080 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_a375940da0de04f3f41e1d2fcdc758ab9_a375940da0de04f3f41e1d2fcdc758ab9}\label{_b_m_e280_8c_a375940da0de04f3f41e1d2fcdc758ab9_a375940da0de04f3f41e1d2fcdc758ab9}} 
+\index{BME280.c@{BME280.c}!BME280\_Write\_Ctrl\_Meas@{BME280\_Write\_Ctrl\_Meas}}
+\index{BME280\_Write\_Ctrl\_Meas@{BME280\_Write\_Ctrl\_Meas}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{BME280\_Write\_Ctrl\_Meas()}{BME280\_Write\_Ctrl\_Meas()}}
+{\footnotesize\ttfamily void B\+M\+E280\+\_\+\+Write\+\_\+\+Ctrl\+\_\+\+Meas (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Write Control Measurement Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes control measurement register on B\+M\+E280 sensor
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00115}{115}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115                                                          \{}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_ac389928ecbbfcf3d6ae403d65a4f9d25_ac389928ecbbfcf3d6ae403d65a4f9d25a8556ae8c6cbb14d128cbd3fad7b70b81}{CTRL\_MEAS}}, Val, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00118 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_a29814b13a9b7922bb0e1a38b02e1a472_a29814b13a9b7922bb0e1a38b02e1a472}\label{_b_m_e280_8c_a29814b13a9b7922bb0e1a38b02e1a472_a29814b13a9b7922bb0e1a38b02e1a472}} 
+\index{BME280.c@{BME280.c}!compensate\_humidity@{compensate\_humidity}}
+\index{compensate\_humidity@{compensate\_humidity}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{compensate\_humidity()}{compensate\_humidity()}}
+{\footnotesize\ttfamily uint32\+\_\+t compensate\+\_\+humidity (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Humidity\+Uncomp,  }\item[{struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$}]{My\+Calib }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Compensate Humidity Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Compensates the value of the humidity read from the B\+M\+E280 registers \begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{_b_m_e280_8c_a29814b13a9b7922bb0e1a38b02e1a472_a29814b13a9b7922bb0e1a38b02e1a472}{compensate\+\_\+humidity()}} has been called 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & Humidity\+Uncomp Uncompensated value of Humidity as read from the B\+M\+E280 registers \\
+\hline
+\mbox{\texttt{ in}}  & {\em struct} & \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} Pointer to an struct that holds the calibration values of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t humidity Returns the compensated humidity value in units 1024 $\ast$ relative humidity 
+\end{DoxyReturn}
+
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00329}{329}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00329                                                                                          \{}
+\DoxyCodeLine{00330     int32\_t var1;}
+\DoxyCodeLine{00331     int32\_t var2;}
+\DoxyCodeLine{00332     int32\_t var3;}
+\DoxyCodeLine{00333     int32\_t var4;}
+\DoxyCodeLine{00334     int32\_t var5;}
+\DoxyCodeLine{00335     uint32\_t humidity;}
+\DoxyCodeLine{00336     uint32\_t humidity\_max = 102400;}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338     var1 = MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ac1f0d71206317758c70cd96314b6fc02}{t\_fine}} -\/ ((int32\_t)76800);}
+\DoxyCodeLine{00339     var2 = (int32\_t)(HumidityUncomp * 16384);}
+\DoxyCodeLine{00340     var3 = (int32\_t)(((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ae8e11154607c765a32d50b0f6eb79173}{dig\_H4}}) * 1048576);}
+\DoxyCodeLine{00341     var4 = ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a2204ac6048b2f973569a4093e22602cd}{dig\_H5}}) * var1;}
+\DoxyCodeLine{00342     var5 = (((var2 -\/ var3) -\/ var4) + (int32\_t)16384) / 32768;}
+\DoxyCodeLine{00343     var2 = (var1 * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_af3578a0c868e8df7ec7ef9b8b7d295a6}{dig\_H6}})) / 1024;}
+\DoxyCodeLine{00344     var3 = (var1 * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ac1a635c5bcd297a77c2a4f37ad40ffe2}{dig\_H3}})) / 2048;}
+\DoxyCodeLine{00345     var4 = ((var2 * (var3 + (int32\_t)32768)) / 1024) + (int32\_t)2097152;}
+\DoxyCodeLine{00346     var2 = ((var4 * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_abff9dfb62aedc1dd0e09964fcb094a64}{dig\_H2}})) + 8192) / 16384;}
+\DoxyCodeLine{00347     var3 = var5 * var2;}
+\DoxyCodeLine{00348     var4 = ((var3 / 32768) * (var3 / 32768)) / 128;}
+\DoxyCodeLine{00349     var5 = var3 -\/ ((var4 * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ab6831026acb31363bd718b8b1a2f218c}{dig\_H1}})) / 16);}
+\DoxyCodeLine{00350     var5 = (var5 < 0 ? 0 : var5);}
+\DoxyCodeLine{00351     var5 = (var5 > 419430400 ? 419430400 : var5);}
+\DoxyCodeLine{00352     humidity = (uint32\_t)(var5 / 4096);}
+\DoxyCodeLine{00353     \textcolor{keywordflow}{if} (humidity > humidity\_max)}
+\DoxyCodeLine{00354     \{}
+\DoxyCodeLine{00355         humidity = humidity\_max;}
+\DoxyCodeLine{00356     \}}
+\DoxyCodeLine{00357 }
+\DoxyCodeLine{00358     \textcolor{keywordflow}{return} humidity;}
+\DoxyCodeLine{00359 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_ae2b119e0664e05c67a512d438f4dab6f_ae2b119e0664e05c67a512d438f4dab6f}\label{_b_m_e280_8c_ae2b119e0664e05c67a512d438f4dab6f_ae2b119e0664e05c67a512d438f4dab6f}} 
+\index{BME280.c@{BME280.c}!compensate\_pressure@{compensate\_pressure}}
+\index{compensate\_pressure@{compensate\_pressure}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{compensate\_pressure()}{compensate\_pressure()}}
+{\footnotesize\ttfamily uint32\+\_\+t compensate\+\_\+pressure (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Pressure\+Uncomp,  }\item[{struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$}]{My\+Calib }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Compensate pressure Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Compensates the value of the pressure read from the B\+M\+E280 registers
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{_b_m_e280_8c_ae2b119e0664e05c67a512d438f4dab6f_ae2b119e0664e05c67a512d438f4dab6f}{compensate\+\_\+pressure()}} has been called 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & Pressure\+Uncomp Uncompensated value of Pressure as read from the B\+M\+E280 registers \\
+\hline
+\mbox{\texttt{ in}}  & {\em struct} & \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} Pointer to an struct that holds the calibration values of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t pressure Returns the compensated pressure value in units of Pascals 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00414}{414}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00415 \{}
+\DoxyCodeLine{00416     int32\_t var1;}
+\DoxyCodeLine{00417     int32\_t var2;}
+\DoxyCodeLine{00418     int32\_t var3;}
+\DoxyCodeLine{00419     int32\_t var4;}
+\DoxyCodeLine{00420     uint32\_t var5;}
+\DoxyCodeLine{00421     uint32\_t pressure;}
+\DoxyCodeLine{00422     uint32\_t pressure\_min = 30000;}
+\DoxyCodeLine{00423     uint32\_t pressure\_max = 110000;}
+\DoxyCodeLine{00424 }
+\DoxyCodeLine{00425     var1 = (((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ac1f0d71206317758c70cd96314b6fc02}{t\_fine}}) / 2) -\/ (int32\_t)64000;}
+\DoxyCodeLine{00426     var2 = (((var1 / 4) * (var1 / 4)) / 2048) * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a2ae5570c6daeda1d3666ed3dad96c4b7}{dig\_P6}});}
+\DoxyCodeLine{00427     var2 = var2 + ((var1 * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a7e509836d7ae0753ceaaed354b5e1479}{dig\_P5}})) * 2);}
+\DoxyCodeLine{00428     var2 = (var2 / 4) + (((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a9c7db64a28b0e240d0478921741dd67d}{dig\_P4}}) * 65536);}
+\DoxyCodeLine{00429     var3 = (MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a16db1b4967cfd3dc34219d8fb8c92aeb}{dig\_P3}} * (((var1 / 4) * (var1 / 4)) / 8192)) / 8;}
+\DoxyCodeLine{00430     var4 = (((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_abf2720ad17acc224ed28e66ec3de32ed}{dig\_P2}}) * var1) / 2;}
+\DoxyCodeLine{00431     var1 = (var3 + var4) / 262144;}
+\DoxyCodeLine{00432     var1 = (((32768 + var1)) * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a14cb8cb6405f1dbd7b96eacb1564f3ac}{dig\_P1}})) / 32768;}
+\DoxyCodeLine{00433 }
+\DoxyCodeLine{00434     \textcolor{comment}{/* avoid exception caused by division by zero */}}
+\DoxyCodeLine{00435     \textcolor{keywordflow}{if} (var1)}
+\DoxyCodeLine{00436     \{}
+\DoxyCodeLine{00437         var5 = (uint32\_t)((uint32\_t)1048576) -\/ PressureUncomp;}
+\DoxyCodeLine{00438         pressure = ((uint32\_t)(var5 -\/ (uint32\_t)(var2 / 4096))) * 3125;}
+\DoxyCodeLine{00439         \textcolor{keywordflow}{if} (pressure < 0x80000000)}
+\DoxyCodeLine{00440         \{}
+\DoxyCodeLine{00441             pressure = (pressure << 1) / ((uint32\_t)var1);}
+\DoxyCodeLine{00442         \}}
+\DoxyCodeLine{00443         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00444         \{}
+\DoxyCodeLine{00445             pressure = (pressure / (uint32\_t)var1) * 2;}
+\DoxyCodeLine{00446         \}}
+\DoxyCodeLine{00447         var1 = (((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a361620dc95ad1d56b5d416d9d290c5f4}{dig\_P9}}) * ((int32\_t)(((pressure / 8) * (pressure / 8)) / 8192))) / 4096;}
+\DoxyCodeLine{00448         var2 = (((int32\_t)(pressure / 4)) * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a40493b036281e2b5fdfdf1776fe4708a}{dig\_P8}})) / 8192;}
+\DoxyCodeLine{00449         pressure = (uint32\_t)((int32\_t)pressure + ((var1 + var2 + MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a7f3c3b4bc3acd51c35229dd2cc50a3d6}{dig\_P7}}) / 16));}
+\DoxyCodeLine{00450         \textcolor{keywordflow}{if} (pressure < pressure\_min)}
+\DoxyCodeLine{00451         \{}
+\DoxyCodeLine{00452             pressure = pressure\_min;}
+\DoxyCodeLine{00453         \}}
+\DoxyCodeLine{00454         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pressure > pressure\_max)}
+\DoxyCodeLine{00455         \{}
+\DoxyCodeLine{00456             pressure = pressure\_max;}
+\DoxyCodeLine{00457         \}}
+\DoxyCodeLine{00458     \}}
+\DoxyCodeLine{00459     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00460     \{}
+\DoxyCodeLine{00461         pressure = pressure\_min;}
+\DoxyCodeLine{00462     \}}
+\DoxyCodeLine{00463 }
+\DoxyCodeLine{00464     \textcolor{keywordflow}{return} pressure;}
+\DoxyCodeLine{00465 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_b_m_e280_8c_a40ba042f01150017affc3724a9fde4d1_a40ba042f01150017affc3724a9fde4d1}\label{_b_m_e280_8c_a40ba042f01150017affc3724a9fde4d1_a40ba042f01150017affc3724a9fde4d1}} 
+\index{BME280.c@{BME280.c}!compensate\_temperature@{compensate\_temperature}}
+\index{compensate\_temperature@{compensate\_temperature}!BME280.c@{BME280.c}}
+\doxyparagraph{\texorpdfstring{compensate\_temperature()}{compensate\_temperature()}}
+{\footnotesize\ttfamily int32\+\_\+t compensate\+\_\+temperature (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Temperature\+Uncomp,  }\item[{struct \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} $\ast$}]{My\+Calib }\end{DoxyParamCaption})}
+
+
+
+B\+M\+E280 Compensate temperature Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Compensates the value of the temperature read from the B\+M\+E280 registers
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{_b_m_e280_8c_a40ba042f01150017affc3724a9fde4d1_a40ba042f01150017affc3724a9fde4d1}{compensate\+\_\+temperature()}} has been called 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & Temperature\+Uncomp Uncompensated value of Temperature as read from the B\+M\+E280 registers \\
+\hline
+\mbox{\texttt{ in}}  & {\em struct} & \mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\+\_\+calib\+\_\+data}} Pointer to an struct that holds the calibration values of the sensor\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint32\+\_\+t temperature Returns the compensated temperature value in units 100 $\ast$ ºC 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_b_m_e280_8c_source_l00375}{375}} of file \mbox{\hyperlink{_b_m_e280_8c_source}{B\+M\+E280.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00375                                                                                               \{}
+\DoxyCodeLine{00376     int32\_t var1;}
+\DoxyCodeLine{00377     int32\_t var2;}
+\DoxyCodeLine{00378     int32\_t temperature;}
+\DoxyCodeLine{00379     int32\_t temperature\_min = -\/4000;}
+\DoxyCodeLine{00380     int32\_t temperature\_max = 8500;}
+\DoxyCodeLine{00381 }
+\DoxyCodeLine{00382     var1 = (int32\_t)((TemperatureUncomp / 8) -\/ ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a730ed166c629bded674b13faffe9cef7}{dig\_T1}} * 2));}
+\DoxyCodeLine{00383     var1 = (var1 * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ab5c023a004c0497ba616d916155c85bb}{dig\_T2}})) / 2048;}
+\DoxyCodeLine{00384     var2 = (int32\_t)((TemperatureUncomp / 16) -\/ ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a730ed166c629bded674b13faffe9cef7}{dig\_T1}}));}
+\DoxyCodeLine{00385     var2 = (((var2 * var2) / 4096) * ((int32\_t)MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_a9536e89c30bbd791153ac9e407b0752b}{dig\_T3}})) / 16384;}
+\DoxyCodeLine{00386     MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ac1f0d71206317758c70cd96314b6fc02}{t\_fine}} = var1 + var2;}
+\DoxyCodeLine{00387     temperature = (MyCalib-\/>\mbox{\hyperlink{_b_m_e280_8h_ac1f0d71206317758c70cd96314b6fc02}{t\_fine}} * 5 + 128) / 256;}
+\DoxyCodeLine{00388     \textcolor{keywordflow}{if} (temperature < temperature\_min)}
+\DoxyCodeLine{00389     \{}
+\DoxyCodeLine{00390         temperature = temperature\_min;}
+\DoxyCodeLine{00391     \}}
+\DoxyCodeLine{00392     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (temperature > temperature\_max)}
+\DoxyCodeLine{00393     \{}
+\DoxyCodeLine{00394         temperature = temperature\_max;}
+\DoxyCodeLine{00395     \}}
+\DoxyCodeLine{00396 }
+\DoxyCodeLine{00397     \textcolor{keywordflow}{return} temperature;}
+\DoxyCodeLine{00398 \}}
+
+\end{DoxyCode}

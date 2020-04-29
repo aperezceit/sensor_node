@@ -1,0 +1,371 @@
+\hypertarget{hal___u_a_r_t_8h}{}\doxysubsection{hal\+\_\+\+U\+A\+R\+T.\+h File Reference}
+\label{hal___u_a_r_t_8h}\index{hal\_UART.h@{hal\_UART.h}}
+
+
+Functions to manage U\+A\+RT on C\+C3220\+SF.  
+
+
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+U\+A\+R\+T.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hal___u_a_r_t_8h_a645914093900a228e69cd3f55a2cc4c7_a645914093900a228e69cd3f55a2cc4c7}{E\+R\+R\+\_\+\+P\+R\+I\+NT}}(x)
+\item 
+\#define \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{U\+A\+R\+T\+\_\+\+P\+R\+I\+NT}}~\mbox{\hyperlink{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{Report}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___u_a_r_t_8h_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{Get\+Line\+\_\+\+U\+A\+RT}} (U\+A\+R\+T\+\_\+\+Handle uart, unsigned char $\ast$buf)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Get line Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal___u_a_r_t_8h_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Message Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal___u_a_r_t_8h_a6351d8706733262e7e325926b1a9aab7_a6351d8706733262e7e325926b1a9aab7}{putch}} (char ch)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Putch Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{Report}} (const char $\ast$pc\+Format,...)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Report Function. \end{DoxyCompactList}\item 
+U\+A\+R\+T\+\_\+\+Handle \mbox{\hyperlink{hal___u_a_r_t_8h_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}{Startup\+\_\+\+U\+A\+RT}} (uint\+\_\+least8\+\_\+t index, uint32\+\_\+t baud\+Rate)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Start up Function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{hal___u_a_r_t_8h_abe10d1e7099ff1c4326f31a022024470_abe10d1e7099ff1c4326f31a022024470}{U\+A\+R\+T\+\_\+reset\+Input\+Buffer}} (U\+A\+R\+T\+\_\+\+Handle h\+Uart)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Reset input buffer Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to manage U\+A\+RT on C\+C3220\+SF. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle U\+A\+RT management functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___u_a_r_t_8h_source}{hal\+\_\+\+U\+A\+R\+T.\+h}}.
+
+
+
+\doxysubsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_a645914093900a228e69cd3f55a2cc4c7_a645914093900a228e69cd3f55a2cc4c7}\label{hal___u_a_r_t_8h_a645914093900a228e69cd3f55a2cc4c7_a645914093900a228e69cd3f55a2cc4c7}} 
+\index{hal\_UART.h@{hal\_UART.h}!ERR\_PRINT@{ERR\_PRINT}}
+\index{ERR\_PRINT@{ERR\_PRINT}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{ERR\_PRINT}{ERR\_PRINT}}
+{\footnotesize\ttfamily \#define E\+R\+R\+\_\+\+P\+R\+I\+NT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                \mbox{\hyperlink{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{Report}}(\textcolor{stringliteral}{"Error [\%d] at line [\%d] in function [\%s]  \(\backslash\)n\(\backslash\)r"},\(\backslash\)}
+\DoxyCodeLine{                                                                x, \_\_LINE\_\_, \(\backslash\)}
+\DoxyCodeLine{                                                                 \_\_FUNCTION\_\_)}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8h_source_l00023}{23}} of file \mbox{\hyperlink{hal___u_a_r_t_8h_source}{hal\+\_\+\+U\+A\+R\+T.\+h}}.
+
+\mbox{\Hypertarget{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}\label{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}} 
+\index{hal\_UART.h@{hal\_UART.h}!UART\_PRINT@{UART\_PRINT}}
+\index{UART\_PRINT@{UART\_PRINT}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{UART\_PRINT}{UART\_PRINT}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+P\+R\+I\+NT~\mbox{\hyperlink{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{Report}}}
+
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8h_source_l00022}{22}} of file \mbox{\hyperlink{hal___u_a_r_t_8h_source}{hal\+\_\+\+U\+A\+R\+T.\+h}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}\label{hal___u_a_r_t_8h_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}} 
+\index{hal\_UART.h@{hal\_UART.h}!GetLine\_UART@{GetLine\_UART}}
+\index{GetLine\_UART@{GetLine\_UART}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{GetLine\_UART()}{GetLine\_UART()}}
+{\footnotesize\ttfamily uint8\+\_\+t Get\+Line\+\_\+\+U\+A\+RT (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{unsigned char $\ast$}]{buf }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Get line Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets a string of chars from the U\+A\+RT until a newline char is encountered
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+\mbox{\texttt{ in}}  & {\em unsigned} & char $\ast$buf pointer to unsigned char where the line will be stored\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t sz 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8c_source_l00108}{108}} of file \mbox{\hyperlink{hal___u_a_r_t_8c_source}{hal\+\_\+\+U\+A\+R\+T.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108                                                            \{}
+\DoxyCodeLine{00109     int16\_t i = 0;}
+\DoxyCodeLine{00110     uint8\_t sz;}
+\DoxyCodeLine{00111     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00114         UART\_read(uart,\&c,1);}
+\DoxyCodeLine{00115         buf[i++]=c;}
+\DoxyCodeLine{00116         \textcolor{keywordflow}{if} (i==255) \{}
+\DoxyCodeLine{00117             i = 0;}
+\DoxyCodeLine{00118             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00119         \}}
+\DoxyCodeLine{00120     \} \textcolor{keywordflow}{while} (c !=\textcolor{charliteral}{'\(\backslash\)r'});}
+\DoxyCodeLine{00121     UART\_read(uart,\&c,1);                                                               \textcolor{comment}{// Read final '\(\backslash\)n' character}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123     sz = (i>1)? (i-\/1) : 0;}
+\DoxyCodeLine{00124     \textcolor{keywordflow}{return} sz;}
+\DoxyCodeLine{00125 }
+\DoxyCodeLine{00126 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}\label{hal___u_a_r_t_8h_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}} 
+\index{hal\_UART.h@{hal\_UART.h}!Message@{Message}}
+\index{Message@{Message}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily void Message (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Message Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Outputs a character string to the console
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em const} & char $\ast$str pointer to the string to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8c_source_l00187}{187}} of file \mbox{\hyperlink{hal___u_a_r_t_8c_source}{hal\+\_\+\+U\+A\+R\+T.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00188 \{}
+\DoxyCodeLine{00189 \textcolor{preprocessor}{\#ifdef UART\_NONPOLLING}}
+\DoxyCodeLine{00190     UART\_write(uart, str, strlen(str));}
+\DoxyCodeLine{00191 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00192     UART\_writePolling(\mbox{\hyperlink{hal___u_a_r_t_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, str, strlen(str));}
+\DoxyCodeLine{00193 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00194 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_a6351d8706733262e7e325926b1a9aab7_a6351d8706733262e7e325926b1a9aab7}\label{hal___u_a_r_t_8h_a6351d8706733262e7e325926b1a9aab7_a6351d8706733262e7e325926b1a9aab7}} 
+\index{hal\_UART.h@{hal\_UART.h}!putch@{putch}}
+\index{putch@{putch}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{putch()}{putch()}}
+{\footnotesize\ttfamily void putch (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Putch Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Outputs a character to the console
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & ch character to be printed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8c_source_l00208}{208}} of file \mbox{\hyperlink{hal___u_a_r_t_8c_source}{hal\+\_\+\+U\+A\+R\+T.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209 \{}
+\DoxyCodeLine{00210     UART\_writePolling(\mbox{\hyperlink{hal___u_a_r_t_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \&ch, 1);}
+\DoxyCodeLine{00211 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}\label{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}} 
+\index{hal\_UART.h@{hal\_UART.h}!Report@{Report}}
+\index{Report@{Report}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{Report()}{Report()}}
+{\footnotesize\ttfamily int Report (\begin{DoxyParamCaption}\item[{const char $\ast$}]{pc\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Report Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Prints the formatted string on to the console
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em const} & char $\ast$pc\+Format pointer to the character string\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int i\+Ret count of characters printed 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8c_source_l00140}{140}} of file \mbox{\hyperlink{hal___u_a_r_t_8c_source}{hal\+\_\+\+U\+A\+R\+T.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141 \{}
+\DoxyCodeLine{00142     \textcolor{keywordtype}{int} iRet = 0;}
+\DoxyCodeLine{00143     \textcolor{keywordtype}{char}        *pcBuff;}
+\DoxyCodeLine{00144     \textcolor{keywordtype}{char}        *pcTemp;}
+\DoxyCodeLine{00145     \textcolor{keywordtype}{int} iSize = 256;}
+\DoxyCodeLine{00146     va\_list list;}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148     pcBuff = (\textcolor{keywordtype}{char}*)malloc(iSize);}
+\DoxyCodeLine{00149     \textcolor{keywordflow}{if}(pcBuff == NULL)\{}
+\DoxyCodeLine{00150         \textcolor{keywordflow}{return}(-\/1);}
+\DoxyCodeLine{00151     \}}
+\DoxyCodeLine{00152     \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{00153         va\_start(list,pcFormat);}
+\DoxyCodeLine{00154         iRet = \mbox{\hyperlink{hal___u_a_r_t_8c_af702c8f77be545061dc1459a01705003_af702c8f77be545061dc1459a01705003}{vsnprintf}}(pcBuff, iSize, pcFormat, list);}
+\DoxyCodeLine{00155         va\_end(list);}
+\DoxyCodeLine{00156         \textcolor{keywordflow}{if}((iRet > -\/1) \&\& (iRet < iSize))\{}
+\DoxyCodeLine{00157             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00158         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00159             iSize *= 2;}
+\DoxyCodeLine{00160             \textcolor{keywordflow}{if}((pcTemp = realloc(pcBuff, iSize)) == NULL)\{}
+\DoxyCodeLine{00161                 \mbox{\hyperlink{hal___u_a_r_t_8c_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}}(\textcolor{stringliteral}{"Could not reallocate memory\(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{00162                 iRet = -\/1;}
+\DoxyCodeLine{00163                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00164             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00165                 pcBuff = pcTemp;}
+\DoxyCodeLine{00166             \}}
+\DoxyCodeLine{00167         \}}
+\DoxyCodeLine{00168     \}}
+\DoxyCodeLine{00169     \mbox{\hyperlink{hal___u_a_r_t_8c_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}}(pcBuff);}
+\DoxyCodeLine{00170     free(pcBuff);}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{00172     \textcolor{keywordflow}{return}(iRet);}
+\DoxyCodeLine{00173 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}\label{hal___u_a_r_t_8h_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}} 
+\index{hal\_UART.h@{hal\_UART.h}!Startup\_UART@{Startup\_UART}}
+\index{Startup\_UART@{Startup\_UART}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{Startup\_UART()}{Startup\_UART()}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle Startup\+\_\+\+U\+A\+RT (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{baud\+Rate }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Start up Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Starts a U\+A\+RT peripheral
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & index Logical peripheral number for the U\+A\+RT indexed into the U\+A\+R\+T\+\_\+config table \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & baud\+Rate U\+A\+RT speed data transfer, use one of the allowed ones\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\+A\+R\+T\+\_\+\+Handle uart A \#\+U\+A\+R\+T\+\_\+\+Handle upon success. N\+U\+LL if an error occurs, or if the indexed U\+A\+RT peripheral is already opened. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8c_source_l00044}{44}} of file \mbox{\hyperlink{hal___u_a_r_t_8c_source}{hal\+\_\+\+U\+A\+R\+T.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00044                                                                  \{}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     UART\_Handle uart;}
+\DoxyCodeLine{00047     UART\_Params uartParams;}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049     UART\_init();}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051     UART\_Params\_init(\&uartParams);}
+\DoxyCodeLine{00052     uartParams.writeDataMode = UART\_DATA\_BINARY;}
+\DoxyCodeLine{00053     uartParams.readDataMode = UART\_DATA\_BINARY;}
+\DoxyCodeLine{00054     uartParams.readReturnMode = UART\_RETURN\_FULL;}
+\DoxyCodeLine{00055     uartParams.readMode      = UART\_MODE\_BLOCKING;}
+\DoxyCodeLine{00056     uartParams.readEcho = UART\_ECHO\_OFF;}
+\DoxyCodeLine{00057     uartParams.baudRate = baudRate;}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059     uart = UART\_open(index, \&uartParams);}
+\DoxyCodeLine{00060     \textcolor{keywordflow}{if} (uart == NULL) \{                                                                 \textcolor{comment}{// UART\_open() failed}}
+\DoxyCodeLine{00061        \textcolor{keywordflow}{while} (1);}
+\DoxyCodeLine{00062     \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064     \textcolor{keywordflow}{return} uart;}
+\DoxyCodeLine{00065 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___u_a_r_t_8h_abe10d1e7099ff1c4326f31a022024470_abe10d1e7099ff1c4326f31a022024470}\label{hal___u_a_r_t_8h_abe10d1e7099ff1c4326f31a022024470_abe10d1e7099ff1c4326f31a022024470}} 
+\index{hal\_UART.h@{hal\_UART.h}!UART\_resetInputBuffer@{UART\_resetInputBuffer}}
+\index{UART\_resetInputBuffer@{UART\_resetInputBuffer}!hal\_UART.h@{hal\_UART.h}}
+\doxyparagraph{\texorpdfstring{UART\_resetInputBuffer()}{UART\_resetInputBuffer()}}
+{\footnotesize\ttfamily bool U\+A\+R\+T\+\_\+reset\+Input\+Buffer (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{h\+Uart }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Reset input buffer Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Resets the input buffer of a U\+A\+RT peripheral
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool b\+Uart\+Buffer\+Is\+Available 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___u_a_r_t_8c_source_l00079}{79}} of file \mbox{\hyperlink{hal___u_a_r_t_8c_source}{hal\+\_\+\+U\+A\+R\+T.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079                                               \{}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \textcolor{keywordtype}{bool} bUartBufferIsAvailable = \textcolor{keyword}{false};}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     \textcolor{keywordflow}{do}\{                                                                                 \textcolor{comment}{//while data are presented in UART buffer we read each available byte to NULL pointer}}
+\DoxyCodeLine{00084         \textcolor{keywordflow}{if} (UART\_control(hUart, UART\_CMD\_ISAVAILABLE, \&bUartBufferIsAvailable) < 0)\{}
+\DoxyCodeLine{00085             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00086         \}}
+\DoxyCodeLine{00087         \textcolor{keywordflow}{if} (bUartBufferIsAvailable)\{}
+\DoxyCodeLine{00088             UART\_read(hUart, NULL, 1);}
+\DoxyCodeLine{00089         \}}
+\DoxyCodeLine{00090     \} \textcolor{keywordflow}{while} (bUartBufferIsAvailable);}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00093 \}}
+
+\end{DoxyCode}

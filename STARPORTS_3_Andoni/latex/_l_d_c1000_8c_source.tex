@@ -1,0 +1,207 @@
+\hypertarget{_l_d_c1000_8c_source}{}\doxysubsection{L\+D\+C1000.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <ti/drivers/SPI.h>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{STARPORTS\_App.h}}"}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_l_d_c1000_8h}{LDC1000.h}}"}}
+\DoxyCodeLine{00018 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___s_p_i_8h}{hal\_SPI.h}}"}}
+\DoxyCodeLine{00019 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___u_a_r_t_8h}{hal\_UART.h}}"}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00022 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00023 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00026 \textcolor{comment}{//}}
+\DoxyCodeLine{00035 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00036 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00037}\mbox{\hyperlink{_l_d_c1000_8h_af1e5296f97b36618750ae6b1d601fab5_af1e5296f97b36618750ae6b1d601fab5}{00037}} uint8\_t \mbox{\hyperlink{_l_d_c1000_8c_af1e5296f97b36618750ae6b1d601fab5_af1e5296f97b36618750ae6b1d601fab5}{LDC1000\_DevId}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}) \{}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda1e25e06ba87a3e60d219cca03a221b4d}{DEV\_ID}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00044 \}}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00047 \textcolor{comment}{//}}
+\DoxyCodeLine{00057 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00058 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00059}\mbox{\hyperlink{_l_d_c1000_8h_a7e9ee36323586cd0dbfd198a177f522f_a7e9ee36323586cd0dbfd198a177f522f}{00059}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_a7e9ee36323586cd0dbfd198a177f522f_a7e9ee36323586cd0dbfd198a177f522f}{LDC1000\_Write\_Rp\_Max}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda19aca4d9a152e702881d7616e242ec6d}{RP\_MAX}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00062 \}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00065 \textcolor{comment}{//}}
+\DoxyCodeLine{00074 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00075 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00076}\mbox{\hyperlink{_l_d_c1000_8h_ae9801e4dd328dc2e9b5cf39073a8f079_ae9801e4dd328dc2e9b5cf39073a8f079}{00076}} uint8\_t \mbox{\hyperlink{_l_d_c1000_8c_ae9801e4dd328dc2e9b5cf39073a8f079_ae9801e4dd328dc2e9b5cf39073a8f079}{LDC1000\_Read\_Rp\_Max}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}) \{}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda19aca4d9a152e702881d7616e242ec6d}{RP\_MAX}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00083 \}}
+\DoxyCodeLine{00084 }
+\DoxyCodeLine{00085 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00086 \textcolor{comment}{//}}
+\DoxyCodeLine{00096 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00097 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00098}\mbox{\hyperlink{_l_d_c1000_8h_aa5042b0c3ca8766c21c327689fa66bf0_aa5042b0c3ca8766c21c327689fa66bf0}{00098}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_aa5042b0c3ca8766c21c327689fa66bf0_aa5042b0c3ca8766c21c327689fa66bf0}{LDC1000\_Write\_Rp\_Min}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2fd5668ccf02ab7ead158719af6bfcc2}{RP\_MIN}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00101 \}}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00104 \textcolor{comment}{//}}
+\DoxyCodeLine{00113 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00114 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00115}\mbox{\hyperlink{_l_d_c1000_8h_aa3fa3875d3017308f8231754244158f5_aa3fa3875d3017308f8231754244158f5}{00115}} uint8\_t \mbox{\hyperlink{_l_d_c1000_8c_aa3fa3875d3017308f8231754244158f5_aa3fa3875d3017308f8231754244158f5}{LDC1000\_Read\_Rp\_Min}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}) \{}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2fd5668ccf02ab7ead158719af6bfcc2}{RP\_MIN}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00122 \}}
+\DoxyCodeLine{00123 }
+\DoxyCodeLine{00124 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00125 \textcolor{comment}{//}}
+\DoxyCodeLine{00135 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00136 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00137}\mbox{\hyperlink{_l_d_c1000_8h_a27040d91fa70bcce5b368e0664a5b2c5_a27040d91fa70bcce5b368e0664a5b2c5}{00137}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_a27040d91fa70bcce5b368e0664a5b2c5_a27040d91fa70bcce5b368e0664a5b2c5}{LDC1000\_Write\_Min\_Freq}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda8025ca436db55bcd22b95ee63c4c22df}{MIN\_FREQ}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00140 \}}
+\DoxyCodeLine{00141 }
+\DoxyCodeLine{00142 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00143 \textcolor{comment}{//}}
+\DoxyCodeLine{00153 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00154 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00155}\mbox{\hyperlink{_l_d_c1000_8h_ad2daca75f5b34978bb274fcc0cd0ee9d_ad2daca75f5b34978bb274fcc0cd0ee9d}{00155}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_ad2daca75f5b34978bb274fcc0cd0ee9d_ad2daca75f5b34978bb274fcc0cd0ee9d}{LDC1000\_Write\_Conf}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda8ba295a579acd8f28ad69e260d736ce0}{LDC\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00158 \}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00161 \textcolor{comment}{//}}
+\DoxyCodeLine{00171 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00172 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00173}\mbox{\hyperlink{_l_d_c1000_8h_a97a46ac410be29090658d66c995affc6_a97a46ac410be29090658d66c995affc6}{00173}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_a97a46ac410be29090658d66c995affc6_a97a46ac410be29090658d66c995affc6}{LDC1000\_Write\_Intb\_Conf}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2f213a63f868aeb2950b1ddff181efdd}{INTB\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00176 \}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00179 \textcolor{comment}{//}}
+\DoxyCodeLine{00189 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00190 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00191}\mbox{\hyperlink{_l_d_c1000_8h_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}{00191}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}{LDC1000\_Write\_Pow\_Conf}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2a7c27efbb9a9734fa5c840636ea0a06}{POW\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00194 \}}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00197 \textcolor{comment}{//}}
+\DoxyCodeLine{00207 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00208 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00209}\mbox{\hyperlink{_l_d_c1000_8h_a65f2f106726ee11fc24714e0b5facba0_a65f2f106726ee11fc24714e0b5facba0}{00209}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_a65f2f106726ee11fc24714e0b5facba0_a65f2f106726ee11fc24714e0b5facba0}{LDC1000\_Write\_Clk\_Conf}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Val) \{}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda3d860b4dbacb74d3a046ac0f94a61987}{CLK\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00212 \}}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00215 \textcolor{comment}{//}}
+\DoxyCodeLine{00224 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00225 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00226}\mbox{\hyperlink{_l_d_c1000_8h_a9f1b949066bc15ed75e5139407b8e092_a9f1b949066bc15ed75e5139407b8e092}{00226}} uint8\_t \mbox{\hyperlink{_l_d_c1000_8c_a9f1b949066bc15ed75e5139407b8e092_a9f1b949066bc15ed75e5139407b8e092}{LDC1000\_Read\_Status}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}) \{}
+\DoxyCodeLine{00227 }
+\DoxyCodeLine{00228     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbdaaf85bf6d81e6038db11386f8fab4a62b}{LDC\_STATUS}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00233 \}}
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00235 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00236 \textcolor{comment}{//}}
+\DoxyCodeLine{00245 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00246 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00247}\mbox{\hyperlink{_l_d_c1000_8h_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}{00247}} uint16\_t \mbox{\hyperlink{_l_d_c1000_8c_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}{LDC1000\_Read\_Proximity}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}) \{}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{00249     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbdae228ebb59e99edc663c1ee85f07d72cf}{PROX\_LSB}},RxBuffer,2,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253     \textcolor{keywordflow}{return} ( RxBuffer[1] + (uint16\_t)(RxBuffer[2]<<8) );}
+\DoxyCodeLine{00254 \}}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00257 \textcolor{comment}{//}}
+\DoxyCodeLine{00268 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00269 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00270}\mbox{\hyperlink{_l_d_c1000_8h_a532307d1a6edb7cf25e81668ecd96365_a532307d1a6edb7cf25e81668ecd96365}{00270}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_l_d_c1000_8c_a532307d1a6edb7cf25e81668ecd96365_a532307d1a6edb7cf25e81668ecd96365}{LDC1000\_Get\_Proximity\_Frame}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint16\_t Samples, int16\_t *DataSensor) \{}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00272     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00273     uint32\_t newProx, Proximity[512];}
+\DoxyCodeLine{00274     \textcolor{keywordtype}{float} ProxMean;}
+\DoxyCodeLine{00275     \textcolor{keywordtype}{float} ProxRms;}
+\DoxyCodeLine{00276     uint8\_t status;}
+\DoxyCodeLine{00277 }
+\DoxyCodeLine{00278     ProxMean = 0;}
+\DoxyCodeLine{00279     usleep(50000);}
+\DoxyCodeLine{00280     \textcolor{keywordflow}{while}(i<Samples) \{}
+\DoxyCodeLine{00281         newProx = (uint32\_t)\mbox{\hyperlink{_l_d_c1000_8c_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}{LDC1000\_Read\_Proximity}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00282         ProxMean += newProx;}
+\DoxyCodeLine{00283         Proximity[i] = newProx;}
+\DoxyCodeLine{00284         i++;}
+\DoxyCodeLine{00285         usleep(250);}
+\DoxyCodeLine{00286     \}}
+\DoxyCodeLine{00287     ProxMean = ProxMean/Samples;}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289     ProxRms = 0.0;}
+\DoxyCodeLine{00290     \textcolor{keywordflow}{for} (i=0;i<Samples;i++) \{}
+\DoxyCodeLine{00291         ProxRms += ( (Proximity[i]-\/ProxMean)*(Proximity[i]-\/ProxMean) );}
+\DoxyCodeLine{00292     \}}
+\DoxyCodeLine{00293 }
+\DoxyCodeLine{00294     DataSensor[0] = (int16\_t)ProxMean;}
+\DoxyCodeLine{00295     DataSensor[1] = (int16\_t)sqrt(ProxRms/Samples);}
+\DoxyCodeLine{00296 \}}
+\DoxyCodeLine{00297 }
+\DoxyCodeLine{00298 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00299 \textcolor{comment}{//}}
+\DoxyCodeLine{00308 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00309 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00310}\mbox{\hyperlink{_l_d_c1000_8h_adfbeea7c8660f27a5e4855f59af9ef97_adfbeea7c8660f27a5e4855f59af9ef97}{00310}} uint32\_t \mbox{\hyperlink{_l_d_c1000_8c_adfbeea7c8660f27a5e4855f59af9ef97_adfbeea7c8660f27a5e4855f59af9ef97}{LDC1000\_Read\_Fcount}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}) \{}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312     uint8\_t RxBuffer[4];}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbdae2454935897a9a166d154960407d4559}{FCOUNT\_LSB}},RxBuffer,3,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00315 }
+\DoxyCodeLine{00316     \textcolor{keywordflow}{return} ( RxBuffer[1] + (RxBuffer[2]<<8) + (RxBuffer[3]<<16) );}
+\DoxyCodeLine{00317 \}}
+\DoxyCodeLine{00318 }
+\DoxyCodeLine{00319 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00320 \textcolor{comment}{//}}
+\DoxyCodeLine{00331 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00332 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_l_d_c1000_8c_source_l00333}\mbox{\hyperlink{_l_d_c1000_8h_a4c177f85717e501a5971138d50c576bc_a4c177f85717e501a5971138d50c576bc}{00333}} \textcolor{keywordtype}{float} \mbox{\hyperlink{_l_d_c1000_8c_a4c177f85717e501a5971138d50c576bc_a4c177f85717e501a5971138d50c576bc}{RpCalc}}(uint32\_t Proximity, \textcolor{keywordtype}{float} RpMax, \textcolor{keywordtype}{float} RpMin) \{}
+\DoxyCodeLine{00334 }
+\DoxyCodeLine{00335     \textcolor{keywordtype}{float} Y = 1.0*Proximity/32768;}
+\DoxyCodeLine{00336     \textcolor{keywordtype}{float} Rp;}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338     Rp = RpMax * RpMin / (RpMin*(1-\/Y) + RpMax*Y);}
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340     \textcolor{keywordflow}{return} Rp;}
+\DoxyCodeLine{00341 \}}
+
+\end{DoxyCode}

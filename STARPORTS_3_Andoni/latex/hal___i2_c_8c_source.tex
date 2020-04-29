@@ -1,0 +1,82 @@
+\hypertarget{hal___i2_c_8c_source}{}\doxysubsection{hal\+\_\+\+I2\+C.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <ti/drivers/I2C.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_board_8h}{Board.h}}"}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00017 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00018 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{//}}
+\DoxyCodeLine{00030 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00031 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___i2_c_8c_source_l00032}\mbox{\hyperlink{hal___i2_c_8h_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}{00032}} I2C\_Handle \mbox{\hyperlink{hal___i2_c_8c_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}{Startup\_I2C}}(uint\_least8\_t index) \{}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     I2C\_Params i2cParams;}
+\DoxyCodeLine{00035     I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}};}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     I2C\_init();}
+\DoxyCodeLine{00038     I2C\_Params\_init(\&i2cParams);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     i2cParams.transferMode = I2C\_MODE\_BLOCKING;}
+\DoxyCodeLine{00041     i2cParams.bitRate = I2C\_400kHz;}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}} = I2C\_open(index, \&i2cParams);}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}};}
+\DoxyCodeLine{00046 \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00049 \textcolor{comment}{//}}
+\DoxyCodeLine{00063 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00064 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___i2_c_8c_source_l00065}\mbox{\hyperlink{hal___i2_c_8h_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{00065}} uint8\_t \mbox{\hyperlink{hal___i2_c_8c_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2C\_read\_8bits}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint8\_t Slave, uint8\_t Address, uint8\_t *RxBuffer, uint8\_t nregs) \{}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00068     uint8\_t         TxBuffer;}
+\DoxyCodeLine{00069     \textcolor{keywordtype}{bool}            TransferOK;}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071     TxBuffer = Address;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00074     i2cTransaction.writeBuf = \&TxBuffer;}
+\DoxyCodeLine{00075     i2cTransaction.writeCount = 1;}
+\DoxyCodeLine{00076     i2cTransaction.readBuf = RxBuffer;}
+\DoxyCodeLine{00077     i2cTransaction.readCount = nregs;}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     TransferOK = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \textcolor{keywordflow}{return} (TransferOK? 0 : 1);}
+\DoxyCodeLine{00082 \}}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00085 \textcolor{comment}{//}}
+\DoxyCodeLine{00098 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00099 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___i2_c_8c_source_l00100}\mbox{\hyperlink{hal___i2_c_8h_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{00100}} uint8\_t \mbox{\hyperlink{hal___i2_c_8c_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2C\_write\_8bits}}(I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint8\_t Slave, uint8\_t Address, uint8\_t Val) \{}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00103     uint8\_t         TxBuffer[2];}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{bool}            TransferOK;}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106     TxBuffer[0] = Address;}
+\DoxyCodeLine{00107     TxBuffer[1] = Val;}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00110     i2cTransaction.writeBuf = TxBuffer;}
+\DoxyCodeLine{00111     i2cTransaction.writeCount = 2;}
+\DoxyCodeLine{00112     i2cTransaction.readBuf = NULL;}
+\DoxyCodeLine{00113     i2cTransaction.readCount = 0;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     TransferOK = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     \textcolor{keywordflow}{return} (TransferOK? 0 : 1);}
+\DoxyCodeLine{00118 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,977 @@
+\hypertarget{wifi_8h}{}\doxysubsection{wifi.\+h File Reference}
+\label{wifi_8h}\index{wifi.h@{wifi.h}}
+
+
+Functions for C\+C3220\+SF wifi management.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{wifi_8h_struct___power_measure___control_block__t__}{\+\_\+\+Power\+Measure\+\_\+\+Control\+Block\+\_\+t\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Wifi Control block.  \mbox{\hyperlink{wifi_8h_struct___power_measure___control_block__t__}{More...}}\end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{wifi_8h_aee01c39132c3e5916e949a9b3280ceb1_aee01c39132c3e5916e949a9b3280ceb1}{A\+S\+S\+E\+R\+T\+\_\+\+O\+N\+\_\+\+E\+R\+R\+OR}}(error\+\_\+code)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}{C\+L\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+IT}}(status\+\_\+variable,  bit)~status\+\_\+variable \&= $\sim$(1 $<$$<$ (bit))
+\item 
+\#define \mbox{\hyperlink{wifi_8h_aeb9a1c6207ace74b672622933f5baa09_aeb9a1c6207ace74b672622933f5baa09}{D\+E\+S\+T\+\_\+\+I\+P\+\_\+\+A\+D\+DR}}~S\+L\+\_\+\+I\+P\+V4\+\_\+\+V\+AL(192,168,1,160)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}{E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+W\+I\+FI}}~1
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}{F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH}}~(1000)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a4066b312add26b664da0febb8d082f0a_a4066b312add26b664da0febb8d082f0a}{G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+IT}}(status\+\_\+variable,  bit)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{I\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED}}(status\+\_\+variable)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{I\+S\+\_\+\+I\+P\+\_\+\+A\+C\+Q\+U\+I\+R\+ED}}(status\+\_\+variable)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_ae0674ea7579e8c978ac7ff2548b90d51_ae0674ea7579e8c978ac7ff2548b90d51}{L\+O\+O\+P\+\_\+\+F\+O\+R\+E\+V\+ER}}()
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a44b318647bc1c916e8686ef3a27ed9a3_a44b318647bc1c916e8686ef3a27ed9a3}{N\+U\+M\+\_\+\+O\+F\+\_\+\+P\+KT}}~(10)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a614217d263be1fb1a5f76e2ff7be19a2_a614217d263be1fb1a5f76e2ff7be19a2}{P\+O\+RT}}~(9000)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_ab32e7394def201e0c8e33ff98eae73a9_ab32e7394def201e0c8e33ff98eae73a9}{P\+O\+R\+T\+\_\+\+U\+DP}}~(9999)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+EY}}~\char`\"{}363232EE\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+C\+O\+N\+N\+E\+CT}}~\char`\"{}363232EE\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}{S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+T\+Y\+PE}}~S\+L\+\_\+\+W\+L\+A\+N\+\_\+\+S\+E\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+W\+P\+A\+\_\+\+W\+P\+A2
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a94ad0394e2b69756ec1e86a57a8b72ca_a94ad0394e2b69756ec1e86a57a8b72ca}{S\+E\+R\+I\+A\+L\+W\+I\+F\+I\+\_\+\+P\+O\+RT}}~(9000)
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}{S\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+IT}}(status\+\_\+variable,  bit)~status\+\_\+variable $\vert$= (1 $<$$<$ (bit))
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a14e57d908843fde2ca6898a78c1a052f_a14e57d908843fde2ca6898a78c1a052f}{S\+L\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}}
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{S\+S\+I\+D\+\_\+\+N\+A\+ME}}~\char`\"{}Orange-\/D62D\char`\"{}
+\item 
+\#define \mbox{\hyperlink{wifi_8h_a167740604ff6466bab5034751b84e0ad_a167740604ff6466bab5034751b84e0ad}{S\+U\+C\+C\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+W\+I\+FI}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60}{e\+\_\+\+Status\+Bits}} \{ \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{S\+T\+A\+T\+U\+S\+\_\+\+B\+I\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON}}, 
+\mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{S\+T\+A\+T\+U\+S\+\_\+\+B\+I\+T\+\_\+\+I\+P\+\_\+\+A\+C\+Q\+U\+I\+R\+ED}}
+ \}
+\begin{DoxyCompactList}\small\item\em Wifi Connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{wifi_8h_ad8b73f2a63bfa032dd09c6e90ea1ace3_ad8b73f2a63bfa032dd09c6e90ea1ace3}{prepare\+Data\+Frame}} (uint16\+\_\+t Port, uint32\+\_\+t Ip\+Addr)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Prepare data frame Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_a8f8761bd9d2c81b8b13f0bf6f3c909ec_a8f8761bd9d2c81b8b13f0bf6f3c909ec}{Simple\+Link\+Fatal\+Error\+Event\+Handler}} (Sl\+Device\+Fatal\+\_\+t $\ast$sl\+Fatal\+Error\+Event)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_acd3b6f958282f61c8ce617090438ddb2_acd3b6f958282f61c8ce617090438ddb2}{Simple\+Link\+General\+Event\+Handler}} (Sl\+Device\+Event\+\_\+t $\ast$p\+Dev\+Event)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_a18429eac751f1cfdf26be0c1c50245fe_a18429eac751f1cfdf26be0c1c50245fe}{Simple\+Link\+Http\+Server\+Event\+Handler}} (Sl\+Net\+App\+Http\+Server\+Event\+\_\+t $\ast$p\+Http\+Event, Sl\+Net\+App\+Http\+Server\+Response\+\_\+t $\ast$p\+Http\+Response)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_af4a488df5566d05f1df70d1d7a1fc286_af4a488df5566d05f1df70d1d7a1fc286}{Simple\+Link\+Net\+App\+Event\+Handler}} (Sl\+Net\+App\+Event\+\_\+t $\ast$p\+Net\+App\+Event)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_a2daea0dd2e20551cacbb77ccdfa8c46c_a2daea0dd2e20551cacbb77ccdfa8c46c}{Simple\+Link\+Net\+App\+Request\+Event\+Handler}} (Sl\+Net\+App\+Request\+\_\+t $\ast$p\+Net\+App\+Request, Sl\+Net\+App\+Response\+\_\+t $\ast$p\+Net\+App\+Response)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_a7a22e1687a7df642c851cbaa7aa4c465_a7a22e1687a7df642c851cbaa7aa4c465}{Simple\+Link\+Net\+App\+Request\+Mem\+Free\+Event\+Handler}} (uint8\+\_\+t $\ast$buffer)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_aab74025d6858e187e1d720848225895a_aab74025d6858e187e1d720848225895a}{Simple\+Link\+Socket\+Trigger\+Event\+Handler}} (Sl\+Sock\+Trigger\+Event\+\_\+t $\ast$p\+Sl\+Trigger\+Event)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_a912e9d86385822d4eb014738403f89c1_a912e9d86385822d4eb014738403f89c1}{Simple\+Link\+Sock\+Event\+Handler}} (Sl\+Sock\+Event\+\_\+t $\ast$p\+Sock)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{wifi_8h_a7d8c711b82b39b034f7f4e319cdfad22_a7d8c711b82b39b034f7f4e319cdfad22}{Simple\+Link\+Wlan\+Event\+Handler}} (Sl\+Wlan\+Event\+\_\+t $\ast$p\+Wlan\+Event)
+\begin{DoxyCompactList}\small\item\em Simple\+Link Event\+Handler Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{wifi_8h_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}{wlan\+Conf}} (void)
+\begin{DoxyCompactList}\small\item\em Simple\+Link wlan configuration Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{wifi_8h_a78ed3c477c87861aaf507914edc7dd8a_a78ed3c477c87861aaf507914edc7dd8a}{wlan\+Connect}} (void)
+\begin{DoxyCompactList}\small\item\em Simple\+Link wlan connect Function. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{wifi_8h_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}{wlan\+Connect\+From\+File}} (unsigned char $\ast$ssid)
+\begin{DoxyCompactList}\small\item\em Simple\+Link wlan connect from file Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Power\+Measure\+\_\+\+Control\+Block \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{Power\+Measure\+\_\+\+CB}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions for C\+C3220\+SF wifi management. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle C\+C3220\+SF wifi functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+
+
+\doxysubsubsection{Data Structure Documentation}
+\index{\_PowerMeasure\_ControlBlock\_t\_@{\_PowerMeasure\_ControlBlock\_t\_}}\label{struct___power_measure___control_block__t__}
+\Hypertarget{wifi_8h_struct___power_measure___control_block__t__}
+\doxyparagraph{struct \+\_\+\+Power\+Measure\+\_\+\+Control\+Block\+\_\+t\+\_\+}
+Wifi Control block. 
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00076}{76}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\begin{DoxyFields}{Data Fields}
+\mbox{\Hypertarget{wifi_8h_af0d7977b7b0ca46d8d48d0b1ac89bd6e}\label{wifi_8h_af0d7977b7b0ca46d8d48d0b1ac89bd6e}} 
+signed char&
+frameData\mbox{[}\mbox{\hyperlink{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}{FRAME\_LENGTH}}\mbox{]}&
+Wifi connection data frame \\
+\hline
+
+\mbox{\Hypertarget{wifi_8h_aff346a7e03441593f586f85bd9508423}\label{wifi_8h_aff346a7e03441593f586f85bd9508423}} 
+SlSockAddrIn\_t&
+ipV4Addr&
+IP connection control block \\
+\hline
+
+\mbox{\Hypertarget{wifi_8h_a4520f743bc7bfcc3ef1d3d28bc3130f1}\label{wifi_8h_a4520f743bc7bfcc3ef1d3d28bc3130f1}} 
+uint32\_t&
+slStatus&
+Simple\+Link Status \\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{wifi_8h_aee01c39132c3e5916e949a9b3280ceb1_aee01c39132c3e5916e949a9b3280ceb1}\label{wifi_8h_aee01c39132c3e5916e949a9b3280ceb1_aee01c39132c3e5916e949a9b3280ceb1}} 
+\index{wifi.h@{wifi.h}!ASSERT\_ON\_ERROR@{ASSERT\_ON\_ERROR}}
+\index{ASSERT\_ON\_ERROR@{ASSERT\_ON\_ERROR}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{ASSERT\_ON\_ERROR}{ASSERT\_ON\_ERROR}}
+{\footnotesize\ttfamily \#define A\+S\+S\+E\+R\+T\+\_\+\+O\+N\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{error\+\_\+code }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        if(error\_code < 0) \(\backslash\)}
+\DoxyCodeLine{        \{ \(\backslash\)}
+\DoxyCodeLine{            ERR\_PRINT(error\_code); \(\backslash\)}
+\DoxyCodeLine{            return error\_code; \(\backslash\)}
+\DoxyCodeLine{        \} \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00048}{48}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}\label{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}} 
+\index{wifi.h@{wifi.h}!CLR\_STATUS\_BIT@{CLR\_STATUS\_BIT}}
+\index{CLR\_STATUS\_BIT@{CLR\_STATUS\_BIT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{CLR\_STATUS\_BIT}{CLR\_STATUS\_BIT}}
+{\footnotesize\ttfamily \#define C\+L\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{status\+\_\+variable,  }\item[{}]{bit }\end{DoxyParamCaption})~status\+\_\+variable \&= $\sim$(1 $<$$<$ (bit))}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00036}{36}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_aeb9a1c6207ace74b672622933f5baa09_aeb9a1c6207ace74b672622933f5baa09}\label{wifi_8h_aeb9a1c6207ace74b672622933f5baa09_aeb9a1c6207ace74b672622933f5baa09}} 
+\index{wifi.h@{wifi.h}!DEST\_IP\_ADDR@{DEST\_IP\_ADDR}}
+\index{DEST\_IP\_ADDR@{DEST\_IP\_ADDR}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{DEST\_IP\_ADDR}{DEST\_IP\_ADDR}}
+{\footnotesize\ttfamily \#define D\+E\+S\+T\+\_\+\+I\+P\+\_\+\+A\+D\+DR~S\+L\+\_\+\+I\+P\+V4\+\_\+\+V\+AL(192,168,1,160)}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00017}{17}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}\label{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}} 
+\index{wifi.h@{wifi.h}!ERROR\_CONNECT\_WIFI@{ERROR\_CONNECT\_WIFI}}
+\index{ERROR\_CONNECT\_WIFI@{ERROR\_CONNECT\_WIFI}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{ERROR\_CONNECT\_WIFI}{ERROR\_CONNECT\_WIFI}}
+{\footnotesize\ttfamily \#define E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+W\+I\+FI~1}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00024}{24}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}\label{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}} 
+\index{wifi.h@{wifi.h}!FRAME\_LENGTH@{FRAME\_LENGTH}}
+\index{FRAME\_LENGTH@{FRAME\_LENGTH}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{FRAME\_LENGTH}{FRAME\_LENGTH}}
+{\footnotesize\ttfamily \#define F\+R\+A\+M\+E\+\_\+\+L\+E\+N\+G\+TH~(1000)}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00019}{19}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a4066b312add26b664da0febb8d082f0a_a4066b312add26b664da0febb8d082f0a}\label{wifi_8h_a4066b312add26b664da0febb8d082f0a_a4066b312add26b664da0febb8d082f0a}} 
+\index{wifi.h@{wifi.h}!GET\_STATUS\_BIT@{GET\_STATUS\_BIT}}
+\index{GET\_STATUS\_BIT@{GET\_STATUS\_BIT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{GET\_STATUS\_BIT}{GET\_STATUS\_BIT}}
+{\footnotesize\ttfamily \#define G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{status\+\_\+variable,  }\item[{}]{bit }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              (0 != \(\backslash\)}
+\DoxyCodeLine{                                              (status\_variable \& (1 << (bit))))}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00037}{37}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}\label{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}} 
+\index{wifi.h@{wifi.h}!IS\_CONNECTED@{IS\_CONNECTED}}
+\index{IS\_CONNECTED@{IS\_CONNECTED}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{IS\_CONNECTED}{IS\_CONNECTED}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED(\begin{DoxyParamCaption}\item[{}]{status\+\_\+variable }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{wifi_8h_a4066b312add26b664da0febb8d082f0a_a4066b312add26b664da0febb8d082f0a}{GET\_STATUS\_BIT}}( \(\backslash\)}
+\DoxyCodeLine{        status\_variable, \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{STATUS\_BIT\_CONNECTION}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00040}{40}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}\label{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}} 
+\index{wifi.h@{wifi.h}!IS\_IP\_ACQUIRED@{IS\_IP\_ACQUIRED}}
+\index{IS\_IP\_ACQUIRED@{IS\_IP\_ACQUIRED}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{IS\_IP\_ACQUIRED}{IS\_IP\_ACQUIRED}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+I\+P\+\_\+\+A\+C\+Q\+U\+I\+R\+ED(\begin{DoxyParamCaption}\item[{}]{status\+\_\+variable }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        \mbox{\hyperlink{wifi_8h_a4066b312add26b664da0febb8d082f0a_a4066b312add26b664da0febb8d082f0a}{GET\_STATUS\_BIT}}( \(\backslash\)}
+\DoxyCodeLine{        status\_variable, \(\backslash\)}
+\DoxyCodeLine{        \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{STATUS\_BIT\_IP\_ACQUIRED}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00044}{44}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_ae0674ea7579e8c978ac7ff2548b90d51_ae0674ea7579e8c978ac7ff2548b90d51}\label{wifi_8h_ae0674ea7579e8c978ac7ff2548b90d51_ae0674ea7579e8c978ac7ff2548b90d51}} 
+\index{wifi.h@{wifi.h}!LOOP\_FOREVER@{LOOP\_FOREVER}}
+\index{LOOP\_FOREVER@{LOOP\_FOREVER}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{LOOP\_FOREVER}{LOOP\_FOREVER}}
+{\footnotesize\ttfamily \#define L\+O\+O\+P\+\_\+\+F\+O\+R\+E\+V\+ER(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{ \(\backslash\)}
+\DoxyCodeLine{        while(1) \{; \} \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00031}{31}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a44b318647bc1c916e8686ef3a27ed9a3_a44b318647bc1c916e8686ef3a27ed9a3}\label{wifi_8h_a44b318647bc1c916e8686ef3a27ed9a3_a44b318647bc1c916e8686ef3a27ed9a3}} 
+\index{wifi.h@{wifi.h}!NUM\_OF\_PKT@{NUM\_OF\_PKT}}
+\index{NUM\_OF\_PKT@{NUM\_OF\_PKT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{NUM\_OF\_PKT}{NUM\_OF\_PKT}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+O\+F\+\_\+\+P\+KT~(10)}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00018}{18}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a614217d263be1fb1a5f76e2ff7be19a2_a614217d263be1fb1a5f76e2ff7be19a2}\label{wifi_8h_a614217d263be1fb1a5f76e2ff7be19a2_a614217d263be1fb1a5f76e2ff7be19a2}} 
+\index{wifi.h@{wifi.h}!PORT@{PORT}}
+\index{PORT@{PORT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{PORT}{PORT}}
+{\footnotesize\ttfamily \#define P\+O\+RT~(9000)}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00016}{16}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_ab32e7394def201e0c8e33ff98eae73a9_ab32e7394def201e0c8e33ff98eae73a9}\label{wifi_8h_ab32e7394def201e0c8e33ff98eae73a9_ab32e7394def201e0c8e33ff98eae73a9}} 
+\index{wifi.h@{wifi.h}!PORT\_UDP@{PORT\_UDP}}
+\index{PORT\_UDP@{PORT\_UDP}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{PORT\_UDP}{PORT\_UDP}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+U\+DP~(9999)}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00020}{20}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}\label{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}} 
+\index{wifi.h@{wifi.h}!SECURITY\_KEY@{SECURITY\_KEY}}
+\index{SECURITY\_KEY@{SECURITY\_KEY}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SECURITY\_KEY}{SECURITY\_KEY}}
+{\footnotesize\ttfamily \#define S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+EY~\char`\"{}363232EE\char`\"{}}
+
+Password of the secured AP 
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00028}{28}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}\label{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}} 
+\index{wifi.h@{wifi.h}!SECURITY\_KEY\_FILE\_CONNECT@{SECURITY\_KEY\_FILE\_CONNECT}}
+\index{SECURITY\_KEY\_FILE\_CONNECT@{SECURITY\_KEY\_FILE\_CONNECT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SECURITY\_KEY\_FILE\_CONNECT}{SECURITY\_KEY\_FILE\_CONNECT}}
+{\footnotesize\ttfamily \#define S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+K\+E\+Y\+\_\+\+F\+I\+L\+E\+\_\+\+C\+O\+N\+N\+E\+CT~\char`\"{}363232EE\char`\"{}}
+
+Password of the secured AP 
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00029}{29}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}\label{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}} 
+\index{wifi.h@{wifi.h}!SECURITY\_TYPE@{SECURITY\_TYPE}}
+\index{SECURITY\_TYPE@{SECURITY\_TYPE}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SECURITY\_TYPE}{SECURITY\_TYPE}}
+{\footnotesize\ttfamily \#define S\+E\+C\+U\+R\+I\+T\+Y\+\_\+\+T\+Y\+PE~S\+L\+\_\+\+W\+L\+A\+N\+\_\+\+S\+E\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+W\+P\+A\+\_\+\+W\+P\+A2}
+
+Security type (O\+P\+EN or W\+EP or W\+PA) 
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00027}{27}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a94ad0394e2b69756ec1e86a57a8b72ca_a94ad0394e2b69756ec1e86a57a8b72ca}\label{wifi_8h_a94ad0394e2b69756ec1e86a57a8b72ca_a94ad0394e2b69756ec1e86a57a8b72ca}} 
+\index{wifi.h@{wifi.h}!SERIALWIFI\_PORT@{SERIALWIFI\_PORT}}
+\index{SERIALWIFI\_PORT@{SERIALWIFI\_PORT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SERIALWIFI\_PORT}{SERIALWIFI\_PORT}}
+{\footnotesize\ttfamily \#define S\+E\+R\+I\+A\+L\+W\+I\+F\+I\+\_\+\+P\+O\+RT~(9000)}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00021}{21}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}\label{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}} 
+\index{wifi.h@{wifi.h}!SET\_STATUS\_BIT@{SET\_STATUS\_BIT}}
+\index{SET\_STATUS\_BIT@{SET\_STATUS\_BIT}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SET\_STATUS\_BIT}{SET\_STATUS\_BIT}}
+{\footnotesize\ttfamily \#define S\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+B\+IT(\begin{DoxyParamCaption}\item[{}]{status\+\_\+variable,  }\item[{}]{bit }\end{DoxyParamCaption})~status\+\_\+variable $\vert$= (1 $<$$<$ (bit))}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00035}{35}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a14e57d908843fde2ca6898a78c1a052f_a14e57d908843fde2ca6898a78c1a052f}\label{wifi_8h_a14e57d908843fde2ca6898a78c1a052f_a14e57d908843fde2ca6898a78c1a052f}} 
+\index{wifi.h@{wifi.h}!SL\_SOCKET\_ERROR@{SL\_SOCKET\_ERROR}}
+\index{SL\_SOCKET\_ERROR@{SL\_SOCKET\_ERROR}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SL\_SOCKET\_ERROR}{SL\_SOCKET\_ERROR}}
+{\footnotesize\ttfamily \#define S\+L\+\_\+\+S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{        ( \(\backslash\)}
+\DoxyCodeLine{        \textcolor{stringliteral}{"Socket error, please refer \(\backslash\)"SOCKET ERRORS CODES\(\backslash\)" section in errors.h"})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00057}{57}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}\label{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}} 
+\index{wifi.h@{wifi.h}!SSID\_NAME@{SSID\_NAME}}
+\index{SSID\_NAME@{SSID\_NAME}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SSID\_NAME}{SSID\_NAME}}
+{\footnotesize\ttfamily \#define S\+S\+I\+D\+\_\+\+N\+A\+ME~\char`\"{}Orange-\/D62D\char`\"{}}
+
+AP S\+S\+ID 
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00026}{26}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+\mbox{\Hypertarget{wifi_8h_a167740604ff6466bab5034751b84e0ad_a167740604ff6466bab5034751b84e0ad}\label{wifi_8h_a167740604ff6466bab5034751b84e0ad_a167740604ff6466bab5034751b84e0ad}} 
+\index{wifi.h@{wifi.h}!SUCCESS\_CONNECT\_WIFI@{SUCCESS\_CONNECT\_WIFI}}
+\index{SUCCESS\_CONNECT\_WIFI@{SUCCESS\_CONNECT\_WIFI}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SUCCESS\_CONNECT\_WIFI}{SUCCESS\_CONNECT\_WIFI}}
+{\footnotesize\ttfamily \#define S\+U\+C\+C\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+W\+I\+FI~0}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00023}{23}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+
+
+\doxysubsubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60}\label{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60}} 
+\index{wifi.h@{wifi.h}!e\_StatusBits@{e\_StatusBits}}
+\index{e\_StatusBits@{e\_StatusBits}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{e\_StatusBits}{e\_StatusBits}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60}{e\+\_\+\+Status\+Bits}}}
+
+
+
+Wifi Connection. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATUS\_BIT\_CONNECTION@{STATUS\_BIT\_CONNECTION}!wifi.h@{wifi.h}}\index{wifi.h@{wifi.h}!STATUS\_BIT\_CONNECTION@{STATUS\_BIT\_CONNECTION}}}\mbox{\Hypertarget{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}\label{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}} 
+S\+T\+A\+T\+U\+S\+\_\+\+B\+I\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON&If this bit is set\+: the device is connected to the AP or client is connected to device (AP) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATUS\_BIT\_IP\_ACQUIRED@{STATUS\_BIT\_IP\_ACQUIRED}!wifi.h@{wifi.h}}\index{wifi.h@{wifi.h}!STATUS\_BIT\_IP\_ACQUIRED@{STATUS\_BIT\_IP\_ACQUIRED}}}\mbox{\Hypertarget{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}\label{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}} 
+S\+T\+A\+T\+U\+S\+\_\+\+B\+I\+T\+\_\+\+I\+P\+\_\+\+A\+C\+Q\+U\+I\+R\+ED&If this bit is set\+: the device has acquired an IP \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00067}{67}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068 \{}
+\DoxyCodeLine{00069     \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{STATUS\_BIT\_CONNECTION}},                                              }
+\DoxyCodeLine{00070     \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{STATUS\_BIT\_IP\_ACQUIRED}},                                             }
+\DoxyCodeLine{00071 \}\mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60}{e\_StatusBits}};}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{wifi_8h_ad8b73f2a63bfa032dd09c6e90ea1ace3_ad8b73f2a63bfa032dd09c6e90ea1ace3}\label{wifi_8h_ad8b73f2a63bfa032dd09c6e90ea1ace3_ad8b73f2a63bfa032dd09c6e90ea1ace3}} 
+\index{wifi.h@{wifi.h}!prepareDataFrame@{prepareDataFrame}}
+\index{prepareDataFrame@{prepareDataFrame}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{prepareDataFrame()}{prepareDataFrame()}}
+{\footnotesize\ttfamily void prepare\+Data\+Frame (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{port,  }\item[{uint32\+\_\+t}]{ip\+Addr }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Prepare data frame Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Prepares the connection parameters for W\+I\+FI on C\+C3220\+SF
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & port \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & ip\+Addr\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00349}{349}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00350 \{}
+\DoxyCodeLine{00351     uint16\_t idx;}
+\DoxyCodeLine{00352 }
+\DoxyCodeLine{00353     \textcolor{keywordflow}{for}(idx = 0;idx < \mbox{\hyperlink{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}{FRAME\_LENGTH}};idx++)}
+\DoxyCodeLine{00354     \{}
+\DoxyCodeLine{00355         \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.frameData[idx] = (\textcolor{keywordtype}{signed} char)(idx \% 255);}
+\DoxyCodeLine{00356     \}}
+\DoxyCodeLine{00357     \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr.sin\_family = SL\_AF\_INET;}
+\DoxyCodeLine{00358     \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr.sin\_port = sl\_Htons(port);}
+\DoxyCodeLine{00359     \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr.sin\_addr.s\_addr = sl\_Htonl(ipAddr);}
+\DoxyCodeLine{00360 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a8f8761bd9d2c81b8b13f0bf6f3c909ec_a8f8761bd9d2c81b8b13f0bf6f3c909ec}\label{wifi_8h_a8f8761bd9d2c81b8b13f0bf6f3c909ec_a8f8761bd9d2c81b8b13f0bf6f3c909ec}} 
+\index{wifi.h@{wifi.h}!SimpleLinkFatalErrorEventHandler@{SimpleLinkFatalErrorEventHandler}}
+\index{SimpleLinkFatalErrorEventHandler@{SimpleLinkFatalErrorEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkFatalErrorEventHandler()}{SimpleLinkFatalErrorEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Fatal\+Error\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Device\+Fatal\+\_\+t $\ast$}]{sl\+Fatal\+Error\+Event }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00157}{157}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158 \{}
+\DoxyCodeLine{00159     \textcolor{keywordflow}{switch} (slFatalErrorEvent-\/>Id)\{}
+\DoxyCodeLine{00160         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_DEVICE\_ABORT:\{}
+\DoxyCodeLine{00161         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(}
+\DoxyCodeLine{00162             \textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Abort NWP event "}}
+\DoxyCodeLine{00163             \textcolor{stringliteral}{"detected: AbortType=\%d, AbortData=0x\%x\(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00164             slFatalErrorEvent-\/>Data.DeviceAssert.Code,}
+\DoxyCodeLine{00165             slFatalErrorEvent-\/>Data.DeviceAssert.Value);}
+\DoxyCodeLine{00166         \}}
+\DoxyCodeLine{00167         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_DRIVER\_ABORT:\{}
+\DoxyCodeLine{00170             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Driver Abort detected. \(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{00171         \}}
+\DoxyCodeLine{00172         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_NO\_CMD\_ACK:\{}
+\DoxyCodeLine{00175         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(}
+\DoxyCodeLine{00176             \textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: "}}
+\DoxyCodeLine{00177             \textcolor{stringliteral}{"No Cmd Ack detected [cmd opcode = 0x\%x] \(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00178             slFatalErrorEvent-\/>Data.NoCmdAck.Code);}
+\DoxyCodeLine{00179         \}}
+\DoxyCodeLine{00180         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_SYNC\_LOSS:\{}
+\DoxyCodeLine{00183             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Sync loss detected n\(\backslash\)r"});}
+\DoxyCodeLine{00184         \}}
+\DoxyCodeLine{00185         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_CMD\_TIMEOUT:\{}
+\DoxyCodeLine{00188         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(}
+\DoxyCodeLine{00189             \textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Async event timeout "}}
+\DoxyCodeLine{00190             \textcolor{stringliteral}{"detected [event opcode =0x\%x]  \(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00191             slFatalErrorEvent-\/>Data.CmdTimeout.Code);}
+\DoxyCodeLine{00192         \}}
+\DoxyCodeLine{00193         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00196             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR:"}}
+\DoxyCodeLine{00197                        \textcolor{stringliteral}{" Unspecified error detected \(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{00198         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00199     \}}
+\DoxyCodeLine{00200 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_acd3b6f958282f61c8ce617090438ddb2_acd3b6f958282f61c8ce617090438ddb2}\label{wifi_8h_acd3b6f958282f61c8ce617090438ddb2_acd3b6f958282f61c8ce617090438ddb2}} 
+\index{wifi.h@{wifi.h}!SimpleLinkGeneralEventHandler@{SimpleLinkGeneralEventHandler}}
+\index{SimpleLinkGeneralEventHandler@{SimpleLinkGeneralEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkGeneralEventHandler()}{SimpleLinkGeneralEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+General\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Device\+Event\+\_\+t $\ast$}]{p\+Dev\+Event }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00104}{104}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105 \{}
+\DoxyCodeLine{00106     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[GENERAL EVENT] -\/ ID=[\%d] Sender=[\%d]\(\backslash\)n\(\backslash\)n"},}
+\DoxyCodeLine{00107                pDevEvent-\/>Data.Error.Code,}
+\DoxyCodeLine{00108                pDevEvent-\/>Data.Error.Source);}
+\DoxyCodeLine{00109 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a18429eac751f1cfdf26be0c1c50245fe_a18429eac751f1cfdf26be0c1c50245fe}\label{wifi_8h_a18429eac751f1cfdf26be0c1c50245fe_a18429eac751f1cfdf26be0c1c50245fe}} 
+\index{wifi.h@{wifi.h}!SimpleLinkHttpServerEventHandler@{SimpleLinkHttpServerEventHandler}}
+\index{SimpleLinkHttpServerEventHandler@{SimpleLinkHttpServerEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkHttpServerEventHandler()}{SimpleLinkHttpServerEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Http\+Server\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Net\+App\+Http\+Server\+Event\+\_\+t $\ast$}]{p\+Http\+Event,  }\item[{Sl\+Net\+App\+Http\+Server\+Response\+\_\+t $\ast$}]{p\+Http\+Response }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00062}{62}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_af4a488df5566d05f1df70d1d7a1fc286_af4a488df5566d05f1df70d1d7a1fc286}\label{wifi_8h_af4a488df5566d05f1df70d1d7a1fc286_af4a488df5566d05f1df70d1d7a1fc286}} 
+\index{wifi.h@{wifi.h}!SimpleLinkNetAppEventHandler@{SimpleLinkNetAppEventHandler}}
+\index{SimpleLinkNetAppEventHandler@{SimpleLinkNetAppEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkNetAppEventHandler()}{SimpleLinkNetAppEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Net\+App\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Net\+App\+Event\+\_\+t $\ast$}]{p\+Net\+App\+Event }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00214}{214}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00215 \{}
+\DoxyCodeLine{00216     \textcolor{keywordflow}{switch}(pNetAppEvent-\/>Id)\{}
+\DoxyCodeLine{00217         \textcolor{keywordflow}{case} SL\_NETAPP\_EVENT\_IPV4\_ACQUIRED:\{}
+\DoxyCodeLine{00218             \mbox{\hyperlink{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}{SET\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{STATUS\_BIT\_IP\_ACQUIRED}});}
+\DoxyCodeLine{00219         \}}
+\DoxyCodeLine{00220         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222         \textcolor{keywordflow}{default}:\{}
+\DoxyCodeLine{00223             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[NETAPP EVENT] Unexpected event [0x\%x] \(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00224                        pNetAppEvent-\/>Id);}
+\DoxyCodeLine{00225         \}}
+\DoxyCodeLine{00226         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00227     \}}
+\DoxyCodeLine{00228 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a2daea0dd2e20551cacbb77ccdfa8c46c_a2daea0dd2e20551cacbb77ccdfa8c46c}\label{wifi_8h_a2daea0dd2e20551cacbb77ccdfa8c46c_a2daea0dd2e20551cacbb77ccdfa8c46c}} 
+\index{wifi.h@{wifi.h}!SimpleLinkNetAppRequestEventHandler@{SimpleLinkNetAppRequestEventHandler}}
+\index{SimpleLinkNetAppRequestEventHandler@{SimpleLinkNetAppRequestEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkNetAppRequestEventHandler()}{SimpleLinkNetAppRequestEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Net\+App\+Request\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Net\+App\+Request\+\_\+t $\ast$}]{p\+Net\+App\+Request,  }\item[{Sl\+Net\+App\+Response\+\_\+t $\ast$}]{p\+Net\+App\+Response }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00048}{48}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a7a22e1687a7df642c851cbaa7aa4c465_a7a22e1687a7df642c851cbaa7aa4c465}\label{wifi_8h_a7a22e1687a7df642c851cbaa7aa4c465_a7a22e1687a7df642c851cbaa7aa4c465}} 
+\index{wifi.h@{wifi.h}!SimpleLinkNetAppRequestMemFreeEventHandler@{SimpleLinkNetAppRequestMemFreeEventHandler}}
+\index{SimpleLinkNetAppRequestMemFreeEventHandler@{SimpleLinkNetAppRequestMemFreeEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkNetAppRequestMemFreeEventHandler()}{SimpleLinkNetAppRequestMemFreeEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Net\+App\+Request\+Mem\+Free\+Event\+Handler (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00034}{34}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_aab74025d6858e187e1d720848225895a_aab74025d6858e187e1d720848225895a}\label{wifi_8h_aab74025d6858e187e1d720848225895a_aab74025d6858e187e1d720848225895a}} 
+\index{wifi.h@{wifi.h}!SimpleLinkSocketTriggerEventHandler@{SimpleLinkSocketTriggerEventHandler}}
+\index{SimpleLinkSocketTriggerEventHandler@{SimpleLinkSocketTriggerEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkSocketTriggerEventHandler()}{SimpleLinkSocketTriggerEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Socket\+Trigger\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Sock\+Trigger\+Event\+\_\+t $\ast$}]{p\+Sl\+Trigger\+Event }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00090}{90}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a912e9d86385822d4eb014738403f89c1_a912e9d86385822d4eb014738403f89c1}\label{wifi_8h_a912e9d86385822d4eb014738403f89c1_a912e9d86385822d4eb014738403f89c1}} 
+\index{wifi.h@{wifi.h}!SimpleLinkSockEventHandler@{SimpleLinkSockEventHandler}}
+\index{SimpleLinkSockEventHandler@{SimpleLinkSockEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkSockEventHandler()}{SimpleLinkSockEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Sock\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Sock\+Event\+\_\+t $\ast$}]{p\+Sock }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00076}{76}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a7d8c711b82b39b034f7f4e319cdfad22_a7d8c711b82b39b034f7f4e319cdfad22}\label{wifi_8h_a7d8c711b82b39b034f7f4e319cdfad22_a7d8c711b82b39b034f7f4e319cdfad22}} 
+\index{wifi.h@{wifi.h}!SimpleLinkWlanEventHandler@{SimpleLinkWlanEventHandler}}
+\index{SimpleLinkWlanEventHandler@{SimpleLinkWlanEventHandler}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{SimpleLinkWlanEventHandler()}{SimpleLinkWlanEventHandler()}}
+{\footnotesize\ttfamily void Simple\+Link\+Wlan\+Event\+Handler (\begin{DoxyParamCaption}\item[{Sl\+Wlan\+Event\+\_\+t $\ast$}]{p\+Wlan\+Event }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link Event\+Handler Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is Event\+Handler for simplelink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00123}{123}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124 \{}
+\DoxyCodeLine{00125     \textcolor{keywordflow}{switch}(pWlanEvent-\/>Id)\{}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{case} SL\_WLAN\_EVENT\_CONNECT:\{}
+\DoxyCodeLine{00127             \mbox{\hyperlink{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}{SET\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{STATUS\_BIT\_CONNECTION}});}
+\DoxyCodeLine{00128         \}}
+\DoxyCodeLine{00129         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131         \textcolor{keywordflow}{case} SL\_WLAN\_EVENT\_DISCONNECT:\{}
+\DoxyCodeLine{00132             \mbox{\hyperlink{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}{CLR\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{STATUS\_BIT\_CONNECTION}});}
+\DoxyCodeLine{00133             \mbox{\hyperlink{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}{CLR\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{STATUS\_BIT\_IP\_ACQUIRED}});}
+\DoxyCodeLine{00134         \}}
+\DoxyCodeLine{00135         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137         \textcolor{keywordflow}{default}:\{}
+\DoxyCodeLine{00138             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[WLAN EVENT] Unexpected event [0x\%x]\(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00139                        pWlanEvent-\/>Id);}
+\DoxyCodeLine{00140         \}}
+\DoxyCodeLine{00141         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00142     \}}
+\DoxyCodeLine{00143 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}\label{wifi_8h_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}} 
+\index{wifi.h@{wifi.h}!wlanConf@{wlanConf}}
+\index{wlanConf@{wlanConf}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{wlanConf()}{wlanConf()}}
+{\footnotesize\ttfamily int32\+\_\+t wlan\+Conf (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link wlan configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Configures wifi for C\+C3220\+SF as station
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00242}{242}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242                       \{}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244     sl\_Start(0, 0, 0);                                                                              \textcolor{comment}{//START DEVICE}}
+\DoxyCodeLine{00245     sl\_WlanSetMode(ROLE\_STA);                                                                       \textcolor{comment}{//SET ROLE AS STATION}}
+\DoxyCodeLine{00246     sl\_WlanPolicySet(SL\_WLAN\_POLICY\_PM , SL\_WLAN\_NORMAL\_POLICY, NULL, 0);                           \textcolor{comment}{//Set PowerManagement policy to normal}}
+\DoxyCodeLine{00247     sl\_WlanPolicySet(SL\_WLAN\_POLICY\_CONNECTION, SL\_WLAN\_CONNECTION\_POLICY(1, 0, 0, 0), NULL, 0);    \textcolor{comment}{//Connection policy Auto}}
+\DoxyCodeLine{00248     sl\_NetCfgSet(SL\_NETCFG\_IPV4\_STA\_ADDR\_MODE, SL\_NETCFG\_ADDR\_DHCP, 0, 0);                          \textcolor{comment}{//set IP DHCP}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00251 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_a78ed3c477c87861aaf507914edc7dd8a_a78ed3c477c87861aaf507914edc7dd8a}\label{wifi_8h_a78ed3c477c87861aaf507914edc7dd8a_a78ed3c477c87861aaf507914edc7dd8a}} 
+\index{wifi.h@{wifi.h}!wlanConnect@{wlanConnect}}
+\index{wlanConnect@{wlanConnect}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{wlanConnect()}{wlanConnect()}}
+{\footnotesize\ttfamily int32\+\_\+t wlan\+Connect (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link wlan connect Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Connects to a W\+I\+FI AP.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00265}{265}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00266 \{}
+\DoxyCodeLine{00267     SlWlanSecParams\_t secParams = \{0\};}
+\DoxyCodeLine{00268 }
+\DoxyCodeLine{00269     secParams.Key = (\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}{SECURITY\_KEY}};}
+\DoxyCodeLine{00270     secParams.KeyLen = strlen(\mbox{\hyperlink{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}{SECURITY\_KEY}});}
+\DoxyCodeLine{00271     secParams.Type = \mbox{\hyperlink{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}{SECURITY\_TYPE}};}
+\DoxyCodeLine{00272 }
+\DoxyCodeLine{00273     sl\_WlanConnect((\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{SSID\_NAME}}, strlen(\mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{SSID\_NAME}}), 0, \&secParams, 0);}
+\DoxyCodeLine{00274     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Trying to connect to AP : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{SSID\_NAME}});}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276     sl\_Task(NULL);}
+\DoxyCodeLine{00277 }
+\DoxyCodeLine{00278     \textcolor{keywordflow}{while}((!\mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{IS\_CONNECTED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)) || (!\mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{IS\_IP\_ACQUIRED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)))\{}
+\DoxyCodeLine{00279         sl\_Task(NULL);}
+\DoxyCodeLine{00280     \}}
+\DoxyCodeLine{00281     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00282 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{wifi_8h_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}\label{wifi_8h_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}} 
+\index{wifi.h@{wifi.h}!wlanConnectFromFile@{wlanConnectFromFile}}
+\index{wlanConnectFromFile@{wlanConnectFromFile}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{wlanConnectFromFile()}{wlanConnectFromFile()}}
+{\footnotesize\ttfamily int32\+\_\+t wlan\+Connect\+From\+File (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{ssid }\end{DoxyParamCaption})}
+
+
+
+Simple\+Link wlan connect from file Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Connects to a W\+I\+FI AP reading the S\+S\+ID from file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em unsigned} & char $\ast$ssid Pointer to ssid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+W\+I\+FI / E\+R\+R\+O\+R\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\+W\+I\+FI as described in \mbox{\hyperlink{wifi_8h}{wifi.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{wifi_8c_source_l00296}{296}} of file \mbox{\hyperlink{wifi_8c_source}{wifi.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00297 \{}
+\DoxyCodeLine{00298     uint8\_t ret;}
+\DoxyCodeLine{00299     SlWlanSecParams\_t secParams = \{0\};}
+\DoxyCodeLine{00300 }
+\DoxyCodeLine{00301     secParams.Key = (\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}{SECURITY\_KEY\_FILE\_CONNECT}};}
+\DoxyCodeLine{00302     secParams.KeyLen = strlen(\mbox{\hyperlink{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}{SECURITY\_KEY\_FILE\_CONNECT}});}
+\DoxyCodeLine{00303     secParams.Type = \mbox{\hyperlink{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}{SECURITY\_TYPE}};}
+\DoxyCodeLine{00304 }
+\DoxyCodeLine{00305     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} FileSSID[13];}
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307     sprintf(\&FileSSID,\textcolor{stringliteral}{"\%s"},ssid );}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309     ret = sl\_WlanConnect((\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)FileSSID, strlen(FileSSID), 0, \&secParams, 0);}
+\DoxyCodeLine{00310     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"WIFI NETWORK: \%s\(\backslash\)n\(\backslash\)r"}, FileSSID);}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312     sl\_Task(NULL);}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314     \textcolor{keywordtype}{int} tries=0;}
+\DoxyCodeLine{00315     \textcolor{keywordflow}{while}((!\mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{IS\_CONNECTED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)) || (!\mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{IS\_IP\_ACQUIRED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)))\{}
+\DoxyCodeLine{00316         sl\_Task(NULL);}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318         \textcolor{keywordflow}{if}((!\mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{IS\_CONNECTED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)) || (!\mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{IS\_IP\_ACQUIRED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)))\{}
+\DoxyCodeLine{00319             tries ++;}
+\DoxyCodeLine{00320             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"*"});}
+\DoxyCodeLine{00321         \}\textcolor{keywordflow}{if}(tries==20000)\{}
+\DoxyCodeLine{00322             \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();}
+\DoxyCodeLine{00323             \textcolor{keywordflow}{return} \mbox{\hyperlink{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}{ERROR\_CONNECT\_WIFI}};}
+\DoxyCodeLine{00324         \}}
+\DoxyCodeLine{00325     \}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327     \textcolor{keywordflow}{if} (ret!=0)\{}
+\DoxyCodeLine{00328         \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();}
+\DoxyCodeLine{00329         \textcolor{keywordflow}{return} \mbox{\hyperlink{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}{ERROR\_CONNECT\_WIFI}};}
+\DoxyCodeLine{00330     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00331         \textcolor{keywordflow}{return} \mbox{\hyperlink{wifi_8h_a167740604ff6466bab5034751b84e0ad_a167740604ff6466bab5034751b84e0ad}{SUCCESS\_CONNECT\_WIFI}};}
+\DoxyCodeLine{00332     \}}
+\DoxyCodeLine{00333     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00334 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}\label{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}} 
+\index{wifi.h@{wifi.h}!PowerMeasure\_CB@{PowerMeasure\_CB}}
+\index{PowerMeasure\_CB@{PowerMeasure\_CB}!wifi.h@{wifi.h}}
+\doxyparagraph{\texorpdfstring{PowerMeasure\_CB}{PowerMeasure\_CB}}
+{\footnotesize\ttfamily Power\+Measure\+\_\+\+Control\+Block Power\+Measure\+\_\+\+CB}
+
+
+
+Definition at line \mbox{\hyperlink{wifi_8h_source_l00086}{86}} of file \mbox{\hyperlink{wifi_8h_source}{wifi.\+h}}.
+

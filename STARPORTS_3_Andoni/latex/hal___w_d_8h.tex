@@ -1,0 +1,94 @@
+\hypertarget{hal___w_d_8h}{}\doxysubsection{hal\+\_\+\+W\+D.\+h File Reference}
+\label{hal___w_d_8h}\index{hal\_WD.h@{hal\_WD.h}}
+
+
+Functions to manage Watchdog.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+Watchdog.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Watchdog\+\_\+\+Handle \mbox{\hyperlink{hal___w_d_8h_ab63aa87a48ad39bb42dbd21fb4621d7c_ab63aa87a48ad39bb42dbd21fb4621d7c}{Startup\+\_\+\+Watchdog}} (uint\+\_\+least8\+\_\+t index, uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Watchdog Startup Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to manage Watchdog. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle Watchdog functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___w_d_8h_source}{hal\+\_\+\+W\+D.\+h}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___w_d_8h_ab63aa87a48ad39bb42dbd21fb4621d7c_ab63aa87a48ad39bb42dbd21fb4621d7c}\label{hal___w_d_8h_ab63aa87a48ad39bb42dbd21fb4621d7c_ab63aa87a48ad39bb42dbd21fb4621d7c}} 
+\index{hal\_WD.h@{hal\_WD.h}!Startup\_Watchdog@{Startup\_Watchdog}}
+\index{Startup\_Watchdog@{Startup\_Watchdog}!hal\_WD.h@{hal\_WD.h}}
+\doxyparagraph{\texorpdfstring{Startup\_Watchdog()}{Startup\_Watchdog()}}
+{\footnotesize\ttfamily Watchdog\+\_\+\+Handle Startup\+\_\+\+Watchdog (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Watchdog Startup Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Starts up a watchdog instance
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & index \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & timeout\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Watchdog\+\_\+\+Handle wd A \#\+Watchdog\+\_\+\+Handle upon success. N\+U\+LL if an error occurs, or if the indexed U\+A\+RT peripheral is already opened. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___w_d_8c_source_l00060}{60}} of file \mbox{\hyperlink{hal___w_d_8c_source}{hal\+\_\+\+W\+D.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060                                                                         \{}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062     uint32\_t reloadValue;}
+\DoxyCodeLine{00063     Watchdog\_Params wdParams;}
+\DoxyCodeLine{00064     Watchdog\_Handle \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}};}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     Watchdog\_init();}
+\DoxyCodeLine{00067     Watchdog\_Params\_init(\&wdParams);}
+\DoxyCodeLine{00068     wdParams.callbackFxn = (Watchdog\_Callback) \mbox{\hyperlink{hal___w_d_8c_aa96687d19cd114877bdc04a78c91e009_aa96687d19cd114877bdc04a78c91e009}{watchdogCallback}};}
+\DoxyCodeLine{00069     wdParams.debugStallMode = Watchdog\_DEBUG\_STALL\_ON;}
+\DoxyCodeLine{00070     wdParams.resetMode = Watchdog\_RESET\_OFF;}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072     \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}} = Watchdog\_open(index, \&wdParams);}
+\DoxyCodeLine{00073     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}} == NULL) \{                                                         \textcolor{comment}{// Error opening Watchdog}}
+\DoxyCodeLine{00074         \textcolor{keywordflow}{while} (1) \{\}}
+\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     reloadValue = Watchdog\_convertMsToTicks(\mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}}, timeout);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{keywordflow}{if} (reloadValue != 0) \{}
+\DoxyCodeLine{00080         Watchdog\_setReload(\mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}}, reloadValue);}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     \textcolor{keywordflow}{return} \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}};}
+\DoxyCodeLine{00084 \}}
+
+\end{DoxyCode}

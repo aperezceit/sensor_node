@@ -1,0 +1,215 @@
+\hypertarget{hal___g_p_i_o_8c_source}{}\doxysubsection{hal\+\_\+\+G\+P\+I\+O.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <ti/drivers/GPIO.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_board_8h}{Board.h}}"}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00018 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00019 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00022 \textcolor{comment}{//}}
+\DoxyCodeLine{00031 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00032 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00033}\mbox{\hyperlink{hal___g_p_i_o_8h_a99235da09a08b737a45a4eb2e7a039b2_a99235da09a08b737a45a4eb2e7a039b2}{00033}} uint8\_t \mbox{\hyperlink{hal___g_p_i_o_8c_a99235da09a08b737a45a4eb2e7a039b2_a99235da09a08b737a45a4eb2e7a039b2}{GPIO\_Config}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_a832f6f40c70913209c539e6b23b6e19a_a832f6f40c70913209c539e6b23b6e19a}{Board\_RN2483\_MCLR}},    GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);          \textcolor{comment}{//MCLR Pin Configured, and set at Low}}
+\DoxyCodeLine{00036     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_a5374df832b639795bb243b69ff9da529_a5374df832b639795bb243b69ff9da529}{Board\_ADXL355\_CS}},     GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_HIGH);         \textcolor{comment}{//Selects the SPI device to interface (Active Low)}}
+\DoxyCodeLine{00037     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_a84aa81d78e0c34bf0fcc5d7415165e7d_a84aa81d78e0c34bf0fcc5d7415165e7d}{Board\_BME280\_CS}},      GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_HIGH);}
+\DoxyCodeLine{00038     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_af79a7517f6815a59aad0a582b34cc089_af79a7517f6815a59aad0a582b34cc089}{Board\_LDC1000\_CS}},     GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_HIGH);}
+\DoxyCodeLine{00039     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_ab85d86b292129e10b01daa3b13783089_ab85d86b292129e10b01daa3b13783089}{Board\_EN\_ADXL355}},     GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);          \textcolor{comment}{//Enable the individual LDO for sensor (active high)}}
+\DoxyCodeLine{00040     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_a453c3ddc0256e95cca0cc9f3afc02930_a453c3ddc0256e95cca0cc9f3afc02930}{Board\_EN\_BME280}},      GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00041     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_abbd081294d914fa8025795b0f2fa1730_abbd081294d914fa8025795b0f2fa1730}{Board\_EN\_LDC1000}},     GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00042     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_aba0fd6e5a96fad3c406ccb7daf7746ae_aba0fd6e5a96fad3c406ccb7daf7746ae}{Board\_DS1374\_INTB}},    GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);          \textcolor{comment}{//This connection no longer exists, so put it low}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00045 \}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048 \textcolor{comment}{//}}
+\DoxyCodeLine{00057 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00058 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00059}\mbox{\hyperlink{hal___g_p_i_o_8h_a4d7ff87c7758b4bbc7b0f6cd4964e3cd_a4d7ff87c7758b4bbc7b0f6cd4964e3cd}{00059}} uint8\_t \mbox{\hyperlink{hal___g_p_i_o_8c_a4d7ff87c7758b4bbc7b0f6cd4964e3cd_a4d7ff87c7758b4bbc7b0f6cd4964e3cd}{I2C\_As\_GPIO\_Low}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_a31805f7b6d76c23bc4cf70cfb5c15cd7_a31805f7b6d76c23bc4cf70cfb5c15cd7}{Board\_SCL\_ASGPIO}},    GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00062     usleep(2000);                                                                       \textcolor{comment}{//Important to avoid an Start condition on RTCC (see datasheet DS1374)}}
+\DoxyCodeLine{00063     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_ae6440063844882e7dbfbae2e99438dfd_ae6440063844882e7dbfbae2e99438dfd}{Board\_SDA\_ASGPIO}},    GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00066 \}}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00069 \textcolor{comment}{//}}
+\DoxyCodeLine{00078 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00079 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00080}\mbox{\hyperlink{hal___g_p_i_o_8h_a5b506ab1aa1f74776ea15b391f6d2b19_a5b506ab1aa1f74776ea15b391f6d2b19}{00080}} uint8\_t \mbox{\hyperlink{hal___g_p_i_o_8c_a5b506ab1aa1f74776ea15b391f6d2b19_a5b506ab1aa1f74776ea15b391f6d2b19}{SPI\_As\_GPIO\_Low}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_ae6666c7d7ad341cfef8c0910e6831dfa_ae6666c7d7ad341cfef8c0910e6831dfa}{Board\_SCLK\_ASGPIO}},    GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00083     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_acb21f3dddac6855a0b0d8ce0de22fb34_acb21f3dddac6855a0b0d8ce0de22fb34}{Board\_MOSI\_ASGPIO}},    GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00084     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_ab69a874c74b6225ac9d9eb80bdc2d6a2_ab69a874c74b6225ac9d9eb80bdc2d6a2}{Board\_CS\_ASGPIO}},      GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_LOW);}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00087 \}}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00090 \textcolor{comment}{//}}
+\DoxyCodeLine{00099 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00100 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00101}\mbox{\hyperlink{hal___g_p_i_o_8h_a450ea7cddaf64406e7c50767418312cc_a450ea7cddaf64406e7c50767418312cc}{00101}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a450ea7cddaf64406e7c50767418312cc_a450ea7cddaf64406e7c50767418312cc}{RN2483\_Clear}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00102 }
+\DoxyCodeLine{00103     GPIO\_write(\mbox{\hyperlink{_board_8h_a832f6f40c70913209c539e6b23b6e19a_a832f6f40c70913209c539e6b23b6e19a}{Board\_RN2483\_MCLR}},0);}
+\DoxyCodeLine{00104 \}}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00107 \textcolor{comment}{//}}
+\DoxyCodeLine{00116 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00117 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00118}\mbox{\hyperlink{hal___g_p_i_o_8h_aa646d2788fdf23312d403fe0ef0d176f_aa646d2788fdf23312d403fe0ef0d176f}{00118}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_aa646d2788fdf23312d403fe0ef0d176f_aa646d2788fdf23312d403fe0ef0d176f}{RN2483\_Set}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120     GPIO\_write(\mbox{\hyperlink{_board_8h_a832f6f40c70913209c539e6b23b6e19a_a832f6f40c70913209c539e6b23b6e19a}{Board\_RN2483\_MCLR}},1);}
+\DoxyCodeLine{00121 \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00124 \textcolor{comment}{//}}
+\DoxyCodeLine{00133 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00134 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00135}\mbox{\hyperlink{hal___g_p_i_o_8h_a89ba88c969d20ef4414f1a1de3442aad_a89ba88c969d20ef4414f1a1de3442aad}{00135}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a89ba88c969d20ef4414f1a1de3442aad_a89ba88c969d20ef4414f1a1de3442aad}{ADXL355\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137     GPIO\_write(\mbox{\hyperlink{_board_8h_ab85d86b292129e10b01daa3b13783089_ab85d86b292129e10b01daa3b13783089}{Board\_EN\_ADXL355}},1);}
+\DoxyCodeLine{00138 \}}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00141 \textcolor{comment}{//}}
+\DoxyCodeLine{00150 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00151 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00152}\mbox{\hyperlink{hal___g_p_i_o_8h_a051e6baf15a4a34fc757be0dc4ab36a1_a051e6baf15a4a34fc757be0dc4ab36a1}{00152}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a051e6baf15a4a34fc757be0dc4ab36a1_a051e6baf15a4a34fc757be0dc4ab36a1}{ADXL355\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00153 }
+\DoxyCodeLine{00154     GPIO\_write(\mbox{\hyperlink{_board_8h_ab85d86b292129e10b01daa3b13783089_ab85d86b292129e10b01daa3b13783089}{Board\_EN\_ADXL355}},0);}
+\DoxyCodeLine{00155 \}}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00158 \textcolor{comment}{//}}
+\DoxyCodeLine{00167 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00168 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00169}\mbox{\hyperlink{hal___g_p_i_o_8h_a90555e6690c18c71dd05ce49cebae084_a90555e6690c18c71dd05ce49cebae084}{00169}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a90555e6690c18c71dd05ce49cebae084_a90555e6690c18c71dd05ce49cebae084}{BME280\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171     GPIO\_write(\mbox{\hyperlink{_board_8h_a453c3ddc0256e95cca0cc9f3afc02930_a453c3ddc0256e95cca0cc9f3afc02930}{Board\_EN\_BME280}},1);}
+\DoxyCodeLine{00172 \}}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00175 \textcolor{comment}{//}}
+\DoxyCodeLine{00184 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00185 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00186}\mbox{\hyperlink{hal___g_p_i_o_8h_a48d3814142b063a07abc58d44c686e8b_a48d3814142b063a07abc58d44c686e8b}{00186}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a48d3814142b063a07abc58d44c686e8b_a48d3814142b063a07abc58d44c686e8b}{BME280\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188     GPIO\_write(\mbox{\hyperlink{_board_8h_a453c3ddc0256e95cca0cc9f3afc02930_a453c3ddc0256e95cca0cc9f3afc02930}{Board\_EN\_BME280}},0);}
+\DoxyCodeLine{00189 \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00192 \textcolor{comment}{//}}
+\DoxyCodeLine{00201 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00202 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00203}\mbox{\hyperlink{hal___g_p_i_o_8h_afcb8f197eed8b09edfe1e097f8e7d9b0_afcb8f197eed8b09edfe1e097f8e7d9b0}{00203}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_afcb8f197eed8b09edfe1e097f8e7d9b0_afcb8f197eed8b09edfe1e097f8e7d9b0}{LDC1000\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00204 }
+\DoxyCodeLine{00205     GPIO\_write(\mbox{\hyperlink{_board_8h_abbd081294d914fa8025795b0f2fa1730_abbd081294d914fa8025795b0f2fa1730}{Board\_EN\_LDC1000}},1);}
+\DoxyCodeLine{00206 \}}
+\DoxyCodeLine{00207 }
+\DoxyCodeLine{00208 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00209 \textcolor{comment}{//}}
+\DoxyCodeLine{00218 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00219 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00220}\mbox{\hyperlink{hal___g_p_i_o_8h_a1a274d73d3e6915dc2b6765624dfa31a_a1a274d73d3e6915dc2b6765624dfa31a}{00220}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a1a274d73d3e6915dc2b6765624dfa31a_a1a274d73d3e6915dc2b6765624dfa31a}{LDC1000\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222     GPIO\_write(\mbox{\hyperlink{_board_8h_abbd081294d914fa8025795b0f2fa1730_abbd081294d914fa8025795b0f2fa1730}{Board\_EN\_LDC1000}},0);}
+\DoxyCodeLine{00223 \}}
+\DoxyCodeLine{00224 }
+\DoxyCodeLine{00225 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00226 \textcolor{comment}{//}}
+\DoxyCodeLine{00235 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00236 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00237}\mbox{\hyperlink{hal___g_p_i_o_8h_a277b74093ed9dd8e5aeb502c54f9c788_a277b74093ed9dd8e5aeb502c54f9c788}{00237}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a277b74093ed9dd8e5aeb502c54f9c788_a277b74093ed9dd8e5aeb502c54f9c788}{Node\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00238 }
+\DoxyCodeLine{00239     GPIO\_write(\mbox{\hyperlink{_board_8h_a0a8f8ac34f7666050b5178c15bf07730_a0a8f8ac34f7666050b5178c15bf07730}{Board\_EN\_NODE}},1);}
+\DoxyCodeLine{00240 \}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00243 \textcolor{comment}{//}}
+\DoxyCodeLine{00252 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00253 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00254}\mbox{\hyperlink{hal___g_p_i_o_8h_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{00254}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256     GPIO\_write(\mbox{\hyperlink{_board_8h_a0a8f8ac34f7666050b5178c15bf07730_a0a8f8ac34f7666050b5178c15bf07730}{Board\_EN\_NODE}},0);}
+\DoxyCodeLine{00257 \}}
+\DoxyCodeLine{00258 }
+\DoxyCodeLine{00259 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00260 \textcolor{comment}{//}}
+\DoxyCodeLine{00269 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00270 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00271}\mbox{\hyperlink{hal___g_p_i_o_8h_a8246cc2e743b65d0d3529c614d5b2514_a8246cc2e743b65d0d3529c614d5b2514}{00271}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a8246cc2e743b65d0d3529c614d5b2514_a8246cc2e743b65d0d3529c614d5b2514}{ADXL355\_SPI\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00272 }
+\DoxyCodeLine{00273     GPIO\_write(\mbox{\hyperlink{_board_8h_a5374df832b639795bb243b69ff9da529_a5374df832b639795bb243b69ff9da529}{Board\_ADXL355\_CS}},0);}
+\DoxyCodeLine{00274 \}}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00277 \textcolor{comment}{//}}
+\DoxyCodeLine{00286 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00287 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00288}\mbox{\hyperlink{hal___g_p_i_o_8h_a7e54e10b0b89714403ffa05e315b520e_a7e54e10b0b89714403ffa05e315b520e}{00288}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a7e54e10b0b89714403ffa05e315b520e_a7e54e10b0b89714403ffa05e315b520e}{ADXL355\_SPI\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00289 }
+\DoxyCodeLine{00290     GPIO\_write(\mbox{\hyperlink{_board_8h_a5374df832b639795bb243b69ff9da529_a5374df832b639795bb243b69ff9da529}{Board\_ADXL355\_CS}},1);}
+\DoxyCodeLine{00291 \}}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00294 \textcolor{comment}{//}}
+\DoxyCodeLine{00303 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00304 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00305}\mbox{\hyperlink{hal___g_p_i_o_8h_a80e700bffa326a8ea835670fe32384b3_a80e700bffa326a8ea835670fe32384b3}{00305}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a80e700bffa326a8ea835670fe32384b3_a80e700bffa326a8ea835670fe32384b3}{BME280\_SPI\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307     GPIO\_write(\mbox{\hyperlink{_board_8h_a84aa81d78e0c34bf0fcc5d7415165e7d_a84aa81d78e0c34bf0fcc5d7415165e7d}{Board\_BME280\_CS}},0);}
+\DoxyCodeLine{00308 \}}
+\DoxyCodeLine{00309 }
+\DoxyCodeLine{00310 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00311 \textcolor{comment}{//}}
+\DoxyCodeLine{00320 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00321 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00322}\mbox{\hyperlink{hal___g_p_i_o_8h_aca94dee24d378289e276586ff0d1dcd8_aca94dee24d378289e276586ff0d1dcd8}{00322}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_aca94dee24d378289e276586ff0d1dcd8_aca94dee24d378289e276586ff0d1dcd8}{BME280\_SPI\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00323 }
+\DoxyCodeLine{00324     GPIO\_write(\mbox{\hyperlink{_board_8h_a84aa81d78e0c34bf0fcc5d7415165e7d_a84aa81d78e0c34bf0fcc5d7415165e7d}{Board\_BME280\_CS}},1);}
+\DoxyCodeLine{00325 \}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00328 \textcolor{comment}{//}}
+\DoxyCodeLine{00337 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00338 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00339}\mbox{\hyperlink{hal___g_p_i_o_8h_a2be9e34a0529d51de1c93e36a419155f_a2be9e34a0529d51de1c93e36a419155f}{00339}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a2be9e34a0529d51de1c93e36a419155f_a2be9e34a0529d51de1c93e36a419155f}{LDC1000\_SPI\_Enable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00340 }
+\DoxyCodeLine{00341     GPIO\_write(\mbox{\hyperlink{_board_8h_af79a7517f6815a59aad0a582b34cc089_af79a7517f6815a59aad0a582b34cc089}{Board\_LDC1000\_CS}},0);}
+\DoxyCodeLine{00342 \}}
+\DoxyCodeLine{00343 }
+\DoxyCodeLine{00344 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00345 \textcolor{comment}{//}}
+\DoxyCodeLine{00354 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00355 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00356}\mbox{\hyperlink{hal___g_p_i_o_8h_ae3467ee4a51737211521dd79c8f64ce8_ae3467ee4a51737211521dd79c8f64ce8}{00356}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_ae3467ee4a51737211521dd79c8f64ce8_ae3467ee4a51737211521dd79c8f64ce8}{LDC1000\_SPI\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00357 }
+\DoxyCodeLine{00358     GPIO\_write(\mbox{\hyperlink{_board_8h_af79a7517f6815a59aad0a582b34cc089_af79a7517f6815a59aad0a582b34cc089}{Board\_LDC1000\_CS}},1);}
+\DoxyCodeLine{00359 \}}
+\DoxyCodeLine{00360 }
+\DoxyCodeLine{00361 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00362 \textcolor{comment}{//}}
+\DoxyCodeLine{00371 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00372 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___g_p_i_o_8c_source_l00373}\mbox{\hyperlink{hal___g_p_i_o_8h_a6c74838e78acd1438944bf31b0e1c9c5_a6c74838e78acd1438944bf31b0e1c9c5}{00373}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___g_p_i_o_8c_a6c74838e78acd1438944bf31b0e1c9c5_a6c74838e78acd1438944bf31b0e1c9c5}{SPI\_CS\_Disable}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00374 }
+\DoxyCodeLine{00375     GPIO\_write(\mbox{\hyperlink{_board_8h_af79a7517f6815a59aad0a582b34cc089_af79a7517f6815a59aad0a582b34cc089}{Board\_LDC1000\_CS}},1);}
+\DoxyCodeLine{00376     GPIO\_write(\mbox{\hyperlink{_board_8h_a84aa81d78e0c34bf0fcc5d7415165e7d_a84aa81d78e0c34bf0fcc5d7415165e7d}{Board\_BME280\_CS}},1);}
+\DoxyCodeLine{00377     GPIO\_write(\mbox{\hyperlink{_board_8h_a5374df832b639795bb243b69ff9da529_a5374df832b639795bb243b69ff9da529}{Board\_ADXL355\_CS}},1);}
+\DoxyCodeLine{00378 \}}
+
+\end{DoxyCode}

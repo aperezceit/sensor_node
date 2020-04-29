@@ -1,0 +1,36 @@
+
+\begin{DoxyEnumerate}
+\item Starports Sensor \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} Application \begin{DoxyVerb}    This Software starts up the STARPORTS Sensor Node, reads Node configuration parameters from file system files,
+    collects data from several sensors and transmit it by wireless communications. Finally, powers off the Node
+
+    The node is provided with sensors:
+        1. ADC voltage sensor
+        2. ADXL355 accelerometer
+        3. BME280 pressure, temperature and humidity sensor
+        4. LDC1000 inductive sensor
+
+    And wireless communication:
+        1.LoRa (RN2483)
+        2.Wifi (CC3220SF)
+\end{DoxyVerb}
+
+\item Working flow \begin{DoxyVerb}    2.1 Configures GPIO's and initialization of serial ports communications
+    2.2 Reads Node parameters from file system files
+    2.3 Configures Peripherals (RN2483, i2c)
+    2.4 Sets Node WakeUp_Time in RTC
+    2.5 Configures wireless connection
+        2.5.1 Lora Mode (MODE=0)
+            2.5.1.1 Configures Lora connection parameters
+            2.5.1.2 Joins Lora ABP
+        2.5.1 Wifi Mode (MODE=2)
+            2.5.1.1 Configures Wifi connection parameters
+            2.5.1.2 Connects to wifi AP
+    2.6 Reads data from sensors
+    2.6 Packages data to send
+        2.6.1 NBoot = 0 --> BME280
+        2.6.2 NBoot = 1 --> ADXL255
+    2.7 Sends data through selected wireless communication
+    2.8 Powers off the Node during wake up interval (Configured in "wakeupinterval" file (in seconds)
+\end{DoxyVerb}
+ 
+\end{DoxyEnumerate}

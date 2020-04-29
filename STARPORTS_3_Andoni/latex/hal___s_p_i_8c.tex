@@ -1,0 +1,318 @@
+\hypertarget{hal___s_p_i_8c}{}\doxysubsection{hal\+\_\+\+S\+P\+I.\+c File Reference}
+\label{hal___s_p_i_8c}\index{hal\_SPI.c@{hal\_SPI.c}}
+
+
+Functions to manage S\+PI on C\+C3220\+SF.  
+
+
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+S\+P\+I.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___s_p_i_8c_a71bba4adf498bef5a57839ef74514f39_a71bba4adf498bef5a57839ef74514f39}{S\+P\+I\+\_\+read\+\_\+16bits}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Address, uint8\+\_\+t $\ast$Rx\+Buffer)
+\begin{DoxyCompactList}\small\item\em S\+PI Read 16 bits Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{S\+P\+I\+\_\+read\+\_\+8bits}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Address, uint8\+\_\+t $\ast$Rx\+Buffer, uint8\+\_\+t nregs, uint8\+\_\+t rnw\+M\+SB)
+\begin{DoxyCompactList}\small\item\em S\+PI Read 8 bits Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___s_p_i_8c_a5cc400553821395b2214d5304851d8b7_a5cc400553821395b2214d5304851d8b7}{S\+P\+I\+\_\+write\+\_\+16bits}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Address, uint8\+\_\+t Data)
+\begin{DoxyCompactList}\small\item\em S\+PI Write 16 bits Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{S\+P\+I\+\_\+write\+\_\+8bits}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Address, uint8\+\_\+t Data, uint8\+\_\+t rnw\+M\+SB)
+\begin{DoxyCompactList}\small\item\em S\+PI Write 8 bits Function. \end{DoxyCompactList}\item 
+S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{hal___s_p_i_8c_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}{Startup\+\_\+\+S\+PI}} (uint\+\_\+least8\+\_\+t index, uint32\+\_\+t data\+Size, uint32\+\_\+t data\+Rate)
+\begin{DoxyCompactList}\small\item\em S\+PI Start up Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to manage S\+PI on C\+C3220\+SF. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle S\+PI C\+C3220\+SF functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___s_p_i_8c_source}{hal\+\_\+\+S\+P\+I.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___s_p_i_8c_a71bba4adf498bef5a57839ef74514f39_a71bba4adf498bef5a57839ef74514f39}\label{hal___s_p_i_8c_a71bba4adf498bef5a57839ef74514f39_a71bba4adf498bef5a57839ef74514f39}} 
+\index{hal\_SPI.c@{hal\_SPI.c}!SPI\_read\_16bits@{SPI\_read\_16bits}}
+\index{SPI\_read\_16bits@{SPI\_read\_16bits}!hal\_SPI.c@{hal\_SPI.c}}
+\doxyparagraph{\texorpdfstring{SPI\_read\_16bits()}{SPI\_read\_16bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t S\+P\+I\+\_\+read\+\_\+16bits (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Address,  }\item[{uint8\+\_\+t $\ast$}]{Rx\+Buffer }\end{DoxyParamCaption})}
+
+
+
+S\+PI Read 16 bits Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads 16 bits from S\+PI
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & $\ast$\+Rx\+Buffer pointer to Rx\+Buffer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool transfer\+OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___s_p_i_8c_source_l00106}{106}} of file \mbox{\hyperlink{hal___s_p_i_8c_source}{hal\+\_\+\+S\+P\+I.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106                                                                             \{}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00109     uint16\_t         TxBuffer[2];}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     \textcolor{keywordtype}{bool}            transferOK;}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     TxBuffer[0] = ((Address \& 0x7F) + 0x80)<<8;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     spiTransaction.count = 1;}
+\DoxyCodeLine{00116     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *) TxBuffer;}
+\DoxyCodeLine{00117     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *) RxBuffer;}
+\DoxyCodeLine{00118     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00121 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}\label{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}} 
+\index{hal\_SPI.c@{hal\_SPI.c}!SPI\_read\_8bits@{SPI\_read\_8bits}}
+\index{SPI\_read\_8bits@{SPI\_read\_8bits}!hal\_SPI.c@{hal\_SPI.c}}
+\doxyparagraph{\texorpdfstring{SPI\_read\_8bits()}{SPI\_read\_8bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t S\+P\+I\+\_\+read\+\_\+8bits (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Address,  }\item[{uint8\+\_\+t $\ast$}]{Rx\+Buffer,  }\item[{uint8\+\_\+t}]{nregs,  }\item[{uint8\+\_\+t}]{rnw\+M\+SB }\end{DoxyParamCaption})}
+
+
+
+S\+PI Read 8 bits Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads 8 bits from S\+PI
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & $\ast$\+Rx\+Buffer pointer to Rx\+Buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & nregs Number of registers to read \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & rnw\+M\+SB\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool transfer\+OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___s_p_i_8c_source_l00067}{67}} of file \mbox{\hyperlink{hal___s_p_i_8c_source}{hal\+\_\+\+S\+P\+I.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067                                                                                                           \{}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00070     uint8\_t         TxBuffer[32];}
+\DoxyCodeLine{00071     RxBuffer[0] = 0;}
+\DoxyCodeLine{00072     RxBuffer[1] = 0;}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \textcolor{keywordtype}{bool}            transferOK;}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076     \textcolor{keywordflow}{if} (rnwMSB==0) \{}
+\DoxyCodeLine{00077         TxBuffer[0] = ((Address<<1) | 0x01);}
+\DoxyCodeLine{00078     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00079         TxBuffer[0] = (Address \& 0x7F) | 0x80;}
+\DoxyCodeLine{00080     \}}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     TxBuffer[1] = 0x00;}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     spiTransaction.count = nregs+1;}
+\DoxyCodeLine{00085     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *)TxBuffer;}
+\DoxyCodeLine{00086     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *)RxBuffer;}
+\DoxyCodeLine{00087     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00090 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___s_p_i_8c_a5cc400553821395b2214d5304851d8b7_a5cc400553821395b2214d5304851d8b7}\label{hal___s_p_i_8c_a5cc400553821395b2214d5304851d8b7_a5cc400553821395b2214d5304851d8b7}} 
+\index{hal\_SPI.c@{hal\_SPI.c}!SPI\_write\_16bits@{SPI\_write\_16bits}}
+\index{SPI\_write\_16bits@{SPI\_write\_16bits}!hal\_SPI.c@{hal\_SPI.c}}
+\doxyparagraph{\texorpdfstring{SPI\_write\_16bits()}{SPI\_write\_16bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t S\+P\+I\+\_\+write\+\_\+16bits (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Address,  }\item[{uint8\+\_\+t}]{Data }\end{DoxyParamCaption})}
+
+
+
+S\+PI Write 16 bits Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes 16 bits to S\+PI
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Data Data to write\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool transfer\+OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___s_p_i_8c_source_l00175}{175}} of file \mbox{\hyperlink{hal___s_p_i_8c_source}{hal\+\_\+\+S\+P\+I.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175                                                                         \{}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00178     uint16\_t        TxBuffer[2];}
+\DoxyCodeLine{00179     uint16\_t        RxBuffer[2];}
+\DoxyCodeLine{00180     \textcolor{keywordtype}{bool}            transferOK;}
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182     TxBuffer[0] = (Address << 8) + Data;}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184     spiTransaction.count = 1;}
+\DoxyCodeLine{00185     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *)(TxBuffer);}
+\DoxyCodeLine{00186     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *)(RxBuffer);}
+\DoxyCodeLine{00187     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00190 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}\label{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}} 
+\index{hal\_SPI.c@{hal\_SPI.c}!SPI\_write\_8bits@{SPI\_write\_8bits}}
+\index{SPI\_write\_8bits@{SPI\_write\_8bits}!hal\_SPI.c@{hal\_SPI.c}}
+\doxyparagraph{\texorpdfstring{SPI\_write\_8bits()}{SPI\_write\_8bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t S\+P\+I\+\_\+write\+\_\+8bits (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Address,  }\item[{uint8\+\_\+t}]{Data,  }\item[{uint8\+\_\+t}]{rnw\+M\+SB }\end{DoxyParamCaption})}
+
+
+
+S\+PI Write 8 bits Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes 8 bits to S\+PI
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Data Data to write \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & rnw\+M\+SB\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool transfer\+OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___s_p_i_8c_source_l00138}{138}} of file \mbox{\hyperlink{hal___s_p_i_8c_source}{hal\+\_\+\+S\+P\+I.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00138                                                                                        \{}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00141     uint8\_t        TxBuffer[2];}
+\DoxyCodeLine{00142     uint8\_t        RxBuffer[2];}
+\DoxyCodeLine{00143     \textcolor{keywordtype}{bool}           transferOK;}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145     \textcolor{keywordflow}{if} (rnwMSB==0) \{}
+\DoxyCodeLine{00146         TxBuffer[0] = (Address<<1);}
+\DoxyCodeLine{00147     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00148         TxBuffer[0] = (Address \& 0x7F);}
+\DoxyCodeLine{00149     \}}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151     TxBuffer[1] = Data;}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153     spiTransaction.count = 2;}
+\DoxyCodeLine{00154     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *)(TxBuffer);}
+\DoxyCodeLine{00155     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *)(RxBuffer);}
+\DoxyCodeLine{00156     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00159 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___s_p_i_8c_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}\label{hal___s_p_i_8c_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}} 
+\index{hal\_SPI.c@{hal\_SPI.c}!Startup\_SPI@{Startup\_SPI}}
+\index{Startup\_SPI@{Startup\_SPI}!hal\_SPI.c@{hal\_SPI.c}}
+\doxyparagraph{\texorpdfstring{Startup\_SPI()}{Startup\_SPI()}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Handle Startup\+\_\+\+S\+PI (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{data\+Size,  }\item[{uint32\+\_\+t}]{data\+Rate }\end{DoxyParamCaption})}
+
+
+
+S\+PI Start up Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Initiates S\+PI on C\+C3220\+SF
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & index \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & data\+Size \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & data\+Rate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+\_\+\+Handle spi 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___s_p_i_8c_source_l00035}{35}} of file \mbox{\hyperlink{hal___s_p_i_8c_source}{hal\+\_\+\+S\+P\+I.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035                                                                                   \{}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     SPI\_Params spiParams;}
+\DoxyCodeLine{00038     SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}};}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     SPI\_Params\_init(\&spiParams);                                        \textcolor{comment}{// Assumes SPI\_init() has already been started}}
+\DoxyCodeLine{00041     spiParams.mode = SPI\_MASTER;}
+\DoxyCodeLine{00042     spiParams.transferMode = SPI\_MODE\_BLOCKING;}
+\DoxyCodeLine{00043     spiParams.frameFormat = SPI\_POL0\_PHA0;}
+\DoxyCodeLine{00044     spiParams.dataSize = dataSize;}
+\DoxyCodeLine{00045     spiParams.bitRate = dataRate;}
+\DoxyCodeLine{00046     \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}} = SPI\_open(index, \&spiParams);}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \textcolor{keywordflow}{return} \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}};}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,60 @@
+\hypertarget{file__system_8h_source}{}\doxysubsection{file\+\_\+system.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#ifndef FILE\_SYSTEM\_H\_}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#define FILE\_SYSTEM\_H\_}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00014 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00015 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <ti/drivers/net/wifi/simplelink.h>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___l_o_r_a_8h}{hal\_LORA.h}}"}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00020 \textcolor{comment}{//                      DEFINES}}
+\DoxyCodeLine{00021 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00022}\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{00022}} \textcolor{preprocessor}{\#define MAX\_FILE\_SIZE 256}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00023}\mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{00023}} \textcolor{preprocessor}{\#define FS\_WAKEUP           "wake\_up\_time"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00024}\mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{00024}} \textcolor{preprocessor}{\#define FS\_MODE             "mode"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00025}\mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{00025}} \textcolor{preprocessor}{\#define FS\_NCYCLES          "ncycles"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00026}\mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{00026}} \textcolor{preprocessor}{\#define FS\_SSID             "ssid"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00027}\mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{00027}} \textcolor{preprocessor}{\#define FS\_NBOOT            "nboot"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00028}\mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{00028}} \textcolor{preprocessor}{\#define FS\_NFAILS           "nfails"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00029}\mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{00029}} \textcolor{preprocessor}{\#define FS\_UPCNTR           "upcntr"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00030}\mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{00030}} \textcolor{preprocessor}{\#define FS\_DNCNTR           "dncntr"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00031}\mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{00031}} \textcolor{preprocessor}{\#define FS\_NODEID           "nodeid"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00032}\mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{00032}} \textcolor{preprocessor}{\#define FS\_CHANGEWAKEUP     "changewakeup"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00033}\mbox{\hyperlink{file__system_8h_a5cc26d640d15287c3f18fabc2c58ffee_a5cc26d640d15287c3f18fabc2c58ffee}{00033}} \textcolor{preprocessor}{\#define FS\_PAYLOAD          "payload"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00034}\mbox{\hyperlink{file__system_8h_adb7bc59d1dcf6fffb0d265a92966fd39_adb7bc59d1dcf6fffb0d265a92966fd39}{00034}} \textcolor{preprocessor}{\#define CERTIFICATE         "dummy-\/trusted-\/cert"}}
+\DoxyCodeLine{\Hypertarget{file__system_8h_source_l00035}\mbox{\hyperlink{file__system_8h_a7066f55b976358c546ba258a82499b2b_a7066f55b976358c546ba258a82499b2b}{00035}} \textcolor{preprocessor}{\#define MAX\_FILE\_ENTRIES    4}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00038 \textcolor{comment}{//                      FUNCTION PROTOTYPES}}
+\DoxyCodeLine{00039 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00040 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{writeNFails}}(uint16\_t NFails);}
+\DoxyCodeLine{00041 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a5813499664e66d7c300822aa326ff46b_a5813499664e66d7c300822aa326ff46b}{writeNBoot}}(uint8\_t FirstBoot);}
+\DoxyCodeLine{00042 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_ad63f444cc96aa510ffa778c36f568f22_ad63f444cc96aa510ffa778c36f568f22}{writeNCycles}}(uint8\_t NCycles);}
+\DoxyCodeLine{00043 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}{writeUpCntr}}(uint32\_t Upctr);}
+\DoxyCodeLine{00044 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_ae9b67eda8db36bafa031f04504f58d9f_ae9b67eda8db36bafa031f04504f58d9f}{writeDnCntr}}(uint32\_t Dnctr);}
+\DoxyCodeLine{00045 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a6cb7586e12661d150ce00b3817090729_a6cb7586e12661d150ce00b3817090729}{writeChangeWakeUp}}(uint8\_t ChangeWakeUp);}
+\DoxyCodeLine{00046 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_ace59423ed2ba20ffa424883ab689df8c_ace59423ed2ba20ffa424883ab689df8c}{writeWakeUp}}(uint16\_t WakeUpInterval);}
+\DoxyCodeLine{00047 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a1d27a902ee3c4804928771460ecc38bc_a1d27a902ee3c4804928771460ecc38bc}{writeMode}}(uint8\_t Mode);}
+\DoxyCodeLine{00048 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_ace59423ed2ba20ffa424883ab689df8c_ace59423ed2ba20ffa424883ab689df8c}{writeWakeUp}}(uint16\_t WakeUpInterval);}
+\DoxyCodeLine{00049 \mbox{\hyperlink{file__system_8h_a5e8862ee081ae77c415e8beeee6d31db_a5e8862ee081ae77c415e8beeee6d31db}{writeNodeId}}(uint16\_t NodeId);}
+\DoxyCodeLine{00050 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a20a65f4623985c3e0332718b683e817d_a20a65f4623985c3e0332718b683e817d}{writeSSID}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *SSID);}
+\DoxyCodeLine{00051 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a9fded96f4b6c53f456f6cb1f374648c5_a9fded96f4b6c53f456f6cb1f374648c5}{st\_readFileNFails}}();}
+\DoxyCodeLine{00052 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_af7c6ac13af4b0ecdc100dd2233c52258_af7c6ac13af4b0ecdc100dd2233c52258}{st\_readFileNBoot}}();}
+\DoxyCodeLine{00053 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a193cc642a8f29b0e4169602a4ffbf68f_a193cc642a8f29b0e4169602a4ffbf68f}{st\_readFileNCycles}}();}
+\DoxyCodeLine{00054 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a553babbf696d08f53ac9c5a5099f1d97_a553babbf696d08f53ac9c5a5099f1d97}{st\_readFileUpCntr}}();}
+\DoxyCodeLine{00055 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a1bfec3db28f2764508d1acfdf4629b9a_a1bfec3db28f2764508d1acfdf4629b9a}{st\_readFileDnCntr}}();}
+\DoxyCodeLine{00056 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_afef9c44185629b10676766dec447d74f_afef9c44185629b10676766dec447d74f}{st\_readFileMode}}();}
+\DoxyCodeLine{00057 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_afbd825586bc3b3ea19b46c82d0aca8be_afbd825586bc3b3ea19b46c82d0aca8be}{st\_readFileChangeWakeUp}}();}
+\DoxyCodeLine{00058 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_a0edb958ae88b4d5b85ffc91360cc8cd1_a0edb958ae88b4d5b85ffc91360cc8cd1}{st\_readFileWakeUp}}();}
+\DoxyCodeLine{00059 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_ad431cb412fc57e5ad46b4b9d93304335_ad431cb412fc57e5ad46b4b9d93304335}{st\_readFileNodeId}}();}
+\DoxyCodeLine{00060 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}{st\_readFileSSID}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ssid);}
+\DoxyCodeLine{00061 \textcolor{keywordtype}{int} \mbox{\hyperlink{file__system_8h_aa7226e5232f19cacdf42d95356aaa545_aa7226e5232f19cacdf42d95356aaa545}{deleteFile}}();}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FILE\_SYSTEM\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

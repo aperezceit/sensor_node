@@ -1,0 +1,203 @@
+\hypertarget{hal___i2_c_8h}{}\doxysubsection{hal\+\_\+\+I2\+C.\+h File Reference}
+\label{hal___i2_c_8h}\index{hal\_I2C.h@{hal\_I2C.h}}
+
+
+Functions for I2C protocol.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+I2\+C.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___i2_c_8h_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}{I2\+C\+\_\+read\+\_\+8bits}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint8\+\_\+t Slave, uint8\+\_\+t Address, uint8\+\_\+t $\ast$Rx\+Buffer, uint8\+\_\+t nregs)
+\begin{DoxyCompactList}\small\item\em I2C Read 8 bits Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___i2_c_8h_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}{I2\+C\+\_\+write\+\_\+8bits}} (I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, uint8\+\_\+t Slave, uint8\+\_\+t Address, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em I2C Write 8 bits Function. \end{DoxyCompactList}\item 
+I2\+C\+\_\+\+Handle \mbox{\hyperlink{hal___i2_c_8h_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}{Startup\+\_\+\+I2C}} (uint\+\_\+least8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em I2C Handle Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions for I2C protocol. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle I2C functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___i2_c_8h_source}{hal\+\_\+\+I2\+C.\+h}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___i2_c_8h_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}\label{hal___i2_c_8h_a8e7caeb1c8ea8453e48bda760e96f570_a8e7caeb1c8ea8453e48bda760e96f570}} 
+\index{hal\_I2C.h@{hal\_I2C.h}!I2C\_read\_8bits@{I2C\_read\_8bits}}
+\index{I2C\_read\_8bits@{I2C\_read\_8bits}!hal\_I2C.h@{hal\_I2C.h}}
+\doxyparagraph{\texorpdfstring{I2C\_read\_8bits()}{I2C\_read\_8bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+read\+\_\+8bits (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint8\+\_\+t}]{Slave,  }\item[{uint8\+\_\+t}]{Address,  }\item[{uint8\+\_\+t $\ast$}]{Rx\+Buffer,  }\item[{uint8\+\_\+t}]{nregs }\end{DoxyParamCaption})}
+
+
+
+I2C Read 8 bits Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads 8 bits from I2C register
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___i2_c_8c_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}{Startup\+\_\+\+I2\+C(uint\+\_\+least8\+\_\+t index)}} must be called before 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Slave \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & $\ast$\+Rx\+Buffer Pointer to a buffer \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & nregs\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Transfer\+OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___i2_c_8c_source_l00065}{65}} of file \mbox{\hyperlink{hal___i2_c_8c_source}{hal\+\_\+\+I2\+C.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065                                                                                                          \{}
+\DoxyCodeLine{00066 }
+\DoxyCodeLine{00067     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00068     uint8\_t         TxBuffer;}
+\DoxyCodeLine{00069     \textcolor{keywordtype}{bool}            TransferOK;}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071     TxBuffer = Address;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00074     i2cTransaction.writeBuf = \&TxBuffer;}
+\DoxyCodeLine{00075     i2cTransaction.writeCount = 1;}
+\DoxyCodeLine{00076     i2cTransaction.readBuf = RxBuffer;}
+\DoxyCodeLine{00077     i2cTransaction.readCount = nregs;}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     TransferOK = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \textcolor{keywordflow}{return} (TransferOK? 0 : 1);}
+\DoxyCodeLine{00082 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___i2_c_8h_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}\label{hal___i2_c_8h_acf7cabe4e3359c48c4db178876b70a82_acf7cabe4e3359c48c4db178876b70a82}} 
+\index{hal\_I2C.h@{hal\_I2C.h}!I2C\_write\_8bits@{I2C\_write\_8bits}}
+\index{I2C\_write\_8bits@{I2C\_write\_8bits}!hal\_I2C.h@{hal\_I2C.h}}
+\doxyparagraph{\texorpdfstring{I2C\_write\_8bits()}{I2C\_write\_8bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t I2\+C\+\_\+write\+\_\+8bits (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle}]{i2c,  }\item[{uint8\+\_\+t}]{Slave,  }\item[{uint8\+\_\+t}]{Address,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+I2C Write 8 bits Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes 8 bits to I2C register
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___i2_c_8c_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}{Startup\+\_\+\+I2\+C(uint\+\_\+least8\+\_\+t index)}} must be called before 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I2\+C\+\_\+\+Handle} & i2c \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Slave \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Address \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Transfer\+OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___i2_c_8c_source_l00100}{100}} of file \mbox{\hyperlink{hal___i2_c_8c_source}{hal\+\_\+\+I2\+C.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100                                                                                      \{}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102     I2C\_Transaction i2cTransaction;}
+\DoxyCodeLine{00103     uint8\_t         TxBuffer[2];}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{bool}            TransferOK;}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{00106     TxBuffer[0] = Address;}
+\DoxyCodeLine{00107     TxBuffer[1] = Val;}
+\DoxyCodeLine{00108 }
+\DoxyCodeLine{00109     i2cTransaction.slaveAddress = Slave;}
+\DoxyCodeLine{00110     i2cTransaction.writeBuf = TxBuffer;}
+\DoxyCodeLine{00111     i2cTransaction.writeCount = 2;}
+\DoxyCodeLine{00112     i2cTransaction.readBuf = NULL;}
+\DoxyCodeLine{00113     i2cTransaction.readCount = 0;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     TransferOK = I2C\_transfer(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \&i2cTransaction);}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     \textcolor{keywordflow}{return} (TransferOK? 0 : 1);}
+\DoxyCodeLine{00118 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___i2_c_8h_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}\label{hal___i2_c_8h_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}} 
+\index{hal\_I2C.h@{hal\_I2C.h}!Startup\_I2C@{Startup\_I2C}}
+\index{Startup\_I2C@{Startup\_I2C}!hal\_I2C.h@{hal\_I2C.h}}
+\doxyparagraph{\texorpdfstring{Startup\_I2C()}{Startup\_I2C()}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle Startup\+\_\+\+I2C (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+I2C Handle Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Handle for I2C
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint\+\_\+least8\+\_\+t} & index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+I2\+C\+\_\+\+Handle i2c 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___i2_c_8c_source_l00032}{32}} of file \mbox{\hyperlink{hal___i2_c_8c_source}{hal\+\_\+\+I2\+C.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032                                             \{}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     I2C\_Params i2cParams;}
+\DoxyCodeLine{00035     I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}};}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     I2C\_init();}
+\DoxyCodeLine{00038     I2C\_Params\_init(\&i2cParams);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     i2cParams.transferMode = I2C\_MODE\_BLOCKING;}
+\DoxyCodeLine{00041     i2cParams.bitRate = I2C\_400kHz;}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}} = I2C\_open(index, \&i2cParams);}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045     \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}};}
+\DoxyCodeLine{00046 \}}
+
+\end{DoxyCode}

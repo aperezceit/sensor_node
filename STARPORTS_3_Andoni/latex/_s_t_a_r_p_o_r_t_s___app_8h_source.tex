@@ -1,0 +1,108 @@
+\hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source}{}\doxysubsection{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#ifndef STARPORTS\_APP\_H\_}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#define STARPORTS\_APP\_H\_}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00014 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00015 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00019 \textcolor{comment}{//                      DEFINES}}
+\DoxyCodeLine{00020 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00021}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f7945514ea8b2c7145cf68d47c96a08_a2f7945514ea8b2c7145cf68d47c96a08}{00021}} \textcolor{preprocessor}{\#define NODEID                  0x7abc}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00022}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f6a1ff33784a29f68d84d63eb154acd_a2f6a1ff33784a29f68d84d63eb154acd}{00022}} \textcolor{preprocessor}{\#define ADXL355\_ID              0xAD1D}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00023}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9aa1e714b7260f21de419112f041aad7_a9aa1e714b7260f21de419112f041aad7}{00023}} \textcolor{preprocessor}{\#define BME280\_ID               0x0060}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00024}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a88370a81415260c8294e4aca4110154a_a88370a81415260c8294e4aca4110154a}{00024}} \textcolor{preprocessor}{\#define LDC1000\_ID              0x0080}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00025}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a5e0abd712518f4256f34430053b24c41_a5e0abd712518f4256f34430053b24c41}{00025}} \textcolor{preprocessor}{\#define VBAT\_ID                 0x0055}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00026}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a0e45781a49f4cfc8363fda3735663c85_a0e45781a49f4cfc8363fda3735663c85}{00026}} \textcolor{preprocessor}{\#define TMP006\_ID               0x5449}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00028}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb_a57282daac3f5b6e3aa948b43dc1cd2eb}{00028}} \textcolor{preprocessor}{\#define MODE\_NORMAL\_LORA        0x00}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00029}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a190e6c9c8983d2f218b530d2902ffd8f_a190e6c9c8983d2f218b530d2902ffd8f}{00029}} \textcolor{preprocessor}{\#define MODE\_STORAGE\_LORA       0x01}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00030}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab09f0292902c3fce30bad4623afe6e61_ab09f0292902c3fce30bad4623afe6e61}{00030}} \textcolor{preprocessor}{\#define MODE\_NORMAL\_WIFI        0x02}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00031}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9af02c2a3c426f8519a80969c1eb7f17_a9af02c2a3c426f8519a80969c1eb7f17}{00031}} \textcolor{preprocessor}{\#define MODE\_STORAGE\_WIFI       0x03}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00032}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8202eec64f59f86c2544675c2932bc80_a8202eec64f59f86c2544675c2932bc80}{00032}} \textcolor{preprocessor}{\#define MODE\_AP\_WIFI            0x04}}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00034}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3b61478edd7c1b25c8facd2907cf6c33_a3b61478edd7c1b25c8facd2907cf6c33}{00034}} \textcolor{preprocessor}{\#define SHUTDOWN                1}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00035}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab711666ad09d7f6c0b91576525ea158e_ab711666ad09d7f6c0b91576525ea158e}{00035}} \textcolor{preprocessor}{\#define CONTINUE                0}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00037}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4d663d8b8ce69db7c99941a7964729e6_a4d663d8b8ce69db7c99941a7964729e6}{00037}} \textcolor{preprocessor}{\#define RNW\_LSB                 0}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00038}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{00038}} \textcolor{preprocessor}{\#define RNW\_MSB                 1}}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00040}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a51e3e7eca1a4c815b24a06bca6893405_a51e3e7eca1a4c815b24a06bca6893405}{00040}} \textcolor{preprocessor}{\#define NUMBER\_SENSORS          6}}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00042}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a82c62ba958f1d4cb940e817dd79f93a6_a82c62ba958f1d4cb940e817dd79f93a6}{00042}} \textcolor{preprocessor}{\#define DEVEUI                  "0004A30B00EB15E8"}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00043}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a61618de43aa65c22b64086d11da9b82f_a61618de43aa65c22b64086d11da9b82f}{00043}} \textcolor{preprocessor}{\#define APPEUI                  "70B3D57ED0019CD5"}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00044}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_afa4a594ce6cf39e98b47660cda569d5b_afa4a594ce6cf39e98b47660cda569d5b}{00044}} \textcolor{preprocessor}{\#define APPKEY                  "E506C0086DA5C31C301FCAC72BC808F6"}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00045}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8265d1afd96aa969d5bd110ee9e2c0ff_a8265d1afd96aa969d5bd110ee9e2c0ff}{00045}} \textcolor{preprocessor}{\#define DEVADDR                 "2601267B"}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00046}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a6640a919600a07b1f190068d6daa149b_a6640a919600a07b1f190068d6daa149b}{00046}} \textcolor{preprocessor}{\#define NWKSKEY                 "1AE937D87A65EDE42B1FCE61BCF277B9"}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00047}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_afb1e7fcb1608aba4b99c633975e2133a_afb1e7fcb1608aba4b99c633975e2133a}{00047}} \textcolor{preprocessor}{\#define APPSKEY                 "56297CFF77806B54D335DE9F94745DEB"}}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00049}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a6d7d8babe20ba23861ac5225819fc090_a6d7d8babe20ba23861ac5225819fc090}{00049}} uint8\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a6d7d8babe20ba23861ac5225819fc090_a6d7d8babe20ba23861ac5225819fc090}{NodeState}};}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00052 \textcolor{comment}{//                      TYPEDEFS}}
+\DoxyCodeLine{00053 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00058}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006}{00058}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00059}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a406cd6aebc015d1776ef6cf24aa6ec76}{00059}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a406cd6aebc015d1776ef6cf24aa6ec76}{POWERUP}},                            }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00060}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a4dcfb46fa6ceb1c10ddbfeb3da3edf52}{00060}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a4dcfb46fa6ceb1c10ddbfeb3da3edf52}{GET\_PARAMS}},                         }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00061}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006af36ae2a5485305263c4fe0d4d87c2125}{00061}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006af36ae2a5485305263c4fe0d4d87c2125}{CONFIG\_LORA}},                        }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00062}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a6a968cf1e0bbb061cb0343d33f287ea1}{00062}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a6a968cf1e0bbb061cb0343d33f287ea1}{CONFIG\_WIFI}},                        }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00063}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006ab3173c2d67e0654ba808756166fd0f17}{00063}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006ab3173c2d67e0654ba808756166fd0f17}{GET\_SENSOR\_DATA}},                    }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00064}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006afec83c691d47d1dcee49f2a3aaa47c46}{00064}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006afec83c691d47d1dcee49f2a3aaa47c46}{SEND\_DATA\_LORA}},                     }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00065}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a9ca804f28226efd1fa558bd13624a6ad}{00065}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a9ca804f28226efd1fa558bd13624a6ad}{SEND\_DATA\_WIFI}},                     }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00066}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006af45fbbcd34d8478c891229b24471ae8c}{00066}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006af45fbbcd34d8478c891229b24471ae8c}{STORE\_DATA}},                         }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00067}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a724e7287cbe37e63feb3ebe8d3d52b2a}{00067}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006a724e7287cbe37e63feb3ebe8d3d52b2a}{GET\_NEW\_PARAMS}},                     }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00068}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006ae5b3f9670f3563635ed8a5b5aaa5583b}{00068}}     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006ae5b3f9670f3563635ed8a5b5aaa5583b}{STORE\_NEW\_PARAMS}}                    }
+\DoxyCodeLine{00069 \} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3dba962f94f639371dabac298bd6e006_a3dba962f94f639371dabac298bd6e006}{Node\_states\_t}};}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00074}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00074}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00075}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ac1340db8c7fb287e5270617a33bdcae0}{00075}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ac1340db8c7fb287e5270617a33bdcae0}{NodeId}};                    }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00076}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8d9f89e4cadd72790f988d4def70b7e9}{00076}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8d9f89e4cadd72790f988d4def70b7e9}{WakeUpInterval}};            }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00077}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{00077}}     uint8\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}};                       }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00078}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aec988d21b9d0ae579421495853e08d0a}{00078}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aec988d21b9d0ae579421495853e08d0a}{NCycles}};                   }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00079}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{00079}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[13];             }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00080}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{00080}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}};                    }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00081}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{00081}}     uint8\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}};                      }
+\DoxyCodeLine{00082 \textcolor{comment}{//    uint8\_t NSensors;                   /**< DEVID\_AD reg*/}}
+\DoxyCodeLine{00083 \textcolor{comment}{//    uint16\_t *SensorIdPtr;              /**< DEVID\_AD reg*/}}
+\DoxyCodeLine{00084 \textcolor{comment}{//    uint8\_t *SensorDataLen;             /**< DEVID\_AD reg*/}}
+\DoxyCodeLine{00085 \textcolor{comment}{//    int16\_t **SensorDataPtr;            /**< DEVID\_AD reg*/}}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00086}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_af83141c904a64464307f9bde7d831e4d}{00086}}     uint8\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_af83141c904a64464307f9bde7d831e4d}{ChangeWakeUp}};               }
+\DoxyCodeLine{00087 \};}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00092}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00092}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_t_m_p006___data}{TMP006\_Data}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00093}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{00093}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}};                  }
+\DoxyCodeLine{00094 \};}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00099}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00099}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_a_d_x_l355___data}{ADXL355\_Data}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00100}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{00100}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}};                  }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00101}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa46e4ada0bc171a400b0c9240daddb31}{00101}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa46e4ada0bc171a400b0c9240daddb31}{SampleRate}};                }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00102}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{00102}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}};                  }
+\DoxyCodeLine{00103 \};}
+\DoxyCodeLine{00104 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00108}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00108}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_b_m_e280___data}{BME280\_Data}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00109}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{00109}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}};                  }
+\DoxyCodeLine{00110 \};}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00115}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00115}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_l_d_c1000___data}{LDC1000\_Data}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00116}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{00116}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}};                  }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00117}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{00117}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}};                  }
+\DoxyCodeLine{00118 \};}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00123}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00123}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_vbat___data}{Vbat\_Data}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00124}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{00124}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}};                  }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00125}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{00125}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}};                  }
+\DoxyCodeLine{00126 \};}
+\DoxyCodeLine{00127 }
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00131}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{00131}} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_keller___data}{Keller\_Data}} \{}
+\DoxyCodeLine{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8h_source_l00132}\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{00132}}     uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}};                  }
+\DoxyCodeLine{00133 \};}
+\DoxyCodeLine{00134 }
+\DoxyCodeLine{00135 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STARPORTS\_APP\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

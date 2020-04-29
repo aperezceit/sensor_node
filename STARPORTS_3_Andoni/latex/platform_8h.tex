@@ -1,0 +1,92 @@
+\hypertarget{platform_8h}{}\doxysection{platform.\+h File Reference}
+\label{platform_8h}\index{platform.h@{platform.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{platform_8h_aaa1ac5caef84256eaeb39594e58e096f}{M\+A\+X\+\_\+\+I\+NT}}~(0x7\+F\+F\+F\+F\+F\+FF)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{platform_8h_a6640a205512726d8e4883a05c0587c83}{power\+Shutdown}} (uint32\+\_\+t shutdown\+Time)
+\begin{DoxyCompactList}\small\item\em power Shutdown \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{platform_8h_a08bc18a9e2c96ea217a6e6c782d2e949}{is\+Woken\+From\+Hib}} (void)
+\begin{DoxyCompactList}\small\item\em check if we woken up from Hib or not \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{platform_8h_abf9ec482f0838d36a9d14222c98b53a0}{get\+Hib\+Retention\+Reg}} (void)
+\begin{DoxyCompactList}\small\item\em read from retention register \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{platform_8h_ab78da0a2de5f89f539829686af6ee5f3}{set\+Hib\+Retention\+Reg}} (uint32\+\_\+t val)
+\begin{DoxyCompactList}\small\item\em write to retention register \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{platform_8h_aaa1ac5caef84256eaeb39594e58e096f}\label{platform_8h_aaa1ac5caef84256eaeb39594e58e096f}} 
+\index{platform.h@{platform.h}!MAX\_INT@{MAX\_INT}}
+\index{MAX\_INT@{MAX\_INT}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_INT}{MAX\_INT}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+I\+NT~(0x7\+F\+F\+F\+F\+F\+FF)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{platform_8h_abf9ec482f0838d36a9d14222c98b53a0}\label{platform_8h_abf9ec482f0838d36a9d14222c98b53a0}} 
+\index{platform.h@{platform.h}!getHibRetentionReg@{getHibRetentionReg}}
+\index{getHibRetentionReg@{getHibRetentionReg}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{getHibRetentionReg()}{getHibRetentionReg()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+Hib\+Retention\+Reg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+read from retention register 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{platform_8h_a08bc18a9e2c96ea217a6e6c782d2e949}\label{platform_8h_a08bc18a9e2c96ea217a6e6c782d2e949}} 
+\index{platform.h@{platform.h}!isWokenFromHib@{isWokenFromHib}}
+\index{isWokenFromHib@{isWokenFromHib}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{isWokenFromHib()}{isWokenFromHib()}}
+{\footnotesize\ttfamily bool is\+Woken\+From\+Hib (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+check if we woken up from Hib or not 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{platform_8h_a6640a205512726d8e4883a05c0587c83}\label{platform_8h_a6640a205512726d8e4883a05c0587c83}} 
+\index{platform.h@{platform.h}!powerShutdown@{powerShutdown}}
+\index{powerShutdown@{powerShutdown}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{powerShutdown()}{powerShutdown()}}
+{\footnotesize\ttfamily void power\+Shutdown (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{shutdown\+Time }\end{DoxyParamCaption})}
+
+
+
+power Shutdown 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{platform_8h_ab78da0a2de5f89f539829686af6ee5f3}\label{platform_8h_ab78da0a2de5f89f539829686af6ee5f3}} 
+\index{platform.h@{platform.h}!setHibRetentionReg@{setHibRetentionReg}}
+\index{setHibRetentionReg@{setHibRetentionReg}!platform.h@{platform.h}}
+\doxysubsubsection{\texorpdfstring{setHibRetentionReg()}{setHibRetentionReg()}}
+{\footnotesize\ttfamily void set\+Hib\+Retention\+Reg (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+
+
+write to retention register 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}

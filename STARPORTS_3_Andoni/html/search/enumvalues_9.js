@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['ldc_5fconfig_1450',['LDC_CONFIG',['../_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd.html#a2d3593519a991469742182667b6b5fbda8ba295a579acd8f28ad69e260d736ce0',1,'LDC1000.h']]],
+  ['ldc_5fstatus_1451',['LDC_STATUS',['../_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd.html#a2d3593519a991469742182667b6b5fbdaaf85bf6d81e6038db11386f8fab4a62b',1,'LDC1000.h']]]
+];

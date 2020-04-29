@@ -1,0 +1,205 @@
+\hypertarget{hal___timer_8h}{}\doxysubsection{hal\+\_\+\+Timer.\+h File Reference}
+\label{hal___timer_8h}\index{hal\_Timer.h@{hal\_Timer.h}}
+
+
+Functions for Timer.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+Timer.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Timer\+\_\+\+Handle \mbox{\hyperlink{hal___timer_8h_af62db6d48b48edacb096deed9fd25420_af62db6d48b48edacb096deed9fd25420}{Startup\+\_\+\+Continuous\+\_\+\+Timer}} (uint8\+\_\+t index, uint32\+\_\+t period)
+\begin{DoxyCompactList}\small\item\em Timer Start up continuous Function. \end{DoxyCompactList}\item 
+Timer\+\_\+\+Handle \mbox{\hyperlink{hal___timer_8h_acb160d81c795aec757df155dfcf99c98_acb160d81c795aec757df155dfcf99c98}{Startup\+\_\+\+Oneshot\+\_\+\+Timer}} (uint8\+\_\+t index, uint32\+\_\+t interval)
+\begin{DoxyCompactList}\small\item\em Timer Start up One shot Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal___timer_8h_a16a8a59830b09ec392059376c9608ceb_a16a8a59830b09ec392059376c9608ceb}{timer0\+Callback}} (Timer\+\_\+\+Handle my\+Handle)
+\begin{DoxyCompactList}\small\item\em Timer 0 callback Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal___timer_8h_a9914d7a63a475df39eb07754f9106732_a9914d7a63a475df39eb07754f9106732}{timer1\+Callback}} (Timer\+\_\+\+Handle my\+Handle)
+\begin{DoxyCompactList}\small\item\em Timer 1 callback Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions for Timer. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle Timer functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___timer_8h_source}{hal\+\_\+\+Timer.\+h}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___timer_8h_af62db6d48b48edacb096deed9fd25420_af62db6d48b48edacb096deed9fd25420}\label{hal___timer_8h_af62db6d48b48edacb096deed9fd25420_af62db6d48b48edacb096deed9fd25420}} 
+\index{hal\_Timer.h@{hal\_Timer.h}!Startup\_Continuous\_Timer@{Startup\_Continuous\_Timer}}
+\index{Startup\_Continuous\_Timer@{Startup\_Continuous\_Timer}!hal\_Timer.h@{hal\_Timer.h}}
+\doxyparagraph{\texorpdfstring{Startup\_Continuous\_Timer()}{Startup\_Continuous\_Timer()}}
+{\footnotesize\ttfamily Timer\+\_\+\+Handle Startup\+\_\+\+Continuous\+\_\+\+Timer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{period }\end{DoxyParamCaption})}
+
+
+
+Timer Start up continuous Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item initiates Timer as continuous
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & index \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & period\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Timer\+\_\+\+Handle timer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___timer_8c_source_l00073}{73}} of file \mbox{\hyperlink{hal___timer_8c_source}{hal\+\_\+\+Timer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                                                                       \{}
+\DoxyCodeLine{00074 }
+\DoxyCodeLine{00075     Timer\_Handle timer;}
+\DoxyCodeLine{00076     Timer\_Params params;}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     Timer\_Params\_init(\&params);}
+\DoxyCodeLine{00079     params.period = period;}
+\DoxyCodeLine{00080     params.periodUnits = Timer\_PERIOD\_US;}
+\DoxyCodeLine{00081     params.timerMode = Timer\_CONTINUOUS\_CALLBACK;}
+\DoxyCodeLine{00082     params.timerCallback = \mbox{\hyperlink{hal___timer_8c_a16a8a59830b09ec392059376c9608ceb_a16a8a59830b09ec392059376c9608ceb}{timer0Callback}};}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     timer = Timer\_open(index, \&params);}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     \textcolor{keywordflow}{return} timer;}
+\DoxyCodeLine{00087 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___timer_8h_acb160d81c795aec757df155dfcf99c98_acb160d81c795aec757df155dfcf99c98}\label{hal___timer_8h_acb160d81c795aec757df155dfcf99c98_acb160d81c795aec757df155dfcf99c98}} 
+\index{hal\_Timer.h@{hal\_Timer.h}!Startup\_Oneshot\_Timer@{Startup\_Oneshot\_Timer}}
+\index{Startup\_Oneshot\_Timer@{Startup\_Oneshot\_Timer}!hal\_Timer.h@{hal\_Timer.h}}
+\doxyparagraph{\texorpdfstring{Startup\_Oneshot\_Timer()}{Startup\_Oneshot\_Timer()}}
+{\footnotesize\ttfamily Timer\+\_\+\+Handle Startup\+\_\+\+Oneshot\+\_\+\+Timer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index,  }\item[{uint32\+\_\+t}]{interval }\end{DoxyParamCaption})}
+
+
+
+Timer Start up One shot Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item initiates Timer as one shot
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & index \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & interval\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Timer\+\_\+\+Handle timer 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___timer_8c_source_l00102}{102}} of file \mbox{\hyperlink{hal___timer_8c_source}{hal\+\_\+\+Timer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102                                                                      \{}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{00104     Timer\_Handle timer;}
+\DoxyCodeLine{00105     Timer\_Params params;}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     Timer\_Params\_init(\&params);}
+\DoxyCodeLine{00108     params.period = interval;}
+\DoxyCodeLine{00109     params.periodUnits = Timer\_PERIOD\_US;}
+\DoxyCodeLine{00110     params.timerMode = Timer\_ONESHOT\_CALLBACK;}
+\DoxyCodeLine{00111     params.timerCallback = \mbox{\hyperlink{hal___timer_8c_a9914d7a63a475df39eb07754f9106732_a9914d7a63a475df39eb07754f9106732}{timer1Callback}};}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     timer = Timer\_open(index, \&params);}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     \textcolor{keywordflow}{return} timer;}
+\DoxyCodeLine{00116 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___timer_8h_a16a8a59830b09ec392059376c9608ceb_a16a8a59830b09ec392059376c9608ceb}\label{hal___timer_8h_a16a8a59830b09ec392059376c9608ceb_a16a8a59830b09ec392059376c9608ceb}} 
+\index{hal\_Timer.h@{hal\_Timer.h}!timer0Callback@{timer0Callback}}
+\index{timer0Callback@{timer0Callback}!hal\_Timer.h@{hal\_Timer.h}}
+\doxyparagraph{\texorpdfstring{timer0Callback()}{timer0Callback()}}
+{\footnotesize\ttfamily void timer0\+Callback (\begin{DoxyParamCaption}\item[{Timer\+\_\+\+Handle}]{my\+Handle }\end{DoxyParamCaption})}
+
+
+
+Timer 0 callback Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is a callback for timer 0
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Timer\+\_\+\+Handle} & my\+Handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___timer_8c_source_l00040}{40}} of file \mbox{\hyperlink{hal___timer_8c_source}{hal\+\_\+\+Timer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040                                            \{}
+\DoxyCodeLine{00041     \mbox{\hyperlink{hal___timer_8c_a84499990c0506a7d6559f9ea074922a5_a84499990c0506a7d6559f9ea074922a5}{Timer0Event}} = 1;}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___timer_8h_a9914d7a63a475df39eb07754f9106732_a9914d7a63a475df39eb07754f9106732}\label{hal___timer_8h_a9914d7a63a475df39eb07754f9106732_a9914d7a63a475df39eb07754f9106732}} 
+\index{hal\_Timer.h@{hal\_Timer.h}!timer1Callback@{timer1Callback}}
+\index{timer1Callback@{timer1Callback}!hal\_Timer.h@{hal\_Timer.h}}
+\doxyparagraph{\texorpdfstring{timer1Callback()}{timer1Callback()}}
+{\footnotesize\ttfamily void timer1\+Callback (\begin{DoxyParamCaption}\item[{Timer\+\_\+\+Handle}]{my\+Handle }\end{DoxyParamCaption})}
+
+
+
+Timer 1 callback Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Is a callback for timer 1
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Timer\+\_\+\+Handle} & my\+Handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___timer_8c_source_l00056}{56}} of file \mbox{\hyperlink{hal___timer_8c_source}{hal\+\_\+\+Timer.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056                                            \{}
+\DoxyCodeLine{00057     \mbox{\hyperlink{hal___timer_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}{Timer1Event}} = 1;}
+\DoxyCodeLine{00058 \}}
+
+\end{DoxyCode}

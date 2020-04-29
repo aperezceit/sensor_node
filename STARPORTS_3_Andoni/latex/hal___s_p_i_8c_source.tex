@@ -1,0 +1,134 @@
+\hypertarget{hal___s_p_i_8c_source}{}\doxysubsection{hal\+\_\+\+S\+P\+I.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <stddef.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <ti/drivers/SPI.h>}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00018 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00019 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00022 \textcolor{comment}{//}}
+\DoxyCodeLine{00033 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00034 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___s_p_i_8c_source_l00035}\mbox{\hyperlink{hal___s_p_i_8h_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}{00035}} SPI\_Handle \mbox{\hyperlink{hal___s_p_i_8c_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}{Startup\_SPI}}(uint\_least8\_t index, uint32\_t dataSize, uint32\_t dataRate) \{}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     SPI\_Params spiParams;}
+\DoxyCodeLine{00038     SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}};}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040     SPI\_Params\_init(\&spiParams);                                        \textcolor{comment}{// Assumes SPI\_init() has already been started}}
+\DoxyCodeLine{00041     spiParams.mode = SPI\_MASTER;}
+\DoxyCodeLine{00042     spiParams.transferMode = SPI\_MODE\_BLOCKING;}
+\DoxyCodeLine{00043     spiParams.frameFormat = SPI\_POL0\_PHA0;}
+\DoxyCodeLine{00044     spiParams.dataSize = dataSize;}
+\DoxyCodeLine{00045     spiParams.bitRate = dataRate;}
+\DoxyCodeLine{00046     \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}} = SPI\_open(index, \&spiParams);}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \textcolor{keywordflow}{return} \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}};}
+\DoxyCodeLine{00049 \}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00052 \textcolor{comment}{//}}
+\DoxyCodeLine{00065 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00066 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___s_p_i_8c_source_l00067}\mbox{\hyperlink{hal___s_p_i_8h_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{00067}} uint8\_t \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t *RxBuffer, uint8\_t nregs, uint8\_t rnwMSB) \{}
+\DoxyCodeLine{00068 }
+\DoxyCodeLine{00069     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00070     uint8\_t         TxBuffer[32];}
+\DoxyCodeLine{00071     RxBuffer[0] = 0;}
+\DoxyCodeLine{00072     RxBuffer[1] = 0;}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074     \textcolor{keywordtype}{bool}            transferOK;}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076     \textcolor{keywordflow}{if} (rnwMSB==0) \{}
+\DoxyCodeLine{00077         TxBuffer[0] = ((Address<<1) | 0x01);}
+\DoxyCodeLine{00078     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00079         TxBuffer[0] = (Address \& 0x7F) | 0x80;}
+\DoxyCodeLine{00080     \}}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     TxBuffer[1] = 0x00;}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     spiTransaction.count = nregs+1;}
+\DoxyCodeLine{00085     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *)TxBuffer;}
+\DoxyCodeLine{00086     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *)RxBuffer;}
+\DoxyCodeLine{00087     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00088 }
+\DoxyCodeLine{00089     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00090 \}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00093 \textcolor{comment}{//}}
+\DoxyCodeLine{00104 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00105 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___s_p_i_8c_source_l00106}\mbox{\hyperlink{hal___s_p_i_8h_af07414198f991f2481be6ead3f2f3767_af07414198f991f2481be6ead3f2f3767}{00106}} uint8\_t \mbox{\hyperlink{hal___s_p_i_8c_a71bba4adf498bef5a57839ef74514f39_a71bba4adf498bef5a57839ef74514f39}{SPI\_read\_16bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t *RxBuffer) \{}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00109     uint16\_t         TxBuffer[2];}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111     \textcolor{keywordtype}{bool}            transferOK;}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     TxBuffer[0] = ((Address \& 0x7F) + 0x80)<<8;}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115     spiTransaction.count = 1;}
+\DoxyCodeLine{00116     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *) TxBuffer;}
+\DoxyCodeLine{00117     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *) RxBuffer;}
+\DoxyCodeLine{00118     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00121 \}}
+\DoxyCodeLine{00122 }
+\DoxyCodeLine{00123 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00124 \textcolor{comment}{//}}
+\DoxyCodeLine{00136 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00137 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___s_p_i_8c_source_l00138}\mbox{\hyperlink{hal___s_p_i_8h_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{00138}} uint8\_t \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t Data, uint8\_t rnwMSB) \{}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00141     uint8\_t        TxBuffer[2];}
+\DoxyCodeLine{00142     uint8\_t        RxBuffer[2];}
+\DoxyCodeLine{00143     \textcolor{keywordtype}{bool}           transferOK;}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145     \textcolor{keywordflow}{if} (rnwMSB==0) \{}
+\DoxyCodeLine{00146         TxBuffer[0] = (Address<<1);}
+\DoxyCodeLine{00147     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00148         TxBuffer[0] = (Address \& 0x7F);}
+\DoxyCodeLine{00149     \}}
+\DoxyCodeLine{00150 }
+\DoxyCodeLine{00151     TxBuffer[1] = Data;}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153     spiTransaction.count = 2;}
+\DoxyCodeLine{00154     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *)(TxBuffer);}
+\DoxyCodeLine{00155     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *)(RxBuffer);}
+\DoxyCodeLine{00156     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00157 }
+\DoxyCodeLine{00158     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00159 \}}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00162 \textcolor{comment}{//}}
+\DoxyCodeLine{00173 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00174 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___s_p_i_8c_source_l00175}\mbox{\hyperlink{hal___s_p_i_8h_a5cc400553821395b2214d5304851d8b7_a5cc400553821395b2214d5304851d8b7}{00175}} uint8\_t \mbox{\hyperlink{hal___s_p_i_8c_a5cc400553821395b2214d5304851d8b7_a5cc400553821395b2214d5304851d8b7}{SPI\_write\_16bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t Data) \{}
+\DoxyCodeLine{00176 }
+\DoxyCodeLine{00177     SPI\_Transaction spiTransaction;}
+\DoxyCodeLine{00178     uint16\_t        TxBuffer[2];}
+\DoxyCodeLine{00179     uint16\_t        RxBuffer[2];}
+\DoxyCodeLine{00180     \textcolor{keywordtype}{bool}            transferOK;}
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182     TxBuffer[0] = (Address << 8) + Data;}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184     spiTransaction.count = 1;}
+\DoxyCodeLine{00185     spiTransaction.txBuf = (\textcolor{keywordtype}{void} *)(TxBuffer);}
+\DoxyCodeLine{00186     spiTransaction.rxBuf = (\textcolor{keywordtype}{void} *)(RxBuffer);}
+\DoxyCodeLine{00187     transferOK = SPI\_transfer(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \&spiTransaction);}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189     \textcolor{keywordflow}{return} (transferOK? 0 : 1);}
+\DoxyCodeLine{00190 \}}
+
+\end{DoxyCode}

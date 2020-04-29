@@ -1,0 +1,64 @@
+\hypertarget{hal___w_d_8c_source}{}\doxysubsection{hal\+\_\+\+W\+D.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <ti/drivers/I2C.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <ti/drivers/Watchdog.h>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_board_8h}{Board.h}}"}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___g_p_i_o_8h}{hal\_GPIO.h}}"}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00020 \textcolor{comment}{//                      GLOBALS}}
+\DoxyCodeLine{00021 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00022 \textcolor{keyword}{extern} I2C\_Handle \mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00025 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00026 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00027 }
+\DoxyCodeLine{00028 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00029 \textcolor{comment}{//}}
+\DoxyCodeLine{00038 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00039 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___w_d_8c_source_l00040}\mbox{\hyperlink{hal___w_d_8c_aa96687d19cd114877bdc04a78c91e009_aa96687d19cd114877bdc04a78c91e009}{00040}} \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___w_d_8c_aa96687d19cd114877bdc04a78c91e009_aa96687d19cd114877bdc04a78c91e009}{watchdogCallback}}(uintptr\_t watchdogHandle) \{}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042     I2C\_close(\mbox{\hyperlink{hal___w_d_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}});}
+\DoxyCodeLine{00043     \mbox{\hyperlink{hal___g_p_i_o_8c_a4d7ff87c7758b4bbc7b0f6cd4964e3cd_a4d7ff87c7758b4bbc7b0f6cd4964e3cd}{I2C\_As\_GPIO\_Low}}();                                                      \textcolor{comment}{// Puts SCL and SDA signals low to save power}}
+\DoxyCodeLine{00044     \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();                                                         \textcolor{comment}{// Auto Shutdown}}
+\DoxyCodeLine{00045 \}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00048 \textcolor{comment}{//}}
+\DoxyCodeLine{00058 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00059 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___w_d_8c_source_l00060}\mbox{\hyperlink{hal___w_d_8h_ab63aa87a48ad39bb42dbd21fb4621d7c_ab63aa87a48ad39bb42dbd21fb4621d7c}{00060}} Watchdog\_Handle \mbox{\hyperlink{hal___w_d_8c_ab63aa87a48ad39bb42dbd21fb4621d7c_ab63aa87a48ad39bb42dbd21fb4621d7c}{Startup\_Watchdog}}(uint\_least8\_t index, uint32\_t timeout) \{}
+\DoxyCodeLine{00061 }
+\DoxyCodeLine{00062     uint32\_t reloadValue;}
+\DoxyCodeLine{00063     Watchdog\_Params wdParams;}
+\DoxyCodeLine{00064     Watchdog\_Handle \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}};}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066     Watchdog\_init();}
+\DoxyCodeLine{00067     Watchdog\_Params\_init(\&wdParams);}
+\DoxyCodeLine{00068     wdParams.callbackFxn = (Watchdog\_Callback) \mbox{\hyperlink{hal___w_d_8c_aa96687d19cd114877bdc04a78c91e009_aa96687d19cd114877bdc04a78c91e009}{watchdogCallback}};}
+\DoxyCodeLine{00069     wdParams.debugStallMode = Watchdog\_DEBUG\_STALL\_ON;}
+\DoxyCodeLine{00070     wdParams.resetMode = Watchdog\_RESET\_OFF;}
+\DoxyCodeLine{00071 }
+\DoxyCodeLine{00072     \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}} = Watchdog\_open(index, \&wdParams);}
+\DoxyCodeLine{00073     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}} == NULL) \{                                                         \textcolor{comment}{// Error opening Watchdog}}
+\DoxyCodeLine{00074         \textcolor{keywordflow}{while} (1) \{\}}
+\DoxyCodeLine{00075     \}}
+\DoxyCodeLine{00076 }
+\DoxyCodeLine{00077     reloadValue = Watchdog\_convertMsToTicks(\mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}}, timeout);}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00079     \textcolor{keywordflow}{if} (reloadValue != 0) \{}
+\DoxyCodeLine{00080         Watchdog\_setReload(\mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}}, reloadValue);}
+\DoxyCodeLine{00081     \}}
+\DoxyCodeLine{00082 }
+\DoxyCodeLine{00083     \textcolor{keywordflow}{return} \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}};}
+\DoxyCodeLine{00084 \}}
+
+\end{DoxyCode}

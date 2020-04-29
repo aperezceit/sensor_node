@@ -1,0 +1,734 @@
+\hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source}{}\doxysubsection{C\+C3220\+S\+F\+\_\+\+S\+T\+A\+R\+P\+O\+R\+T\+S.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/*}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * Copyright (c) 2016-\/2018, Texas Instruments Incorporated}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * All rights reserved.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ *}}
+\DoxyCodeLine{00005 \textcolor{comment}{ * Redistribution and use in source and binary forms, with or without}}
+\DoxyCodeLine{00006 \textcolor{comment}{ * modification, are permitted provided that the following conditions}}
+\DoxyCodeLine{00007 \textcolor{comment}{ * are met:}}
+\DoxyCodeLine{00008 \textcolor{comment}{ *}}
+\DoxyCodeLine{00009 \textcolor{comment}{ * *  Redistributions of source code must retain the above copyright}}
+\DoxyCodeLine{00010 \textcolor{comment}{ *    notice, this list of conditions and the following disclaimer.}}
+\DoxyCodeLine{00011 \textcolor{comment}{ *}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * *  Redistributions in binary form must reproduce the above copyright}}
+\DoxyCodeLine{00013 \textcolor{comment}{ *    notice, this list of conditions and the following disclaimer in the}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *    documentation and/or other materials provided with the distribution.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * *  Neither the name of Texas Instruments Incorporated nor the names of}}
+\DoxyCodeLine{00017 \textcolor{comment}{ *    its contributors may be used to endorse or promote products derived}}
+\DoxyCodeLine{00018 \textcolor{comment}{ *    from this software without specific prior written permission.}}
+\DoxyCodeLine{00019 \textcolor{comment}{ *}}
+\DoxyCodeLine{00020 \textcolor{comment}{ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"}}
+\DoxyCodeLine{00021 \textcolor{comment}{ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,}}
+\DoxyCodeLine{00022 \textcolor{comment}{ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR}}
+\DoxyCodeLine{00023 \textcolor{comment}{ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR}}
+\DoxyCodeLine{00024 \textcolor{comment}{ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,}}
+\DoxyCodeLine{00025 \textcolor{comment}{ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,}}
+\DoxyCodeLine{00026 \textcolor{comment}{ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;}}
+\DoxyCodeLine{00027 \textcolor{comment}{ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,}}
+\DoxyCodeLine{00028 \textcolor{comment}{ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR}}
+\DoxyCodeLine{00029 \textcolor{comment}{ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,}}
+\DoxyCodeLine{00030 \textcolor{comment}{ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.}}
+\DoxyCodeLine{00031 \textcolor{comment}{ */}}
+\DoxyCodeLine{00032 }
+\DoxyCodeLine{00033 \textcolor{comment}{/*}}
+\DoxyCodeLine{00034 \textcolor{comment}{ *  ======== CC3220SF\_STARPORTS.c ========}}
+\DoxyCodeLine{00035 \textcolor{comment}{ *  This file is responsible for setting up the board specific items for the}}
+\DoxyCodeLine{00036 \textcolor{comment}{ *  CC3220SF\_STARPORTS board.}}
+\DoxyCodeLine{00037 \textcolor{comment}{ */}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{00040 \textcolor{preprocessor}{\#include <stddef.h>}}
+\DoxyCodeLine{00041 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/inc/hw\_ints.h>}}
+\DoxyCodeLine{00044 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/inc/hw\_memmap.h>}}
+\DoxyCodeLine{00045 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/inc/hw\_types.h>}}
+\DoxyCodeLine{00046 }
+\DoxyCodeLine{00047 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/rom.h>}}
+\DoxyCodeLine{00048 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/rom\_map.h>}}
+\DoxyCodeLine{00049 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/adc.h>}}
+\DoxyCodeLine{00050 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/gpio.h>}}
+\DoxyCodeLine{00051 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/pin.h>}}
+\DoxyCodeLine{00052 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/prcm.h>}}
+\DoxyCodeLine{00053 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/spi.h>}}
+\DoxyCodeLine{00054 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/sdhost.h>}}
+\DoxyCodeLine{00055 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/timer.h>}}
+\DoxyCodeLine{00056 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/uart.h>}}
+\DoxyCodeLine{00057 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/udma.h>}}
+\DoxyCodeLine{00058 \textcolor{preprocessor}{\#include <ti/devices/cc32xx/driverlib/wdt.h>}}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{00060 \textcolor{preprocessor}{\#include <ti/drivers/Power.h>}}
+\DoxyCodeLine{00061 \textcolor{preprocessor}{\#include <ti/drivers/power/PowerCC32XX.h>}}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h}{CC3220SF\_STARPORTS.h}}"}}
+\DoxyCodeLine{00064 }
+\DoxyCodeLine{00065 \textcolor{comment}{/*}}
+\DoxyCodeLine{00066 \textcolor{comment}{ *  This define determines whether to use the UARTCC32XXDMA driver}}
+\DoxyCodeLine{00067 \textcolor{comment}{ *  or the UARTCC32XX (no DMA) driver.  Set to 1 to use the UARTCC32XXDMA}}
+\DoxyCodeLine{00068 \textcolor{comment}{ *  driver.}}
+\DoxyCodeLine{00069 \textcolor{comment}{ */}}
+\DoxyCodeLine{00070 \textcolor{preprocessor}{\#ifndef TI\_DRIVERS\_UART\_DMA}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00071}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac23a573d7d6cb8ad1cf737323cb7580_aac23a573d7d6cb8ad1cf737323cb7580}{00071}} \textcolor{preprocessor}{\#define TI\_DRIVERS\_UART\_DMA 0}}
+\DoxyCodeLine{00072 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00073 }
+\DoxyCodeLine{00074 \textcolor{comment}{/*}}
+\DoxyCodeLine{00075 \textcolor{comment}{ *  =============================== ADC ===============================}}
+\DoxyCodeLine{00076 \textcolor{comment}{ */}}
+\DoxyCodeLine{00077 \textcolor{preprocessor}{\#include <ti/drivers/ADC.h>}}
+\DoxyCodeLine{00078 \textcolor{preprocessor}{\#include <ti/drivers/adc/ADCCC32XX.h>}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00080}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a6be856ee456027f97649b9063aac44ce_a6be856ee456027f97649b9063aac44ce}{00080}} ADCCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a6be856ee456027f97649b9063aac44ce_a6be856ee456027f97649b9063aac44ce}{adcCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aac6342cfb6087281c5971ffff9501bad_aac6342cfb6087281c5971ffff9501badae62b36466e608bd8860310d8f922a8aa}{CC3220SF\_STARPORTS\_ADCCOUNT}}];}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00082}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ab398bc707e1389d6cb08e4addabfc958_ab398bc707e1389d6cb08e4addabfc958}{00082}} \textcolor{keyword}{const} ADCCC32XX\_HWAttrsV1 \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ab398bc707e1389d6cb08e4addabfc958_ab398bc707e1389d6cb08e4addabfc958}{adcCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aac6342cfb6087281c5971ffff9501bad_aac6342cfb6087281c5971ffff9501badae62b36466e608bd8860310d8f922a8aa}{CC3220SF\_STARPORTS\_ADCCOUNT}}] = \{}
+\DoxyCodeLine{00083     \{}
+\DoxyCodeLine{00084         .adcPin = ADCCC32XX\_PIN\_60\_CH\_3}
+\DoxyCodeLine{00085     \}}
+\DoxyCodeLine{00086 \};}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00088}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9176cce07316edd4bb5fcc8117b7e775_a9176cce07316edd4bb5fcc8117b7e775}{00088}} \textcolor{keyword}{const} ADC\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9176cce07316edd4bb5fcc8117b7e775_a9176cce07316edd4bb5fcc8117b7e775}{ADC\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aac6342cfb6087281c5971ffff9501bad_aac6342cfb6087281c5971ffff9501badae62b36466e608bd8860310d8f922a8aa}{CC3220SF\_STARPORTS\_ADCCOUNT}}] = \{}
+\DoxyCodeLine{00089     \{}
+\DoxyCodeLine{00090         .fxnTablePtr = \&ADCCC32XX\_fxnTable,}
+\DoxyCodeLine{00091         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a6be856ee456027f97649b9063aac44ce_a6be856ee456027f97649b9063aac44ce}{adcCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aac6342cfb6087281c5971ffff9501bad_aac6342cfb6087281c5971ffff9501bada9a89c85d348e77903189697378e2c9ab}{CC3220SF\_STARPORTS\_ADC0}}],}
+\DoxyCodeLine{00092         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ab398bc707e1389d6cb08e4addabfc958_ab398bc707e1389d6cb08e4addabfc958}{adcCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aac6342cfb6087281c5971ffff9501bad_aac6342cfb6087281c5971ffff9501bada9a89c85d348e77903189697378e2c9ab}{CC3220SF\_STARPORTS\_ADC0}}]}
+\DoxyCodeLine{00093     \}}
+\DoxyCodeLine{00094 \};}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00096}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a5ad3f0da3dca53fabb954d3acaac9954_a5ad3f0da3dca53fabb954d3acaac9954}{00096}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a5ad3f0da3dca53fabb954d3acaac9954_a5ad3f0da3dca53fabb954d3acaac9954}{ADC\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aac6342cfb6087281c5971ffff9501bad_aac6342cfb6087281c5971ffff9501badae62b36466e608bd8860310d8f922a8aa}{CC3220SF\_STARPORTS\_ADCCOUNT}};}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098 \textcolor{comment}{/*}}
+\DoxyCodeLine{00099 \textcolor{comment}{ *  =============================== Capture ===============================}}
+\DoxyCodeLine{00100 \textcolor{comment}{ */}}
+\DoxyCodeLine{00101 \textcolor{preprocessor}{\#include <ti/drivers/Capture.h>}}
+\DoxyCodeLine{00102 \textcolor{preprocessor}{\#include <ti/drivers/capture/CaptureCC32XX.h>}}
+\DoxyCodeLine{00103 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00104}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a74d756667406006d3124ef32049c3ce5_a74d756667406006d3124ef32049c3ce5}{00104}} CaptureCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a74d756667406006d3124ef32049c3ce5_a74d756667406006d3124ef32049c3ce5}{captureCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa5e88f1e0b684ebb807d9e6baada86161}{CC3220SF\_STARPORTS\_CAPTURECOUNT}}];}
+\DoxyCodeLine{00105 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00106}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a22c117aba81c9d2f5783c35a1db3c8d5_a22c117aba81c9d2f5783c35a1db3c8d5}{00106}} \textcolor{keyword}{const} CaptureCC32XX\_HWAttrs \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a22c117aba81c9d2f5783c35a1db3c8d5_a22c117aba81c9d2f5783c35a1db3c8d5}{captureCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa5e88f1e0b684ebb807d9e6baada86161}{CC3220SF\_STARPORTS\_CAPTURECOUNT}}] =}
+\DoxyCodeLine{00107 \{}
+\DoxyCodeLine{00108       \{}
+\DoxyCodeLine{00109          .capturePin = CaptureCC32XX\_PIN\_04,}
+\DoxyCodeLine{00110          .intPriority = \string~0}
+\DoxyCodeLine{00111       \},}
+\DoxyCodeLine{00112       \{}
+\DoxyCodeLine{00113           .capturePin = CaptureCC32XX\_PIN\_05,}
+\DoxyCodeLine{00114           .intPriority = \string~0}
+\DoxyCodeLine{00115       \},}
+\DoxyCodeLine{00116 \};}
+\DoxyCodeLine{00117 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00118}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a224823a69a71123b4f4ad65b6beda80d_a224823a69a71123b4f4ad65b6beda80d}{00118}} \textcolor{keyword}{const} Capture\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a224823a69a71123b4f4ad65b6beda80d_a224823a69a71123b4f4ad65b6beda80d}{Capture\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa5e88f1e0b684ebb807d9e6baada86161}{CC3220SF\_STARPORTS\_CAPTURECOUNT}}] = \{}
+\DoxyCodeLine{00119     \{}
+\DoxyCodeLine{00120         .fxnTablePtr = \&CaptureCC32XX\_fxnTable,}
+\DoxyCodeLine{00121         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a74d756667406006d3124ef32049c3ce5_a74d756667406006d3124ef32049c3ce5}{captureCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa9f9212c13679429780ffaa732b1ae9b7}{CC3220SF\_STARPORTS\_CAPTURE0}}],}
+\DoxyCodeLine{00122         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a22c117aba81c9d2f5783c35a1db3c8d5_a22c117aba81c9d2f5783c35a1db3c8d5}{captureCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa9f9212c13679429780ffaa732b1ae9b7}{CC3220SF\_STARPORTS\_CAPTURE0}}]}
+\DoxyCodeLine{00123     \},}
+\DoxyCodeLine{00124     \{}
+\DoxyCodeLine{00125         .fxnTablePtr = \&CaptureCC32XX\_fxnTable,}
+\DoxyCodeLine{00126         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a74d756667406006d3124ef32049c3ce5_a74d756667406006d3124ef32049c3ce5}{captureCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa3895bba9394c532deeec8ca01cbc9671}{CC3220SF\_STARPORTS\_CAPTURE1}}],}
+\DoxyCodeLine{00127         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a22c117aba81c9d2f5783c35a1db3c8d5_a22c117aba81c9d2f5783c35a1db3c8d5}{captureCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa3895bba9394c532deeec8ca01cbc9671}{CC3220SF\_STARPORTS\_CAPTURE1}}]}
+\DoxyCodeLine{00128     \}}
+\DoxyCodeLine{00129 \};}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00131}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a00c6bbe1b8406015aaf6b1aa2f68d918_a00c6bbe1b8406015aaf6b1aa2f68d918}{00131}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a00c6bbe1b8406015aaf6b1aa2f68d918_a00c6bbe1b8406015aaf6b1aa2f68d918}{Capture\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a25a1d218f1a427c0067fb1013bdc5a4a_a25a1d218f1a427c0067fb1013bdc5a4aa5e88f1e0b684ebb807d9e6baada86161}{CC3220SF\_STARPORTS\_CAPTURECOUNT}};}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133 \textcolor{comment}{/*}}
+\DoxyCodeLine{00134 \textcolor{comment}{ *  =============================== Crypto ===============================}}
+\DoxyCodeLine{00135 \textcolor{comment}{ */}}
+\DoxyCodeLine{00136 \textcolor{preprocessor}{\#include <ti/drivers/crypto/CryptoCC32XX.h>}}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00138}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a030105123a0b87566587ea161af42785_a030105123a0b87566587ea161af42785}{00138}} CryptoCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a030105123a0b87566587ea161af42785_a030105123a0b87566587ea161af42785}{cryptoCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a7b730a260d7251612a0e1ea730ee5613_a7b730a260d7251612a0e1ea730ee5613af5ffa186d2698695a16ebd16bc14918a}{CC3220SF\_STARPORTS\_CRYPTOCOUNT}}];}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00140}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a266a2305baad12498c9731bc94319283_a266a2305baad12498c9731bc94319283}{00140}} \textcolor{keyword}{const} CryptoCC32XX\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a266a2305baad12498c9731bc94319283_a266a2305baad12498c9731bc94319283}{CryptoCC32XX\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a7b730a260d7251612a0e1ea730ee5613_a7b730a260d7251612a0e1ea730ee5613af5ffa186d2698695a16ebd16bc14918a}{CC3220SF\_STARPORTS\_CRYPTOCOUNT}}] = \{}
+\DoxyCodeLine{00141     \{}
+\DoxyCodeLine{00142         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a030105123a0b87566587ea161af42785_a030105123a0b87566587ea161af42785}{cryptoCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a7b730a260d7251612a0e1ea730ee5613_a7b730a260d7251612a0e1ea730ee5613a0469218685f1028419dcfd67d0fb0d2c}{CC3220SF\_STARPORTS\_CRYPTO0}}]}
+\DoxyCodeLine{00143     \}}
+\DoxyCodeLine{00144 \};}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00146}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_abb7c75ec810509c91f4436d9bb90109f_abb7c75ec810509c91f4436d9bb90109f}{00146}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_abb7c75ec810509c91f4436d9bb90109f_abb7c75ec810509c91f4436d9bb90109f}{CryptoCC32XX\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a7b730a260d7251612a0e1ea730ee5613_a7b730a260d7251612a0e1ea730ee5613af5ffa186d2698695a16ebd16bc14918a}{CC3220SF\_STARPORTS\_CRYPTOCOUNT}};}
+\DoxyCodeLine{00147 }
+\DoxyCodeLine{00148 \textcolor{comment}{/*}}
+\DoxyCodeLine{00149 \textcolor{comment}{ *  =============================== DMA ===============================}}
+\DoxyCodeLine{00150 \textcolor{comment}{ */}}
+\DoxyCodeLine{00151 \textcolor{preprocessor}{\#include <ti/drivers/dma/UDMACC32XX.h>}}
+\DoxyCodeLine{00152 }
+\DoxyCodeLine{00153 \textcolor{keyword}{static} tDMAControlTable dmaControlTable[64] \_\_attribute\_\_ ((aligned (1024)));}
+\DoxyCodeLine{00154 }
+\DoxyCodeLine{00155 \textcolor{comment}{/*}}
+\DoxyCodeLine{00156 \textcolor{comment}{ *  ======== dmaErrorFxn ========}}
+\DoxyCodeLine{00157 \textcolor{comment}{ *  This is the handler for the uDMA error interrupt.}}
+\DoxyCodeLine{00158 \textcolor{comment}{ */}}
+\DoxyCodeLine{00159 \textcolor{keyword}{static} \textcolor{keywordtype}{void} dmaErrorFxn(uintptr\_t arg)}
+\DoxyCodeLine{00160 \{}
+\DoxyCodeLine{00161     \textcolor{keywordtype}{int} status = MAP\_uDMAErrorStatusGet();}
+\DoxyCodeLine{00162     MAP\_uDMAErrorStatusClear();}
+\DoxyCodeLine{00163 }
+\DoxyCodeLine{00164     \textcolor{comment}{/* Suppress unused variable warning */}}
+\DoxyCodeLine{00165     (void)status;}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167     \textcolor{keywordflow}{while} (1);}
+\DoxyCodeLine{00168 \}}
+\DoxyCodeLine{00169 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00170}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a60641c79285263b18ae0b43511505a73_a60641c79285263b18ae0b43511505a73}{00170}} UDMACC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a60641c79285263b18ae0b43511505a73_a60641c79285263b18ae0b43511505a73}{udmaCC3220SObject}};}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00172}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_add9d0ecaf3a622c54b7fdde7f44a57d6_add9d0ecaf3a622c54b7fdde7f44a57d6}{00172}} \textcolor{keyword}{const} UDMACC32XX\_HWAttrs \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_add9d0ecaf3a622c54b7fdde7f44a57d6_add9d0ecaf3a622c54b7fdde7f44a57d6}{udmaCC3220SHWAttrs}} = \{}
+\DoxyCodeLine{00173     .controlBaseAddr = (\textcolor{keywordtype}{void} *)dmaControlTable,}
+\DoxyCodeLine{00174     .dmaErrorFxn = (UDMACC32XX\_ErrorFxn)dmaErrorFxn,}
+\DoxyCodeLine{00175     .intNum = INT\_UDMAERR,}
+\DoxyCodeLine{00176     .intPriority = (\string~0)}
+\DoxyCodeLine{00177 \};}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00179}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ae46a27cae82881d00a0f0baaabbec981_ae46a27cae82881d00a0f0baaabbec981}{00179}} \textcolor{keyword}{const} UDMACC32XX\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ae46a27cae82881d00a0f0baaabbec981_ae46a27cae82881d00a0f0baaabbec981}{UDMACC32XX\_config}} = \{}
+\DoxyCodeLine{00180     .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a60641c79285263b18ae0b43511505a73_a60641c79285263b18ae0b43511505a73}{udmaCC3220SObject}},}
+\DoxyCodeLine{00181     .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_add9d0ecaf3a622c54b7fdde7f44a57d6_add9d0ecaf3a622c54b7fdde7f44a57d6}{udmaCC3220SHWAttrs}}}
+\DoxyCodeLine{00182 \};}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184 \textcolor{comment}{/*}}
+\DoxyCodeLine{00185 \textcolor{comment}{ *  =============================== General ===============================}}
+\DoxyCodeLine{00186 \textcolor{comment}{ */}}
+\DoxyCodeLine{00187 \textcolor{comment}{/*}}
+\DoxyCodeLine{00188 \textcolor{comment}{ *  ======== CC3220SF\_STARPORTS\_initGeneral ========}}
+\DoxyCodeLine{00189 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00190}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a067e40fa8a715086e3e273cd261a4f76_a067e40fa8a715086e3e273cd261a4f76}{00190}} \textcolor{keywordtype}{void} \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a067e40fa8a715086e3e273cd261a4f76_a067e40fa8a715086e3e273cd261a4f76}{CC3220SF\_STARPORTS\_initGeneral}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00191 \{}
+\DoxyCodeLine{00192     PRCMCC3200MCUInit();}
+\DoxyCodeLine{00193     Power\_init();}
+\DoxyCodeLine{00194 \}}
+\DoxyCodeLine{00195 }
+\DoxyCodeLine{00196 \textcolor{comment}{/*}}
+\DoxyCodeLine{00197 \textcolor{comment}{ *  =============================== GPIO ===============================}}
+\DoxyCodeLine{00198 \textcolor{comment}{ */}}
+\DoxyCodeLine{00199 \textcolor{preprocessor}{\#include <ti/drivers/GPIO.h>}}
+\DoxyCodeLine{00200 \textcolor{preprocessor}{\#include <ti/drivers/gpio/GPIOCC32XX.h>}}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202 \textcolor{comment}{/*}}
+\DoxyCodeLine{00203 \textcolor{comment}{ * Array of Pin configurations}}
+\DoxyCodeLine{00204 \textcolor{comment}{ * NOTE: The order of the pin configurations must coincide with what was}}
+\DoxyCodeLine{00205 \textcolor{comment}{ *       defined in CC3220SF\_STARPORTS.h}}
+\DoxyCodeLine{00206 \textcolor{comment}{ * NOTE: Pins not used for interrupts should be placed at the end of the}}
+\DoxyCodeLine{00207 \textcolor{comment}{ *       array.  Callback entries can be omitted from callbacks array to}}
+\DoxyCodeLine{00208 \textcolor{comment}{ *       reduce memory usage.}}
+\DoxyCodeLine{00209 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00210}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9e5c3072a49eb2ac4b947746854af530_a9e5c3072a49eb2ac4b947746854af530}{00210}} GPIO\_PinConfig \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9e5c3072a49eb2ac4b947746854af530_a9e5c3072a49eb2ac4b947746854af530}{gpioPinConfigs}}[] = \{}
+\DoxyCodeLine{00211 }
+\DoxyCodeLine{00212     GPIOCC32XX\_GPIO\_30 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* RN2483 /MCLR  */}}
+\DoxyCodeLine{00213 }
+\DoxyCodeLine{00214     \textcolor{comment}{/* STARPORTS GPIO Pins */}}
+\DoxyCodeLine{00215     GPIOCC32XX\_GPIO\_12 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* ADXL355\_CS */}}
+\DoxyCodeLine{00216     GPIOCC32XX\_GPIO\_13 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* BME280\_CS */}}
+\DoxyCodeLine{00217     GPIOCC32XX\_GPIO\_22 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* LDC1000\_CS */}}
+\DoxyCodeLine{00218     GPIOCC32XX\_GPIO\_08 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* EN\_NODE */}}
+\DoxyCodeLine{00219     GPIOCC32XX\_GPIO\_06 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* EN\_ADXL355 */}}
+\DoxyCodeLine{00220     GPIOCC32XX\_GPIO\_00 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* EN\_BME280 */}}
+\DoxyCodeLine{00221     GPIOCC32XX\_GPIO\_28 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* EN\_LDC1000 */}}
+\DoxyCodeLine{00222     GPIOCC32XX\_GPIO\_07 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* DS1374\_INTB */}}
+\DoxyCodeLine{00223     GPIOCC32XX\_GPIO\_10 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* SCL */}}
+\DoxyCodeLine{00224     GPIOCC32XX\_GPIO\_11 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* SDA */}}
+\DoxyCodeLine{00225     GPIOCC32XX\_GPIO\_14 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* SCLK */}}
+\DoxyCodeLine{00226     GPIOCC32XX\_GPIO\_16 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* MOSI */}}
+\DoxyCodeLine{00227     GPIOCC32XX\_GPIO\_17 | GPIO\_DO\_NOT\_CONFIG, \textcolor{comment}{/* CS */}}
+\DoxyCodeLine{00228 }
+\DoxyCodeLine{00229 \};}
+\DoxyCodeLine{00230 }
+\DoxyCodeLine{00231 \textcolor{comment}{/*}}
+\DoxyCodeLine{00232 \textcolor{comment}{ * Array of callback function pointers}}
+\DoxyCodeLine{00233 \textcolor{comment}{ * NOTE: The order of the pin configurations must coincide with what was}}
+\DoxyCodeLine{00234 \textcolor{comment}{ *       defined in CC3220SF\_STARPORTS.h}}
+\DoxyCodeLine{00235 \textcolor{comment}{ * NOTE: Pins not used for interrupts can be omitted from callbacks array to}}
+\DoxyCodeLine{00236 \textcolor{comment}{ *       reduce memory usage (if placed at end of gpioPinConfigs array).}}
+\DoxyCodeLine{00237 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00238}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_adfe79d7b812dfa6ca8f0ef47bf9eab5a_adfe79d7b812dfa6ca8f0ef47bf9eab5a}{00238}} GPIO\_CallbackFxn \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_adfe79d7b812dfa6ca8f0ef47bf9eab5a_adfe79d7b812dfa6ca8f0ef47bf9eab5a}{gpioCallbackFunctions}}[] = \{}
+\DoxyCodeLine{00239     NULL,  \textcolor{comment}{/* CC3220SF\_STARPORTS\_GPIO\_SW2 */}}
+\DoxyCodeLine{00240     NULL,  \textcolor{comment}{/* CC3220SF\_STARPORTS\_GPIO\_SW3 */}}
+\DoxyCodeLine{00241     NULL,  \textcolor{comment}{/* CC3220SF\_STARPORTS\_SPI\_MASTER\_READY */}}
+\DoxyCodeLine{00242     NULL   \textcolor{comment}{/* CC3220SF\_STARPORTS\_SPI\_SLAVE\_READY */}}
+\DoxyCodeLine{00243 \};}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245 \textcolor{comment}{/* The device-\/specific GPIO\_config structure */}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00246}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a7429dd9d15a0f6b492ea1e239b78d6f9_a7429dd9d15a0f6b492ea1e239b78d6f9}{00246}} \textcolor{keyword}{const} GPIOCC32XX\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a7429dd9d15a0f6b492ea1e239b78d6f9_a7429dd9d15a0f6b492ea1e239b78d6f9}{GPIOCC32XX\_config}} = \{}
+\DoxyCodeLine{00247     .pinConfigs = (GPIO\_PinConfig *)\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9e5c3072a49eb2ac4b947746854af530_a9e5c3072a49eb2ac4b947746854af530}{gpioPinConfigs}},}
+\DoxyCodeLine{00248     .callbacks = (GPIO\_CallbackFxn *)\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_adfe79d7b812dfa6ca8f0ef47bf9eab5a_adfe79d7b812dfa6ca8f0ef47bf9eab5a}{gpioCallbackFunctions}},}
+\DoxyCodeLine{00249     .numberOfPinConfigs = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9e5c3072a49eb2ac4b947746854af530_a9e5c3072a49eb2ac4b947746854af530}{gpioPinConfigs}})/\textcolor{keyword}{sizeof}(GPIO\_PinConfig),}
+\DoxyCodeLine{00250     .numberOfCallbacks = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_adfe79d7b812dfa6ca8f0ef47bf9eab5a_adfe79d7b812dfa6ca8f0ef47bf9eab5a}{gpioCallbackFunctions}})/\textcolor{keyword}{sizeof}(GPIO\_CallbackFxn),}
+\DoxyCodeLine{00251     .intPriority = (\string~0)}
+\DoxyCodeLine{00252 \};}
+\DoxyCodeLine{00253 }
+\DoxyCodeLine{00254 }
+\DoxyCodeLine{00255 \textcolor{comment}{/*  =============================== I2C ===============================}}
+\DoxyCodeLine{00256 \textcolor{comment}{ */}}
+\DoxyCodeLine{00257 \textcolor{preprocessor}{\#include <ti/drivers/I2C.h>}}
+\DoxyCodeLine{00258 \textcolor{preprocessor}{\#include <ti/drivers/i2c/I2CCC32XX.h>}}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00260}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a11a7fb8cb29a0bf58f3d5d5f52717059_a11a7fb8cb29a0bf58f3d5d5f52717059}{00260}} I2CCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a11a7fb8cb29a0bf58f3d5d5f52717059_a11a7fb8cb29a0bf58f3d5d5f52717059}{i2cCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acf4ba16e0c97b480ccd615f3f2773a0b_acf4ba16e0c97b480ccd615f3f2773a0ba7e0b6071f1701bebc6afbc842191491c}{CC3220SF\_STARPORTS\_I2CCOUNT}}];}
+\DoxyCodeLine{00261 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00262}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ab2d0d97943d30ae61d9bb7b70db554e2_ab2d0d97943d30ae61d9bb7b70db554e2}{00262}} \textcolor{keyword}{const} I2CCC32XX\_HWAttrsV1 \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ab2d0d97943d30ae61d9bb7b70db554e2_ab2d0d97943d30ae61d9bb7b70db554e2}{i2cCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acf4ba16e0c97b480ccd615f3f2773a0b_acf4ba16e0c97b480ccd615f3f2773a0ba7e0b6071f1701bebc6afbc842191491c}{CC3220SF\_STARPORTS\_I2CCOUNT}}] = \{}
+\DoxyCodeLine{00263     \{}
+\DoxyCodeLine{00264         .baseAddr = I2CA0\_BASE,}
+\DoxyCodeLine{00265         .intNum = INT\_I2CA0,}
+\DoxyCodeLine{00266         .intPriority = (\string~0),}
+\DoxyCodeLine{00267         .clkPin = I2CCC32XX\_PIN\_01\_I2C\_SCL,}
+\DoxyCodeLine{00268         .dataPin = I2CCC32XX\_PIN\_02\_I2C\_SDA}
+\DoxyCodeLine{00269     \}}
+\DoxyCodeLine{00270 \};}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00272}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a8220effc86100daa60faeb44d0086a34_a8220effc86100daa60faeb44d0086a34}{00272}} \textcolor{keyword}{const} I2C\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a8220effc86100daa60faeb44d0086a34_a8220effc86100daa60faeb44d0086a34}{I2C\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acf4ba16e0c97b480ccd615f3f2773a0b_acf4ba16e0c97b480ccd615f3f2773a0ba7e0b6071f1701bebc6afbc842191491c}{CC3220SF\_STARPORTS\_I2CCOUNT}}] = \{}
+\DoxyCodeLine{00273     \{}
+\DoxyCodeLine{00274         .fxnTablePtr = \&I2CCC32XX\_fxnTable,}
+\DoxyCodeLine{00275         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a11a7fb8cb29a0bf58f3d5d5f52717059_a11a7fb8cb29a0bf58f3d5d5f52717059}{i2cCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acf4ba16e0c97b480ccd615f3f2773a0b_acf4ba16e0c97b480ccd615f3f2773a0ba5020804a5acb2497c2b4e487fab526ee}{CC3220SF\_STARPORTS\_I2C0}}],}
+\DoxyCodeLine{00276         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ab2d0d97943d30ae61d9bb7b70db554e2_ab2d0d97943d30ae61d9bb7b70db554e2}{i2cCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acf4ba16e0c97b480ccd615f3f2773a0b_acf4ba16e0c97b480ccd615f3f2773a0ba5020804a5acb2497c2b4e487fab526ee}{CC3220SF\_STARPORTS\_I2C0}}]}
+\DoxyCodeLine{00277     \}}
+\DoxyCodeLine{00278 \};}
+\DoxyCodeLine{00279 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00280}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a2f7b47492e348b701dc5add470d898e8_a2f7b47492e348b701dc5add470d898e8}{00280}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a2f7b47492e348b701dc5add470d898e8_a2f7b47492e348b701dc5add470d898e8}{I2C\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acf4ba16e0c97b480ccd615f3f2773a0b_acf4ba16e0c97b480ccd615f3f2773a0ba7e0b6071f1701bebc6afbc842191491c}{CC3220SF\_STARPORTS\_I2CCOUNT}};}
+\DoxyCodeLine{00281 }
+\DoxyCodeLine{00282 \textcolor{comment}{/*}}
+\DoxyCodeLine{00283 \textcolor{comment}{ *  =============================== Power ===============================}}
+\DoxyCodeLine{00284 \textcolor{comment}{ */}}
+\DoxyCodeLine{00285 \textcolor{comment}{/*}}
+\DoxyCodeLine{00286 \textcolor{comment}{ * This table defines the parking state to be set for each parkable pin}}
+\DoxyCodeLine{00287 \textcolor{comment}{ * during LPDS. (Device pins must be parked during LPDS to achieve maximum}}
+\DoxyCodeLine{00288 \textcolor{comment}{ * power savings.)  If the pin should be left unparked, specify the state}}
+\DoxyCodeLine{00289 \textcolor{comment}{ * PowerCC32XX\_DONT\_PARK.  For example, for a UART TX pin, the device}}
+\DoxyCodeLine{00290 \textcolor{comment}{ * will automatically park the pin in a high state during transition to LPDS,}}
+\DoxyCodeLine{00291 \textcolor{comment}{ * so the Power Manager does not need to explictly park the pin.  So the}}
+\DoxyCodeLine{00292 \textcolor{comment}{ * corresponding entries in this table should indicate PowerCC32XX\_DONT\_PARK.}}
+\DoxyCodeLine{00293 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00294}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a70c9a6b65f333f525c433142ece9c9f1_a70c9a6b65f333f525c433142ece9c9f1}{00294}} PowerCC32XX\_ParkInfo \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a70c9a6b65f333f525c433142ece9c9f1_a70c9a6b65f333f525c433142ece9c9f1}{parkInfo}}[] = \{}
+\DoxyCodeLine{00295 \textcolor{comment}{/*          PIN                    PARK STATE              PIN ALIAS (FUNCTION)}}
+\DoxyCodeLine{00296 \textcolor{comment}{     -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/  -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/     -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/ */}}
+\DoxyCodeLine{00297     \{PowerCC32XX\_PIN01, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* I2C\_SCL             */}}
+\DoxyCodeLine{00298     \{PowerCC32XX\_PIN02, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* I2C\_SDA             */}}
+\DoxyCodeLine{00299     \{PowerCC32XX\_PIN03, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* SPI\_CS\_ADXL355      */}}
+\DoxyCodeLine{00300     \{PowerCC32XX\_PIN04, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* SPI\_CS\_BME280       */}}
+\DoxyCodeLine{00301     \{PowerCC32XX\_PIN05, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* SPI\_SCLK            */}}
+\DoxyCodeLine{00302     \{PowerCC32XX\_PIN06, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* SPI\_MISO            */}}
+\DoxyCodeLine{00303     \{PowerCC32XX\_PIN07, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* SPI\_MOSI            */}}
+\DoxyCodeLine{00304     \{PowerCC32XX\_PIN08, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* SPI\_CS              */}}
+\DoxyCodeLine{00305     \{PowerCC32XX\_PIN13, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* FLASH\_SPI\_DIN       */}}
+\DoxyCodeLine{00306     \{PowerCC32XX\_PIN15, PowerCC32XX\_DRIVE\_LOW\}, \textcolor{comment}{/* SPI\_CS\_LDC1000      */}}
+\DoxyCodeLine{00307     \{PowerCC32XX\_PIN16, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* TDI (JTAG DEBUG)    */}}
+\DoxyCodeLine{00308     \{PowerCC32XX\_PIN17, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* TDO (JTAG DEBUG)    */}}
+\DoxyCodeLine{00309     \{PowerCC32XX\_PIN19, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* TCK (JTAG DEBUG)    */}}
+\DoxyCodeLine{00310     \{PowerCC32XX\_PIN20, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* TMS (JTAG DEBUG)    */}}
+\DoxyCodeLine{00311     \{PowerCC32XX\_PIN18, PowerCC32XX\_DRIVE\_LOW\}, \textcolor{comment}{/* EN\_LDC1000          */}}
+\DoxyCodeLine{00312     \{PowerCC32XX\_PIN21, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* SOP2                */}}
+\DoxyCodeLine{00313     \{PowerCC32XX\_PIN29, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* ANTSEL1             */}}
+\DoxyCodeLine{00314     \{PowerCC32XX\_PIN30, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* ANTSEL2             */}}
+\DoxyCodeLine{00315     \{PowerCC32XX\_PIN45, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* DCDC\_ANA2\_SW\_P      */}}
+\DoxyCodeLine{00316     \{PowerCC32XX\_PIN50, PowerCC32XX\_DRIVE\_LOW\}, \textcolor{comment}{/* EN\_BME280           */}}
+\DoxyCodeLine{00317     \{PowerCC32XX\_PIN52, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* RTC\_XTAL\_N          */}}
+\DoxyCodeLine{00318     \{PowerCC32XX\_PIN53, PowerCC32XX\_DRIVE\_LOW\}, \textcolor{comment}{/* RN2483\_MCLR         */}}
+\DoxyCodeLine{00319     \{PowerCC32XX\_PIN55, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* XDS\_UART\_RX         */}}
+\DoxyCodeLine{00320     \{PowerCC32XX\_PIN57, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* XDS\_UART\_TX         */}}
+\DoxyCodeLine{00321     \{PowerCC32XX\_PIN58, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* UART\_TX             */}}
+\DoxyCodeLine{00322     \{PowerCC32XX\_PIN59, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* UART\_RX             */}}
+\DoxyCodeLine{00323     \{PowerCC32XX\_PIN60, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* ADCIN               */}}
+\DoxyCodeLine{00324     \{PowerCC32XX\_PIN61, PowerCC32XX\_DRIVE\_LOW\}, \textcolor{comment}{/* EN\_ADXL355          */}}
+\DoxyCodeLine{00325     \{PowerCC32XX\_PIN62, PowerCC32XX\_WEAK\_PULL\_DOWN\_STD\}, \textcolor{comment}{/* INTB\_RTC            */}}
+\DoxyCodeLine{00326     \{PowerCC32XX\_PIN63, PowerCC32XX\_DRIVE\_LOW\},   \textcolor{comment}{/* EN\_NODE             */}}
+\DoxyCodeLine{00327     \{PowerCC32XX\_PIN64, PowerCC32XX\_DRIVE\_LOW\}, \textcolor{comment}{/* LDC1000\_CLK         */}}
+\DoxyCodeLine{00328 \};}
+\DoxyCodeLine{00329 }
+\DoxyCodeLine{00330 \textcolor{comment}{/*}}
+\DoxyCodeLine{00331 \textcolor{comment}{ *  This structure defines the configuration for the Power Manager.}}
+\DoxyCodeLine{00332 \textcolor{comment}{ *}}
+\DoxyCodeLine{00333 \textcolor{comment}{ *  In this configuration the Power policy is disabled by default (because}}
+\DoxyCodeLine{00334 \textcolor{comment}{ *  enablePolicy is set to false).  The Power policy can be enabled dynamically}}
+\DoxyCodeLine{00335 \textcolor{comment}{ *  at runtime by calling Power\_enablePolicy(), or at build time, by changing}}
+\DoxyCodeLine{00336 \textcolor{comment}{ *  enablePolicy to true in this structure.}}
+\DoxyCodeLine{00337 \textcolor{comment}{ */}}
+\DoxyCodeLine{00338 }
+\DoxyCodeLine{00339 \textcolor{keywordtype}{void} \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a7a26eb8c88e9ecafa634d3ee2004c45a_a7a26eb8c88e9ecafa634d3ee2004c45a}{WakeupFromLPDS}}(uint\_least8\_t);}
+\DoxyCodeLine{00340 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00341}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a551cbf5d1b57fbb8041bca1d27a6a22b_a551cbf5d1b57fbb8041bca1d27a6a22b}{00341}} \textcolor{keyword}{const} PowerCC32XX\_ConfigV1 \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a551cbf5d1b57fbb8041bca1d27a6a22b_a551cbf5d1b57fbb8041bca1d27a6a22b}{PowerCC32XX\_config}} = \{}
+\DoxyCodeLine{00342     .policyInitFxn = \&PowerCC32XX\_initPolicy,}
+\DoxyCodeLine{00343     .policyFxn = \&PowerCC32XX\_sleepPolicy,}
+\DoxyCodeLine{00344     .enterLPDSHookFxn = NULL,}
+\DoxyCodeLine{00345     .resumeLPDSHookFxn = NULL,}
+\DoxyCodeLine{00346     .enablePolicy = \textcolor{keyword}{true},}
+\DoxyCodeLine{00347     .enableGPIOWakeupLPDS = \textcolor{keyword}{true},}
+\DoxyCodeLine{00348     .enableGPIOWakeupShutdown = \textcolor{keyword}{true},}
+\DoxyCodeLine{00349     .enableNetworkWakeupLPDS = \textcolor{keyword}{true},}
+\DoxyCodeLine{00350     .wakeupGPIOSourceLPDS = PRCM\_LPDS\_GPIO2,}
+\DoxyCodeLine{00351     .wakeupGPIOTypeLPDS = PRCM\_LPDS\_FALL\_EDGE,}
+\DoxyCodeLine{00352     .wakeupGPIOFxnLPDS = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a7a26eb8c88e9ecafa634d3ee2004c45a_a7a26eb8c88e9ecafa634d3ee2004c45a}{WakeupFromLPDS}},}
+\DoxyCodeLine{00353     .wakeupGPIOFxnLPDSArg = 0,}
+\DoxyCodeLine{00354     .wakeupGPIOSourceShutdown = PRCM\_HIB\_GPIO2,}
+\DoxyCodeLine{00355     .wakeupGPIOTypeShutdown = PRCM\_HIB\_FALL\_EDGE,}
+\DoxyCodeLine{00356     .ramRetentionMaskLPDS = PRCM\_SRAM\_COL\_1 | PRCM\_SRAM\_COL\_2 |}
+\DoxyCodeLine{00357         PRCM\_SRAM\_COL\_3 | PRCM\_SRAM\_COL\_4,}
+\DoxyCodeLine{00358     .keepDebugActiveDuringLPDS = \textcolor{keyword}{true},}
+\DoxyCodeLine{00359     .ioRetentionShutdown = PRCM\_IO\_RET\_GRP\_1,}
+\DoxyCodeLine{00360     .pinParkDefs = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a70c9a6b65f333f525c433142ece9c9f1_a70c9a6b65f333f525c433142ece9c9f1}{parkInfo}},}
+\DoxyCodeLine{00361     .numPins = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a70c9a6b65f333f525c433142ece9c9f1_a70c9a6b65f333f525c433142ece9c9f1}{parkInfo}}) / \textcolor{keyword}{sizeof}(PowerCC32XX\_ParkInfo)}
+\DoxyCodeLine{00362 \};}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00364 \textcolor{comment}{/*}}
+\DoxyCodeLine{00365 \textcolor{comment}{ *  =============================== PWM ===============================}}
+\DoxyCodeLine{00366 \textcolor{comment}{ */}}
+\DoxyCodeLine{00367 \textcolor{preprocessor}{\#include <ti/drivers/PWM.h>}}
+\DoxyCodeLine{00368 \textcolor{preprocessor}{\#include <ti/drivers/pwm/PWMTimerCC32XX.h>}}
+\DoxyCodeLine{00369 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00370}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a5815b60c542e0908733986aaec002fb3_a5815b60c542e0908733986aaec002fb3}{00370}} PWMTimerCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a5815b60c542e0908733986aaec002fb3_a5815b60c542e0908733986aaec002fb3}{pwmTimerCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aa925fc14c837cc5882d2d55b27547ac0_aa925fc14c837cc5882d2d55b27547ac0a0bbc2eb8be9b3dd4ca90a1888bfd80f8}{CC3220SF\_STARPORTS\_PWMCOUNT}}];}
+\DoxyCodeLine{00371 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00372}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1592153c8964a6bceae8fb269c8ad967_a1592153c8964a6bceae8fb269c8ad967}{00372}} \textcolor{keyword}{const} PWMTimerCC32XX\_HWAttrsV2 \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1592153c8964a6bceae8fb269c8ad967_a1592153c8964a6bceae8fb269c8ad967}{pwmTimerCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aa925fc14c837cc5882d2d55b27547ac0_aa925fc14c837cc5882d2d55b27547ac0a0bbc2eb8be9b3dd4ca90a1888bfd80f8}{CC3220SF\_STARPORTS\_PWMCOUNT}}] = \{}
+\DoxyCodeLine{00373     \{    \textcolor{comment}{/* CC3220SF\_STARPORTS\_PWM5 */}}
+\DoxyCodeLine{00374        .pwmPin = PWMTimerCC32XX\_PIN\_64}
+\DoxyCodeLine{00375     \}}
+\DoxyCodeLine{00376 \};}
+\DoxyCodeLine{00377 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00378}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aa3a6d28bb6cbffa6a35a12603f319696_aa3a6d28bb6cbffa6a35a12603f319696}{00378}} \textcolor{keyword}{const} PWM\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aa3a6d28bb6cbffa6a35a12603f319696_aa3a6d28bb6cbffa6a35a12603f319696}{PWM\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aa925fc14c837cc5882d2d55b27547ac0_aa925fc14c837cc5882d2d55b27547ac0a0bbc2eb8be9b3dd4ca90a1888bfd80f8}{CC3220SF\_STARPORTS\_PWMCOUNT}}] = \{}
+\DoxyCodeLine{00379     \{}
+\DoxyCodeLine{00380         .fxnTablePtr = \&PWMTimerCC32XX\_fxnTable,}
+\DoxyCodeLine{00381         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a5815b60c542e0908733986aaec002fb3_a5815b60c542e0908733986aaec002fb3}{pwmTimerCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aa925fc14c837cc5882d2d55b27547ac0_aa925fc14c837cc5882d2d55b27547ac0a0715ee7a0763a9cb17b2dcbb839c7822}{CC3220SF\_STARPORTS\_PWM5}}],}
+\DoxyCodeLine{00382         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1592153c8964a6bceae8fb269c8ad967_a1592153c8964a6bceae8fb269c8ad967}{pwmTimerCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aa925fc14c837cc5882d2d55b27547ac0_aa925fc14c837cc5882d2d55b27547ac0a0715ee7a0763a9cb17b2dcbb839c7822}{CC3220SF\_STARPORTS\_PWM5}}]}
+\DoxyCodeLine{00383     \}}
+\DoxyCodeLine{00384 \};}
+\DoxyCodeLine{00385 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00386}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a6afd4376d19ecd743eb38ee138748f0f_a6afd4376d19ecd743eb38ee138748f0f}{00386}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a6afd4376d19ecd743eb38ee138748f0f_a6afd4376d19ecd743eb38ee138748f0f}{PWM\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_aa925fc14c837cc5882d2d55b27547ac0_aa925fc14c837cc5882d2d55b27547ac0a0bbc2eb8be9b3dd4ca90a1888bfd80f8}{CC3220SF\_STARPORTS\_PWMCOUNT}};}
+\DoxyCodeLine{00387 }
+\DoxyCodeLine{00388 \textcolor{comment}{/*}}
+\DoxyCodeLine{00389 \textcolor{comment}{ *  =============================== SDFatFS ===============================}}
+\DoxyCodeLine{00390 \textcolor{comment}{ */}}
+\DoxyCodeLine{00391 \textcolor{comment}{/*}}
+\DoxyCodeLine{00392 \textcolor{comment}{\#include <ti/drivers/SD.h>}}
+\DoxyCodeLine{00393 \textcolor{comment}{\#include <ti/drivers/SDFatFS.h>}}
+\DoxyCodeLine{00394 \textcolor{comment}{*/}}
+\DoxyCodeLine{00395 \textcolor{comment}{/*}}
+\DoxyCodeLine{00396 \textcolor{comment}{ * Note: The SDFatFS driver provides interface functions to enable FatFs}}
+\DoxyCodeLine{00397 \textcolor{comment}{ * but relies on the SD driver to communicate with SD cards.  Opening a}}
+\DoxyCodeLine{00398 \textcolor{comment}{ * SDFatFs driver instance will internally try to open a SD driver instance}}
+\DoxyCodeLine{00399 \textcolor{comment}{ * reusing the same index number (opening SDFatFs driver at index 0 will try to}}
+\DoxyCodeLine{00400 \textcolor{comment}{ * open SD driver at index 0).  This requires that all SDFatFs driver instances}}
+\DoxyCodeLine{00401 \textcolor{comment}{ * have an accompanying SD driver instance defined with the same index.  It is}}
+\DoxyCodeLine{00402 \textcolor{comment}{ * acceptable to have more SD driver instances than SDFatFs driver instances}}
+\DoxyCodeLine{00403 \textcolor{comment}{ * but the opposite is not supported \& the SDFatFs will fail to open.}}
+\DoxyCodeLine{00404 \textcolor{comment}{ */}}
+\DoxyCodeLine{00405 \textcolor{comment}{/*SDFatFS\_Object sdfatfsObjects[CC3220SF\_STARPORTS\_SDFatFSCOUNT];}}
+\DoxyCodeLine{00406 \textcolor{comment}{}}
+\DoxyCodeLine{00407 \textcolor{comment}{const SDFatFS\_Config SDFatFS\_config[CC3220SF\_STARPORTS\_SDFatFSCOUNT] = \{}}
+\DoxyCodeLine{00408 \textcolor{comment}{    \{}}
+\DoxyCodeLine{00409 \textcolor{comment}{        .object = \&sdfatfsObjects[CC3220SF\_STARPORTS\_SDFatFS0]}}
+\DoxyCodeLine{00410 \textcolor{comment}{    \}}}
+\DoxyCodeLine{00411 \textcolor{comment}{\};}}
+\DoxyCodeLine{00412 \textcolor{comment}{}}
+\DoxyCodeLine{00413 \textcolor{comment}{const uint\_least8\_t SDFatFS\_count = CC3220SF\_STARPORTS\_SDFatFSCOUNT;*/}}
+\DoxyCodeLine{00414 }
+\DoxyCodeLine{00415 \textcolor{comment}{/*}}
+\DoxyCodeLine{00416 \textcolor{comment}{ *  =============================== SD ===============================}}
+\DoxyCodeLine{00417 \textcolor{comment}{ */}}
+\DoxyCodeLine{00418 \textcolor{comment}{/*}}
+\DoxyCodeLine{00419 \textcolor{comment}{\#include <ti/drivers/SD.h>}}
+\DoxyCodeLine{00420 \textcolor{comment}{\#include <ti/drivers/sd/SDHostCC32XX.h>}}
+\DoxyCodeLine{00421 \textcolor{comment}{}}
+\DoxyCodeLine{00422 \textcolor{comment}{SDHostCC32XX\_Object sdhostCC3220SObjects[CC3220SF\_STARPORTS\_SDCOUNT];}}
+\DoxyCodeLine{00423 \textcolor{comment}{}}
+\DoxyCodeLine{00424 \textcolor{comment}{ SDHost configuration structure, describing which pins are to be used}}
+\DoxyCodeLine{00425 \textcolor{comment}{const SDHostCC32XX\_HWAttrsV1 sdhostCC3220SHWattrs[CC3220SF\_STARPORTS\_SDCOUNT] = \{}}
+\DoxyCodeLine{00426 \textcolor{comment}{    \{}}
+\DoxyCodeLine{00427 \textcolor{comment}{        .clkRate = 8000000,}}
+\DoxyCodeLine{00428 \textcolor{comment}{        .intPriority = \string~0,}}
+\DoxyCodeLine{00429 \textcolor{comment}{        .baseAddr = SDHOST\_BASE,}}
+\DoxyCodeLine{00430 \textcolor{comment}{        .rxChIdx = UDMA\_CH23\_SDHOST\_RX,}}
+\DoxyCodeLine{00431 \textcolor{comment}{        .txChIdx = UDMA\_CH24\_SDHOST\_TX,}}
+\DoxyCodeLine{00432 \textcolor{comment}{        .dataPin = SDHostCC32XX\_PIN\_06\_SDCARD\_DATA,}}
+\DoxyCodeLine{00433 \textcolor{comment}{        .cmdPin = SDHostCC32XX\_PIN\_08\_SDCARD\_CMD,}}
+\DoxyCodeLine{00434 \textcolor{comment}{        .clkPin = SDHostCC32XX\_PIN\_07\_SDCARD\_CLK}}
+\DoxyCodeLine{00435 \textcolor{comment}{    \}}}
+\DoxyCodeLine{00436 \textcolor{comment}{\};}}
+\DoxyCodeLine{00437 \textcolor{comment}{}}
+\DoxyCodeLine{00438 \textcolor{comment}{const SD\_Config SD\_config[CC3220SF\_STARPORTS\_SDCOUNT] = \{}}
+\DoxyCodeLine{00439 \textcolor{comment}{    \{}}
+\DoxyCodeLine{00440 \textcolor{comment}{        .fxnTablePtr = \&sdHostCC32XX\_fxnTable,}}
+\DoxyCodeLine{00441 \textcolor{comment}{        .object = \&sdhostCC3220SObjects[CC3220SF\_STARPORTS\_SD0],}}
+\DoxyCodeLine{00442 \textcolor{comment}{        .hwAttrs = \&sdhostCC3220SHWattrs[CC3220SF\_STARPORTS\_SD0]}}
+\DoxyCodeLine{00443 \textcolor{comment}{    \},}}
+\DoxyCodeLine{00444 \textcolor{comment}{\};}}
+\DoxyCodeLine{00445 \textcolor{comment}{}}
+\DoxyCodeLine{00446 \textcolor{comment}{const uint\_least8\_t SD\_count = CC3220SF\_STARPORTS\_SDCOUNT;}}
+\DoxyCodeLine{00447 \textcolor{comment}{*/}}
+\DoxyCodeLine{00448 }
+\DoxyCodeLine{00449 \textcolor{comment}{/*}}
+\DoxyCodeLine{00450 \textcolor{comment}{ *  =============================== SPI ===============================}}
+\DoxyCodeLine{00451 \textcolor{comment}{ */}}
+\DoxyCodeLine{00452 \textcolor{preprocessor}{\#include <ti/drivers/SPI.h>}}
+\DoxyCodeLine{00453 \textcolor{preprocessor}{\#include <ti/drivers/spi/SPICC32XXDMA.h>}}
+\DoxyCodeLine{00454 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00455}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a51975943bd4d17a0b3259b34d25b10d3_a51975943bd4d17a0b3259b34d25b10d3}{00455}} SPICC32XXDMA\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a51975943bd4d17a0b3259b34d25b10d3_a51975943bd4d17a0b3259b34d25b10d3}{spiCC3220SDMAObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549af2df4006f78cafed8ffd5ced2de1a666}{CC3220SF\_STARPORTS\_SPICOUNT}}];}
+\DoxyCodeLine{00456 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00457}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9176bde363d436292d272cb5275e0b03_a9176bde363d436292d272cb5275e0b03}{00457}} uint32\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9176bde363d436292d272cb5275e0b03_a9176bde363d436292d272cb5275e0b03}{spiCC3220SDMAscratchBuf}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549af2df4006f78cafed8ffd5ced2de1a666}{CC3220SF\_STARPORTS\_SPICOUNT}}];}
+\DoxyCodeLine{00458 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00459}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ac89c365c6e5775f00b87505551a896f7_ac89c365c6e5775f00b87505551a896f7}{00459}} \textcolor{keyword}{const} SPICC32XXDMA\_HWAttrsV1 \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ac89c365c6e5775f00b87505551a896f7_ac89c365c6e5775f00b87505551a896f7}{spiCC3220SDMAHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549af2df4006f78cafed8ffd5ced2de1a666}{CC3220SF\_STARPORTS\_SPICOUNT}}] = \{}
+\DoxyCodeLine{00460     \textcolor{comment}{/* index 0 is reserved for LSPI that links to the NWP */}}
+\DoxyCodeLine{00461     \{}
+\DoxyCodeLine{00462         .baseAddr = LSPI\_BASE,}
+\DoxyCodeLine{00463         .intNum = INT\_LSPI,}
+\DoxyCodeLine{00464         .intPriority = (\string~0),}
+\DoxyCodeLine{00465         .spiPRCM = PRCM\_LSPI,}
+\DoxyCodeLine{00466         .csControl = SPI\_SW\_CTRL\_CS,}
+\DoxyCodeLine{00467         .csPolarity = SPI\_CS\_ACTIVEHIGH,}
+\DoxyCodeLine{00468         .pinMode = SPI\_4PIN\_MODE,}
+\DoxyCodeLine{00469         .turboMode = SPI\_TURBO\_OFF,}
+\DoxyCodeLine{00470         .scratchBufPtr = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9176bde363d436292d272cb5275e0b03_a9176bde363d436292d272cb5275e0b03}{spiCC3220SDMAscratchBuf}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549a1a06e561c38d322a51b08082889b60e7}{CC3220SF\_STARPORTS\_SPI0}}],}
+\DoxyCodeLine{00471         .defaultTxBufValue = 0,}
+\DoxyCodeLine{00472         .rxChannelIndex = UDMA\_CH12\_LSPI\_RX,}
+\DoxyCodeLine{00473         .txChannelIndex = UDMA\_CH13\_LSPI\_TX,}
+\DoxyCodeLine{00474         .minDmaTransferSize = 100,}
+\DoxyCodeLine{00475         .mosiPin = SPICC32XXDMA\_PIN\_NO\_CONFIG,}
+\DoxyCodeLine{00476         .misoPin = SPICC32XXDMA\_PIN\_NO\_CONFIG,}
+\DoxyCodeLine{00477         .clkPin = SPICC32XXDMA\_PIN\_NO\_CONFIG,}
+\DoxyCodeLine{00478         .csPin = SPICC32XXDMA\_PIN\_NO\_CONFIG}
+\DoxyCodeLine{00479     \},}
+\DoxyCodeLine{00480     \{}
+\DoxyCodeLine{00481         .baseAddr = GSPI\_BASE,}
+\DoxyCodeLine{00482         .intNum = INT\_GSPI,}
+\DoxyCodeLine{00483         .intPriority = (\string~0),}
+\DoxyCodeLine{00484         .spiPRCM = PRCM\_GSPI,}
+\DoxyCodeLine{00485         .csControl = SPI\_SW\_CTRL\_CS,}
+\DoxyCodeLine{00486         .csPolarity = SPI\_CS\_ACTIVELOW,}
+\DoxyCodeLine{00487         .pinMode = SPI\_4PIN\_MODE,}
+\DoxyCodeLine{00488         .turboMode = SPI\_TURBO\_OFF,}
+\DoxyCodeLine{00489         .scratchBufPtr = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a9176bde363d436292d272cb5275e0b03_a9176bde363d436292d272cb5275e0b03}{spiCC3220SDMAscratchBuf}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549afb4678ad258dd0a97dc2ddf2bc721bb3}{CC3220SF\_STARPORTS\_SPI1}}],}
+\DoxyCodeLine{00490         .defaultTxBufValue = 0,}
+\DoxyCodeLine{00491         .rxChannelIndex = UDMA\_CH6\_GSPI\_RX,}
+\DoxyCodeLine{00492         .txChannelIndex = UDMA\_CH7\_GSPI\_TX,}
+\DoxyCodeLine{00493         .minDmaTransferSize = 10,}
+\DoxyCodeLine{00494         .mosiPin = SPICC32XXDMA\_PIN\_07\_MOSI,}
+\DoxyCodeLine{00495         .misoPin = SPICC32XXDMA\_PIN\_06\_MISO,}
+\DoxyCodeLine{00496         .clkPin = SPICC32XXDMA\_PIN\_05\_CLK,}
+\DoxyCodeLine{00497         .csPin = SPICC32XXDMA\_PIN\_08\_CS}
+\DoxyCodeLine{00498     \}}
+\DoxyCodeLine{00499 \};}
+\DoxyCodeLine{00500 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00501}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a05221629ccb4bbdcb56b42849fb26731_a05221629ccb4bbdcb56b42849fb26731}{00501}} \textcolor{keyword}{const} SPI\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a05221629ccb4bbdcb56b42849fb26731_a05221629ccb4bbdcb56b42849fb26731}{SPI\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549af2df4006f78cafed8ffd5ced2de1a666}{CC3220SF\_STARPORTS\_SPICOUNT}}] = \{}
+\DoxyCodeLine{00502     \{}
+\DoxyCodeLine{00503         .fxnTablePtr = \&SPICC32XXDMA\_fxnTable,}
+\DoxyCodeLine{00504         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a51975943bd4d17a0b3259b34d25b10d3_a51975943bd4d17a0b3259b34d25b10d3}{spiCC3220SDMAObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549a1a06e561c38d322a51b08082889b60e7}{CC3220SF\_STARPORTS\_SPI0}}],}
+\DoxyCodeLine{00505         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ac89c365c6e5775f00b87505551a896f7_ac89c365c6e5775f00b87505551a896f7}{spiCC3220SDMAHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549a1a06e561c38d322a51b08082889b60e7}{CC3220SF\_STARPORTS\_SPI0}}]}
+\DoxyCodeLine{00506     \},}
+\DoxyCodeLine{00507     \{}
+\DoxyCodeLine{00508         .fxnTablePtr = \&SPICC32XXDMA\_fxnTable,}
+\DoxyCodeLine{00509         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a51975943bd4d17a0b3259b34d25b10d3_a51975943bd4d17a0b3259b34d25b10d3}{spiCC3220SDMAObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549afb4678ad258dd0a97dc2ddf2bc721bb3}{CC3220SF\_STARPORTS\_SPI1}}],}
+\DoxyCodeLine{00510         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ac89c365c6e5775f00b87505551a896f7_ac89c365c6e5775f00b87505551a896f7}{spiCC3220SDMAHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549afb4678ad258dd0a97dc2ddf2bc721bb3}{CC3220SF\_STARPORTS\_SPI1}}]}
+\DoxyCodeLine{00511     \}}
+\DoxyCodeLine{00512 \};}
+\DoxyCodeLine{00513 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00514}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_abf09effc4b1081b9c957000c52e5974d_abf09effc4b1081b9c957000c52e5974d}{00514}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_abf09effc4b1081b9c957000c52e5974d_abf09effc4b1081b9c957000c52e5974d}{SPI\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a2899fea69ae4888c8ef516caed09d549_a2899fea69ae4888c8ef516caed09d549af2df4006f78cafed8ffd5ced2de1a666}{CC3220SF\_STARPORTS\_SPICOUNT}};}
+\DoxyCodeLine{00515 }
+\DoxyCodeLine{00516 \textcolor{comment}{/*}}
+\DoxyCodeLine{00517 \textcolor{comment}{ *  =============================== Timer ===============================}}
+\DoxyCodeLine{00518 \textcolor{comment}{ */}}
+\DoxyCodeLine{00519 \textcolor{preprocessor}{\#include <ti/drivers/Timer.h>}}
+\DoxyCodeLine{00520 \textcolor{preprocessor}{\#include <ti/drivers/timer/TimerCC32XX.h>}}
+\DoxyCodeLine{00521 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00522}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a123ac9951a4d7ee6c632003cc20d06e7_a123ac9951a4d7ee6c632003cc20d06e7}{00522}} TimerCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a123ac9951a4d7ee6c632003cc20d06e7_a123ac9951a4d7ee6c632003cc20d06e7}{timerCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fba01fb3623672a8e6dd345822661fe4018}{CC3220SF\_STARPORTS\_TIMERCOUNT}}];}
+\DoxyCodeLine{00523 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00524}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f}{00524}} \textcolor{keyword}{const} TimerCC32XX\_HWAttrs \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f}{timerCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fba01fb3623672a8e6dd345822661fe4018}{CC3220SF\_STARPORTS\_TIMERCOUNT}}] = \{}
+\DoxyCodeLine{00525     \{}
+\DoxyCodeLine{00526         .baseAddress = TIMERA0\_BASE,}
+\DoxyCodeLine{00527         .subTimer = TimerCC32XX\_timer32,}
+\DoxyCodeLine{00528         .intNum = INT\_TIMERA0A,}
+\DoxyCodeLine{00529         .intPriority = \string~0}
+\DoxyCodeLine{00530     \},}
+\DoxyCodeLine{00531     \{}
+\DoxyCodeLine{00532         .baseAddress = TIMERA1\_BASE,}
+\DoxyCodeLine{00533         .subTimer = TimerCC32XX\_timer16A,}
+\DoxyCodeLine{00534         .intNum = INT\_TIMERA1A,}
+\DoxyCodeLine{00535         .intPriority = \string~0}
+\DoxyCodeLine{00536     \},}
+\DoxyCodeLine{00537     \{}
+\DoxyCodeLine{00538          .baseAddress = TIMERA1\_BASE,}
+\DoxyCodeLine{00539          .subTimer = TimerCC32XX\_timer16B,}
+\DoxyCodeLine{00540          .intNum = INT\_TIMERA1B,}
+\DoxyCodeLine{00541          .intPriority = \string~0}
+\DoxyCodeLine{00542     \},}
+\DoxyCodeLine{00543 \};}
+\DoxyCodeLine{00544 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00545}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1b23f264e204df970519bd0809fdd683_a1b23f264e204df970519bd0809fdd683}{00545}} \textcolor{keyword}{const} Timer\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1b23f264e204df970519bd0809fdd683_a1b23f264e204df970519bd0809fdd683}{Timer\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fba01fb3623672a8e6dd345822661fe4018}{CC3220SF\_STARPORTS\_TIMERCOUNT}}] = \{}
+\DoxyCodeLine{00546     \{}
+\DoxyCodeLine{00547         .fxnTablePtr = \&TimerCC32XX\_fxnTable,}
+\DoxyCodeLine{00548         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a123ac9951a4d7ee6c632003cc20d06e7_a123ac9951a4d7ee6c632003cc20d06e7}{timerCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fbaa9ac5425bbe7ecc5e99d2372aea8bce4}{CC3220SF\_STARPORTS\_TIMER0}}],}
+\DoxyCodeLine{00549         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f}{timerCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fbaa9ac5425bbe7ecc5e99d2372aea8bce4}{CC3220SF\_STARPORTS\_TIMER0}}]}
+\DoxyCodeLine{00550     \},}
+\DoxyCodeLine{00551     \{}
+\DoxyCodeLine{00552         .fxnTablePtr = \&TimerCC32XX\_fxnTable,}
+\DoxyCodeLine{00553         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a123ac9951a4d7ee6c632003cc20d06e7_a123ac9951a4d7ee6c632003cc20d06e7}{timerCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fba78766cb5d3da0dce294a3cee5489794e}{CC3220SF\_STARPORTS\_TIMER1}}],}
+\DoxyCodeLine{00554         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f}{timerCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fba78766cb5d3da0dce294a3cee5489794e}{CC3220SF\_STARPORTS\_TIMER1}}]}
+\DoxyCodeLine{00555     \},}
+\DoxyCodeLine{00556     \{}
+\DoxyCodeLine{00557         .fxnTablePtr = \&TimerCC32XX\_fxnTable,}
+\DoxyCodeLine{00558         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a123ac9951a4d7ee6c632003cc20d06e7_a123ac9951a4d7ee6c632003cc20d06e7}{timerCC3220SFObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fbafe5d6bd7c03ca0b284830387f2c7f5b6}{CC3220SF\_STARPORTS\_TIMER2}}],}
+\DoxyCodeLine{00559         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f_a075c3a6b9b1bc7ce2a1406f3c5e6fb2f}{timerCC3220SFHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fbafe5d6bd7c03ca0b284830387f2c7f5b6}{CC3220SF\_STARPORTS\_TIMER2}}]}
+\DoxyCodeLine{00560     \},}
+\DoxyCodeLine{00561 \};}
+\DoxyCodeLine{00562 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00563}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a7d838bd33c1d8a4b530edc850b1b1d74_a7d838bd33c1d8a4b530edc850b1b1d74}{00563}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a7d838bd33c1d8a4b530edc850b1b1d74_a7d838bd33c1d8a4b530edc850b1b1d74}{Timer\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_ad9e46fd2e7cdef6138b558f9322344fb_ad9e46fd2e7cdef6138b558f9322344fba01fb3623672a8e6dd345822661fe4018}{CC3220SF\_STARPORTS\_TIMERCOUNT}};}
+\DoxyCodeLine{00564 }
+\DoxyCodeLine{00565 \textcolor{comment}{/*}}
+\DoxyCodeLine{00566 \textcolor{comment}{ *  =============================== UART ===============================}}
+\DoxyCodeLine{00567 \textcolor{comment}{ */}}
+\DoxyCodeLine{00568 \textcolor{preprocessor}{\#include <ti/drivers/UART.h>}}
+\DoxyCodeLine{00569 \textcolor{preprocessor}{\#if TI\_DRIVERS\_UART\_DMA}}
+\DoxyCodeLine{00570 \textcolor{preprocessor}{\#include <ti/drivers/uart/UARTCC32XXDMA.h>}}
+\DoxyCodeLine{00571 }
+\DoxyCodeLine{00572 UARTCC32XXDMA\_Object uartCC3220SDmaObjects[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}];}
+\DoxyCodeLine{00573 }
+\DoxyCodeLine{00574 \textcolor{comment}{/* UART configuration structure */}}
+\DoxyCodeLine{00575 \textcolor{keyword}{const} UARTCC32XXDMA\_HWAttrsV1 uartCC3220SDmaHWAttrs[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}] = \{}
+\DoxyCodeLine{00576     \{}
+\DoxyCodeLine{00577         .baseAddr = UARTA0\_BASE,}
+\DoxyCodeLine{00578         .intNum = INT\_UARTA0,}
+\DoxyCodeLine{00579         .intPriority = (\string~0),}
+\DoxyCodeLine{00580         .flowControl = UARTCC32XXDMA\_FLOWCTRL\_NONE,}
+\DoxyCodeLine{00581         .rxChannelIndex = UDMA\_CH8\_UARTA0\_RX,}
+\DoxyCodeLine{00582         .txChannelIndex = UDMA\_CH9\_UARTA0\_TX,}
+\DoxyCodeLine{00583         .rxPin = UARTCC32XXDMA\_PIN\_57\_UART0\_RX,}
+\DoxyCodeLine{00584         .txPin = UARTCC32XXDMA\_PIN\_55\_UART0\_TX,}
+\DoxyCodeLine{00585         .ctsPin = UARTCC32XXDMA\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00586         .rtsPin = UARTCC32XXDMA\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00587         .errorFxn = NULL}
+\DoxyCodeLine{00588     \},}
+\DoxyCodeLine{00589     \{}
+\DoxyCodeLine{00590         .baseAddr = UARTA1\_BASE,}
+\DoxyCodeLine{00591         .intNum = INT\_UARTA1,}
+\DoxyCodeLine{00592         .intPriority = (\string~0),}
+\DoxyCodeLine{00593         .flowControl = UARTCC32XXDMA\_FLOWCTRL\_NONE,}
+\DoxyCodeLine{00594         .rxChannelIndex = UDMA\_CH10\_UARTA1\_RX,}
+\DoxyCodeLine{00595         .txChannelIndex = UDMA\_CH11\_UARTA1\_TX,}
+\DoxyCodeLine{00596         .rxPin = UARTCC32XXDMA\_PIN\_08\_UART1\_RX,}
+\DoxyCodeLine{00597         .txPin = UARTCC32XXDMA\_PIN\_07\_UART1\_TX,}
+\DoxyCodeLine{00598         .ctsPin = UARTCC32XXDMA\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00599         .rtsPin = UARTCC32XXDMA\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00600         .errorFxn = NULL}
+\DoxyCodeLine{00601     \}}
+\DoxyCodeLine{00602 \};}
+\DoxyCodeLine{00603 }
+\DoxyCodeLine{00604 \textcolor{keyword}{const} UART\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1ea22b1bd8f4d49283fd0993a9a6fc89_a1ea22b1bd8f4d49283fd0993a9a6fc89}{UART\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}] = \{}
+\DoxyCodeLine{00605     \{}
+\DoxyCodeLine{00606         .fxnTablePtr = \&UARTCC32XXDMA\_fxnTable,}
+\DoxyCodeLine{00607         .object = \&uartCC3220SDmaObjects[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534a7db304ea93ab8fd94fe221e1810c6231}{CC3220SF\_STARPORTS\_UART0}}],}
+\DoxyCodeLine{00608         .hwAttrs = \&uartCC3220SDmaHWAttrs[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534a7db304ea93ab8fd94fe221e1810c6231}{CC3220SF\_STARPORTS\_UART0}}]}
+\DoxyCodeLine{00609     \},}
+\DoxyCodeLine{00610     \{}
+\DoxyCodeLine{00611         .fxnTablePtr = \&UARTCC32XXDMA\_fxnTable,}
+\DoxyCodeLine{00612         .object = \&uartCC3220SDmaObjects[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534ada96f965b8d05a72aa1dedf991124a0a}{CC3220SF\_STARPORTS\_UART1}}],}
+\DoxyCodeLine{00613         .hwAttrs = \&uartCC3220SDmaHWAttrs[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534ada96f965b8d05a72aa1dedf991124a0a}{CC3220SF\_STARPORTS\_UART1}}]}
+\DoxyCodeLine{00614     \}}
+\DoxyCodeLine{00615 \};}
+\DoxyCodeLine{00616 }
+\DoxyCodeLine{00617 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00618 \textcolor{preprocessor}{\#include <ti/drivers/uart/UARTCC32XX.h>}}
+\DoxyCodeLine{00619 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00620}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ad126636c7e9ba7de6ad090f691d3c657_ad126636c7e9ba7de6ad090f691d3c657}{00620}} UARTCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ad126636c7e9ba7de6ad090f691d3c657_ad126636c7e9ba7de6ad090f691d3c657}{uartCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}];}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00621}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac4ac26df291f17516335138dc3282b1_aac4ac26df291f17516335138dc3282b1}{00621}} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac4ac26df291f17516335138dc3282b1_aac4ac26df291f17516335138dc3282b1}{uartCC3220SRingBuffer}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}][32];}
+\DoxyCodeLine{00622 }
+\DoxyCodeLine{00623 \textcolor{comment}{/* UART configuration structure */}}
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00624}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aa1318f706644b0d8f6c658decb41a95b_aa1318f706644b0d8f6c658decb41a95b}{00624}} \textcolor{keyword}{const} UARTCC32XX\_HWAttrsV1 \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aa1318f706644b0d8f6c658decb41a95b_aa1318f706644b0d8f6c658decb41a95b}{uartCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}] = \{}
+\DoxyCodeLine{00625     \{}
+\DoxyCodeLine{00626         .baseAddr = UARTA0\_BASE,}
+\DoxyCodeLine{00627         .intNum = INT\_UARTA0,}
+\DoxyCodeLine{00628         .intPriority = (\string~0),}
+\DoxyCodeLine{00629         .flowControl = UARTCC32XX\_FLOWCTRL\_NONE,}
+\DoxyCodeLine{00630         .ringBufPtr  = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac4ac26df291f17516335138dc3282b1_aac4ac26df291f17516335138dc3282b1}{uartCC3220SRingBuffer}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534a7db304ea93ab8fd94fe221e1810c6231}{CC3220SF\_STARPORTS\_UART0}}],}
+\DoxyCodeLine{00631         .ringBufSize = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac4ac26df291f17516335138dc3282b1_aac4ac26df291f17516335138dc3282b1}{uartCC3220SRingBuffer}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534a7db304ea93ab8fd94fe221e1810c6231}{CC3220SF\_STARPORTS\_UART0}}]),}
+\DoxyCodeLine{00632         .rxPin = UARTCC32XX\_PIN\_57\_UART0\_RX,}
+\DoxyCodeLine{00633         .txPin = UARTCC32XX\_PIN\_55\_UART0\_TX,}
+\DoxyCodeLine{00634         .ctsPin = UARTCC32XX\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00635         .rtsPin = UARTCC32XX\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00636         .errorFxn = NULL}
+\DoxyCodeLine{00637     \},}
+\DoxyCodeLine{00638     \{}
+\DoxyCodeLine{00639         .baseAddr = UARTA1\_BASE,}
+\DoxyCodeLine{00640         .intNum = INT\_UARTA1,}
+\DoxyCodeLine{00641         .intPriority = (\string~0),}
+\DoxyCodeLine{00642         .flowControl = UARTCC32XX\_FLOWCTRL\_NONE,}
+\DoxyCodeLine{00643         .ringBufPtr  = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac4ac26df291f17516335138dc3282b1_aac4ac26df291f17516335138dc3282b1}{uartCC3220SRingBuffer}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534ada96f965b8d05a72aa1dedf991124a0a}{CC3220SF\_STARPORTS\_UART1}}],}
+\DoxyCodeLine{00644         .ringBufSize = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aac4ac26df291f17516335138dc3282b1_aac4ac26df291f17516335138dc3282b1}{uartCC3220SRingBuffer}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534ada96f965b8d05a72aa1dedf991124a0a}{CC3220SF\_STARPORTS\_UART1}}]),}
+\DoxyCodeLine{00645         .rxPin = UARTCC32XX\_PIN\_59\_UART1\_RX,}
+\DoxyCodeLine{00646         .txPin = UARTCC32XX\_PIN\_58\_UART1\_TX,}
+\DoxyCodeLine{00647         .ctsPin = UARTCC32XX\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00648         .rtsPin = UARTCC32XX\_PIN\_UNASSIGNED,}
+\DoxyCodeLine{00649         .errorFxn = NULL}
+\DoxyCodeLine{00650     \}}
+\DoxyCodeLine{00651 \};}
+\DoxyCodeLine{00652 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00653}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1ea22b1bd8f4d49283fd0993a9a6fc89_a1ea22b1bd8f4d49283fd0993a9a6fc89}{00653}} \textcolor{keyword}{const} UART\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a1ea22b1bd8f4d49283fd0993a9a6fc89_a1ea22b1bd8f4d49283fd0993a9a6fc89}{UART\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}}] = \{}
+\DoxyCodeLine{00654     \{}
+\DoxyCodeLine{00655         .fxnTablePtr = \&UARTCC32XX\_fxnTable,}
+\DoxyCodeLine{00656         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ad126636c7e9ba7de6ad090f691d3c657_ad126636c7e9ba7de6ad090f691d3c657}{uartCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534a7db304ea93ab8fd94fe221e1810c6231}{CC3220SF\_STARPORTS\_UART0}}],}
+\DoxyCodeLine{00657         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aa1318f706644b0d8f6c658decb41a95b_aa1318f706644b0d8f6c658decb41a95b}{uartCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534a7db304ea93ab8fd94fe221e1810c6231}{CC3220SF\_STARPORTS\_UART0}}]}
+\DoxyCodeLine{00658     \},}
+\DoxyCodeLine{00659     \{}
+\DoxyCodeLine{00660         .fxnTablePtr = \&UARTCC32XX\_fxnTable,}
+\DoxyCodeLine{00661         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ad126636c7e9ba7de6ad090f691d3c657_ad126636c7e9ba7de6ad090f691d3c657}{uartCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534ada96f965b8d05a72aa1dedf991124a0a}{CC3220SF\_STARPORTS\_UART1}}],}
+\DoxyCodeLine{00662         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_aa1318f706644b0d8f6c658decb41a95b_aa1318f706644b0d8f6c658decb41a95b}{uartCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534ada96f965b8d05a72aa1dedf991124a0a}{CC3220SF\_STARPORTS\_UART1}}]}
+\DoxyCodeLine{00663     \}}
+\DoxyCodeLine{00664 \};}
+\DoxyCodeLine{00665 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TI\_DRIVERS\_UART\_DMA */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00666 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00667}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a3e40006b96c9c55e5ac52d51d094dbac_a3e40006b96c9c55e5ac52d51d094dbac}{00667}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a3e40006b96c9c55e5ac52d51d094dbac_a3e40006b96c9c55e5ac52d51d094dbac}{UART\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_a0f15df03ff50eeaefd961bdda1350534_a0f15df03ff50eeaefd961bdda1350534af06056b8a5d804de53469d6a0eedf5ee}{CC3220SF\_STARPORTS\_UARTCOUNT}};}
+\DoxyCodeLine{00668 }
+\DoxyCodeLine{00669 \textcolor{comment}{/*}}
+\DoxyCodeLine{00670 \textcolor{comment}{ *  =============================== Watchdog ===============================}}
+\DoxyCodeLine{00671 \textcolor{comment}{ */}}
+\DoxyCodeLine{00672 \textcolor{preprocessor}{\#include <ti/drivers/Watchdog.h>}}
+\DoxyCodeLine{00673 \textcolor{preprocessor}{\#include <ti/drivers/watchdog/WatchdogCC32XX.h>}}
+\DoxyCodeLine{00674 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00675}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a54a04437885c1277b3f517563e80b87f_a54a04437885c1277b3f517563e80b87f}{00675}} WatchdogCC32XX\_Object \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a54a04437885c1277b3f517563e80b87f_a54a04437885c1277b3f517563e80b87f}{watchdogCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acbb6a5578c96f9ea2499842ecf6020d7_acbb6a5578c96f9ea2499842ecf6020d7adfde1fc773808a6dfc79a113565116c1}{CC3220SF\_STARPORTS\_WATCHDOGCOUNT}}];}
+\DoxyCodeLine{00676 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00677}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a32004d822f1fd60c10b4c80ff2a347bf_a32004d822f1fd60c10b4c80ff2a347bf}{00677}} \textcolor{keyword}{const} WatchdogCC32XX\_HWAttrs \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a32004d822f1fd60c10b4c80ff2a347bf_a32004d822f1fd60c10b4c80ff2a347bf}{watchdogCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acbb6a5578c96f9ea2499842ecf6020d7_acbb6a5578c96f9ea2499842ecf6020d7adfde1fc773808a6dfc79a113565116c1}{CC3220SF\_STARPORTS\_WATCHDOGCOUNT}}] = \{}
+\DoxyCodeLine{00678     \{}
+\DoxyCodeLine{00679         .baseAddr = WDT\_BASE,}
+\DoxyCodeLine{00680         .intNum = INT\_WDT,}
+\DoxyCodeLine{00681         .intPriority = (\string~0),}
+\DoxyCodeLine{00682         .reloadValue = 80000000 \textcolor{comment}{/* 1 second period at default CPU clock freq */}}
+\DoxyCodeLine{00683     \}}
+\DoxyCodeLine{00684 \};}
+\DoxyCodeLine{00685 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00686}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ae9acf62ccc58f4679496f7df8c5362ea_ae9acf62ccc58f4679496f7df8c5362ea}{00686}} \textcolor{keyword}{const} Watchdog\_Config \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_ae9acf62ccc58f4679496f7df8c5362ea_ae9acf62ccc58f4679496f7df8c5362ea}{Watchdog\_config}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acbb6a5578c96f9ea2499842ecf6020d7_acbb6a5578c96f9ea2499842ecf6020d7adfde1fc773808a6dfc79a113565116c1}{CC3220SF\_STARPORTS\_WATCHDOGCOUNT}}] = \{}
+\DoxyCodeLine{00687     \{}
+\DoxyCodeLine{00688         .fxnTablePtr = \&WatchdogCC32XX\_fxnTable,}
+\DoxyCodeLine{00689         .object = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a54a04437885c1277b3f517563e80b87f_a54a04437885c1277b3f517563e80b87f}{watchdogCC3220SObjects}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acbb6a5578c96f9ea2499842ecf6020d7_acbb6a5578c96f9ea2499842ecf6020d7aa7e4814bdc2296c5bc36793edb1b6581}{CC3220SF\_STARPORTS\_WATCHDOG0}}],}
+\DoxyCodeLine{00690         .hwAttrs = \&\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a32004d822f1fd60c10b4c80ff2a347bf_a32004d822f1fd60c10b4c80ff2a347bf}{watchdogCC3220SHWAttrs}}[\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acbb6a5578c96f9ea2499842ecf6020d7_acbb6a5578c96f9ea2499842ecf6020d7aa7e4814bdc2296c5bc36793edb1b6581}{CC3220SF\_STARPORTS\_WATCHDOG0}}]}
+\DoxyCodeLine{00691     \}}
+\DoxyCodeLine{00692 \};}
+\DoxyCodeLine{00693 }
+\DoxyCodeLine{\Hypertarget{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source_l00694}\mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a858096912cd251501ff253c38860603f_a858096912cd251501ff253c38860603f}{00694}} \textcolor{keyword}{const} uint\_least8\_t \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_a858096912cd251501ff253c38860603f_a858096912cd251501ff253c38860603f}{Watchdog\_count}} = \mbox{\hyperlink{_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_acbb6a5578c96f9ea2499842ecf6020d7_acbb6a5578c96f9ea2499842ecf6020d7adfde1fc773808a6dfc79a113565116c1}{CC3220SF\_STARPORTS\_WATCHDOGCOUNT}};}
+\DoxyCodeLine{00695 }
+\DoxyCodeLine{00696 \textcolor{comment}{/*}}
+\DoxyCodeLine{00697 \textcolor{comment}{ *  ======== Board\_debugHeader ========}}
+\DoxyCodeLine{00698 \textcolor{comment}{ *  This structure prevents the CC32XXSF bootloader from overwriting the}}
+\DoxyCodeLine{00699 \textcolor{comment}{ *  internal FLASH; this allows us to flash a program that will not be}}
+\DoxyCodeLine{00700 \textcolor{comment}{ *  overwritten by the bootloader with the encrypted program saved in}}
+\DoxyCodeLine{00701 \textcolor{comment}{ *  "secure/serial flash".}}
+\DoxyCodeLine{00702 \textcolor{comment}{ *}}
+\DoxyCodeLine{00703 \textcolor{comment}{ *  This structure must be placed at the beginning of internal FLASH (so}}
+\DoxyCodeLine{00704 \textcolor{comment}{ *  the bootloader is able to recognize that it should not overwrite}}
+\DoxyCodeLine{00705 \textcolor{comment}{ *  internal FLASH).}}
+\DoxyCodeLine{00706 \textcolor{comment}{ */}}
+\DoxyCodeLine{00707 \textcolor{preprocessor}{\#if defined (\_\_SF\_DEBUG\_\_) || defined(\_\_SF\_NODEBUG\_\_)}}
+\DoxyCodeLine{00708 \textcolor{preprocessor}{\#if defined(\_\_TI\_COMPILER\_VERSION\_\_)}}
+\DoxyCodeLine{00709 \textcolor{preprocessor}{\#pragma DATA\_SECTION(Board\_debugHeader, ".dbghdr")}}
+\DoxyCodeLine{00710 \textcolor{preprocessor}{\#pragma RETAIN(Board\_debugHeader)}}
+\DoxyCodeLine{00711 \textcolor{preprocessor}{\#elif defined(\_\_IAR\_SYSTEMS\_ICC\_\_)}}
+\DoxyCodeLine{00712 \textcolor{preprocessor}{\#pragma location=".dbghdr"}}
+\DoxyCodeLine{00713 \textcolor{preprocessor}{\#elif defined(\_\_GNUC\_\_)}}
+\DoxyCodeLine{00714 \_\_attribute\_\_ ((section (\textcolor{stringliteral}{".dbghdr"})))}
+\DoxyCodeLine{00715 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00716 \textcolor{preprocessor}{\#if defined(\_\_SF\_DEBUG\_\_)}}
+\DoxyCodeLine{00717 \textcolor{keyword}{const} uint32\_t Board\_debugHeader[] = \{}
+\DoxyCodeLine{00718     0x5AA5A55A,}
+\DoxyCodeLine{00719     0x000FF800,}
+\DoxyCodeLine{00720     0xEFA3247D}
+\DoxyCodeLine{00721 \};}
+\DoxyCodeLine{00722 \textcolor{preprocessor}{\#elif defined (\_\_SF\_NODEBUG\_\_)}}
+\DoxyCodeLine{00723 \textcolor{keyword}{const} uint32\_t Board\_debugHeader[] = \{}
+\DoxyCodeLine{00724     0xFFFFFFFF,}
+\DoxyCodeLine{00725     0xFFFFFFFF,}
+\DoxyCodeLine{00726     0xFFFFFFFF}
+\DoxyCodeLine{00727 \};}
+\DoxyCodeLine{00728 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00729 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

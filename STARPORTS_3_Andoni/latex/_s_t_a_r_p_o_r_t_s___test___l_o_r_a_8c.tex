@@ -1,0 +1,180 @@
+\hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c}{}\doxysection{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+Test\+\_\+\+L\+O\+R\+A.\+c File Reference}
+\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c}\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+U\+A\+R\+T.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+I2\+C.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+Timer.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+Power.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+G\+P\+I\+O.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+Watchdog.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/net/wifi/wlan.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/net/wifi/simplelink.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}platform.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ti/devices/cc32xx/inc/hw\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/cc32xx/driverlib/prcm.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+Timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+G\+P\+I\+O.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+W\+D.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+I2\+C.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+S\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wifi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}D\+S1374.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sensors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+L\+O\+R\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a53bb6ce0dbc843daa4ad914d78713ac2}{T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~10000
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a7a26eb8c88e9ecafa634d3ee2004c45a}{Wakeup\+From\+L\+P\+DS}} (uint\+\_\+least8\+\_\+t)
+\item 
+void $\ast$ \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_aebf9a6d20e526ba6bf0f587a1c4ff83f}{main\+Thread}} (void $\ast$arg0)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a84499990c0506a7d6559f9ea074922a5}{Timer0\+Event}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_addfca62d05edc75b79f6cb31e38452ab}{Timer1\+Event}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a23d877e8b750db640896d946969a95cb}{L\+P\+D\+S\+Out}} = 0
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0}{My\+Node}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f7945514ea8b2c7145cf68d47c96a08}{N\+O\+D\+E\+ID}},1200,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb}{M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+L\+O\+RA}},16,\char`\"{}P\+O\+R\+T\+SN\char`\"{}\}
+\item 
+struct \mbox{\hyperlink{struct_t_m_p006___data}{T\+M\+P006\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a818e93e272a73588b96141632442c354}{My\+T\+M\+P006}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a0e45781a49f4cfc8363fda3735663c85}{T\+M\+P006\+\_\+\+ID}}\}
+\item 
+struct \mbox{\hyperlink{struct_a_d_x_l355___data}{A\+D\+X\+L355\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03}{My\+A\+D\+XL}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f6a1ff33784a29f68d84d63eb154acd}{A\+D\+X\+L355\+\_\+\+ID}},500,256\}
+\item 
+struct \mbox{\hyperlink{struct_b_m_e280___data}{B\+M\+E280\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a1f0447e11fe9ae3087a27335d16dbf98}{My\+B\+ME}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9aa1e714b7260f21de419112f041aad7}{B\+M\+E280\+\_\+\+ID}}\}
+\item 
+struct \mbox{\hyperlink{struct_l_d_c1000___data}{L\+D\+C1000\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64}{My\+L\+DC}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a88370a81415260c8294e4aca4110154a}{L\+D\+C1000\+\_\+\+ID}},16\}
+\item 
+struct \mbox{\hyperlink{struct_vbat___data}{Vbat\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a3f86246f4ca39417ad0efa5e29b60a4d}{My\+Vbat}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a5e0abd712518f4256f34430053b24c41}{V\+B\+A\+T\+\_\+\+ID}},16\}
+\item 
+U\+A\+R\+T\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_af4206efb17a40be2361219ae7c0a74cf}{uart0}}
+\item 
+I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}
+\item 
+S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a88adba1e427ceef66e55c260b327f759}{spi}}
+\item 
+Watchdog\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a3ee457ca076a1d77f9e213ddf178edad}{wd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a53bb6ce0dbc843daa4ad914d78713ac2}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a53bb6ce0dbc843daa4ad914d78713ac2}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!TIMEOUT\_MS@{TIMEOUT\_MS}}
+\index{TIMEOUT\_MS@{TIMEOUT\_MS}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_MS}{TIMEOUT\_MS}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+U\+T\+\_\+\+MS~10000}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_aebf9a6d20e526ba6bf0f587a1c4ff83f}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_aebf9a6d20e526ba6bf0f587a1c4ff83f}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!mainThread@{mainThread}}
+\index{mainThread@{mainThread}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{mainThread()}{mainThread()}}
+{\footnotesize\ttfamily void$\ast$ main\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg0 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a7a26eb8c88e9ecafa634d3ee2004c45a}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a7a26eb8c88e9ecafa634d3ee2004c45a}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!WakeupFromLPDS@{WakeupFromLPDS}}
+\index{WakeupFromLPDS@{WakeupFromLPDS}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{WakeupFromLPDS()}{WakeupFromLPDS()}}
+{\footnotesize\ttfamily void Wakeup\+From\+L\+P\+DS (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{var }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_ac3886ff8eedde1ea48fb46d450100ac6}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_ac3886ff8eedde1ea48fb46d450100ac6}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!i2c@{i2c}}
+\index{i2c@{i2c}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{i2c}{i2c}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle i2c}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a23d877e8b750db640896d946969a95cb}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a23d877e8b750db640896d946969a95cb}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!LPDSOut@{LPDSOut}}
+\index{LPDSOut@{LPDSOut}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{LPDSOut}{LPDSOut}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+P\+D\+S\+Out = 0}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!MyADXL@{MyADXL}}
+\index{MyADXL@{MyADXL}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{MyADXL}{MyADXL}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_a_d_x_l355___data}{A\+D\+X\+L355\+\_\+\+Data}} My\+A\+D\+XL = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f6a1ff33784a29f68d84d63eb154acd}{A\+D\+X\+L355\+\_\+\+ID}},500,256\}}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a1f0447e11fe9ae3087a27335d16dbf98}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a1f0447e11fe9ae3087a27335d16dbf98}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!MyBME@{MyBME}}
+\index{MyBME@{MyBME}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{MyBME}{MyBME}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_b_m_e280___data}{B\+M\+E280\+\_\+\+Data}} My\+B\+ME = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9aa1e714b7260f21de419112f041aad7}{B\+M\+E280\+\_\+\+ID}}\}}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!MyLDC@{MyLDC}}
+\index{MyLDC@{MyLDC}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{MyLDC}{MyLDC}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_l_d_c1000___data}{L\+D\+C1000\+\_\+\+Data}} My\+L\+DC = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a88370a81415260c8294e4aca4110154a}{L\+D\+C1000\+\_\+\+ID}},16\}}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!MyNode@{MyNode}}
+\index{MyNode@{MyNode}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{MyNode}{MyNode}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_node}{Node}} My\+Node = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f7945514ea8b2c7145cf68d47c96a08}{N\+O\+D\+E\+ID}},1200,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb}{M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+L\+O\+RA}},16,\char`\"{}P\+O\+R\+T\+SN\char`\"{}\}}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a818e93e272a73588b96141632442c354}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a818e93e272a73588b96141632442c354}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!MyTMP006@{MyTMP006}}
+\index{MyTMP006@{MyTMP006}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{MyTMP006}{MyTMP006}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_m_p006___data}{T\+M\+P006\+\_\+\+Data}} My\+T\+M\+P006 = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a0e45781a49f4cfc8363fda3735663c85}{T\+M\+P006\+\_\+\+ID}}\}}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a3f86246f4ca39417ad0efa5e29b60a4d}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a3f86246f4ca39417ad0efa5e29b60a4d}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!MyVbat@{MyVbat}}
+\index{MyVbat@{MyVbat}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{MyVbat}{MyVbat}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_vbat___data}{Vbat\+\_\+\+Data}} My\+Vbat = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a5e0abd712518f4256f34430053b24c41}{V\+B\+A\+T\+\_\+\+ID}},16\}}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a88adba1e427ceef66e55c260b327f759}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a88adba1e427ceef66e55c260b327f759}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!spi@{spi}}
+\index{spi@{spi}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{spi}{spi}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Handle spi}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a84499990c0506a7d6559f9ea074922a5}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a84499990c0506a7d6559f9ea074922a5}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!Timer0Event@{Timer0Event}}
+\index{Timer0Event@{Timer0Event}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{Timer0Event}{Timer0Event}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer0\+Event = 0}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_addfca62d05edc75b79f6cb31e38452ab}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_addfca62d05edc75b79f6cb31e38452ab}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!Timer1Event@{Timer1Event}}
+\index{Timer1Event@{Timer1Event}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{Timer1Event}{Timer1Event}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer1\+Event = 0}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_af4206efb17a40be2361219ae7c0a74cf}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_af4206efb17a40be2361219ae7c0a74cf}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!uart0@{uart0}}
+\index{uart0@{uart0}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{uart0}{uart0}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle uart0}
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a3ee457ca076a1d77f9e213ddf178edad}\label{_s_t_a_r_p_o_r_t_s___test___l_o_r_a_8c_a3ee457ca076a1d77f9e213ddf178edad}} 
+\index{STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}!wd@{wd}}
+\index{wd@{wd}!STARPORTS\_Test\_LORA.c@{STARPORTS\_Test\_LORA.c}}
+\doxysubsubsection{\texorpdfstring{wd}{wd}}
+{\footnotesize\ttfamily Watchdog\+\_\+\+Handle wd}
+

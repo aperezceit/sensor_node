@@ -1,0 +1,249 @@
+\hypertarget{_sensors_8c_source}{}\doxysubsection{Sensors.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{comment}{//\#include <stdlib.h>}}
+\DoxyCodeLine{00014 \textcolor{comment}{//\#include <unistd.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include <ti/drivers/I2C.h>}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <ti/drivers/UART.h>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include <ti/drivers/ADC.h>}}
+\DoxyCodeLine{00018 \textcolor{preprocessor}{\#include <ti/drivers/SPI.h>}}
+\DoxyCodeLine{00019 \textcolor{preprocessor}{\#include <ti/drivers/PWM.h>}}
+\DoxyCodeLine{00020 \textcolor{preprocessor}{\#include <ti/drivers/Timer.h>}}
+\DoxyCodeLine{00021 \textcolor{preprocessor}{\#include <ti/drivers/Watchdog.h>}}
+\DoxyCodeLine{00022 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_board_8h}{Board.h}}"}}
+\DoxyCodeLine{00023 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___u_a_r_t_8h}{hal\_UART.h}}"}}
+\DoxyCodeLine{00024 \textcolor{comment}{//\#include "hal\_PWM.h"}}
+\DoxyCodeLine{00025 \textcolor{comment}{//\#include "hal\_I2C.h"}}
+\DoxyCodeLine{00026 \textcolor{comment}{//\#include "hal\_Timer.h"}}
+\DoxyCodeLine{00027 \textcolor{comment}{//\#include "hal\_ADC.h"}}
+\DoxyCodeLine{00028 \textcolor{comment}{//\#include "hal\_SPI.h"}}
+\DoxyCodeLine{00029 \textcolor{comment}{//\#include "hal\_GPIO.h"}}
+\DoxyCodeLine{00030 \textcolor{comment}{//\#include "hal\_TMP006.h"}}
+\DoxyCodeLine{00031 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_a_d_x_l355_8h}{ADXL355.h}}"}}
+\DoxyCodeLine{00032 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_b_m_e280_8h}{BME280.h}}"}}
+\DoxyCodeLine{00033 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_l_d_c1000_8h}{LDC1000.h}}"}}
+\DoxyCodeLine{00034 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h}{STARPORTS\_App.h}}"}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00037 \textcolor{comment}{//                      GLOBALS}}
+\DoxyCodeLine{00038 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00039 \textcolor{keyword}{extern} uint8\_t \mbox{\hyperlink{_sensors_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}{Timer1Event}};}
+\DoxyCodeLine{00040 \textcolor{keyword}{extern} UART\_Handle \mbox{\hyperlink{_sensors_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}};}
+\DoxyCodeLine{00041 \textcolor{keyword}{extern} I2C\_Handle \mbox{\hyperlink{_sensors_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}};}
+\DoxyCodeLine{00042 \textcolor{keyword}{extern} SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}};}
+\DoxyCodeLine{00043 \textcolor{keyword}{extern} Watchdog\_Handle \mbox{\hyperlink{_sensors_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}};}
+\DoxyCodeLine{00044 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} \mbox{\hyperlink{_sensors_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}};}
+\DoxyCodeLine{00045 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_t_m_p006___data}{TMP006\_Data}} \mbox{\hyperlink{_sensors_8c_a818e93e272a73588b96141632442c354_a818e93e272a73588b96141632442c354}{MyTMP006}};}
+\DoxyCodeLine{00046 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_a_d_x_l355___data}{ADXL355\_Data}} \mbox{\hyperlink{_sensors_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{MyADXL}};}
+\DoxyCodeLine{00047 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_b_m_e280___data}{BME280\_Data}} \mbox{\hyperlink{_sensors_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}{MyBME}};}
+\DoxyCodeLine{00048 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_l_d_c1000___data}{LDC1000\_Data}} \mbox{\hyperlink{_sensors_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}{MyLDC}};}
+\DoxyCodeLine{00049 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_vbat___data}{Vbat\_Data}} \mbox{\hyperlink{_sensors_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}{MyVbat}};}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00052 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00053 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00054 }
+\DoxyCodeLine{00055 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00056 \textcolor{comment}{//}}
+\DoxyCodeLine{00066 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00067 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_sensors_8c_source_l00068}\mbox{\hyperlink{_sensors_8h_afadb82034c866b1663a02d667d2d4adf_afadb82034c866b1663a02d667d2d4adf}{00068}} uint8\_t \mbox{\hyperlink{_sensors_8c_afadb82034c866b1663a02d667d2d4adf_afadb82034c866b1663a02d667d2d4adf}{IniPacket}}(uint8\_t *DataPacket, uint16\_t NodeId) \{}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00070     DataPacket[0] = (NodeId \& 0xFF00) >> 8;}
+\DoxyCodeLine{00071     DataPacket[1] = (NodeId \& 0x00FF);}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{00073     \textcolor{keywordflow}{return} 2;}
+\DoxyCodeLine{00074 \}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00077 \textcolor{comment}{//}}
+\DoxyCodeLine{00090 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00091 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_sensors_8c_source_l00092}\mbox{\hyperlink{_sensors_8h_a0379660876e7743ef97b9c996df30837_a0379660876e7743ef97b9c996df30837}{00092}} uint8\_t \mbox{\hyperlink{_sensors_8c_a0379660876e7743ef97b9c996df30837_a0379660876e7743ef97b9c996df30837}{Add\_s16Data2Packet}}(uint8\_t *DataPacket, uint8\_t DataPacketLen, uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}}, int16\_t *DataSensor, uint8\_t DataSensorLen) \{}
+\DoxyCodeLine{00093 }
+\DoxyCodeLine{00094     uint8\_t i, j, n, a;}
+\DoxyCodeLine{00095 }
+\DoxyCodeLine{00096     n=DataPacketLen;}
+\DoxyCodeLine{00097 }
+\DoxyCodeLine{00098     DataPacket[n++] = (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}} \& 0xFF00) >> 8;}
+\DoxyCodeLine{00099     DataPacket[n++] = (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}} \& 0x00FF);}
+\DoxyCodeLine{00100 }
+\DoxyCodeLine{00101     \textcolor{keywordflow}{for} (i=0; i<DataSensorLen;i++) \{}
+\DoxyCodeLine{00102         \textcolor{keywordflow}{for} (j=0;j<2;j++) \{}
+\DoxyCodeLine{00103             a = (DataSensor[i] >> (8-\/(j<<3))) \& 0x00FF;}
+\DoxyCodeLine{00104             DataPacket[n++] = a;}
+\DoxyCodeLine{00105         \}}
+\DoxyCodeLine{00106     \}}
+\DoxyCodeLine{00107 }
+\DoxyCodeLine{00108     \textcolor{keywordflow}{return} n;}
+\DoxyCodeLine{00109 \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00112 \textcolor{comment}{//}}
+\DoxyCodeLine{00125 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00126 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_sensors_8c_source_l00127}\mbox{\hyperlink{_sensors_8h_a8caa6156f34ceca0ac21e44d3fc8e304_a8caa6156f34ceca0ac21e44d3fc8e304}{00127}} uint8\_t \mbox{\hyperlink{_sensors_8c_a8caa6156f34ceca0ac21e44d3fc8e304_a8caa6156f34ceca0ac21e44d3fc8e304}{Add\_s32Data2Packet}}(uint8\_t *DataPacket, uint8\_t DataPacketLen, uint16\_t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}}, int32\_t *DataSensor, uint8\_t DataSensorLen) \{}
+\DoxyCodeLine{00128 }
+\DoxyCodeLine{00129     uint8\_t i, j, n, a;}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131     n=DataPacketLen;}
+\DoxyCodeLine{00132 }
+\DoxyCodeLine{00133     DataPacket[n++] = (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}} \& 0xFF00) >> 8;}
+\DoxyCodeLine{00134     DataPacket[n++] = (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}} \& 0x00FF);}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136     \textcolor{keywordflow}{for} (i=0; i<DataSensorLen;i++) \{}
+\DoxyCodeLine{00137         \textcolor{keywordflow}{for} (j=0;j<4;j++) \{}
+\DoxyCodeLine{00138             a = (DataSensor[i] >> (24-\/(j<<3))) \& 0x00FF;}
+\DoxyCodeLine{00139             DataPacket[n++] = a;}
+\DoxyCodeLine{00140         \}}
+\DoxyCodeLine{00141     \}}
+\DoxyCodeLine{00142 }
+\DoxyCodeLine{00143     \textcolor{keywordflow}{return} n;}
+\DoxyCodeLine{00144 \}}
+\DoxyCodeLine{00145 }
+\DoxyCodeLine{00146 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00147 \textcolor{comment}{//}}
+\DoxyCodeLine{00158 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00159 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_sensors_8c_source_l00160}\mbox{\hyperlink{_sensors_8h_ac082b6ab2ea1b9f5053b78d6ca51558e_ac082b6ab2ea1b9f5053b78d6ca51558e}{00160}} uint8\_t \mbox{\hyperlink{_sensors_8c_ac082b6ab2ea1b9f5053b78d6ca51558e_ac082b6ab2ea1b9f5053b78d6ca51558e}{GetSensorData}}(uint8\_t *DataPacket) \{}
+\DoxyCodeLine{00161 }
+\DoxyCodeLine{00162     ADC\_Handle adc;}
+\DoxyCodeLine{00163     \textcolor{comment}{//PWM\_Handle pwm;}}
+\DoxyCodeLine{00164     Timer\_Handle timer;}
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166     int16\_t s16DataSensor[32];}
+\DoxyCodeLine{00167     int32\_t s32DataSensor[32];}
+\DoxyCodeLine{00168     uint8\_t DataPacketLen;}
+\DoxyCodeLine{00169     uint32\_t interval = 10000;}
+\DoxyCodeLine{00170     \textcolor{comment}{//uint8\_t cr;}}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{00172     uint16\_t DevId;}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174     \textcolor{keywordtype}{int} i=0;                                                                                                      \textcolor{comment}{// Variables for Vbat Sensor (ADC)}}
+\DoxyCodeLine{00175     uint16\_t adcVal=0;                                                                                            \textcolor{comment}{// Variables for Vbat Sensor (ADC)}}
+\DoxyCodeLine{00176     uint16\_t adcValMean=0;                                                                                        \textcolor{comment}{// Variables for Vbat Sensor (ADC)}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178     uint32\_t PressureUn;                                                                                          \textcolor{comment}{// Variables for BME280 Sensor}}
+\DoxyCodeLine{00179     uint32\_t TemperatureUn;                                                                                       \textcolor{comment}{// Variables for BME280 Sensor}}
+\DoxyCodeLine{00180     uint16\_t HumidityUn;                                                                                          \textcolor{comment}{// Variables for BME280 Sensor}}
+\DoxyCodeLine{00181     \textcolor{keyword}{struct }\mbox{\hyperlink{_b_m_e280_8h_structbme280__calib__data}{bme280\_calib\_data}} *MyCalib = malloc(\textcolor{keyword}{sizeof} *MyCalib);                                                  \textcolor{comment}{// Variables for BME280 Sensor}}
+\DoxyCodeLine{00182 }
+\DoxyCodeLine{00183     DataPacketLen = \mbox{\hyperlink{_sensors_8c_afadb82034c866b1663a02d667d2d4adf_afadb82034c866b1663a02d667d2d4adf}{IniPacket}}(DataPacket, \mbox{\hyperlink{_sensors_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ac1340db8c7fb287e5270617a33bdcae0}{NodeId}});                                                         \textcolor{comment}{// Init Data Packet to Send.If Remove NodeId from the packet header, comment the line}}
+\DoxyCodeLine{00184     \textcolor{comment}{//DataPacketLen = 0;                                                                                          // and uncomment this one}}
+\DoxyCodeLine{00185 }
+\DoxyCodeLine{00189     timer = \mbox{\hyperlink{hal___timer_8c_acb160d81c795aec757df155dfcf99c98_acb160d81c795aec757df155dfcf99c98}{Startup\_Oneshot\_Timer}}(\mbox{\hyperlink{_board_8h_a35cc798c58ca8cf0479ee8f3eb8f231f_a35cc798c58ca8cf0479ee8f3eb8f231f}{Board\_TIMER1}}, interval);                                                        \textcolor{comment}{// Init Timer to take several measures at exactly the same interval}}
+\DoxyCodeLine{00190     adc = \mbox{\hyperlink{hal___a_d_c_8c_aac8f691b824e44a6b13787aedd3335f7_aac8f691b824e44a6b13787aedd3335f7}{Startup\_ADC}}(\mbox{\hyperlink{_board_8h_a904aed7532f9cd1b994ca36f5c082693_a904aed7532f9cd1b994ca36f5c082693}{Board\_ADC0}});                                                                                \textcolor{comment}{// Init CC3220 Internal ADC}}
+\DoxyCodeLine{00191     \textcolor{keywordflow}{if} ((adc != NULL) \& (timer!=NULL)) \{}
+\DoxyCodeLine{00192         \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00193             \textcolor{keywordflow}{if} (Timer\_start(timer)==Timer\_STATUS\_ERROR) \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194             ADC\_convert(adc, \&adcVal);}
+\DoxyCodeLine{00195             \mbox{\hyperlink{_sensors_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}{Timer1Event}} = 0;}
+\DoxyCodeLine{00196             adcValMean += adcVal;}
+\DoxyCodeLine{00197             i++;}
+\DoxyCodeLine{00198             \textcolor{keywordflow}{while} (!\mbox{\hyperlink{_sensors_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}{Timer1Event}}) \{;\}}
+\DoxyCodeLine{00199         \} \textcolor{keywordflow}{while} (i<=\mbox{\hyperlink{_sensors_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}{MyVbat}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}});}
+\DoxyCodeLine{00200         \textcolor{comment}{//Watchdog\_clear(wd);}}
+\DoxyCodeLine{00201         ADC\_close(adc);}
+\DoxyCodeLine{00202         Timer\_stop(timer);}
+\DoxyCodeLine{00203         Timer\_close(timer);}
+\DoxyCodeLine{00204 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00205         UART\_write(\mbox{\hyperlink{_sensors_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"3\(\backslash\)r\(\backslash\)n"},3);}
+\DoxyCodeLine{00206 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00207         s16DataSensor[0] = (int16\_t)(adcValMean/\mbox{\hyperlink{_sensors_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}{MyVbat}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}});}
+\DoxyCodeLine{00208         DataPacketLen = \mbox{\hyperlink{_sensors_8c_a0379660876e7743ef97b9c996df30837_a0379660876e7743ef97b9c996df30837}{Add\_s16Data2Packet}}(DataPacket, DataPacketLen, \mbox{\hyperlink{_sensors_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}{MyVbat}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}}, s16DataSensor, 1);        \textcolor{comment}{//Add ADC Data to Packet}}
+\DoxyCodeLine{00209     \}}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00214     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}} != NULL) \{}
+\DoxyCodeLine{00215         \mbox{\hyperlink{hal___g_p_i_o_8c_a89ba88c969d20ef4414f1a1de3442aad_a89ba88c969d20ef4414f1a1de3442aad}{ADXL355\_Enable}}();}
+\DoxyCodeLine{00216         \mbox{\hyperlink{hal___g_p_i_o_8c_a8246cc2e743b65d0d3529c614d5b2514_a8246cc2e743b65d0d3529c614d5b2514}{ADXL355\_SPI\_Enable}}();}
+\DoxyCodeLine{00217         usleep(100);}
+\DoxyCodeLine{00218         DevId = \mbox{\hyperlink{_a_d_x_l355_8c_a05d134072910a94bf7d1f2c737033be0_a05d134072910a94bf7d1f2c737033be0}{ADXL355\_DevId}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00219         \textcolor{keywordflow}{if} (DevId==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f6a1ff33784a29f68d84d63eb154acd_a2f6a1ff33784a29f68d84d63eb154acd}{ADXL355\_ID}}) \{}
+\DoxyCodeLine{00220             \mbox{\hyperlink{_a_d_x_l355_8c_a3f9db2b75fc97f9292986db6b3ac5560_a3f9db2b75fc97f9292986db6b3ac5560}{ADXL355\_Reset}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00221             \mbox{\hyperlink{_a_d_x_l355_8c_a331c003214c1064d26e9ba7d3fee67a9_a331c003214c1064d26e9ba7d3fee67a9}{ADXL355\_Range\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_a2ab90f17740d29bb78e9cb1c30df3322_a2ab90f17740d29bb78e9cb1c30df3322a272caf566eb47ff6788de2b53e89106f}{I2C\_HIGH\_SPEED}} | \mbox{\hyperlink{_a_d_x_l355_8h_a6fc77b78190bdcdec87e3baafd6658fa_a6fc77b78190bdcdec87e3baafd6658faa8f44e03fb2afe8be2d3c124cbbe9627a}{RANGE2G}});}
+\DoxyCodeLine{00222             \mbox{\hyperlink{_a_d_x_l355_8c_ae4de4565751bba9b2714786810903e54_ae4de4565751bba9b2714786810903e54}{ADXL355\_Filter\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_a80bfcfd26434218e36de3d1d880e8fa7_a80bfcfd26434218e36de3d1d880e8fa7a7bed74a53da27fe25fec9497c757d385}{HPFOFF}} | \mbox{\hyperlink{_a_d_x_l355_8h_a80bfcfd26434218e36de3d1d880e8fa7_a80bfcfd26434218e36de3d1d880e8fa7ac9979eaaf44a625d2d244ee4bb619666}{ODR250HZ}});}
+\DoxyCodeLine{00223             \mbox{\hyperlink{_a_d_x_l355_8c_a2e2078bb202b90e368cbc195b5fde6bc_a2e2078bb202b90e368cbc195b5fde6bc}{ADXL355\_Power\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_a_d_x_l355_8h_a197ad67f0bf0e12489e1578595a71288_a197ad67f0bf0e12489e1578595a71288adc4d394c79004c6c81eec3defb2974d6}{DRDY\_OFF}} | \mbox{\hyperlink{_a_d_x_l355_8h_a197ad67f0bf0e12489e1578595a71288_a197ad67f0bf0e12489e1578595a71288a75769b802575a169009e060ce0bffb36}{TEMP\_OFF}} | \mbox{\hyperlink{_a_d_x_l355_8h_a197ad67f0bf0e12489e1578595a71288_a197ad67f0bf0e12489e1578595a71288aced6c146f0d505d973f3e48abc4e1784}{MEASUREMENT}});}
+\DoxyCodeLine{00224             usleep(20000);}
+\DoxyCodeLine{00225             \textcolor{keywordflow}{if} (\mbox{\hyperlink{_sensors_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}}==0 || \mbox{\hyperlink{_sensors_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}}== \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab09f0292902c3fce30bad4623afe6e61_ab09f0292902c3fce30bad4623afe6e61}{MODE\_NORMAL\_WIFI}}) \{}
+\DoxyCodeLine{00226                 \mbox{\hyperlink{_a_d_x_l355_8c_abf390740dfe0d5d32cc0f8eb58ebcb95_abf390740dfe0d5d32cc0f8eb58ebcb95}{ADXL355\_Get\_Accel\_Frame}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_sensors_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{MyADXL}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}}, s32DataSensor);                                    \textcolor{comment}{//Get Accelerometer Data}}
+\DoxyCodeLine{00227                 DataPacketLen = \mbox{\hyperlink{_sensors_8c_a8caa6156f34ceca0ac21e44d3fc8e304_a8caa6156f34ceca0ac21e44d3fc8e304}{Add\_s32Data2Packet}}(DataPacket, DataPacketLen, \mbox{\hyperlink{_sensors_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{MyADXL}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}}, s32DataSensor, 6);\textcolor{comment}{//Add ADXL355 Data to Packet}}
+\DoxyCodeLine{00228             \}}
+\DoxyCodeLine{00229 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00230             UART\_write(\mbox{\hyperlink{_sensors_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"4\(\backslash\)r\(\backslash\)n"},3);}
+\DoxyCodeLine{00231 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00232         \}}
+\DoxyCodeLine{00233         \textcolor{comment}{//Watchdog\_clear(wd);}}
+\DoxyCodeLine{00234         \mbox{\hyperlink{hal___g_p_i_o_8c_a7e54e10b0b89714403ffa05e315b520e_a7e54e10b0b89714403ffa05e315b520e}{ADXL355\_SPI\_Disable}}();}
+\DoxyCodeLine{00235         \mbox{\hyperlink{hal___g_p_i_o_8c_a051e6baf15a4a34fc757be0dc4ab36a1_a051e6baf15a4a34fc757be0dc4ab36a1}{ADXL355\_Disable}}();}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00240         \mbox{\hyperlink{hal___g_p_i_o_8c_a90555e6690c18c71dd05ce49cebae084_a90555e6690c18c71dd05ce49cebae084}{BME280\_Enable}}();}
+\DoxyCodeLine{00241         \mbox{\hyperlink{hal___g_p_i_o_8c_a80e700bffa326a8ea835670fe32384b3_a80e700bffa326a8ea835670fe32384b3}{BME280\_SPI\_Enable}}();}
+\DoxyCodeLine{00242         usleep(100);}
+\DoxyCodeLine{00243         DevId = (uint16\_t)\mbox{\hyperlink{_b_m_e280_8c_add85dfdf89836b3dafae8dd5d2cd6daf_add85dfdf89836b3dafae8dd5d2cd6daf}{BME280\_DevId}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00244         \textcolor{keywordflow}{if} (DevId==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9aa1e714b7260f21de419112f041aad7_a9aa1e714b7260f21de419112f041aad7}{BME280\_ID}}) \{}
+\DoxyCodeLine{00245             \mbox{\hyperlink{_b_m_e280_8c_ae8e4019c0de2cfd45375096814e36267_ae8e4019c0de2cfd45375096814e36267}{BME280\_Reset}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00246             usleep(2000);}
+\DoxyCodeLine{00247             \textcolor{keywordflow}{if} (\mbox{\hyperlink{_sensors_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}}==1 || \mbox{\hyperlink{_sensors_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}}== \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab09f0292902c3fce30bad4623afe6e61_ab09f0292902c3fce30bad4623afe6e61}{MODE\_NORMAL\_WIFI}}) \{}
+\DoxyCodeLine{00248                 \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"BME280\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00249                 \mbox{\hyperlink{_b_m_e280_8c_af48821efcc92d4867071a19d81c20b8c_af48821efcc92d4867071a19d81c20b8c}{BME280\_Read\_Calib}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, MyCalib);}
+\DoxyCodeLine{00250                 \mbox{\hyperlink{_b_m_e280_8c_ab3c9940f8bc22407fae8e536ddd951b4_ab3c9940f8bc22407fae8e536ddd951b4}{BME280\_Write\_Ctrl\_Hum}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_a594628ce8dfe3c669d49eeec84c2a549_a594628ce8dfe3c669d49eeec84c2a549ac6d3c47a5f8860a03c7c4d7263bc7512}{OSRS\_HX1}});}
+\DoxyCodeLine{00251                 \mbox{\hyperlink{_b_m_e280_8c_a375940da0de04f3f41e1d2fcdc758ab9_a375940da0de04f3f41e1d2fcdc758ab9}{BME280\_Write\_Ctrl\_Meas}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_b_m_e280_8h_aaa11303196d652b77b8571a7cdf7dbda_aaa11303196d652b77b8571a7cdf7dbdaaf1fe86aae57435622090ad599d34ef54}{OSRS\_TX1}} | \mbox{\hyperlink{_b_m_e280_8h_a48f18a0ee1bcf7b2cbcf2c83aba81b39_a48f18a0ee1bcf7b2cbcf2c83aba81b39a5891903640cb58d1cb3a9ca5e9812cef}{OSRS\_PX1}} | \mbox{\hyperlink{_b_m_e280_8h_aaca8f09f8e1b4c8d1e883763078523fd_aaca8f09f8e1b4c8d1e883763078523fdab5f2c8725f851c264d7615642296359c}{FORCED}});}
+\DoxyCodeLine{00252                 usleep(10000);}
+\DoxyCodeLine{00253                 \textcolor{keywordflow}{while} (\mbox{\hyperlink{_b_m_e280_8c_adb58fb5343f76b29bf1350ab7a3d695e_adb58fb5343f76b29bf1350ab7a3d695e}{BME280\_Read\_Status}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})==\mbox{\hyperlink{_b_m_e280_8h_a864554dcd0789c4d0f0406e7761c42c6_a864554dcd0789c4d0f0406e7761c42c6adc391c0212c87f583978448b549a6c2c}{MEASURING}}) \{\}}
+\DoxyCodeLine{00254                 PressureUn = \mbox{\hyperlink{_b_m_e280_8c_ad5655bf8b974b22ac055aa263c72cabf_ad5655bf8b974b22ac055aa263c72cabf}{BME280\_Read\_Pressure}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00255                 HumidityUn = \mbox{\hyperlink{_b_m_e280_8c_aee71dade50eba9326ba15bde6eed0ecb_aee71dade50eba9326ba15bde6eed0ecb}{BME280\_Read\_Humidity}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00256                 TemperatureUn = \mbox{\hyperlink{_b_m_e280_8c_a0a862a54d01a542fa1b32bc1225196d8_a0a862a54d01a542fa1b32bc1225196d8}{BME280\_Read\_Temperature}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00257                 s32DataSensor[2] = (int32\_t)\mbox{\hyperlink{_b_m_e280_8c_a40ba042f01150017affc3724a9fde4d1_a40ba042f01150017affc3724a9fde4d1}{compensate\_temperature}}(TemperatureUn, MyCalib);}
+\DoxyCodeLine{00258                 s32DataSensor[1] = \mbox{\hyperlink{_b_m_e280_8c_a29814b13a9b7922bb0e1a38b02e1a472_a29814b13a9b7922bb0e1a38b02e1a472}{compensate\_humidity}}(HumidityUn, MyCalib);}
+\DoxyCodeLine{00259                 s32DataSensor[0] = \mbox{\hyperlink{_b_m_e280_8c_ae2b119e0664e05c67a512d438f4dab6f_ae2b119e0664e05c67a512d438f4dab6f}{compensate\_pressure}}(PressureUn, MyCalib);}
+\DoxyCodeLine{00260 }
+\DoxyCodeLine{00261                 DataPacketLen = \mbox{\hyperlink{_sensors_8c_a8caa6156f34ceca0ac21e44d3fc8e304_a8caa6156f34ceca0ac21e44d3fc8e304}{Add\_s32Data2Packet}}(DataPacket, DataPacketLen, \mbox{\hyperlink{_sensors_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}{MyBME}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}}, s32DataSensor, 3);\textcolor{comment}{//Add BME280 Data to Packet}}
+\DoxyCodeLine{00262             \}}
+\DoxyCodeLine{00263 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00264             UART\_write(\mbox{\hyperlink{_sensors_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"5\(\backslash\)r\(\backslash\)n "},3);}
+\DoxyCodeLine{00265 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00266         \}}
+\DoxyCodeLine{00267         free(MyCalib);}
+\DoxyCodeLine{00268         \textcolor{comment}{//Watchdog\_clear(wd);}}
+\DoxyCodeLine{00269         \mbox{\hyperlink{hal___g_p_i_o_8c_aca94dee24d378289e276586ff0d1dcd8_aca94dee24d378289e276586ff0d1dcd8}{BME280\_SPI\_Disable}}();}
+\DoxyCodeLine{00270         \mbox{\hyperlink{hal___g_p_i_o_8c_a48d3814142b063a07abc58d44c686e8b_a48d3814142b063a07abc58d44c686e8b}{BME280\_Disable}}();}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00275 \textcolor{preprocessor}{\#ifdef LDC1000}}
+\DoxyCodeLine{00276         \mbox{\hyperlink{hal___g_p_i_o_8c_afcb8f197eed8b09edfe1e097f8e7d9b0_afcb8f197eed8b09edfe1e097f8e7d9b0}{LDC1000\_Enable}}();}
+\DoxyCodeLine{00277         \mbox{\hyperlink{hal___g_p_i_o_8c_a2be9e34a0529d51de1c93e36a419155f_a2be9e34a0529d51de1c93e36a419155f}{LDC1000\_SPI\_Enable}}();}
+\DoxyCodeLine{00278         \textcolor{comment}{//pwm = Config\_PWM(Board\_PWM0);}}
+\DoxyCodeLine{00279         \textcolor{comment}{//PWM\_start(pwm);                                                                                   //Generate CLK Signal of LDC1000 (if necessary) */}}
+\DoxyCodeLine{00280         usleep(1000);}
+\DoxyCodeLine{00281         DevId = (uint16\_t)\mbox{\hyperlink{_l_d_c1000_8c_af1e5296f97b36618750ae6b1d601fab5_af1e5296f97b36618750ae6b1d601fab5}{LDC1000\_DevId}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00282         \textcolor{keywordflow}{if} (DevId==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a88370a81415260c8294e4aca4110154a_a88370a81415260c8294e4aca4110154a}{LDC1000\_ID}}) \{}
+\DoxyCodeLine{00283             \mbox{\hyperlink{_l_d_c1000_8c_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}{LDC1000\_Write\_Pow\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_a1486ee40cb87ebb7c09153be8bda605d_a1486ee40cb87ebb7c09153be8bda605da62dbdff4187f232ee6f943844212126d}{STBY\_MODE}});}
+\DoxyCodeLine{00284             \mbox{\hyperlink{_l_d_c1000_8c_a7e9ee36323586cd0dbfd198a177f522f_a7e9ee36323586cd0dbfd198a177f522f}{LDC1000\_Write\_Rp\_Max}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_ae798384d441e06213f77706457cd7367_ae798384d441e06213f77706457cd7367ad82e305a8a5588a587430cdf2f964316}{RPMAX0007}});}
+\DoxyCodeLine{00285             \mbox{\hyperlink{_l_d_c1000_8c_aa5042b0c3ca8766c21c327689fa66bf0_aa5042b0c3ca8766c21c327689fa66bf0}{LDC1000\_Write\_Rp\_Min}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_a31c2c2eafcd2f05f6456ee675971e9cf_a31c2c2eafcd2f05f6456ee675971e9cfaa6b7f3e4758146dc1f90f441876826c0}{RPMIN0001p3}});}
+\DoxyCodeLine{00286             \mbox{\hyperlink{_l_d_c1000_8c_a27040d91fa70bcce5b368e0664a5b2c5_a27040d91fa70bcce5b368e0664a5b2c5}{LDC1000\_Write\_Min\_Freq}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, 127);                                                               \textcolor{comment}{//Val = round ( 68.94 x log10(172e3/2500) )}}
+\DoxyCodeLine{00287             \mbox{\hyperlink{_l_d_c1000_8c_ad2daca75f5b34978bb274fcc0cd0ee9d_ad2daca75f5b34978bb274fcc0cd0ee9d}{LDC1000\_Write\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_aec400d1b9f217bfb6975c39d91a309b1_aec400d1b9f217bfb6975c39d91a309b1a90995aede5de9d095fe08f902f4c157d}{AMP\_4V}} | \mbox{\hyperlink{_l_d_c1000_8h_a48c091cbb8174aff806f63662a3fe2af_a48c091cbb8174aff806f63662a3fe2afaa8b88f966a7d7489517bcfd780153799}{RESP\_TIME\_6144}});}
+\DoxyCodeLine{00288             \mbox{\hyperlink{_l_d_c1000_8c_a97a46ac410be29090658d66c995affc6_a97a46ac410be29090658d66c995affc6}{LDC1000\_Write\_Intb\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_a0885daaa6084addb4d4d496c12985561_a0885daaa6084addb4d4d496c12985561a71e778f86bc8a2b81ecd072ed4d1f43f}{INTB\_DIS}});}
+\DoxyCodeLine{00289             \mbox{\hyperlink{_l_d_c1000_8c_a65f2f106726ee11fc24714e0b5facba0_a65f2f106726ee11fc24714e0b5facba0}{LDC1000\_Write\_Clk\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_ad78d2201339f06d3dbbd0d12d335c862_ad78d2201339f06d3dbbd0d12d335c862aa09aa908ea421ca80ae5f6e08d6cddb2}{XIN}} | \mbox{\hyperlink{_l_d_c1000_8h_a259a8a84471d9b2b086e60d88e378e17_a259a8a84471d9b2b086e60d88e378e17aed4e85dc658fa8416c3c0870ed59da97}{CLK\_OFF}});}
+\DoxyCodeLine{00290             \mbox{\hyperlink{_l_d_c1000_8c_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}{LDC1000\_Write\_Pow\_Conf}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_l_d_c1000_8h_a1486ee40cb87ebb7c09153be8bda605d_a1486ee40cb87ebb7c09153be8bda605da0e63b4f0ad9c2c5c4a1ac7f4a93dc808}{ACTIVE\_MODE}});}
+\DoxyCodeLine{00291             \mbox{\hyperlink{_l_d_c1000_8c_a532307d1a6edb7cf25e81668ecd96365_a532307d1a6edb7cf25e81668ecd96365}{LDC1000\_Get\_Proximity\_Frame}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, \mbox{\hyperlink{_sensors_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}{MyLDC}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}}, s16DataSensor);}
+\DoxyCodeLine{00292 }
+\DoxyCodeLine{00293             DataPacketLen = \mbox{\hyperlink{_sensors_8c_a0379660876e7743ef97b9c996df30837_a0379660876e7743ef97b9c996df30837}{Add\_s16Data2Packet}}(DataPacket, DataPacketLen, \mbox{\hyperlink{_sensors_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}{MyLDC}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}{SensorId}}, s16DataSensor, 2);\textcolor{comment}{//Add LDC1000 Data to Packet}}
+\DoxyCodeLine{00294 }
+\DoxyCodeLine{00295 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00296             UART\_write(\mbox{\hyperlink{_sensors_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"6 "},2);}
+\DoxyCodeLine{00297 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00298         \}}
+\DoxyCodeLine{00299         \textcolor{comment}{//PWM\_stop(pwm);}}
+\DoxyCodeLine{00300         \textcolor{comment}{//PWM\_close(pwm);}}
+\DoxyCodeLine{00301         \textcolor{comment}{//Watchdog\_clear(wd);}}
+\DoxyCodeLine{00302         \mbox{\hyperlink{hal___g_p_i_o_8c_ae3467ee4a51737211521dd79c8f64ce8_ae3467ee4a51737211521dd79c8f64ce8}{LDC1000\_SPI\_Disable}}();}
+\DoxyCodeLine{00303         \mbox{\hyperlink{hal___g_p_i_o_8c_a1a274d73d3e6915dc2b6765624dfa31a_a1a274d73d3e6915dc2b6765624dfa31a}{LDC1000\_Disable}}();}
+\DoxyCodeLine{00304 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00305     \}}
+\DoxyCodeLine{00306     \textcolor{keywordflow}{return} DataPacketLen;}
+\DoxyCodeLine{00307 \}}
+
+\end{DoxyCode}

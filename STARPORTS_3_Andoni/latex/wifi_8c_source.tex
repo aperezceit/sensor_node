@@ -1,0 +1,282 @@
+\hypertarget{wifi_8c_source}{}\doxysubsection{wifi.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <ti/drivers/UART.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <ti/drivers/net/wifi/simplelink.h>}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{wifi_8h}{wifi.h}}"}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{hal___u_a_r_t_8h}{hal\_UART.h}}"}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00019 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00020 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00023 \textcolor{comment}{//}}
+\DoxyCodeLine{00032 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00033 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00034}\mbox{\hyperlink{wifi_8h_a7a22e1687a7df642c851cbaa7aa4c465_a7a22e1687a7df642c851cbaa7aa4c465}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a7a22e1687a7df642c851cbaa7aa4c465_a7a22e1687a7df642c851cbaa7aa4c465}{SimpleLinkNetAppRequestMemFreeEventHandler}} (uint8\_t *buffer)\{\}}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00037 \textcolor{comment}{//}}
+\DoxyCodeLine{00046 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00047 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00048}\mbox{\hyperlink{wifi_8h_a2daea0dd2e20551cacbb77ccdfa8c46c_a2daea0dd2e20551cacbb77ccdfa8c46c}{00048}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a2daea0dd2e20551cacbb77ccdfa8c46c_a2daea0dd2e20551cacbb77ccdfa8c46c}{SimpleLinkNetAppRequestEventHandler}}(SlNetAppRequest\_t *pNetAppRequest, SlNetAppResponse\_t *pNetAppResponse)\{\}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00051 \textcolor{comment}{//}}
+\DoxyCodeLine{00060 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00061 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00062}\mbox{\hyperlink{wifi_8h_a18429eac751f1cfdf26be0c1c50245fe_a18429eac751f1cfdf26be0c1c50245fe}{00062}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a18429eac751f1cfdf26be0c1c50245fe_a18429eac751f1cfdf26be0c1c50245fe}{SimpleLinkHttpServerEventHandler}}( SlNetAppHttpServerEvent\_t *pHttpEvent, SlNetAppHttpServerResponse\_t *pHttpResponse)\{\}}
+\DoxyCodeLine{00063 }
+\DoxyCodeLine{00064 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00065 \textcolor{comment}{//}}
+\DoxyCodeLine{00074 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00075 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00076}\mbox{\hyperlink{wifi_8h_a912e9d86385822d4eb014738403f89c1_a912e9d86385822d4eb014738403f89c1}{00076}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a912e9d86385822d4eb014738403f89c1_a912e9d86385822d4eb014738403f89c1}{SimpleLinkSockEventHandler}}(SlSockEvent\_t *pSock)\{\}}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00079 \textcolor{comment}{//}}
+\DoxyCodeLine{00088 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00089 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00090}\mbox{\hyperlink{wifi_8h_aab74025d6858e187e1d720848225895a_aab74025d6858e187e1d720848225895a}{00090}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_aab74025d6858e187e1d720848225895a_aab74025d6858e187e1d720848225895a}{SimpleLinkSocketTriggerEventHandler}}(SlSockTriggerEvent\_t *pSlTriggerEvent)\{\}}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00093 \textcolor{comment}{//}}
+\DoxyCodeLine{00102 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00103 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00104}\mbox{\hyperlink{wifi_8h_acd3b6f958282f61c8ce617090438ddb2_acd3b6f958282f61c8ce617090438ddb2}{00104}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_acd3b6f958282f61c8ce617090438ddb2_acd3b6f958282f61c8ce617090438ddb2}{SimpleLinkGeneralEventHandler}}(SlDeviceEvent\_t *pDevEvent)}
+\DoxyCodeLine{00105 \{}
+\DoxyCodeLine{00106     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[GENERAL EVENT] -\/ ID=[\%d] Sender=[\%d]\(\backslash\)n\(\backslash\)n"},}
+\DoxyCodeLine{00107                pDevEvent-\/>Data.Error.Code,}
+\DoxyCodeLine{00108                pDevEvent-\/>Data.Error.Source);}
+\DoxyCodeLine{00109 \}}
+\DoxyCodeLine{00110 }
+\DoxyCodeLine{00111 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00112 \textcolor{comment}{//}}
+\DoxyCodeLine{00121 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00122 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00123}\mbox{\hyperlink{wifi_8h_a7d8c711b82b39b034f7f4e319cdfad22_a7d8c711b82b39b034f7f4e319cdfad22}{00123}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a7d8c711b82b39b034f7f4e319cdfad22_a7d8c711b82b39b034f7f4e319cdfad22}{SimpleLinkWlanEventHandler}}(SlWlanEvent\_t *pWlanEvent)}
+\DoxyCodeLine{00124 \{}
+\DoxyCodeLine{00125     \textcolor{keywordflow}{switch}(pWlanEvent-\/>Id)\{}
+\DoxyCodeLine{00126         \textcolor{keywordflow}{case} SL\_WLAN\_EVENT\_CONNECT:\{}
+\DoxyCodeLine{00127             \mbox{\hyperlink{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}{SET\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{STATUS\_BIT\_CONNECTION}});}
+\DoxyCodeLine{00128         \}}
+\DoxyCodeLine{00129         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00130 }
+\DoxyCodeLine{00131         \textcolor{keywordflow}{case} SL\_WLAN\_EVENT\_DISCONNECT:\{}
+\DoxyCodeLine{00132             \mbox{\hyperlink{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}{CLR\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60ad1e831077e1b5f19f0b64937e607be7c}{STATUS\_BIT\_CONNECTION}});}
+\DoxyCodeLine{00133             \mbox{\hyperlink{wifi_8h_a69b19c74bcd5602d7383c384897f289a_a69b19c74bcd5602d7383c384897f289a}{CLR\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{STATUS\_BIT\_IP\_ACQUIRED}});}
+\DoxyCodeLine{00134         \}}
+\DoxyCodeLine{00135         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00136 }
+\DoxyCodeLine{00137         \textcolor{keywordflow}{default}:\{}
+\DoxyCodeLine{00138             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[WLAN EVENT] Unexpected event [0x\%x]\(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00139                        pWlanEvent-\/>Id);}
+\DoxyCodeLine{00140         \}}
+\DoxyCodeLine{00141         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00142     \}}
+\DoxyCodeLine{00143 \}}
+\DoxyCodeLine{00144 }
+\DoxyCodeLine{00145 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00146 \textcolor{comment}{//}}
+\DoxyCodeLine{00155 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00156 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00157}\mbox{\hyperlink{wifi_8h_a8f8761bd9d2c81b8b13f0bf6f3c909ec_a8f8761bd9d2c81b8b13f0bf6f3c909ec}{00157}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a8f8761bd9d2c81b8b13f0bf6f3c909ec_a8f8761bd9d2c81b8b13f0bf6f3c909ec}{SimpleLinkFatalErrorEventHandler}}(SlDeviceFatal\_t *slFatalErrorEvent)}
+\DoxyCodeLine{00158 \{}
+\DoxyCodeLine{00159     \textcolor{keywordflow}{switch} (slFatalErrorEvent-\/>Id)\{}
+\DoxyCodeLine{00160         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_DEVICE\_ABORT:\{}
+\DoxyCodeLine{00161         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(}
+\DoxyCodeLine{00162             \textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Abort NWP event "}}
+\DoxyCodeLine{00163             \textcolor{stringliteral}{"detected: AbortType=\%d, AbortData=0x\%x\(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00164             slFatalErrorEvent-\/>Data.DeviceAssert.Code,}
+\DoxyCodeLine{00165             slFatalErrorEvent-\/>Data.DeviceAssert.Value);}
+\DoxyCodeLine{00166         \}}
+\DoxyCodeLine{00167         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00168 }
+\DoxyCodeLine{00169         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_DRIVER\_ABORT:\{}
+\DoxyCodeLine{00170             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Driver Abort detected. \(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{00171         \}}
+\DoxyCodeLine{00172         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00173 }
+\DoxyCodeLine{00174         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_NO\_CMD\_ACK:\{}
+\DoxyCodeLine{00175         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(}
+\DoxyCodeLine{00176             \textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: "}}
+\DoxyCodeLine{00177             \textcolor{stringliteral}{"No Cmd Ack detected [cmd opcode = 0x\%x] \(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00178             slFatalErrorEvent-\/>Data.NoCmdAck.Code);}
+\DoxyCodeLine{00179         \}}
+\DoxyCodeLine{00180         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00181 }
+\DoxyCodeLine{00182         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_SYNC\_LOSS:\{}
+\DoxyCodeLine{00183             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Sync loss detected n\(\backslash\)r"});}
+\DoxyCodeLine{00184         \}}
+\DoxyCodeLine{00185         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00186 }
+\DoxyCodeLine{00187         \textcolor{keywordflow}{case} SL\_DEVICE\_EVENT\_FATAL\_CMD\_TIMEOUT:\{}
+\DoxyCodeLine{00188         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(}
+\DoxyCodeLine{00189             \textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR: Async event timeout "}}
+\DoxyCodeLine{00190             \textcolor{stringliteral}{"detected [event opcode =0x\%x]  \(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00191             slFatalErrorEvent-\/>Data.CmdTimeout.Code);}
+\DoxyCodeLine{00192         \}}
+\DoxyCodeLine{00193         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00194 }
+\DoxyCodeLine{00195         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00196             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[ERROR] -\/ FATAL ERROR:"}}
+\DoxyCodeLine{00197                        \textcolor{stringliteral}{" Unspecified error detected \(\backslash\)n\(\backslash\)r"});}
+\DoxyCodeLine{00198         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00199     \}}
+\DoxyCodeLine{00200 \}}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00203 \textcolor{comment}{//}}
+\DoxyCodeLine{00212 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00213 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00214}\mbox{\hyperlink{wifi_8h_af4a488df5566d05f1df70d1d7a1fc286_af4a488df5566d05f1df70d1d7a1fc286}{00214}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_af4a488df5566d05f1df70d1d7a1fc286_af4a488df5566d05f1df70d1d7a1fc286}{SimpleLinkNetAppEventHandler}}(SlNetAppEvent\_t *pNetAppEvent)}
+\DoxyCodeLine{00215 \{}
+\DoxyCodeLine{00216     \textcolor{keywordflow}{switch}(pNetAppEvent-\/>Id)\{}
+\DoxyCodeLine{00217         \textcolor{keywordflow}{case} SL\_NETAPP\_EVENT\_IPV4\_ACQUIRED:\{}
+\DoxyCodeLine{00218             \mbox{\hyperlink{wifi_8h_a4138fadf902a97c43107ff97c5266b73_a4138fadf902a97c43107ff97c5266b73}{SET\_STATUS\_BIT}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus, \mbox{\hyperlink{wifi_8h_a73849ce9f12b1004feca595f78448d60_a73849ce9f12b1004feca595f78448d60abd58a09e5e1af48f6bee35bc88ba15e9}{STATUS\_BIT\_IP\_ACQUIRED}});}
+\DoxyCodeLine{00219         \}}
+\DoxyCodeLine{00220         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222         \textcolor{keywordflow}{default}:\{}
+\DoxyCodeLine{00223             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"[NETAPP EVENT] Unexpected event [0x\%x] \(\backslash\)n\(\backslash\)r"},}
+\DoxyCodeLine{00224                        pNetAppEvent-\/>Id);}
+\DoxyCodeLine{00225         \}}
+\DoxyCodeLine{00226         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00227     \}}
+\DoxyCodeLine{00228 \}}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00231 \textcolor{comment}{//}}
+\DoxyCodeLine{00240 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00241 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00242}\mbox{\hyperlink{wifi_8h_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}{00242}} int32\_t \mbox{\hyperlink{wifi_8c_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}{wlanConf}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244     sl\_Start(0, 0, 0);                                                                              \textcolor{comment}{//START DEVICE}}
+\DoxyCodeLine{00245     sl\_WlanSetMode(ROLE\_STA);                                                                       \textcolor{comment}{//SET ROLE AS STATION}}
+\DoxyCodeLine{00246     sl\_WlanPolicySet(SL\_WLAN\_POLICY\_PM , SL\_WLAN\_NORMAL\_POLICY, NULL, 0);                           \textcolor{comment}{//Set PowerManagement policy to normal}}
+\DoxyCodeLine{00247     sl\_WlanPolicySet(SL\_WLAN\_POLICY\_CONNECTION, SL\_WLAN\_CONNECTION\_POLICY(1, 0, 0, 0), NULL, 0);    \textcolor{comment}{//Connection policy Auto}}
+\DoxyCodeLine{00248     sl\_NetCfgSet(SL\_NETCFG\_IPV4\_STA\_ADDR\_MODE, SL\_NETCFG\_ADDR\_DHCP, 0, 0);                          \textcolor{comment}{//set IP DHCP}}
+\DoxyCodeLine{00249 }
+\DoxyCodeLine{00250     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00251 \}}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00254 \textcolor{comment}{//}}
+\DoxyCodeLine{00263 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00264 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00265}\mbox{\hyperlink{wifi_8h_a78ed3c477c87861aaf507914edc7dd8a_a78ed3c477c87861aaf507914edc7dd8a}{00265}} int32\_t \mbox{\hyperlink{wifi_8c_a78ed3c477c87861aaf507914edc7dd8a_a78ed3c477c87861aaf507914edc7dd8a}{wlanConnect}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00266 \{}
+\DoxyCodeLine{00267     SlWlanSecParams\_t secParams = \{0\};}
+\DoxyCodeLine{00268 }
+\DoxyCodeLine{00269     secParams.Key = (\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}{SECURITY\_KEY}};}
+\DoxyCodeLine{00270     secParams.KeyLen = strlen(\mbox{\hyperlink{wifi_8h_ae98997882a3fc2c3756733a533da3b2e_ae98997882a3fc2c3756733a533da3b2e}{SECURITY\_KEY}});}
+\DoxyCodeLine{00271     secParams.Type = \mbox{\hyperlink{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}{SECURITY\_TYPE}};}
+\DoxyCodeLine{00272 }
+\DoxyCodeLine{00273     sl\_WlanConnect((\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{SSID\_NAME}}, strlen(\mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{SSID\_NAME}}), 0, \&secParams, 0);}
+\DoxyCodeLine{00274     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Trying to connect to AP : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{wifi_8h_a5a96011c562e0f15942febdce71ba975_a5a96011c562e0f15942febdce71ba975}{SSID\_NAME}});}
+\DoxyCodeLine{00275 }
+\DoxyCodeLine{00276     sl\_Task(NULL);}
+\DoxyCodeLine{00277 }
+\DoxyCodeLine{00278     \textcolor{keywordflow}{while}((!\mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{IS\_CONNECTED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)) || (!\mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{IS\_IP\_ACQUIRED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)))\{}
+\DoxyCodeLine{00279         sl\_Task(NULL);}
+\DoxyCodeLine{00280     \}}
+\DoxyCodeLine{00281     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00282 \}}
+\DoxyCodeLine{00283 }
+\DoxyCodeLine{00284 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00285 \textcolor{comment}{//}}
+\DoxyCodeLine{00294 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00295 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00296}\mbox{\hyperlink{wifi_8h_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}{00296}} int32\_t \mbox{\hyperlink{wifi_8c_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}{wlanConnectFromFile}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *ssid)}
+\DoxyCodeLine{00297 \{}
+\DoxyCodeLine{00298     uint8\_t ret;}
+\DoxyCodeLine{00299     SlWlanSecParams\_t secParams = \{0\};}
+\DoxyCodeLine{00300 }
+\DoxyCodeLine{00301     secParams.Key = (\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}{SECURITY\_KEY\_FILE\_CONNECT}};}
+\DoxyCodeLine{00302     secParams.KeyLen = strlen(\mbox{\hyperlink{wifi_8h_a5b5e03cdf431dd947a701c8dcfe53e05_a5b5e03cdf431dd947a701c8dcfe53e05}{SECURITY\_KEY\_FILE\_CONNECT}});}
+\DoxyCodeLine{00303     secParams.Type = \mbox{\hyperlink{wifi_8h_a095977e88115900a59827ea0015edffd_a095977e88115900a59827ea0015edffd}{SECURITY\_TYPE}};}
+\DoxyCodeLine{00304 }
+\DoxyCodeLine{00305     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} FileSSID[13];}
+\DoxyCodeLine{00306 }
+\DoxyCodeLine{00307     sprintf(\&FileSSID,\textcolor{stringliteral}{"\%s"},ssid );}
+\DoxyCodeLine{00308 }
+\DoxyCodeLine{00309     ret = sl\_WlanConnect((\textcolor{keywordtype}{signed} \textcolor{keywordtype}{char}*)FileSSID, strlen(FileSSID), 0, \&secParams, 0);}
+\DoxyCodeLine{00310     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"WIFI NETWORK: \%s\(\backslash\)n\(\backslash\)r"}, FileSSID);}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312     sl\_Task(NULL);}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314     \textcolor{keywordtype}{int} tries=0;}
+\DoxyCodeLine{00315     \textcolor{keywordflow}{while}((!\mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{IS\_CONNECTED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)) || (!\mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{IS\_IP\_ACQUIRED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)))\{}
+\DoxyCodeLine{00316         sl\_Task(NULL);}
+\DoxyCodeLine{00317 }
+\DoxyCodeLine{00318         \textcolor{keywordflow}{if}((!\mbox{\hyperlink{wifi_8h_a85e63ae93399fcd11f1eb3b5d0f077a3_a85e63ae93399fcd11f1eb3b5d0f077a3}{IS\_CONNECTED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)) || (!\mbox{\hyperlink{wifi_8h_aba1cff5a1f277fe33962870d0ac11299_aba1cff5a1f277fe33962870d0ac11299}{IS\_IP\_ACQUIRED}}(\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.slStatus)))\{}
+\DoxyCodeLine{00319             tries ++;}
+\DoxyCodeLine{00320             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"*"});}
+\DoxyCodeLine{00321         \}\textcolor{keywordflow}{if}(tries==20000)\{}
+\DoxyCodeLine{00322             \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();}
+\DoxyCodeLine{00323             \textcolor{keywordflow}{return} \mbox{\hyperlink{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}{ERROR\_CONNECT\_WIFI}};}
+\DoxyCodeLine{00324         \}}
+\DoxyCodeLine{00325     \}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327     \textcolor{keywordflow}{if} (ret!=0)\{}
+\DoxyCodeLine{00328         \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();}
+\DoxyCodeLine{00329         \textcolor{keywordflow}{return} \mbox{\hyperlink{wifi_8h_a2285f6a16792891a28dc4a5ebe0ca86e_a2285f6a16792891a28dc4a5ebe0ca86e}{ERROR\_CONNECT\_WIFI}};}
+\DoxyCodeLine{00330     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00331         \textcolor{keywordflow}{return} \mbox{\hyperlink{wifi_8h_a167740604ff6466bab5034751b84e0ad_a167740604ff6466bab5034751b84e0ad}{SUCCESS\_CONNECT\_WIFI}};}
+\DoxyCodeLine{00332     \}}
+\DoxyCodeLine{00333     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00334 \}}
+\DoxyCodeLine{00335 }
+\DoxyCodeLine{00336 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00337 \textcolor{comment}{//}}
+\DoxyCodeLine{00347 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00348 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00349}\mbox{\hyperlink{wifi_8h_ad8b73f2a63bfa032dd09c6e90ea1ace3_ad8b73f2a63bfa032dd09c6e90ea1ace3}{00349}} \textcolor{keywordtype}{void} \mbox{\hyperlink{wifi_8c_a870586c295b7c56fd1d8fd8c2c374472_a870586c295b7c56fd1d8fd8c2c374472}{prepareDataFrame}}(uint16\_t port,uint32\_t ipAddr)}
+\DoxyCodeLine{00350 \{}
+\DoxyCodeLine{00351     uint16\_t idx;}
+\DoxyCodeLine{00352 }
+\DoxyCodeLine{00353     \textcolor{keywordflow}{for}(idx = 0;idx < \mbox{\hyperlink{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}{FRAME\_LENGTH}};idx++)}
+\DoxyCodeLine{00354     \{}
+\DoxyCodeLine{00355         \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.frameData[idx] = (\textcolor{keywordtype}{signed} char)(idx \% 255);}
+\DoxyCodeLine{00356     \}}
+\DoxyCodeLine{00357     \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr.sin\_family = SL\_AF\_INET;}
+\DoxyCodeLine{00358     \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr.sin\_port = sl\_Htons(port);}
+\DoxyCodeLine{00359     \mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr.sin\_addr.s\_addr = sl\_Htonl(ipAddr);}
+\DoxyCodeLine{00360 \}}
+\DoxyCodeLine{00361 }
+\DoxyCodeLine{00362 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00363 \textcolor{comment}{//}}
+\DoxyCodeLine{00372 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00373 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{wifi_8c_source_l00374}\mbox{\hyperlink{wifi_8c_a37370529a7ceb268f2b78e89819c8cc5_a37370529a7ceb268f2b78e89819c8cc5}{00374}} int16\_t \mbox{\hyperlink{wifi_8c_a37370529a7ceb268f2b78e89819c8cc5_a37370529a7ceb268f2b78e89819c8cc5}{sendUdpClient}}(uint16\_t port)}
+\DoxyCodeLine{00375 \{}
+\DoxyCodeLine{00376     int16\_t         sockId;}
+\DoxyCodeLine{00377     int16\_t         idx = 0;}
+\DoxyCodeLine{00378     int32\_t         status = -\/1;}
+\DoxyCodeLine{00379 }
+\DoxyCodeLine{00380     sockId = sl\_Socket(SL\_AF\_INET,SL\_SOCK\_DGRAM, 0);}
+\DoxyCodeLine{00381 }
+\DoxyCodeLine{00382     \textcolor{keywordflow}{if}(sockId > 0)\{}
+\DoxyCodeLine{00383         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"SOCKET UDP"});}
+\DoxyCodeLine{00384     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00385         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"error UDP"});}
+\DoxyCodeLine{00386     \}}
+\DoxyCodeLine{00387 }
+\DoxyCodeLine{00388     \textcolor{keywordflow}{while} (idx < \mbox{\hyperlink{wifi_8h_a44b318647bc1c916e8686ef3a27ed9a3_a44b318647bc1c916e8686ef3a27ed9a3}{NUM\_OF\_PKT}})\{}
+\DoxyCodeLine{00389         status = sl\_SendTo(sockId,\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.frameData ,\mbox{\hyperlink{wifi_8h_a69629b77e517daf716c92ad1f8418558_a69629b77e517daf716c92ad1f8418558}{FRAME\_LENGTH}} , 0,(SlSockAddr\_t *)\&\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr,\textcolor{keyword}{sizeof}(SlSockAddrIn\_t));}
+\DoxyCodeLine{00390         \textcolor{keywordflow}{if}(status <= 0 )\{}
+\DoxyCodeLine{00391             status = sl\_Close(sockId);}
+\DoxyCodeLine{00392             \mbox{\hyperlink{wifi_8h_aee01c39132c3e5916e949a9b3280ceb1_aee01c39132c3e5916e949a9b3280ceb1}{ASSERT\_ON\_ERROR}}(sockId);}
+\DoxyCodeLine{00393         \}}
+\DoxyCodeLine{00394         idx++;}
+\DoxyCodeLine{00395     \}}
+\DoxyCodeLine{00396 }
+\DoxyCodeLine{00397     \textcolor{keywordflow}{return}(0);}
+\DoxyCodeLine{00398 \}}
+
+\end{DoxyCode}

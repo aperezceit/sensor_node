@@ -1,0 +1,34 @@
+\hypertarget{hal___u_a_r_t_8h_source}{}\doxysubsection{hal\+\_\+\+U\+A\+R\+T.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#ifndef HAL\_UART\_H\_}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#define HAL\_UART\_H\_}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00014 \textcolor{comment}{// Includes}}
+\DoxyCodeLine{00015 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include <ti/drivers/UART.h>}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00020 \textcolor{comment}{// Defines}}
+\DoxyCodeLine{00021 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8h_source_l00022}\mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{00022}} \textcolor{preprocessor}{\#define UART\_PRINT Report}}
+\DoxyCodeLine{\Hypertarget{hal___u_a_r_t_8h_source_l00023}\mbox{\hyperlink{hal___u_a_r_t_8h_a645914093900a228e69cd3f55a2cc4c7_a645914093900a228e69cd3f55a2cc4c7}{00023}} \textcolor{preprocessor}{\#define ERR\_PRINT(x) Report("Error [\%d] at line [\%d] in function [\%s]  \(\backslash\)n\(\backslash\)r",\(\backslash\)}}
+\DoxyCodeLine{00024 \textcolor{preprocessor}{                                                                x, \_\_LINE\_\_, \(\backslash\)}}
+\DoxyCodeLine{00025 \textcolor{preprocessor}{                                                                 \_\_FUNCTION\_\_)}}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00028 \textcolor{comment}{//                      FUNCTION PROTOTYPES}}
+\DoxyCodeLine{00029 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00030 UART\_Handle \mbox{\hyperlink{hal___u_a_r_t_8h_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}{Startup\_UART}}(uint\_least8\_t index, uint32\_t baudRate);}
+\DoxyCodeLine{00031 \textcolor{keywordtype}{bool} \mbox{\hyperlink{hal___u_a_r_t_8h_abe10d1e7099ff1c4326f31a022024470_abe10d1e7099ff1c4326f31a022024470}{UART\_resetInputBuffer}}(UART\_Handle hUart);}
+\DoxyCodeLine{00032 uint8\_t \mbox{\hyperlink{hal___u_a_r_t_8h_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(UART\_Handle uart, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buf);}
+\DoxyCodeLine{00033 \textcolor{keywordtype}{int} \mbox{\hyperlink{hal___u_a_r_t_8h_a110cf374df11144a3fbef1ff407bb16b_a110cf374df11144a3fbef1ff407bb16b}{Report}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *pcFormat,...);}
+\DoxyCodeLine{00034 \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___u_a_r_t_8h_a98affc1bfabb8444b9de8cf53468478e_a98affc1bfabb8444b9de8cf53468478e}{Message}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} *str);}
+\DoxyCodeLine{00035 \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___u_a_r_t_8h_a6351d8706733262e7e325926b1a9aab7_a6351d8706733262e7e325926b1a9aab7}{putch}}(\textcolor{keywordtype}{char} ch);}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_UART\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

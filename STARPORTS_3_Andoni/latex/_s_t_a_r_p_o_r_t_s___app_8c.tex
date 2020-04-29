@@ -1,0 +1,477 @@
+\hypertarget{_s_t_a_r_p_o_r_t_s___app_8c}{}\doxysubsection{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c File Reference}
+\label{_s_t_a_r_p_o_r_t_s___app_8c}\index{STARPORTS\_App.c@{STARPORTS\_App.c}}
+
+
+Starports Main program flow.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+U\+A\+R\+T.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+I2\+C.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+G\+P\+I\+O.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+Watchdog.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/net/wifi/simplelink.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/cc32xx/inc/hw\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/cc32xx/driverlib/prcm.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wifi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h\char`\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a53bb6ce0dbc843daa4ad914d78713ac2_a53bb6ce0dbc843daa4ad914d78713ac2}{T\+I\+M\+E\+O\+U\+T\+\_\+\+MS}}~40000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_aebf9a6d20e526ba6bf0f587a1c4ff83f_aebf9a6d20e526ba6bf0f587a1c4ff83f}{main\+Thread}} (void $\ast$arg0)
+\item 
+void \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a7a26eb8c88e9ecafa634d3ee2004c45a_a7a26eb8c88e9ecafa634d3ee2004c45a}{Wakeup\+From\+L\+P\+DS}} (uint\+\_\+least8\+\_\+t)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+I2\+C\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a23d877e8b750db640896d946969a95cb_a23d877e8b750db640896d946969a95cb}{L\+P\+D\+S\+Out}} = 0
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_a_d_x_l355___data}{A\+D\+X\+L355\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{My\+A\+D\+XL}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f6a1ff33784a29f68d84d63eb154acd_a2f6a1ff33784a29f68d84d63eb154acd}{A\+D\+X\+L355\+\_\+\+ID}},500,256\}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_b_m_e280___data}{B\+M\+E280\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}{My\+B\+ME}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9aa1e714b7260f21de419112f041aad7_a9aa1e714b7260f21de419112f041aad7}{B\+M\+E280\+\_\+\+ID}}\}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_l_d_c1000___data}{L\+D\+C1000\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}{My\+L\+DC}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a88370a81415260c8294e4aca4110154a_a88370a81415260c8294e4aca4110154a}{L\+D\+C1000\+\_\+\+ID}},16\}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{My\+Node}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f7945514ea8b2c7145cf68d47c96a08_a2f7945514ea8b2c7145cf68d47c96a08}{N\+O\+D\+E\+ID}},1200,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb_a57282daac3f5b6e3aa948b43dc1cd2eb}{M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+L\+O\+RA}},16,\char`\"{}Orange-\/D62D\char`\"{}\}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_t_m_p006___data}{T\+M\+P006\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a818e93e272a73588b96141632442c354_a818e93e272a73588b96141632442c354}{My\+T\+M\+P006}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a0e45781a49f4cfc8363fda3735663c85_a0e45781a49f4cfc8363fda3735663c85}{T\+M\+P006\+\_\+\+ID}}\}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_vbat___data}{Vbat\+\_\+\+Data}} \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}{My\+Vbat}} = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a5e0abd712518f4256f34430053b24c41_a5e0abd712518f4256f34430053b24c41}{V\+B\+A\+T\+\_\+\+ID}},16\}
+\item 
+S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a84499990c0506a7d6559f9ea074922a5_a84499990c0506a7d6559f9ea074922a5}{Timer0\+Event}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}{Timer1\+Event}} = 0
+\item 
+U\+A\+R\+T\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}
+\item 
+Watchdog\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Starports Main program flow. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+
+
+\doxysubsubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a53bb6ce0dbc843daa4ad914d78713ac2_a53bb6ce0dbc843daa4ad914d78713ac2}\label{_s_t_a_r_p_o_r_t_s___app_8c_a53bb6ce0dbc843daa4ad914d78713ac2_a53bb6ce0dbc843daa4ad914d78713ac2}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!TIMEOUT\_MS@{TIMEOUT\_MS}}
+\index{TIMEOUT\_MS@{TIMEOUT\_MS}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{TIMEOUT\_MS}{TIMEOUT\_MS}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+U\+T\+\_\+\+MS~40000}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00047}{47}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_aebf9a6d20e526ba6bf0f587a1c4ff83f_aebf9a6d20e526ba6bf0f587a1c4ff83f}\label{_s_t_a_r_p_o_r_t_s___app_8c_aebf9a6d20e526ba6bf0f587a1c4ff83f_aebf9a6d20e526ba6bf0f587a1c4ff83f}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!mainThread@{mainThread}}
+\index{mainThread@{mainThread}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{mainThread()}{mainThread()}}
+{\footnotesize\ttfamily void$\ast$ main\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{arg0 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00111}{111}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112 \{}
+\DoxyCodeLine{00113     UART\_Handle uart1;                                                          \textcolor{comment}{//uart1 communicates with RN2483 Lora module}}
+\DoxyCodeLine{00114     \textcolor{keyword}{struct }\mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} MyLoraNode;                                                 \textcolor{comment}{//struct of parameters of the node}}
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116     uint8\_t DataPacket[256];                                                    \textcolor{comment}{//packet with sensors data}}
+\DoxyCodeLine{00117     uint8\_t DataPacketLen;                                                      \textcolor{comment}{//lenght of Datapacket}}
+\DoxyCodeLine{00118     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[256];                                                     \textcolor{comment}{//uart 1 buffer}}
+\DoxyCodeLine{00119     uint8\_t ret;}
+\DoxyCodeLine{00120     uint8\_t sz;}
+\DoxyCodeLine{00121     uint8\_t NextStep = \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab711666ad09d7f6c0b91576525ea158e_ab711666ad09d7f6c0b91576525ea158e}{CONTINUE}};                                                \textcolor{comment}{//controls node OFF}}
+\DoxyCodeLine{00122     uint8\_t mask;                                                               \textcolor{comment}{//mask to change node parameters}}
+\DoxyCodeLine{00123     uint16\_t nodeId;                                                            \textcolor{comment}{//node ID var}}
+\DoxyCodeLine{00124     int16\_t         sockId;                                                     \textcolor{comment}{//wifi var}}
+\DoxyCodeLine{00125     int16\_t         status = -\/1;                                                \textcolor{comment}{//wifi var}}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     GPIO\_setConfig(\mbox{\hyperlink{_board_8h_a0a8f8ac34f7666050b5178c15bf07730_a0a8f8ac34f7666050b5178c15bf07730}{Board\_EN\_NODE}}, GPIO\_CFG\_OUT\_STD | GPIO\_CFG\_OUT\_HIGH);        \textcolor{comment}{//config node enable GPIO}}
+\DoxyCodeLine{00128     \mbox{\hyperlink{hal___g_p_i_o_8c_a277b74093ed9dd8e5aeb502c54f9c788_a277b74093ed9dd8e5aeb502c54f9c788}{Node\_Enable}}();                                                              \textcolor{comment}{//Quicky enable de node (the jumper an be removed)}}
+\DoxyCodeLine{00129     Watchdog\_init();                                                            \textcolor{comment}{//Inits watchdog instance}}
+\DoxyCodeLine{00130     ret = \mbox{\hyperlink{hal___g_p_i_o_8c_a99235da09a08b737a45a4eb2e7a039b2_a99235da09a08b737a45a4eb2e7a039b2}{GPIO\_Config}}();                                                        \textcolor{comment}{//Configure the rest of GPIO pins}}
+\DoxyCodeLine{00131     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}{wd}} = \mbox{\hyperlink{hal___w_d_8c_ab63aa87a48ad39bb42dbd21fb4621d7c_ab63aa87a48ad39bb42dbd21fb4621d7c}{Startup\_Watchdog}}(\mbox{\hyperlink{_board_8h_a0bbc912ed421d5a07aef2b6ac1db8590_a0bbc912ed421d5a07aef2b6ac1db8590}{Board\_WATCHDOG0}}, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a53bb6ce0dbc843daa4ad914d78713ac2_a53bb6ce0dbc843daa4ad914d78713ac2}{TIMEOUT\_MS}});                         \textcolor{comment}{//Open a Watchdog driver instance}}
+\DoxyCodeLine{00132     SPI\_init();                                                                 \textcolor{comment}{//initiates SPI before sl\_Start}}
+\DoxyCodeLine{00133     sl\_Start(0, 0, 0);                                                          \textcolor{comment}{//needed to work with File System}}
+\DoxyCodeLine{00134     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}} = \mbox{\hyperlink{hal___u_a_r_t_8c_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}{Startup\_UART}}(\mbox{\hyperlink{_board_8h_ab812c93bd3f38b54aff31c5bdc97b441_ab812c93bd3f38b54aff31c5bdc97b441}{Board\_UART0}}, 115200);                                  \textcolor{comment}{//initiates uart0}}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{00136 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00137     UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nInitiating Test of STARPORTS...\(\backslash\)r\(\backslash\)n"}, 35);           \textcolor{comment}{//debug}}
+\DoxyCodeLine{00138 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140 \textcolor{comment}{    /************ Begin Read Configuration Files **************************/}}
+\DoxyCodeLine{00141     MyLoraNode.PortNoTx = 1;}
+\DoxyCodeLine{00142     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8d9f89e4cadd72790f988d4def70b7e9}{WakeUpInterval}} = \mbox{\hyperlink{file__system_8c_a0edb958ae88b4d5b85ffc91360cc8cd1_a0edb958ae88b4d5b85ffc91360cc8cd1}{st\_readFileWakeUp}}();                                \textcolor{comment}{//Get MyNode.WakeUpInterval -\/-\/> Read WakeUp\_Time File}}
+\DoxyCodeLine{00143     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}} = \mbox{\hyperlink{file__system_8c_afef9c44185629b10676766dec447d74f_afef9c44185629b10676766dec447d74f}{st\_readFileMode}}();                                            \textcolor{comment}{//Get MyNode.Mode -\/-\/> Read File Mode}}
+\DoxyCodeLine{00144     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aec988d21b9d0ae579421495853e08d0a}{NCycles}} = \mbox{\hyperlink{file__system_8c_a193cc642a8f29b0e4169602a4ffbf68f_a193cc642a8f29b0e4169602a4ffbf68f}{st\_readFileNCycles}}();                                      \textcolor{comment}{//Get MyNode.NCycles -\/-\/> Read File Ncycles}}
+\DoxyCodeLine{00145     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}} = \mbox{\hyperlink{file__system_8c_af7c6ac13af4b0ecdc100dd2233c52258_af7c6ac13af4b0ecdc100dd2233c52258}{st\_readFileNBoot}}();                                          \textcolor{comment}{//Get MyNode.FirstBoot -\/-\/> Read FirstBoot File: Yes (1) No (0)}}
+\DoxyCodeLine{00146     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}} = \mbox{\hyperlink{file__system_8c_a9fded96f4b6c53f456f6cb1f374648c5_a9fded96f4b6c53f456f6cb1f374648c5}{st\_readFileNFails}}();                                        \textcolor{comment}{//Get MyNode.NFails -\/-\/> Number of failed attempts to Wireless Conn.}}
+\DoxyCodeLine{00147     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_af83141c904a64464307f9bde7d831e4d}{ChangeWakeUp}} = \mbox{\hyperlink{file__system_8c_afbd825586bc3b3ea19b46c82d0aca8be_afbd825586bc3b3ea19b46c82d0aca8be}{st\_readFileChangeWakeUp}}();                            \textcolor{comment}{//Get MyNode.ChangeWakeUp -\/-\/> Read change wake up interval or not}}
+\DoxyCodeLine{00148     \textcolor{comment}{//MyNode.NodeId = st\_readFileNodeId();                                      //Get MyNodeId}}
+\DoxyCodeLine{00149     \textcolor{comment}{//st\_readFileSSID(\&(MyNode.SSID));                                          //Get MyNode.SSID[] -\/-\/> Read SSID File}}
+\DoxyCodeLine{00150 \textcolor{comment}{    /************ Ends Reading Configuration Files **************************/}}
+\DoxyCodeLine{00151 }
+\DoxyCodeLine{00152     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}}>=4) \{                                                     \textcolor{comment}{//if NFails >= 4}}
+\DoxyCodeLine{00153 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00154         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"NFails > 4, SETTING NODE IN WIFI MODE\(\backslash\)n\(\backslash\)r"});                \textcolor{comment}{//debug}}
+\DoxyCodeLine{00155 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00156         \mbox{\hyperlink{file__system_8c_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}{st\_readFileSSID}}(\&(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}));                                        \textcolor{comment}{//Read SSID from file}}
+\DoxyCodeLine{00157         \mbox{\hyperlink{wifi_8c_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}{wlanConf}}();                                                             \textcolor{comment}{//Setup Node as WiFi}}
+\DoxyCodeLine{00158         \mbox{\hyperlink{wifi_8c_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}{wlanConnectFromFile}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}});                                       \textcolor{comment}{//connect to Known Host}}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160         \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}}=0;                                                         \textcolor{comment}{//set NBoot = 0}}
+\DoxyCodeLine{00161         \mbox{\hyperlink{file__system_8c_a5813499664e66d7c300822aa326ff46b_a5813499664e66d7c300822aa326ff46b}{writeNBoot}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}});                                               \textcolor{comment}{//write to file NBoot}}
+\DoxyCodeLine{00162         \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}}=0;                                                        \textcolor{comment}{//set NFails = 0}}
+\DoxyCodeLine{00163         \mbox{\hyperlink{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{writeNFails}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}});                                             \textcolor{comment}{//write to file NFails}}
+\DoxyCodeLine{00164     \}}
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166 \textcolor{comment}{    /************* Begin Configure Peripherals ***********************/}}
+\DoxyCodeLine{00167     \mbox{\hyperlink{hal___g_p_i_o_8c_a450ea7cddaf64406e7c50767418312cc_a450ea7cddaf64406e7c50767418312cc}{RN2483\_Clear}}();                                                             \textcolor{comment}{//Reset the RN2483}}
+\DoxyCodeLine{00168     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}} = \mbox{\hyperlink{hal___i2_c_8c_a511af9fd9158a86cdbb3ff968aaa3a1d_a511af9fd9158a86cdbb3ff968aaa3a1d}{Startup\_I2C}}(\mbox{\hyperlink{_board_8h_a33acee482f45f270acd61ae5f622f8b4_a33acee482f45f270acd61ae5f622f8b4}{Board\_I2C0}});                                              \textcolor{comment}{//I2C interface started}}
+\DoxyCodeLine{00169 \textcolor{comment}{    /************* End Configure Peripherals ***********************/}}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{00172 \textcolor{comment}{    /*************** Begin Setting Node WakeUp\_Time in RTC */}}
+\DoxyCodeLine{00173     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_d_s1374_8c_a42fccf78c9eebedeb503a8dc320a59b1_a42fccf78c9eebedeb503a8dc320a59b1}{DS1374\_Read\_Ctrl}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}})==0x06|| \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_af83141c904a64464307f9bde7d831e4d}{ChangeWakeUp}} == 1 ) \{              \textcolor{comment}{//if DS1374 is powerup or MyNode.ChangeWakeUp == 1}}
+\DoxyCodeLine{00174         \mbox{\hyperlink{_d_s1374_8c_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}{DS1374\_Clear\_AF}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}});                                                   \textcolor{comment}{//clear AF register of DS1374}}
+\DoxyCodeLine{00175         \mbox{\hyperlink{_d_s1374_8c_a471c71fc7f630c597cb0ce730c4f8a13_a471c71fc7f630c597cb0ce730c4f8a13}{DS1374\_Write\_WdAlmb}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}}, \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8d9f89e4cadd72790f988d4def70b7e9}{WakeUpInterval}});                        \textcolor{comment}{//configures the RTC}}
+\DoxyCodeLine{00176         \mbox{\hyperlink{_d_s1374_8c_aa0793fdcea2817ea1d51c85add50d43b_aa0793fdcea2817ea1d51c85add50d43b}{DS1374\_Write\_Ctrl}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}});                                                 \textcolor{comment}{//write Control register of DS1374}}
+\DoxyCodeLine{00177     \} \textcolor{keywordflow}{else} \{                                                                    \textcolor{comment}{//if DS1374 was not powerup}}
+\DoxyCodeLine{00178         \mbox{\hyperlink{_d_s1374_8c_a61ec4d0de717e1e70ab9b4c362230058_a61ec4d0de717e1e70ab9b4c362230058}{DS1374\_Clear\_AF}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}});                                                   \textcolor{comment}{//clear AF register of DS1374}}
+\DoxyCodeLine{00179     \}}
+\DoxyCodeLine{00180 }
+\DoxyCodeLine{00181 \textcolor{comment}{    /************** Begin Configuration and Setup Wireless Connectivity ***************/}}
+\DoxyCodeLine{00182     uart1 = \mbox{\hyperlink{hal___u_a_r_t_8c_add59c4194add3a5a3d7ae00a60994e5a_add59c4194add3a5a3d7ae00a60994e5a}{Startup\_UART}}(\mbox{\hyperlink{_board_8h_a6157d7d1b4e6c13f4aae7ff89b56e997_a6157d7d1b4e6c13f4aae7ff89b56e997}{Board\_UART1}}, 57600);                                   \textcolor{comment}{//initiates UART1 (connected to RN2483)}}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00184     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}}==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb_a57282daac3f5b6e3aa948b43dc1cd2eb}{MODE\_NORMAL\_LORA}}) \{                                        \textcolor{comment}{//if Mode = Lora}}
+\DoxyCodeLine{00185         \mbox{\hyperlink{hal___g_p_i_o_8c_aa646d2788fdf23312d403fe0ef0d176f_aa646d2788fdf23312d403fe0ef0d176f}{RN2483\_Set}}();                                                           \textcolor{comment}{//Set /MCLR Pin to 1 releases RN2483}}
+\DoxyCodeLine{00186         sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart1, buf);                                          \textcolor{comment}{//collects initialization text of RN2483}}
+\DoxyCodeLine{00187 }
+\DoxyCodeLine{00188         \textcolor{keywordflow}{if} (sz==0) \{                                                            \textcolor{comment}{//Buffer size is too large}}
+\DoxyCodeLine{00189         \}}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191         MyLoraNode.Upctr = \mbox{\hyperlink{file__system_8c_a553babbf696d08f53ac9c5a5099f1d97_a553babbf696d08f53ac9c5a5099f1d97}{st\_readFileUpCntr}}();                                 \textcolor{comment}{//Read upctr from file}}
+\DoxyCodeLine{00192         \mbox{\hyperlink{hal___l_o_r_a_8c_a6d9a276861f1d8d552d0691b4c3cbdba_a6d9a276861f1d8d552d0691b4c3cbdba}{Mac\_Set\_Upctr}}(uart1,\&MyLoraNode);                                       \textcolor{comment}{//set upctr on node}}
+\DoxyCodeLine{00193         MyLoraNode.Dnctr = \mbox{\hyperlink{file__system_8c_a1bfec3db28f2764508d1acfdf4629b9a_a1bfec3db28f2764508d1acfdf4629b9a}{st\_readFileDnCntr}}();                                 \textcolor{comment}{//Read dnctr from file}}
+\DoxyCodeLine{00194         \mbox{\hyperlink{hal___l_o_r_a_8c_a43b2e0ff493c843f67fc30a88fb1adfd_a43b2e0ff493c843f67fc30a88fb1adfd}{Mac\_Set\_Dnctr}}(uart1,\&MyLoraNode);                                       \textcolor{comment}{//set dnctr on node}}
+\DoxyCodeLine{00195         \mbox{\hyperlink{hal___l_o_r_a_8c_a01afbfa551441f1a47f2d3b2c9659bbb_a01afbfa551441f1a47f2d3b2c9659bbb}{Mac\_Ar\_On}}(uart1);                                                       \textcolor{comment}{//Set Automatic Retransmit ON}}
+\DoxyCodeLine{00196         \textcolor{comment}{// Mac\_Set\_Pwridx(uart1, 1);                                            //Set Tx Power (by default is 1, the maximum 14dBm)}}
+\DoxyCodeLine{00197         \textcolor{comment}{// Mac\_Adr\_On(uart1);                                                   //Set adaptive datarate ON (useful when using OTAA)}}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00199         ret = \mbox{\hyperlink{hal___l_o_r_a_8c_a0c7557b461266dd11774456f774d225a_a0c7557b461266dd11774456f774d225a}{Join\_Abp\_Lora}}(uart1);                                             \textcolor{comment}{//Join ABP}}
+\DoxyCodeLine{00200         \textcolor{keywordflow}{if} (ret==\mbox{\hyperlink{hal___l_o_r_a_8h_acf868de705fe437eb0d977d8f3d8057b_acf868de705fe437eb0d977d8f3d8057b}{SUCCESS\_ABP\_LORA}})\{                                             \textcolor{comment}{//if Join ABP = Success}}
+\DoxyCodeLine{00201             \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}}=0;                                                    \textcolor{comment}{//set NFails = 0}}
+\DoxyCodeLine{00202             \mbox{\hyperlink{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{writeNFails}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}});                                         \textcolor{comment}{//write to file NFails}}
+\DoxyCodeLine{00203         \} \textcolor{keywordflow}{else} \{                                                                \textcolor{comment}{//if Join ABP = Fail}}
+\DoxyCodeLine{00204 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00205             UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}},\textcolor{stringliteral}{"Join\_Abp\_Lora() Failed"},22);                      \textcolor{comment}{//debug}}
+\DoxyCodeLine{00206             UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}, 2);                                       \textcolor{comment}{//debug}}
+\DoxyCodeLine{00207 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00208             \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}}++;                                                    \textcolor{comment}{//Nfails ++}}
+\DoxyCodeLine{00209             \mbox{\hyperlink{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{writeNFails}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}});                                         \textcolor{comment}{//Write to NFails File}}
+\DoxyCodeLine{00210             NextStep=\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3b61478edd7c1b25c8facd2907cf6c33_a3b61478edd7c1b25c8facd2907cf6c33}{SHUTDOWN}};                                                  \textcolor{comment}{//shutdown node}}
+\DoxyCodeLine{00211         \}}
+\DoxyCodeLine{00212     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}}==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab09f0292902c3fce30bad4623afe6e61_ab09f0292902c3fce30bad4623afe6e61}{MODE\_NORMAL\_WIFI}})\{                                  \textcolor{comment}{//if Mode = wifi}}
+\DoxyCodeLine{00213             \mbox{\hyperlink{file__system_8c_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}{st\_readFileSSID}}(\&(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}));                                    \textcolor{comment}{//Read SSID from file}}
+\DoxyCodeLine{00214             ret = \mbox{\hyperlink{wifi_8c_a0a818a3ce5d4392ffe34226a3927293e_a0a818a3ce5d4392ffe34226a3927293e}{wlanConf}}();                                                   \textcolor{comment}{//Setup WiFi}}
+\DoxyCodeLine{00215             ret = \mbox{\hyperlink{wifi_8c_aaf48e61dae02c858bd2ca0adf3376e6e_aaf48e61dae02c858bd2ca0adf3376e6e}{wlanConnectFromFile}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}});                             \textcolor{comment}{//Connect WiFi from file}}
+\DoxyCodeLine{00216 }
+\DoxyCodeLine{00217             \textcolor{keywordflow}{if} (ret==\mbox{\hyperlink{wifi_8h_a167740604ff6466bab5034751b84e0ad_a167740604ff6466bab5034751b84e0ad}{SUCCESS\_CONNECT\_WIFI}}) \{                                    \textcolor{comment}{//if connect wifi = success}}
+\DoxyCodeLine{00218                 \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}}=0;                                                \textcolor{comment}{//set NFails = 0}}
+\DoxyCodeLine{00219                 \mbox{\hyperlink{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{writeNFails}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}});                                     \textcolor{comment}{//write to file NFails}}
+\DoxyCodeLine{00220                 \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)rCONN OK!\(\backslash\)n\(\backslash\)r"});                                 \textcolor{comment}{//debug}}
+\DoxyCodeLine{00221             \} \textcolor{keywordflow}{else} \{                                                            \textcolor{comment}{//if connect wifi = fail}}
+\DoxyCodeLine{00222                 \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}}++;                                                \textcolor{comment}{//Nfails ++}}
+\DoxyCodeLine{00223                 \mbox{\hyperlink{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{writeNFails}}(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a73f527be594a95bf28c1934cb3f0f98b}{NFails}});                                     \textcolor{comment}{//Write to NFails File}}
+\DoxyCodeLine{00224                 \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)rCONN KO!\(\backslash\)n\(\backslash\)r"});                                 \textcolor{comment}{//debug}}
+\DoxyCodeLine{00225                 NextStep=\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3b61478edd7c1b25c8facd2907cf6c33_a3b61478edd7c1b25c8facd2907cf6c33}{SHUTDOWN}};                                              \textcolor{comment}{//shutdown node}}
+\DoxyCodeLine{00226             \}}
+\DoxyCodeLine{00227     \}}
+\DoxyCodeLine{00228 \textcolor{comment}{    /************** End of Configuration and Setup Wireless Connectivity ***************/}}
+\DoxyCodeLine{00229     \textcolor{keywordflow}{if} (NextStep==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a3b61478edd7c1b25c8facd2907cf6c33_a3b61478edd7c1b25c8facd2907cf6c33}{SHUTDOWN}}) \{                                                   \textcolor{comment}{//if nextstep = shutdown}}
+\DoxyCodeLine{00230         I2C\_close(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}});                                                         \textcolor{comment}{//close i2c}}
+\DoxyCodeLine{00231         \mbox{\hyperlink{hal___g_p_i_o_8c_a4d7ff87c7758b4bbc7b0f6cd4964e3cd_a4d7ff87c7758b4bbc7b0f6cd4964e3cd}{I2C\_As\_GPIO\_Low}}();                                                      \textcolor{comment}{//Puts SCL and SDA signals low to save power}}
+\DoxyCodeLine{00232         \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();                                                         \textcolor{comment}{//Auto Shutdown}}
+\DoxyCodeLine{00233     \}}
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00235 \textcolor{comment}{    /************** Begin Reading Data from Sensors ***********************************/}}
+\DoxyCodeLine{00236     \mbox{\hyperlink{hal___g_p_i_o_8c_a6c74838e78acd1438944bf31b0e1c9c5_a6c74838e78acd1438944bf31b0e1c9c5}{SPI\_CS\_Disable}}();                                                           \textcolor{comment}{//Put all CS to Logic High}}
+\DoxyCodeLine{00237     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}} = \mbox{\hyperlink{hal___s_p_i_8c_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}{Startup\_SPI}}(\mbox{\hyperlink{_board_8h_ac8cf850a1630ef0812080cbe7d3035cb_ac8cf850a1630ef0812080cbe7d3035cb}{Board\_SPI\_MASTER}}, 8, 5000000);                            \textcolor{comment}{//Configure SPI Master at 5 Mbps, 8-\/bits, CPOL=0, PHA=0}}
+\DoxyCodeLine{00238     Timer\_init();                                                               \textcolor{comment}{//Start Timer for ADC Timestep}}
+\DoxyCodeLine{00239     DataPacketLen = \mbox{\hyperlink{_sensors_8c_ac082b6ab2ea1b9f5053b78d6ca51558e_ac082b6ab2ea1b9f5053b78d6ca51558e}{GetSensorData}}(DataPacket);                                  \textcolor{comment}{//get sensors data}}
+\DoxyCodeLine{00240 \textcolor{comment}{    /************** End Reading Data from Sensors ***********************************/}}
+\DoxyCodeLine{00241 }
+\DoxyCodeLine{00242     SPI\_close(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});                                                             \textcolor{comment}{//Close all sensor related peripherals}}
+\DoxyCodeLine{00243                                                                                 \textcolor{comment}{//Not really enable the SPI but just puts the CS signal to '0'}}
+\DoxyCodeLine{00244                                                                                 \textcolor{comment}{//to prevent PCB from not really shutting down (a high value in some SPI signals}}
+\DoxyCodeLine{00245                                                                                 \textcolor{comment}{//keeps sensor chips active)}}
+\DoxyCodeLine{00246     \mbox{\hyperlink{hal___g_p_i_o_8c_a2be9e34a0529d51de1c93e36a419155f_a2be9e34a0529d51de1c93e36a419155f}{LDC1000\_SPI\_Enable}}();                                                       \textcolor{comment}{//ldc spi enable}}
+\DoxyCodeLine{00247     \mbox{\hyperlink{hal___g_p_i_o_8c_a8246cc2e743b65d0d3529c614d5b2514_a8246cc2e743b65d0d3529c614d5b2514}{ADXL355\_SPI\_Enable}}();                                                       \textcolor{comment}{//adxl spi enable}}
+\DoxyCodeLine{00248     \mbox{\hyperlink{hal___g_p_i_o_8c_a80e700bffa326a8ea835670fe32384b3_a80e700bffa326a8ea835670fe32384b3}{BME280\_SPI\_Enable}}();                                                        \textcolor{comment}{//bme spi enable}}
+\DoxyCodeLine{00249     \mbox{\hyperlink{hal___g_p_i_o_8c_a5b506ab1aa1f74776ea15b391f6d2b19_a5b506ab1aa1f74776ea15b391f6d2b19}{SPI\_As\_GPIO\_Low}}();                                                          \textcolor{comment}{//Puts all rest of SPI signals to '0' to save power}}
+\DoxyCodeLine{00250     I2C\_close(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}{i2c}});                                                             \textcolor{comment}{//close i2c}}
+\DoxyCodeLine{00251     \mbox{\hyperlink{hal___g_p_i_o_8c_a4d7ff87c7758b4bbc7b0f6cd4964e3cd_a4d7ff87c7758b4bbc7b0f6cd4964e3cd}{I2C\_As\_GPIO\_Low}}();                                                          \textcolor{comment}{//Puts SCL and SDA signals low to save power}}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253     MyLoraNode.DataLenTx = \mbox{\hyperlink{hal___l_o_r_a_8c_a6dea4fbc625f1d4164ed1e43a58b3114_a6dea4fbc625f1d4164ed1e43a58b3114}{Uint8Array2Char}}(DataPacket, DataPacketLen, \&(MyLoraNode.DataTx));\textcolor{comment}{//initiates data to send}}
+\DoxyCodeLine{00254 }
+\DoxyCodeLine{00255 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00256     UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \&(MyLoraNode.DataTx),MyLoraNode.DataLenTx);               \textcolor{comment}{//debug}}
+\DoxyCodeLine{00257     UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}, 2);                                               \textcolor{comment}{//debug}}
+\DoxyCodeLine{00258 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00259 }
+\DoxyCodeLine{00260     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}}==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb_a57282daac3f5b6e3aa948b43dc1cd2eb}{MODE\_NORMAL\_LORA}}) \{                                        \textcolor{comment}{//if Mode = Lora}}
+\DoxyCodeLine{00261         ret = \mbox{\hyperlink{hal___l_o_r_a_8c_a8b1849d79d4f19889f0b771dd83b0854_a8b1849d79d4f19889f0b771dd83b0854}{Tx\_Uncnf\_Lora}}(uart1, \&MyLoraNode, \&mask, \&nodeId);                \textcolor{comment}{//Transmit Data, several tries?}}
+\DoxyCodeLine{00262         \textcolor{keywordflow}{if} (ret==\mbox{\hyperlink{hal___l_o_r_a_8h_a48e45364a90c10734809dfcfba4350d9_a48e45364a90c10734809dfcfba4350d9}{SUCCESS\_TX\_MAC\_TX}}) \{                                           \textcolor{comment}{//if tx = success}}
+\DoxyCodeLine{00263             MyLoraNode.Upctr = \mbox{\hyperlink{hal___l_o_r_a_8c_a2a98bbf1f654c54bd1023c5805f32b86_a2a98bbf1f654c54bd1023c5805f32b86}{Mac\_Get\_Upctr}}(uart1);                            \textcolor{comment}{//Get upctr from RN2483}}
+\DoxyCodeLine{00264             \mbox{\hyperlink{file__system_8c_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}{writeUpCntr}}(MyLoraNode.Upctr);                                      \textcolor{comment}{//write upctr to file}}
+\DoxyCodeLine{00265             MyLoraNode.Dnctr = \mbox{\hyperlink{hal___l_o_r_a_8c_a3a9da280c36d4cebfcefd1c67b2328b7_a3a9da280c36d4cebfcefd1c67b2328b7}{Mac\_Get\_Dnctr}}(uart1);                            \textcolor{comment}{//Get dnctr from RN2483}}
+\DoxyCodeLine{00266             \mbox{\hyperlink{file__system_8c_ae9b67eda8db36bafa031f04504f58d9f_ae9b67eda8db36bafa031f04504f58d9f}{writeDnCntr}}(MyLoraNode.Dnctr);                                      \textcolor{comment}{//write dnctr to file}}
+\DoxyCodeLine{00267             \textcolor{comment}{//writeNFails(0);}}
+\DoxyCodeLine{00269 \textcolor{comment}{}        \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ret == \mbox{\hyperlink{hal___l_o_r_a_8h_a79fe3e0474ed79ce4763c098f993794c_a79fe3e0474ed79ce4763c098f993794c}{SUCCESS\_TX\_MAC\_RX}}) \{                                  \textcolor{comment}{//if rx = success}}
+\DoxyCodeLine{00270             MyLoraNode.Upctr = \mbox{\hyperlink{hal___l_o_r_a_8c_a2a98bbf1f654c54bd1023c5805f32b86_a2a98bbf1f654c54bd1023c5805f32b86}{Mac\_Get\_Upctr}}(uart1);                            \textcolor{comment}{//Get upctr from RN2483}}
+\DoxyCodeLine{00271             \mbox{\hyperlink{file__system_8c_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}{writeUpCntr}}(MyLoraNode.Upctr);                                      \textcolor{comment}{//*****SI HAGO ESTE WRITE MACHACO EL VALOR DE DOWNLINK PARA ESTE PARAM.}}
+\DoxyCodeLine{00272             MyLoraNode.Dnctr = \mbox{\hyperlink{hal___l_o_r_a_8c_a3a9da280c36d4cebfcefd1c67b2328b7_a3a9da280c36d4cebfcefd1c67b2328b7}{Mac\_Get\_Dnctr}}(uart1);                            \textcolor{comment}{//Get dnctr from RN2483}}
+\DoxyCodeLine{00273             \mbox{\hyperlink{file__system_8c_ae9b67eda8db36bafa031f04504f58d9f_ae9b67eda8db36bafa031f04504f58d9f}{writeDnCntr}}(MyLoraNode.Dnctr);                                      \textcolor{comment}{//*****SI HAGO ESTE WRITE MACHACO EL VALOR DE DOWNLINK PARA ESTE PARAM.}}
+\DoxyCodeLine{00274             \textcolor{comment}{/*if (nodeId==MyNode.NodeId) \{}}
+\DoxyCodeLine{00275 \textcolor{comment}{                // Write New Configuration Data to Files}}
+\DoxyCodeLine{00276 \textcolor{comment}{                if (mask\&0x01!=0) \{}}
+\DoxyCodeLine{00277 \textcolor{comment}{                    writeWakeUp(MyNode.WakeUpInterval);}}
+\DoxyCodeLine{00278 \textcolor{comment}{                \}}}
+\DoxyCodeLine{00279 \textcolor{comment}{                if (mask\&0x02!=0) \{}}
+\DoxyCodeLine{00280 \textcolor{comment}{                    // writeFirstBoot(MyNode.FirstBoot);}}
+\DoxyCodeLine{00281 \textcolor{comment}{                    // writeMode(MyNode.Mode);}}
+\DoxyCodeLine{00282 \textcolor{comment}{                \}}}
+\DoxyCodeLine{00283 \textcolor{comment}{                if (mask\&0x04!=0) \{}}
+\DoxyCodeLine{00284 \textcolor{comment}{                    writeSSID(\&(MyNode.SSID));}}
+\DoxyCodeLine{00285 \textcolor{comment}{                \}}}
+\DoxyCodeLine{00286 \textcolor{comment}{                if (mask\&0x08!=0) \{}}
+\DoxyCodeLine{00287 \textcolor{comment}{                    writeNCycles(MyNode.NCycles);}}
+\DoxyCodeLine{00288 \textcolor{comment}{                \}}}
+\DoxyCodeLine{00289 \textcolor{comment}{                if (mask\&0x10!=0) \{}}
+\DoxyCodeLine{00290 \textcolor{comment}{                    writeUpCntr(MyLoraNode.Upctr);}}
+\DoxyCodeLine{00291 \textcolor{comment}{                \}}}
+\DoxyCodeLine{00292 \textcolor{comment}{            \}*/}}
+\DoxyCodeLine{00293             \textcolor{comment}{//writeNFails(0);                                                   //Nfails = 0 and write to NFails}}
+\DoxyCodeLine{00294         \} \textcolor{keywordflow}{else} \{                                                                \textcolor{comment}{//if tx = fail}}
+\DoxyCodeLine{00295 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00296             UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}},\textcolor{stringliteral}{"Tx\_Uncnf\_Lora() Failed"},22);                      \textcolor{comment}{//debug}}
+\DoxyCodeLine{00297             UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}, 2);                                       \textcolor{comment}{//debug}}
+\DoxyCodeLine{00298 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00299             \textcolor{comment}{//MyNode.NFails++;                                                  //Nfails ++}}
+\DoxyCodeLine{00300             \textcolor{comment}{//writeNFails(MyNode.NFails);                                       //write to Nfails file}}
+\DoxyCodeLine{00301         \}}
+\DoxyCodeLine{00302     \}}
+\DoxyCodeLine{00303     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}}==\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ab09f0292902c3fce30bad4623afe6e61_ab09f0292902c3fce30bad4623afe6e61}{MODE\_NORMAL\_WIFI}}) \{                                   \textcolor{comment}{//if Mode = wifi}}
+\DoxyCodeLine{00304         \mbox{\hyperlink{wifi_8c_a870586c295b7c56fd1d8fd8c2c374472_a870586c295b7c56fd1d8fd8c2c374472}{prepareDataFrame}}(\mbox{\hyperlink{wifi_8h_a614217d263be1fb1a5f76e2ff7be19a2_a614217d263be1fb1a5f76e2ff7be19a2}{PORT}}, \mbox{\hyperlink{wifi_8h_aeb9a1c6207ace74b672622933f5baa09_aeb9a1c6207ace74b672622933f5baa09}{DEST\_IP\_ADDR}});                                   \textcolor{comment}{//prepare destination frame}}
+\DoxyCodeLine{00305         sockId = sl\_Socket(SL\_AF\_INET,SL\_SOCK\_DGRAM, 0);                        \textcolor{comment}{//creates a sokect}}
+\DoxyCodeLine{00306         \textcolor{keywordflow}{if}(sockId < 0)\{                                                         \textcolor{comment}{//if socket = fail}}
+\DoxyCodeLine{00307             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"error UDP \%d\(\backslash\)n\(\backslash\)r"},sockId);                              \textcolor{comment}{//debug}}
+\DoxyCodeLine{00308         \}}
+\DoxyCodeLine{00309         status = sl\_SendTo(sockId, MyLoraNode.DataTx, MyLoraNode.DataLenTx, 0,(SlSockAddr\_t *)\&\mbox{\hyperlink{wifi_8h_a6fe672d67b88d965a34eb95e16744316_a6fe672d67b88d965a34eb95e16744316}{PowerMeasure\_CB}}.ipV4Addr,\textcolor{keyword}{sizeof}(SlSockAddrIn\_t));\textcolor{comment}{//send data}}
+\DoxyCodeLine{00310         \textcolor{keywordflow}{if}(status < 0 )\{                                                        \textcolor{comment}{//if send = fail}}
+\DoxyCodeLine{00311             status = sl\_Close(sockId);                                          \textcolor{comment}{//close socket}}
+\DoxyCodeLine{00312             \mbox{\hyperlink{wifi_8h_aee01c39132c3e5916e949a9b3280ceb1_aee01c39132c3e5916e949a9b3280ceb1}{ASSERT\_ON\_ERROR}}(sockId);                                            \textcolor{comment}{//debug error}}
+\DoxyCodeLine{00313             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)rERROR SENDING PACKET: \%s\(\backslash\)n\(\backslash\)r"}, status);             \textcolor{comment}{//debug error}}
+\DoxyCodeLine{00314             \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();                                                     \textcolor{comment}{//Auto Shutdown}}
+\DoxyCodeLine{00315         \}\textcolor{keywordflow}{else}\{                                                                  \textcolor{comment}{//if send = success}}
+\DoxyCodeLine{00316             status = sl\_Close(sockId);                                          \textcolor{comment}{//close socket}}
+\DoxyCodeLine{00317             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"PACKET SEND: \%s\(\backslash\)n\(\backslash\)r"}, MyLoraNode.DataTx);               \textcolor{comment}{//debug ok}}
+\DoxyCodeLine{00318         \}}
+\DoxyCodeLine{00319     \}}
+\DoxyCodeLine{00320 }
+\DoxyCodeLine{00321     \mbox{\hyperlink{file__system_8c_a5813499664e66d7c300822aa326ff46b_a5813499664e66d7c300822aa326ff46b}{writeNBoot}}(1-\/\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa865bff0793af46a3e20c31ec500a0d7}{NBoot}});                                                 \textcolor{comment}{//change NBoot and write to NBoot file}}
+\DoxyCodeLine{00322 }
+\DoxyCodeLine{00323 \textcolor{preprocessor}{\#ifdef DEBUG}}
+\DoxyCodeLine{00324     UART\_write(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}, \textcolor{stringliteral}{"End of STARPORTS Measures\(\backslash\)r\(\backslash\)n"}, 27);                     \textcolor{comment}{//debug}}
+\DoxyCodeLine{00325 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00326 }
+\DoxyCodeLine{00327     UART\_close(uart1);                                                          \textcolor{comment}{//close uart1}}
+\DoxyCodeLine{00328     UART\_close(\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}});                                                          \textcolor{comment}{//close uart0}}
+\DoxyCodeLine{00329     \mbox{\hyperlink{hal___g_p_i_o_8c_a338ce3ef89288211272b368ddb2b851d_a338ce3ef89288211272b368ddb2b851d}{Node\_Disable}}();                                                             \textcolor{comment}{//Auto shutdown}}
+\DoxyCodeLine{00330 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a7a26eb8c88e9ecafa634d3ee2004c45a_a7a26eb8c88e9ecafa634d3ee2004c45a}\label{_s_t_a_r_p_o_r_t_s___app_8c_a7a26eb8c88e9ecafa634d3ee2004c45a_a7a26eb8c88e9ecafa634d3ee2004c45a}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!WakeupFromLPDS@{WakeupFromLPDS}}
+\index{WakeupFromLPDS@{WakeupFromLPDS}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{WakeupFromLPDS()}{WakeupFromLPDS()}}
+{\footnotesize\ttfamily void Wakeup\+From\+L\+P\+DS (\begin{DoxyParamCaption}\item[{uint\+\_\+least8\+\_\+t}]{var }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00332}{332}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00332                                        \{}
+\DoxyCodeLine{00333     \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a23d877e8b750db640896d946969a95cb_a23d877e8b750db640896d946969a95cb}{LPDSOut}} = 1;}
+\DoxyCodeLine{00334 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}\label{_s_t_a_r_p_o_r_t_s___app_8c_ac3886ff8eedde1ea48fb46d450100ac6_ac3886ff8eedde1ea48fb46d450100ac6}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!i2c@{i2c}}
+\index{i2c@{i2c}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{i2c}{i2c}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle i2c}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00066}{66}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a23d877e8b750db640896d946969a95cb_a23d877e8b750db640896d946969a95cb}\label{_s_t_a_r_p_o_r_t_s___app_8c_a23d877e8b750db640896d946969a95cb_a23d877e8b750db640896d946969a95cb}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!LPDSOut@{LPDSOut}}
+\index{LPDSOut@{LPDSOut}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{LPDSOut}{LPDSOut}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+P\+D\+S\+Out = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00054}{54}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}\label{_s_t_a_r_p_o_r_t_s___app_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!MyADXL@{MyADXL}}
+\index{MyADXL@{MyADXL}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{MyADXL}{MyADXL}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_a_d_x_l355___data}{A\+D\+X\+L355\+\_\+\+Data}} My\+A\+D\+XL = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f6a1ff33784a29f68d84d63eb154acd_a2f6a1ff33784a29f68d84d63eb154acd}{A\+D\+X\+L355\+\_\+\+ID}},500,256\}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00058}{58}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}\label{_s_t_a_r_p_o_r_t_s___app_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!MyBME@{MyBME}}
+\index{MyBME@{MyBME}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{MyBME}{MyBME}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_b_m_e280___data}{B\+M\+E280\+\_\+\+Data}} My\+B\+ME = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a9aa1e714b7260f21de419112f041aad7_a9aa1e714b7260f21de419112f041aad7}{B\+M\+E280\+\_\+\+ID}}\}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00059}{59}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}\label{_s_t_a_r_p_o_r_t_s___app_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!MyLDC@{MyLDC}}
+\index{MyLDC@{MyLDC}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{MyLDC}{MyLDC}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_l_d_c1000___data}{L\+D\+C1000\+\_\+\+Data}} My\+L\+DC = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a88370a81415260c8294e4aca4110154a_a88370a81415260c8294e4aca4110154a}{L\+D\+C1000\+\_\+\+ID}},16\}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00060}{60}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}\label{_s_t_a_r_p_o_r_t_s___app_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!MyNode@{MyNode}}
+\index{MyNode@{MyNode}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{MyNode}{MyNode}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} My\+Node = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a2f7945514ea8b2c7145cf68d47c96a08_a2f7945514ea8b2c7145cf68d47c96a08}{N\+O\+D\+E\+ID}},1200,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a57282daac3f5b6e3aa948b43dc1cd2eb_a57282daac3f5b6e3aa948b43dc1cd2eb}{M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+L\+O\+RA}},16,\char`\"{}Orange-\/D62D\char`\"{}\}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00056}{56}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a818e93e272a73588b96141632442c354_a818e93e272a73588b96141632442c354}\label{_s_t_a_r_p_o_r_t_s___app_8c_a818e93e272a73588b96141632442c354_a818e93e272a73588b96141632442c354}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!MyTMP006@{MyTMP006}}
+\index{MyTMP006@{MyTMP006}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{MyTMP006}{MyTMP006}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_t_m_p006___data}{T\+M\+P006\+\_\+\+Data}} My\+T\+M\+P006 = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a0e45781a49f4cfc8363fda3735663c85_a0e45781a49f4cfc8363fda3735663c85}{T\+M\+P006\+\_\+\+ID}}\}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00057}{57}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}\label{_s_t_a_r_p_o_r_t_s___app_8c_a3f86246f4ca39417ad0efa5e29b60a4d_a3f86246f4ca39417ad0efa5e29b60a4d}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!MyVbat@{MyVbat}}
+\index{MyVbat@{MyVbat}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{MyVbat}{MyVbat}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_vbat___data}{Vbat\+\_\+\+Data}} My\+Vbat = \{\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a5e0abd712518f4256f34430053b24c41_a5e0abd712518f4256f34430053b24c41}{V\+B\+A\+T\+\_\+\+ID}},16\}}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00061}{61}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}\label{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!spi@{spi}}
+\index{spi@{spi}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{spi}{spi}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Handle spi}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00067}{67}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a84499990c0506a7d6559f9ea074922a5_a84499990c0506a7d6559f9ea074922a5}\label{_s_t_a_r_p_o_r_t_s___app_8c_a84499990c0506a7d6559f9ea074922a5_a84499990c0506a7d6559f9ea074922a5}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!Timer0Event@{Timer0Event}}
+\index{Timer0Event@{Timer0Event}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{Timer0Event}{Timer0Event}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer0\+Event = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00052}{52}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}\label{_s_t_a_r_p_o_r_t_s___app_8c_addfca62d05edc75b79f6cb31e38452ab_addfca62d05edc75b79f6cb31e38452ab}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!Timer1Event@{Timer1Event}}
+\index{Timer1Event@{Timer1Event}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{Timer1Event}{Timer1Event}}
+{\footnotesize\ttfamily uint8\+\_\+t Timer1\+Event = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00053}{53}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}\label{_s_t_a_r_p_o_r_t_s___app_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!uart0@{uart0}}
+\index{uart0@{uart0}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{uart0}{uart0}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle uart0}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00065}{65}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{_s_t_a_r_p_o_r_t_s___app_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}\label{_s_t_a_r_p_o_r_t_s___app_8c_a3ee457ca076a1d77f9e213ddf178edad_a3ee457ca076a1d77f9e213ddf178edad}} 
+\index{STARPORTS\_App.c@{STARPORTS\_App.c}!wd@{wd}}
+\index{wd@{wd}!STARPORTS\_App.c@{STARPORTS\_App.c}}
+\doxyparagraph{\texorpdfstring{wd}{wd}}
+{\footnotesize\ttfamily Watchdog\+\_\+\+Handle wd}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00068}{68}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+

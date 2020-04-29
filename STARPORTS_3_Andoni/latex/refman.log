@@ -1,0 +1,4553 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2020.4.2)  8 APR 2020 13:49
+entering extended mode
+**./refman.tex
+(refman.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 76 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen103
+\extrarowheight=\dimen104
+\NC@list=\toks14
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fixltx2e.sty"
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
+
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count87
+\calc@Bcount=\count88
+\calc@Adimen=\dimen105
+\calc@Bdimen=\dimen106
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count89
+\calc@Cskip=\skip47
+) (doxygen.sty
+Package: doxygen 
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count90
+\float@exts=\toks15
+\float@box=\box26
+\@float@everytoks=\toks16
+\@floatcapt=\box27
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks17
+\verbatim@line=\toks18
+\verbatim@in@stream=\read1
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks19
+\minrowclearance=\skip48
+)
+\rownum=\count91
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(longtable_doxygen.sty
+Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
+ozen version for doxygen
+\LTleft=\skip49
+\LTright=\skip50
+\LTpre=\skip51
+\LTpost=\skip52
+\LTchunksize=\count92
+\LTcapwidth=\dimen107
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count93
+\LT@rows=\count94
+\c@LT@tables=\count95
+\c@LT@chunks=\count96
+\LT@p@ftn=\toks20
+) (tabu_doxygen.sty
+Package: tabu_doxygen 2011/02/26 v2.8 - flexible LaTeX tabulars (FC), frozen ve
+rsion for doxygen
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box32
+\sift@deathcycles=\count97
+\@vwid@loff=\dimen108
+\@vwid@roff=\dimen109
+)
+\c@taburow=\count98
+\tabu@nbcols=\count99
+\tabu@cnt=\count100
+\tabu@Xcol=\count101
+\tabu@alloc=\count102
+\tabu@nested=\count103
+\tabu@target=\dimen110
+\tabu@spreadtarget=\dimen111
+\tabu@naturalX=\dimen112
+\tabucolX=\dimen113
+\tabu@Xsum=\dimen114
+\extrarowdepth=\dimen115
+\abovetabulinesep=\dimen116
+\belowtabulinesep=\dimen117
+\tabustrutrule=\dimen118
+\tabu@thebody=\toks21
+\tabu@footnotes=\toks22
+\tabu@box=\box33
+\tabu@arstrutbox=\box34
+\tabu@hleads=\box35
+\tabu@vleads=\box36
+\tabu@cellskip=\skip53
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
+<2008/02/07> (tvz) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+\FV@CodeLineNo=\count104
+\FV@InFile=\read2
+\FV@TabBox=\box37
+\c@FancyVerbLine=\count105
+\FV@StepNumber=\count106
+\FV@OutFile=\write3
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+\TX@col@width=\dimen119
+\TX@old@table=\dimen120
+\TX@old@col=\dimen121
+\TX@target=\dimen122
+\TX@delta=\dimen123
+\TX@cols=\count107
+\TX@ftn=\toks24
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count108
+\multirow@dima=\skip55
+\bigstrutjot=\dimen124
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hanging\hanging.sty"
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip56
+\h@ngfstopwd=\skip57
+\h@ngquotewd=\skip58
+\h@ngdquotewd=\skip59
+\h@ngquerywd=\skip60
+\h@ngexclwd=\skip61
+\h@ngcolonwd=\skip62
+\h@ngscolonwd=\skip63
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\adjustbox.sty"
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count109
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\adjcalc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\trimclip.sty"
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen125
+\Gin@req@width=\dimen126
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\collectbox\collectbox.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box38
+)
+\tc@llx=\dimen127
+\tc@lly=\dimen128
+\tc@urx=\dimen129
+\tc@ury=\dimen130
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\adjustbox\tc-pdftex.def"
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen131
+\adjbox@Height=\dimen132
+\adjbox@Depth=\dimen133
+\adjbox@Totalheight=\dimen134
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ifoddpage\ifoddpage.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count110
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks27
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\stackengine\stackengine.sty"
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count111
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listofitems\listofitems.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\listofitems\listofitems.tex"
+\loi_nestcnt=\count112
+)
+Package: listofitems 2018/01/13 v1.52 Grab items in lists using user-specified 
+sep char (CT)
+)
+\c@@stackindex=\count113
+\@boxshift=\skip64
+\stack@tmplength=\skip65
+\temp@stkl=\skip66
+\@stackedboxwidth=\skip67
+\@addedbox=\box39
+\@anchorbox=\box40
+\stackedbox=\box41
+\@centerbox=\box42
+\c@ROWcellindex@=\count114
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
+\UL@box=\box43
+\UL@hyphenbox=\box44
+\UL@skip=\skip68
+\UL@hook=\toks28
+\UL@height=\dimen135
+\UL@pe=\count115
+\UL@pixel=\dimen136
+\ULC@box=\box45
+Package: ulem 2012/05/18
+\ULdepth=\dimen137
+)
+\xrefbox=\box46
+\xreflength=\skip69
+\CodeWidthChar=\skip70
+\CodeHeightChar=\skip71
+\DoxyCodeWidth=\skip72
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks29
+\inpenc@posthook=\toks30
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty"
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count116
+\mult@box=\box47
+\multicol@leftmargin=\dimen138
+\c@unbalance=\count117
+\c@collectmore=\count118
+\doublecol@number=\count119
+\multicoltolerance=\count120
+\multicolpretolerance=\count121
+\full@width=\dimen139
+\page@free=\dimen140
+\premulticols=\dimen141
+\postmulticols=\dimen142
+\multicolsep=\skip73
+\multicolbaselineskip=\skip74
+\partial@page=\box48
+\last@line=\box49
+\maxbalancingoverflow=\dimen143
+\mult@rightbox=\box50
+\mult@grightbox=\box51
+\mult@gfirstbox=\box52
+\mult@firstbox=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\c@columnbadness=\count122
+\c@finalcolumnbadness=\count123
+\last@try=\dimen144
+\multicolovershoot=\dimen145
+\multicolundershoot=\dimen146
+\mult@nat@firstbox=\box71
+\colbreak@box=\box72
+\mc@col@check@num=\count124
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\wasysym.sty"
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty"
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count125
+\Gm@cntv=\count126
+\c@Gm@tempcnt=\count127
+\Gm@bindingoffset=\dimen147
+\Gm@wd@mp=\dimen148
+\Gm@odd@mp=\dimen149
+\Gm@even@mp=\dimen150
+\Gm@layoutwidth=\dimen151
+\Gm@layoutheight=\dimen152
+\Gm@layouthoffset=\dimen153
+\Gm@layoutvoffset=\dimen154
+\Gm@dimlist=\toks31
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip75
+\f@nch@O@elh=\skip76
+\f@nch@O@erh=\skip77
+\f@nch@O@olh=\skip78
+\f@nch@O@orh=\skip79
+\f@nch@O@elf=\skip80
+\f@nch@O@erf=\skip81
+\f@nch@O@olf=\skip82
+\f@nch@O@orf=\skip83
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip84
+\bibsep=\skip85
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count128
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tocloft\tocloft.sty"
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip86
+\cftbeforetoctitleskip=\skip87
+\cftaftertoctitleskip=\skip88
+\cftbeforepartskip=\skip89
+\cftpartnumwidth=\skip90
+\cftpartindent=\skip91
+\cftbeforesecskip=\skip92
+\cftsecindent=\skip93
+\cftsecnumwidth=\skip94
+\cftbeforesubsecskip=\skip95
+\cftsubsecindent=\skip96
+\cftsubsecnumwidth=\skip97
+\cftbeforesubsubsecskip=\skip98
+\cftsubsubsecindent=\skip99
+\cftsubsubsecnumwidth=\skip100
+\cftbeforeparaskip=\skip101
+\cftparaindent=\skip102
+\cftparanumwidth=\skip103
+\cftbeforesubparaskip=\skip104
+\cftsubparaindent=\skip105
+\cftsubparanumwidth=\skip106
+\cftbeforeloftitleskip=\skip107
+\cftafterloftitleskip=\skip108
+\cftbeforefigskip=\skip109
+\cftfigindent=\skip110
+\cftfignumwidth=\skip111
+\c@lofdepth=\count129
+\c@lotdepth=\count130
+\cftbeforelottitleskip=\skip112
+\cftafterlottitleskip=\skip113
+\cftbeforetabskip=\skip114
+\cfttabindent=\skip115
+\cfttabnumwidth=\skip116
+)
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+
+Writing index file refman.idx
+("C:\Program Files\MiKTeX 2.9\tex\latex\newunicodechar\newunicodechar.sty"
+Package: newunicodechar 2012/11/12 v1.1 Defining Unicode characters
+)
+
+Package newunicodechar Warning: Redefining Unicode character on input line 113.
+
+
+
+Package newunicodechar Warning: Redefining Unicode character on input line 114.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen155
+\Hy@linkcounter=\count131
+\Hy@pagecounter=\count132
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count133
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing ON on input line 4527.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4762.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty"
+Package: backref 2016/05/21 v1.39 Bibliographical back referencing
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+))
+\c@Hy@tempcnt=\count134
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5115.
+\XeTeXLinkMargin=\dimen156
+\Fld@menulength=\count135
+\Field@Width=\dimen157
+\Fld@charsize=\dimen158
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing ON on input line 6382.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
+\Hy@abspage=\count136
+\c@Item=\count137
+\c@Hfootnote=\count138
+)
+Package hyperref Info: Driver: hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+\Fld@listcount=\count139
+\c@bookmark@seq@number=\count140
+\Hy@SectionHShift=\skip117
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 132.
+Package hyperref Info: Option `unicode' set `true' on input line 132.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\puenc.def"
+File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen159
+\captionmargin@=\dimen160
+\captionwidth=\dimen161
+\caption@tempdima=\dimen162
+\caption@indent=\dimen163
+\caption@parindent=\dimen164
+\caption@hangindent=\dimen165
+)
+\c@ContinuedFloat=\count141
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\etoc\etoc.sty"
+Package: etoc 2018/02/07 v1.08m Completely customisable TOCs (JFB)
+\Etoc@toctoks=\toks32
+\c@etoc@tocid=\count142
+\c@etoc@tocdepth=\count143
+\etoc@framed@titlebox=\box73
+\etoc@framed@contentsbox=\box74
+) (refman.aux
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8b
+db97' multiply defined.
+
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8b
+db97' multiply defined.
+
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c3
+85a4' multiply defined.
+
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8b
+db97' multiply defined.
+
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8b
+db97' multiply defined.
+
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c3
+85a4' multiply defined.
+
+
+LaTeX Warning: Label `_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8b
+db97' multiply defined.
+
+)
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 147.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count144
+\scratchdimen=\dimen166
+\scratchbox=\box75
+\nofMPsegments=\count145
+\nofMParguments=\count146
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count147
+\MPscratchDim=\dimen167
+\MPnumerator=\count148
+\makeMPintoPDFobject=\count149
+\everyMPtoPDFconversion=\toks34
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=121.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box76
+Package backref Info: ** backref set up for natbib ** on input line 147.
+Package hyperref Info: Link coloring ON on input line 147.
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count150
+)
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
+
+(refman.out) (refman.out)
+\@outlinefile=\write5
+\openout5 = `refman.out'.
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+\Etoc@tf=\read3
+Package hyperref Info: Option `pageanchor' set `false' on input line 153.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 153.
+
+Package hyperref Info: Option `unicode' set `true' on input line 153.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 12.9599pt on input line 158.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 158.
+LaTeX Font Info:    Try loading font information for U+msa on input line 158.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 158.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 158.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\wasysym\uwasy.fd"
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 10.79993pt on input line 158.
+ [1
+
+{C:/Users/aperez/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 165.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 8.99994pt on input line 165.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 165.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.29996pt on input line 165.
+ [1] [2] [3] [4]
+Package hyperref Info: Option `pageanchor' set `true' on input line 166.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 169.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.9599pt on input line 169.
+ (index.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 3.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (116.95627pt too wide) in paragraph at lines 3--3
+ []    \T1/pcr/m/n/8 This Software starts up the STARPORTS Sensor Node, reads N
+ode configuration parameters from file system files, 
+ []
+
+
+Overfull \hbox (102.55626pt too wide) in paragraph at lines 4--4
+ []    \T1/pcr/m/n/8 collects data from several sensors and transmit it by wire
+less communications. Finally, powers off the Node[] 
+ []
+
+[1]
+Overfull \hbox (54.55623pt too wide) in paragraph at lines 33--33
+ []    \T1/pcr/m/n/8 2.8 Powers off the Node during wake up interval (Configure
+d in "wakeupinterval" file (in seconds)[] 
+ []
+
+) (files.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 1.
+ [2] [3]) (_a_d_x_l355_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 18.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1phv.fd"
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 18.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 19.
+ [4]
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 8.99994pt on input line 57.
+
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 77.
+[5]
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+[6]
+Underfull \hbox (badness 10000) detected at line 185
+[][][]
+ []
+
+[7]
+Underfull \hbox (badness 10000) detected at line 236
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 275
+[][][]
+ []
+
+[8] [9]
+Underfull \hbox (badness 10000) detected at line 319
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 356
+[][][]
+ []
+
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 375.
+[10]
+Underfull \hbox (badness 10000) detected at line 395
+[][][]
+ []
+
+
+Overfull \vbox (0.84354pt too high) has occurred while \output is active []
+
+
+[11]
+Underfull \hbox (badness 10000) detected at line 467
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 511
+[][][]
+ []
+
+[12]
+Underfull \hbox (badness 10000) detected at line 548
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 583
+[][][]
+ []
+
+[13]
+Underfull \hbox (badness 10000) detected at line 618
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 659
+[][][]
+ []
+
+[14] [15]
+Underfull \hbox (badness 10000) detected at line 700
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 741
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+[16]
+Underfull \hbox (badness 10000) detected at line 782
+[][][]
+ []
+
+) (_a_d_x_l355_8c_source.tex [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19])
+(_a_d_x_l355_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[20]
+Underfull \hbox (badness 1448) in paragraph at lines 139--144
+[]\T1/phv/m/n/10 enum [] { [] = 0x04, [] = 0x00, [] = 0x01,
+ []
+
+[21]
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 197
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+[22] [23] [24]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26] [27] [28]
+Underfull \hbox (badness 10000) detected at line 939
+[][][]
+ []
+
+[29]
+Underfull \hbox (badness 10000) detected at line 981
+[][][]
+ []
+
+[30]
+Underfull \hbox (badness 10000) detected at line 1031
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1082
+[][][]
+ []
+
+[31]
+Underfull \hbox (badness 10000) detected at line 1121
+[][][]
+ []
+
+[32]
+Underfull \hbox (badness 10000) detected at line 1165
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1202
+[][][]
+ []
+
+
+Overfull \vbox (29.40178pt too high) has occurred while \output is active []
+
+
+[33]
+Underfull \hbox (badness 10000) detected at line 1241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1313
+[][][]
+ []
+
+[34]
+Underfull \hbox (badness 10000) detected at line 1357
+[][][]
+ []
+
+
+Overfull \vbox (0.48611pt too high) has occurred while \output is active []
+
+
+[35]
+Underfull \hbox (badness 10000) detected at line 1394
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1429
+[][][]
+ []
+
+[36]
+Underfull \hbox (badness 10000) detected at line 1464
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1505
+[][][]
+ []
+
+[37]
+Underfull \hbox (badness 10000) detected at line 1546
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1587
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+[38]
+Underfull \hbox (badness 10000) detected at line 1628
+[][][]
+ []
+
+) (_a_d_x_l355_8h_source.tex [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40])
+(_b_m_e280_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--17
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][][]
+ []
+
+[42]
+Underfull \hbox (badness 10000) detected at line 93
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 133
+[][][]
+ []
+
+[43]
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+[44]
+Underfull \hbox (badness 10000) detected at line 233
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 271
+[][][]
+ []
+
+[45]
+Underfull \hbox (badness 10000) detected at line 310
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 351
+[][][]
+ []
+
+[46]
+Underfull \hbox (badness 10000) detected at line 392
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 431
+[][][]
+ []
+
+[47]
+Underfull \hbox (badness 10000) detected at line 472
+[][][]
+ []
+
+[48]
+Underfull \hbox (badness 10000) detected at line 509
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 544
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Underfull \hbox (badness 10000) detected at line 582
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 609
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 619
+[][][]
+ []
+
+[50]
+Underfull \hbox (badness 10000) detected at line 677
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 687
+[][][]
+ []
+
+[51]
+Underfull \hbox (badness 10000) detected at line 764
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 774
+[][][]
+ []
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.775 ...d temperature value in units 100 $\ast$ º
+                                                  C
+? r
+OK, entering \nonstopmode...
+[52]) (_b_m_e280_8c_source.tex [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55])
+(_b_m_e280_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[56] [57]
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 159
+[][][]
+ []
+
+[58] [59] [60] [61] [62] [63] [64]
+Underfull \hbox (badness 10000) detected at line 814
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 854
+[][][]
+ []
+
+[65]
+Underfull \hbox (badness 10000) detected at line 915
+[][][]
+ []
+
+[66]
+Underfull \hbox (badness 10000) detected at line 954
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 992
+[][][]
+ []
+
+
+Overfull \vbox (6.71826pt too high) has occurred while \output is active []
+
+
+[67]
+Underfull \hbox (badness 10000) detected at line 1031
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1072
+[][][]
+ []
+
+[68]
+Underfull \hbox (badness 10000) detected at line 1113
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1152
+[][][]
+ []
+
+[69]
+Underfull \hbox (badness 10000) detected at line 1193
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1230
+[][][]
+ []
+
+[70]
+Underfull \hbox (badness 10000) detected at line 1265
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1303
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1330
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+[71]
+Underfull \hbox (badness 10000) detected at line 1340
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1398
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Overfull \vbox (0.97597pt too high) has occurred while \output is active []
+
+
+[72]
+Underfull \hbox (badness 10000) detected at line 1408
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1485
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+[73]
+Underfull \hbox (badness 10000) detected at line 1495
+[][][]
+ []
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `utf8'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1496 ... temperature value in units 100 $\ast$ º
+                                                  C
+You need to provide a definition with \DeclareInputText 
+or \DeclareInputMath before using this key.
+
+) (_b_m_e280_8h_source.tex [74]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75])
+(_board_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[76] [77] [78] [79] [80]
+Underfull \hbox (badness 10000) in paragraph at lines 442--443
+ \T1/phv/b/n/10 3.9.1.35 Board_SPI_MASTER_READY[] \T1/pcr/m/n/8 #define Board[]
+_[][]S[]P[]I[]_[][]M[]A[]S[]T[]E[]R[]_[][]R[]E[]A[]DY C[]C3220[]S[]F[]_[][]S[]T
+[]A[]R[]P[]O[]R[]T[]S[]_[][]S[]P[]I[]_[][]M[]A[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+ \T1/phv/b/n/10 3.9.1.37 Board_SPI_SLAVE_READY[] \T1/pcr/m/n/8 #define Board[]_
+[][]S[]P[]I[]_[][]S[]L[]A[]V[]E[]_[][]R[]E[]A[]DY C[]C3220[]S[]F[]_[][]S[]T[]A[
+]R[]P[]O[]R[]T[]S[]_[][]S[]P[]I[]_[][]S[]L[]A[]V[]E[]
+ []
+
+[81]) (_board_8h_source.tex [82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83])
+(_c_c3220_s_f___l_a_u_n_c_h_x_l_8h.tex
+Overfull \hbox (20.59657pt too wide) in paragraph at lines 13--18
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (81.6155pt too wide) in paragraph at lines 18--23
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (89.86847pt too wide) in paragraph at lines 23--27
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (89.21274pt too wide) in paragraph at lines 27--42
+[] \T1/phv/m/n/10 = 0, [], [],
+ []
+
+
+Overfull \hbox (69.95313pt too wide) in paragraph at lines 27--42
+[]\T1/phv/m/n/10 , [], [],
+ []
+
+
+Overfull \hbox (30.10033pt too wide) in paragraph at lines 42--46
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (28.6152pt too wide) in paragraph at lines 46--50
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (29.58737pt too wide) in paragraph at lines 50--55
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (97.76128pt too wide) in paragraph at lines 55--59
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (25.59158pt too wide) in paragraph at lines 59--63
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (42.59212pt too wide) in paragraph at lines 68--74
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (37.09341pt too wide) in paragraph at lines 74--79
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+[84]
+Overfull \hbox (135.23692pt too wide) in paragraph at lines 79--82
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+[85] [86]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [87]
+[88]
+Underfull \vbox (badness 1558) has occurred while \output is active []
+
+ [89])
+(_c_c3220_s_f___l_a_u_n_c_h_x_l_8h_source.tex [90])
+(_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91]
+Underfull \hbox (badness 10000) in paragraph at lines 3--44
+
+ []
+
+[92]
+Overfull \hbox (21.57552pt too wide) in paragraph at lines 145--147
+[]\T1/phv/m/n/10 const Watchdog[]C[]C32[]X[]X[]_[][]H[]W[]Attrs [] [][][] 
+ []
+
+[93]
+Overfull \hbox (29.71785pt too wide) in paragraph at lines 242--243
+ \T1/phv/b/n/10 3.13.3.3 ad-cCC3220SHWAttrs[] \T1/pcr/m/n/8 const A[]D[]C[]C[]C
+32[]X[]X[]_[][]H[]W[]Attrs[]V1 adc[]C[]C3220[]S[]H[]W[]Attrs[][][] 
+ []
+
+[94]
+Overfull \hbox (105.0175pt too wide) in paragraph at lines 307--308
+ \T1/phv/b/n/10 3.13.3.7 cap-tureCC3220SFHWAttrs[] \T1/pcr/m/n/8 const Capture[
+]C[]C32[]X[]X[]_[][]H[]W[]Attrs capture[]C[]C3220[]S[]F[]H[]W[]Attrs[][][] 
+ []
+
+
+Overfull \hbox (69.11336pt too wide) in paragraph at lines 332--333
+ \T1/phv/b/n/10 3.13.3.8 cap-tureCC3220SFObjects[] \T1/pcr/m/n/8 Capture[]C[]C3
+2[]X[]X[]_[][]Object capture[]C[]C3220[]S[]F[]Objects[][][] 
+ []
+
+
+Overfull \hbox (39.50047pt too wide) in paragraph at lines 342--343
+ \T1/phv/b/n/10 3.13.3.9 cryp-toCC3220SObjects[] \T1/pcr/m/n/8 Crypto[]C[]C32[]
+X[]X[]_[][]Object crypto[]C[]C3220[]S[]Objects[][][] 
+ []
+
+
+Overfull \hbox (64.98573pt too wide) in paragraph at lines 352--353
+ \T1/phv/b/n/10 3.13.3.10 Cryp-toCC32XX_config[] \T1/pcr/m/n/8 const Crypto[]C[
+]C32[]X[]X[]_[][]Config Crypto[]C[]C32[]X[]X[]_[]config[][][] 
+ []
+
+[95]
+Overfull \hbox (33.6837pt too wide) in paragraph at lines 371--372
+ \T1/phv/b/n/10 3.13.3.11 Cryp-toCC32XX_count[] \T1/pcr/m/n/8 const uint[]_[]le
+ast8[]_[]t Crypto[]C[]C32[]X[]X[]_[]count = [] 
+ []
+
+[96]
+Overfull \hbox (31.7247pt too wide) in paragraph at lines 487--488
+ \T1/phv/b/n/10 3.13.3.17 i2cCC3220SHWAttrs[] \T1/pcr/m/n/8 const I2[]C[]C[]C32
+[]X[]X[]_[][]H[]W[]Attrs[]V1 i2c[]C[]C3220[]S[]H[]W[]Attrs[][][] 
+ []
+
+[97]
+Overfull \hbox (112.22318pt too wide) in paragraph at lines 597--598
+ \T1/phv/b/n/10 3.13.3.23 pwm-TimerCC3220SHWAttrs[] \T1/pcr/m/n/8 const P[]W[]M
+[]Timer[]C[]C32[]X[]X[]_[][]H[]W[]Attrs[]V2 pwm[]Timer[]C[]C3220[]S[]H[]W[]Attr
+s[][][] 
+ []
+
+
+Overfull \hbox (66.71902pt too wide) in paragraph at lines 616--617
+ \T1/phv/b/n/10 3.13.3.24 pwm-TimerCC3220SObjects[] \T1/pcr/m/n/8 P[]W[]M[]Time
+r[]C[]C32[]X[]X[]_[][]Object pwm[]Timer[]C[]C3220[]S[]Objects[][][] 
+ []
+
+[98]
+Overfull \hbox (81.51251pt too wide) in paragraph at lines 662--663
+ \T1/phv/b/n/10 3.13.3.27 spiCC3220SDMAHWAttrs[] \T1/pcr/m/n/8 const S[]P[]I[]C
+[]C32[]X[]X[]D[]M[]A[]_[][]H[]W[]Attrs[]V1 spi[]C[]C3220[]S[]D[]M[]A[]H[]W[]Att
+rs[][][] 
+ []
+
+
+Overfull \hbox (35.64844pt too wide) in paragraph at lines 672--673
+ \T1/phv/b/n/10 3.13.3.28 spiCC3220SDMAObjects[] \T1/pcr/m/n/8 S[]P[]I[]C[]C32[
+]X[]X[]D[]M[]A[]_[][]Object spi[]C[]C3220[]S[]D[]M[]A[]Objects[][][] 
+ []
+
+[99]
+Overfull \hbox (70.71843pt too wide) in paragraph at lines 733--734
+ \T1/phv/b/n/10 3.13.3.32 timerCC3220SFHWAttrs[] \T1/pcr/m/n/8 const Timer[]C[]
+C32[]X[]X[]_[][]H[]W[]Attrs timer[]C[]C3220[]S[]F[]H[]W[]Attrs[][][] 
+ []
+
+
+Overfull \hbox (34.81429pt too wide) in paragraph at lines 767--768
+ \T1/phv/b/n/10 3.13.3.33 timerCC3220SFObjects[] \T1/pcr/m/n/8 Timer[]C[]C32[]X
+[]X[]_[][]Object timer[]C[]C3220[]S[]F[]Objects[][][] 
+ []
+
+[100]
+Overfull \hbox (50.79562pt too wide) in paragraph at lines 813--814
+ \T1/phv/b/n/10 3.13.3.36 uartCC3220SHWAttrs[] \T1/pcr/m/n/8 const U[]A[]R[]T[]
+C[]C32[]X[]X[]_[][]H[]W[]Attrs[]V1 uart[]C[]C3220[]S[]H[]W[]Attrs[][][] 
+ []
+
+
+Overfull \hbox (33.08337pt too wide) in paragraph at lines 865--866
+ \T1/phv/b/n/10 3.13.3.38 uartCC3220SRingBuffer[] \T1/pcr/m/n/8 unsigned char u
+art[]C[]C3220[]S[]Ring[]Buffer[][][][]32[] 
+ []
+
+[101]
+Overfull \hbox (15.13525pt too wide) in paragraph at lines 923--924
+ \T1/phv/b/n/10 3.13.3.42 Watch-dog_config[] \T1/pcr/m/n/8 const Watchdog[]_[][
+]Config Watchdog[]_[]config[][][] 
+ []
+
+
+Overfull \hbox (123.52744pt too wide) in paragraph at lines 954--955
+ \T1/phv/b/n/10 3.13.3.44 watch-dogCC3220SHWAttrs[] \T1/pcr/m/n/8 const Watchdo
+g[]C[]C32[]X[]X[]_[][]H[]W[]Attrs watchdog[]C[]C3220[]S[]H[]W[]Attrs[][][] 
+ []
+
+[102]
+Overfull \hbox (87.62329pt too wide) in paragraph at lines 976--977
+ \T1/phv/b/n/10 3.13.3.45 watch-dogCC3220SObjects[] \T1/pcr/m/n/8 Watchdog[]C[]
+C32[]X[]X[]_[][]Object watchdog[]C[]C3220[]S[]Objects[][][] 
+ []
+
+) (_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8c_source.tex [103]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [110])
+(_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h.tex
+Overfull \hbox (66.09094pt too wide) in paragraph at lines 13--17
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+[111]
+Overfull \hbox (102.62108pt too wide) in paragraph at lines 17--22
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (110.87405pt too wide) in paragraph at lines 22--26
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (81.45508pt too wide) in paragraph at lines 26--47
+[]\T1/phv/m/n/10 , [], [],
+ []
+
+
+Overfull \hbox (61.44835pt too wide) in paragraph at lines 26--47
+[]\T1/phv/m/n/10 , [], [],
+ []
+
+
+Overfull \hbox (51.10591pt too wide) in paragraph at lines 47--51
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (75.08174pt too wide) in paragraph at lines 51--55
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (118.76686pt too wide) in paragraph at lines 55--59
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (46.59717pt too wide) in paragraph at lines 59--63
+[]\T1/phv/m/n/10 enum [] { [] = 0, []
+ []
+
+
+Overfull \hbox (28.12894pt too wide) in paragraph at lines 63--68
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (63.5977pt too wide) in paragraph at lines 68--74
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Overfull \hbox (58.099pt too wide) in paragraph at lines 74--79
+[]\T1/phv/m/n/10 enum [] { [] = 0, [],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--82
+[]\T1/phv/m/n/10 enum [] { [] = 0,
+ []
+
+[112] [113] [114]
+Overfull \vbox (21.86356pt too high) has occurred while \output is active []
+
+
+[115] [116] [117]) (_c_c3220_s_f___s_t_a_r_p_o_r_t_s_8h_source.tex [118])
+(_d_s1374_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+[119]
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+[120]
+Underfull \hbox (badness 10000) detected at line 72
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 111
+[][][]
+ []
+
+[121]
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 188
+[][][]
+ []
+
+[122]
+Underfull \hbox (badness 10000) detected at line 227
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 266
+[][][]
+ []
+
+[123]
+Underfull \hbox (badness 10000) detected at line 307
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 347
+[][][]
+ []
+
+) (_d_s1374_8c_source.tex [124]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125])
+(_d_s1374_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+[126]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 57
+[][][]
+ []
+
+[127]
+Underfull \hbox (badness 10000) detected at line 162
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+[128]
+Underfull \hbox (badness 10000) detected at line 239
+[][][]
+ []
+
+[129]
+Underfull \hbox (badness 10000) detected at line 278
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+[130]
+Underfull \hbox (badness 10000) detected at line 356
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 397
+[][][]
+ []
+
+[131]
+Underfull \hbox (badness 10000) detected at line 437
+[][][]
+ []
+
+) (_d_s1374_8h_source.tex) (file__system_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+[132] [133]
+Underfull \hbox (badness 10000) detected at line 67
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+
+! Package inputenc Error: Unicode char ére (U+E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 A.\+Pére
+             z @tittle File system functions
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) detected at line 103
+[][][]
+ []
+
+[134]
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 194
+[][][]
+ []
+
+[135]
+Underfull \hbox (badness 10000) detected at line 253
+[][][]
+ []
+
+[136]
+Underfull \hbox (badness 10000) detected at line 313
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 371
+[][][]
+ []
+
+[137]
+Underfull \hbox (badness 10000) detected at line 430
+[][][]
+ []
+
+[138]
+Underfull \hbox (badness 10000) detected at line 490
+[][][]
+ []
+
+[139]
+Underfull \hbox (badness 10000) detected at line 554
+[][][]
+ []
+
+[140]
+Underfull \hbox (badness 10000) detected at line 605
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 664
+[][][]
+ []
+
+[141]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 727
+[][][]
+ []
+
+[142]
+Underfull \hbox (badness 10000) detected at line 785
+[][][]
+ []
+
+[143]
+Underfull \hbox (badness 10000) detected at line 843
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+[144]
+Underfull \hbox (badness 10000) detected at line 901
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 959
+[][][]
+ []
+
+[145]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1017
+[][][]
+ []
+
+[146]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--2
+[]\T1/phv/m/n/10 Node[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1074
+[][][]
+ []
+
+[147]
+Underfull \hbox (badness 10000) detected at line 1131
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1189
+[][][]
+ []
+
+[148]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1251
+[][][]
+ []
+
+[149]) (file__system_8c_source.tex [150]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [151]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [152]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [153]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [154]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [155]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [156]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [157])
+(file__system_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[158] [159]
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 94
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 97
+[][][]
+ []
+
+
+! Package inputenc Error: Unicode char ére (U+E0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 A.\+Pére
+             z @tittle File system functions
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[160] [161]
+Underfull \hbox (badness 10000) detected at line 270
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 302
+[][][]
+ []
+
+[162]
+Underfull \hbox (badness 10000) detected at line 361
+[][][]
+ []
+
+[163]
+Underfull \hbox (badness 10000) detected at line 420
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 480
+[][][]
+ []
+
+[164]
+Underfull \hbox (badness 10000) detected at line 538
+[][][]
+ []
+
+[165]
+Underfull \hbox (badness 10000) detected at line 597
+[][][]
+ []
+
+[166]
+Underfull \hbox (badness 10000) detected at line 657
+[][][]
+ []
+
+[167]
+Underfull \hbox (badness 10000) detected at line 721
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 772
+[][][]
+ []
+
+[168]
+Underfull \hbox (badness 10000) detected at line 831
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+[169]
+Underfull \hbox (badness 10000) detected at line 894
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 952
+[][][]
+ []
+
+[170]
+Underfull \hbox (badness 10000) detected at line 1010
+[][][]
+ []
+
+[171]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1068
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+[172]
+Underfull \hbox (badness 10000) detected at line 1126
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1184
+[][][]
+ []
+
+[173]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--2
+[]\T1/phv/m/n/10 Node[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1241
+[][][]
+ []
+
+[174]
+Underfull \hbox (badness 10000) detected at line 1298
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+[175]
+Underfull \hbox (badness 10000) detected at line 1356
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1418
+[][][]
+ []
+
+[176]) (file__system_8h_source.tex) (hal___a_d_c_8c.tex [177]
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 22
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 25
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 28
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+[178]
+Underfull \hbox (badness 10000) detected at line 58
+[][][]
+ []
+
+) (hal___a_d_c_8c_source.tex) (hal___a_d_c_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[179]
+Underfull \hbox (badness 10000) detected at line 20
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 23
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+) (hal___a_d_c_8h_source.tex [180]) (hal___g_p_i_o_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[181]
+Underfull \hbox (badness 10000) detected at line 59
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 65
+[][][]
+ []
+
+[182] [183] [184] [185] [186] [187] [188] [189] [190])
+(hal___g_p_i_o_8c_source.tex [191]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [192])
+(hal___g_p_i_o_8h.tex [193]
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 59
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+[194] [195] [196] [197] [198] [199] [200] [201] [202])
+(hal___g_p_i_o_8h_source.tex) (hal___i2_c_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+[203]
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 71
+[][][]
+ []
+
+[204]
+Underfull \hbox (badness 10000) detected at line 115
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 129
+[][][]
+ []
+
+[205]
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+) (hal___i2_c_8c_source.tex [206]) (hal___i2_c_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 23
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+[207]
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+[208]
+Underfull \hbox (badness 10000) detected at line 114
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+[209]
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+) (hal___i2_c_8h_source.tex) (hal___l_o_r_a_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+
+ []
+
+[210] [211]
+Underfull \hbox (badness 10000) detected at line 92
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 95
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 98
+[][][]
+ []
+
+[212]
+Underfull \hbox (badness 10000) detected at line 130
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 189
+[][][]
+ []
+
+[213] [214]
+Underfull \hbox (badness 10000) detected at line 282
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 329
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 337
+[][][]
+ []
+
+[215]
+Underfull \hbox (badness 10000) detected at line 385
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 393
+[][][]
+ []
+
+[216]
+Underfull \hbox (badness 10000) detected at line 462
+[][][]
+ []
+
+[217]
+Underfull \hbox (badness 10000) detected at line 509
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 556
+[][][]
+ []
+
+[218]
+Underfull \hbox (badness 10000) detected at line 604
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 650
+[][][]
+ []
+
+[219]
+Underfull \hbox (badness 10000) detected at line 695
+[][][]
+ []
+
+[220]
+Underfull \hbox (badness 10000) detected at line 739
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 782
+[][][]
+ []
+
+[221]
+Underfull \hbox (badness 10000) detected at line 825
+[][][]
+ []
+
+[222]
+Underfull \hbox (badness 10000) detected at line 877
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 927
+[][][]
+ []
+
+[223]
+Underfull \hbox (badness 10000) detected at line 976
+[][][]
+ []
+
+[224]
+Underfull \hbox (badness 10000) detected at line 1025
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1073
+[][][]
+ []
+
+[225]
+Underfull \hbox (badness 10000) detected at line 1149
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1159
+[][][]
+ []
+
+[226]
+Underfull \hbox (badness 10000) detected at line 1226
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1236
+[][][]
+ []
+
+[227]
+Underfull \hbox (badness 10000) detected at line 1312
+[][][]
+ []
+
+[228]
+Underfull \hbox (badness 10000) detected at line 1351
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1361
+[][][]
+ []
+
+[229]
+Underfull \hbox (badness 10000) detected at line 1413
+[][][]
+ []
+
+[230]
+Underfull \hbox (badness 10000) detected at line 1478
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1492
+[][][]
+ []
+
+[231]
+Underfull \hbox (badness 10000) detected at line 1604
+[][][]
+ []
+
+[232] [233]
+Underfull \hbox (badness 10000) detected at line 1714
+[][][]
+ []
+
+) (hal___l_o_r_a_8c_source.tex [234] [235]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [236]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [237]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [238]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [239]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [240]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [241]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [242]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [243]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [244])
+(hal___l_o_r_a_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[245] [246]
+Underfull \hbox (badness 10000) detected at line 173
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 176
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 179
+[][][]
+ []
+
+[247] [248] [249] [250] [251] [252] [253]
+Underfull \hbox (badness 10000) detected at line 770
+[][][]
+ []
+
+[254]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 829
+[][][]
+ []
+
+[255]
+Underfull \hbox (badness 10000) detected at line 922
+[][][]
+ []
+
+[256]
+Underfull \hbox (badness 10000) detected at line 969
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 977
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1025
+[][][]
+ []
+
+[257]
+Underfull \hbox (badness 10000) detected at line 1033
+[][][]
+ []
+
+[258]
+Underfull \hbox (badness 10000) detected at line 1102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1149
+[][][]
+ []
+
+[259]
+Underfull \hbox (badness 10000) detected at line 1196
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1244
+[][][]
+ []
+
+[260]
+Underfull \hbox (badness 10000) detected at line 1290
+[][][]
+ []
+
+[261]
+Underfull \hbox (badness 10000) detected at line 1335
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1379
+[][][]
+ []
+
+[262]
+Underfull \hbox (badness 10000) detected at line 1422
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1465
+[][][]
+ []
+
+[263]
+Underfull \hbox (badness 10000) detected at line 1517
+[][][]
+ []
+
+[264] [265]
+Underfull \hbox (badness 10000) detected at line 1567
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1616
+[][][]
+ []
+
+[266]
+Underfull \hbox (badness 10000) detected at line 1665
+[][][]
+ []
+
+[267]
+Underfull \hbox (badness 10000) detected at line 1713
+[][][]
+ []
+
+[268]
+Underfull \hbox (badness 10000) detected at line 1789
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1799
+[][][]
+ []
+
+[269]
+Underfull \hbox (badness 10000) detected at line 1866
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1876
+[][][]
+ []
+
+[270]
+Underfull \hbox (badness 10000) detected at line 1952
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1991
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 2001
+[][][]
+ []
+
+[271]
+Underfull \hbox (badness 10000) detected at line 2053
+[][][]
+ []
+
+[272]
+Underfull \hbox (badness 10000) detected at line 2118
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 2132
+[][][]
+ []
+
+[273]
+Overfull \vbox (7.78345pt too high) has occurred while \output is active []
+
+
+[274]
+Underfull \hbox (badness 10000) detected at line 2244
+[][][]
+ []
+
+[275]
+Underfull \hbox (badness 10000) detected at line 2354
+[][][]
+ []
+
+) (hal___l_o_r_a_8h_source.tex [276]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [277])
+(hal___p_w_m_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 20
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 23
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+[278]
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+) (hal___p_w_m_8c_source.tex) (hal___p_w_m_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[279]
+Underfull \hbox (badness 10000) detected at line 19
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 22
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 25
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 55
+[][][]
+ []
+
+[280]) (hal___p_w_m_8h_source.tex) (hal___s_p_i_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+[281]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+[282]
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+[283]
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Overfull \vbox (24.68112pt too high) has occurred while \output is active []
+
+
+[284]
+Underfull \hbox (badness 10000) detected at line 236
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 293
+[][][]
+ []
+
+) (hal___s_p_i_8c_source.tex [285] [286]) (hal___s_p_i_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[287]
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+[288]
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+[289]
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+[290]
+Underfull \hbox (badness 10000) detected at line 236
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 293
+[][][]
+ []
+
+[291]) (hal___s_p_i_8h_source.tex) (hal___timer_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+[292]
+Underfull \hbox (badness 10000) detected at line 35
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+[293]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 121
+[][][]
+ []
+
+[294] [295]
+Underfull \hbox (badness 10000) detected at line 167
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+) (hal___timer_8c_source.tex [296]) (hal___timer_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[297]
+Underfull \hbox (badness 10000) detected at line 26
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 32
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+[298]
+Underfull \hbox (badness 10000) detected at line 64
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 112
+[][][]
+ []
+
+[299]
+Underfull \hbox (badness 10000) detected at line 158
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 192
+[][][]
+ []
+
+[300]) (hal___timer_8h_source.tex) (hal___t_m_p006_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+[301]
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+[302]
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 172
+[][][]
+ []
+
+[303]) (hal___t_m_p006_8c_source.tex [304]) (hal___t_m_p006_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[305]
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+[306]
+Underfull \hbox (badness 10000) detected at line 91
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 145
+[][][]
+ []
+
+[307]
+Underfull \hbox (badness 10000) detected at line 201
+[][][]
+ []
+
+[308]) (hal___t_m_p006_8h_source.tex) (hal___u_a_r_t_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[309]
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+[310]
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+[311]
+Underfull \hbox (badness 10000) detected at line 164
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 198
+[][][]
+ []
+
+[312]
+Underfull \hbox (badness 10000) detected at line 264
+[][][]
+ []
+
+[313]
+Underfull \hbox (badness 10000) detected at line 317
+[][][]
+ []
+
+) (hal___u_a_r_t_8c_source.tex [314]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [315])
+(hal___u_a_r_t_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[316]
+Underfull \hbox (badness 10000) detected at line 37
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 43
+[][][]
+ []
+
+[317]
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 155
+[][][]
+ []
+
+[318]
+Underfull \hbox (badness 10000) detected at line 193
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 227
+[][][]
+ []
+
+[319]
+Underfull \hbox (badness 10000) detected at line 293
+[][][]
+ []
+
+[320]
+Underfull \hbox (badness 10000) detected at line 346
+[][][]
+ []
+
+) (hal___u_a_r_t_8h_source.tex) (hal___w_d_8c.tex [321]
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 33
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+[322]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uintptr[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 124
+[][][]
+ []
+
+[323]) (hal___w_d_8c_source.tex) (hal___w_d_8h.tex [324]
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 21
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+[325]
+Underfull \hbox (badness 10000) detected at line 59
+[][][]
+ []
+
+) (hal___w_d_8h_source.tex) (_l_d_c1000_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--15
+
+ []
+
+[326]
+Underfull \hbox (badness 10000) detected at line 53
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 56
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 59
+[][][]
+ []
+
+[327]
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+[328]
+Underfull \hbox (badness 10000) detected at line 132
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 190
+[][][]
+ []
+
+[329]
+Underfull \hbox (badness 10000) detected at line 229
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+[330]
+Underfull \hbox (badness 10000) detected at line 307
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 346
+[][][]
+ []
+
+[331]
+Underfull \hbox (badness 10000) detected at line 387
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 424
+[][][]
+ []
+
+[332]
+Underfull \hbox (badness 10000) detected at line 461
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 498
+[][][]
+ []
+
+[333]
+Underfull \hbox (badness 10000) detected at line 535
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 572
+[][][]
+ []
+
+[334]
+Underfull \hbox (badness 10000) detected at line 609
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 648
+[][][]
+ []
+
+[335]) (_l_d_c1000_8c_source.tex [336]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [337])
+(_l_d_c1000_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+[338] [339]
+Underfull \hbox (badness 10000) detected at line 200
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 203
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 206
+[][][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [340]
+[341] [342] [343] [344] [345] [346]
+Underfull \hbox (badness 10000) detected at line 984
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1027
+[][][]
+ []
+
+[347]
+Underfull \hbox (badness 10000) detected at line 1085
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1124
+[][][]
+ []
+
+[348]
+Underfull \hbox (badness 10000) detected at line 1163
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1202
+[][][]
+ []
+
+[349]
+Underfull \hbox (badness 10000) detected at line 1241
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1282
+[][][]
+ []
+
+[350]
+Underfull \hbox (badness 10000) detected at line 1319
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1356
+[][][]
+ []
+
+[351]
+Underfull \hbox (badness 10000) detected at line 1393
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1430
+[][][]
+ []
+
+[352]
+Underfull \hbox (badness 10000) detected at line 1467
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1504
+[][][]
+ []
+
+[353]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1543
+[][][]
+ []
+
+) (_l_d_c1000_8h_source.tex [354]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [355])
+(main__nortos_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+[356]
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+[357]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [358]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [359]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [360])
+(main__nortos_8c_source.tex) (_sensors_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--21
+
+ []
+
+[361]
+Underfull \hbox (badness 10000) detected at line 62
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 65
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 5--5
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+[362]
+Underfull \hbox (badness 10000) detected at line 106
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 5--5
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+[363]
+Underfull \hbox (badness 10000) detected at line 163
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+[364]
+Underfull \hbox (badness 10000) detected at line 212
+[][][]
+ []
+
+[365]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [366]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 387
+[][][]
+ []
+
+[367]) (_sensors_8c_source.tex [368]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [369]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [370]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [371])
+(_sensors_8h.tex
+Underfull \hbox (badness 10000) detected at line 24
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 27
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 30
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 5--5
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+[372]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 5--5
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Overfull \vbox (71.49686pt too high) has occurred while \output is active []
+
+
+[373]
+Underfull \hbox (badness 10000) detected at line 125
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint8[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 174
+[][][]
+ []
+
+[374]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [375]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+[376]
+Underfull \hbox (badness 10000) detected at line 349
+[][][]
+ []
+
+) (_sensors_8h_source.tex) (_s_t_a_r_p_o_r_t_s___app_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--21
+
+ []
+
+[377]
+Underfull \hbox (badness 10000) detected at line 67
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 70
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 73
+[][][]
+ []
+
+[378] [379]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [380]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [381]
+[382]) (_s_t_a_r_p_o_r_t_s___app_8c_source.tex [383] [384]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [385]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [386]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [387])
+(_s_t_a_r_p_o_r_t_s___app_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[388]
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 104
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 107
+[][][]
+ []
+
+[389]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [390pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r
+_p_o_r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}) has been already used, 
+duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 \doxyparagraph
+                    {struct T\+M\+P006\+\_\+\+Data}pdfTeX warning (ext4): desti
+nation with the same identifier (name{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd9
+1939557f38c50a8bdb97}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 \doxyparagraph
+                    {struct T\+M\+P006\+\_\+\+Data}pdfTeX warning (ext4): desti
+nation with the same identifier (name{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb
+12786ba8350f11c385a4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 \doxyparagraph
+                    {struct T\+M\+P006\+\_\+\+Data}pdfTeX warning (ext4): desti
+nation with the same identifier (name{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd9
+1939557f38c50a8bdb97}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.254 \doxyparagraph
+                    {struct T\+M\+P006\+\_\+\+Data}]pdfTeX warning (ext4): dest
+ination with the same identifier (name{_s_t_a_r_p_o_r_t_s___app_8h_abd26d72a5cd
+91939557f38c50a8bdb97}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.266 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.266 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.266 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.287 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.287 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.287 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.287 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.287 \end{DoxyFields}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{_s_t_a_r_p_o_
+r_t_s___app_8h_abd26d72a5cd91939557f38c50a8bdb97}) has been already used, dupli
+cate ignored
+<to be read again> 
+                   \relax 
+l.287 \end{DoxyFields}
+                      
+[391] [392] [393] [394]) (_s_t_a_r_p_o_r_t_s___app_8h_source.tex [395])
+(wifi_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--12
+
+ []
+
+[396]
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+[]\T1/phv/m/n/10 void [] (Sl[]Net[]App[]Request[]_[]t $\OMS/cmsy/m/n/10 $\T1/p
+hv/m/n/10 p[]Net[]App[]Request, Sl[]Net[]App[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 51
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 54
+[][][]
+ []
+
+[397]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 86
+[][][]
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [398]
+Underfull \hbox (badness 10000) detected at line 128
+[][][]
+ []
+
+[399]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [400]
+Underfull \hbox (badness 10000) in paragraph at lines 371--372
+ \T1/phv/b/n/10 3.79.2.8 Sim-pleLinkNe-tAp-pRe-quest-Mem-FreeEven-tHandler()[] 
+\T1/pcr/m/n/8 void Simple[]Link[]Net[]App[]Request[]Mem[]Free[]
+ []
+
+[401]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [402]
+[403]
+Overfull \vbox (7.64145pt too high) has occurred while \output is active []
+
+
+[404]
+Underfull \hbox (badness 10000) detected at line 605
+[][][]
+ []
+
+) (wifi_8c_source.tex [405]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [406]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [407])
+(wifi_8h.tex [408]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+[]\T1/phv/m/n/10 void [] (Sl[]Net[]App[]Request[]_[]t $\OMS/cmsy/m/n/10 $\T1/p
+hv/m/n/10 p[]Net[]App[]Request, Sl[]Net[]App[]
+ []
+
+[409]
+Underfull \hbox (badness 10000) detected at line 102
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 105
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 108
+[][][]
+ []
+
+[410] [411] [412] [413]
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 1--1
+[]\T1/phv/m/sl/10 uint16[] 
+ []
+
+
+Overfull \hbox (1.47571pt too wide) in paragraph at lines 3--3
+[]\T1/phv/m/sl/10 uint32[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 452
+[][][]
+ []
+
+[414] [415] [416]
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
+ \T1/phv/b/n/10 3.81.5.7 Sim-pleLinkNe-tAp-pRe-quest-Mem-FreeEven-tHandler()[] 
+\T1/pcr/m/n/8 void Simple[]Link[]Net[]App[]Request[]Mem[]Free[]
+ []
+
+[417] [418]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [419]
+Underfull \hbox (badness 10000) detected at line 916
+[][][]
+ []
+
+[420]) (wifi_8h_source.tex [421]) [422] (refman.ind
+LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
+(Font)              scaled to size 12.9599pt on input line 1.
+ [423
+
+
+] [424] [425] [426]
+[427]
+Underfull \hbox (badness 10000) in paragraph at lines 660--661
+[]| \T1/phv/m/n/10 CC3220SF_LAUNCHXL_SPI_MASTER_READY,
+ []
+
+[428] [429]
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
+[]| \T1/phv/m/n/10 CC3220SF_STARPORTS_WATCHDOGCOUNT,
+ []
+
+[430] [431] [432] [433] [434] [435] [436] [437] [438] [439] [440] [441]
+[442] [443] [444] [445]
+Underfull \hbox (badness 10000) in paragraph at lines 2792--2794
+[]| \T1/phv/m/n/10 Sim-pleLinkNe-tAp-pRe-quest-Mem-FreeEven-tHandler,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2826--2828
+[]| \T1/phv/m/n/10 Sim-pleLinkNe-tAp-pRe-quest-Mem-FreeEven-tHandler,
+ []
+
+[446] [447])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
+ (refman.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 265.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 265.
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: C004B0F55678CB65CAD9FD478BEC7E14;41275.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 22299 strings out of 493301
+ 502256 string characters out of 3138741
+ 688635 words of memory out of 3000000
+ 21301 multiletter control sequences out of 15000+200000
+ 51756 words of font info for 77 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 53i,16n,92p,1854b,719s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/urw/helvetic/uhvb8ac.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helv
+etic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.p
+fb>
+Output written on refman.pdf (452 pages, 4280069 bytes).
+PDF statistics:
+ 18110 PDF objects out of 18468 (max. 8388607)
+ 4104 named destinations out of 4296 (max. 500000)
+ 1601 words of extra memory for PDF output out of 10000 (max. 10000000)
+

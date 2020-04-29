@@ -1,0 +1,36 @@
+\hypertarget{hal___p_w_m_8c_source}{}\doxysubsection{hal\+\_\+\+P\+W\+M.\+c}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00011 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00012 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <stddef.h>}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include <ti/drivers/PWM.h>}}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00017 \textcolor{comment}{//                      FUNCTIONS}}
+\DoxyCodeLine{00018 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{//}}
+\DoxyCodeLine{00030 \textcolor{comment}{}\textcolor{comment}{//}}
+\DoxyCodeLine{00031 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___p_w_m_8c_source_l00032}\mbox{\hyperlink{hal___p_w_m_8h_a2c276c48244d78ee02a694ed129b092d_a2c276c48244d78ee02a694ed129b092d}{00032}} PWM\_Handle \mbox{\hyperlink{hal___p_w_m_8c_a2c276c48244d78ee02a694ed129b092d_a2c276c48244d78ee02a694ed129b092d}{Config\_PWM}}(uint\_least8\_t index) \{}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00034     PWM\_Handle pwm;}
+\DoxyCodeLine{00035     PWM\_Params params;}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037     PWM\_init();                                                     \textcolor{comment}{// Call driver init functions}}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     PWM\_Params\_init(\&params);}
+\DoxyCodeLine{00040     params.dutyUnits = PWM\_DUTY\_FRACTION;}
+\DoxyCodeLine{00041     params.dutyValue = (PWM\_DUTY\_FRACTION\_MAX>>1);}
+\DoxyCodeLine{00042     params.periodUnits = PWM\_PERIOD\_HZ;}
+\DoxyCodeLine{00043     params.periodValue = 8000000;}
+\DoxyCodeLine{00044     pwm = PWM\_open(index, \&params);}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \textcolor{keywordflow}{return} pwm;}
+\DoxyCodeLine{00047 \}}
+
+\end{DoxyCode}

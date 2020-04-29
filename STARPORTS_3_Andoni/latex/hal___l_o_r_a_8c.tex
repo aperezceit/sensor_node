@@ -1,0 +1,1793 @@
+\hypertarget{hal___l_o_r_a_8c}{}\doxysubsection{hal\+\_\+\+L\+O\+R\+A.\+c File Reference}
+\label{hal___l_o_r_a_8c}\index{hal\_LORA.c@{hal\_LORA.c}}
+
+
+Functions for L\+O\+RA utilities.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+U\+A\+R\+T.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+G\+P\+I\+O.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/net/wifi/simplelink.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+L\+O\+R\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hal___l_o_r_a_8c_ad3d55db7e919bdbdf6644e270fbf9a56_ad3d55db7e919bdbdf6644e270fbf9a56}{Get\+Lora\+Rx\+Data}} (unsigned char $\ast$buf, uint8\+\_\+t size, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Get Lora RX data Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a7d07609bb31ed5a9628931ddfa9ac5b7_a7d07609bb31ed5a9628931ddfa9ac5b7}{Get\+Lora\+Server\+Params}} (uint8\+\_\+t $\ast$bytes, uint8\+\_\+t blen, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Get Lora server parameters Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a3690f810004dcfe1dc77b3fa4768a256_a3690f810004dcfe1dc77b3fa4768a256}{hex2int}} (unsigned char $\ast$hex, uint8\+\_\+t hlen, uint8\+\_\+t $\ast$bytes)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Hex to int Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a0c7557b461266dd11774456f774d225a_a0c7557b461266dd11774456f774d225a}{Join\+\_\+\+Abp\+\_\+\+Lora}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Join A\+BP Lora connection Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a363fe7d3d61c382ef9c3b99a62f7a8f3_a363fe7d3d61c382ef9c3b99a62f7a8f3}{Join\+\_\+\+Otaa\+\_\+\+Lora}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module join O\+T\+AA Lora connection Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a1b8443bf08fc9b24e3d4b488103882f7_a1b8443bf08fc9b24e3d4b488103882f7}{Mac\+\_\+\+Adr\+\_\+\+On}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac A\+DR on Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a01afbfa551441f1a47f2d3b2c9659bbb_a01afbfa551441f1a47f2d3b2c9659bbb}{Mac\+\_\+\+Ar\+\_\+\+On}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac AR on Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a7885e022b65fa48597f9825edd54cdd6_a7885e022b65fa48597f9825edd54cdd6}{Mac\+\_\+\+Clear\+\_\+\+Upctr}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac clear Up counter Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a7e6e525740e3db5bf43a18a7855f5910_a7e6e525740e3db5bf43a18a7855f5910}{Mac\+\_\+\+Get\+\_\+\+Appeui}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac get Appeui Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a162bdba9619cbd56f85a0f48a762ab3e_a162bdba9619cbd56f85a0f48a762ab3e}{Mac\+\_\+\+Get\+\_\+\+Devaddr}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac get Devaddr Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a8e2347149ac9cf4ef73137b56ec1b483_a8e2347149ac9cf4ef73137b56ec1b483}{Mac\+\_\+\+Get\+\_\+\+Deveui}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac get Deveui Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{hal___l_o_r_a_8c_a3a9da280c36d4cebfcefd1c67b2328b7_a3a9da280c36d4cebfcefd1c67b2328b7}{Mac\+\_\+\+Get\+\_\+\+Dnctr}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac get Dnctr Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{hal___l_o_r_a_8c_a2a98bbf1f654c54bd1023c5805f32b86_a2a98bbf1f654c54bd1023c5805f32b86}{Mac\+\_\+\+Get\+\_\+\+Upctr}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac get Upctr Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a24d54dc1387535a120664b490b7092bc_a24d54dc1387535a120664b490b7092bc}{Mac\+\_\+\+Save}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac save Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a7037fc58d0f5f32c8d5a612a507b39e2_a7037fc58d0f5f32c8d5a612a507b39e2}{Mac\+\_\+\+Set\+\_\+\+Devaddr}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac set Devaddr Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a43b2e0ff493c843f67fc30a88fb1adfd_a43b2e0ff493c843f67fc30a88fb1adfd}{Mac\+\_\+\+Set\+\_\+\+Dnctr}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac set Dnctr Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a1eac44020aab31e07be41c244539fb28_a1eac44020aab31e07be41c244539fb28}{Mac\+\_\+\+Set\+\_\+\+Pwridx}} (U\+A\+R\+T\+\_\+\+Handle uart, uint8\+\_\+t pwridx)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac set Pwridx Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a809f6b028ce4c7e1630593d5d41f8c9a_a809f6b028ce4c7e1630593d5d41f8c9a}{Mac\+\_\+\+Set\+\_\+\+Rxdelay1}} (U\+A\+R\+T\+\_\+\+Handle uart, uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac set Rx delay 1 Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a6d9a276861f1d8d552d0691b4c3cbdba_a6d9a276861f1d8d552d0691b4c3cbdba}{Mac\+\_\+\+Set\+\_\+\+Upctr}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Mac set Upctr Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hal___l_o_r_a_8c_a7ccfa12cb27d73c06f303b9294ebc508_a7ccfa12cb27d73c06f303b9294ebc508}{Reset\+\_\+\+R\+N2483}} (void)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module reset Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a2a645d1e940824366eed22d6343f519c_a2a645d1e940824366eed22d6343f519c}{Setup\+\_\+\+Abp\+\_\+\+Lora}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Set up A\+BP Lora connection Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a305a60b720cd80e2ec5f21d5cec87ddd_a305a60b720cd80e2ec5f21d5cec87ddd}{Setup\+\_\+\+Otaa\+\_\+\+Lora}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Set up O\+T\+AA Lora connection Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_aa52af39f11aca99fd6f5fea3e5d8e5b1_aa52af39f11aca99fd6f5fea3e5d8e5b1}{Sys\+\_\+\+Factory\+Reset}} (U\+A\+R\+T\+\_\+\+Handle uart)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Sys Factory reset Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a8059df73a3225c8db280859e2270c6ba_a8059df73a3225c8db280859e2270c6ba}{Sys\+\_\+\+Sleep}} (U\+A\+R\+T\+\_\+\+Handle uart, uint32\+\_\+t sleep)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Sys sleep Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_aeb3411c0293ca2e1a5d6b29ccb77d190_aeb3411c0293ca2e1a5d6b29ccb77d190}{Try\+\_\+\+Join\+\_\+\+Lora\+\_\+\+Gateway}} (U\+A\+R\+T\+\_\+\+Handle uart\+\_\+dbg, U\+A\+R\+T\+\_\+\+Handle uart\+\_\+lora)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Try join Lora Gateway Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_ab905300928a4d6f97a1eee934e9c6188_ab905300928a4d6f97a1eee934e9c6188}{Tx\+\_\+\+Cnf\+\_\+\+Lora}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node, uint8\+\_\+t $\ast$mask, uint16\+\_\+t $\ast$node\+Id)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module TX Cnf Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a8b1849d79d4f19889f0b771dd83b0854_a8b1849d79d4f19889f0b771dd83b0854}{Tx\+\_\+\+Uncnf\+\_\+\+Lora}} (U\+A\+R\+T\+\_\+\+Handle uart, struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$My\+Lora\+Node, uint8\+\_\+t $\ast$mask, uint16\+\_\+t $\ast$node\+Id)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module TX Uncnf Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{hal___l_o_r_a_8c_a6dea4fbc625f1d4164ed1e43a58b3114_a6dea4fbc625f1d4164ed1e43a58b3114}{Uint8\+Array2\+Char}} (uint8\+\_\+t $\ast$Data\+Packet, uint8\+\_\+t Data\+Packet\+Len, unsigned char $\ast$Hex\+Str)
+\begin{DoxyCompactList}\small\item\em R\+N2483 Lora module Uint8 array to char Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_a_d_x_l355___data}{A\+D\+X\+L355\+\_\+\+Data}} \mbox{\hyperlink{hal___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{My\+A\+D\+XL}}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_b_m_e280___data}{B\+M\+E280\+\_\+\+Data}} \mbox{\hyperlink{hal___l_o_r_a_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}{My\+B\+ME}}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_l_d_c1000___data}{L\+D\+C1000\+\_\+\+Data}} \mbox{\hyperlink{hal___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}{My\+L\+DC}}
+\item 
+struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{My\+Node}}
+\item 
+U\+A\+R\+T\+\_\+\+Handle \mbox{\hyperlink{hal___l_o_r_a_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions for L\+O\+RA utilities. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle L\+O\+RA functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_ad3d55db7e919bdbdf6644e270fbf9a56_ad3d55db7e919bdbdf6644e270fbf9a56}\label{hal___l_o_r_a_8c_ad3d55db7e919bdbdf6644e270fbf9a56_ad3d55db7e919bdbdf6644e270fbf9a56}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!GetLoraRxData@{GetLoraRxData}}
+\index{GetLoraRxData@{GetLoraRxData}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{GetLoraRxData()}{GetLoraRxData()}}
+{\footnotesize\ttfamily void Get\+Lora\+Rx\+Data (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf,  }\item[{uint8\+\_\+t}]{size,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Get Lora RX data Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets data from Lora GW downlink
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00976}{976}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00976                                                                                   \{}
+\DoxyCodeLine{00977 }
+\DoxyCodeLine{00978     uint8\_t sz;}
+\DoxyCodeLine{00979     uint8\_t i, ini;}
+\DoxyCodeLine{00980     \textcolor{keyword}{const} \textcolor{keywordtype}{char} space =  \textcolor{charliteral}{' '};}
+\DoxyCodeLine{00981     \textcolor{keyword}{const} \textcolor{keywordtype}{char} cr = \textcolor{charliteral}{'\(\backslash\)r'};}
+\DoxyCodeLine{00982     \textcolor{keywordtype}{char} *bufcp;}
+\DoxyCodeLine{00983 }
+\DoxyCodeLine{00984     i=0;}
+\DoxyCodeLine{00985     \textcolor{keywordflow}{while} (buf[i]!=space) \{}
+\DoxyCodeLine{00986         bufcp[i]=buf[i];}
+\DoxyCodeLine{00987         i++;}
+\DoxyCodeLine{00988     \}}
+\DoxyCodeLine{00989 }
+\DoxyCodeLine{00990     MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a809f549c83cb8345a52569fc0abbe574}{PortNoRx}} = atoi(bufcp);}
+\DoxyCodeLine{00991 }
+\DoxyCodeLine{00992     i=i+1;}
+\DoxyCodeLine{00993     ini = i;}
+\DoxyCodeLine{00994     \textcolor{keywordflow}{while} (buf[i]!=cr) \{}
+\DoxyCodeLine{00995         *(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_adb805aa8c0fe0ac41db393231a128094}{DataRx}}+i-\/ini) = buf[i++];}
+\DoxyCodeLine{00996     \}}
+\DoxyCodeLine{00997 }
+\DoxyCodeLine{00998     MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_acce0aedd909b4925b9088a86f3cc695c}{DataLenRx}} = (i-\/ini);}
+\DoxyCodeLine{00999 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a7d07609bb31ed5a9628931ddfa9ac5b7_a7d07609bb31ed5a9628931ddfa9ac5b7}\label{hal___l_o_r_a_8c_a7d07609bb31ed5a9628931ddfa9ac5b7_a7d07609bb31ed5a9628931ddfa9ac5b7}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!GetLoraServerParams@{GetLoraServerParams}}
+\index{GetLoraServerParams@{GetLoraServerParams}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{GetLoraServerParams()}{GetLoraServerParams()}}
+{\footnotesize\ttfamily uint8\+\_\+t Get\+Lora\+Server\+Params (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bytes,  }\item[{uint8\+\_\+t}]{blen,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Get Lora server parameters Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Lora server parameters from Lora server
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & $\ast$bytes pointer to bytes \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & blen \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l01082}{1082}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01082                                                                                        \{}
+\DoxyCodeLine{01083 }
+\DoxyCodeLine{01084     uint8\_t mask = bytes[0];}
+\DoxyCodeLine{01085     \textcolor{keywordtype}{int} inext = 1;}
+\DoxyCodeLine{01086 }
+\DoxyCodeLine{01087     \textcolor{keywordflow}{if} ((mask\&0x01)!=0) \{                                                                   \textcolor{comment}{// WakeUpInterval}}
+\DoxyCodeLine{01088         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8d9f89e4cadd72790f988d4def70b7e9}{WakeUpInterval}} = (bytes[inext]<<8) | bytes[inext+1];}
+\DoxyCodeLine{01089         inext = inext+2;}
+\DoxyCodeLine{01090         \mbox{\hyperlink{file__system_8c_ace59423ed2ba20ffa424883ab689df8c_ace59423ed2ba20ffa424883ab689df8c}{writeWakeUp}}(\mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a8d9f89e4cadd72790f988d4def70b7e9}{WakeUpInterval}});}
+\DoxyCodeLine{01091         \mbox{\hyperlink{file__system_8c_a0edb958ae88b4d5b85ffc91360cc8cd1_a0edb958ae88b4d5b85ffc91360cc8cd1}{st\_readFileWakeUp}}();}
+\DoxyCodeLine{01092     \}}
+\DoxyCodeLine{01093 }
+\DoxyCodeLine{01094     \textcolor{keywordflow}{if} ((mask\&0x02)!=0) \{                                                                   \textcolor{comment}{//Mode}}
+\DoxyCodeLine{01095         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}} = (bytes[inext] \& 0x07);}
+\DoxyCodeLine{01096         inext = inext+1;}
+\DoxyCodeLine{01097         \mbox{\hyperlink{file__system_8c_a1d27a902ee3c4804928771460ecc38bc_a1d27a902ee3c4804928771460ecc38bc}{writeMode}}(\mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_ad11c3137711cc547aa65686fa2c98fc9}{Mode}});}
+\DoxyCodeLine{01098         \mbox{\hyperlink{file__system_8c_afef9c44185629b10676766dec447d74f_afef9c44185629b10676766dec447d74f}{st\_readFileMode}}();}
+\DoxyCodeLine{01099     \}}
+\DoxyCodeLine{01100 }
+\DoxyCodeLine{01101     \textcolor{keywordflow}{if} ((mask\&0x04)!=0) \{                                                                   \textcolor{comment}{// SSID}}
+\DoxyCodeLine{01102         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[5] = (char)(bytes[inext]);}
+\DoxyCodeLine{01103         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[4] = (char)(bytes[inext+1]);}
+\DoxyCodeLine{01104         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[3] = (char)(bytes[inext+2]);}
+\DoxyCodeLine{01105         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[2] = (char)(bytes[inext+3]);}
+\DoxyCodeLine{01106         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[1] = (char)(bytes[inext+4]);}
+\DoxyCodeLine{01107         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}[0] = (char)(bytes[inext+5]);}
+\DoxyCodeLine{01108         inext = inext + 6;}
+\DoxyCodeLine{01109         \mbox{\hyperlink{file__system_8c_a20a65f4623985c3e0332718b683e817d_a20a65f4623985c3e0332718b683e817d}{writeSSID}}(\mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}});}
+\DoxyCodeLine{01110         \mbox{\hyperlink{file__system_8c_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}{st\_readFileSSID}}(\&(\mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a4c3cd8f04e02d36dbe0084f903be4e69}{SSID}}));}
+\DoxyCodeLine{01111     \}}
+\DoxyCodeLine{01112 }
+\DoxyCodeLine{01113     \textcolor{keywordflow}{if} ((mask\&0x08)!=0) \{                                                                   \textcolor{comment}{//Ncycles}}
+\DoxyCodeLine{01114         \mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aec988d21b9d0ae579421495853e08d0a}{NCycles}} = bytes[inext];}
+\DoxyCodeLine{01115         inext = inext + 1;}
+\DoxyCodeLine{01116         \mbox{\hyperlink{file__system_8c_ad63f444cc96aa510ffa778c36f568f22_ad63f444cc96aa510ffa778c36f568f22}{writeNCycles}}(\mbox{\hyperlink{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}{MyNode}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aec988d21b9d0ae579421495853e08d0a}{NCycles}});}
+\DoxyCodeLine{01117         \mbox{\hyperlink{file__system_8c_a193cc642a8f29b0e4169602a4ffbf68f_a193cc642a8f29b0e4169602a4ffbf68f}{st\_readFileNCycles}}();}
+\DoxyCodeLine{01118     \}}
+\DoxyCodeLine{01119 }
+\DoxyCodeLine{01120     \textcolor{keywordflow}{if} ((mask\&0x10)!=0) \{                                                                   \textcolor{comment}{// Upcnt}}
+\DoxyCodeLine{01121         MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a0244ad2b8c02cb0492652035908ff00f}{Upctr}} = (bytes[inext]<<16) | (bytes[inext+1]<<8) | (bytes[inext+2]);}
+\DoxyCodeLine{01122         inext = inext + 3;}
+\DoxyCodeLine{01123         \mbox{\hyperlink{file__system_8c_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}{writeUpCntr}}(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a0244ad2b8c02cb0492652035908ff00f}{Upctr}});}
+\DoxyCodeLine{01124         \mbox{\hyperlink{file__system_8c_a553babbf696d08f53ac9c5a5099f1d97_a553babbf696d08f53ac9c5a5099f1d97}{st\_readFileUpCntr}}();}
+\DoxyCodeLine{01125     \}}
+\DoxyCodeLine{01126 }
+\DoxyCodeLine{01127     \textcolor{keywordflow}{if} ((mask\&0x20)!=0) \{                                                                   \textcolor{comment}{// ADXL355}}
+\DoxyCodeLine{01128         \mbox{\hyperlink{hal___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{MyADXL}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_aa46e4ada0bc171a400b0c9240daddb31}{SampleRate}} = (bytes[inext]<<8) | bytes[inext+1];}
+\DoxyCodeLine{01129         \mbox{\hyperlink{hal___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}{MyADXL}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}} = (bytes[inext+2]<<8) | bytes[inext+3];}
+\DoxyCodeLine{01130         inext = inext + 4;}
+\DoxyCodeLine{01131     \}}
+\DoxyCodeLine{01132 }
+\DoxyCodeLine{01133     \textcolor{keywordflow}{if} ((mask\&0x40)!=0) \{                                                                   \textcolor{comment}{// LDC1000}}
+\DoxyCodeLine{01134         \mbox{\hyperlink{hal___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}{MyLDC}}.\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a90fa6078aaeb12786ba8350f11c385a4}{NSamples}} = (bytes[inext]<<8) | bytes[inext+1];}
+\DoxyCodeLine{01135         inext = inext + 2;}
+\DoxyCodeLine{01136     \}}
+\DoxyCodeLine{01137 }
+\DoxyCodeLine{01138     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{01139 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a3690f810004dcfe1dc77b3fa4768a256_a3690f810004dcfe1dc77b3fa4768a256}\label{hal___l_o_r_a_8c_a3690f810004dcfe1dc77b3fa4768a256_a3690f810004dcfe1dc77b3fa4768a256}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!hex2int@{hex2int}}
+\index{hex2int@{hex2int}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{hex2int()}{hex2int()}}
+{\footnotesize\ttfamily uint8\+\_\+t hex2int (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{hex,  }\item[{uint8\+\_\+t}]{hlen,  }\item[{uint8\+\_\+t $\ast$}]{bytes }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Hex to int Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Converts hexadecimal data to integer value
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em unsigned} & char $\ast$hex pointer to hex \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & hlen \\
+\hline
+ & {\em uint8\+\_\+t} & $\ast$bytes pointer to bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int k Returns the size of bytes array 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l01046}{1046}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01046                                                                   \{}
+\DoxyCodeLine{01047 }
+\DoxyCodeLine{01048     uint32\_t val = 0;}
+\DoxyCodeLine{01049     uint8\_t mybyte;}
+\DoxyCodeLine{01050     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{01051     \textcolor{keywordtype}{int} k=0;}
+\DoxyCodeLine{01052 }
+\DoxyCodeLine{01053     \textcolor{keywordflow}{for} (i=0;i<hlen;i++) \{}
+\DoxyCodeLine{01054         uint8\_t mybyte = hex[i];                                                            \textcolor{comment}{// get current character then increment}}
+\DoxyCodeLine{01055         \textcolor{keywordflow}{if} (mybyte >= \textcolor{charliteral}{'0'} \&\& mybyte <= \textcolor{charliteral}{'9'}) mybyte = mybyte -\/ \textcolor{charliteral}{'0'};                          \textcolor{comment}{// transform hex character to the 4bit equivalent number, using the ascii table indexes}}
+\DoxyCodeLine{01056         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (mybyte >= \textcolor{charliteral}{'a'} \&\& mybyte <=\textcolor{charliteral}{'f'}) mybyte = mybyte -\/ \textcolor{charliteral}{'a'} + 10;}
+\DoxyCodeLine{01057         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (mybyte >= \textcolor{charliteral}{'A'} \&\& mybyte <=\textcolor{charliteral}{'F'}) mybyte = mybyte -\/ \textcolor{charliteral}{'A'} + 10;}
+\DoxyCodeLine{01058 }
+\DoxyCodeLine{01059         val = (val << 4) | (mybyte \& 0xF);                                                  \textcolor{comment}{// shift 4 to make space for new digit, and add the 4 bits of the new digit}}
+\DoxyCodeLine{01060         \textcolor{keywordflow}{if} ((i\&0x01)==1) \{}
+\DoxyCodeLine{01061             bytes[k++]=val;}
+\DoxyCodeLine{01062             val = 0;}
+\DoxyCodeLine{01063         \}}
+\DoxyCodeLine{01064     \}}
+\DoxyCodeLine{01065     \textcolor{keywordflow}{return} k;                                                                               \textcolor{comment}{// Returns the size of bytes array}}
+\DoxyCodeLine{01066 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a0c7557b461266dd11774456f774d225a_a0c7557b461266dd11774456f774d225a}\label{hal___l_o_r_a_8c_a0c7557b461266dd11774456f774d225a_a0c7557b461266dd11774456f774d225a}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Join\_Abp\_Lora@{Join\_Abp\_Lora}}
+\index{Join\_Abp\_Lora@{Join\_Abp\_Lora}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Join\_Abp\_Lora()}{Join\_Abp\_Lora()}}
+{\footnotesize\ttfamily uint8\+\_\+t Join\+\_\+\+Abp\+\_\+\+Lora (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Join A\+BP Lora connection Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Function to join a lora connection using A\+BP (Authentification By Personalisation) in a R\+N2483.
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___l_o_r_a_8c_a2a645d1e940824366eed22d6343f519c_a2a645d1e940824366eed22d6343f519c}{Setup\+\_\+\+Abp\+\_\+\+Lora()}} has been called
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None on Success / E\+R\+R\+O\+R\+\_\+\+A\+B\+P\+\_\+\+J\+O\+IN on Fail according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00239}{239}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00239                                         \{}
+\DoxyCodeLine{00240 }
+\DoxyCodeLine{00241     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00242     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[64];}
+\DoxyCodeLine{00243     uint8\_t sz;}
+\DoxyCodeLine{00244 }
+\DoxyCodeLine{00245     strcpy(Command,\textcolor{stringliteral}{"mac join abp\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00246     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 14);}
+\DoxyCodeLine{00247     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00248     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00249         sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00250         \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"denied"},6)==0) \{}
+\DoxyCodeLine{00251             \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a78f2a3d03852f9293881897131ff823a_a78f2a3d03852f9293881897131ff823a}{ERROR\_ABP\_DENIED}};}
+\DoxyCodeLine{00252         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"accepted"},8)==0) \{}
+\DoxyCodeLine{00253             \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_acf868de705fe437eb0d977d8f3d8057b_acf868de705fe437eb0d977d8f3d8057b}{SUCCESS\_ABP\_LORA}};}
+\DoxyCodeLine{00254         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00255             \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_aef8ed5d8ff9c180d9e462ccc9566f6f5_aef8ed5d8ff9c180d9e462ccc9566f6f5}{ERROR\_ABP\_JOIN}};}
+\DoxyCodeLine{00256         \}}
+\DoxyCodeLine{00257     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00258         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_aef8ed5d8ff9c180d9e462ccc9566f6f5_aef8ed5d8ff9c180d9e462ccc9566f6f5}{ERROR\_ABP\_JOIN}};}
+\DoxyCodeLine{00259     \}}
+\DoxyCodeLine{00260 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a363fe7d3d61c382ef9c3b99a62f7a8f3_a363fe7d3d61c382ef9c3b99a62f7a8f3}\label{hal___l_o_r_a_8c_a363fe7d3d61c382ef9c3b99a62f7a8f3_a363fe7d3d61c382ef9c3b99a62f7a8f3}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Join\_Otaa\_Lora@{Join\_Otaa\_Lora}}
+\index{Join\_Otaa\_Lora@{Join\_Otaa\_Lora}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Join\_Otaa\_Lora()}{Join\_Otaa\_Lora()}}
+{\footnotesize\ttfamily uint8\+\_\+t Join\+\_\+\+Otaa\+\_\+\+Lora (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module join O\+T\+AA Lora connection Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Function to join a lora connection using O\+T\+AA (Over the Air Activation) in a R\+N2483 based mote
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___l_o_r_a_8c_a305a60b720cd80e2ec5f21d5cec87ddd_a305a60b720cd80e2ec5f21d5cec87ddd}{Setup\+\_\+\+Otaa\+\_\+\+Lora()}} has been called
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None on success / different E\+R\+R\+OR Conditions according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00337}{337}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00337                                          \{}
+\DoxyCodeLine{00338 }
+\DoxyCodeLine{00339     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00340     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[64];}
+\DoxyCodeLine{00341     uint8\_t sz;}
+\DoxyCodeLine{00342 }
+\DoxyCodeLine{00343     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00344 }
+\DoxyCodeLine{00345     \mbox{\hyperlink{hal___l_o_r_a_8c_a1b8443bf08fc9b24e3d4b488103882f7_a1b8443bf08fc9b24e3d4b488103882f7}{Mac\_Adr\_On}}(uart);}
+\DoxyCodeLine{00346 }
+\DoxyCodeLine{00347     strcpy(Command,\textcolor{stringliteral}{"mac join otaa\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00348     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 15);}
+\DoxyCodeLine{00349     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00350     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00351         sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00352         \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"denied"},6)==0) \{}
+\DoxyCodeLine{00353             \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a26efb6f71260d2f4407092646f36d3c7_a26efb6f71260d2f4407092646f36d3c7}{ERROR\_OTAA\_DENIED}};}
+\DoxyCodeLine{00354         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"accepted"},8)==0) \{}
+\DoxyCodeLine{00355             \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_adaa944db2d9c3df6a77ce36265d754af_adaa944db2d9c3df6a77ce36265d754af}{SUCCESS\_OTAA\_LORA}};}
+\DoxyCodeLine{00356         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00357             \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a23c9d76de36fbd7f5bf6f7b38287813c_a23c9d76de36fbd7f5bf6f7b38287813c}{ERROR\_OTAA\_UNKNOWN}};}
+\DoxyCodeLine{00358         \}}
+\DoxyCodeLine{00359     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_param"},13)==0) \{}
+\DoxyCodeLine{00360         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a94ad7907cdee6c131cf6a3c2bf1b3480_a94ad7907cdee6c131cf6a3c2bf1b3480}{ERROR\_OTAA\_INVALID\_PARAM}};}
+\DoxyCodeLine{00361     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"keys\_not\_init"},13)==0) \{}
+\DoxyCodeLine{00362         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_aeeab0fac8f72803bfa688a393c6d5769_aeeab0fac8f72803bfa688a393c6d5769}{ERROR\_OTAA\_KEYS\_NOT\_INIT}};}
+\DoxyCodeLine{00363     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"no\_free\_ch"},10)==0) \{}
+\DoxyCodeLine{00364         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a57ccc2e562215c2566a93e241877eaa1_a57ccc2e562215c2566a93e241877eaa1}{ERROR\_OTAA\_NO\_FREE\_CH}};}
+\DoxyCodeLine{00365     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"silent"},6)==0) \{}
+\DoxyCodeLine{00366         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a8b4fc2d773e8e1e83721168e0599b30f_a8b4fc2d773e8e1e83721168e0599b30f}{ERROR\_OTAA\_SILENT}};}
+\DoxyCodeLine{00367     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"busy"},4)==0) \{}
+\DoxyCodeLine{00368         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_abf750c38e1b378730b291aaedc9bd4e9_abf750c38e1b378730b291aaedc9bd4e9}{ERROR\_OTAA\_BUSY}};}
+\DoxyCodeLine{00369     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_paused"},10)==0) \{}
+\DoxyCodeLine{00370         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a128e46d95110c0f100b26b63a5280410_a128e46d95110c0f100b26b63a5280410}{ERROR\_OTAA\_MAC\_PAUSED}};}
+\DoxyCodeLine{00371     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00372         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a23c9d76de36fbd7f5bf6f7b38287813c_a23c9d76de36fbd7f5bf6f7b38287813c}{ERROR\_OTAA\_UNKNOWN}};}
+\DoxyCodeLine{00373     \}}
+\DoxyCodeLine{00374 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a1b8443bf08fc9b24e3d4b488103882f7_a1b8443bf08fc9b24e3d4b488103882f7}\label{hal___l_o_r_a_8c_a1b8443bf08fc9b24e3d4b488103882f7_a1b8443bf08fc9b24e3d4b488103882f7}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Adr\_On@{Mac\_Adr\_On}}
+\index{Mac\_Adr\_On@{Mac\_Adr\_On}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Adr\_On()}{Mac\_Adr\_On()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Adr\+\_\+\+On (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac A\+DR on Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets adaptative data rate ON, on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success / 1 on error 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00449}{449}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00449                                      \{}
+\DoxyCodeLine{00450 }
+\DoxyCodeLine{00451     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00452     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00453     uint8\_t sz;}
+\DoxyCodeLine{00454 }
+\DoxyCodeLine{00455     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00456     strcpy(Command,\textcolor{stringliteral}{"mac set adr on\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00457     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 16);}
+\DoxyCodeLine{00458     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00459     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00460         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00461     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00462         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00463     \}}
+\DoxyCodeLine{00464 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a01afbfa551441f1a47f2d3b2c9659bbb_a01afbfa551441f1a47f2d3b2c9659bbb}\label{hal___l_o_r_a_8c_a01afbfa551441f1a47f2d3b2c9659bbb_a01afbfa551441f1a47f2d3b2c9659bbb}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Ar\_On@{Mac\_Ar\_On}}
+\index{Mac\_Ar\_On@{Mac\_Ar\_On}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Ar\_On()}{Mac\_Ar\_On()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Ar\+\_\+\+On (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac AR on Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets automatic reply ON, on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success / 1 on error 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00478}{478}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00478                                     \{}
+\DoxyCodeLine{00479 }
+\DoxyCodeLine{00480     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00481     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00482     uint8\_t sz;}
+\DoxyCodeLine{00483 }
+\DoxyCodeLine{00484     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00485     strcpy(Command,\textcolor{stringliteral}{"mac set ar on\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00486     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 15);}
+\DoxyCodeLine{00487     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00488     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00489         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00490     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00491         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00492     \}}
+\DoxyCodeLine{00493 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a7885e022b65fa48597f9825edd54cdd6_a7885e022b65fa48597f9825edd54cdd6}\label{hal___l_o_r_a_8c_a7885e022b65fa48597f9825edd54cdd6_a7885e022b65fa48597f9825edd54cdd6}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Clear\_Upctr@{Mac\_Clear\_Upctr}}
+\index{Mac\_Clear\_Upctr@{Mac\_Clear\_Upctr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Clear\_Upctr()}{Mac\_Clear\_Upctr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Clear\+\_\+\+Upctr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac clear Up counter Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets up counter parameter to 0 on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success / 1 on fail 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00647}{647}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00647                                           \{}
+\DoxyCodeLine{00648 }
+\DoxyCodeLine{00649     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00650     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00651     uint8\_t sz;}
+\DoxyCodeLine{00652 }
+\DoxyCodeLine{00653     strcpy(Command,\textcolor{stringliteral}{"mac set upctr 0\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00654     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 17);}
+\DoxyCodeLine{00655     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00656     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00657         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00658     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00659         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00660     \}}
+\DoxyCodeLine{00661 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a7e6e525740e3db5bf43a18a7855f5910_a7e6e525740e3db5bf43a18a7855f5910}\label{hal___l_o_r_a_8c_a7e6e525740e3db5bf43a18a7855f5910_a7e6e525740e3db5bf43a18a7855f5910}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Get\_Appeui@{Mac\_Get\_Appeui}}
+\index{Mac\_Get\_Appeui@{Mac\_Get\_Appeui}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Get\_Appeui()}{Mac\_Get\_Appeui()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Get\+\_\+\+Appeui (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac get Appeui Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Appeui for Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00129}{129}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129                                                                       \{}
+\DoxyCodeLine{00130     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00131     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[64];}
+\DoxyCodeLine{00132     uint8\_t sz;}
+\DoxyCodeLine{00133 }
+\DoxyCodeLine{00134     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00135     strcpy(Command,\textcolor{stringliteral}{"mac get appeui\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00136     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 16);}
+\DoxyCodeLine{00137     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00138     strncpy(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a07415a3cafb300d0355d29f5a1a5a832}{AppEui}},buf,16);}
+\DoxyCodeLine{00139 }
+\DoxyCodeLine{00140     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00141 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a162bdba9619cbd56f85a0f48a762ab3e_a162bdba9619cbd56f85a0f48a762ab3e}\label{hal___l_o_r_a_8c_a162bdba9619cbd56f85a0f48a762ab3e_a162bdba9619cbd56f85a0f48a762ab3e}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Get\_Devaddr@{Mac\_Get\_Devaddr}}
+\index{Mac\_Get\_Devaddr@{Mac\_Get\_Devaddr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Get\_Devaddr()}{Mac\_Get\_Devaddr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Get\+\_\+\+Devaddr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac get Devaddr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Devaddr for Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00156}{156}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156                                                                        \{}
+\DoxyCodeLine{00157     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00158     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00159     uint8\_t sz;}
+\DoxyCodeLine{00160 }
+\DoxyCodeLine{00161     strcpy(Command,\textcolor{stringliteral}{"mac get devaddr\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00162     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 17);}
+\DoxyCodeLine{00163     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00164     strncpy(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a7bfaa9783608e7e3dced38848be289d4}{DevAddr}},buf,8);}
+\DoxyCodeLine{00165 }
+\DoxyCodeLine{00166     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00167 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a8e2347149ac9cf4ef73137b56ec1b483_a8e2347149ac9cf4ef73137b56ec1b483}\label{hal___l_o_r_a_8c_a8e2347149ac9cf4ef73137b56ec1b483_a8e2347149ac9cf4ef73137b56ec1b483}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Get\_Deveui@{Mac\_Get\_Deveui}}
+\index{Mac\_Get\_Deveui@{Mac\_Get\_Deveui}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Get\_Deveui()}{Mac\_Get\_Deveui()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Get\+\_\+\+Deveui (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac get Deveui Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Deveui for Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00102}{102}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102                                                                       \{}
+\DoxyCodeLine{00103     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[64];}
+\DoxyCodeLine{00105     uint8\_t sz;}
+\DoxyCodeLine{00106 }
+\DoxyCodeLine{00107     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00108     strcpy(Command,\textcolor{stringliteral}{"mac get deveui\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00109     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 16);}
+\DoxyCodeLine{00110     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00111     strncpy(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a704508c84d373938002a633fd16863c6}{DevEui}},buf,16);}
+\DoxyCodeLine{00112 }
+\DoxyCodeLine{00113     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00114 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a3a9da280c36d4cebfcefd1c67b2328b7_a3a9da280c36d4cebfcefd1c67b2328b7}\label{hal___l_o_r_a_8c_a3a9da280c36d4cebfcefd1c67b2328b7_a3a9da280c36d4cebfcefd1c67b2328b7}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Get\_Dnctr@{Mac\_Get\_Dnctr}}
+\index{Mac\_Get\_Dnctr@{Mac\_Get\_Dnctr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Get\_Dnctr()}{Mac\_Get\_Dnctr()}}
+{\footnotesize\ttfamily int Mac\+\_\+\+Get\+\_\+\+Dnctr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac get Dnctr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets down counter parameter for Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atoi(buf) value of the Dnctr parameter 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00592}{592}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00592                                     \{}
+\DoxyCodeLine{00593 }
+\DoxyCodeLine{00594     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00595     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00596     uint8\_t sz;}
+\DoxyCodeLine{00597 }
+\DoxyCodeLine{00598     strcpy(Command,\textcolor{stringliteral}{"mac get dnctr\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00599     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 15);}
+\DoxyCodeLine{00600     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00601 }
+\DoxyCodeLine{00602     \textcolor{keywordflow}{return} atoi(buf);}
+\DoxyCodeLine{00603 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a2a98bbf1f654c54bd1023c5805f32b86_a2a98bbf1f654c54bd1023c5805f32b86}\label{hal___l_o_r_a_8c_a2a98bbf1f654c54bd1023c5805f32b86_a2a98bbf1f654c54bd1023c5805f32b86}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Get\_Upctr@{Mac\_Get\_Upctr}}
+\index{Mac\_Get\_Upctr@{Mac\_Get\_Upctr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Get\_Upctr()}{Mac\_Get\_Upctr()}}
+{\footnotesize\ttfamily int Mac\+\_\+\+Get\+\_\+\+Upctr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac get Upctr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets up counter parameter for Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+atoi(buf) value of the Upctr parameter 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00538}{538}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00538                                     \{}
+\DoxyCodeLine{00539 }
+\DoxyCodeLine{00540     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00541     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00542     uint8\_t sz;}
+\DoxyCodeLine{00543 }
+\DoxyCodeLine{00544     strcpy(Command,\textcolor{stringliteral}{"mac get upctr\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00545     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 15);}
+\DoxyCodeLine{00546     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00547 }
+\DoxyCodeLine{00548     \textcolor{keywordflow}{return} atoi(buf);}
+\DoxyCodeLine{00549 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a24d54dc1387535a120664b490b7092bc_a24d54dc1387535a120664b490b7092bc}\label{hal___l_o_r_a_8c_a24d54dc1387535a120664b490b7092bc_a24d54dc1387535a120664b490b7092bc}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Save@{Mac\_Save}}
+\index{Mac\_Save@{Mac\_Save}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Save()}{Mac\_Save()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Save (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac save Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Saves configuration parameters to Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success / 1 on error 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00417}{417}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00417                                    \{}
+\DoxyCodeLine{00418 }
+\DoxyCodeLine{00419     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00420     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00421     uint8\_t sz;}
+\DoxyCodeLine{00422 }
+\DoxyCodeLine{00423     strcpy(Command,\textcolor{stringliteral}{"mac save\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00424 }
+\DoxyCodeLine{00425     UART\_write(uart, Command, 10);}
+\DoxyCodeLine{00426     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00427 }
+\DoxyCodeLine{00428     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00429         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00430     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_param"},13)==0) \{}
+\DoxyCodeLine{00431         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00432     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00433         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00434     \}}
+\DoxyCodeLine{00435 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a7037fc58d0f5f32c8d5a612a507b39e2_a7037fc58d0f5f32c8d5a612a507b39e2}\label{hal___l_o_r_a_8c_a7037fc58d0f5f32c8d5a612a507b39e2_a7037fc58d0f5f32c8d5a612a507b39e2}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Set\_Devaddr@{Mac\_Set\_Devaddr}}
+\index{Mac\_Set\_Devaddr@{Mac\_Set\_Devaddr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Set\_Devaddr()}{Mac\_Set\_Devaddr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Set\+\_\+\+Devaddr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac set Devaddr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets Devaddr on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+S\+E\+T\+\_\+\+D\+E\+V\+A\+D\+DR / E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+D\+E\+V\+A\+D\+DR according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00508}{508}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00508                                                                        \{}
+\DoxyCodeLine{00509     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00510     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00511     uint8\_t sz;}
+\DoxyCodeLine{00512 }
+\DoxyCodeLine{00513     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00514     strcpy(Command,\textcolor{stringliteral}{"mac set devaddr "});}
+\DoxyCodeLine{00515     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a7bfaa9783608e7e3dced38848be289d4}{DevAddr}},\textcolor{keyword}{sizeof}(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a7bfaa9783608e7e3dced38848be289d4}{DevAddr}}));}
+\DoxyCodeLine{00516     strcat(Command,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00517     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 26);}
+\DoxyCodeLine{00518     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00519     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00520         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_ae9285d5d7304260bbd7d8f1d16b8ce84_ae9285d5d7304260bbd7d8f1d16b8ce84}{ERROR\_SET\_DEVADDR}};}
+\DoxyCodeLine{00521     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00522         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a2dc02e08f7a019e4fc462b416a6ee50e_a2dc02e08f7a019e4fc462b416a6ee50e}{SUCCESS\_SET\_DEVADDR}};}
+\DoxyCodeLine{00523     \}}
+\DoxyCodeLine{00524 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a43b2e0ff493c843f67fc30a88fb1adfd_a43b2e0ff493c843f67fc30a88fb1adfd}\label{hal___l_o_r_a_8c_a43b2e0ff493c843f67fc30a88fb1adfd_a43b2e0ff493c843f67fc30a88fb1adfd}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Set\_Dnctr@{Mac\_Set\_Dnctr}}
+\index{Mac\_Set\_Dnctr@{Mac\_Set\_Dnctr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Set\_Dnctr()}{Mac\_Set\_Dnctr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Set\+\_\+\+Dnctr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac set Dnctr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets down counter parameter on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+D\+N\+C\+TR / S\+U\+C\+C\+E\+S\+S\+\_\+\+S\+E\+T\+\_\+\+D\+N\+C\+TR according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00618}{618}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00618                                                                      \{}
+\DoxyCodeLine{00619     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00620     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00621     uint8\_t sz;}
+\DoxyCodeLine{00622 }
+\DoxyCodeLine{00623     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00624     sprintf(Command,\textcolor{stringliteral}{"mac set dnctr \%d\(\backslash\)r\(\backslash\)n"}, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a7cb78916a2f569e23475193bb803cc36}{Dnctr}});}
+\DoxyCodeLine{00625     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, strlen(Command));}
+\DoxyCodeLine{00626     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00627     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00628         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a61142b59a1ef3a47f29bb559b5b7145b_a61142b59a1ef3a47f29bb559b5b7145b}{ERROR\_SET\_DNCTR}};}
+\DoxyCodeLine{00629     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00630         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_ae9df823a1f5a84653383a81cdfbef592_ae9df823a1f5a84653383a81cdfbef592}{SUCCESS\_SET\_DNCTR}};}
+\DoxyCodeLine{00631     \}}
+\DoxyCodeLine{00632 }
+\DoxyCodeLine{00633 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a1eac44020aab31e07be41c244539fb28_a1eac44020aab31e07be41c244539fb28}\label{hal___l_o_r_a_8c_a1eac44020aab31e07be41c244539fb28_a1eac44020aab31e07be41c244539fb28}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Set\_Pwridx@{Mac\_Set\_Pwridx}}
+\index{Mac\_Set\_Pwridx@{Mac\_Set\_Pwridx}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Set\_Pwridx()}{Mac\_Set\_Pwridx()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Set\+\_\+\+Pwridx (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{uint8\+\_\+t}]{pwridx }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac set Pwridx Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets the output power to be used on next transmissions on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em uint8\+\_\+t} & pwridx decimal number representing the index output for the power value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+P\+W\+R\+I\+DX / S\+U\+C\+C\+E\+S\+S\+\_\+\+S\+E\+T\+\_\+\+P\+W\+R\+I\+DX according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00676}{676}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00676                                                          \{}
+\DoxyCodeLine{00677     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00678     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00679     uint8\_t sz;}
+\DoxyCodeLine{00680 }
+\DoxyCodeLine{00681     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00682     sprintf(Command,\textcolor{stringliteral}{"mac set pwridx \%d\(\backslash\)r\(\backslash\)n"}, pwridx);}
+\DoxyCodeLine{00683     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, strlen(Command));}
+\DoxyCodeLine{00684     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00685     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00686         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_aadc01b1bf82afd40ed4472203cbbf371_aadc01b1bf82afd40ed4472203cbbf371}{ERROR\_SET\_PWRIDX}};}
+\DoxyCodeLine{00687     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00688         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_ad702805dc169d1a57bcec6ea59fd36bf_ad702805dc169d1a57bcec6ea59fd36bf}{SUCCESS\_SET\_PWRIDX}};}
+\DoxyCodeLine{00689     \}}
+\DoxyCodeLine{00690 }
+\DoxyCodeLine{00691 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a809f6b028ce4c7e1630593d5d41f8c9a_a809f6b028ce4c7e1630593d5d41f8c9a}\label{hal___l_o_r_a_8c_a809f6b028ce4c7e1630593d5d41f8c9a_a809f6b028ce4c7e1630593d5d41f8c9a}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Set\_Rxdelay1@{Mac\_Set\_Rxdelay1}}
+\index{Mac\_Set\_Rxdelay1@{Mac\_Set\_Rxdelay1}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Set\_Rxdelay1()}{Mac\_Set\_Rxdelay1()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Set\+\_\+\+Rxdelay1 (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac set Rx delay 1 Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets RX delay 1 for Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & delay value of the delay\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+R\+X\+D\+E\+L\+A\+Y1\+\_\+\+S\+ET / E\+R\+R\+O\+R\+\_\+\+R\+X\+D\+E\+L\+A\+Y1\+\_\+\+S\+ET according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00389}{389}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00389                                                            \{}
+\DoxyCodeLine{00390     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00391     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[64];}
+\DoxyCodeLine{00392     uint8\_t sz;}
+\DoxyCodeLine{00393 }
+\DoxyCodeLine{00394     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00395     sprintf(Command,\textcolor{stringliteral}{"mac set rxdelay1 \%d\(\backslash\)r\(\backslash\)n"}, delay);}
+\DoxyCodeLine{00396     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, strlen(Command));}
+\DoxyCodeLine{00397     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00398     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00399         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_ae26dfa0af8ed39e7001bf6fa16730d44_ae26dfa0af8ed39e7001bf6fa16730d44}{ERROR\_RXDELAY1\_SET}};}
+\DoxyCodeLine{00400     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00401        \textcolor{keywordflow}{return}  \mbox{\hyperlink{hal___l_o_r_a_8h_aecac1ae5cd1a6f03b46dab027904ba35_aecac1ae5cd1a6f03b46dab027904ba35}{SUCCESS\_RXDELAY1\_SET}};}
+\DoxyCodeLine{00402     \}}
+\DoxyCodeLine{00403 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a6d9a276861f1d8d552d0691b4c3cbdba_a6d9a276861f1d8d552d0691b4c3cbdba}\label{hal___l_o_r_a_8c_a6d9a276861f1d8d552d0691b4c3cbdba_a6d9a276861f1d8d552d0691b4c3cbdba}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Mac\_Set\_Upctr@{Mac\_Set\_Upctr}}
+\index{Mac\_Set\_Upctr@{Mac\_Set\_Upctr}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Mac\_Set\_Upctr()}{Mac\_Set\_Upctr()}}
+{\footnotesize\ttfamily uint8\+\_\+t Mac\+\_\+\+Set\+\_\+\+Upctr (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Mac set Upctr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Sets up counter parameter on Lora R\+N2483 Module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+S\+E\+T\+\_\+\+U\+P\+C\+TR / E\+R\+R\+O\+R\+\_\+\+S\+E\+T\+\_\+\+U\+P\+C\+TR according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00564}{564}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00564                                                                      \{}
+\DoxyCodeLine{00565     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00566     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00567     uint8\_t sz;}
+\DoxyCodeLine{00568 }
+\DoxyCodeLine{00569     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00570     sprintf(Command,\textcolor{stringliteral}{"mac set upctr \%d\(\backslash\)r\(\backslash\)n"}, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a0244ad2b8c02cb0492652035908ff00f}{Upctr}});}
+\DoxyCodeLine{00571     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, strlen(Command));}
+\DoxyCodeLine{00572     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00573     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00574         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_acb8d2f08e4064192ad348988f5a63342_acb8d2f08e4064192ad348988f5a63342}{ERROR\_SET\_UPCTR}};}
+\DoxyCodeLine{00575     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00576         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a09dbfdd15c52d050ee56ed6eedf30f01_a09dbfdd15c52d050ee56ed6eedf30f01}{SUCCESS\_SET\_UPCTR}};}
+\DoxyCodeLine{00577     \}}
+\DoxyCodeLine{00578 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a7ccfa12cb27d73c06f303b9294ebc508_a7ccfa12cb27d73c06f303b9294ebc508}\label{hal___l_o_r_a_8c_a7ccfa12cb27d73c06f303b9294ebc508_a7ccfa12cb27d73c06f303b9294ebc508}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Reset\_RN2483@{Reset\_RN2483}}
+\index{Reset\_RN2483@{Reset\_RN2483}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Reset\_RN2483()}{Reset\_RN2483()}}
+{\footnotesize\ttfamily void Reset\+\_\+\+R\+N2483 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module reset Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Resets R\+N2483 Lora module
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+Activate M\+C\+LR Pin
+
+Release M\+C\+LR Pin
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00052}{52}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052                         \{}
+\DoxyCodeLine{00056     GPIO\_write(\mbox{\hyperlink{_board_8h_a832f6f40c70913209c539e6b23b6e19a_a832f6f40c70913209c539e6b23b6e19a}{Board\_RN2483\_MCLR}}, 0);}
+\DoxyCodeLine{00057     usleep(50000);}
+\DoxyCodeLine{00061     GPIO\_write(\mbox{\hyperlink{_board_8h_a832f6f40c70913209c539e6b23b6e19a_a832f6f40c70913209c539e6b23b6e19a}{Board\_RN2483\_MCLR}}, 1);}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a2a645d1e940824366eed22d6343f519c_a2a645d1e940824366eed22d6343f519c}\label{hal___l_o_r_a_8c_a2a645d1e940824366eed22d6343f519c_a2a645d1e940824366eed22d6343f519c}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Setup\_Abp\_Lora@{Setup\_Abp\_Lora}}
+\index{Setup\_Abp\_Lora@{Setup\_Abp\_Lora}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Setup\_Abp\_Lora()}{Setup\_Abp\_Lora()}}
+{\footnotesize\ttfamily uint8\+\_\+t Setup\+\_\+\+Abp\+\_\+\+Lora (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Set up A\+BP Lora connection Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Function to setup a lora connection using A\+BP (Authentification By Personalisation) in a R\+N2483 based mote. Uses constant values for device address, network key and appskey
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___l_o_r_a_8c_a2a645d1e940824366eed22d6343f519c_a2a645d1e940824366eed22d6343f519c}{Setup\+\_\+\+Abp\+\_\+\+Lora()}} has been called
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+A\+B\+P\+\_\+\+L\+O\+RA Different S\+U\+C\+C\+E\+S\+S/\+E\+R\+R\+OR Conditions according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00183}{183}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00183                                                                       \{}
+\DoxyCodeLine{00184 }
+\DoxyCodeLine{00185     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00186     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c, buf[64];}
+\DoxyCodeLine{00187     uint8\_t sz;}
+\DoxyCodeLine{00188 }
+\DoxyCodeLine{00189     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00191     strcpy(Command,\textcolor{stringliteral}{"mac set devaddr "});                             \textcolor{comment}{//Mac set Devaddr}}
+\DoxyCodeLine{00192     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a7bfaa9783608e7e3dced38848be289d4}{DevAddr}},8);}
+\DoxyCodeLine{00193     strcat(Command,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00194     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 26);}
+\DoxyCodeLine{00195     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00196     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00197         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_aefe8233768da61150f7688ab59ddf1c7_aefe8233768da61150f7688ab59ddf1c7}{ERROR\_ABP\_DEVADDR}};}
+\DoxyCodeLine{00198     \}}
+\DoxyCodeLine{00199 }
+\DoxyCodeLine{00200     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));}
+\DoxyCodeLine{00201 }
+\DoxyCodeLine{00202     strcpy(Command,\textcolor{stringliteral}{"mac set nwkskey "});                             \textcolor{comment}{//Mac set NwSkey}}
+\DoxyCodeLine{00203     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a8ed20c9f0fa46a2dc5894e8b6c88d7dc}{NwksKey}},32);}
+\DoxyCodeLine{00204     strcat(Command,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00205     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 50);}
+\DoxyCodeLine{00206     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00207     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00208         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a206155f4db591634248f8f602b5fccda_a206155f4db591634248f8f602b5fccda}{ERROR\_ABP\_NWKSKEY}};}
+\DoxyCodeLine{00209     \}}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));                                    \textcolor{comment}{//Mac set AppSkey}}
+\DoxyCodeLine{00212     strcpy(Command,\textcolor{stringliteral}{"mac set appskey "});}
+\DoxyCodeLine{00213     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a8fe750d6cc28819e730c3e4d6a94912a}{AppsKey}},32);}
+\DoxyCodeLine{00214     strcat(Command,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00215     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 50);}
+\DoxyCodeLine{00216     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00217     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00218         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a1b874db7e753f3f677a3bb19a48485c9_a1b874db7e753f3f677a3bb19a48485c9}{ERROR\_ABP\_APPSKEY}};}
+\DoxyCodeLine{00219     \}}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{00221     \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_acf868de705fe437eb0d977d8f3d8057b_acf868de705fe437eb0d977d8f3d8057b}{SUCCESS\_ABP\_LORA}};}
+\DoxyCodeLine{00222 }
+\DoxyCodeLine{00223 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a305a60b720cd80e2ec5f21d5cec87ddd_a305a60b720cd80e2ec5f21d5cec87ddd}\label{hal___l_o_r_a_8c_a305a60b720cd80e2ec5f21d5cec87ddd_a305a60b720cd80e2ec5f21d5cec87ddd}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Setup\_Otaa\_Lora@{Setup\_Otaa\_Lora}}
+\index{Setup\_Otaa\_Lora@{Setup\_Otaa\_Lora}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Setup\_Otaa\_Lora()}{Setup\_Otaa\_Lora()}}
+{\footnotesize\ttfamily uint8\+\_\+t Setup\+\_\+\+Otaa\+\_\+\+Lora (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Set up O\+T\+AA Lora connection Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Function to setup a lora connection using O\+T\+AA (Over the Air Activation) in a R\+N2483 based mote
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___l_o_r_a_8c_a305a60b720cd80e2ec5f21d5cec87ddd_a305a60b720cd80e2ec5f21d5cec87ddd}{Setup\+\_\+\+Otaa\+\_\+\+Lora()}} has been called
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+ & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+\_\+\+O\+T\+A\+A\+\_\+\+L\+O\+RA Different S\+U\+C\+C\+E\+S\+S/\+E\+R\+R\+OR Conditions according to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00277}{277}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00277                                                                        \{}
+\DoxyCodeLine{00278 }
+\DoxyCodeLine{00279     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[128];}
+\DoxyCodeLine{00280     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[64];}
+\DoxyCodeLine{00281     uint8\_t sz;}
+\DoxyCodeLine{00282 }
+\DoxyCodeLine{00283     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));                                \textcolor{comment}{//Sys get HwEUI}}
+\DoxyCodeLine{00284     strcpy(Command,\textcolor{stringliteral}{"sys get hweui\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00285     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)(Command), 15);}
+\DoxyCodeLine{00286     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00287     strncpy(MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a704508c84d373938002a633fd16863c6}{DevEui}},buf,16);}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));                                \textcolor{comment}{//Mac set DevEUI}}
+\DoxyCodeLine{00290     memset(\&Command,0, \textcolor{keyword}{sizeof}(Command));}
+\DoxyCodeLine{00291     strcpy(Command,\textcolor{stringliteral}{"mac set deveui "});}
+\DoxyCodeLine{00292     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a704508c84d373938002a633fd16863c6}{DevEui}},16);}
+\DoxyCodeLine{00293     strcat(Command, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00294     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 33);}
+\DoxyCodeLine{00295     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00296     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00297         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a2356158c8f29acf50c34b634658ce2c7_a2356158c8f29acf50c34b634658ce2c7}{ERROR\_OTAA\_DEVEUI}};}
+\DoxyCodeLine{00298     \}}
+\DoxyCodeLine{00299 }
+\DoxyCodeLine{00300     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));                                \textcolor{comment}{//Mac set AppEUI}}
+\DoxyCodeLine{00301     strcpy(Command,\textcolor{stringliteral}{"mac set appeui "});}
+\DoxyCodeLine{00302     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a07415a3cafb300d0355d29f5a1a5a832}{AppEui}},16);}
+\DoxyCodeLine{00303     strcat(Command, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00304     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 33);}
+\DoxyCodeLine{00305     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00306     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00307         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_aaba1a668a835f2ec6c8e94d2a4f4dc7e_aaba1a668a835f2ec6c8e94d2a4f4dc7e}{ERROR\_OTAA\_APPEUI}};}
+\DoxyCodeLine{00308     \}}
+\DoxyCodeLine{00309 }
+\DoxyCodeLine{00310     memset(\&buf,0, \textcolor{keyword}{sizeof}(buf));                                \textcolor{comment}{//Mac set Appkey}}
+\DoxyCodeLine{00311     strcpy(Command,\textcolor{stringliteral}{"mac set appkey "});}
+\DoxyCodeLine{00312     strncat(Command, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_afa3ed51c3f433bc9d0203a43beac46c8}{AppKey}},32);}
+\DoxyCodeLine{00313     strcat(Command, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00314     UART\_write(uart, (\textcolor{keyword}{const} \textcolor{keywordtype}{char} *)Command, 49);}
+\DoxyCodeLine{00315     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00316     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)!=0) \{}
+\DoxyCodeLine{00317         \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_a13089da1324d3c9dd2df51dc284a5efa_a13089da1324d3c9dd2df51dc284a5efa}{ERROR\_OTAA\_APPKEY}};}
+\DoxyCodeLine{00318     \}}
+\DoxyCodeLine{00319 }
+\DoxyCodeLine{00320     \textcolor{keywordflow}{return} \mbox{\hyperlink{hal___l_o_r_a_8h_adaa944db2d9c3df6a77ce36265d754af_adaa944db2d9c3df6a77ce36265d754af}{SUCCESS\_OTAA\_LORA}};}
+\DoxyCodeLine{00321 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_aa52af39f11aca99fd6f5fea3e5d8e5b1_aa52af39f11aca99fd6f5fea3e5d8e5b1}\label{hal___l_o_r_a_8c_aa52af39f11aca99fd6f5fea3e5d8e5b1_aa52af39f11aca99fd6f5fea3e5d8e5b1}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Sys\_FactoryReset@{Sys\_FactoryReset}}
+\index{Sys\_FactoryReset@{Sys\_FactoryReset}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Sys\_FactoryReset()}{Sys\_FactoryReset()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sys\+\_\+\+Factory\+Reset (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Sys Factory reset Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Resets the R\+N2483 module to factoy values
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00076}{76}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076                                            \{}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00079     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00080     uint8\_t sz;}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     strcpy(Command,\textcolor{stringliteral}{"sys factoryRESET\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{00084     UART\_write(uart, Command, strlen(Command));}
+\DoxyCodeLine{00085     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00088 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a8059df73a3225c8db280859e2270c6ba_a8059df73a3225c8db280859e2270c6ba}\label{hal___l_o_r_a_8c_a8059df73a3225c8db280859e2270c6ba_a8059df73a3225c8db280859e2270c6ba}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Sys\_Sleep@{Sys\_Sleep}}
+\index{Sys\_Sleep@{Sys\_Sleep}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Sys\_Sleep()}{Sys\_Sleep()}}
+{\footnotesize\ttfamily uint8\+\_\+t Sys\+\_\+\+Sleep (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{uint32\+\_\+t}]{sleep }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Sys sleep Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Puts the R\+N2483 module in sleep mode during sleep ms. This function returns when the device comes out of sleep mode
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___l_o_r_a_8c_a8059df73a3225c8db280859e2270c6ba_a8059df73a3225c8db280859e2270c6ba}{Sys\+\_\+\+Sleep()}} has been called 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & sleep Value of the sleep time in ms\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success / 1 on fail 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00943}{943}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00943                                                     \{}
+\DoxyCodeLine{00944 }
+\DoxyCodeLine{00945     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00946     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00947     uint8\_t sz;}
+\DoxyCodeLine{00948 }
+\DoxyCodeLine{00949     sprintf(Command,\textcolor{stringliteral}{"sys sleep \%d\(\backslash\)r\(\backslash\)n"},sleep);}
+\DoxyCodeLine{00950 }
+\DoxyCodeLine{00951     UART\_write(uart, Command, strlen(Command));}
+\DoxyCodeLine{00952     sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00953 }
+\DoxyCodeLine{00954     \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00955         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00956     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_param"},13)==0) \{}
+\DoxyCodeLine{00957         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00958     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00959         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{00960     \}}
+\DoxyCodeLine{00961 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_aeb3411c0293ca2e1a5d6b29ccb77d190_aeb3411c0293ca2e1a5d6b29ccb77d190}\label{hal___l_o_r_a_8c_aeb3411c0293ca2e1a5d6b29ccb77d190_aeb3411c0293ca2e1a5d6b29ccb77d190}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Try\_Join\_Lora\_Gateway@{Try\_Join\_Lora\_Gateway}}
+\index{Try\_Join\_Lora\_Gateway@{Try\_Join\_Lora\_Gateway}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Try\_Join\_Lora\_Gateway()}{Try\_Join\_Lora\_Gateway()}}
+{\footnotesize\ttfamily uint8\+\_\+t Try\+\_\+\+Join\+\_\+\+Lora\+\_\+\+Gateway (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart\+\_\+dbg,  }\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart\+\_\+lora }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Try join Lora Gateway Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Does several tries to connect to GW using O\+T\+AA.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\+\_\+dbg U\+A\+RT debug function \\
+\hline
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t ret 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00706}{706}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00706                                                                            \{}
+\DoxyCodeLine{00707 }
+\DoxyCodeLine{00708     uint8\_t nf;}
+\DoxyCodeLine{00709     uint8\_t wait;}
+\DoxyCodeLine{00710     uint8\_t ret;}
+\DoxyCodeLine{00711     uint8\_t sz;}
+\DoxyCodeLine{00712     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Mess[32];}
+\DoxyCodeLine{00713     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[256];}
+\DoxyCodeLine{00714 }
+\DoxyCodeLine{00715 }
+\DoxyCodeLine{00716     nf=0;}
+\DoxyCodeLine{00717     \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{00718         \textcolor{keywordflow}{if} (nf<3) \{}
+\DoxyCodeLine{00719             wait = 30;}
+\DoxyCodeLine{00720         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (nf<6)\{}
+\DoxyCodeLine{00721             wait = 60;}
+\DoxyCodeLine{00722         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00723             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00724         \}}
+\DoxyCodeLine{00725         ret = \mbox{\hyperlink{hal___l_o_r_a_8c_a363fe7d3d61c382ef9c3b99a62f7a8f3_a363fe7d3d61c382ef9c3b99a62f7a8f3}{Join\_Otaa\_Lora}}(uart\_lora);}
+\DoxyCodeLine{00726         \textcolor{keywordflow}{if} (ret==\mbox{\hyperlink{hal___l_o_r_a_8h_adaa944db2d9c3df6a77ce36265d754af_adaa944db2d9c3df6a77ce36265d754af}{SUCCESS\_OTAA\_LORA}}) \{}
+\DoxyCodeLine{00727             strcpy(Mess,\textcolor{stringliteral}{"Join\_Otaa\_Lora() Success\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00728             UART\_write(uart\_dbg, Mess, 26);}
+\DoxyCodeLine{00729         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00730             strcpy(Mess,\textcolor{stringliteral}{"Join\_Otaa\_Lora() Failed "});}
+\DoxyCodeLine{00731             UART\_write(uart\_dbg, Mess, 24);}
+\DoxyCodeLine{00732             Mess[0] = \textcolor{charliteral}{'('}; Mess[1] = ret+48; Mess[2]=\textcolor{charliteral}{')'};}
+\DoxyCodeLine{00733             UART\_write(uart\_dbg, Mess,3);}
+\DoxyCodeLine{00734             UART\_write(uart\_dbg, \textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"},2);}
+\DoxyCodeLine{00735             \textcolor{keywordflow}{if} (ret==\mbox{\hyperlink{hal___l_o_r_a_8h_a26efb6f71260d2f4407092646f36d3c7_a26efb6f71260d2f4407092646f36d3c7}{ERROR\_OTAA\_DENIED}}) \{}
+\DoxyCodeLine{00736                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00737             \}}
+\DoxyCodeLine{00738             nf++;}
+\DoxyCodeLine{00739             sleep(wait);}
+\DoxyCodeLine{00740         \}}
+\DoxyCodeLine{00741     \} \textcolor{keywordflow}{while} (ret!=\mbox{\hyperlink{hal___l_o_r_a_8h_adaa944db2d9c3df6a77ce36265d754af_adaa944db2d9c3df6a77ce36265d754af}{SUCCESS\_OTAA\_LORA}});}
+\DoxyCodeLine{00742 }
+\DoxyCodeLine{00743     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00744 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_ab905300928a4d6f97a1eee934e9c6188_ab905300928a4d6f97a1eee934e9c6188}\label{hal___l_o_r_a_8c_ab905300928a4d6f97a1eee934e9c6188_ab905300928a4d6f97a1eee934e9c6188}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Tx\_Cnf\_Lora@{Tx\_Cnf\_Lora}}
+\index{Tx\_Cnf\_Lora@{Tx\_Cnf\_Lora}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Tx\_Cnf\_Lora()}{Tx\_Cnf\_Lora()}}
+{\footnotesize\ttfamily uint8\+\_\+t Tx\+\_\+\+Cnf\+\_\+\+Lora (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node,  }\item[{uint8\+\_\+t $\ast$}]{mask,  }\item[{uint16\+\_\+t $\ast$}]{node\+Id }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module TX Cnf Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Transmits data using lora connection in a R\+N2483 based mote in confirmed mode
+\end{DoxyEnumerate}
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{hal___l_o_r_a_8c_ab905300928a4d6f97a1eee934e9c6188_ab905300928a4d6f97a1eee934e9c6188}{Tx\+\_\+\+Cnf\+\_\+\+Lora()}} has been called 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+\mbox{\texttt{ in}}  & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct \\
+\hline
+ & {\em uint8\+\_\+t} & $\ast$mask pointer to mask \\
+\hline
+ & {\em uint16\+\_\+t} & $\ast$node\+Id pointer to node\+Id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t ret Different S\+U\+C\+C\+E\+SS / E\+R\+R\+OR codes acording to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00853}{853}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00853                                                                                                     \{}
+\DoxyCodeLine{00854 }
+\DoxyCodeLine{00855     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00856     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[32];}
+\DoxyCodeLine{00857     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} payload[40];}
+\DoxyCodeLine{00858     uint8\_t bytes[20];}
+\DoxyCodeLine{00859     uint8\_t PortNo;}
+\DoxyCodeLine{00860     uint8\_t sz;}
+\DoxyCodeLine{00861     uint8\_t ret;}
+\DoxyCodeLine{00862     uint8\_t LastAnswer = FALSE;}
+\DoxyCodeLine{00863 }
+\DoxyCodeLine{00864     memset(bytes,0,\textcolor{keyword}{sizeof}(bytes));}
+\DoxyCodeLine{00865 }
+\DoxyCodeLine{00866     \mbox{\hyperlink{hal___l_o_r_a_8c_a1b8443bf08fc9b24e3d4b488103882f7_a1b8443bf08fc9b24e3d4b488103882f7}{Mac\_Adr\_On}}(uart);                                                                       \textcolor{comment}{// Set adaptive datarate ON}}
+\DoxyCodeLine{00867     \mbox{\hyperlink{hal___l_o_r_a_8c_a01afbfa551441f1a47f2d3b2c9659bbb_a01afbfa551441f1a47f2d3b2c9659bbb}{Mac\_Ar\_On}}(uart);                                                                        \textcolor{comment}{// Set Automatic Retransmit ON}}
+\DoxyCodeLine{00868 }
+\DoxyCodeLine{00869     sprintf(Command,\textcolor{stringliteral}{"mac tx cnf \%d "}, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_aed64b9799becc58264c0ec004f47d142}{PortNoTx}});}
+\DoxyCodeLine{00870     strncat(Command,MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a56d0f8aa26e916819030ce3b21056475}{DataTx}}, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a443e326d2880e61e8d060ab35c338728}{DataLenTx}});}
+\DoxyCodeLine{00871     strcat(Command,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00872 }
+\DoxyCodeLine{00873     UART\_write(uart, Command, strlen(Command));}
+\DoxyCodeLine{00874 }
+\DoxyCodeLine{00875     *mask = 0;}
+\DoxyCodeLine{00876     *nodeId = 0;}
+\DoxyCodeLine{00877     \textcolor{keywordflow}{while} (LastAnswer==FALSE) \{}
+\DoxyCodeLine{00878         sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00879         \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00880             ;}
+\DoxyCodeLine{00881         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_tx\_ok"},9)==0) \{}
+\DoxyCodeLine{00882             LastAnswer=TRUE;}
+\DoxyCodeLine{00883             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a48e45364a90c10734809dfcfba4350d9_a48e45364a90c10734809dfcfba4350d9}{SUCCESS\_TX\_MAC\_TX}};}
+\DoxyCodeLine{00884         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_rx "},7)==0) \{}
+\DoxyCodeLine{00885             sscanf(buf,\textcolor{stringliteral}{"mac\_rx \%d \%s\(\backslash\)r\(\backslash\)n"},\&PortNo,payload);}
+\DoxyCodeLine{00886             sz = \mbox{\hyperlink{hal___l_o_r_a_8c_a3690f810004dcfe1dc77b3fa4768a256_a3690f810004dcfe1dc77b3fa4768a256}{hex2int}}(payload, strlen(payload), bytes);}
+\DoxyCodeLine{00887             \mbox{\hyperlink{hal___l_o_r_a_8c_a7d07609bb31ed5a9628931ddfa9ac5b7_a7d07609bb31ed5a9628931ddfa9ac5b7}{GetLoraServerParams}}(bytes, sz, MyLoraNode);}
+\DoxyCodeLine{00888             *mask = bytes[0];}
+\DoxyCodeLine{00889             *nodeId = (bytes[1]<<8) | bytes[2];}
+\DoxyCodeLine{00890             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a79fe3e0474ed79ce4763c098f993794c_a79fe3e0474ed79ce4763c098f993794c}{SUCCESS\_TX\_MAC\_RX}};}
+\DoxyCodeLine{00891         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_err"},7)==0) \{}
+\DoxyCodeLine{00892             LastAnswer=TRUE;}
+\DoxyCodeLine{00893             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_ac3c39c5d42fc4ecd2e765a31f66f761c_ac3c39c5d42fc4ecd2e765a31f66f761c}{ERROR\_TX\_MAC\_ERR}};}
+\DoxyCodeLine{00894         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_data\_len"},16)==0) \{}
+\DoxyCodeLine{00895             LastAnswer=TRUE;}
+\DoxyCodeLine{00896             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a2ad2e1f3d36b9983a1f63ed5f16d7153_a2ad2e1f3d36b9983a1f63ed5f16d7153}{ERROR\_TX\_INVALID\_DATA\_LEN}};}
+\DoxyCodeLine{00897         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_param"},13)==0) \{}
+\DoxyCodeLine{00898             LastAnswer=TRUE;}
+\DoxyCodeLine{00899             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a33d336ee015da1fabc2f1410cb7b14c5_a33d336ee015da1fabc2f1410cb7b14c5}{ERROR\_TX\_INVALID\_PARAM}};}
+\DoxyCodeLine{00900         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"not\_joined"},10)==0) \{}
+\DoxyCodeLine{00901             LastAnswer=TRUE;}
+\DoxyCodeLine{00902             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a3d70e0a1f5ac0cd7b8b9c857b3caadf2_a3d70e0a1f5ac0cd7b8b9c857b3caadf2}{ERROR\_TX\_NOT\_JOINED}};}
+\DoxyCodeLine{00903         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"no\_free\_ch"},10)==0) \{}
+\DoxyCodeLine{00904             LastAnswer=TRUE;}
+\DoxyCodeLine{00905             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a2f481d0fa351c0bdfb6f652c37246aa1_a2f481d0fa351c0bdfb6f652c37246aa1}{ERROR\_TX\_NO\_FREE\_CH}};}
+\DoxyCodeLine{00906         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"silent"},6)==0) \{}
+\DoxyCodeLine{00907             LastAnswer=TRUE;}
+\DoxyCodeLine{00908             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a28c850b9adb1999cc8a4782861c54fb5_a28c850b9adb1999cc8a4782861c54fb5}{ERROR\_TX\_SILENT}};}
+\DoxyCodeLine{00909         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"frame\_counter\_err\_rejoin\_needed"},31)==0) \{}
+\DoxyCodeLine{00910             LastAnswer=TRUE;}
+\DoxyCodeLine{00911             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a697937ee407e244e4263fe60fd299617_a697937ee407e244e4263fe60fd299617}{ERROR\_TX\_REJOIN\_NEEDED}};}
+\DoxyCodeLine{00912         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"busy"},4)==0) \{}
+\DoxyCodeLine{00913             LastAnswer=TRUE;}
+\DoxyCodeLine{00914             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_afe070f947cd3c7b7ea30125a3cda7468_afe070f947cd3c7b7ea30125a3cda7468}{ERROR\_TX\_BUSY}};}
+\DoxyCodeLine{00915         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_paused"},10)==0) \{}
+\DoxyCodeLine{00916             LastAnswer=TRUE;}
+\DoxyCodeLine{00917             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_ac5200bbb2fdc78f787f77d3fd0c520e6_ac5200bbb2fdc78f787f77d3fd0c520e6}{ERROR\_TX\_MAC\_PAUSED}};}
+\DoxyCodeLine{00918         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_data\_len"},16)==0) \{}
+\DoxyCodeLine{00919             LastAnswer=TRUE;}
+\DoxyCodeLine{00920             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a2ad2e1f3d36b9983a1f63ed5f16d7153_a2ad2e1f3d36b9983a1f63ed5f16d7153}{ERROR\_TX\_INVALID\_DATA\_LEN}};}
+\DoxyCodeLine{00921         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00922             LastAnswer=TRUE;}
+\DoxyCodeLine{00923             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_af230363a23f8ee5bc885586aa6cd086a_af230363a23f8ee5bc885586aa6cd086a}{ERROR\_TX\_UNKNOWN}};}
+\DoxyCodeLine{00924         \}}
+\DoxyCodeLine{00925     \}}
+\DoxyCodeLine{00926     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00927 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a8b1849d79d4f19889f0b771dd83b0854_a8b1849d79d4f19889f0b771dd83b0854}\label{hal___l_o_r_a_8c_a8b1849d79d4f19889f0b771dd83b0854_a8b1849d79d4f19889f0b771dd83b0854}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Tx\_Uncnf\_Lora@{Tx\_Uncnf\_Lora}}
+\index{Tx\_Uncnf\_Lora@{Tx\_Uncnf\_Lora}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Tx\_Uncnf\_Lora()}{Tx\_Uncnf\_Lora()}}
+{\footnotesize\ttfamily uint8\+\_\+t Tx\+\_\+\+Uncnf\+\_\+\+Lora (\begin{DoxyParamCaption}\item[{U\+A\+R\+T\+\_\+\+Handle}]{uart,  }\item[{struct \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$}]{My\+Lora\+Node,  }\item[{uint8\+\_\+t $\ast$}]{mask,  }\item[{uint16\+\_\+t $\ast$}]{node\+Id }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module TX Uncnf Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Transmits data using lora connection in a R\+N2483 based mote in unconfirmed mode
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+A\+R\+T\+\_\+\+Handle} & uart \\
+\hline
+\mbox{\texttt{ in}}  & {\em struct} & \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} $\ast$\+My\+Lora\+Node pointer to \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{Lora\+Node}} struct \\
+\hline
+ & {\em uint8\+\_\+t} & $\ast$mask pointer to mask \\
+\hline
+ & {\em uint16\+\_\+t} & $\ast$node\+Id pointer to node\+Id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t ret Different S\+U\+C\+C\+E\+SS / E\+R\+R\+OR codes acording to \mbox{\hyperlink{hal___l_o_r_a_8h}{hal\+\_\+\+L\+O\+R\+A.\+h}} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l00761}{761}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00761                                                                                                       \{}
+\DoxyCodeLine{00762 }
+\DoxyCodeLine{00763     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} Command[256];}
+\DoxyCodeLine{00764     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} buf[40];}
+\DoxyCodeLine{00765     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} payload[40];}
+\DoxyCodeLine{00766     uint8\_t bytes[20];}
+\DoxyCodeLine{00767 }
+\DoxyCodeLine{00768     uint8\_t PortNo;}
+\DoxyCodeLine{00769     uint8\_t sz;}
+\DoxyCodeLine{00770     uint8\_t ret;}
+\DoxyCodeLine{00771     uint8\_t LastAnswer = FALSE;}
+\DoxyCodeLine{00772 }
+\DoxyCodeLine{00773     memset(bytes,0, \textcolor{keyword}{sizeof}(bytes));}
+\DoxyCodeLine{00774 }
+\DoxyCodeLine{00775     sprintf(Command,\textcolor{stringliteral}{"mac tx uncnf \%d "}, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_aed64b9799becc58264c0ec004f47d142}{PortNoTx}});}
+\DoxyCodeLine{00776     strncat(Command,MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a56d0f8aa26e916819030ce3b21056475}{DataTx}}, MyLoraNode-\/>\mbox{\hyperlink{hal___l_o_r_a_8h_a443e326d2880e61e8d060ab35c338728}{DataLenTx}});}
+\DoxyCodeLine{00777     strcat(Command,\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"});}
+\DoxyCodeLine{00778 }
+\DoxyCodeLine{00779     UART\_write(uart, Command, strlen(Command));}
+\DoxyCodeLine{00780 }
+\DoxyCodeLine{00781     *mask = 0;}
+\DoxyCodeLine{00782     \textcolor{keywordflow}{while} (LastAnswer==FALSE) \{}
+\DoxyCodeLine{00783         sz = \mbox{\hyperlink{hal___u_a_r_t_8c_a8eecbc5a2a5997b7a80f10dfc9b34820_a8eecbc5a2a5997b7a80f10dfc9b34820}{GetLine\_UART}}(uart, buf);}
+\DoxyCodeLine{00784         \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"ok"},2)==0) \{}
+\DoxyCodeLine{00785             ;}
+\DoxyCodeLine{00786         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_tx\_ok"},9)==0) \{}
+\DoxyCodeLine{00787             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\%s\(\backslash\)n"},buf);}
+\DoxyCodeLine{00788             LastAnswer=TRUE;}
+\DoxyCodeLine{00789             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a48e45364a90c10734809dfcfba4350d9_a48e45364a90c10734809dfcfba4350d9}{SUCCESS\_TX\_MAC\_TX}};}
+\DoxyCodeLine{00790         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_rx "},7)==0) \{}
+\DoxyCodeLine{00791             sscanf(buf,\textcolor{stringliteral}{"mac\_rx \%d \%s\(\backslash\)r\(\backslash\)n"},\&PortNo,payload);}
+\DoxyCodeLine{00792             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\%s\(\backslash\)n"},buf);}
+\DoxyCodeLine{00793             sz = \mbox{\hyperlink{hal___l_o_r_a_8c_a3690f810004dcfe1dc77b3fa4768a256_a3690f810004dcfe1dc77b3fa4768a256}{hex2int}}(payload, strlen(payload), bytes);}
+\DoxyCodeLine{00794             \mbox{\hyperlink{hal___l_o_r_a_8c_a7d07609bb31ed5a9628931ddfa9ac5b7_a7d07609bb31ed5a9628931ddfa9ac5b7}{GetLoraServerParams}}(bytes, sz, MyLoraNode);}
+\DoxyCodeLine{00795             *mask = bytes[0];}
+\DoxyCodeLine{00796             *nodeId = (bytes[1]<<8) | bytes[2];}
+\DoxyCodeLine{00797             LastAnswer=TRUE;}
+\DoxyCodeLine{00798             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a79fe3e0474ed79ce4763c098f993794c_a79fe3e0474ed79ce4763c098f993794c}{SUCCESS\_TX\_MAC\_RX}};}
+\DoxyCodeLine{00799         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_err"},7)==0) \{}
+\DoxyCodeLine{00800             LastAnswer=TRUE;}
+\DoxyCodeLine{00801             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_ac3c39c5d42fc4ecd2e765a31f66f761c_ac3c39c5d42fc4ecd2e765a31f66f761c}{ERROR\_TX\_MAC\_ERR}};}
+\DoxyCodeLine{00802         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_data\_len"},16)==0) \{}
+\DoxyCodeLine{00803             LastAnswer=TRUE;}
+\DoxyCodeLine{00804             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a2ad2e1f3d36b9983a1f63ed5f16d7153_a2ad2e1f3d36b9983a1f63ed5f16d7153}{ERROR\_TX\_INVALID\_DATA\_LEN}};}
+\DoxyCodeLine{00805         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_param"},13)==0) \{}
+\DoxyCodeLine{00806             LastAnswer=TRUE;}
+\DoxyCodeLine{00807             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a33d336ee015da1fabc2f1410cb7b14c5_a33d336ee015da1fabc2f1410cb7b14c5}{ERROR\_TX\_INVALID\_PARAM}};}
+\DoxyCodeLine{00808         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"not\_joined"},10)==0) \{}
+\DoxyCodeLine{00809             LastAnswer=TRUE;}
+\DoxyCodeLine{00810             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a3d70e0a1f5ac0cd7b8b9c857b3caadf2_a3d70e0a1f5ac0cd7b8b9c857b3caadf2}{ERROR\_TX\_NOT\_JOINED}};}
+\DoxyCodeLine{00811         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"no\_free\_ch"},10)==0) \{}
+\DoxyCodeLine{00812             LastAnswer=TRUE;}
+\DoxyCodeLine{00813             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a2f481d0fa351c0bdfb6f652c37246aa1_a2f481d0fa351c0bdfb6f652c37246aa1}{ERROR\_TX\_NO\_FREE\_CH}};}
+\DoxyCodeLine{00814         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"silent"},6)==0) \{}
+\DoxyCodeLine{00815             LastAnswer=TRUE;}
+\DoxyCodeLine{00816             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a28c850b9adb1999cc8a4782861c54fb5_a28c850b9adb1999cc8a4782861c54fb5}{ERROR\_TX\_SILENT}};}
+\DoxyCodeLine{00817         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"frame\_counter\_err\_rejoin\_needed"},31)==0) \{}
+\DoxyCodeLine{00818             LastAnswer=TRUE;}
+\DoxyCodeLine{00819             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a697937ee407e244e4263fe60fd299617_a697937ee407e244e4263fe60fd299617}{ERROR\_TX\_REJOIN\_NEEDED}};}
+\DoxyCodeLine{00820         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"busy"},4)==0) \{}
+\DoxyCodeLine{00821             LastAnswer=TRUE;}
+\DoxyCodeLine{00822             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_afe070f947cd3c7b7ea30125a3cda7468_afe070f947cd3c7b7ea30125a3cda7468}{ERROR\_TX\_BUSY}};}
+\DoxyCodeLine{00823         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"mac\_paused"},10)==0) \{}
+\DoxyCodeLine{00824             LastAnswer=TRUE;}
+\DoxyCodeLine{00825             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_ac5200bbb2fdc78f787f77d3fd0c520e6_ac5200bbb2fdc78f787f77d3fd0c520e6}{ERROR\_TX\_MAC\_PAUSED}};}
+\DoxyCodeLine{00826         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (strncmp(buf,\textcolor{stringliteral}{"invalid\_data\_len"},16)==0) \{}
+\DoxyCodeLine{00827             LastAnswer=TRUE;}
+\DoxyCodeLine{00828             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_a2ad2e1f3d36b9983a1f63ed5f16d7153_a2ad2e1f3d36b9983a1f63ed5f16d7153}{ERROR\_TX\_INVALID\_DATA\_LEN}};}
+\DoxyCodeLine{00829         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00830             LastAnswer=TRUE;}
+\DoxyCodeLine{00831             ret = \mbox{\hyperlink{hal___l_o_r_a_8h_af230363a23f8ee5bc885586aa6cd086a_af230363a23f8ee5bc885586aa6cd086a}{ERROR\_TX\_UNKNOWN}};}
+\DoxyCodeLine{00832         \}}
+\DoxyCodeLine{00833     \}}
+\DoxyCodeLine{00834     \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00835 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a6dea4fbc625f1d4164ed1e43a58b3114_a6dea4fbc625f1d4164ed1e43a58b3114}\label{hal___l_o_r_a_8c_a6dea4fbc625f1d4164ed1e43a58b3114_a6dea4fbc625f1d4164ed1e43a58b3114}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!Uint8Array2Char@{Uint8Array2Char}}
+\index{Uint8Array2Char@{Uint8Array2Char}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{Uint8Array2Char()}{Uint8Array2Char()}}
+{\footnotesize\ttfamily uint8\+\_\+t Uint8\+Array2\+Char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{Data\+Packet,  }\item[{uint8\+\_\+t}]{Data\+Packet\+Len,  }\item[{unsigned char $\ast$}]{Hex\+Str }\end{DoxyParamCaption})}
+
+
+
+R\+N2483 Lora module Uint8 array to char Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Converts Data\+Packet (data from sensors) to hexadecimal value
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & $\ast$\+Data\+Packet pointer to Data\+Packet struct \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Data\+Packet\+Len \\
+\hline
+ & {\em unsigned} & char $\ast$\+Hex\+Str pointer to Hex\+Str\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t k+1 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___l_o_r_a_8c_source_l01015}{1015}} of file \mbox{\hyperlink{hal___l_o_r_a_8c_source}{hal\+\_\+\+L\+O\+R\+A.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01015                                                                                            \{}
+\DoxyCodeLine{01016 }
+\DoxyCodeLine{01017     uint8\_t i, j, k;}
+\DoxyCodeLine{01018     uint16\_t a;}
+\DoxyCodeLine{01019 }
+\DoxyCodeLine{01020     \textcolor{keywordflow}{for} (i=0;i<DataPacketLen;i++) \{}
+\DoxyCodeLine{01021         \textcolor{keywordflow}{for} (j=0;j<2;j++) \{}
+\DoxyCodeLine{01022             a = (DataPacket[i] >> (4-\/(j<<2))) \& 0x0f;}
+\DoxyCodeLine{01023             k = (i<<1)+j;}
+\DoxyCodeLine{01024             *(HexStr+k) = (a<10)? a+48 : a+55;}
+\DoxyCodeLine{01025         \}}
+\DoxyCodeLine{01026     \}}
+\DoxyCodeLine{01027     HexStr[k+1] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{01028 }
+\DoxyCodeLine{01029     \textcolor{keywordflow}{return} k+1;}
+\DoxyCodeLine{01030 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}\label{hal___l_o_r_a_8c_a254ff0d3fc5210d6f62ca1e7788b4d03_a254ff0d3fc5210d6f62ca1e7788b4d03}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!MyADXL@{MyADXL}}
+\index{MyADXL@{MyADXL}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{MyADXL}{MyADXL}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_a_d_x_l355___data}{A\+D\+X\+L355\+\_\+\+Data}} My\+A\+D\+XL}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00058}{58}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}\label{hal___l_o_r_a_8c_a1f0447e11fe9ae3087a27335d16dbf98_a1f0447e11fe9ae3087a27335d16dbf98}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!MyBME@{MyBME}}
+\index{MyBME@{MyBME}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{MyBME}{MyBME}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_b_m_e280___data}{B\+M\+E280\+\_\+\+Data}} My\+B\+ME}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00059}{59}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}\label{hal___l_o_r_a_8c_a67b5b3886c437115138ee38aabb82e64_a67b5b3886c437115138ee38aabb82e64}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!MyLDC@{MyLDC}}
+\index{MyLDC@{MyLDC}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{MyLDC}{MyLDC}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_l_d_c1000___data}{L\+D\+C1000\+\_\+\+Data}} My\+L\+DC}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00060}{60}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}\label{hal___l_o_r_a_8c_a9ce48c78d381a9d306576e7916d595b0_a9ce48c78d381a9d306576e7916d595b0}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!MyNode@{MyNode}}
+\index{MyNode@{MyNode}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{MyNode}{MyNode}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_struct_node}{Node}} My\+Node}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00056}{56}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+
+\mbox{\Hypertarget{hal___l_o_r_a_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}\label{hal___l_o_r_a_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}} 
+\index{hal\_LORA.c@{hal\_LORA.c}!uart0@{uart0}}
+\index{uart0@{uart0}!hal\_LORA.c@{hal\_LORA.c}}
+\doxyparagraph{\texorpdfstring{uart0}{uart0}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle uart0}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00065}{65}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+

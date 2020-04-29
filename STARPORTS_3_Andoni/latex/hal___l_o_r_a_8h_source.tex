@@ -1,0 +1,126 @@
+\hypertarget{hal___l_o_r_a_8h_source}{}\doxysubsection{hal\+\_\+\+L\+O\+R\+A.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#ifndef HAL\_LORA\_H\_}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#define HAL\_LORA\_H\_}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00014 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00015 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <ti/drivers/UART.h>}}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00019 \textcolor{comment}{//                      DEFINES}}
+\DoxyCodeLine{00020 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00021}\mbox{\hyperlink{hal___l_o_r_a_8h_acf868de705fe437eb0d977d8f3d8057b_acf868de705fe437eb0d977d8f3d8057b}{00021}} \textcolor{preprocessor}{\#define SUCCESS\_ABP\_LORA            0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00022}\mbox{\hyperlink{hal___l_o_r_a_8h_aefe8233768da61150f7688ab59ddf1c7_aefe8233768da61150f7688ab59ddf1c7}{00022}} \textcolor{preprocessor}{\#define ERROR\_ABP\_DEVADDR           1}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00023}\mbox{\hyperlink{hal___l_o_r_a_8h_a206155f4db591634248f8f602b5fccda_a206155f4db591634248f8f602b5fccda}{00023}} \textcolor{preprocessor}{\#define ERROR\_ABP\_NWKSKEY           2}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00024}\mbox{\hyperlink{hal___l_o_r_a_8h_a1b874db7e753f3f677a3bb19a48485c9_a1b874db7e753f3f677a3bb19a48485c9}{00024}} \textcolor{preprocessor}{\#define ERROR\_ABP\_APPSKEY           3}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00025}\mbox{\hyperlink{hal___l_o_r_a_8h_a4abd14fdb9deff75d1e17c8cd41630f1_a4abd14fdb9deff75d1e17c8cd41630f1}{00025}} \textcolor{preprocessor}{\#define ERROR\_ABP\_SAVE              4}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00026}\mbox{\hyperlink{hal___l_o_r_a_8h_aef8ed5d8ff9c180d9e462ccc9566f6f5_aef8ed5d8ff9c180d9e462ccc9566f6f5}{00026}} \textcolor{preprocessor}{\#define ERROR\_ABP\_JOIN              5}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00027}\mbox{\hyperlink{hal___l_o_r_a_8h_a78f2a3d03852f9293881897131ff823a_a78f2a3d03852f9293881897131ff823a}{00027}} \textcolor{preprocessor}{\#define ERROR\_ABP\_DENIED            6}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00029}\mbox{\hyperlink{hal___l_o_r_a_8h_a2dc02e08f7a019e4fc462b416a6ee50e_a2dc02e08f7a019e4fc462b416a6ee50e}{00029}} \textcolor{preprocessor}{\#define SUCCESS\_SET\_DEVADDR         0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00030}\mbox{\hyperlink{hal___l_o_r_a_8h_ae9285d5d7304260bbd7d8f1d16b8ce84_ae9285d5d7304260bbd7d8f1d16b8ce84}{00030}} \textcolor{preprocessor}{\#define ERROR\_SET\_DEVADDR           1}}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00032}\mbox{\hyperlink{hal___l_o_r_a_8h_a09dbfdd15c52d050ee56ed6eedf30f01_a09dbfdd15c52d050ee56ed6eedf30f01}{00032}} \textcolor{preprocessor}{\#define SUCCESS\_SET\_UPCTR           0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00033}\mbox{\hyperlink{hal___l_o_r_a_8h_acb8d2f08e4064192ad348988f5a63342_acb8d2f08e4064192ad348988f5a63342}{00033}} \textcolor{preprocessor}{\#define ERROR\_SET\_UPCTR             1}}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00035}\mbox{\hyperlink{hal___l_o_r_a_8h_ae9df823a1f5a84653383a81cdfbef592_ae9df823a1f5a84653383a81cdfbef592}{00035}} \textcolor{preprocessor}{\#define SUCCESS\_SET\_DNCTR           0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00036}\mbox{\hyperlink{hal___l_o_r_a_8h_a61142b59a1ef3a47f29bb559b5b7145b_a61142b59a1ef3a47f29bb559b5b7145b}{00036}} \textcolor{preprocessor}{\#define ERROR\_SET\_DNCTR             1}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00038}\mbox{\hyperlink{hal___l_o_r_a_8h_ad702805dc169d1a57bcec6ea59fd36bf_ad702805dc169d1a57bcec6ea59fd36bf}{00038}} \textcolor{preprocessor}{\#define SUCCESS\_SET\_PWRIDX          0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00039}\mbox{\hyperlink{hal___l_o_r_a_8h_aadc01b1bf82afd40ed4472203cbbf371_aadc01b1bf82afd40ed4472203cbbf371}{00039}} \textcolor{preprocessor}{\#define ERROR\_SET\_PWRIDX            1}}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00041}\mbox{\hyperlink{hal___l_o_r_a_8h_a165e09d02c28b5653ee31f6fafad0aeb_a165e09d02c28b5653ee31f6fafad0aeb}{00041}} \textcolor{preprocessor}{\#define SUCCESS\_SET\_NWSKEY          0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00042}\mbox{\hyperlink{hal___l_o_r_a_8h_a68d132a5afdf6b51cef4b7fcf16cf36e_a68d132a5afdf6b51cef4b7fcf16cf36e}{00042}} \textcolor{preprocessor}{\#define ERROR\_SET\_NWSKEY            1}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00044}\mbox{\hyperlink{hal___l_o_r_a_8h_adaa944db2d9c3df6a77ce36265d754af_adaa944db2d9c3df6a77ce36265d754af}{00044}} \textcolor{preprocessor}{\#define SUCCESS\_OTAA\_LORA           0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00045}\mbox{\hyperlink{hal___l_o_r_a_8h_a2356158c8f29acf50c34b634658ce2c7_a2356158c8f29acf50c34b634658ce2c7}{00045}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_DEVEUI           1}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00046}\mbox{\hyperlink{hal___l_o_r_a_8h_aaba1a668a835f2ec6c8e94d2a4f4dc7e_aaba1a668a835f2ec6c8e94d2a4f4dc7e}{00046}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_APPEUI           2}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00047}\mbox{\hyperlink{hal___l_o_r_a_8h_a13089da1324d3c9dd2df51dc284a5efa_a13089da1324d3c9dd2df51dc284a5efa}{00047}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_APPKEY           3}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00048}\mbox{\hyperlink{hal___l_o_r_a_8h_a6752a110511b13849f461fcc16f320b2_a6752a110511b13849f461fcc16f320b2}{00048}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_SAVE             4}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00049}\mbox{\hyperlink{hal___l_o_r_a_8h_a49dd3a0d56758ad80da311393edc2871_a49dd3a0d56758ad80da311393edc2871}{00049}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_JOIN             5}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00050}\mbox{\hyperlink{hal___l_o_r_a_8h_a26efb6f71260d2f4407092646f36d3c7_a26efb6f71260d2f4407092646f36d3c7}{00050}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_DENIED           6}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00051}\mbox{\hyperlink{hal___l_o_r_a_8h_a23c9d76de36fbd7f5bf6f7b38287813c_a23c9d76de36fbd7f5bf6f7b38287813c}{00051}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_UNKNOWN          7}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00052}\mbox{\hyperlink{hal___l_o_r_a_8h_a94ad7907cdee6c131cf6a3c2bf1b3480_a94ad7907cdee6c131cf6a3c2bf1b3480}{00052}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_INVALID\_PARAM    8}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00053}\mbox{\hyperlink{hal___l_o_r_a_8h_aeeab0fac8f72803bfa688a393c6d5769_aeeab0fac8f72803bfa688a393c6d5769}{00053}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_KEYS\_NOT\_INIT    9}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00054}\mbox{\hyperlink{hal___l_o_r_a_8h_a57ccc2e562215c2566a93e241877eaa1_a57ccc2e562215c2566a93e241877eaa1}{00054}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_NO\_FREE\_CH       10}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00055}\mbox{\hyperlink{hal___l_o_r_a_8h_a8b4fc2d773e8e1e83721168e0599b30f_a8b4fc2d773e8e1e83721168e0599b30f}{00055}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_SILENT           11}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00056}\mbox{\hyperlink{hal___l_o_r_a_8h_abf750c38e1b378730b291aaedc9bd4e9_abf750c38e1b378730b291aaedc9bd4e9}{00056}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_BUSY             12}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00057}\mbox{\hyperlink{hal___l_o_r_a_8h_a128e46d95110c0f100b26b63a5280410_a128e46d95110c0f100b26b63a5280410}{00057}} \textcolor{preprocessor}{\#define ERROR\_OTAA\_MAC\_PAUSED       13}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00058}\mbox{\hyperlink{hal___l_o_r_a_8h_a42095ecef993a151862a878343f9e52c_a42095ecef993a151862a878343f9e52c}{00058}} \textcolor{preprocessor}{\#define ERROR\_ADR\_SET               14}}
+\DoxyCodeLine{00059 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00060}\mbox{\hyperlink{hal___l_o_r_a_8h_a48e45364a90c10734809dfcfba4350d9_a48e45364a90c10734809dfcfba4350d9}{00060}} \textcolor{preprocessor}{\#define SUCCESS\_TX\_MAC\_TX           0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00061}\mbox{\hyperlink{hal___l_o_r_a_8h_a79fe3e0474ed79ce4763c098f993794c_a79fe3e0474ed79ce4763c098f993794c}{00061}} \textcolor{preprocessor}{\#define SUCCESS\_TX\_MAC\_RX           11}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00062}\mbox{\hyperlink{hal___l_o_r_a_8h_ac3c39c5d42fc4ecd2e765a31f66f761c_ac3c39c5d42fc4ecd2e765a31f66f761c}{00062}} \textcolor{preprocessor}{\#define ERROR\_TX\_MAC\_ERR            1}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00063}\mbox{\hyperlink{hal___l_o_r_a_8h_afe070f947cd3c7b7ea30125a3cda7468_afe070f947cd3c7b7ea30125a3cda7468}{00063}} \textcolor{preprocessor}{\#define ERROR\_TX\_BUSY               2}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00064}\mbox{\hyperlink{hal___l_o_r_a_8h_a3d70e0a1f5ac0cd7b8b9c857b3caadf2_a3d70e0a1f5ac0cd7b8b9c857b3caadf2}{00064}} \textcolor{preprocessor}{\#define ERROR\_TX\_NOT\_JOINED         3}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00065}\mbox{\hyperlink{hal___l_o_r_a_8h_a2f481d0fa351c0bdfb6f652c37246aa1_a2f481d0fa351c0bdfb6f652c37246aa1}{00065}} \textcolor{preprocessor}{\#define ERROR\_TX\_NO\_FREE\_CH         4}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00066}\mbox{\hyperlink{hal___l_o_r_a_8h_af230363a23f8ee5bc885586aa6cd086a_af230363a23f8ee5bc885586aa6cd086a}{00066}} \textcolor{preprocessor}{\#define ERROR\_TX\_UNKNOWN            5}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00067}\mbox{\hyperlink{hal___l_o_r_a_8h_a2ad2e1f3d36b9983a1f63ed5f16d7153_a2ad2e1f3d36b9983a1f63ed5f16d7153}{00067}} \textcolor{preprocessor}{\#define ERROR\_TX\_INVALID\_DATA\_LEN   6}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00068}\mbox{\hyperlink{hal___l_o_r_a_8h_a33d336ee015da1fabc2f1410cb7b14c5_a33d336ee015da1fabc2f1410cb7b14c5}{00068}} \textcolor{preprocessor}{\#define ERROR\_TX\_INVALID\_PARAM      7}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00069}\mbox{\hyperlink{hal___l_o_r_a_8h_a28c850b9adb1999cc8a4782861c54fb5_a28c850b9adb1999cc8a4782861c54fb5}{00069}} \textcolor{preprocessor}{\#define ERROR\_TX\_SILENT             8}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00070}\mbox{\hyperlink{hal___l_o_r_a_8h_a697937ee407e244e4263fe60fd299617_a697937ee407e244e4263fe60fd299617}{00070}} \textcolor{preprocessor}{\#define ERROR\_TX\_REJOIN\_NEEDED      9}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00071}\mbox{\hyperlink{hal___l_o_r_a_8h_ac5200bbb2fdc78f787f77d3fd0c520e6_ac5200bbb2fdc78f787f77d3fd0c520e6}{00071}} \textcolor{preprocessor}{\#define ERROR\_TX\_MAC\_PAUSED         10}}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00073}\mbox{\hyperlink{hal___l_o_r_a_8h_aecac1ae5cd1a6f03b46dab027904ba35_aecac1ae5cd1a6f03b46dab027904ba35}{00073}} \textcolor{preprocessor}{\#define SUCCESS\_RXDELAY1\_SET        0}}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00074}\mbox{\hyperlink{hal___l_o_r_a_8h_ae26dfa0af8ed39e7001bf6fa16730d44_ae26dfa0af8ed39e7001bf6fa16730d44}{00074}} \textcolor{preprocessor}{\#define ERROR\_RXDELAY1\_SET          1}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{00076 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00077 \textcolor{comment}{//                      TYPEDEFS}}
+\DoxyCodeLine{00078 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00083}\mbox{\hyperlink{hal___l_o_r_a_8h}{00083}} \textcolor{keyword}{struct }\mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} \{}
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00084}\mbox{\hyperlink{hal___l_o_r_a_8h_a704508c84d373938002a633fd16863c6}{00084}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_a704508c84d373938002a633fd16863c6}{DevEui}}[16];               }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00085}\mbox{\hyperlink{hal___l_o_r_a_8h_a7bfaa9783608e7e3dced38848be289d4}{00085}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_a7bfaa9783608e7e3dced38848be289d4}{DevAddr}}[8];               }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00086}\mbox{\hyperlink{hal___l_o_r_a_8h_a07415a3cafb300d0355d29f5a1a5a832}{00086}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_a07415a3cafb300d0355d29f5a1a5a832}{AppEui}}[16];               }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00087}\mbox{\hyperlink{hal___l_o_r_a_8h_afa3ed51c3f433bc9d0203a43beac46c8}{00087}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_afa3ed51c3f433bc9d0203a43beac46c8}{AppKey}}[32];               }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00088}\mbox{\hyperlink{hal___l_o_r_a_8h_a8ed20c9f0fa46a2dc5894e8b6c88d7dc}{00088}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_a8ed20c9f0fa46a2dc5894e8b6c88d7dc}{NwksKey}}[32];              }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00089}\mbox{\hyperlink{hal___l_o_r_a_8h_a8fe750d6cc28819e730c3e4d6a94912a}{00089}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_a8fe750d6cc28819e730c3e4d6a94912a}{AppsKey}}[32];              }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00090}\mbox{\hyperlink{hal___l_o_r_a_8h_a56d0f8aa26e916819030ce3b21056475}{00090}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_a56d0f8aa26e916819030ce3b21056475}{DataTx}}[128];              }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00091}\mbox{\hyperlink{hal___l_o_r_a_8h_a443e326d2880e61e8d060ab35c338728}{00091}}     uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a443e326d2880e61e8d060ab35c338728}{DataLenTx}};                      }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00092}\mbox{\hyperlink{hal___l_o_r_a_8h_aed64b9799becc58264c0ec004f47d142}{00092}}     uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_aed64b9799becc58264c0ec004f47d142}{PortNoTx}};                       }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00093}\mbox{\hyperlink{hal___l_o_r_a_8h_adb805aa8c0fe0ac41db393231a128094}{00093}}     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{hal___l_o_r_a_8h_adb805aa8c0fe0ac41db393231a128094}{DataRx}}[4];                }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00094}\mbox{\hyperlink{hal___l_o_r_a_8h_acce0aedd909b4925b9088a86f3cc695c}{00094}}     uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_acce0aedd909b4925b9088a86f3cc695c}{DataLenRx}};                      }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00095}\mbox{\hyperlink{hal___l_o_r_a_8h_a809f549c83cb8345a52569fc0abbe574}{00095}}     uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a809f549c83cb8345a52569fc0abbe574}{PortNoRx}};                       }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00096}\mbox{\hyperlink{hal___l_o_r_a_8h_a0244ad2b8c02cb0492652035908ff00f}{00096}}     uint32\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a0244ad2b8c02cb0492652035908ff00f}{Upctr}};                         }
+\DoxyCodeLine{\Hypertarget{hal___l_o_r_a_8h_source_l00097}\mbox{\hyperlink{hal___l_o_r_a_8h_a7cb78916a2f569e23475193bb803cc36}{00097}}     uint32\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a7cb78916a2f569e23475193bb803cc36}{Dnctr}};                         }
+\DoxyCodeLine{00098 \};}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00101 \textcolor{comment}{//                      FUNCTION PROTOTYPES}}
+\DoxyCodeLine{00102 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00103 \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___l_o_r_a_8h_a7ccfa12cb27d73c06f303b9294ebc508_a7ccfa12cb27d73c06f303b9294ebc508}{Reset\_RN2483}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00104 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a8e2347149ac9cf4ef73137b56ec1b483_a8e2347149ac9cf4ef73137b56ec1b483}{Mac\_Get\_Deveui}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00105 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a7e6e525740e3db5bf43a18a7855f5910_a7e6e525740e3db5bf43a18a7855f5910}{Mac\_Get\_Appeui}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00106 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a2a645d1e940824366eed22d6343f519c_a2a645d1e940824366eed22d6343f519c}{Setup\_Abp\_Lora}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00107 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a0c7557b461266dd11774456f774d225a_a0c7557b461266dd11774456f774d225a}{Join\_Abp\_Lora}}(UART\_Handle uart);}
+\DoxyCodeLine{00108 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a305a60b720cd80e2ec5f21d5cec87ddd_a305a60b720cd80e2ec5f21d5cec87ddd}{Setup\_Otaa\_Lora}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00109 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a363fe7d3d61c382ef9c3b99a62f7a8f3_a363fe7d3d61c382ef9c3b99a62f7a8f3}{Join\_Otaa\_Lora}}(UART\_Handle uart);}
+\DoxyCodeLine{00110 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a809f6b028ce4c7e1630593d5d41f8c9a_a809f6b028ce4c7e1630593d5d41f8c9a}{Mac\_Set\_Rxdelay1}}(UART\_Handle uart, uint16\_t delay);}
+\DoxyCodeLine{00111 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a24d54dc1387535a120664b490b7092bc_a24d54dc1387535a120664b490b7092bc}{Mac\_Save}}(UART\_Handle uart);}
+\DoxyCodeLine{00112 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a1b8443bf08fc9b24e3d4b488103882f7_a1b8443bf08fc9b24e3d4b488103882f7}{Mac\_Adr\_On}}(UART\_Handle uart);}
+\DoxyCodeLine{00113 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a01afbfa551441f1a47f2d3b2c9659bbb_a01afbfa551441f1a47f2d3b2c9659bbb}{Mac\_Ar\_On}}(UART\_Handle uart);}
+\DoxyCodeLine{00114 \textcolor{keywordtype}{int} \mbox{\hyperlink{hal___l_o_r_a_8h_a2a98bbf1f654c54bd1023c5805f32b86_a2a98bbf1f654c54bd1023c5805f32b86}{Mac\_Get\_Upctr}}(UART\_Handle uart);}
+\DoxyCodeLine{00115 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a6d9a276861f1d8d552d0691b4c3cbdba_a6d9a276861f1d8d552d0691b4c3cbdba}{Mac\_Set\_Upctr}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00116 \textcolor{keywordtype}{int} \mbox{\hyperlink{hal___l_o_r_a_8h_a3a9da280c36d4cebfcefd1c67b2328b7_a3a9da280c36d4cebfcefd1c67b2328b7}{Mac\_Get\_Dnctr}}(UART\_Handle uart);}
+\DoxyCodeLine{00117 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a43b2e0ff493c843f67fc30a88fb1adfd_a43b2e0ff493c843f67fc30a88fb1adfd}{Mac\_Set\_Dnctr}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00118 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a1eac44020aab31e07be41c244539fb28_a1eac44020aab31e07be41c244539fb28}{Mac\_Set\_Pwridx}}(UART\_Handle uart, uint8\_t pwridx);}
+\DoxyCodeLine{00119 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a162bdba9619cbd56f85a0f48a762ab3e_a162bdba9619cbd56f85a0f48a762ab3e}{Mac\_Get\_Devaddr}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00120 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a7037fc58d0f5f32c8d5a612a507b39e2_a7037fc58d0f5f32c8d5a612a507b39e2}{Mac\_Set\_Devaddr}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00121 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a7885e022b65fa48597f9825edd54cdd6_a7885e022b65fa48597f9825edd54cdd6}{Mac\_Clear\_Upctr}}(UART\_Handle uart);}
+\DoxyCodeLine{00122 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_aeb3411c0293ca2e1a5d6b29ccb77d190_aeb3411c0293ca2e1a5d6b29ccb77d190}{Try\_Join\_Lora\_Gateway}}(UART\_Handle uart\_dbg, UART\_Handle uart\_lora);}
+\DoxyCodeLine{00123 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a8b1849d79d4f19889f0b771dd83b0854_a8b1849d79d4f19889f0b771dd83b0854}{Tx\_Uncnf\_Lora}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode, uint8\_t *mask, uint16\_t *nodeId);}
+\DoxyCodeLine{00124 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_ab905300928a4d6f97a1eee934e9c6188_ab905300928a4d6f97a1eee934e9c6188}{Tx\_Cnf\_Lora}}(UART\_Handle uart, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode, uint8\_t *mask, uint16\_t *nodeId);}
+\DoxyCodeLine{00125 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a8059df73a3225c8db280859e2270c6ba_a8059df73a3225c8db280859e2270c6ba}{Sys\_Sleep}}(UART\_Handle uart, uint32\_t sleep);}
+\DoxyCodeLine{00126 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_aa52af39f11aca99fd6f5fea3e5d8e5b1_aa52af39f11aca99fd6f5fea3e5d8e5b1}{Sys\_FactoryReset}}(UART\_Handle uart);}
+\DoxyCodeLine{00127 \textcolor{keywordtype}{void} \mbox{\hyperlink{hal___l_o_r_a_8h_ad3d55db7e919bdbdf6644e270fbf9a56_ad3d55db7e919bdbdf6644e270fbf9a56}{GetLoraRxData}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *buf, uint8\_t size, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00128 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a6dea4fbc625f1d4164ed1e43a58b3114_a6dea4fbc625f1d4164ed1e43a58b3114}{Uint8Array2Char}}(uint8\_t *DataPacket, uint8\_t DataPacketLen, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *HexStr);}
+\DoxyCodeLine{00129 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a3690f810004dcfe1dc77b3fa4768a256_a3690f810004dcfe1dc77b3fa4768a256}{hex2int}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *hex, uint8\_t hlen, uint8\_t *bytes);}
+\DoxyCodeLine{00130 uint8\_t \mbox{\hyperlink{hal___l_o_r_a_8h_a7d07609bb31ed5a9628931ddfa9ac5b7_a7d07609bb31ed5a9628931ddfa9ac5b7}{GetLoraServerParams}}(uint8\_t *bytes, uint8\_t blen, \textcolor{keyword}{struct} \mbox{\hyperlink{hal___l_o_r_a_8h_struct_lora_node}{LoraNode}} *MyLoraNode);}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00132 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_LORA\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

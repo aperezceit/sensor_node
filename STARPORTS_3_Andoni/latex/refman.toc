@@ -1,0 +1,858 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {section}{\numberline {1}Starports A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}PP}{1}{section.1}
+\contentsline {section}{\numberline {2}File Index}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}File List}{2}{subsection.2.1}
+\contentsline {section}{\numberline {3}File Documentation}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L355.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{4}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Detailed Description}{5}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Function Documentation}{5}{subsubsection.3.1.2}
+\contentsline {paragraph}{\numberline {3.1.2.1}ADXL355\_Data\_Rdy()}{5}{paragraph.3.1.2.1}
+\contentsline {paragraph}{\numberline {3.1.2.2}ADXL355\_DevId()}{6}{paragraph.3.1.2.2}
+\contentsline {paragraph}{\numberline {3.1.2.3}ADXL355\_Fifo\_Data()}{6}{paragraph.3.1.2.3}
+\contentsline {paragraph}{\numberline {3.1.2.4}ADXL355\_Fifo\_Entries()}{7}{paragraph.3.1.2.4}
+\contentsline {paragraph}{\numberline {3.1.2.5}ADXL355\_Fifo\_Full()}{8}{paragraph.3.1.2.5}
+\contentsline {paragraph}{\numberline {3.1.2.6}ADXL355\_Fifo\_Samples()}{8}{paragraph.3.1.2.6}
+\contentsline {paragraph}{\numberline {3.1.2.7}ADXL355\_Filter\_Conf()}{10}{paragraph.3.1.2.7}
+\contentsline {paragraph}{\numberline {3.1.2.8}ADXL355\_Get\_Accel\_Frame()}{10}{paragraph.3.1.2.8}
+\contentsline {paragraph}{\numberline {3.1.2.9}ADXL355\_PartId()}{11}{paragraph.3.1.2.9}
+\contentsline {paragraph}{\numberline {3.1.2.10}ADXL355\_Power\_Conf()}{12}{paragraph.3.1.2.10}
+\contentsline {paragraph}{\numberline {3.1.2.11}ADXL355\_Range\_Conf()}{12}{paragraph.3.1.2.11}
+\contentsline {paragraph}{\numberline {3.1.2.12}ADXL355\_Reset()}{13}{paragraph.3.1.2.12}
+\contentsline {paragraph}{\numberline {3.1.2.13}ADXL355\_Temp()}{13}{paragraph.3.1.2.13}
+\contentsline {paragraph}{\numberline {3.1.2.14}ADXL355\_XData()}{14}{paragraph.3.1.2.14}
+\contentsline {paragraph}{\numberline {3.1.2.15}ADXL355\_YData()}{14}{paragraph.3.1.2.15}
+\contentsline {paragraph}{\numberline {3.1.2.16}ADXL355\_ZData()}{16}{paragraph.3.1.2.16}
+\contentsline {paragraph}{\numberline {3.1.2.17}u20\_to\_s32()}{16}{paragraph.3.1.2.17}
+\contentsline {subsection}{\numberline {3.2}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L355.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{17}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L355.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{20}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Detailed Description}{22}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Data Structure Documentation}{23}{subsubsection.3.3.2}
+\contentsline {paragraph}{\numberline {3.3.2.1}struct A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L355\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}calibdata\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}t}{23}{paragraph.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.3}Macro Definition Documentation}{23}{subsubsection.3.3.3}
+\contentsline {paragraph}{\numberline {3.3.3.1}ADXL355\_\_DEVICE\_AD}{23}{paragraph.3.3.3.1}
+\contentsline {paragraph}{\numberline {3.3.3.2}ADXL355\_RESET}{23}{paragraph.3.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.4}Enumeration Type Documentation}{23}{subsubsection.3.3.4}
+\contentsline {paragraph}{\numberline {3.3.4.1}ADXL355\_act\_ctl\_t}{23}{paragraph.3.3.4.1}
+\contentsline {paragraph}{\numberline {3.3.4.2}ADXL355\_filter\_ctl\_t}{24}{paragraph.3.3.4.2}
+\contentsline {paragraph}{\numberline {3.3.4.3}ADXL355\_i2c\_speed\_t}{25}{paragraph.3.3.4.3}
+\contentsline {paragraph}{\numberline {3.3.4.4}ADXL355\_int\_ctl\_t}{25}{paragraph.3.3.4.4}
+\contentsline {paragraph}{\numberline {3.3.4.5}ADXL355\_int\_pol\_t}{25}{paragraph.3.3.4.5}
+\contentsline {paragraph}{\numberline {3.3.4.6}ADXL355\_intmap\_ctl\_t}{26}{paragraph.3.3.4.6}
+\contentsline {paragraph}{\numberline {3.3.4.7}ADXL355\_modes\_t}{26}{paragraph.3.3.4.7}
+\contentsline {paragraph}{\numberline {3.3.4.8}ADXL355\_range\_ctl\_t}{26}{paragraph.3.3.4.8}
+\contentsline {paragraph}{\numberline {3.3.4.9}ADXL355\_register\_t}{27}{paragraph.3.3.4.9}
+\contentsline {paragraph}{\numberline {3.3.4.10}ADXL355\_status\_t}{28}{paragraph.3.3.4.10}
+\contentsline {paragraph}{\numberline {3.3.4.11}ADXL355\_sync\_ctl\_t}{29}{paragraph.3.3.4.11}
+\contentsline {subsubsection}{\numberline {3.3.5}Function Documentation}{29}{subsubsection.3.3.5}
+\contentsline {paragraph}{\numberline {3.3.5.1}ADXL355\_Data\_Rdy()}{29}{paragraph.3.3.5.1}
+\contentsline {paragraph}{\numberline {3.3.5.2}ADXL355\_DevId()}{30}{paragraph.3.3.5.2}
+\contentsline {paragraph}{\numberline {3.3.5.3}ADXL355\_Fifo\_Data()}{30}{paragraph.3.3.5.3}
+\contentsline {paragraph}{\numberline {3.3.5.4}ADXL355\_Fifo\_Entries()}{31}{paragraph.3.3.5.4}
+\contentsline {paragraph}{\numberline {3.3.5.5}ADXL355\_Fifo\_Full()}{32}{paragraph.3.3.5.5}
+\contentsline {paragraph}{\numberline {3.3.5.6}ADXL355\_Fifo\_Samples()}{32}{paragraph.3.3.5.6}
+\contentsline {paragraph}{\numberline {3.3.5.7}ADXL355\_Filter\_Conf()}{33}{paragraph.3.3.5.7}
+\contentsline {paragraph}{\numberline {3.3.5.8}ADXL355\_Get\_Accel\_Frame()}{33}{paragraph.3.3.5.8}
+\contentsline {paragraph}{\numberline {3.3.5.9}ADXL355\_PartId()}{34}{paragraph.3.3.5.9}
+\contentsline {paragraph}{\numberline {3.3.5.10}ADXL355\_Power\_Conf()}{35}{paragraph.3.3.5.10}
+\contentsline {paragraph}{\numberline {3.3.5.11}ADXL355\_Range\_Conf()}{35}{paragraph.3.3.5.11}
+\contentsline {paragraph}{\numberline {3.3.5.12}ADXL355\_Reset()}{36}{paragraph.3.3.5.12}
+\contentsline {paragraph}{\numberline {3.3.5.13}ADXL355\_Temp()}{36}{paragraph.3.3.5.13}
+\contentsline {paragraph}{\numberline {3.3.5.14}ADXL355\_XData()}{37}{paragraph.3.3.5.14}
+\contentsline {paragraph}{\numberline {3.3.5.15}ADXL355\_YData()}{37}{paragraph.3.3.5.15}
+\contentsline {paragraph}{\numberline {3.3.5.16}ADXL355\_ZData()}{38}{paragraph.3.3.5.16}
+\contentsline {paragraph}{\numberline {3.3.5.17}u20\_to\_s32()}{38}{paragraph.3.3.5.17}
+\contentsline {subsubsection}{\numberline {3.3.6}Variable Documentation}{39}{subsubsection.3.3.6}
+\contentsline {paragraph}{\numberline {3.3.6.1}axis355\_sens}{39}{paragraph.3.3.6.1}
+\contentsline {paragraph}{\numberline {3.3.6.2}calib\_data}{39}{paragraph.3.3.6.2}
+\contentsline {subsection}{\numberline {3.4}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L355.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{39}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{41}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Detailed Description}{42}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Function Documentation}{43}{subsubsection.3.5.2}
+\contentsline {paragraph}{\numberline {3.5.2.1}BME280\_DevId()}{43}{paragraph.3.5.2.1}
+\contentsline {paragraph}{\numberline {3.5.2.2}BME280\_Read\_Calib()}{43}{paragraph.3.5.2.2}
+\contentsline {paragraph}{\numberline {3.5.2.3}BME280\_Read\_Config()}{44}{paragraph.3.5.2.3}
+\contentsline {paragraph}{\numberline {3.5.2.4}BME280\_Read\_Ctrl\_Hum()}{45}{paragraph.3.5.2.4}
+\contentsline {paragraph}{\numberline {3.5.2.5}BME280\_Read\_Ctrl\_Meas()}{45}{paragraph.3.5.2.5}
+\contentsline {paragraph}{\numberline {3.5.2.6}BME280\_Read\_Humidity()}{46}{paragraph.3.5.2.6}
+\contentsline {paragraph}{\numberline {3.5.2.7}BME280\_Read\_Pressure()}{46}{paragraph.3.5.2.7}
+\contentsline {paragraph}{\numberline {3.5.2.8}BME280\_Read\_Status()}{47}{paragraph.3.5.2.8}
+\contentsline {paragraph}{\numberline {3.5.2.9}BME280\_Read\_Temperature()}{47}{paragraph.3.5.2.9}
+\contentsline {paragraph}{\numberline {3.5.2.10}BME280\_Reset()}{48}{paragraph.3.5.2.10}
+\contentsline {paragraph}{\numberline {3.5.2.11}BME280\_Write\_Config()}{48}{paragraph.3.5.2.11}
+\contentsline {paragraph}{\numberline {3.5.2.12}BME280\_Write\_Ctrl\_Hum()}{49}{paragraph.3.5.2.12}
+\contentsline {paragraph}{\numberline {3.5.2.13}BME280\_Write\_Ctrl\_Meas()}{49}{paragraph.3.5.2.13}
+\contentsline {paragraph}{\numberline {3.5.2.14}compensate\_humidity()}{50}{paragraph.3.5.2.14}
+\contentsline {paragraph}{\numberline {3.5.2.15}compensate\_pressure()}{51}{paragraph.3.5.2.15}
+\contentsline {paragraph}{\numberline {3.5.2.16}compensate\_temperature()}{52}{paragraph.3.5.2.16}
+\contentsline {subsection}{\numberline {3.6}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{53}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{56}{subsection.3.7}
+\contentsline {subsubsection}{\numberline {3.7.1}Detailed Description}{58}{subsubsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.2}Data Structure Documentation}{58}{subsubsection.3.7.2}
+\contentsline {paragraph}{\numberline {3.7.2.1}struct bme280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}calib\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}data}{58}{paragraph.3.7.2.1}
+\contentsline {subsubsection}{\numberline {3.7.3}Macro Definition Documentation}{59}{subsubsection.3.7.3}
+\contentsline {paragraph}{\numberline {3.7.3.1}BME280\_DEVICE\_AD}{59}{paragraph.3.7.3.1}
+\contentsline {paragraph}{\numberline {3.7.3.2}BME280\_RESET}{59}{paragraph.3.7.3.2}
+\contentsline {paragraph}{\numberline {3.7.3.3}CALIB00\_NDATA}{59}{paragraph.3.7.3.3}
+\contentsline {paragraph}{\numberline {3.7.3.4}CALIB26\_NDATA}{59}{paragraph.3.7.3.4}
+\contentsline {subsubsection}{\numberline {3.7.4}Enumeration Type Documentation}{60}{subsubsection.3.7.4}
+\contentsline {paragraph}{\numberline {3.7.4.1}BME280\_filter\_t}{60}{paragraph.3.7.4.1}
+\contentsline {paragraph}{\numberline {3.7.4.2}BME280\_modes\_t}{61}{paragraph.3.7.4.2}
+\contentsline {paragraph}{\numberline {3.7.4.3}BME280\_osrs\_h\_t}{61}{paragraph.3.7.4.3}
+\contentsline {paragraph}{\numberline {3.7.4.4}BME280\_osrs\_p\_t}{62}{paragraph.3.7.4.4}
+\contentsline {paragraph}{\numberline {3.7.4.5}BME280\_osrs\_t\_t}{62}{paragraph.3.7.4.5}
+\contentsline {paragraph}{\numberline {3.7.4.6}BME280\_register\_t}{62}{paragraph.3.7.4.6}
+\contentsline {paragraph}{\numberline {3.7.4.7}BME280\_spi3w\_t}{63}{paragraph.3.7.4.7}
+\contentsline {paragraph}{\numberline {3.7.4.8}BME280\_status\_t}{64}{paragraph.3.7.4.8}
+\contentsline {paragraph}{\numberline {3.7.4.9}BME280\_t\_sb\_t}{64}{paragraph.3.7.4.9}
+\contentsline {subsubsection}{\numberline {3.7.5}Function Documentation}{64}{subsubsection.3.7.5}
+\contentsline {paragraph}{\numberline {3.7.5.1}BME280\_DevId()}{64}{paragraph.3.7.5.1}
+\contentsline {paragraph}{\numberline {3.7.5.2}BME280\_Read\_Calib()}{65}{paragraph.3.7.5.2}
+\contentsline {paragraph}{\numberline {3.7.5.3}BME280\_Read\_Config()}{66}{paragraph.3.7.5.3}
+\contentsline {paragraph}{\numberline {3.7.5.4}BME280\_Read\_Ctrl\_Hum()}{66}{paragraph.3.7.5.4}
+\contentsline {paragraph}{\numberline {3.7.5.5}BME280\_Read\_Ctrl\_Meas()}{67}{paragraph.3.7.5.5}
+\contentsline {paragraph}{\numberline {3.7.5.6}BME280\_Read\_Humidity()}{67}{paragraph.3.7.5.6}
+\contentsline {paragraph}{\numberline {3.7.5.7}BME280\_Read\_Pressure()}{68}{paragraph.3.7.5.7}
+\contentsline {paragraph}{\numberline {3.7.5.8}BME280\_Read\_Status()}{68}{paragraph.3.7.5.8}
+\contentsline {paragraph}{\numberline {3.7.5.9}BME280\_Read\_Temperature()}{69}{paragraph.3.7.5.9}
+\contentsline {paragraph}{\numberline {3.7.5.10}BME280\_Reset()}{69}{paragraph.3.7.5.10}
+\contentsline {paragraph}{\numberline {3.7.5.11}BME280\_Write\_Config()}{70}{paragraph.3.7.5.11}
+\contentsline {paragraph}{\numberline {3.7.5.12}BME280\_Write\_Ctrl\_Hum()}{70}{paragraph.3.7.5.12}
+\contentsline {paragraph}{\numberline {3.7.5.13}BME280\_Write\_Ctrl\_Meas()}{71}{paragraph.3.7.5.13}
+\contentsline {paragraph}{\numberline {3.7.5.14}compensate\_humidity()}{71}{paragraph.3.7.5.14}
+\contentsline {paragraph}{\numberline {3.7.5.15}compensate\_pressure()}{72}{paragraph.3.7.5.15}
+\contentsline {paragraph}{\numberline {3.7.5.16}compensate\_temperature()}{73}{paragraph.3.7.5.16}
+\contentsline {subsection}{\numberline {3.8}B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{74}{subsection.3.8}
+\contentsline {subsection}{\numberline {3.9}Board.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{76}{subsection.3.9}
+\contentsline {subsubsection}{\numberline {3.9.1}Macro Definition Documentation}{77}{subsubsection.3.9.1}
+\contentsline {paragraph}{\numberline {3.9.1.1}Board\_ADC0}{77}{paragraph.3.9.1.1}
+\contentsline {paragraph}{\numberline {3.9.1.2}Board\_ADXL355\_CS}{77}{paragraph.3.9.1.2}
+\contentsline {paragraph}{\numberline {3.9.1.3}Board\_BME280\_CS}{77}{paragraph.3.9.1.3}
+\contentsline {paragraph}{\numberline {3.9.1.4}Board\_CAPTURE0}{77}{paragraph.3.9.1.4}
+\contentsline {paragraph}{\numberline {3.9.1.5}Board\_CAPTURE1}{77}{paragraph.3.9.1.5}
+\contentsline {paragraph}{\numberline {3.9.1.6}Board\_CC3220SF\_STARPORTS}{78}{paragraph.3.9.1.6}
+\contentsline {paragraph}{\numberline {3.9.1.7}Board\_CRYPTO0}{78}{paragraph.3.9.1.7}
+\contentsline {paragraph}{\numberline {3.9.1.8}Board\_CS\_ASGPIO}{78}{paragraph.3.9.1.8}
+\contentsline {paragraph}{\numberline {3.9.1.9}Board\_DS1374\_INTB}{78}{paragraph.3.9.1.9}
+\contentsline {paragraph}{\numberline {3.9.1.10}Board\_EN\_ADXL355}{78}{paragraph.3.9.1.10}
+\contentsline {paragraph}{\numberline {3.9.1.11}Board\_EN\_BME280}{78}{paragraph.3.9.1.11}
+\contentsline {paragraph}{\numberline {3.9.1.12}Board\_EN\_LDC1000}{78}{paragraph.3.9.1.12}
+\contentsline {paragraph}{\numberline {3.9.1.13}Board\_EN\_NODE}{78}{paragraph.3.9.1.13}
+\contentsline {paragraph}{\numberline {3.9.1.14}Board\_GPIO\_LED0}{79}{paragraph.3.9.1.14}
+\contentsline {paragraph}{\numberline {3.9.1.15}Board\_GPIO\_LED\_OFF}{79}{paragraph.3.9.1.15}
+\contentsline {paragraph}{\numberline {3.9.1.16}Board\_GPIO\_LED\_ON}{79}{paragraph.3.9.1.16}
+\contentsline {paragraph}{\numberline {3.9.1.17}Board\_I2C0}{79}{paragraph.3.9.1.17}
+\contentsline {paragraph}{\numberline {3.9.1.18}Board\_I2C\_TMP}{79}{paragraph.3.9.1.18}
+\contentsline {paragraph}{\numberline {3.9.1.19}Board\_I2C\_TMP006\_ADDR}{79}{paragraph.3.9.1.19}
+\contentsline {paragraph}{\numberline {3.9.1.20}Board\_I2S0}{79}{paragraph.3.9.1.20}
+\contentsline {paragraph}{\numberline {3.9.1.21}Board\_init}{79}{paragraph.3.9.1.21}
+\contentsline {paragraph}{\numberline {3.9.1.22}Board\_initGeneral}{80}{paragraph.3.9.1.22}
+\contentsline {paragraph}{\numberline {3.9.1.23}Board\_LDC1000\_CS}{80}{paragraph.3.9.1.23}
+\contentsline {paragraph}{\numberline {3.9.1.24}Board\_MOSI\_ASGPIO}{80}{paragraph.3.9.1.24}
+\contentsline {paragraph}{\numberline {3.9.1.25}Board\_PWM0}{80}{paragraph.3.9.1.25}
+\contentsline {paragraph}{\numberline {3.9.1.26}Board\_PWM1}{80}{paragraph.3.9.1.26}
+\contentsline {paragraph}{\numberline {3.9.1.27}Board\_RN2483\_MCLR}{80}{paragraph.3.9.1.27}
+\contentsline {paragraph}{\numberline {3.9.1.28}Board\_SCL\_ASGPIO}{80}{paragraph.3.9.1.28}
+\contentsline {paragraph}{\numberline {3.9.1.29}Board\_SCLK\_ASGPIO}{80}{paragraph.3.9.1.29}
+\contentsline {paragraph}{\numberline {3.9.1.30}Board\_SD0}{81}{paragraph.3.9.1.30}
+\contentsline {paragraph}{\numberline {3.9.1.31}Board\_SDA\_ASGPIO}{81}{paragraph.3.9.1.31}
+\contentsline {paragraph}{\numberline {3.9.1.32}Board\_SDFatFS0}{81}{paragraph.3.9.1.32}
+\contentsline {paragraph}{\numberline {3.9.1.33}Board\_SPI0}{81}{paragraph.3.9.1.33}
+\contentsline {paragraph}{\numberline {3.9.1.34}Board\_SPI\_MASTER}{81}{paragraph.3.9.1.34}
+\contentsline {paragraph}{\numberline {3.9.1.35}Board\_SPI\_MASTER\_READY}{81}{paragraph.3.9.1.35}
+\contentsline {paragraph}{\numberline {3.9.1.36}Board\_SPI\_SLAVE}{81}{paragraph.3.9.1.36}
+\contentsline {paragraph}{\numberline {3.9.1.37}Board\_SPI\_SLAVE\_READY}{81}{paragraph.3.9.1.37}
+\contentsline {paragraph}{\numberline {3.9.1.38}Board\_TIMER0}{82}{paragraph.3.9.1.38}
+\contentsline {paragraph}{\numberline {3.9.1.39}Board\_TIMER1}{82}{paragraph.3.9.1.39}
+\contentsline {paragraph}{\numberline {3.9.1.40}Board\_TIMER2}{82}{paragraph.3.9.1.40}
+\contentsline {paragraph}{\numberline {3.9.1.41}Board\_TMP006\_ADDR}{82}{paragraph.3.9.1.41}
+\contentsline {paragraph}{\numberline {3.9.1.42}Board\_UART0}{82}{paragraph.3.9.1.42}
+\contentsline {paragraph}{\numberline {3.9.1.43}Board\_UART1}{82}{paragraph.3.9.1.43}
+\contentsline {paragraph}{\numberline {3.9.1.44}Board\_WATCHDOG0}{82}{paragraph.3.9.1.44}
+\contentsline {subsection}{\numberline {3.10}Board.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{83}{subsection.3.10}
+\contentsline {subsection}{\numberline {3.11}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C3220\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}U\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}H\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{84}{subsection.3.11}
+\contentsline {subsubsection}{\numberline {3.11.1}Macro Definition Documentation}{85}{subsubsection.3.11.1}
+\contentsline {paragraph}{\numberline {3.11.1.1}CC3220SF\_LAUNCHXL\_GPIO\_LED\_OFF}{85}{paragraph.3.11.1.1}
+\contentsline {paragraph}{\numberline {3.11.1.2}CC3220SF\_LAUNCHXL\_GPIO\_LED\_ON}{85}{paragraph.3.11.1.2}
+\contentsline {subsubsection}{\numberline {3.11.2}Enumeration Type Documentation}{85}{subsubsection.3.11.2}
+\contentsline {paragraph}{\numberline {3.11.2.1}CC3220SF\_LAUNCHXL\_ADCName}{85}{paragraph.3.11.2.1}
+\contentsline {paragraph}{\numberline {3.11.2.2}CC3220SF\_LAUNCHXL\_CaptureName}{86}{paragraph.3.11.2.2}
+\contentsline {paragraph}{\numberline {3.11.2.3}CC3220SF\_LAUNCHXL\_CryptoName}{86}{paragraph.3.11.2.3}
+\contentsline {paragraph}{\numberline {3.11.2.4}CC3220SF\_LAUNCHXL\_GPIOName}{86}{paragraph.3.11.2.4}
+\contentsline {paragraph}{\numberline {3.11.2.5}CC3220SF\_LAUNCHXL\_I2CName}{87}{paragraph.3.11.2.5}
+\contentsline {paragraph}{\numberline {3.11.2.6}CC3220SF\_LAUNCHXL\_I2SName}{87}{paragraph.3.11.2.6}
+\contentsline {paragraph}{\numberline {3.11.2.7}CC3220SF\_LAUNCHXL\_PWMName}{87}{paragraph.3.11.2.7}
+\contentsline {paragraph}{\numberline {3.11.2.8}CC3220SF\_LAUNCHXL\_SDFatFSName}{88}{paragraph.3.11.2.8}
+\contentsline {paragraph}{\numberline {3.11.2.9}CC3220SF\_LAUNCHXL\_SDName}{88}{paragraph.3.11.2.9}
+\contentsline {paragraph}{\numberline {3.11.2.10}CC3220SF\_LAUNCHXL\_SPIName}{88}{paragraph.3.11.2.10}
+\contentsline {paragraph}{\numberline {3.11.2.11}CC3220SF\_LAUNCHXL\_TimerName}{89}{paragraph.3.11.2.11}
+\contentsline {paragraph}{\numberline {3.11.2.12}CC3220SF\_LAUNCHXL\_UARTName}{89}{paragraph.3.11.2.12}
+\contentsline {paragraph}{\numberline {3.11.2.13}CC3220SF\_LAUNCHXL\_WatchdogName}{89}{paragraph.3.11.2.13}
+\contentsline {subsubsection}{\numberline {3.11.3}Function Documentation}{90}{subsubsection.3.11.3}
+\contentsline {paragraph}{\numberline {3.11.3.1}CC3220SF\_LAUNCHXL\_initGeneral()}{90}{paragraph.3.11.3.1}
+\contentsline {subsection}{\numberline {3.12}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C3220\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}U\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}N\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}H\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{90}{subsection.3.12}
+\contentsline {subsection}{\numberline {3.13}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C3220\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{92}{subsection.3.13}
+\contentsline {subsubsection}{\numberline {3.13.1}Macro Definition Documentation}{93}{subsubsection.3.13.1}
+\contentsline {paragraph}{\numberline {3.13.1.1}TI\_DRIVERS\_UART\_DMA}{94}{paragraph.3.13.1.1}
+\contentsline {subsubsection}{\numberline {3.13.2}Function Documentation}{94}{subsubsection.3.13.2}
+\contentsline {paragraph}{\numberline {3.13.2.1}CC3220SF\_STARPORTS\_initGeneral()}{94}{paragraph.3.13.2.1}
+\contentsline {paragraph}{\numberline {3.13.2.2}WakeupFromLPDS()}{94}{paragraph.3.13.2.2}
+\contentsline {subsubsection}{\numberline {3.13.3}Variable Documentation}{94}{subsubsection.3.13.3}
+\contentsline {paragraph}{\numberline {3.13.3.1}ADC\_config}{94}{paragraph.3.13.3.1}
+\contentsline {paragraph}{\numberline {3.13.3.2}ADC\_count}{94}{paragraph.3.13.3.2}
+\contentsline {paragraph}{\numberline {3.13.3.3}adcCC3220SHWAttrs}{95}{paragraph.3.13.3.3}
+\contentsline {paragraph}{\numberline {3.13.3.4}adcCC3220SObjects}{95}{paragraph.3.13.3.4}
+\contentsline {paragraph}{\numberline {3.13.3.5}Capture\_config}{95}{paragraph.3.13.3.5}
+\contentsline {paragraph}{\numberline {3.13.3.6}Capture\_count}{95}{paragraph.3.13.3.6}
+\contentsline {paragraph}{\numberline {3.13.3.7}captureCC3220SFHWAttrs}{95}{paragraph.3.13.3.7}
+\contentsline {paragraph}{\numberline {3.13.3.8}captureCC3220SFObjects}{96}{paragraph.3.13.3.8}
+\contentsline {paragraph}{\numberline {3.13.3.9}cryptoCC3220SObjects}{96}{paragraph.3.13.3.9}
+\contentsline {paragraph}{\numberline {3.13.3.10}CryptoCC32XX\_config}{96}{paragraph.3.13.3.10}
+\contentsline {paragraph}{\numberline {3.13.3.11}CryptoCC32XX\_count}{96}{paragraph.3.13.3.11}
+\contentsline {paragraph}{\numberline {3.13.3.12}gpioCallbackFunctions}{96}{paragraph.3.13.3.12}
+\contentsline {paragraph}{\numberline {3.13.3.13}GPIOCC32XX\_config}{96}{paragraph.3.13.3.13}
+\contentsline {paragraph}{\numberline {3.13.3.14}gpioPinConfigs}{97}{paragraph.3.13.3.14}
+\contentsline {paragraph}{\numberline {3.13.3.15}I2C\_config}{97}{paragraph.3.13.3.15}
+\contentsline {paragraph}{\numberline {3.13.3.16}I2C\_count}{97}{paragraph.3.13.3.16}
+\contentsline {paragraph}{\numberline {3.13.3.17}i2cCC3220SHWAttrs}{97}{paragraph.3.13.3.17}
+\contentsline {paragraph}{\numberline {3.13.3.18}i2cCC3220SObjects}{98}{paragraph.3.13.3.18}
+\contentsline {paragraph}{\numberline {3.13.3.19}parkInfo}{98}{paragraph.3.13.3.19}
+\contentsline {paragraph}{\numberline {3.13.3.20}PowerCC32XX\_config}{98}{paragraph.3.13.3.20}
+\contentsline {paragraph}{\numberline {3.13.3.21}PWM\_config}{98}{paragraph.3.13.3.21}
+\contentsline {paragraph}{\numberline {3.13.3.22}PWM\_count}{98}{paragraph.3.13.3.22}
+\contentsline {paragraph}{\numberline {3.13.3.23}pwmTimerCC3220SHWAttrs}{99}{paragraph.3.13.3.23}
+\contentsline {paragraph}{\numberline {3.13.3.24}pwmTimerCC3220SObjects}{99}{paragraph.3.13.3.24}
+\contentsline {paragraph}{\numberline {3.13.3.25}SPI\_config}{99}{paragraph.3.13.3.25}
+\contentsline {paragraph}{\numberline {3.13.3.26}SPI\_count}{99}{paragraph.3.13.3.26}
+\contentsline {paragraph}{\numberline {3.13.3.27}spiCC3220SDMAHWAttrs}{99}{paragraph.3.13.3.27}
+\contentsline {paragraph}{\numberline {3.13.3.28}spiCC3220SDMAObjects}{99}{paragraph.3.13.3.28}
+\contentsline {paragraph}{\numberline {3.13.3.29}spiCC3220SDMAscratchBuf}{100}{paragraph.3.13.3.29}
+\contentsline {paragraph}{\numberline {3.13.3.30}Timer\_config}{100}{paragraph.3.13.3.30}
+\contentsline {paragraph}{\numberline {3.13.3.31}Timer\_count}{100}{paragraph.3.13.3.31}
+\contentsline {paragraph}{\numberline {3.13.3.32}timerCC3220SFHWAttrs}{100}{paragraph.3.13.3.32}
+\contentsline {paragraph}{\numberline {3.13.3.33}timerCC3220SFObjects}{101}{paragraph.3.13.3.33}
+\contentsline {paragraph}{\numberline {3.13.3.34}UART\_config}{101}{paragraph.3.13.3.34}
+\contentsline {paragraph}{\numberline {3.13.3.35}UART\_count}{101}{paragraph.3.13.3.35}
+\contentsline {paragraph}{\numberline {3.13.3.36}uartCC3220SHWAttrs}{101}{paragraph.3.13.3.36}
+\contentsline {paragraph}{\numberline {3.13.3.37}uartCC3220SObjects}{102}{paragraph.3.13.3.37}
+\contentsline {paragraph}{\numberline {3.13.3.38}uartCC3220SRingBuffer}{102}{paragraph.3.13.3.38}
+\contentsline {paragraph}{\numberline {3.13.3.39}udmaCC3220SHWAttrs}{102}{paragraph.3.13.3.39}
+\contentsline {paragraph}{\numberline {3.13.3.40}udmaCC3220SObject}{102}{paragraph.3.13.3.40}
+\contentsline {paragraph}{\numberline {3.13.3.41}UDMACC32XX\_config}{102}{paragraph.3.13.3.41}
+\contentsline {paragraph}{\numberline {3.13.3.42}Watchdog\_config}{102}{paragraph.3.13.3.42}
+\contentsline {paragraph}{\numberline {3.13.3.43}Watchdog\_count}{103}{paragraph.3.13.3.43}
+\contentsline {paragraph}{\numberline {3.13.3.44}watchdogCC3220SHWAttrs}{103}{paragraph.3.13.3.44}
+\contentsline {paragraph}{\numberline {3.13.3.45}watchdogCC3220SObjects}{103}{paragraph.3.13.3.45}
+\contentsline {subsection}{\numberline {3.14}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C3220\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{103}{subsection.3.14}
+\contentsline {subsection}{\numberline {3.15}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C3220\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{111}{subsection.3.15}
+\contentsline {subsubsection}{\numberline {3.15.1}Macro Definition Documentation}{112}{subsubsection.3.15.1}
+\contentsline {paragraph}{\numberline {3.15.1.1}CC3220SF\_STARPORTS\_GPIO\_LED\_OFF}{112}{paragraph.3.15.1.1}
+\contentsline {paragraph}{\numberline {3.15.1.2}CC3220SF\_STARPORTS\_GPIO\_LED\_ON}{112}{paragraph.3.15.1.2}
+\contentsline {subsubsection}{\numberline {3.15.2}Enumeration Type Documentation}{113}{subsubsection.3.15.2}
+\contentsline {paragraph}{\numberline {3.15.2.1}CC3220SF\_STARPORTS\_ADCName}{113}{paragraph.3.15.2.1}
+\contentsline {paragraph}{\numberline {3.15.2.2}CC3220SF\_STARPORTS\_CaptureName}{114}{paragraph.3.15.2.2}
+\contentsline {paragraph}{\numberline {3.15.2.3}CC3220SF\_STARPORTS\_CryptoName}{114}{paragraph.3.15.2.3}
+\contentsline {paragraph}{\numberline {3.15.2.4}CC3220SF\_STARPORTS\_GPIOName}{114}{paragraph.3.15.2.4}
+\contentsline {paragraph}{\numberline {3.15.2.5}CC3220SF\_STARPORTS\_I2CName}{115}{paragraph.3.15.2.5}
+\contentsline {paragraph}{\numberline {3.15.2.6}CC3220SF\_STARPORTS\_PWMName}{115}{paragraph.3.15.2.6}
+\contentsline {paragraph}{\numberline {3.15.2.7}CC3220SF\_STARPORTS\_SDFatFSName}{116}{paragraph.3.15.2.7}
+\contentsline {paragraph}{\numberline {3.15.2.8}CC3220SF\_STARPORTS\_SDName}{116}{paragraph.3.15.2.8}
+\contentsline {paragraph}{\numberline {3.15.2.9}CC3220SF\_STARPORTS\_SPIName}{116}{paragraph.3.15.2.9}
+\contentsline {paragraph}{\numberline {3.15.2.10}CC3220SF\_STARPORTS\_TimerName}{117}{paragraph.3.15.2.10}
+\contentsline {paragraph}{\numberline {3.15.2.11}CC3220SF\_STARPORTS\_UARTName}{117}{paragraph.3.15.2.11}
+\contentsline {paragraph}{\numberline {3.15.2.12}CC3220SF\_STARPORTS\_WatchdogName}{117}{paragraph.3.15.2.12}
+\contentsline {subsubsection}{\numberline {3.15.3}Function Documentation}{117}{subsubsection.3.15.3}
+\contentsline {paragraph}{\numberline {3.15.3.1}CC3220SF\_STARPORTS\_initGeneral()}{118}{paragraph.3.15.3.1}
+\contentsline {subsection}{\numberline {3.16}C\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C3220\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{118}{subsection.3.16}
+\contentsline {subsection}{\numberline {3.17}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S1374.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{119}{subsection.3.17}
+\contentsline {subsubsection}{\numberline {3.17.1}Detailed Description}{120}{subsubsection.3.17.1}
+\contentsline {subsubsection}{\numberline {3.17.2}Function Documentation}{120}{subsubsection.3.17.2}
+\contentsline {paragraph}{\numberline {3.17.2.1}DS1374\_Clear\_AF()}{120}{paragraph.3.17.2.1}
+\contentsline {paragraph}{\numberline {3.17.2.2}DS1374\_Read\_Ctrl()}{121}{paragraph.3.17.2.2}
+\contentsline {paragraph}{\numberline {3.17.2.3}DS1374\_Read\_Status()}{121}{paragraph.3.17.2.3}
+\contentsline {paragraph}{\numberline {3.17.2.4}DS1374\_Read\_Tod()}{122}{paragraph.3.17.2.4}
+\contentsline {paragraph}{\numberline {3.17.2.5}DS1374\_Read\_WdAlmb()}{122}{paragraph.3.17.2.5}
+\contentsline {paragraph}{\numberline {3.17.2.6}DS1374\_Write\_Ctrl()}{123}{paragraph.3.17.2.6}
+\contentsline {paragraph}{\numberline {3.17.2.7}DS1374\_Write\_Tod()}{123}{paragraph.3.17.2.7}
+\contentsline {paragraph}{\numberline {3.17.2.8}DS1374\_Write\_WdAlmb()}{124}{paragraph.3.17.2.8}
+\contentsline {subsection}{\numberline {3.18}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S1374.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{124}{subsection.3.18}
+\contentsline {subsection}{\numberline {3.19}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S1374.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{126}{subsection.3.19}
+\contentsline {subsubsection}{\numberline {3.19.1}Detailed Description}{127}{subsubsection.3.19.1}
+\contentsline {subsubsection}{\numberline {3.19.2}Enumeration Type Documentation}{127}{subsubsection.3.19.2}
+\contentsline {paragraph}{\numberline {3.19.2.1}DS1374\_register\_t}{127}{paragraph.3.19.2.1}
+\contentsline {subsubsection}{\numberline {3.19.3}Function Documentation}{128}{subsubsection.3.19.3}
+\contentsline {paragraph}{\numberline {3.19.3.1}DS1374\_Clear\_AF()}{128}{paragraph.3.19.3.1}
+\contentsline {paragraph}{\numberline {3.19.3.2}DS1374\_Read\_Ctrl()}{128}{paragraph.3.19.3.2}
+\contentsline {paragraph}{\numberline {3.19.3.3}DS1374\_Read\_Status()}{129}{paragraph.3.19.3.3}
+\contentsline {paragraph}{\numberline {3.19.3.4}DS1374\_Read\_Tod()}{129}{paragraph.3.19.3.4}
+\contentsline {paragraph}{\numberline {3.19.3.5}DS1374\_Read\_WdAlmb()}{130}{paragraph.3.19.3.5}
+\contentsline {paragraph}{\numberline {3.19.3.6}DS1374\_Write\_Ctrl()}{130}{paragraph.3.19.3.6}
+\contentsline {paragraph}{\numberline {3.19.3.7}DS1374\_Write\_Tod()}{131}{paragraph.3.19.3.7}
+\contentsline {paragraph}{\numberline {3.19.3.8}DS1374\_Write\_WdAlmb()}{131}{paragraph.3.19.3.8}
+\contentsline {subsection}{\numberline {3.20}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S1374.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{132}{subsection.3.20}
+\contentsline {subsection}{\numberline {3.21}file\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}system.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{132}{subsection.3.21}
+\contentsline {subsubsection}{\numberline {3.21.1}Detailed Description}{134}{subsubsection.3.21.1}
+\contentsline {subsubsection}{\numberline {3.21.2}Function Documentation}{134}{subsubsection.3.21.2}
+\contentsline {paragraph}{\numberline {3.21.2.1}deleteFile()}{134}{paragraph.3.21.2.1}
+\contentsline {paragraph}{\numberline {3.21.2.2}st\_readFileChangeWakeUp()}{135}{paragraph.3.21.2.2}
+\contentsline {paragraph}{\numberline {3.21.2.3}st\_readFileDnCntr()}{135}{paragraph.3.21.2.3}
+\contentsline {paragraph}{\numberline {3.21.2.4}st\_readFileMode()}{136}{paragraph.3.21.2.4}
+\contentsline {paragraph}{\numberline {3.21.2.5}st\_readFileNBoot()}{137}{paragraph.3.21.2.5}
+\contentsline {paragraph}{\numberline {3.21.2.6}st\_readFileNCycles()}{138}{paragraph.3.21.2.6}
+\contentsline {paragraph}{\numberline {3.21.2.7}st\_readFileNFails()}{138}{paragraph.3.21.2.7}
+\contentsline {paragraph}{\numberline {3.21.2.8}st\_readFileNodeId()}{139}{paragraph.3.21.2.8}
+\contentsline {paragraph}{\numberline {3.21.2.9}st\_readFileSSID()}{140}{paragraph.3.21.2.9}
+\contentsline {paragraph}{\numberline {3.21.2.10}st\_readFileUpCntr()}{141}{paragraph.3.21.2.10}
+\contentsline {paragraph}{\numberline {3.21.2.11}st\_readFileWakeUp()}{141}{paragraph.3.21.2.11}
+\contentsline {paragraph}{\numberline {3.21.2.12}writeChangeWakeUp()}{142}{paragraph.3.21.2.12}
+\contentsline {paragraph}{\numberline {3.21.2.13}writeDnCntr()}{143}{paragraph.3.21.2.13}
+\contentsline {paragraph}{\numberline {3.21.2.14}writeMode()}{144}{paragraph.3.21.2.14}
+\contentsline {paragraph}{\numberline {3.21.2.15}writeNBoot()}{144}{paragraph.3.21.2.15}
+\contentsline {paragraph}{\numberline {3.21.2.16}writeNCycles()}{145}{paragraph.3.21.2.16}
+\contentsline {paragraph}{\numberline {3.21.2.17}writeNFails()}{146}{paragraph.3.21.2.17}
+\contentsline {paragraph}{\numberline {3.21.2.18}writeNodeId()}{147}{paragraph.3.21.2.18}
+\contentsline {paragraph}{\numberline {3.21.2.19}writeSSID()}{147}{paragraph.3.21.2.19}
+\contentsline {paragraph}{\numberline {3.21.2.20}writeUpCntr()}{148}{paragraph.3.21.2.20}
+\contentsline {paragraph}{\numberline {3.21.2.21}writeWakeUp()}{149}{paragraph.3.21.2.21}
+\contentsline {subsubsection}{\numberline {3.21.3}Variable Documentation}{150}{subsubsection.3.21.3}
+\contentsline {paragraph}{\numberline {3.21.3.1}uart0}{150}{paragraph.3.21.3.1}
+\contentsline {subsection}{\numberline {3.22}file\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}system.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{150}{subsection.3.22}
+\contentsline {subsection}{\numberline {3.23}file\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}system.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{158}{subsection.3.23}
+\contentsline {subsubsection}{\numberline {3.23.1}Detailed Description}{160}{subsubsection.3.23.1}
+\contentsline {subsubsection}{\numberline {3.23.2}Macro Definition Documentation}{160}{subsubsection.3.23.2}
+\contentsline {paragraph}{\numberline {3.23.2.1}CERTIFICATE}{160}{paragraph.3.23.2.1}
+\contentsline {paragraph}{\numberline {3.23.2.2}FS\_CHANGEWAKEUP}{160}{paragraph.3.23.2.2}
+\contentsline {paragraph}{\numberline {3.23.2.3}FS\_DNCNTR}{160}{paragraph.3.23.2.3}
+\contentsline {paragraph}{\numberline {3.23.2.4}FS\_MODE}{160}{paragraph.3.23.2.4}
+\contentsline {paragraph}{\numberline {3.23.2.5}FS\_NBOOT}{161}{paragraph.3.23.2.5}
+\contentsline {paragraph}{\numberline {3.23.2.6}FS\_NCYCLES}{161}{paragraph.3.23.2.6}
+\contentsline {paragraph}{\numberline {3.23.2.7}FS\_NFAILS}{161}{paragraph.3.23.2.7}
+\contentsline {paragraph}{\numberline {3.23.2.8}FS\_NODEID}{161}{paragraph.3.23.2.8}
+\contentsline {paragraph}{\numberline {3.23.2.9}FS\_PAYLOAD}{161}{paragraph.3.23.2.9}
+\contentsline {paragraph}{\numberline {3.23.2.10}FS\_SSID}{161}{paragraph.3.23.2.10}
+\contentsline {paragraph}{\numberline {3.23.2.11}FS\_UPCNTR}{161}{paragraph.3.23.2.11}
+\contentsline {paragraph}{\numberline {3.23.2.12}FS\_WAKEUP}{161}{paragraph.3.23.2.12}
+\contentsline {paragraph}{\numberline {3.23.2.13}MAX\_FILE\_ENTRIES}{162}{paragraph.3.23.2.13}
+\contentsline {paragraph}{\numberline {3.23.2.14}MAX\_FILE\_SIZE}{162}{paragraph.3.23.2.14}
+\contentsline {subsubsection}{\numberline {3.23.3}Function Documentation}{162}{subsubsection.3.23.3}
+\contentsline {paragraph}{\numberline {3.23.3.1}deleteFile()}{162}{paragraph.3.23.3.1}
+\contentsline {paragraph}{\numberline {3.23.3.2}st\_readFileChangeWakeUp()}{162}{paragraph.3.23.3.2}
+\contentsline {paragraph}{\numberline {3.23.3.3}st\_readFileDnCntr()}{163}{paragraph.3.23.3.3}
+\contentsline {paragraph}{\numberline {3.23.3.4}st\_readFileMode()}{164}{paragraph.3.23.3.4}
+\contentsline {paragraph}{\numberline {3.23.3.5}st\_readFileNBoot()}{165}{paragraph.3.23.3.5}
+\contentsline {paragraph}{\numberline {3.23.3.6}st\_readFileNCycles()}{165}{paragraph.3.23.3.6}
+\contentsline {paragraph}{\numberline {3.23.3.7}st\_readFileNFails()}{166}{paragraph.3.23.3.7}
+\contentsline {paragraph}{\numberline {3.23.3.8}st\_readFileNodeId()}{167}{paragraph.3.23.3.8}
+\contentsline {paragraph}{\numberline {3.23.3.9}st\_readFileSSID()}{167}{paragraph.3.23.3.9}
+\contentsline {paragraph}{\numberline {3.23.3.10}st\_readFileUpCntr()}{168}{paragraph.3.23.3.10}
+\contentsline {paragraph}{\numberline {3.23.3.11}st\_readFileWakeUp()}{169}{paragraph.3.23.3.11}
+\contentsline {paragraph}{\numberline {3.23.3.12}writeChangeWakeUp()}{169}{paragraph.3.23.3.12}
+\contentsline {paragraph}{\numberline {3.23.3.13}writeDnCntr()}{170}{paragraph.3.23.3.13}
+\contentsline {paragraph}{\numberline {3.23.3.14}writeMode()}{171}{paragraph.3.23.3.14}
+\contentsline {paragraph}{\numberline {3.23.3.15}writeNBoot()}{172}{paragraph.3.23.3.15}
+\contentsline {paragraph}{\numberline {3.23.3.16}writeNCycles()}{172}{paragraph.3.23.3.16}
+\contentsline {paragraph}{\numberline {3.23.3.17}writeNFails()}{173}{paragraph.3.23.3.17}
+\contentsline {paragraph}{\numberline {3.23.3.18}writeNodeId()}{174}{paragraph.3.23.3.18}
+\contentsline {paragraph}{\numberline {3.23.3.19}writeSSID()}{175}{paragraph.3.23.3.19}
+\contentsline {paragraph}{\numberline {3.23.3.20}writeUpCntr()}{175}{paragraph.3.23.3.20}
+\contentsline {paragraph}{\numberline {3.23.3.21}writeWakeUp()}{176}{paragraph.3.23.3.21}
+\contentsline {subsection}{\numberline {3.24}file\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}system.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{177}{subsection.3.24}
+\contentsline {subsection}{\numberline {3.25}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{178}{subsection.3.25}
+\contentsline {subsubsection}{\numberline {3.25.1}Detailed Description}{178}{subsubsection.3.25.1}
+\contentsline {subsubsection}{\numberline {3.25.2}Function Documentation}{178}{subsubsection.3.25.2}
+\contentsline {paragraph}{\numberline {3.25.2.1}Startup\_ADC()}{178}{paragraph.3.25.2.1}
+\contentsline {subsection}{\numberline {3.26}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{179}{subsection.3.26}
+\contentsline {subsection}{\numberline {3.27}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{179}{subsection.3.27}
+\contentsline {subsubsection}{\numberline {3.27.1}Detailed Description}{180}{subsubsection.3.27.1}
+\contentsline {subsubsection}{\numberline {3.27.2}Function Documentation}{180}{subsubsection.3.27.2}
+\contentsline {paragraph}{\numberline {3.27.2.1}Startup\_ADC()}{180}{paragraph.3.27.2.1}
+\contentsline {subsection}{\numberline {3.28}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{181}{subsection.3.28}
+\contentsline {subsection}{\numberline {3.29}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}G\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{181}{subsection.3.29}
+\contentsline {subsubsection}{\numberline {3.29.1}Detailed Description}{182}{subsubsection.3.29.1}
+\contentsline {subsubsection}{\numberline {3.29.2}Function Documentation}{182}{subsubsection.3.29.2}
+\contentsline {paragraph}{\numberline {3.29.2.1}ADXL355\_Disable()}{182}{paragraph.3.29.2.1}
+\contentsline {paragraph}{\numberline {3.29.2.2}ADXL355\_Enable()}{183}{paragraph.3.29.2.2}
+\contentsline {paragraph}{\numberline {3.29.2.3}ADXL355\_SPI\_Disable()}{183}{paragraph.3.29.2.3}
+\contentsline {paragraph}{\numberline {3.29.2.4}ADXL355\_SPI\_Enable()}{184}{paragraph.3.29.2.4}
+\contentsline {paragraph}{\numberline {3.29.2.5}BME280\_Disable()}{184}{paragraph.3.29.2.5}
+\contentsline {paragraph}{\numberline {3.29.2.6}BME280\_Enable()}{184}{paragraph.3.29.2.6}
+\contentsline {paragraph}{\numberline {3.29.2.7}BME280\_SPI\_Disable()}{185}{paragraph.3.29.2.7}
+\contentsline {paragraph}{\numberline {3.29.2.8}BME280\_SPI\_Enable()}{185}{paragraph.3.29.2.8}
+\contentsline {paragraph}{\numberline {3.29.2.9}GPIO\_Config()}{186}{paragraph.3.29.2.9}
+\contentsline {paragraph}{\numberline {3.29.2.10}I2C\_As\_GPIO\_Low()}{186}{paragraph.3.29.2.10}
+\contentsline {paragraph}{\numberline {3.29.2.11}LDC1000\_Disable()}{187}{paragraph.3.29.2.11}
+\contentsline {paragraph}{\numberline {3.29.2.12}LDC1000\_Enable()}{187}{paragraph.3.29.2.12}
+\contentsline {paragraph}{\numberline {3.29.2.13}LDC1000\_SPI\_Disable()}{187}{paragraph.3.29.2.13}
+\contentsline {paragraph}{\numberline {3.29.2.14}LDC1000\_SPI\_Enable()}{188}{paragraph.3.29.2.14}
+\contentsline {paragraph}{\numberline {3.29.2.15}Node\_Disable()}{188}{paragraph.3.29.2.15}
+\contentsline {paragraph}{\numberline {3.29.2.16}Node\_Enable()}{189}{paragraph.3.29.2.16}
+\contentsline {paragraph}{\numberline {3.29.2.17}RN2483\_Clear()}{189}{paragraph.3.29.2.17}
+\contentsline {paragraph}{\numberline {3.29.2.18}RN2483\_Set()}{189}{paragraph.3.29.2.18}
+\contentsline {paragraph}{\numberline {3.29.2.19}SPI\_As\_GPIO\_Low()}{190}{paragraph.3.29.2.19}
+\contentsline {paragraph}{\numberline {3.29.2.20}SPI\_CS\_Disable()}{190}{paragraph.3.29.2.20}
+\contentsline {subsection}{\numberline {3.30}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}G\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{191}{subsection.3.30}
+\contentsline {subsection}{\numberline {3.31}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}G\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{193}{subsection.3.31}
+\contentsline {subsubsection}{\numberline {3.31.1}Detailed Description}{194}{subsubsection.3.31.1}
+\contentsline {subsubsection}{\numberline {3.31.2}Function Documentation}{194}{subsubsection.3.31.2}
+\contentsline {paragraph}{\numberline {3.31.2.1}ADXL355\_Disable()}{194}{paragraph.3.31.2.1}
+\contentsline {paragraph}{\numberline {3.31.2.2}ADXL355\_Enable()}{195}{paragraph.3.31.2.2}
+\contentsline {paragraph}{\numberline {3.31.2.3}ADXL355\_SPI\_Disable()}{195}{paragraph.3.31.2.3}
+\contentsline {paragraph}{\numberline {3.31.2.4}ADXL355\_SPI\_Enable()}{196}{paragraph.3.31.2.4}
+\contentsline {paragraph}{\numberline {3.31.2.5}BME280\_Disable()}{196}{paragraph.3.31.2.5}
+\contentsline {paragraph}{\numberline {3.31.2.6}BME280\_Enable()}{196}{paragraph.3.31.2.6}
+\contentsline {paragraph}{\numberline {3.31.2.7}BME280\_SPI\_Disable()}{197}{paragraph.3.31.2.7}
+\contentsline {paragraph}{\numberline {3.31.2.8}BME280\_SPI\_Enable()}{197}{paragraph.3.31.2.8}
+\contentsline {paragraph}{\numberline {3.31.2.9}GPIO\_Config()}{198}{paragraph.3.31.2.9}
+\contentsline {paragraph}{\numberline {3.31.2.10}I2C\_As\_GPIO\_Low()}{198}{paragraph.3.31.2.10}
+\contentsline {paragraph}{\numberline {3.31.2.11}LDC1000\_Disable()}{199}{paragraph.3.31.2.11}
+\contentsline {paragraph}{\numberline {3.31.2.12}LDC1000\_Enable()}{199}{paragraph.3.31.2.12}
+\contentsline {paragraph}{\numberline {3.31.2.13}LDC1000\_SPI\_Disable()}{199}{paragraph.3.31.2.13}
+\contentsline {paragraph}{\numberline {3.31.2.14}LDC1000\_SPI\_Enable()}{200}{paragraph.3.31.2.14}
+\contentsline {paragraph}{\numberline {3.31.2.15}Node\_Disable()}{200}{paragraph.3.31.2.15}
+\contentsline {paragraph}{\numberline {3.31.2.16}Node\_Enable()}{201}{paragraph.3.31.2.16}
+\contentsline {paragraph}{\numberline {3.31.2.17}RN2483\_Clear()}{201}{paragraph.3.31.2.17}
+\contentsline {paragraph}{\numberline {3.31.2.18}RN2483\_Set()}{201}{paragraph.3.31.2.18}
+\contentsline {paragraph}{\numberline {3.31.2.19}SPI\_As\_GPIO\_Low()}{202}{paragraph.3.31.2.19}
+\contentsline {paragraph}{\numberline {3.31.2.20}SPI\_CS\_Disable()}{202}{paragraph.3.31.2.20}
+\contentsline {subsection}{\numberline {3.32}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}G\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{203}{subsection.3.32}
+\contentsline {subsection}{\numberline {3.33}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I2\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{203}{subsection.3.33}
+\contentsline {subsubsection}{\numberline {3.33.1}Detailed Description}{203}{subsubsection.3.33.1}
+\contentsline {subsubsection}{\numberline {3.33.2}Function Documentation}{204}{subsubsection.3.33.2}
+\contentsline {paragraph}{\numberline {3.33.2.1}I2C\_read\_8bits()}{204}{paragraph.3.33.2.1}
+\contentsline {paragraph}{\numberline {3.33.2.2}I2C\_write\_8bits()}{205}{paragraph.3.33.2.2}
+\contentsline {paragraph}{\numberline {3.33.2.3}Startup\_I2C()}{205}{paragraph.3.33.2.3}
+\contentsline {subsection}{\numberline {3.34}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I2\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{206}{subsection.3.34}
+\contentsline {subsection}{\numberline {3.35}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I2\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{207}{subsection.3.35}
+\contentsline {subsubsection}{\numberline {3.35.1}Detailed Description}{207}{subsubsection.3.35.1}
+\contentsline {subsubsection}{\numberline {3.35.2}Function Documentation}{208}{subsubsection.3.35.2}
+\contentsline {paragraph}{\numberline {3.35.2.1}I2C\_read\_8bits()}{208}{paragraph.3.35.2.1}
+\contentsline {paragraph}{\numberline {3.35.2.2}I2C\_write\_8bits()}{209}{paragraph.3.35.2.2}
+\contentsline {paragraph}{\numberline {3.35.2.3}Startup\_I2C()}{209}{paragraph.3.35.2.3}
+\contentsline {subsection}{\numberline {3.36}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I2\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{210}{subsection.3.36}
+\contentsline {subsection}{\numberline {3.37}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{210}{subsection.3.37}
+\contentsline {subsubsection}{\numberline {3.37.1}Detailed Description}{212}{subsubsection.3.37.1}
+\contentsline {subsubsection}{\numberline {3.37.2}Function Documentation}{212}{subsubsection.3.37.2}
+\contentsline {paragraph}{\numberline {3.37.2.1}GetLoraRxData()}{212}{paragraph.3.37.2.1}
+\contentsline {paragraph}{\numberline {3.37.2.2}GetLoraServerParams()}{213}{paragraph.3.37.2.2}
+\contentsline {paragraph}{\numberline {3.37.2.3}hex2int()}{214}{paragraph.3.37.2.3}
+\contentsline {paragraph}{\numberline {3.37.2.4}Join\_Abp\_Lora()}{215}{paragraph.3.37.2.4}
+\contentsline {paragraph}{\numberline {3.37.2.5}Join\_Otaa\_Lora()}{216}{paragraph.3.37.2.5}
+\contentsline {paragraph}{\numberline {3.37.2.6}Mac\_Adr\_On()}{217}{paragraph.3.37.2.6}
+\contentsline {paragraph}{\numberline {3.37.2.7}Mac\_Ar\_On()}{217}{paragraph.3.37.2.7}
+\contentsline {paragraph}{\numberline {3.37.2.8}Mac\_Clear\_Upctr()}{218}{paragraph.3.37.2.8}
+\contentsline {paragraph}{\numberline {3.37.2.9}Mac\_Get\_Appeui()}{219}{paragraph.3.37.2.9}
+\contentsline {paragraph}{\numberline {3.37.2.10}Mac\_Get\_Devaddr()}{219}{paragraph.3.37.2.10}
+\contentsline {paragraph}{\numberline {3.37.2.11}Mac\_Get\_Deveui()}{220}{paragraph.3.37.2.11}
+\contentsline {paragraph}{\numberline {3.37.2.12}Mac\_Get\_Dnctr()}{220}{paragraph.3.37.2.12}
+\contentsline {paragraph}{\numberline {3.37.2.13}Mac\_Get\_Upctr()}{221}{paragraph.3.37.2.13}
+\contentsline {paragraph}{\numberline {3.37.2.14}Mac\_Save()}{222}{paragraph.3.37.2.14}
+\contentsline {paragraph}{\numberline {3.37.2.15}Mac\_Set\_Devaddr()}{222}{paragraph.3.37.2.15}
+\contentsline {paragraph}{\numberline {3.37.2.16}Mac\_Set\_Dnctr()}{223}{paragraph.3.37.2.16}
+\contentsline {paragraph}{\numberline {3.37.2.17}Mac\_Set\_Pwridx()}{224}{paragraph.3.37.2.17}
+\contentsline {paragraph}{\numberline {3.37.2.18}Mac\_Set\_Rxdelay1()}{224}{paragraph.3.37.2.18}
+\contentsline {paragraph}{\numberline {3.37.2.19}Mac\_Set\_Upctr()}{225}{paragraph.3.37.2.19}
+\contentsline {paragraph}{\numberline {3.37.2.20}Reset\_RN2483()}{226}{paragraph.3.37.2.20}
+\contentsline {paragraph}{\numberline {3.37.2.21}Setup\_Abp\_Lora()}{226}{paragraph.3.37.2.21}
+\contentsline {paragraph}{\numberline {3.37.2.22}Setup\_Otaa\_Lora()}{227}{paragraph.3.37.2.22}
+\contentsline {paragraph}{\numberline {3.37.2.23}Sys\_FactoryReset()}{228}{paragraph.3.37.2.23}
+\contentsline {paragraph}{\numberline {3.37.2.24}Sys\_Sleep()}{229}{paragraph.3.37.2.24}
+\contentsline {paragraph}{\numberline {3.37.2.25}Try\_Join\_Lora\_Gateway()}{230}{paragraph.3.37.2.25}
+\contentsline {paragraph}{\numberline {3.37.2.26}Tx\_Cnf\_Lora()}{230}{paragraph.3.37.2.26}
+\contentsline {paragraph}{\numberline {3.37.2.27}Tx\_Uncnf\_Lora()}{232}{paragraph.3.37.2.27}
+\contentsline {paragraph}{\numberline {3.37.2.28}Uint8Array2Char()}{233}{paragraph.3.37.2.28}
+\contentsline {subsubsection}{\numberline {3.37.3}Variable Documentation}{234}{subsubsection.3.37.3}
+\contentsline {paragraph}{\numberline {3.37.3.1}MyADXL}{234}{paragraph.3.37.3.1}
+\contentsline {paragraph}{\numberline {3.37.3.2}MyBME}{234}{paragraph.3.37.3.2}
+\contentsline {paragraph}{\numberline {3.37.3.3}MyLDC}{234}{paragraph.3.37.3.3}
+\contentsline {paragraph}{\numberline {3.37.3.4}MyNode}{234}{paragraph.3.37.3.4}
+\contentsline {paragraph}{\numberline {3.37.3.5}uart0}{235}{paragraph.3.37.3.5}
+\contentsline {subsection}{\numberline {3.38}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{235}{subsection.3.38}
+\contentsline {subsection}{\numberline {3.39}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{245}{subsection.3.39}
+\contentsline {subsubsection}{\numberline {3.39.1}Detailed Description}{247}{subsubsection.3.39.1}
+\contentsline {subsubsection}{\numberline {3.39.2}Data Structure Documentation}{247}{subsubsection.3.39.2}
+\contentsline {paragraph}{\numberline {3.39.2.1}struct Lora\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Node}{247}{paragraph.3.39.2.1}
+\contentsline {subsubsection}{\numberline {3.39.3}Macro Definition Documentation}{248}{subsubsection.3.39.3}
+\contentsline {paragraph}{\numberline {3.39.3.1}ERROR\_ABP\_APPSKEY}{248}{paragraph.3.39.3.1}
+\contentsline {paragraph}{\numberline {3.39.3.2}ERROR\_ABP\_DENIED}{248}{paragraph.3.39.3.2}
+\contentsline {paragraph}{\numberline {3.39.3.3}ERROR\_ABP\_DEVADDR}{248}{paragraph.3.39.3.3}
+\contentsline {paragraph}{\numberline {3.39.3.4}ERROR\_ABP\_JOIN}{248}{paragraph.3.39.3.4}
+\contentsline {paragraph}{\numberline {3.39.3.5}ERROR\_ABP\_NWKSKEY}{249}{paragraph.3.39.3.5}
+\contentsline {paragraph}{\numberline {3.39.3.6}ERROR\_ABP\_SAVE}{249}{paragraph.3.39.3.6}
+\contentsline {paragraph}{\numberline {3.39.3.7}ERROR\_ADR\_SET}{249}{paragraph.3.39.3.7}
+\contentsline {paragraph}{\numberline {3.39.3.8}ERROR\_OTAA\_APPEUI}{249}{paragraph.3.39.3.8}
+\contentsline {paragraph}{\numberline {3.39.3.9}ERROR\_OTAA\_APPKEY}{249}{paragraph.3.39.3.9}
+\contentsline {paragraph}{\numberline {3.39.3.10}ERROR\_OTAA\_BUSY}{249}{paragraph.3.39.3.10}
+\contentsline {paragraph}{\numberline {3.39.3.11}ERROR\_OTAA\_DENIED}{249}{paragraph.3.39.3.11}
+\contentsline {paragraph}{\numberline {3.39.3.12}ERROR\_OTAA\_DEVEUI}{249}{paragraph.3.39.3.12}
+\contentsline {paragraph}{\numberline {3.39.3.13}ERROR\_OTAA\_INVALID\_PARAM}{250}{paragraph.3.39.3.13}
+\contentsline {paragraph}{\numberline {3.39.3.14}ERROR\_OTAA\_JOIN}{250}{paragraph.3.39.3.14}
+\contentsline {paragraph}{\numberline {3.39.3.15}ERROR\_OTAA\_KEYS\_NOT\_INIT}{250}{paragraph.3.39.3.15}
+\contentsline {paragraph}{\numberline {3.39.3.16}ERROR\_OTAA\_MAC\_PAUSED}{250}{paragraph.3.39.3.16}
+\contentsline {paragraph}{\numberline {3.39.3.17}ERROR\_OTAA\_NO\_FREE\_CH}{250}{paragraph.3.39.3.17}
+\contentsline {paragraph}{\numberline {3.39.3.18}ERROR\_OTAA\_SAVE}{250}{paragraph.3.39.3.18}
+\contentsline {paragraph}{\numberline {3.39.3.19}ERROR\_OTAA\_SILENT}{250}{paragraph.3.39.3.19}
+\contentsline {paragraph}{\numberline {3.39.3.20}ERROR\_OTAA\_UNKNOWN}{250}{paragraph.3.39.3.20}
+\contentsline {paragraph}{\numberline {3.39.3.21}ERROR\_RXDELAY1\_SET}{251}{paragraph.3.39.3.21}
+\contentsline {paragraph}{\numberline {3.39.3.22}ERROR\_SET\_DEVADDR}{251}{paragraph.3.39.3.22}
+\contentsline {paragraph}{\numberline {3.39.3.23}ERROR\_SET\_DNCTR}{251}{paragraph.3.39.3.23}
+\contentsline {paragraph}{\numberline {3.39.3.24}ERROR\_SET\_NWSKEY}{251}{paragraph.3.39.3.24}
+\contentsline {paragraph}{\numberline {3.39.3.25}ERROR\_SET\_PWRIDX}{251}{paragraph.3.39.3.25}
+\contentsline {paragraph}{\numberline {3.39.3.26}ERROR\_SET\_UPCTR}{251}{paragraph.3.39.3.26}
+\contentsline {paragraph}{\numberline {3.39.3.27}ERROR\_TX\_BUSY}{251}{paragraph.3.39.3.27}
+\contentsline {paragraph}{\numberline {3.39.3.28}ERROR\_TX\_INVALID\_DATA\_LEN}{251}{paragraph.3.39.3.28}
+\contentsline {paragraph}{\numberline {3.39.3.29}ERROR\_TX\_INVALID\_PARAM}{252}{paragraph.3.39.3.29}
+\contentsline {paragraph}{\numberline {3.39.3.30}ERROR\_TX\_MAC\_ERR}{252}{paragraph.3.39.3.30}
+\contentsline {paragraph}{\numberline {3.39.3.31}ERROR\_TX\_MAC\_PAUSED}{252}{paragraph.3.39.3.31}
+\contentsline {paragraph}{\numberline {3.39.3.32}ERROR\_TX\_NO\_FREE\_CH}{252}{paragraph.3.39.3.32}
+\contentsline {paragraph}{\numberline {3.39.3.33}ERROR\_TX\_NOT\_JOINED}{252}{paragraph.3.39.3.33}
+\contentsline {paragraph}{\numberline {3.39.3.34}ERROR\_TX\_REJOIN\_NEEDED}{252}{paragraph.3.39.3.34}
+\contentsline {paragraph}{\numberline {3.39.3.35}ERROR\_TX\_SILENT}{252}{paragraph.3.39.3.35}
+\contentsline {paragraph}{\numberline {3.39.3.36}ERROR\_TX\_UNKNOWN}{252}{paragraph.3.39.3.36}
+\contentsline {paragraph}{\numberline {3.39.3.37}SUCCESS\_ABP\_LORA}{253}{paragraph.3.39.3.37}
+\contentsline {paragraph}{\numberline {3.39.3.38}SUCCESS\_OTAA\_LORA}{253}{paragraph.3.39.3.38}
+\contentsline {paragraph}{\numberline {3.39.3.39}SUCCESS\_RXDELAY1\_SET}{253}{paragraph.3.39.3.39}
+\contentsline {paragraph}{\numberline {3.39.3.40}SUCCESS\_SET\_DEVADDR}{253}{paragraph.3.39.3.40}
+\contentsline {paragraph}{\numberline {3.39.3.41}SUCCESS\_SET\_DNCTR}{253}{paragraph.3.39.3.41}
+\contentsline {paragraph}{\numberline {3.39.3.42}SUCCESS\_SET\_NWSKEY}{253}{paragraph.3.39.3.42}
+\contentsline {paragraph}{\numberline {3.39.3.43}SUCCESS\_SET\_PWRIDX}{253}{paragraph.3.39.3.43}
+\contentsline {paragraph}{\numberline {3.39.3.44}SUCCESS\_SET\_UPCTR}{253}{paragraph.3.39.3.44}
+\contentsline {paragraph}{\numberline {3.39.3.45}SUCCESS\_TX\_MAC\_RX}{254}{paragraph.3.39.3.45}
+\contentsline {paragraph}{\numberline {3.39.3.46}SUCCESS\_TX\_MAC\_TX}{254}{paragraph.3.39.3.46}
+\contentsline {subsubsection}{\numberline {3.39.4}Function Documentation}{254}{subsubsection.3.39.4}
+\contentsline {paragraph}{\numberline {3.39.4.1}GetLoraRxData()}{254}{paragraph.3.39.4.1}
+\contentsline {paragraph}{\numberline {3.39.4.2}GetLoraServerParams()}{255}{paragraph.3.39.4.2}
+\contentsline {paragraph}{\numberline {3.39.4.3}hex2int()}{256}{paragraph.3.39.4.3}
+\contentsline {paragraph}{\numberline {3.39.4.4}Join\_Abp\_Lora()}{257}{paragraph.3.39.4.4}
+\contentsline {paragraph}{\numberline {3.39.4.5}Join\_Otaa\_Lora()}{257}{paragraph.3.39.4.5}
+\contentsline {paragraph}{\numberline {3.39.4.6}Mac\_Adr\_On()}{258}{paragraph.3.39.4.6}
+\contentsline {paragraph}{\numberline {3.39.4.7}Mac\_Ar\_On()}{259}{paragraph.3.39.4.7}
+\contentsline {paragraph}{\numberline {3.39.4.8}Mac\_Clear\_Upctr()}{260}{paragraph.3.39.4.8}
+\contentsline {paragraph}{\numberline {3.39.4.9}Mac\_Get\_Appeui()}{260}{paragraph.3.39.4.9}
+\contentsline {paragraph}{\numberline {3.39.4.10}Mac\_Get\_Devaddr()}{261}{paragraph.3.39.4.10}
+\contentsline {paragraph}{\numberline {3.39.4.11}Mac\_Get\_Deveui()}{261}{paragraph.3.39.4.11}
+\contentsline {paragraph}{\numberline {3.39.4.12}Mac\_Get\_Dnctr()}{262}{paragraph.3.39.4.12}
+\contentsline {paragraph}{\numberline {3.39.4.13}Mac\_Get\_Upctr()}{263}{paragraph.3.39.4.13}
+\contentsline {paragraph}{\numberline {3.39.4.14}Mac\_Save()}{263}{paragraph.3.39.4.14}
+\contentsline {paragraph}{\numberline {3.39.4.15}Mac\_Set\_Devaddr()}{264}{paragraph.3.39.4.15}
+\contentsline {paragraph}{\numberline {3.39.4.16}Mac\_Set\_Dnctr()}{264}{paragraph.3.39.4.16}
+\contentsline {paragraph}{\numberline {3.39.4.17}Mac\_Set\_Pwridx()}{266}{paragraph.3.39.4.17}
+\contentsline {paragraph}{\numberline {3.39.4.18}Mac\_Set\_Rxdelay1()}{267}{paragraph.3.39.4.18}
+\contentsline {paragraph}{\numberline {3.39.4.19}Mac\_Set\_Upctr()}{267}{paragraph.3.39.4.19}
+\contentsline {paragraph}{\numberline {3.39.4.20}Reset\_RN2483()}{268}{paragraph.3.39.4.20}
+\contentsline {paragraph}{\numberline {3.39.4.21}Setup\_Abp\_Lora()}{268}{paragraph.3.39.4.21}
+\contentsline {paragraph}{\numberline {3.39.4.22}Setup\_Otaa\_Lora()}{269}{paragraph.3.39.4.22}
+\contentsline {paragraph}{\numberline {3.39.4.23}Sys\_FactoryReset()}{270}{paragraph.3.39.4.23}
+\contentsline {paragraph}{\numberline {3.39.4.24}Sys\_Sleep()}{271}{paragraph.3.39.4.24}
+\contentsline {paragraph}{\numberline {3.39.4.25}Try\_Join\_Lora\_Gateway()}{272}{paragraph.3.39.4.25}
+\contentsline {paragraph}{\numberline {3.39.4.26}Tx\_Cnf\_Lora()}{273}{paragraph.3.39.4.26}
+\contentsline {paragraph}{\numberline {3.39.4.27}Tx\_Uncnf\_Lora()}{274}{paragraph.3.39.4.27}
+\contentsline {paragraph}{\numberline {3.39.4.28}Uint8Array2Char()}{276}{paragraph.3.39.4.28}
+\contentsline {subsection}{\numberline {3.40}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{276}{subsection.3.40}
+\contentsline {subsection}{\numberline {3.41}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{278}{subsection.3.41}
+\contentsline {subsubsection}{\numberline {3.41.1}Detailed Description}{278}{subsubsection.3.41.1}
+\contentsline {subsubsection}{\numberline {3.41.2}Function Documentation}{278}{subsubsection.3.41.2}
+\contentsline {paragraph}{\numberline {3.41.2.1}Config\_PWM()}{278}{paragraph.3.41.2.1}
+\contentsline {subsection}{\numberline {3.42}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{279}{subsection.3.42}
+\contentsline {subsection}{\numberline {3.43}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{279}{subsection.3.43}
+\contentsline {subsubsection}{\numberline {3.43.1}Detailed Description}{280}{subsubsection.3.43.1}
+\contentsline {subsubsection}{\numberline {3.43.2}Function Documentation}{280}{subsubsection.3.43.2}
+\contentsline {paragraph}{\numberline {3.43.2.1}Config\_PWM()}{280}{paragraph.3.43.2.1}
+\contentsline {subsection}{\numberline {3.44}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{281}{subsection.3.44}
+\contentsline {subsection}{\numberline {3.45}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{281}{subsection.3.45}
+\contentsline {subsubsection}{\numberline {3.45.1}Detailed Description}{282}{subsubsection.3.45.1}
+\contentsline {subsubsection}{\numberline {3.45.2}Function Documentation}{282}{subsubsection.3.45.2}
+\contentsline {paragraph}{\numberline {3.45.2.1}SPI\_read\_16bits()}{282}{paragraph.3.45.2.1}
+\contentsline {paragraph}{\numberline {3.45.2.2}SPI\_read\_8bits()}{283}{paragraph.3.45.2.2}
+\contentsline {paragraph}{\numberline {3.45.2.3}SPI\_write\_16bits()}{284}{paragraph.3.45.2.3}
+\contentsline {paragraph}{\numberline {3.45.2.4}SPI\_write\_8bits()}{284}{paragraph.3.45.2.4}
+\contentsline {paragraph}{\numberline {3.45.2.5}Startup\_SPI()}{285}{paragraph.3.45.2.5}
+\contentsline {subsection}{\numberline {3.46}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{286}{subsection.3.46}
+\contentsline {subsection}{\numberline {3.47}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{287}{subsection.3.47}
+\contentsline {subsubsection}{\numberline {3.47.1}Detailed Description}{288}{subsubsection.3.47.1}
+\contentsline {subsubsection}{\numberline {3.47.2}Function Documentation}{288}{subsubsection.3.47.2}
+\contentsline {paragraph}{\numberline {3.47.2.1}SPI\_read\_16bits()}{288}{paragraph.3.47.2.1}
+\contentsline {paragraph}{\numberline {3.47.2.2}SPI\_read\_8bits()}{289}{paragraph.3.47.2.2}
+\contentsline {paragraph}{\numberline {3.47.2.3}SPI\_write\_16bits()}{290}{paragraph.3.47.2.3}
+\contentsline {paragraph}{\numberline {3.47.2.4}SPI\_write\_8bits()}{290}{paragraph.3.47.2.4}
+\contentsline {paragraph}{\numberline {3.47.2.5}Startup\_SPI()}{291}{paragraph.3.47.2.5}
+\contentsline {subsection}{\numberline {3.48}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}I.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{292}{subsection.3.48}
+\contentsline {subsection}{\numberline {3.49}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{292}{subsection.3.49}
+\contentsline {subsubsection}{\numberline {3.49.1}Detailed Description}{293}{subsubsection.3.49.1}
+\contentsline {subsubsection}{\numberline {3.49.2}Function Documentation}{293}{subsubsection.3.49.2}
+\contentsline {paragraph}{\numberline {3.49.2.1}Startup\_Continuous\_Timer()}{293}{paragraph.3.49.2.1}
+\contentsline {paragraph}{\numberline {3.49.2.2}Startup\_Oneshot\_Timer()}{294}{paragraph.3.49.2.2}
+\contentsline {paragraph}{\numberline {3.49.2.3}timer0Callback()}{294}{paragraph.3.49.2.3}
+\contentsline {paragraph}{\numberline {3.49.2.4}timer1Callback()}{296}{paragraph.3.49.2.4}
+\contentsline {subsubsection}{\numberline {3.49.3}Variable Documentation}{296}{subsubsection.3.49.3}
+\contentsline {paragraph}{\numberline {3.49.3.1}Timer0Event}{296}{paragraph.3.49.3.1}
+\contentsline {paragraph}{\numberline {3.49.3.2}Timer1Event}{296}{paragraph.3.49.3.2}
+\contentsline {subsection}{\numberline {3.50}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{297}{subsection.3.50}
+\contentsline {subsection}{\numberline {3.51}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{297}{subsection.3.51}
+\contentsline {subsubsection}{\numberline {3.51.1}Detailed Description}{298}{subsubsection.3.51.1}
+\contentsline {subsubsection}{\numberline {3.51.2}Function Documentation}{298}{subsubsection.3.51.2}
+\contentsline {paragraph}{\numberline {3.51.2.1}Startup\_Continuous\_Timer()}{298}{paragraph.3.51.2.1}
+\contentsline {paragraph}{\numberline {3.51.2.2}Startup\_Oneshot\_Timer()}{299}{paragraph.3.51.2.2}
+\contentsline {paragraph}{\numberline {3.51.2.3}timer0Callback()}{300}{paragraph.3.51.2.3}
+\contentsline {paragraph}{\numberline {3.51.2.4}timer1Callback()}{300}{paragraph.3.51.2.4}
+\contentsline {subsection}{\numberline {3.52}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Timer.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{301}{subsection.3.52}
+\contentsline {subsection}{\numberline {3.53}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P006.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{301}{subsection.3.53}
+\contentsline {subsubsection}{\numberline {3.53.1}Detailed Description}{301}{subsubsection.3.53.1}
+\contentsline {subsubsection}{\numberline {3.53.2}Function Documentation}{302}{subsubsection.3.53.2}
+\contentsline {paragraph}{\numberline {3.53.2.1}GetID\_TMP006()}{302}{paragraph.3.53.2.1}
+\contentsline {paragraph}{\numberline {3.53.2.2}GetTA\_TMP006()}{302}{paragraph.3.53.2.2}
+\contentsline {paragraph}{\numberline {3.53.2.3}SetMOD\_TMP006()}{303}{paragraph.3.53.2.3}
+\contentsline {subsection}{\numberline {3.54}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P006.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{304}{subsection.3.54}
+\contentsline {subsection}{\numberline {3.55}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P006.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{305}{subsection.3.55}
+\contentsline {subsubsection}{\numberline {3.55.1}Detailed Description}{306}{subsubsection.3.55.1}
+\contentsline {subsubsection}{\numberline {3.55.2}Macro Definition Documentation}{306}{subsubsection.3.55.2}
+\contentsline {paragraph}{\numberline {3.55.2.1}ERROR\_WRONG\_CR}{306}{paragraph.3.55.2.1}
+\contentsline {paragraph}{\numberline {3.55.2.2}SUCCESS\_CONF\_TMP006}{306}{paragraph.3.55.2.2}
+\contentsline {subsubsection}{\numberline {3.55.3}Function Documentation}{306}{subsubsection.3.55.3}
+\contentsline {paragraph}{\numberline {3.55.3.1}GetID\_TMP006()}{306}{paragraph.3.55.3.1}
+\contentsline {paragraph}{\numberline {3.55.3.2}GetTA\_TMP006()}{307}{paragraph.3.55.3.2}
+\contentsline {paragraph}{\numberline {3.55.3.3}SetMOD\_TMP006()}{308}{paragraph.3.55.3.3}
+\contentsline {subsection}{\numberline {3.56}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P006.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{309}{subsection.3.56}
+\contentsline {subsection}{\numberline {3.57}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}U\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{309}{subsection.3.57}
+\contentsline {subsubsection}{\numberline {3.57.1}Detailed Description}{310}{subsubsection.3.57.1}
+\contentsline {subsubsection}{\numberline {3.57.2}Function Documentation}{310}{subsubsection.3.57.2}
+\contentsline {paragraph}{\numberline {3.57.2.1}GetLine\_UART()}{310}{paragraph.3.57.2.1}
+\contentsline {paragraph}{\numberline {3.57.2.2}Message()}{311}{paragraph.3.57.2.2}
+\contentsline {paragraph}{\numberline {3.57.2.3}putch()}{311}{paragraph.3.57.2.3}
+\contentsline {paragraph}{\numberline {3.57.2.4}Report()}{312}{paragraph.3.57.2.4}
+\contentsline {paragraph}{\numberline {3.57.2.5}Startup\_UART()}{313}{paragraph.3.57.2.5}
+\contentsline {paragraph}{\numberline {3.57.2.6}UART\_resetInputBuffer()}{313}{paragraph.3.57.2.6}
+\contentsline {paragraph}{\numberline {3.57.2.7}vsnprintf()}{314}{paragraph.3.57.2.7}
+\contentsline {subsubsection}{\numberline {3.57.3}Variable Documentation}{314}{subsubsection.3.57.3}
+\contentsline {paragraph}{\numberline {3.57.3.1}uart0}{314}{paragraph.3.57.3.1}
+\contentsline {subsection}{\numberline {3.58}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}U\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{314}{subsection.3.58}
+\contentsline {subsection}{\numberline {3.59}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}U\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{316}{subsection.3.59}
+\contentsline {subsubsection}{\numberline {3.59.1}Detailed Description}{317}{subsubsection.3.59.1}
+\contentsline {subsubsection}{\numberline {3.59.2}Macro Definition Documentation}{317}{subsubsection.3.59.2}
+\contentsline {paragraph}{\numberline {3.59.2.1}ERR\_PRINT}{317}{paragraph.3.59.2.1}
+\contentsline {paragraph}{\numberline {3.59.2.2}UART\_PRINT}{317}{paragraph.3.59.2.2}
+\contentsline {subsubsection}{\numberline {3.59.3}Function Documentation}{317}{subsubsection.3.59.3}
+\contentsline {paragraph}{\numberline {3.59.3.1}GetLine\_UART()}{317}{paragraph.3.59.3.1}
+\contentsline {paragraph}{\numberline {3.59.3.2}Message()}{318}{paragraph.3.59.3.2}
+\contentsline {paragraph}{\numberline {3.59.3.3}putch()}{319}{paragraph.3.59.3.3}
+\contentsline {paragraph}{\numberline {3.59.3.4}Report()}{319}{paragraph.3.59.3.4}
+\contentsline {paragraph}{\numberline {3.59.3.5}Startup\_UART()}{320}{paragraph.3.59.3.5}
+\contentsline {paragraph}{\numberline {3.59.3.6}UART\_resetInputBuffer()}{321}{paragraph.3.59.3.6}
+\contentsline {subsection}{\numberline {3.60}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}U\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{321}{subsection.3.60}
+\contentsline {subsection}{\numberline {3.61}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{322}{subsection.3.61}
+\contentsline {subsubsection}{\numberline {3.61.1}Detailed Description}{322}{subsubsection.3.61.1}
+\contentsline {subsubsection}{\numberline {3.61.2}Function Documentation}{322}{subsubsection.3.61.2}
+\contentsline {paragraph}{\numberline {3.61.2.1}Startup\_Watchdog()}{322}{paragraph.3.61.2.1}
+\contentsline {paragraph}{\numberline {3.61.2.2}watchdogCallback()}{323}{paragraph.3.61.2.2}
+\contentsline {subsubsection}{\numberline {3.61.3}Variable Documentation}{324}{subsubsection.3.61.3}
+\contentsline {paragraph}{\numberline {3.61.3.1}i2c}{324}{paragraph.3.61.3.1}
+\contentsline {subsection}{\numberline {3.62}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{324}{subsection.3.62}
+\contentsline {subsection}{\numberline {3.63}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{325}{subsection.3.63}
+\contentsline {subsubsection}{\numberline {3.63.1}Detailed Description}{325}{subsubsection.3.63.1}
+\contentsline {subsubsection}{\numberline {3.63.2}Function Documentation}{325}{subsubsection.3.63.2}
+\contentsline {paragraph}{\numberline {3.63.2.1}Startup\_Watchdog()}{325}{paragraph.3.63.2.1}
+\contentsline {subsection}{\numberline {3.64}hal\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}W\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{326}{subsection.3.64}
+\contentsline {subsection}{\numberline {3.65}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C1000.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{326}{subsection.3.65}
+\contentsline {subsubsection}{\numberline {3.65.1}Detailed Description}{327}{subsubsection.3.65.1}
+\contentsline {subsubsection}{\numberline {3.65.2}Function Documentation}{328}{subsubsection.3.65.2}
+\contentsline {paragraph}{\numberline {3.65.2.1}LDC1000\_DevId()}{328}{paragraph.3.65.2.1}
+\contentsline {paragraph}{\numberline {3.65.2.2}LDC1000\_Get\_Proximity\_Frame()}{328}{paragraph.3.65.2.2}
+\contentsline {paragraph}{\numberline {3.65.2.3}LDC1000\_Read\_Fcount()}{329}{paragraph.3.65.2.3}
+\contentsline {paragraph}{\numberline {3.65.2.4}LDC1000\_Read\_Proximity()}{330}{paragraph.3.65.2.4}
+\contentsline {paragraph}{\numberline {3.65.2.5}LDC1000\_Read\_Rp\_Max()}{330}{paragraph.3.65.2.5}
+\contentsline {paragraph}{\numberline {3.65.2.6}LDC1000\_Read\_Rp\_Min()}{331}{paragraph.3.65.2.6}
+\contentsline {paragraph}{\numberline {3.65.2.7}LDC1000\_Read\_Status()}{331}{paragraph.3.65.2.7}
+\contentsline {paragraph}{\numberline {3.65.2.8}LDC1000\_Write\_Clk\_Conf()}{332}{paragraph.3.65.2.8}
+\contentsline {paragraph}{\numberline {3.65.2.9}LDC1000\_Write\_Conf()}{332}{paragraph.3.65.2.9}
+\contentsline {paragraph}{\numberline {3.65.2.10}LDC1000\_Write\_Intb\_Conf()}{333}{paragraph.3.65.2.10}
+\contentsline {paragraph}{\numberline {3.65.2.11}LDC1000\_Write\_Min\_Freq()}{333}{paragraph.3.65.2.11}
+\contentsline {paragraph}{\numberline {3.65.2.12}LDC1000\_Write\_Pow\_Conf()}{334}{paragraph.3.65.2.12}
+\contentsline {paragraph}{\numberline {3.65.2.13}LDC1000\_Write\_Rp\_Max()}{334}{paragraph.3.65.2.13}
+\contentsline {paragraph}{\numberline {3.65.2.14}LDC1000\_Write\_Rp\_Min()}{335}{paragraph.3.65.2.14}
+\contentsline {paragraph}{\numberline {3.65.2.15}RpCalc()}{335}{paragraph.3.65.2.15}
+\contentsline {subsection}{\numberline {3.66}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C1000.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{336}{subsection.3.66}
+\contentsline {subsection}{\numberline {3.67}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C1000.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{338}{subsection.3.67}
+\contentsline {subsubsection}{\numberline {3.67.1}Detailed Description}{340}{subsubsection.3.67.1}
+\contentsline {subsubsection}{\numberline {3.67.2}Enumeration Type Documentation}{340}{subsubsection.3.67.2}
+\contentsline {paragraph}{\numberline {3.67.2.1}LDC1000\_amplitude\_t}{340}{paragraph.3.67.2.1}
+\contentsline {paragraph}{\numberline {3.67.2.2}LDC1000\_clkpd\_t}{341}{paragraph.3.67.2.2}
+\contentsline {paragraph}{\numberline {3.67.2.3}LDC1000\_clksel\_t}{341}{paragraph.3.67.2.3}
+\contentsline {paragraph}{\numberline {3.67.2.4}LDC1000\_intb\_conf\_t}{341}{paragraph.3.67.2.4}
+\contentsline {paragraph}{\numberline {3.67.2.5}LDC1000\_pow\_conf\_t}{342}{paragraph.3.67.2.5}
+\contentsline {paragraph}{\numberline {3.67.2.6}LDC1000\_register\_t}{342}{paragraph.3.67.2.6}
+\contentsline {paragraph}{\numberline {3.67.2.7}LDC1000\_resp\_time\_t}{343}{paragraph.3.67.2.7}
+\contentsline {paragraph}{\numberline {3.67.2.8}LDC1000\_rp\_max\_t}{343}{paragraph.3.67.2.8}
+\contentsline {paragraph}{\numberline {3.67.2.9}LDC1000\_rp\_min\_t}{345}{paragraph.3.67.2.9}
+\contentsline {paragraph}{\numberline {3.67.2.10}LDC1000\_status\_t}{346}{paragraph.3.67.2.10}
+\contentsline {subsubsection}{\numberline {3.67.3}Function Documentation}{346}{subsubsection.3.67.3}
+\contentsline {paragraph}{\numberline {3.67.3.1}LDC1000\_DevId()}{346}{paragraph.3.67.3.1}
+\contentsline {paragraph}{\numberline {3.67.3.2}LDC1000\_Get\_Proximity\_Frame()}{347}{paragraph.3.67.3.2}
+\contentsline {paragraph}{\numberline {3.67.3.3}LDC1000\_Read\_Fcount()}{348}{paragraph.3.67.3.3}
+\contentsline {paragraph}{\numberline {3.67.3.4}LDC1000\_Read\_Proximity()}{348}{paragraph.3.67.3.4}
+\contentsline {paragraph}{\numberline {3.67.3.5}LDC1000\_Read\_Rp\_Max()}{349}{paragraph.3.67.3.5}
+\contentsline {paragraph}{\numberline {3.67.3.6}LDC1000\_Read\_Rp\_Min()}{349}{paragraph.3.67.3.6}
+\contentsline {paragraph}{\numberline {3.67.3.7}LDC1000\_Read\_Status()}{350}{paragraph.3.67.3.7}
+\contentsline {paragraph}{\numberline {3.67.3.8}LDC1000\_Write\_Clk\_Conf()}{350}{paragraph.3.67.3.8}
+\contentsline {paragraph}{\numberline {3.67.3.9}LDC1000\_Write\_Conf()}{351}{paragraph.3.67.3.9}
+\contentsline {paragraph}{\numberline {3.67.3.10}LDC1000\_Write\_Intb\_Conf()}{351}{paragraph.3.67.3.10}
+\contentsline {paragraph}{\numberline {3.67.3.11}LDC1000\_Write\_Min\_Freq()}{352}{paragraph.3.67.3.11}
+\contentsline {paragraph}{\numberline {3.67.3.12}LDC1000\_Write\_Pow\_Conf()}{352}{paragraph.3.67.3.12}
+\contentsline {paragraph}{\numberline {3.67.3.13}LDC1000\_Write\_Rp\_Max()}{353}{paragraph.3.67.3.13}
+\contentsline {paragraph}{\numberline {3.67.3.14}LDC1000\_Write\_Rp\_Min()}{353}{paragraph.3.67.3.14}
+\contentsline {paragraph}{\numberline {3.67.3.15}RpCalc()}{354}{paragraph.3.67.3.15}
+\contentsline {subsection}{\numberline {3.68}L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C1000.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{354}{subsection.3.68}
+\contentsline {subsection}{\numberline {3.69}main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}nortos.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{356}{subsection.3.69}
+\contentsline {subsubsection}{\numberline {3.69.1}Detailed Description}{357}{subsubsection.3.69.1}
+\contentsline {subsubsection}{\numberline {3.69.2}Function Documentation}{357}{subsubsection.3.69.2}
+\contentsline {paragraph}{\numberline {3.69.2.1}main()}{357}{paragraph.3.69.2.1}
+\contentsline {paragraph}{\numberline {3.69.2.2}mainThread()}{357}{paragraph.3.69.2.2}
+\contentsline {subsection}{\numberline {3.70}main\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}nortos.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{361}{subsection.3.70}
+\contentsline {subsection}{\numberline {3.71}Sensors.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{361}{subsection.3.71}
+\contentsline {subsubsection}{\numberline {3.71.1}Detailed Description}{362}{subsubsection.3.71.1}
+\contentsline {subsubsection}{\numberline {3.71.2}Function Documentation}{362}{subsubsection.3.71.2}
+\contentsline {paragraph}{\numberline {3.71.2.1}Add\_s16Data2Packet()}{363}{paragraph.3.71.2.1}
+\contentsline {paragraph}{\numberline {3.71.2.2}Add\_s32Data2Packet()}{363}{paragraph.3.71.2.2}
+\contentsline {paragraph}{\numberline {3.71.2.3}GetSensorData()}{364}{paragraph.3.71.2.3}
+\contentsline {paragraph}{\numberline {3.71.2.4}IniPacket()}{367}{paragraph.3.71.2.4}
+\contentsline {subsubsection}{\numberline {3.71.3}Variable Documentation}{367}{subsubsection.3.71.3}
+\contentsline {paragraph}{\numberline {3.71.3.1}i2c}{367}{paragraph.3.71.3.1}
+\contentsline {paragraph}{\numberline {3.71.3.2}MyADXL}{367}{paragraph.3.71.3.2}
+\contentsline {paragraph}{\numberline {3.71.3.3}MyBME}{367}{paragraph.3.71.3.3}
+\contentsline {paragraph}{\numberline {3.71.3.4}MyLDC}{368}{paragraph.3.71.3.4}
+\contentsline {paragraph}{\numberline {3.71.3.5}MyNode}{368}{paragraph.3.71.3.5}
+\contentsline {paragraph}{\numberline {3.71.3.6}MyTMP006}{368}{paragraph.3.71.3.6}
+\contentsline {paragraph}{\numberline {3.71.3.7}MyVbat}{368}{paragraph.3.71.3.7}
+\contentsline {paragraph}{\numberline {3.71.3.8}spi}{368}{paragraph.3.71.3.8}
+\contentsline {paragraph}{\numberline {3.71.3.9}Timer1Event}{368}{paragraph.3.71.3.9}
+\contentsline {paragraph}{\numberline {3.71.3.10}uart0}{368}{paragraph.3.71.3.10}
+\contentsline {paragraph}{\numberline {3.71.3.11}wd}{368}{paragraph.3.71.3.11}
+\contentsline {subsection}{\numberline {3.72}Sensors.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{369}{subsection.3.72}
+\contentsline {subsection}{\numberline {3.73}Sensors.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{372}{subsection.3.73}
+\contentsline {subsubsection}{\numberline {3.73.1}Detailed Description}{372}{subsubsection.3.73.1}
+\contentsline {subsubsection}{\numberline {3.73.2}Function Documentation}{372}{subsubsection.3.73.2}
+\contentsline {paragraph}{\numberline {3.73.2.1}Add\_s16Data2Packet()}{372}{paragraph.3.73.2.1}
+\contentsline {paragraph}{\numberline {3.73.2.2}Add\_s32Data2Packet()}{373}{paragraph.3.73.2.2}
+\contentsline {paragraph}{\numberline {3.73.2.3}GetSensorData()}{374}{paragraph.3.73.2.3}
+\contentsline {paragraph}{\numberline {3.73.2.4}IniPacket()}{376}{paragraph.3.73.2.4}
+\contentsline {subsection}{\numberline {3.74}Sensors.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{377}{subsection.3.74}
+\contentsline {subsection}{\numberline {3.75}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}App.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{377}{subsection.3.75}
+\contentsline {subsubsection}{\numberline {3.75.1}Detailed Description}{378}{subsubsection.3.75.1}
+\contentsline {subsubsection}{\numberline {3.75.2}Macro Definition Documentation}{378}{subsubsection.3.75.2}
+\contentsline {paragraph}{\numberline {3.75.2.1}TIMEOUT\_MS}{378}{paragraph.3.75.2.1}
+\contentsline {subsubsection}{\numberline {3.75.3}Function Documentation}{379}{subsubsection.3.75.3}
+\contentsline {paragraph}{\numberline {3.75.3.1}mainThread()}{379}{paragraph.3.75.3.1}
+\contentsline {paragraph}{\numberline {3.75.3.2}WakeupFromLPDS()}{382}{paragraph.3.75.3.2}
+\contentsline {subsubsection}{\numberline {3.75.4}Variable Documentation}{382}{subsubsection.3.75.4}
+\contentsline {paragraph}{\numberline {3.75.4.1}i2c}{382}{paragraph.3.75.4.1}
+\contentsline {paragraph}{\numberline {3.75.4.2}LPDSOut}{382}{paragraph.3.75.4.2}
+\contentsline {paragraph}{\numberline {3.75.4.3}MyADXL}{382}{paragraph.3.75.4.3}
+\contentsline {paragraph}{\numberline {3.75.4.4}MyBME}{383}{paragraph.3.75.4.4}
+\contentsline {paragraph}{\numberline {3.75.4.5}MyLDC}{383}{paragraph.3.75.4.5}
+\contentsline {paragraph}{\numberline {3.75.4.6}MyNode}{383}{paragraph.3.75.4.6}
+\contentsline {paragraph}{\numberline {3.75.4.7}MyTMP006}{383}{paragraph.3.75.4.7}
+\contentsline {paragraph}{\numberline {3.75.4.8}MyVbat}{383}{paragraph.3.75.4.8}
+\contentsline {paragraph}{\numberline {3.75.4.9}spi}{383}{paragraph.3.75.4.9}
+\contentsline {paragraph}{\numberline {3.75.4.10}Timer0Event}{383}{paragraph.3.75.4.10}
+\contentsline {paragraph}{\numberline {3.75.4.11}Timer1Event}{383}{paragraph.3.75.4.11}
+\contentsline {paragraph}{\numberline {3.75.4.12}uart0}{384}{paragraph.3.75.4.12}
+\contentsline {paragraph}{\numberline {3.75.4.13}wd}{384}{paragraph.3.75.4.13}
+\contentsline {subsection}{\numberline {3.76}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}App.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{384}{subsection.3.76}
+\contentsline {subsection}{\numberline {3.77}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}App.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{388}{subsection.3.77}
+\contentsline {subsubsection}{\numberline {3.77.1}Detailed Description}{389}{subsubsection.3.77.1}
+\contentsline {subsubsection}{\numberline {3.77.2}Data Structure Documentation}{389}{subsubsection.3.77.2}
+\contentsline {paragraph}{\numberline {3.77.2.1}struct A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}X\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}L355\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data}{389}{paragraph.3.77.2.1}
+\contentsline {paragraph}{\numberline {3.77.2.2}struct B\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}E280\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data}{390}{paragraph.3.77.2.2}
+\contentsline {paragraph}{\numberline {3.77.2.3}struct Keller\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data}{390}{paragraph.3.77.2.3}
+\contentsline {paragraph}{\numberline {3.77.2.4}struct L\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}D\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}C1000\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data}{390}{paragraph.3.77.2.4}
+\contentsline {paragraph}{\numberline {3.77.2.5}struct Node}{390}{paragraph.3.77.2.5}
+\contentsline {paragraph}{\numberline {3.77.2.6}struct T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}M\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P006\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data}{391}{paragraph.3.77.2.6}
+\contentsline {paragraph}{\numberline {3.77.2.7}struct Vbat\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Data}{391}{paragraph.3.77.2.7}
+\contentsline {subsubsection}{\numberline {3.77.3}Macro Definition Documentation}{391}{subsubsection.3.77.3}
+\contentsline {paragraph}{\numberline {3.77.3.1}ADXL355\_ID}{391}{paragraph.3.77.3.1}
+\contentsline {paragraph}{\numberline {3.77.3.2}APPEUI}{391}{paragraph.3.77.3.2}
+\contentsline {paragraph}{\numberline {3.77.3.3}APPKEY}{391}{paragraph.3.77.3.3}
+\contentsline {paragraph}{\numberline {3.77.3.4}APPSKEY}{391}{paragraph.3.77.3.4}
+\contentsline {paragraph}{\numberline {3.77.3.5}BME280\_ID}{392}{paragraph.3.77.3.5}
+\contentsline {paragraph}{\numberline {3.77.3.6}CONTINUE}{392}{paragraph.3.77.3.6}
+\contentsline {paragraph}{\numberline {3.77.3.7}DEVADDR}{392}{paragraph.3.77.3.7}
+\contentsline {paragraph}{\numberline {3.77.3.8}DEVEUI}{392}{paragraph.3.77.3.8}
+\contentsline {paragraph}{\numberline {3.77.3.9}LDC1000\_ID}{392}{paragraph.3.77.3.9}
+\contentsline {paragraph}{\numberline {3.77.3.10}MODE\_AP\_WIFI}{392}{paragraph.3.77.3.10}
+\contentsline {paragraph}{\numberline {3.77.3.11}MODE\_NORMAL\_LORA}{392}{paragraph.3.77.3.11}
+\contentsline {paragraph}{\numberline {3.77.3.12}MODE\_NORMAL\_WIFI}{392}{paragraph.3.77.3.12}
+\contentsline {paragraph}{\numberline {3.77.3.13}MODE\_STORAGE\_LORA}{393}{paragraph.3.77.3.13}
+\contentsline {paragraph}{\numberline {3.77.3.14}MODE\_STORAGE\_WIFI}{393}{paragraph.3.77.3.14}
+\contentsline {paragraph}{\numberline {3.77.3.15}NODEID}{393}{paragraph.3.77.3.15}
+\contentsline {paragraph}{\numberline {3.77.3.16}NUMBER\_SENSORS}{393}{paragraph.3.77.3.16}
+\contentsline {paragraph}{\numberline {3.77.3.17}NWKSKEY}{393}{paragraph.3.77.3.17}
+\contentsline {paragraph}{\numberline {3.77.3.18}RNW\_LSB}{393}{paragraph.3.77.3.18}
+\contentsline {paragraph}{\numberline {3.77.3.19}RNW\_MSB}{393}{paragraph.3.77.3.19}
+\contentsline {paragraph}{\numberline {3.77.3.20}SHUTDOWN}{393}{paragraph.3.77.3.20}
+\contentsline {paragraph}{\numberline {3.77.3.21}TMP006\_ID}{394}{paragraph.3.77.3.21}
+\contentsline {paragraph}{\numberline {3.77.3.22}VBAT\_ID}{394}{paragraph.3.77.3.22}
+\contentsline {subsubsection}{\numberline {3.77.4}Enumeration Type Documentation}{394}{subsubsection.3.77.4}
+\contentsline {paragraph}{\numberline {3.77.4.1}Node\_states\_t}{394}{paragraph.3.77.4.1}
+\contentsline {subsubsection}{\numberline {3.77.5}Variable Documentation}{395}{subsubsection.3.77.5}
+\contentsline {paragraph}{\numberline {3.77.5.1}NodeState}{395}{paragraph.3.77.5.1}
+\contentsline {subsection}{\numberline {3.78}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}P\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}O\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}R\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}T\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}App.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{395}{subsection.3.78}
+\contentsline {subsection}{\numberline {3.79}wifi.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c File Reference}{396}{subsection.3.79}
+\contentsline {subsubsection}{\numberline {3.79.1}Detailed Description}{397}{subsubsection.3.79.1}
+\contentsline {subsubsection}{\numberline {3.79.2}Function Documentation}{398}{subsubsection.3.79.2}
+\contentsline {paragraph}{\numberline {3.79.2.1}prepareDataFrame()}{398}{paragraph.3.79.2.1}
+\contentsline {paragraph}{\numberline {3.79.2.2}sendUdpClient()}{398}{paragraph.3.79.2.2}
+\contentsline {paragraph}{\numberline {3.79.2.3}SimpleLinkFatalErrorEventHandler()}{399}{paragraph.3.79.2.3}
+\contentsline {paragraph}{\numberline {3.79.2.4}SimpleLinkGeneralEventHandler()}{400}{paragraph.3.79.2.4}
+\contentsline {paragraph}{\numberline {3.79.2.5}SimpleLinkHttpServerEventHandler()}{400}{paragraph.3.79.2.5}
+\contentsline {paragraph}{\numberline {3.79.2.6}SimpleLinkNetAppEventHandler()}{401}{paragraph.3.79.2.6}
+\contentsline {paragraph}{\numberline {3.79.2.7}SimpleLinkNetAppRequestEventHandler()}{401}{paragraph.3.79.2.7}
+\contentsline {paragraph}{\numberline {3.79.2.8}SimpleLinkNetAppRequestMemFreeEventHandler()}{402}{paragraph.3.79.2.8}
+\contentsline {paragraph}{\numberline {3.79.2.9}SimpleLinkSocketTriggerEventHandler()}{402}{paragraph.3.79.2.9}
+\contentsline {paragraph}{\numberline {3.79.2.10}SimpleLinkSockEventHandler()}{402}{paragraph.3.79.2.10}
+\contentsline {paragraph}{\numberline {3.79.2.11}SimpleLinkWlanEventHandler()}{403}{paragraph.3.79.2.11}
+\contentsline {paragraph}{\numberline {3.79.2.12}wlanConf()}{403}{paragraph.3.79.2.12}
+\contentsline {paragraph}{\numberline {3.79.2.13}wlanConnect()}{404}{paragraph.3.79.2.13}
+\contentsline {paragraph}{\numberline {3.79.2.14}wlanConnectFromFile()}{404}{paragraph.3.79.2.14}
+\contentsline {subsection}{\numberline {3.80}wifi.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}c}{405}{subsection.3.80}
+\contentsline {subsection}{\numberline {3.81}wifi.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{408}{subsection.3.81}
+\contentsline {subsubsection}{\numberline {3.81.1}Detailed Description}{410}{subsubsection.3.81.1}
+\contentsline {subsubsection}{\numberline {3.81.2}Data Structure Documentation}{410}{subsubsection.3.81.2}
+\contentsline {paragraph}{\numberline {3.81.2.1}struct \discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Power\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Measure\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Control\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Block\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}t\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}}{410}{paragraph.3.81.2.1}
+\contentsline {subsubsection}{\numberline {3.81.3}Macro Definition Documentation}{411}{subsubsection.3.81.3}
+\contentsline {paragraph}{\numberline {3.81.3.1}ASSERT\_ON\_ERROR}{411}{paragraph.3.81.3.1}
+\contentsline {paragraph}{\numberline {3.81.3.2}CLR\_STATUS\_BIT}{411}{paragraph.3.81.3.2}
+\contentsline {paragraph}{\numberline {3.81.3.3}DEST\_IP\_ADDR}{411}{paragraph.3.81.3.3}
+\contentsline {paragraph}{\numberline {3.81.3.4}ERROR\_CONNECT\_WIFI}{411}{paragraph.3.81.3.4}
+\contentsline {paragraph}{\numberline {3.81.3.5}FRAME\_LENGTH}{411}{paragraph.3.81.3.5}
+\contentsline {paragraph}{\numberline {3.81.3.6}GET\_STATUS\_BIT}{411}{paragraph.3.81.3.6}
+\contentsline {paragraph}{\numberline {3.81.3.7}IS\_CONNECTED}{412}{paragraph.3.81.3.7}
+\contentsline {paragraph}{\numberline {3.81.3.8}IS\_IP\_ACQUIRED}{412}{paragraph.3.81.3.8}
+\contentsline {paragraph}{\numberline {3.81.3.9}LOOP\_FOREVER}{412}{paragraph.3.81.3.9}
+\contentsline {paragraph}{\numberline {3.81.3.10}NUM\_OF\_PKT}{412}{paragraph.3.81.3.10}
+\contentsline {paragraph}{\numberline {3.81.3.11}PORT}{412}{paragraph.3.81.3.11}
+\contentsline {paragraph}{\numberline {3.81.3.12}PORT\_UDP}{412}{paragraph.3.81.3.12}
+\contentsline {paragraph}{\numberline {3.81.3.13}SECURITY\_KEY}{413}{paragraph.3.81.3.13}
+\contentsline {paragraph}{\numberline {3.81.3.14}SECURITY\_KEY\_FILE\_CONNECT}{413}{paragraph.3.81.3.14}
+\contentsline {paragraph}{\numberline {3.81.3.15}SECURITY\_TYPE}{413}{paragraph.3.81.3.15}
+\contentsline {paragraph}{\numberline {3.81.3.16}SERIALWIFI\_PORT}{413}{paragraph.3.81.3.16}
+\contentsline {paragraph}{\numberline {3.81.3.17}SET\_STATUS\_BIT}{413}{paragraph.3.81.3.17}
+\contentsline {paragraph}{\numberline {3.81.3.18}SL\_SOCKET\_ERROR}{413}{paragraph.3.81.3.18}
+\contentsline {paragraph}{\numberline {3.81.3.19}SSID\_NAME}{413}{paragraph.3.81.3.19}
+\contentsline {paragraph}{\numberline {3.81.3.20}SUCCESS\_CONNECT\_WIFI}{413}{paragraph.3.81.3.20}
+\contentsline {subsubsection}{\numberline {3.81.4}Enumeration Type Documentation}{413}{subsubsection.3.81.4}
+\contentsline {paragraph}{\numberline {3.81.4.1}e\_StatusBits}{413}{paragraph.3.81.4.1}
+\contentsline {subsubsection}{\numberline {3.81.5}Function Documentation}{414}{subsubsection.3.81.5}
+\contentsline {paragraph}{\numberline {3.81.5.1}prepareDataFrame()}{414}{paragraph.3.81.5.1}
+\contentsline {paragraph}{\numberline {3.81.5.2}SimpleLinkFatalErrorEventHandler()}{415}{paragraph.3.81.5.2}
+\contentsline {paragraph}{\numberline {3.81.5.3}SimpleLinkGeneralEventHandler()}{415}{paragraph.3.81.5.3}
+\contentsline {paragraph}{\numberline {3.81.5.4}SimpleLinkHttpServerEventHandler()}{416}{paragraph.3.81.5.4}
+\contentsline {paragraph}{\numberline {3.81.5.5}SimpleLinkNetAppEventHandler()}{416}{paragraph.3.81.5.5}
+\contentsline {paragraph}{\numberline {3.81.5.6}SimpleLinkNetAppRequestEventHandler()}{417}{paragraph.3.81.5.6}
+\contentsline {paragraph}{\numberline {3.81.5.7}SimpleLinkNetAppRequestMemFreeEventHandler()}{417}{paragraph.3.81.5.7}
+\contentsline {paragraph}{\numberline {3.81.5.8}SimpleLinkSocketTriggerEventHandler()}{417}{paragraph.3.81.5.8}
+\contentsline {paragraph}{\numberline {3.81.5.9}SimpleLinkSockEventHandler()}{418}{paragraph.3.81.5.9}
+\contentsline {paragraph}{\numberline {3.81.5.10}SimpleLinkWlanEventHandler()}{418}{paragraph.3.81.5.10}
+\contentsline {paragraph}{\numberline {3.81.5.11}wlanConf()}{419}{paragraph.3.81.5.11}
+\contentsline {paragraph}{\numberline {3.81.5.12}wlanConnect()}{419}{paragraph.3.81.5.12}
+\contentsline {paragraph}{\numberline {3.81.5.13}wlanConnectFromFile()}{420}{paragraph.3.81.5.13}
+\contentsline {subsubsection}{\numberline {3.81.6}Variable Documentation}{421}{subsubsection.3.81.6}
+\contentsline {paragraph}{\numberline {3.81.6.1}PowerMeasure\_CB}{421}{paragraph.3.81.6.1}
+\contentsline {subsection}{\numberline {3.82}wifi.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{421}{subsection.3.82}
+\contentsline {section}{Index}{423}{section*.77}

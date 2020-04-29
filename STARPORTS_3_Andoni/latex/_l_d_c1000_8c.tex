@@ -1,0 +1,667 @@
+\hypertarget{_l_d_c1000_8c}{}\doxysubsection{L\+D\+C1000.\+c File Reference}
+\label{_l_d_c1000_8c}\index{LDC1000.c@{LDC1000.c}}
+
+
+Functions to read and write data to L\+D\+C1000 inductance sensor.  
+
+
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ti/drivers/\+S\+P\+I.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}L\+D\+C1000.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+S\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_l_d_c1000_8c_af1e5296f97b36618750ae6b1d601fab5_af1e5296f97b36618750ae6b1d601fab5}{L\+D\+C1000\+\_\+\+Dev\+Id}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Get Dev\+ID Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_a532307d1a6edb7cf25e81668ecd96365_a532307d1a6edb7cf25e81668ecd96365}{L\+D\+C1000\+\_\+\+Get\+\_\+\+Proximity\+\_\+\+Frame}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint16\+\_\+t Samples, int16\+\_\+t $\ast$Data\+Sensor)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Get Proximity Frame Function. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{_l_d_c1000_8c_adfbeea7c8660f27a5e4855f59af9ef97_adfbeea7c8660f27a5e4855f59af9ef97}{L\+D\+C1000\+\_\+\+Read\+\_\+\+Fcount}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Read Fcount Function. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{_l_d_c1000_8c_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}{L\+D\+C1000\+\_\+\+Read\+\_\+\+Proximity}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Read Proximity Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_l_d_c1000_8c_ae9801e4dd328dc2e9b5cf39073a8f079_ae9801e4dd328dc2e9b5cf39073a8f079}{L\+D\+C1000\+\_\+\+Read\+\_\+\+Rp\+\_\+\+Max}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Read RP Max Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_l_d_c1000_8c_aa3fa3875d3017308f8231754244158f5_aa3fa3875d3017308f8231754244158f5}{L\+D\+C1000\+\_\+\+Read\+\_\+\+Rp\+\_\+\+Min}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Read RP Min Function. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{_l_d_c1000_8c_a9f1b949066bc15ed75e5139407b8e092_a9f1b949066bc15ed75e5139407b8e092}{L\+D\+C1000\+\_\+\+Read\+\_\+\+Status}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}})
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Read status Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_a65f2f106726ee11fc24714e0b5facba0_a65f2f106726ee11fc24714e0b5facba0}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Clk\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write clock configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_ad2daca75f5b34978bb274fcc0cd0ee9d_ad2daca75f5b34978bb274fcc0cd0ee9d}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_a97a46ac410be29090658d66c995affc6_a97a46ac410be29090658d66c995affc6}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Intb\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write Intb configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_a27040d91fa70bcce5b368e0664a5b2c5_a27040d91fa70bcce5b368e0664a5b2c5}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Min\+\_\+\+Freq}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write Min Freq Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Pow\+\_\+\+Conf}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write Power configuration Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_a7e9ee36323586cd0dbfd198a177f522f_a7e9ee36323586cd0dbfd198a177f522f}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Rp\+\_\+\+Max}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write RP Max Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_l_d_c1000_8c_aa5042b0c3ca8766c21c327689fa66bf0_aa5042b0c3ca8766c21c327689fa66bf0}{L\+D\+C1000\+\_\+\+Write\+\_\+\+Rp\+\_\+\+Min}} (S\+P\+I\+\_\+\+Handle \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\+\_\+t Val)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Write RP Min Function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_l_d_c1000_8c_a4c177f85717e501a5971138d50c576bc_a4c177f85717e501a5971138d50c576bc}{Rp\+Calc}} (uint32\+\_\+t Proximity, float Rp\+Max, float Rp\+Min)
+\begin{DoxyCompactList}\small\item\em L\+D\+C1000 Rp Calculator Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to read and write data to L\+D\+C1000 inductance sensor. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle L\+D\+C1000 inductance sensor functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{_l_d_c1000_8c_af1e5296f97b36618750ae6b1d601fab5_af1e5296f97b36618750ae6b1d601fab5}\label{_l_d_c1000_8c_af1e5296f97b36618750ae6b1d601fab5_af1e5296f97b36618750ae6b1d601fab5}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_DevId@{LDC1000\_DevId}}
+\index{LDC1000\_DevId@{LDC1000\_DevId}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_DevId()}{LDC1000\_DevId()}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+D\+C1000\+\_\+\+Dev\+Id (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Get Dev\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Dev\+ID from L\+D\+C1000
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer D\+E\+V\+\_\+\+ID value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00037}{37}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037                                       \{}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda1e25e06ba87a3e60d219cca03a221b4d}{DEV\_ID}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00044 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a532307d1a6edb7cf25e81668ecd96365_a532307d1a6edb7cf25e81668ecd96365}\label{_l_d_c1000_8c_a532307d1a6edb7cf25e81668ecd96365_a532307d1a6edb7cf25e81668ecd96365}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Get\_Proximity\_Frame@{LDC1000\_Get\_Proximity\_Frame}}
+\index{LDC1000\_Get\_Proximity\_Frame@{LDC1000\_Get\_Proximity\_Frame}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Get\_Proximity\_Frame()}{LDC1000\_Get\_Proximity\_Frame()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Get\+\_\+\+Proximity\+\_\+\+Frame (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint16\+\_\+t}]{Samples,  }\item[{int16\+\_\+t $\ast$}]{Data\+Sensor }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Get Proximity Frame Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Gets Proximity frame from L\+D\+C1000 register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & Samples N samples to read \\
+\hline
+ & {\em int16\+\_\+t} & $\ast$\+Data\+Sensor Pointer to Data\+Sensor to save values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00270}{270}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270                                                                                         \{}
+\DoxyCodeLine{00271 }
+\DoxyCodeLine{00272     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{00273     uint32\_t newProx, Proximity[512];}
+\DoxyCodeLine{00274     \textcolor{keywordtype}{float} ProxMean;}
+\DoxyCodeLine{00275     \textcolor{keywordtype}{float} ProxRms;}
+\DoxyCodeLine{00276     uint8\_t status;}
+\DoxyCodeLine{00277 }
+\DoxyCodeLine{00278     ProxMean = 0;}
+\DoxyCodeLine{00279     usleep(50000);}
+\DoxyCodeLine{00280     \textcolor{keywordflow}{while}(i<Samples) \{}
+\DoxyCodeLine{00281         newProx = (uint32\_t)\mbox{\hyperlink{_l_d_c1000_8c_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}{LDC1000\_Read\_Proximity}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}});}
+\DoxyCodeLine{00282         ProxMean += newProx;}
+\DoxyCodeLine{00283         Proximity[i] = newProx;}
+\DoxyCodeLine{00284         i++;}
+\DoxyCodeLine{00285         usleep(250);}
+\DoxyCodeLine{00286     \}}
+\DoxyCodeLine{00287     ProxMean = ProxMean/Samples;}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289     ProxRms = 0.0;}
+\DoxyCodeLine{00290     \textcolor{keywordflow}{for} (i=0;i<Samples;i++) \{}
+\DoxyCodeLine{00291         ProxRms += ( (Proximity[i]-\/ProxMean)*(Proximity[i]-\/ProxMean) );}
+\DoxyCodeLine{00292     \}}
+\DoxyCodeLine{00293 }
+\DoxyCodeLine{00294     DataSensor[0] = (int16\_t)ProxMean;}
+\DoxyCodeLine{00295     DataSensor[1] = (int16\_t)sqrt(ProxRms/Samples);}
+\DoxyCodeLine{00296 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_adfbeea7c8660f27a5e4855f59af9ef97_adfbeea7c8660f27a5e4855f59af9ef97}\label{_l_d_c1000_8c_adfbeea7c8660f27a5e4855f59af9ef97_adfbeea7c8660f27a5e4855f59af9ef97}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Read\_Fcount@{LDC1000\_Read\_Fcount}}
+\index{LDC1000\_Read\_Fcount@{LDC1000\_Read\_Fcount}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Read\_Fcount()}{LDC1000\_Read\_Fcount()}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+D\+C1000\+\_\+\+Read\+\_\+\+Fcount (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Read Fcount Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads L\+D\+C1000 Fcount register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer Fcount register value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00310}{310}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00310                                              \{}
+\DoxyCodeLine{00311 }
+\DoxyCodeLine{00312     uint8\_t RxBuffer[4];}
+\DoxyCodeLine{00313 }
+\DoxyCodeLine{00314     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbdae2454935897a9a166d154960407d4559}{FCOUNT\_LSB}},RxBuffer,3,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00315 }
+\DoxyCodeLine{00316     \textcolor{keywordflow}{return} ( RxBuffer[1] + (RxBuffer[2]<<8) + (RxBuffer[3]<<16) );}
+\DoxyCodeLine{00317 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}\label{_l_d_c1000_8c_ab9d49061fd452994fc8dda6f03dca03f_ab9d49061fd452994fc8dda6f03dca03f}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Read\_Proximity@{LDC1000\_Read\_Proximity}}
+\index{LDC1000\_Read\_Proximity@{LDC1000\_Read\_Proximity}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Read\_Proximity()}{LDC1000\_Read\_Proximity()}}
+{\footnotesize\ttfamily uint16\+\_\+t L\+D\+C1000\+\_\+\+Read\+\_\+\+Proximity (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Read Proximity Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads L\+D\+C1000 Proximity register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer Proximity register value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00247}{247}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00247                                                 \{}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{00249     uint8\_t RxBuffer[3];}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbdae228ebb59e99edc663c1ee85f07d72cf}{PROX\_LSB}},RxBuffer,2,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00252 }
+\DoxyCodeLine{00253     \textcolor{keywordflow}{return} ( RxBuffer[1] + (uint16\_t)(RxBuffer[2]<<8) );}
+\DoxyCodeLine{00254 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_ae9801e4dd328dc2e9b5cf39073a8f079_ae9801e4dd328dc2e9b5cf39073a8f079}\label{_l_d_c1000_8c_ae9801e4dd328dc2e9b5cf39073a8f079_ae9801e4dd328dc2e9b5cf39073a8f079}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Read\_Rp\_Max@{LDC1000\_Read\_Rp\_Max}}
+\index{LDC1000\_Read\_Rp\_Max@{LDC1000\_Read\_Rp\_Max}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Read\_Rp\_Max()}{LDC1000\_Read\_Rp\_Max()}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+D\+C1000\+\_\+\+Read\+\_\+\+Rp\+\_\+\+Max (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Read RP Max Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads L\+D\+C1000 RP max register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer RP max register value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00076}{76}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076                                             \{}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{00078     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00079 }
+\DoxyCodeLine{00080     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda19aca4d9a152e702881d7616e242ec6d}{RP\_MAX}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00083 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_aa3fa3875d3017308f8231754244158f5_aa3fa3875d3017308f8231754244158f5}\label{_l_d_c1000_8c_aa3fa3875d3017308f8231754244158f5_aa3fa3875d3017308f8231754244158f5}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Read\_Rp\_Min@{LDC1000\_Read\_Rp\_Min}}
+\index{LDC1000\_Read\_Rp\_Min@{LDC1000\_Read\_Rp\_Min}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Read\_Rp\_Min()}{LDC1000\_Read\_Rp\_Min()}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+D\+C1000\+\_\+\+Read\+\_\+\+Rp\+\_\+\+Min (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Read RP Min Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads L\+D\+C1000 RP min register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer RP min register value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00115}{115}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115                                             \{}
+\DoxyCodeLine{00116 }
+\DoxyCodeLine{00117     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00118 }
+\DoxyCodeLine{00119     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2fd5668ccf02ab7ead158719af6bfcc2}{RP\_MIN}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00120 }
+\DoxyCodeLine{00121     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00122 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a9f1b949066bc15ed75e5139407b8e092_a9f1b949066bc15ed75e5139407b8e092}\label{_l_d_c1000_8c_a9f1b949066bc15ed75e5139407b8e092_a9f1b949066bc15ed75e5139407b8e092}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Read\_Status@{LDC1000\_Read\_Status}}
+\index{LDC1000\_Read\_Status@{LDC1000\_Read\_Status}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Read\_Status()}{LDC1000\_Read\_Status()}}
+{\footnotesize\ttfamily uint8\+\_\+t L\+D\+C1000\+\_\+\+Read\+\_\+\+Status (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Read status Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads L\+D\+C1000 status register
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Rx\+Buffer status register value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00226}{226}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226                                             \{}
+\DoxyCodeLine{00227 }
+\DoxyCodeLine{00228     uint8\_t RxBuffer[2];}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230     \mbox{\hyperlink{hal___s_p_i_8c_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbdaaf85bf6d81e6038db11386f8fab4a62b}{LDC\_STATUS}},RxBuffer,1,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00231 }
+\DoxyCodeLine{00232     \textcolor{keywordflow}{return} RxBuffer[1];}
+\DoxyCodeLine{00233 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a65f2f106726ee11fc24714e0b5facba0_a65f2f106726ee11fc24714e0b5facba0}\label{_l_d_c1000_8c_a65f2f106726ee11fc24714e0b5facba0_a65f2f106726ee11fc24714e0b5facba0}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Clk\_Conf@{LDC1000\_Write\_Clk\_Conf}}
+\index{LDC1000\_Write\_Clk\_Conf@{LDC1000\_Write\_Clk\_Conf}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Clk\_Conf()}{LDC1000\_Write\_Clk\_Conf()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Clk\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write clock configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes clock configuration to L\+D\+C1000
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00209}{209}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209                                                          \{}
+\DoxyCodeLine{00210 }
+\DoxyCodeLine{00211     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda3d860b4dbacb74d3a046ac0f94a61987}{CLK\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00212 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_ad2daca75f5b34978bb274fcc0cd0ee9d_ad2daca75f5b34978bb274fcc0cd0ee9d}\label{_l_d_c1000_8c_ad2daca75f5b34978bb274fcc0cd0ee9d_ad2daca75f5b34978bb274fcc0cd0ee9d}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Conf@{LDC1000\_Write\_Conf}}
+\index{LDC1000\_Write\_Conf@{LDC1000\_Write\_Conf}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Conf()}{LDC1000\_Write\_Conf()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes configuration to L\+D\+C1000
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00155}{155}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155                                                      \{}
+\DoxyCodeLine{00156 }
+\DoxyCodeLine{00157     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda8ba295a579acd8f28ad69e260d736ce0}{LDC\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00158 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a97a46ac410be29090658d66c995affc6_a97a46ac410be29090658d66c995affc6}\label{_l_d_c1000_8c_a97a46ac410be29090658d66c995affc6_a97a46ac410be29090658d66c995affc6}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Intb\_Conf@{LDC1000\_Write\_Intb\_Conf}}
+\index{LDC1000\_Write\_Intb\_Conf@{LDC1000\_Write\_Intb\_Conf}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Intb\_Conf()}{LDC1000\_Write\_Intb\_Conf()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Intb\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write Intb configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes Intb configuration to L\+D\+C1000
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00173}{173}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00173                                                           \{}
+\DoxyCodeLine{00174 }
+\DoxyCodeLine{00175     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2f213a63f868aeb2950b1ddff181efdd}{INTB\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00176 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a27040d91fa70bcce5b368e0664a5b2c5_a27040d91fa70bcce5b368e0664a5b2c5}\label{_l_d_c1000_8c_a27040d91fa70bcce5b368e0664a5b2c5_a27040d91fa70bcce5b368e0664a5b2c5}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Min\_Freq@{LDC1000\_Write\_Min\_Freq}}
+\index{LDC1000\_Write\_Min\_Freq@{LDC1000\_Write\_Min\_Freq}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Min\_Freq()}{LDC1000\_Write\_Min\_Freq()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Min\+\_\+\+Freq (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write Min Freq Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Configures L\+D\+C1000 to min frequency
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00137}{137}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137                                                          \{}
+\DoxyCodeLine{00138 }
+\DoxyCodeLine{00139     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda8025ca436db55bcd22b95ee63c4c22df}{MIN\_FREQ}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00140 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}\label{_l_d_c1000_8c_ae7edfba0b7276ceab09286e3edd917b6_ae7edfba0b7276ceab09286e3edd917b6}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Pow\_Conf@{LDC1000\_Write\_Pow\_Conf}}
+\index{LDC1000\_Write\_Pow\_Conf@{LDC1000\_Write\_Pow\_Conf}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Pow\_Conf()}{LDC1000\_Write\_Pow\_Conf()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Pow\+\_\+\+Conf (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write Power configuration Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes Power configuration to L\+D\+C1000
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00191}{191}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191                                                          \{}
+\DoxyCodeLine{00192 }
+\DoxyCodeLine{00193     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2a7c27efbb9a9734fa5c840636ea0a06}{POW\_CONFIG}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00194 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a7e9ee36323586cd0dbfd198a177f522f_a7e9ee36323586cd0dbfd198a177f522f}\label{_l_d_c1000_8c_a7e9ee36323586cd0dbfd198a177f522f_a7e9ee36323586cd0dbfd198a177f522f}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Rp\_Max@{LDC1000\_Write\_Rp\_Max}}
+\index{LDC1000\_Write\_Rp\_Max@{LDC1000\_Write\_Rp\_Max}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Rp\_Max()}{LDC1000\_Write\_Rp\_Max()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Rp\+\_\+\+Max (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write RP Max Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Configures L\+D\+C1000 to RP max
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00059}{59}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059                                                        \{}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00061     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda19aca4d9a152e702881d7616e242ec6d}{RP\_MAX}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_aa5042b0c3ca8766c21c327689fa66bf0_aa5042b0c3ca8766c21c327689fa66bf0}\label{_l_d_c1000_8c_aa5042b0c3ca8766c21c327689fa66bf0_aa5042b0c3ca8766c21c327689fa66bf0}} 
+\index{LDC1000.c@{LDC1000.c}!LDC1000\_Write\_Rp\_Min@{LDC1000\_Write\_Rp\_Min}}
+\index{LDC1000\_Write\_Rp\_Min@{LDC1000\_Write\_Rp\_Min}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{LDC1000\_Write\_Rp\_Min()}{LDC1000\_Write\_Rp\_Min()}}
+{\footnotesize\ttfamily void L\+D\+C1000\+\_\+\+Write\+\_\+\+Rp\+\_\+\+Min (\begin{DoxyParamCaption}\item[{S\+P\+I\+\_\+\+Handle}]{spi,  }\item[{uint8\+\_\+t}]{Val }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Write RP Min Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Configures L\+D\+C1000 to RP min
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S\+P\+I\+\_\+\+Handle} & spi \\
+\hline
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Val\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00098}{98}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098                                                        \{}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{00100     \mbox{\hyperlink{hal___s_p_i_8c_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(\mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}},\mbox{\hyperlink{_l_d_c1000_8h_a2d3593519a991469742182667b6b5fbd_a2d3593519a991469742182667b6b5fbda2fd5668ccf02ab7ead158719af6bfcc2}{RP\_MIN}},Val,\mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8h_a04ce8a165a1bf5602ab58595401f03b7_a04ce8a165a1bf5602ab58595401f03b7}{RNW\_MSB}});}
+\DoxyCodeLine{00101 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_l_d_c1000_8c_a4c177f85717e501a5971138d50c576bc_a4c177f85717e501a5971138d50c576bc}\label{_l_d_c1000_8c_a4c177f85717e501a5971138d50c576bc_a4c177f85717e501a5971138d50c576bc}} 
+\index{LDC1000.c@{LDC1000.c}!RpCalc@{RpCalc}}
+\index{RpCalc@{RpCalc}!LDC1000.c@{LDC1000.c}}
+\doxyparagraph{\texorpdfstring{RpCalc()}{RpCalc()}}
+{\footnotesize\ttfamily float Rp\+Calc (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Proximity,  }\item[{float}]{Rp\+Max,  }\item[{float}]{Rp\+Min }\end{DoxyParamCaption})}
+
+
+
+L\+D\+C1000 Rp Calculator Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Calculates the RP for L\+D\+C1000
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & Proximity \\
+\hline
+\mbox{\texttt{ in}}  & {\em float} & Rp\+Max \\
+\hline
+\mbox{\texttt{ in}}  & {\em float} & Rp\+Min\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Rp 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_l_d_c1000_8c_source_l00333}{333}} of file \mbox{\hyperlink{_l_d_c1000_8c_source}{L\+D\+C1000.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00333                                                            \{}
+\DoxyCodeLine{00334 }
+\DoxyCodeLine{00335     \textcolor{keywordtype}{float} Y = 1.0*Proximity/32768;}
+\DoxyCodeLine{00336     \textcolor{keywordtype}{float} Rp;}
+\DoxyCodeLine{00337 }
+\DoxyCodeLine{00338     Rp = RpMax * RpMin / (RpMin*(1-\/Y) + RpMax*Y);}
+\DoxyCodeLine{00339 }
+\DoxyCodeLine{00340     \textcolor{keywordflow}{return} Rp;}
+\DoxyCodeLine{00341 \}}
+
+\end{DoxyCode}

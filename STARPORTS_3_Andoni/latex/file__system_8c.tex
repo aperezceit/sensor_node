@@ -1,0 +1,1301 @@
+\hypertarget{file__system_8c}{}\doxysubsection{file\+\_\+system.\+c File Reference}
+\label{file__system_8c}\index{file\_system.c@{file\_system.c}}
+
+
+Functions to read and write data from file system files.  
+
+
+{\ttfamily \#include $<$ti/devices/cc32xx/inc/hw\+\_\+types.\+h$>$}\newline
+{\ttfamily \#include $<$ti/devices/cc32xx/driverlib/prcm.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}hal\+\_\+\+U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+system.\+h\char`\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{file__system_8c_aa7226e5232f19cacdf42d95356aaa545_aa7226e5232f19cacdf42d95356aaa545}{delete\+File}} ()
+\begin{DoxyCompactList}\small\item\em File System write N\+Fails Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_afbd825586bc3b3ea19b46c82d0aca8be_afbd825586bc3b3ea19b46c82d0aca8be}{st\+\_\+read\+File\+Change\+Wake\+Up}} ()
+\begin{DoxyCompactList}\small\item\em File System read Change\+Wake\+Up Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a1bfec3db28f2764508d1acfdf4629b9a_a1bfec3db28f2764508d1acfdf4629b9a}{st\+\_\+read\+File\+Dn\+Cntr}} ()
+\begin{DoxyCompactList}\small\item\em File System read Dn\+Cntr Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_afef9c44185629b10676766dec447d74f_afef9c44185629b10676766dec447d74f}{st\+\_\+read\+File\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em File System read Mode Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_af7c6ac13af4b0ecdc100dd2233c52258_af7c6ac13af4b0ecdc100dd2233c52258}{st\+\_\+read\+File\+N\+Boot}} ()
+\begin{DoxyCompactList}\small\item\em File System read N\+Boot Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a193cc642a8f29b0e4169602a4ffbf68f_a193cc642a8f29b0e4169602a4ffbf68f}{st\+\_\+read\+File\+N\+Cycles}} ()
+\begin{DoxyCompactList}\small\item\em File System read N\+Cycles Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a9fded96f4b6c53f456f6cb1f374648c5_a9fded96f4b6c53f456f6cb1f374648c5}{st\+\_\+read\+File\+N\+Fails}} ()
+\begin{DoxyCompactList}\small\item\em File System read N\+Fails Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_ad431cb412fc57e5ad46b4b9d93304335_ad431cb412fc57e5ad46b4b9d93304335}{st\+\_\+read\+File\+Node\+Id}} ()
+\begin{DoxyCompactList}\small\item\em File System read Node\+Id Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}{st\+\_\+read\+File\+S\+S\+ID}} (unsigned char $\ast$ssid)
+\begin{DoxyCompactList}\small\item\em File System read S\+S\+ID Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a553babbf696d08f53ac9c5a5099f1d97_a553babbf696d08f53ac9c5a5099f1d97}{st\+\_\+read\+File\+Up\+Cntr}} ()
+\begin{DoxyCompactList}\small\item\em File System read Up\+Cntr Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a0edb958ae88b4d5b85ffc91360cc8cd1_a0edb958ae88b4d5b85ffc91360cc8cd1}{st\+\_\+read\+File\+Wake\+Up}} ()
+\begin{DoxyCompactList}\small\item\em File System read Wake\+Up Interval Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a6cb7586e12661d150ce00b3817090729_a6cb7586e12661d150ce00b3817090729}{write\+Change\+Wake\+Up}} (uint8\+\_\+t Change\+Wake\+Up)
+\begin{DoxyCompactList}\small\item\em File System write Change\+Wake\+Up Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_ae9b67eda8db36bafa031f04504f58d9f_ae9b67eda8db36bafa031f04504f58d9f}{write\+Dn\+Cntr}} (uint32\+\_\+t Dnctr)
+\begin{DoxyCompactList}\small\item\em File System write N\+Fails Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a1d27a902ee3c4804928771460ecc38bc_a1d27a902ee3c4804928771460ecc38bc}{write\+Mode}} (uint8\+\_\+t Mode)
+\begin{DoxyCompactList}\small\item\em File System write Mode Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a5813499664e66d7c300822aa326ff46b_a5813499664e66d7c300822aa326ff46b}{write\+N\+Boot}} (uint8\+\_\+t First\+Boot)
+\begin{DoxyCompactList}\small\item\em File System write N\+Boot Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_ad63f444cc96aa510ffa778c36f568f22_ad63f444cc96aa510ffa778c36f568f22}{write\+N\+Cycles}} (uint8\+\_\+t N\+Cycles)
+\begin{DoxyCompactList}\small\item\em File System write N\+Cycles Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}{write\+N\+Fails}} (uint16\+\_\+t N\+Fails)
+\begin{DoxyCompactList}\small\item\em File System write N\+Fails Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a9e38cc02f13e804355c37bc5f083d8e6_a9e38cc02f13e804355c37bc5f083d8e6}{write\+Node\+Id}} (uint16\+\_\+t Node\+Id)
+\begin{DoxyCompactList}\small\item\em File System write Node\+Id Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a20a65f4623985c3e0332718b683e817d_a20a65f4623985c3e0332718b683e817d}{write\+S\+S\+ID}} (unsigned char $\ast$S\+S\+ID)
+\begin{DoxyCompactList}\small\item\em File System write S\+S\+ID Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}{write\+Up\+Cntr}} (uint32\+\_\+t Upctr)
+\begin{DoxyCompactList}\small\item\em File System write Up Counter Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{file__system_8c_ace59423ed2ba20ffa424883ab689df8c_ace59423ed2ba20ffa424883ab689df8c}{write\+Wake\+Up}} (uint16\+\_\+t Wake\+Up\+Interval)
+\begin{DoxyCompactList}\small\item\em File System write Wake\+Up Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+U\+A\+R\+T\+\_\+\+Handle \mbox{\hyperlink{file__system_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}{uart0}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions to read and write data from file system files. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Pérez @tittle File system functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{file__system_8c_aa7226e5232f19cacdf42d95356aaa545_aa7226e5232f19cacdf42d95356aaa545}\label{file__system_8c_aa7226e5232f19cacdf42d95356aaa545_aa7226e5232f19cacdf42d95356aaa545}} 
+\index{file\_system.c@{file\_system.c}!deleteFile@{deleteFile}}
+\index{deleteFile@{deleteFile}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{deleteFile()}{deleteFile()}}
+{\footnotesize\ttfamily int delete\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System write N\+Fails Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the number of Lo\+Ra O\+T\+AA connection fails on N\+Fails file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N\+Fails} & Number of Lo\+Ra O\+T\+AA connection fails\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00875}{875}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00875                 \{}
+\DoxyCodeLine{00876 }
+\DoxyCodeLine{00877     sl\_FsDel(\mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}}, 0);}
+\DoxyCodeLine{00878     st\_listFiles(0);}
+\DoxyCodeLine{00879     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00880 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_afbd825586bc3b3ea19b46c82d0aca8be_afbd825586bc3b3ea19b46c82d0aca8be}\label{file__system_8c_afbd825586bc3b3ea19b46c82d0aca8be_afbd825586bc3b3ea19b46c82d0aca8be}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileChangeWakeUp@{st\_readFileChangeWakeUp}}
+\index{st\_readFileChangeWakeUp@{st\_readFileChangeWakeUp}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileChangeWakeUp()}{st\_readFileChangeWakeUp()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+Change\+Wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read Change\+Wake\+Up Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the Change\+Wake\+Up value of the node from F\+S\+\_\+\+C\+H\+A\+N\+G\+E\+W\+A\+K\+E\+UP file
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00742}{742}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00742                              \{}
+\DoxyCodeLine{00743 }
+\DoxyCodeLine{00744     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00745     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00746     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00747     int32\_t fd;}
+\DoxyCodeLine{00748 }
+\DoxyCodeLine{00749     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{FS\_CHANGEWAKEUP}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00750     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00751         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{FS\_CHANGEWAKEUP}});}
+\DoxyCodeLine{00752     \}}
+\DoxyCodeLine{00753 }
+\DoxyCodeLine{00754     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00755         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00756         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00757             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00758         \}}
+\DoxyCodeLine{00759         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00760             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00761             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00762         \}}
+\DoxyCodeLine{00763         offset += strlen(buffer);}
+\DoxyCodeLine{00764         \}}
+\DoxyCodeLine{00765     \}}
+\DoxyCodeLine{00766     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"READING CHANGE WAKE UP: \%d\(\backslash\)n\(\backslash\)r"}, (atoi(\&buffer)));}
+\DoxyCodeLine{00767 }
+\DoxyCodeLine{00768     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00769     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00770         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{FS\_CHANGEWAKEUP}});}
+\DoxyCodeLine{00771     \}}
+\DoxyCodeLine{00772 }
+\DoxyCodeLine{00773     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00774 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a1bfec3db28f2764508d1acfdf4629b9a_a1bfec3db28f2764508d1acfdf4629b9a}\label{file__system_8c_a1bfec3db28f2764508d1acfdf4629b9a_a1bfec3db28f2764508d1acfdf4629b9a}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileDnCntr@{st\_readFileDnCntr}}
+\index{st\_readFileDnCntr@{st\_readFileDnCntr}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileDnCntr()}{st\_readFileDnCntr()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+Dn\+Cntr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read Dn\+Cntr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the Down Counter parameter of Lora GW from F\+S\+\_\+\+D\+N\+C\+N\+TR file
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00653}{653}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00653                        \{}
+\DoxyCodeLine{00654 }
+\DoxyCodeLine{00655     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00656     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00657     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00658     int32\_t fd;}
+\DoxyCodeLine{00659 }
+\DoxyCodeLine{00660     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{FS\_DNCNTR}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00661     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00662         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{FS\_DNCNTR}});}
+\DoxyCodeLine{00663     \}}
+\DoxyCodeLine{00664 }
+\DoxyCodeLine{00665     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00666         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00667         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00668             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00669         \}}
+\DoxyCodeLine{00670         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00671             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00672             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00673         \}}
+\DoxyCodeLine{00674         offset += strlen(buffer);}
+\DoxyCodeLine{00675         \}}
+\DoxyCodeLine{00676 }
+\DoxyCodeLine{00677     \}}
+\DoxyCodeLine{00678 }
+\DoxyCodeLine{00679     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00680     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00681         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{FS\_DNCNTR}});}
+\DoxyCodeLine{00682     \}}
+\DoxyCodeLine{00683 }
+\DoxyCodeLine{00684     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00685 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_afef9c44185629b10676766dec447d74f_afef9c44185629b10676766dec447d74f}\label{file__system_8c_afef9c44185629b10676766dec447d74f_afef9c44185629b10676766dec447d74f}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileMode@{st\_readFileMode}}
+\index{st\_readFileMode@{st\_readFileMode}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileMode()}{st\_readFileMode()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read Mode Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the Mode of the node from F\+S\+\_\+\+M\+O\+DE file
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00697}{697}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00697                      \{}
+\DoxyCodeLine{00698 }
+\DoxyCodeLine{00699     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00700     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00701     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00702     int32\_t fd;}
+\DoxyCodeLine{00703 }
+\DoxyCodeLine{00704     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{FS\_MODE}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00705     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00706         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{FS\_MODE}});}
+\DoxyCodeLine{00707     \}}
+\DoxyCodeLine{00708 }
+\DoxyCodeLine{00709     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00710         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00711         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00712             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00713         \}}
+\DoxyCodeLine{00714         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00715             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00716             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00717         \}}
+\DoxyCodeLine{00718         offset += strlen(buffer);}
+\DoxyCodeLine{00719         \}}
+\DoxyCodeLine{00720     \}}
+\DoxyCodeLine{00721 }
+\DoxyCodeLine{00722     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"READING MODE: \%d\(\backslash\)n\(\backslash\)r"}, (atoi(\&buffer)));}
+\DoxyCodeLine{00723 }
+\DoxyCodeLine{00724     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00725     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00726         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{FS\_MODE}});}
+\DoxyCodeLine{00727     \}}
+\DoxyCodeLine{00728 }
+\DoxyCodeLine{00729     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00730 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_af7c6ac13af4b0ecdc100dd2233c52258_af7c6ac13af4b0ecdc100dd2233c52258}\label{file__system_8c_af7c6ac13af4b0ecdc100dd2233c52258_af7c6ac13af4b0ecdc100dd2233c52258}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileNBoot@{st\_readFileNBoot}}
+\index{st\_readFileNBoot@{st\_readFileNBoot}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileNBoot()}{st\_readFileNBoot()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+N\+Boot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read N\+Boot Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the N\+Boot value from F\+S\+\_\+\+N\+B\+O\+OT file. Is used to change to alternate of sending the sensors data
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00522}{522}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00522                       \{}
+\DoxyCodeLine{00523 }
+\DoxyCodeLine{00524     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00525     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00526     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00527     int32\_t fd;}
+\DoxyCodeLine{00528 }
+\DoxyCodeLine{00529     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{FS\_NBOOT}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00530     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00531         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{FS\_NBOOT}});}
+\DoxyCodeLine{00532     \}}
+\DoxyCodeLine{00533 }
+\DoxyCodeLine{00534     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00535         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00536         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00537             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00538         \}}
+\DoxyCodeLine{00539         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00540             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00541             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00542         \}}
+\DoxyCodeLine{00543         offset += strlen(buffer);}
+\DoxyCodeLine{00544         \}}
+\DoxyCodeLine{00545     \}}
+\DoxyCodeLine{00546 }
+\DoxyCodeLine{00547     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00548     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00549          \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{FS\_NBOOT}});}
+\DoxyCodeLine{00550     \}}
+\DoxyCodeLine{00551 }
+\DoxyCodeLine{00552     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00553 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a193cc642a8f29b0e4169602a4ffbf68f_a193cc642a8f29b0e4169602a4ffbf68f}\label{file__system_8c_a193cc642a8f29b0e4169602a4ffbf68f_a193cc642a8f29b0e4169602a4ffbf68f}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileNCycles@{st\_readFileNCycles}}
+\index{st\_readFileNCycles@{st\_readFileNCycles}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileNCycles()}{st\_readFileNCycles()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+N\+Cycles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read N\+Cycles Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the number of cycles of the node value from F\+S\+\_\+\+N\+C\+Y\+C\+L\+ES file.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00565}{565}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00565                         \{}
+\DoxyCodeLine{00566 }
+\DoxyCodeLine{00567     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00568     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00569     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00570     int32\_t fd;}
+\DoxyCodeLine{00571 }
+\DoxyCodeLine{00572     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{FS\_NCYCLES}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00573     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00574         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{FS\_NCYCLES}});}
+\DoxyCodeLine{00575     \}}
+\DoxyCodeLine{00576 }
+\DoxyCodeLine{00577     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00578         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00579         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00580             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00581         \}}
+\DoxyCodeLine{00582         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00583             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00584             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00585         \}}
+\DoxyCodeLine{00586         offset += strlen(buffer);}
+\DoxyCodeLine{00587         \}}
+\DoxyCodeLine{00588     \}}
+\DoxyCodeLine{00589     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"READING NCYCLES: \%d \(\backslash\)n\(\backslash\)r"}, atoi(\&buffer));}
+\DoxyCodeLine{00590 }
+\DoxyCodeLine{00591     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00592     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00593         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{FS\_NCYCLES}});}
+\DoxyCodeLine{00594     \}}
+\DoxyCodeLine{00595 }
+\DoxyCodeLine{00596     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00597 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a9fded96f4b6c53f456f6cb1f374648c5_a9fded96f4b6c53f456f6cb1f374648c5}\label{file__system_8c_a9fded96f4b6c53f456f6cb1f374648c5_a9fded96f4b6c53f456f6cb1f374648c5}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileNFails@{st\_readFileNFails}}
+\index{st\_readFileNFails@{st\_readFileNFails}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileNFails()}{st\_readFileNFails()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+N\+Fails (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read N\+Fails Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the number of Lora O\+T\+AA connection fails from F\+S\+\_\+\+N\+F\+A\+I\+LS file. Is used to change to wifi if Lora O\+T\+AA fails n times.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00477}{477}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00477                        \{}
+\DoxyCodeLine{00478 }
+\DoxyCodeLine{00479     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00480     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00481     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00482     int32\_t fd;}
+\DoxyCodeLine{00483 }
+\DoxyCodeLine{00484     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{FS\_NFAILS}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00485     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00486         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{FS\_NFAILS}});}
+\DoxyCodeLine{00487     \}}
+\DoxyCodeLine{00488 }
+\DoxyCodeLine{00489     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)}
+\DoxyCodeLine{00490     \{}
+\DoxyCodeLine{00491         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00492         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00493             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00494         \}}
+\DoxyCodeLine{00495         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00496             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00497             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00498         \}}
+\DoxyCodeLine{00499         offset += strlen(buffer);}
+\DoxyCodeLine{00500         \}}
+\DoxyCodeLine{00501     \}}
+\DoxyCodeLine{00502     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"READING NFAILS: \%d \(\backslash\)n\(\backslash\)r"}, atoi(\&buffer));}
+\DoxyCodeLine{00503 }
+\DoxyCodeLine{00504     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00505     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00506         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{FS\_NFAILS}});}
+\DoxyCodeLine{00507     \}}
+\DoxyCodeLine{00508 }
+\DoxyCodeLine{00509     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00510 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_ad431cb412fc57e5ad46b4b9d93304335_ad431cb412fc57e5ad46b4b9d93304335}\label{file__system_8c_ad431cb412fc57e5ad46b4b9d93304335_ad431cb412fc57e5ad46b4b9d93304335}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileNodeId@{st\_readFileNodeId}}
+\index{st\_readFileNodeId@{st\_readFileNodeId}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileNodeId()}{st\_readFileNodeId()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+Node\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read Node\+Id Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the Node\+Id from F\+S\+\_\+\+N\+O\+D\+E\+ID file
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00829}{829}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00829                        \{}
+\DoxyCodeLine{00830 }
+\DoxyCodeLine{00831     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00832     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00833     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00834     int32\_t fd;}
+\DoxyCodeLine{00835 }
+\DoxyCodeLine{00836     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{FS\_NODEID}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00837     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00838         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{FS\_NODEID}});}
+\DoxyCodeLine{00839     \}}
+\DoxyCodeLine{00840 }
+\DoxyCodeLine{00841     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00842         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00843         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00844             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00845         \}}
+\DoxyCodeLine{00846         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00847             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00848             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00849         \}}
+\DoxyCodeLine{00850         offset += strlen(buffer);}
+\DoxyCodeLine{00851         \}}
+\DoxyCodeLine{00852     \}}
+\DoxyCodeLine{00853 }
+\DoxyCodeLine{00854     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"READING NODEID: \%d \(\backslash\)n\(\backslash\)r"}, atoi(\&buffer));}
+\DoxyCodeLine{00855 }
+\DoxyCodeLine{00856     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00857     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00858         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{FS\_NODEID}});}
+\DoxyCodeLine{00859     \}}
+\DoxyCodeLine{00860     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00861 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}\label{file__system_8c_ad1164592135c1e3f3e8acff251632e78_ad1164592135c1e3f3e8acff251632e78}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileSSID@{st\_readFileSSID}}
+\index{st\_readFileSSID@{st\_readFileSSID}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileSSID()}{st\_readFileSSID()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+S\+S\+ID (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{ssid }\end{DoxyParamCaption})}
+
+
+
+File System read S\+S\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the wifi S\+S\+ID from F\+S\+\_\+\+S\+S\+ID file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char pointer to ssid\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00441}{441}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00441                                         \{}
+\DoxyCodeLine{00442     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00443     int32\_t fd;}
+\DoxyCodeLine{00444 }
+\DoxyCodeLine{00445     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{FS\_SSID}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00446     \textcolor{keywordflow}{if} (fd < 0) \{}
+\DoxyCodeLine{00447         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{FS\_SSID}});}
+\DoxyCodeLine{00448     \}}
+\DoxyCodeLine{00449 }
+\DoxyCodeLine{00450     RetVal = sl\_FsRead(fd, 0, ssid, strlen(ssid));}
+\DoxyCodeLine{00451 }
+\DoxyCodeLine{00452     \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE) \{}
+\DoxyCodeLine{00453         \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00454     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (RetVal < 0)  \{}
+\DoxyCodeLine{00455         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00456         \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00457     \}}
+\DoxyCodeLine{00458 }
+\DoxyCodeLine{00459     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00460     \textcolor{keywordflow}{if} (RetVal < 0) \{}
+\DoxyCodeLine{00461          \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{FS\_SSID}});}
+\DoxyCodeLine{00462     \}}
+\DoxyCodeLine{00463 }
+\DoxyCodeLine{00464     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00465 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a553babbf696d08f53ac9c5a5099f1d97_a553babbf696d08f53ac9c5a5099f1d97}\label{file__system_8c_a553babbf696d08f53ac9c5a5099f1d97_a553babbf696d08f53ac9c5a5099f1d97}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileUpCntr@{st\_readFileUpCntr}}
+\index{st\_readFileUpCntr@{st\_readFileUpCntr}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileUpCntr()}{st\_readFileUpCntr()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+Up\+Cntr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read Up\+Cntr Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the Up Counter parameter of Lora GW from F\+S\+\_\+\+U\+P\+C\+N\+TR file
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00609}{609}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00609                        \{}
+\DoxyCodeLine{00610 }
+\DoxyCodeLine{00611     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00612     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00613     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00614     int32\_t fd;}
+\DoxyCodeLine{00615 }
+\DoxyCodeLine{00616     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00617     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00618         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}});}
+\DoxyCodeLine{00619     \}}
+\DoxyCodeLine{00620 }
+\DoxyCodeLine{00621     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00622         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00623         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00624             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00625         \}}
+\DoxyCodeLine{00626         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00627             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00628             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00629         \}}
+\DoxyCodeLine{00630         offset += strlen(buffer);}
+\DoxyCodeLine{00631         \}}
+\DoxyCodeLine{00632 }
+\DoxyCodeLine{00633     \}}
+\DoxyCodeLine{00634 }
+\DoxyCodeLine{00635     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00636     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00637         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}});}
+\DoxyCodeLine{00638     \}}
+\DoxyCodeLine{00639 }
+\DoxyCodeLine{00640     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00641 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a0edb958ae88b4d5b85ffc91360cc8cd1_a0edb958ae88b4d5b85ffc91360cc8cd1}\label{file__system_8c_a0edb958ae88b4d5b85ffc91360cc8cd1_a0edb958ae88b4d5b85ffc91360cc8cd1}} 
+\index{file\_system.c@{file\_system.c}!st\_readFileWakeUp@{st\_readFileWakeUp}}
+\index{st\_readFileWakeUp@{st\_readFileWakeUp}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{st\_readFileWakeUp()}{st\_readFileWakeUp()}}
+{\footnotesize\ttfamily int st\+\_\+read\+File\+Wake\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+File System read Wake\+Up Interval Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Reads the wake up interval value of the node from F\+S\+\_\+\+W\+A\+K\+E\+UP file
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+0 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00786}{786}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00786                        \{}
+\DoxyCodeLine{00787 }
+\DoxyCodeLine{00788     \textcolor{keywordtype}{int} offset = 0;}
+\DoxyCodeLine{00789     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00790     \_i8 buffer[\mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}}];}
+\DoxyCodeLine{00791     int32\_t fd;}
+\DoxyCodeLine{00792 }
+\DoxyCodeLine{00793     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{FS\_WAKEUP}}, SL\_FS\_READ, 0);}
+\DoxyCodeLine{00794     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00795         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nError opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{FS\_WAKEUP}});}
+\DoxyCodeLine{00796     \}}
+\DoxyCodeLine{00797 }
+\DoxyCodeLine{00798     \textcolor{keywordflow}{while}(RetVal=sl\_FsRead(fd, offset, \&buffer[0], \mbox{\hyperlink{file__system_8h_a649ad5274d988d17a275a3cead056746_a649ad5274d988d17a275a3cead056746}{MAX\_FILE\_SIZE}})>1)\{}
+\DoxyCodeLine{00799         \textcolor{keywordflow}{if}(strlen(buffer)!=0)\{}
+\DoxyCodeLine{00800         \textcolor{keywordflow}{if}(RetVal == SL\_ERROR\_FS\_OFFSET\_OUT\_OF\_RANGE)\{}
+\DoxyCodeLine{00801             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00802         \}}
+\DoxyCodeLine{00803         \textcolor{keywordflow}{if}(RetVal < 0)\{}
+\DoxyCodeLine{00804             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"sl\_FsRead error: \%d\(\backslash\)n\(\backslash\)r"}, RetVal);}
+\DoxyCodeLine{00805             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00806         \}}
+\DoxyCodeLine{00807         offset += strlen(buffer);}
+\DoxyCodeLine{00808         \}}
+\DoxyCodeLine{00809     \}}
+\DoxyCodeLine{00810     \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)nREADING WAKEUPINTERVAL: \%d\(\backslash\)n\(\backslash\)r"}, atoi(\&buffer));}
+\DoxyCodeLine{00811 }
+\DoxyCodeLine{00812     RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00813     \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00814         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{FS\_WAKEUP}});}
+\DoxyCodeLine{00815     \}}
+\DoxyCodeLine{00816     \textcolor{keywordflow}{return} (atoi(\&buffer));}
+\DoxyCodeLine{00817 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a6cb7586e12661d150ce00b3817090729_a6cb7586e12661d150ce00b3817090729}\label{file__system_8c_a6cb7586e12661d150ce00b3817090729_a6cb7586e12661d150ce00b3817090729}} 
+\index{file\_system.c@{file\_system.c}!writeChangeWakeUp@{writeChangeWakeUp}}
+\index{writeChangeWakeUp@{writeChangeWakeUp}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeChangeWakeUp()}{writeChangeWakeUp()}}
+{\footnotesize\ttfamily int write\+Change\+Wake\+Up (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Change\+Wake\+Up }\end{DoxyParamCaption})}
+
+
+
+File System write Change\+Wake\+Up Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the Change\+Wake\+Up value on F\+S\+\_\+\+C\+H\+A\+N\+G\+E\+W\+A\+K\+E\+UP file. Is used to determine if is necessary to change the node wake up time.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & Change\+Wake\+Up\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00322}{322}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00322                                            \{}
+\DoxyCodeLine{00323 }
+\DoxyCodeLine{00324     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00325     \_i32 offset = 0;}
+\DoxyCodeLine{00326     \_i32 fd;}
+\DoxyCodeLine{00327     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} changewakeup[32];}
+\DoxyCodeLine{00328 }
+\DoxyCodeLine{00329     sprintf(\&changewakeup,\textcolor{stringliteral}{"\%d"},ChangeWakeUp );}
+\DoxyCodeLine{00330 }
+\DoxyCodeLine{00331     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{FS\_CHANGEWAKEUP}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00332     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00333         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{FS\_CHANGEWAKEUP}});}
+\DoxyCodeLine{00334     \}}
+\DoxyCodeLine{00335     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00336         RetVal = sl\_FsWrite(fd, 0, changewakeup, strlen(changewakeup));}
+\DoxyCodeLine{00337         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00338             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00339             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00340         \}}
+\DoxyCodeLine{00341 }
+\DoxyCodeLine{00342         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00343         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00344             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a653db17cc079ac4a8f10f686ffd2ce05_a653db17cc079ac4a8f10f686ffd2ce05}{FS\_CHANGEWAKEUP}});}
+\DoxyCodeLine{00345         \}}
+\DoxyCodeLine{00346     \}}
+\DoxyCodeLine{00347     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00348 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_ae9b67eda8db36bafa031f04504f58d9f_ae9b67eda8db36bafa031f04504f58d9f}\label{file__system_8c_ae9b67eda8db36bafa031f04504f58d9f_ae9b67eda8db36bafa031f04504f58d9f}} 
+\index{file\_system.c@{file\_system.c}!writeDnCntr@{writeDnCntr}}
+\index{writeDnCntr@{writeDnCntr}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeDnCntr()}{writeDnCntr()}}
+{\footnotesize\ttfamily int write\+Dn\+Cntr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Dnctr }\end{DoxyParamCaption})}
+
+
+
+File System write N\+Fails Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the number of Lo\+Ra O\+T\+AA connection fails on N\+Fails file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em N\+Fails} & Number of Lo\+Ra O\+T\+AA connection fails\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00242}{242}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242                                \{}
+\DoxyCodeLine{00243 }
+\DoxyCodeLine{00244     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00245     \_i32 offset = 0;}
+\DoxyCodeLine{00246     \_i32 fd;}
+\DoxyCodeLine{00247     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} dnctr[32];}
+\DoxyCodeLine{00248 }
+\DoxyCodeLine{00249     sprintf(\&dnctr,\textcolor{stringliteral}{"\%d"},Dnctr);}
+\DoxyCodeLine{00250 }
+\DoxyCodeLine{00251     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{FS\_DNCNTR}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00252     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00253         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{FS\_DNCNTR}});}
+\DoxyCodeLine{00254     \}}
+\DoxyCodeLine{00255     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00256         RetVal = sl\_FsWrite(fd, 0, dnctr, strlen(dnctr));}
+\DoxyCodeLine{00257         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00258             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00259             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00260         \}}
+\DoxyCodeLine{00261 }
+\DoxyCodeLine{00262         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00263         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00264             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac3516d8657d786cd9aa78ff4f5a1ba19_ac3516d8657d786cd9aa78ff4f5a1ba19}{FS\_DNCNTR}});}
+\DoxyCodeLine{00265         \}}
+\DoxyCodeLine{00266     \}}
+\DoxyCodeLine{00267     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00268 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a1d27a902ee3c4804928771460ecc38bc_a1d27a902ee3c4804928771460ecc38bc}\label{file__system_8c_a1d27a902ee3c4804928771460ecc38bc_a1d27a902ee3c4804928771460ecc38bc}} 
+\index{file\_system.c@{file\_system.c}!writeMode@{writeMode}}
+\index{writeMode@{writeMode}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeMode()}{writeMode()}}
+{\footnotesize\ttfamily int write\+Mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Mode }\end{DoxyParamCaption})}
+
+
+
+File System write Mode Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the working mode of the node (Lora or Wifi) on F\+S\+\_\+\+M\+O\+DE file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mode} & working mode of the node (0 for Lo\+Ra, 2 for Wifi)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00282}{282}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00282                            \{}
+\DoxyCodeLine{00283 }
+\DoxyCodeLine{00284     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00285     \_i32 offset = 0;}
+\DoxyCodeLine{00286     \_i32 fd;}
+\DoxyCodeLine{00287     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} mode[32];}
+\DoxyCodeLine{00288 }
+\DoxyCodeLine{00289     sprintf(\&mode,\textcolor{stringliteral}{"\%d"},Mode );}
+\DoxyCodeLine{00290 }
+\DoxyCodeLine{00291     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{FS\_MODE}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00292     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00293         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{FS\_MODE}});}
+\DoxyCodeLine{00294     \}}
+\DoxyCodeLine{00295     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00296         RetVal = sl\_FsWrite(fd, 0, mode, strlen(mode));}
+\DoxyCodeLine{00297         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00298             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00299             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00300         \}}
+\DoxyCodeLine{00301 }
+\DoxyCodeLine{00302         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00303         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00304             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a03829d3a0bcb79ea69d359c0e23b7a43_a03829d3a0bcb79ea69d359c0e23b7a43}{FS\_MODE}});}
+\DoxyCodeLine{00305         \}}
+\DoxyCodeLine{00306     \}}
+\DoxyCodeLine{00307     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00308 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a5813499664e66d7c300822aa326ff46b_a5813499664e66d7c300822aa326ff46b}\label{file__system_8c_a5813499664e66d7c300822aa326ff46b_a5813499664e66d7c300822aa326ff46b}} 
+\index{file\_system.c@{file\_system.c}!writeNBoot@{writeNBoot}}
+\index{writeNBoot@{writeNBoot}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeNBoot()}{writeNBoot()}}
+{\footnotesize\ttfamily int write\+N\+Boot (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{First\+Boot }\end{DoxyParamCaption})}
+
+
+
+File System write N\+Boot Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the number of N\+Boot on F\+S\+\_\+\+N\+B\+O\+OT file. This value is used to alternate the data sent between sensors.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & First\+Boot yes or no\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00118}{118}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118                                  \{}
+\DoxyCodeLine{00119 }
+\DoxyCodeLine{00120     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00121     \_i32 offset = 0;}
+\DoxyCodeLine{00122     \_i32 fd;}
+\DoxyCodeLine{00123     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} fboot[32];}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00125     sprintf(\&fboot,\textcolor{stringliteral}{"\%d"},FirstBoot );}
+\DoxyCodeLine{00126 }
+\DoxyCodeLine{00127     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{FS\_NBOOT}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00128     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00129         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{FS\_NBOOT}});}
+\DoxyCodeLine{00130     \}}
+\DoxyCodeLine{00131     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00132         RetVal = sl\_FsWrite(fd, 0, fboot, strlen(fboot));}
+\DoxyCodeLine{00133         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00134             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00135             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00136         \}}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00138         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00139         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00140             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_adc8705319b2cb7511370fb38c2d1276b_adc8705319b2cb7511370fb38c2d1276b}{FS\_NBOOT}});}
+\DoxyCodeLine{00141         \}}
+\DoxyCodeLine{00142     \}}
+\DoxyCodeLine{00143     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00144 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_ad63f444cc96aa510ffa778c36f568f22_ad63f444cc96aa510ffa778c36f568f22}\label{file__system_8c_ad63f444cc96aa510ffa778c36f568f22_ad63f444cc96aa510ffa778c36f568f22}} 
+\index{file\_system.c@{file\_system.c}!writeNCycles@{writeNCycles}}
+\index{writeNCycles@{writeNCycles}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeNCycles()}{writeNCycles()}}
+{\footnotesize\ttfamily int write\+N\+Cycles (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{N\+Cycles }\end{DoxyParamCaption})}
+
+
+
+File System write N\+Cycles Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the number of cycles of the node on F\+S\+\_\+\+N\+C\+Y\+C\+L\+ES file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & N\+Cycles Number of cycles\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00158}{158}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158                                  \{}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00160     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00161     \_i32 offset = 0;}
+\DoxyCodeLine{00162     \_i32 fd;}
+\DoxyCodeLine{00163     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} ncycles[32];}
+\DoxyCodeLine{00164 }
+\DoxyCodeLine{00165     sprintf(\&ncycles,\textcolor{stringliteral}{"\%d"},NCycles );}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00167     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{FS\_NCYCLES}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00168     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00169         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{FS\_NCYCLES}});}
+\DoxyCodeLine{00170     \}}
+\DoxyCodeLine{00171     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00172         RetVal = sl\_FsWrite(fd, 0, ncycles, strlen(ncycles));}
+\DoxyCodeLine{00173         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00174             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00175             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00176         \}}
+\DoxyCodeLine{00177 }
+\DoxyCodeLine{00178         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00179         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00180             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a15a5b978c911f4f09d393fff5f37ba3a_a15a5b978c911f4f09d393fff5f37ba3a}{FS\_NCYCLES}});}
+\DoxyCodeLine{00181         \}}
+\DoxyCodeLine{00182     \}}
+\DoxyCodeLine{00183     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00184 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}\label{file__system_8c_a87dfa8987a2615f736a664b68dfde7a0_a87dfa8987a2615f736a664b68dfde7a0}} 
+\index{file\_system.c@{file\_system.c}!writeNFails@{writeNFails}}
+\index{writeNFails@{writeNFails}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeNFails()}{writeNFails()}}
+{\footnotesize\ttfamily int write\+N\+Fails (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{N\+Fails }\end{DoxyParamCaption})}
+
+
+
+File System write N\+Fails Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the number of Lo\+Ra O\+T\+AA connection fails on N\+Fails file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & F\+S\+\_\+\+N\+F\+A\+I\+LS Number of Lo\+Ra O\+T\+AA connection fails\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00079}{79}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079                                 \{}
+\DoxyCodeLine{00080 }
+\DoxyCodeLine{00081     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00082     \_i32 offset = 0;}
+\DoxyCodeLine{00083     \_i32 fd;}
+\DoxyCodeLine{00084     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} fails[32];}
+\DoxyCodeLine{00085 }
+\DoxyCodeLine{00086     sprintf(\&fails,\textcolor{stringliteral}{"\%d"},NFails );}
+\DoxyCodeLine{00087 }
+\DoxyCodeLine{00088     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{FS\_NFAILS}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00089     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00090         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{FS\_NFAILS}});}
+\DoxyCodeLine{00091     \}}
+\DoxyCodeLine{00092     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00093         RetVal = sl\_FsWrite(fd, 0, fails, strlen(fails));}
+\DoxyCodeLine{00094         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00095             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00096             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00097         \}}
+\DoxyCodeLine{00098         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00099         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00100             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_abce2120afccd100d9ed32e27e947a981_abce2120afccd100d9ed32e27e947a981}{FS\_NFAILS}});}
+\DoxyCodeLine{00101         \}}
+\DoxyCodeLine{00102     \}}
+\DoxyCodeLine{00103     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00104 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a9e38cc02f13e804355c37bc5f083d8e6_a9e38cc02f13e804355c37bc5f083d8e6}\label{file__system_8c_a9e38cc02f13e804355c37bc5f083d8e6_a9e38cc02f13e804355c37bc5f083d8e6}} 
+\index{file\_system.c@{file\_system.c}!writeNodeId@{writeNodeId}}
+\index{writeNodeId@{writeNodeId}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeNodeId()}{writeNodeId()}}
+{\footnotesize\ttfamily int write\+Node\+Id (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Node\+Id }\end{DoxyParamCaption})}
+
+
+
+File System write Node\+Id Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the Node\+Id on Node\+Id file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & Node\+Id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00402}{402}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00402                                 \{}
+\DoxyCodeLine{00403 }
+\DoxyCodeLine{00404     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00405     \_i32 offset = 0;}
+\DoxyCodeLine{00406     \_i32 fd;}
+\DoxyCodeLine{00407     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} nodeid[32];}
+\DoxyCodeLine{00408 }
+\DoxyCodeLine{00409     sprintf(\&nodeid,\textcolor{stringliteral}{"\%d"},NodeId );}
+\DoxyCodeLine{00410 }
+\DoxyCodeLine{00411     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{FS\_NODEID}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00412     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00413         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{FS\_NODEID}});}
+\DoxyCodeLine{00414     \}}
+\DoxyCodeLine{00415     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00416         RetVal = sl\_FsWrite(fd, 0, nodeid, strlen(nodeid));}
+\DoxyCodeLine{00417         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00418             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00419             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00420         \}}
+\DoxyCodeLine{00421         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00422         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00423             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a1d1d0f8a078e6d5b677bc321b8b59889_a1d1d0f8a078e6d5b677bc321b8b59889}{FS\_NODEID}});}
+\DoxyCodeLine{00424         \}}
+\DoxyCodeLine{00425     \}}
+\DoxyCodeLine{00426     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00427 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a20a65f4623985c3e0332718b683e817d_a20a65f4623985c3e0332718b683e817d}\label{file__system_8c_a20a65f4623985c3e0332718b683e817d_a20a65f4623985c3e0332718b683e817d}} 
+\index{file\_system.c@{file\_system.c}!writeSSID@{writeSSID}}
+\index{writeSSID@{writeSSID}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeSSID()}{writeSSID()}}
+{\footnotesize\ttfamily int write\+S\+S\+ID (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{S\+S\+ID }\end{DoxyParamCaption})}
+
+
+
+File System write S\+S\+ID Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the S\+S\+ID of Wifi network on F\+S\+\_\+\+S\+S\+ID file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em unsigned} & char S\+S\+ID Pointer to S\+S\+ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00039}{39}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039                                   \{}
+\DoxyCodeLine{00040 }
+\DoxyCodeLine{00041     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00042     \_i32 offset = 0;}
+\DoxyCodeLine{00043     \_i32 fd;}
+\DoxyCodeLine{00044     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} ssid[13];}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     sprintf(\&ssid,\textcolor{stringliteral}{"\%s"},SSID );}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{FS\_SSID}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00049     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00050         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{FS\_SSID}});}
+\DoxyCodeLine{00051     \}}
+\DoxyCodeLine{00052     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00053         RetVal = sl\_FsWrite(fd, 0, ssid, strlen(ssid));}
+\DoxyCodeLine{00054         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00055             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00056             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00057         \}}
+\DoxyCodeLine{00058 }
+\DoxyCodeLine{00059         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00060         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00061             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_aa963a67fc33cc93cbd1ecf1eb1e45cb9_aa963a67fc33cc93cbd1ecf1eb1e45cb9}{FS\_SSID}});}
+\DoxyCodeLine{00062         \}}
+\DoxyCodeLine{00063     \}}
+\DoxyCodeLine{00064     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00065 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}\label{file__system_8c_a7b4d3de67c83756bdea5eddf61b6fee7_a7b4d3de67c83756bdea5eddf61b6fee7}} 
+\index{file\_system.c@{file\_system.c}!writeUpCntr@{writeUpCntr}}
+\index{writeUpCntr@{writeUpCntr}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeUpCntr()}{writeUpCntr()}}
+{\footnotesize\ttfamily int write\+Up\+Cntr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Upctr }\end{DoxyParamCaption})}
+
+
+
+File System write Up Counter Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the value of Up\+Cntr Lo\+Ra parameter on F\+S\+\_\+\+U\+P\+C\+N\+TR file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint32\+\_\+t} & N\+Fails Up\+Cntr Lo\+Ra parameter value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00198}{198}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00198                                \{}
+\DoxyCodeLine{00199 }
+\DoxyCodeLine{00200     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00201     \_i32 offset = 0;}
+\DoxyCodeLine{00202     \_i32 fd;}
+\DoxyCodeLine{00203     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} upctr[32];}
+\DoxyCodeLine{00204 }
+\DoxyCodeLine{00205     sprintf(\&upctr,\textcolor{stringliteral}{"\%d"},Upctr );}
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{00207     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00208     \textcolor{keywordflow}{if} (fd < 0)}
+\DoxyCodeLine{00209     \{}
+\DoxyCodeLine{00210         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}});}
+\DoxyCodeLine{00211     \}}
+\DoxyCodeLine{00212     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00213     \{}
+\DoxyCodeLine{00214         RetVal = sl\_FsWrite(fd, 0, upctr, strlen(upctr));}
+\DoxyCodeLine{00215         \textcolor{keywordflow}{if} (RetVal <= 0)}
+\DoxyCodeLine{00216         \{}
+\DoxyCodeLine{00217             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00218             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00219         \}}
+\DoxyCodeLine{00220 }
+\DoxyCodeLine{00221         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00222         \textcolor{keywordflow}{if} (RetVal < 0)}
+\DoxyCodeLine{00223         \{}
+\DoxyCodeLine{00224             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_a3f4d8e4d27ee62956f5782095e36f442_a3f4d8e4d27ee62956f5782095e36f442}{FS\_UPCNTR}});}
+\DoxyCodeLine{00225         \}}
+\DoxyCodeLine{00226     \}}
+\DoxyCodeLine{00227     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00228 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{file__system_8c_ace59423ed2ba20ffa424883ab689df8c_ace59423ed2ba20ffa424883ab689df8c}\label{file__system_8c_ace59423ed2ba20ffa424883ab689df8c_ace59423ed2ba20ffa424883ab689df8c}} 
+\index{file\_system.c@{file\_system.c}!writeWakeUp@{writeWakeUp}}
+\index{writeWakeUp@{writeWakeUp}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{writeWakeUp()}{writeWakeUp()}}
+{\footnotesize\ttfamily int write\+Wake\+Up (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{Wake\+Up\+Interval }\end{DoxyParamCaption})}
+
+
+
+File System write Wake\+Up Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Writes the wake up interval time of the node on F\+S\+\_\+\+W\+A\+K\+E\+UP file
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint16\+\_\+t} & Wake\+Up\+Interval Time(s) of the wake up interval\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+i32 offset 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{file__system_8c_source_l00362}{362}} of file \mbox{\hyperlink{file__system_8c_source}{file\+\_\+system.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00362                                         \{}
+\DoxyCodeLine{00363 }
+\DoxyCodeLine{00364     \textcolor{keywordtype}{int} RetVal = 0;}
+\DoxyCodeLine{00365     \_i32 offset = 0;}
+\DoxyCodeLine{00366     \_i32 fd;}
+\DoxyCodeLine{00367     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} wakeup[32];}
+\DoxyCodeLine{00368 }
+\DoxyCodeLine{00369     sprintf(\&wakeup,\textcolor{stringliteral}{"\%d"},WakeUpInterval );}
+\DoxyCodeLine{00370 }
+\DoxyCodeLine{00371     fd = sl\_FsOpen(\mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{FS\_WAKEUP}}, SL\_FS\_OVERWRITE, 0);}
+\DoxyCodeLine{00372     \textcolor{keywordflow}{if} (fd < 0)\{}
+\DoxyCodeLine{00373         \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error opening the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{FS\_WAKEUP}});}
+\DoxyCodeLine{00374     \}}
+\DoxyCodeLine{00375     \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00376         RetVal = sl\_FsWrite(fd, 0, wakeup, strlen(wakeup));}
+\DoxyCodeLine{00377         \textcolor{keywordflow}{if} (RetVal <= 0)\{}
+\DoxyCodeLine{00378             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Writing error:  \%d\(\backslash\)n\(\backslash\)r"} ,RetVal);}
+\DoxyCodeLine{00379             \textcolor{keywordflow}{return} RetVal;}
+\DoxyCodeLine{00380         \}}
+\DoxyCodeLine{00381 }
+\DoxyCodeLine{00382         RetVal = sl\_FsClose(fd, 0, 0, 0);}
+\DoxyCodeLine{00383         \textcolor{keywordflow}{if} (RetVal < 0)\{}
+\DoxyCodeLine{00384             \mbox{\hyperlink{hal___u_a_r_t_8h_af4304467483f3a3e7d50ca4f9df0cbd3_af4304467483f3a3e7d50ca4f9df0cbd3}{UART\_PRINT}}(\textcolor{stringliteral}{"Error closing the file : \%s\(\backslash\)n\(\backslash\)r"}, \mbox{\hyperlink{file__system_8h_ac1c569c762c3c3b581663374eea73aac_ac1c569c762c3c3b581663374eea73aac}{FS\_WAKEUP}});}
+\DoxyCodeLine{00385         \}}
+\DoxyCodeLine{00386     \}}
+\DoxyCodeLine{00387     \textcolor{keywordflow}{return} offset;}
+\DoxyCodeLine{00388 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsubsection{Variable Documentation}
+\mbox{\Hypertarget{file__system_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}\label{file__system_8c_af4206efb17a40be2361219ae7c0a74cf_af4206efb17a40be2361219ae7c0a74cf}} 
+\index{file\_system.c@{file\_system.c}!uart0@{uart0}}
+\index{uart0@{uart0}!file\_system.c@{file\_system.c}}
+\doxyparagraph{\texorpdfstring{uart0}{uart0}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+\+Handle uart0}
+
+
+
+Definition at line \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source_l00065}{65}} of file \mbox{\hyperlink{_s_t_a_r_p_o_r_t_s___app_8c_source}{S\+T\+A\+R\+P\+O\+R\+T\+S\+\_\+\+App.\+c}}.
+

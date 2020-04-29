@@ -1,0 +1,26 @@
+\hypertarget{hal___s_p_i_8h_source}{}\doxysubsection{hal\+\_\+\+S\+P\+I.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#ifndef HAL\_SPI\_H\_}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#define HAL\_SPI\_H\_}}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00014 \textcolor{comment}{//                      INCLUDES}}
+\DoxyCodeLine{00015 \textcolor{comment}{//*****************************************************************************}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include <stddef.h>}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{00018 \textcolor{preprocessor}{\#include <ti/drivers/SPI.h>}}
+\DoxyCodeLine{00019 }
+\DoxyCodeLine{00020 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00021 \textcolor{comment}{//                      FUNCTION PROTOTYPES}}
+\DoxyCodeLine{00022 \textcolor{comment}{//****************************************************************************}}
+\DoxyCodeLine{00023 SPI\_Handle \mbox{\hyperlink{hal___s_p_i_8h_a7c50ab8594f2331f3a80c350c875cf6d_a7c50ab8594f2331f3a80c350c875cf6d}{Startup\_SPI}}(uint\_least8\_t index, uint32\_t dataSize, uint32\_t dataRate);}
+\DoxyCodeLine{00024 uint8\_t \mbox{\hyperlink{hal___s_p_i_8h_a81bd87741222204ac60fcf11d0530fa5_a81bd87741222204ac60fcf11d0530fa5}{SPI\_write\_8bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t Data, uint8\_t rnwMSB);}
+\DoxyCodeLine{00025 uint8\_t \mbox{\hyperlink{hal___s_p_i_8h_a47a2de3fa3ece2c655c4aa1de0262bb6_a47a2de3fa3ece2c655c4aa1de0262bb6}{SPI\_read\_8bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t *RxBuffer, uint8\_t nregs, uint8\_t rnwMSB);}
+\DoxyCodeLine{00026 uint8\_t \mbox{\hyperlink{hal___s_p_i_8h_a5cc400553821395b2214d5304851d8b7_a5cc400553821395b2214d5304851d8b7}{SPI\_write\_16bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t Data);}
+\DoxyCodeLine{00027 uint8\_t \mbox{\hyperlink{hal___s_p_i_8h_af07414198f991f2481be6ead3f2f3767_af07414198f991f2481be6ead3f2f3767}{SPI\_read\_16bits}}(SPI\_Handle \mbox{\hyperlink{_sensors_8c_a88adba1e427ceef66e55c260b327f759_a88adba1e427ceef66e55c260b327f759}{spi}}, uint8\_t Address, uint8\_t *Data);}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HAL\_SPI\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

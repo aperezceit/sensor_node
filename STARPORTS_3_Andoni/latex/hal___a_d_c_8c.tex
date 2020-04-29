@@ -1,0 +1,79 @@
+\hypertarget{hal___a_d_c_8c}{}\doxysubsection{hal\+\_\+\+A\+D\+C.\+c File Reference}
+\label{hal___a_d_c_8c}\index{hal\_ADC.c@{hal\_ADC.c}}
+
+
+Functions for A\+DC.  
+
+
+{\ttfamily \#include $<$ti/drivers/\+A\+D\+C.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+A\+D\+C\+\_\+\+Handle \mbox{\hyperlink{hal___a_d_c_8c_aac8f691b824e44a6b13787aedd3335f7_aac8f691b824e44a6b13787aedd3335f7}{Startup\+\_\+\+A\+DC}} (uint8\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em A\+DC Start up Function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Detailed Description}
+Functions for A\+DC. 
+
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+07/05/2019 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+A.\+Irizar @tittle A\+DC functions 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{hal___a_d_c_8c_source}{hal\+\_\+\+A\+D\+C.\+c}}.
+
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{hal___a_d_c_8c_aac8f691b824e44a6b13787aedd3335f7_aac8f691b824e44a6b13787aedd3335f7}\label{hal___a_d_c_8c_aac8f691b824e44a6b13787aedd3335f7_aac8f691b824e44a6b13787aedd3335f7}} 
+\index{hal\_ADC.c@{hal\_ADC.c}!Startup\_ADC@{Startup\_ADC}}
+\index{Startup\_ADC@{Startup\_ADC}!hal\_ADC.c@{hal\_ADC.c}}
+\doxyparagraph{\texorpdfstring{Startup\_ADC()}{Startup\_ADC()}}
+{\footnotesize\ttfamily A\+D\+C\+\_\+\+Handle Startup\+\_\+\+A\+DC (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+A\+DC Start up Function. 
+
+This function
+\begin{DoxyEnumerate}
+\item Handle for A\+DC
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em uint8\+\_\+t} & index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\+D\+C\+\_\+\+Handle adc 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{hal___a_d_c_8c_source_l00034}{34}} of file \mbox{\hyperlink{hal___a_d_c_8c_source}{hal\+\_\+\+A\+D\+C.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034                                       \{}
+\DoxyCodeLine{00035 }
+\DoxyCodeLine{00036     ADC\_Handle adc;}
+\DoxyCodeLine{00037     ADC\_Params params;}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00039     ADC\_Params\_init(\&params);}
+\DoxyCodeLine{00040     ADC\_init();}
+\DoxyCodeLine{00041     adc = ADC\_open(index, \&params);}
+\DoxyCodeLine{00042 }
+\DoxyCodeLine{00043     \textcolor{keywordflow}{return} adc;}
+\DoxyCodeLine{00044 \}}
+
+\end{DoxyCode}
